@@ -8,7 +8,7 @@ import Footer from './Footer';
 import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
-import logo from '../Jerrypop.png';
+import logo from '../images/Jerrypop.png';
 import useWindowSize from '@rehooks/window-size';
 import { vmin } from '../utilities/Screen';
 

@@ -2,7 +2,7 @@ import '../styles/Kernel.scss';
 import React from 'react';
 import { animateKernel } from '../utilities/Kernel';
 import { getRandomInteger } from '../utilities/Random';
-import kernel from '../Kernel.png';
+import kernel from '../images/Kernel.png';
 
 export default function Kernel({ delay, id, isRotatingClockwise, left, top }) {
   const style = { display: 'none', left: `${left}px`, top: `${top}px` };
