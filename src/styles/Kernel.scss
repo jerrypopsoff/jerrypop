@@ -1,0 +1,33 @@
+.Kernel {
+  animation: kernel 0.5s infinite linear;
+  height: 3vmin;
+  position: absolute;
+
+  &--reverse {
+    animation: reverse-kernel 0.5s infinite linear;
+  }
+}
+
+@keyframes kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

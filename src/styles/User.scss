@@ -1,0 +1,12 @@
+.user {
+  &__home-link {
+    display: inline-block;
+    margin: 20px auto 0;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+}

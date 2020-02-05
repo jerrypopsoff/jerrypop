@@ -1,0 +1,36 @@
+@import 'mixins/FluidFont';
+
+.Home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+
+  &__content {
+    @include fluid-font-size(13, 16);
+    margin: 12px 12px 30px;
+  }
+
+  &__heading {
+    @include fluid-font-size(24, 78);
+    margin: 0 12px;
+    text-transform: uppercase;
+  }
+
+  &__logo {
+    animation: rotation 3s infinite ease-in-out;
+    height: 40vmin;
+    margin: 48px 12px 24px;
+    pointer-events: none;
+  }
+}
+
+@keyframes rotation {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}

@@ -1,0 +1,80 @@
+%whisper-font {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+%center-column {
+  box-sizing: border-box;
+  margin: auto;
+  width: 500px;
+
+  @media (max-width: 600px) {
+    width: calc(100% - 10px);
+  }
+}
+
+.Recipe {
+  @extend %center-column;
+  background-color: #edeeff;
+  border: 1px solid #edeeff;
+  border-radius: 5px;
+  color: #222;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+
+  &__title {
+    margin: 0 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__time {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__steps,
+  &__materials {
+    margin-bottom: 0;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  &__material {
+    margin: 15px 0;
+  }
+
+  &__material-name {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  &__material-amount {
+    @extend %whisper-font;
+    display: block;
+    text-transform: lowercase;
+  }
+
+  &__aside {
+    @extend %whisper-font;
+    display: block;
+  }
+
+  &__step {
+    margin: 12px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__step-content {
+    display: block;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  background-color: #3e3e51;
+  color: #edeeff;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #00ceff;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: #6ee3ff;
+  }
+}
+
+:focus {
+  outline-color: #9da2ff;
+}
