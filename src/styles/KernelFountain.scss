@@ -1,6 +1,8 @@
 .Kernel-fountain {
   position: absolute;
   left: 0;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: visible;
   top: 0;
+  width: 100vw;
 }
