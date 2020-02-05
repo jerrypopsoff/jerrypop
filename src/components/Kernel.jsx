@@ -18,7 +18,7 @@ export default function Kernel({ delay, id, isRotatingClockwise, left, top }) {
       src={kernel}
       style={style}
       x-velocity={getRandomInteger(-15, 15)}
-      y-velocity={getRandomInteger(-15, -10)}
+      y-velocity={getRandomInteger(-20, -10)}
     />
   );
 }
