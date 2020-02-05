@@ -29,7 +29,10 @@ function step(element, intervalId) {
   }
 
   // Remove element if off-screen
-  if (top > document.documentElement.clientHeight) {
+  if (
+    top >
+    Math.max(document.documentElement.clientHeight, document.body.clientHeight)
+  ) {
     clearInterval(intervalId);
     if (!element || !element.parentNode) {
       return;
