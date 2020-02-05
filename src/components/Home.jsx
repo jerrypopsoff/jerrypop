@@ -12,12 +12,14 @@ import logo from '../Jerrypop.png';
 import useWindowSize from '@rehooks/window-size';
 import { vmin } from '../utilities/Screen';
 
+const LOGO_TOP_MARGIN = 48;
+
 function getFountainLeft({ innerHeight, innerWidth }) {
   return innerWidth / 2 - vmin(3.5, innerHeight, innerWidth) / 2;
 }
 
 function getFountainTop({ innerHeight, innerWidth }) {
-  return 48 + 0.62 * vmin(40, innerHeight, innerWidth);
+  return LOGO_TOP_MARGIN + 0.65 * vmin(40, innerHeight, innerWidth);
 }
 
 export default function Home() {
@@ -47,6 +49,7 @@ export default function Home() {
       <KernelFountain
         delay={KERNEL_FOUNTAIN_DELAY}
         duration={KERNEL_FOUNTAIN_DURATION}
+        id="home-fountain"
         kernelCount={KERNEL_FOUNTAIN_KERNEL_COUNT}
         left={getFountainLeft(windowSize)}
         top={getFountainTop(windowSize)}

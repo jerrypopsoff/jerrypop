@@ -6,6 +6,7 @@ import { getRandomInteger } from '../utilities/Random';
 export default function KernelFountain({
   delay,
   duration,
+  id,
   kernelCount,
   left,
   top,
@@ -17,7 +18,7 @@ export default function KernelFountain({
         .map((e, i) => (
           <Kernel
             delay={getRandomInteger(delay, delay + duration)}
-            id={`Kernel-${i}`}
+            id={`${id}-kernel-${i}`}
             isRotatingClockwise={Boolean(getRandomInteger(0, 1))}
             key={i}
             left={left}
