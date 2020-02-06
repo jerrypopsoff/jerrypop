@@ -7,7 +7,7 @@ import kernel from '../images/Kernel.png';
 export default function Kernel({ delay, id, isRotatingClockwise, left, top }) {
   const style = { display: 'none', left: `${left}px`, top: `${top}px` };
 
-  setTimeout(() => animateKernel(id, top), delay);
+  setTimeout(() => animateKernel(id), delay);
 
   return (
     <img

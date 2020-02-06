@@ -17,9 +17,8 @@ function step(element, intervalId) {
 
   // Update position
   const velocityMultiplier = element.offsetHeight / DEFAULT_KERNEL_HEIGHT;
-  const left =
-    parseInt(element.style.left, 10) + xVelocity * velocityMultiplier;
-  const top = parseInt(element.style.top, 10) + yVelocity * velocityMultiplier;
+  const left = parseInt(element.style.left) + xVelocity * velocityMultiplier;
+  const top = parseInt(element.style.top) + yVelocity * velocityMultiplier;
   element.style.left = `${left}px`;
   element.style.top = `${top}px`;
 
@@ -47,8 +46,18 @@ export function animateKernel(id) {
     return;
   }
 
+  // Update starting position based on scroll position
+  if (window.scollY !== 0) {
+    element.style.top = `${parseInt(element.style.top) - window.scrollY}px`;
+  }
+  if (window.scollX !== 0) {
+    element.style.left = `${parseInt(element.style.left) - window.scrollX}px`;
+  }
+
+  // Show the element
   element.style.display = 'block';
 
+  // Invoke parabolic motion
   const intervalId = setInterval(() => {
     step(element, intervalId);
   }, KERNEL_FOUNTAIN_INTERVAL);
