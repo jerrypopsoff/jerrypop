@@ -9,7 +9,7 @@ const StyledInteractiveLink = styled(InteractiveLink)`
   margin: 20px auto 0;
 `;
 
-const StyledList = styled.ul`
+const StyledUnorderedList = styled.ul`
   padding: 0;
   list-style: none;
   margin: 0;
@@ -23,13 +23,13 @@ export default function User() {
         interactiveText="💥 Home 💥"
         to="/"
       />
-      <StyledList>
+      <StyledUnorderedList>
         {RECIPES.map(recipe => (
           <li key={recipe.title}>
             <Recipe recipe={recipe} />
           </li>
         ))}
-      </StyledList>
+      </StyledUnorderedList>
     </div>
   );
 }

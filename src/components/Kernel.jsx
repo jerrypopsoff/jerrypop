@@ -4,7 +4,7 @@ import { getRandomInteger } from '../utilities/Random';
 import kernel from '../images/Kernel.png';
 import styled from 'styled-components';
 
-const Img = styled.img`
+const StyledImage = styled.img`
   animation: ${props =>
       props.isRotatingClockwise ? 'kernel' : 'reverse-kernel'}
     0.5s infinite linear;
@@ -42,7 +42,7 @@ export default function Kernel({ delay, id, isRotatingClockwise, left, top }) {
   setTimeout(() => animateKernel(id), delay);
 
   return (
-    <Img
+    <StyledImage
       alt="Popcorn kernel"
       aria-hidden="true"
       id={id}

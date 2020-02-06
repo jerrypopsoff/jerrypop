@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   font-size: 11px;
 `;
 
-const Span = styled.span`
+const StyledSpan = styled.span`
   display: block;
   margin: 0 24px;
 `;
@@ -15,8 +15,8 @@ const Span = styled.span`
 export default function Footer() {
   return (
     <StyledFooter>
-      <Span>© {new Date().getFullYear()} Jerrypop</Span>
-      <Span>
+      <StyledSpan>© {new Date().getFullYear()} Jerrypop</StyledSpan>
+      <StyledSpan>
         Artwork by{' '}
         <a
           href="http://anthonytesija.com"
@@ -25,7 +25,7 @@ export default function Footer() {
         >
           Anthony Tesija
         </a>
-      </Span>
+      </StyledSpan>
     </StyledFooter>
   );
 }
