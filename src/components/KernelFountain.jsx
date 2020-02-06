@@ -1,7 +1,14 @@
-import '../styles/KernelFountain.scss';
 import Kernel from './Kernel';
 import React from 'react';
 import { getRandomInteger } from '../utilities/Random';
+import styled from 'styled-components';
+
+const StyledKernelFountain = styled.div`
+  position: fixed;
+  left: 0;
+  overflow: visible;
+  top: 0;
+`;
 
 export default function KernelFountain({
   delay,
@@ -12,7 +19,7 @@ export default function KernelFountain({
   top,
 }) {
   return (
-    <div aria-hidden="true" className="Kernel-fountain">
+    <StyledKernelFountain aria-hidden="true">
       {Array(kernelCount)
         .fill()
         .map((e, i) => (
@@ -25,6 +32,6 @@ export default function KernelFountain({
             top={top}
           />
         ))}
-    </div>
+    </StyledKernelFountain>
   );
 }
