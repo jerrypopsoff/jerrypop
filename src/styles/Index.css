@@ -13,11 +13,11 @@ a {
   color: #00ceff;
   cursor: pointer;
   text-decoration: none;
+}
 
-  &:focus,
-  &:hover {
-    color: #6ee3ff;
-  }
+a:focus,
+a:hover {
+  color: #6ee3ff;
 }
 
 :focus {

@@ -1,35 +1,62 @@
-import '../styles/Home.scss';
 import {
   KERNEL_FOUNTAIN_DELAY,
   KERNEL_FOUNTAIN_DURATION,
   KERNEL_FOUNTAIN_KERNEL_COUNT,
 } from '../constants/Animation';
+import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
 import Footer from './Footer';
 import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
+import { getFluidFontSizeStyle } from '../utilities/Style';
 import logo from '../images/Jerrypop.png';
+import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
-import { vmin } from '../utilities/Screen';
 
-const LOGO_TOP_MARGIN = 48;
+const StyledHome = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+`;
 
-function getFountainLeft({ innerHeight, innerWidth }) {
-  return innerWidth / 2 - vmin(3.5, innerHeight, innerWidth) / 2;
-}
+const StyledLogo = styled.img`
+  animation: rotation 3s infinite ease-in-out;
+  height: 40vmin;
+  margin: 48px 12px 24px;
+  pointer-events: none;
 
-function getFountainTop({ innerHeight, innerWidth }) {
-  return LOGO_TOP_MARGIN + 0.65 * vmin(40, innerHeight, innerWidth);
-}
+  @keyframes rotation {
+    0%,
+    100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+`;
+
+const StyledContent = styled.p`
+  ${getFluidFontSizeStyle(13, 16)}
+  margin: 12px 12px 30px;
+`;
+
+const StyledHeading = styled.h1`
+  ${getFluidFontSizeStyle(24, 78)}
+  margin: 0 12px;
+  text-transform: uppercase;
+`;
 
 export default function Home() {
   const windowSize = useWindowSize();
 
   return (
-    <div className="Home">
-      <img className="Home__logo" src={logo} alt="Jerrypop Logo" />
-      <h1 className="Home__heading">Poppin’ off with Jerry</h1>
-      <p className="Home__content">
+    <StyledHome>
+      <StyledLogo src={logo} alt="Jerrypop Logo" />
+      <StyledHeading>Poppin’ off with Jerry</StyledHeading>
+      <StyledContent>
         Pick up an{' '}
         <a
           href="https://www.amazon.com/gp/product/B01G7DM3G2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01G7DM3G2&linkCode=as2&tag=jerry04c-20&linkId=ca82b9da5246d1a9a2e398a2d6be50c2"
@@ -39,7 +66,7 @@ export default function Home() {
           air popper
         </a>{' '}
         and an enormous bowl before you do anything else.
-      </p>
+      </StyledContent>
       <InteractiveLink
         defaultText="🍿 Start poppin’ 🍿"
         interactiveText="💥 Start poppin’ 💥"
@@ -54,6 +81,6 @@ export default function Home() {
         left={getFountainLeft(windowSize)}
         top={getFountainTop(windowSize)}
       />
-    </div>
+    </StyledHome>
   );
 }

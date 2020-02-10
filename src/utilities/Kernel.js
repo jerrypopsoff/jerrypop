@@ -12,8 +12,8 @@ function step(element, intervalId) {
   }
 
   // Retrieve element velocity
-  const xVelocity = parseInt(element.getAttribute('x-velocity'), 10);
-  const yVelocity = parseInt(element.getAttribute('y-velocity'), 10);
+  const xVelocity = parseInt(element.getAttribute('data-x-velocity'));
+  const yVelocity = parseInt(element.getAttribute('data-y-velocity'));
 
   // Update position
   const velocityMultiplier = element.offsetHeight / DEFAULT_KERNEL_HEIGHT;
@@ -22,9 +22,12 @@ function step(element, intervalId) {
   element.style.left = `${left}px`;
   element.style.top = `${top}px`;
 
-  // Update y-velocity based on acceleration
+  // Update data-y-velocity based on acceleration
   if (yVelocity < KERNEL_TERMINAL_VELOCITY) {
-    element.setAttribute('y-velocity', yVelocity + GRAVITATIONAL_ACCELERATION);
+    element.setAttribute(
+      'data-y-velocity',
+      yVelocity + GRAVITATIONAL_ACCELERATION,
+    );
   }
 
   // Remove element if off-screen
