@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const StyledInteractiveLink = styled(InteractiveLink)`
   display: inline-block;
-  margin: 20px auto 0;
+  margin: 12px auto 0;
 `;
 
 const StyledUnorderedList = styled.ul`
