@@ -4,23 +4,13 @@ import {
   KERNEL_FOUNTAIN_DURATION,
   KERNEL_FOUNTAIN_KERNEL_COUNT,
 } from '../constants/Animation';
+import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
 import Footer from './Footer';
 import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
 import logo from '../images/Jerrypop.png';
 import useWindowSize from '@rehooks/window-size';
-import { vmin } from '../utilities/Screen';
-
-const LOGO_TOP_MARGIN = 48;
-
-function getFountainLeft({ innerHeight, innerWidth }) {
-  return innerWidth / 2 - vmin(3.5, innerHeight, innerWidth) / 2;
-}
-
-function getFountainTop({ innerHeight, innerWidth }) {
-  return LOGO_TOP_MARGIN + 0.65 * vmin(40, innerHeight, innerWidth);
-}
 
 export default function Home() {
   const windowSize = useWindowSize();
