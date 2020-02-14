@@ -3,51 +3,19 @@ import {
   KERNEL_FOUNTAIN_DURATION,
   KERNEL_FOUNTAIN_KERNEL_COUNT,
 } from '../constants/Animation';
+import {
+  StyledContent,
+  StyledHeading,
+  StyledHome,
+  StyledLogo,
+} from '../styled-components/Home';
 import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
 import Footer from './Footer';
 import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
-import { getFluidFontSizeStyle } from '../utilities/Style';
 import logo from '../images/Jerrypop.png';
-import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
-
-const StyledHome = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  text-align: center;
-`;
-
-const StyledLogo = styled.img`
-  animation: rotation 3s infinite ease-in-out;
-  height: 40vmin;
-  margin: 48px 12px 24px;
-  pointer-events: none;
-
-  @keyframes rotation {
-    0%,
-    100% {
-      transform: rotate(-2deg);
-    }
-    50% {
-      transform: rotate(2deg);
-    }
-  }
-`;
-
-const StyledContent = styled.p`
-  ${getFluidFontSizeStyle(13, 16)}
-  margin: 12px 12px 30px;
-`;
-
-const StyledHeading = styled.h1`
-  ${getFluidFontSizeStyle(24, 78)}
-  margin: 0 12px;
-  text-transform: uppercase;
-`;
 
 export default function Home() {
   const windowSize = useWindowSize();
