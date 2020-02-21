@@ -4,6 +4,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   margin: 100px 12px 12px;
   font-size: 11px;
+  justify-content: center;
 `;
 
 export const StyledSpan = styled.span`

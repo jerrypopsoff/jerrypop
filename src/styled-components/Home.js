@@ -5,7 +5,6 @@ export const StyledHome = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   text-align: center;
 `;
 
