@@ -7,11 +7,11 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Olive oil',
-        amount: '0.33 cups',
+        amount: '0.33-0.5 cups',
       },
       {
         name: 'Fresh rosemary',
@@ -73,23 +73,23 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Unsalted butter',
-        amount: '0.25 cup',
+        amount: '3 tablespoons',
       },
       {
         name: 'Sugar',
-        amount: '1.5 tablespoons',
+        amount: '2 tablespoons',
       },
       {
         name: 'Peanut butter',
-        amount: '3 tablespoons',
+        amount: '0.75 cups',
       },
       {
-        name: 'Grape jelly',
-        amount: '3 tablespoons',
+        name: 'Grape jelly or strawberry jam',
+        amount: '0.75 cups',
       },
       {
         name: 'Coarse kosher salt',
@@ -147,11 +147,11 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Canola oil',
-        amount: '0.33 cups',
+        amount: '0.33-0.5 cups',
       },
       {
         name: 'Fresh cilantro',
@@ -228,11 +228,11 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Canola oil',
-        amount: '0.33 cups',
+        amount: '0.33-0.5 cups',
       },
       {
         name: 'Fresh basil',
@@ -297,11 +297,11 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Unsalted butter',
-        amount: '0.25 cup',
+        amount: '3 tablespoons',
       },
       {
         name: 'Sugar',
@@ -309,7 +309,7 @@ export const RECIPES = [
       },
       {
         name: 'Nutella',
-        amount: '4 tablespoons',
+        amount: '1.25 cups',
       },
       {
         name: 'Coarse kosher salt',
@@ -366,11 +366,11 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '1 cup',
+        amount: '0.5 cups',
       },
       {
         name: 'Canola oil',
-        amount: '0.5 cups',
+        amount: '0.33-0.5 cups',
       },
       {
         name: 'Your favorite thai curry powder',
