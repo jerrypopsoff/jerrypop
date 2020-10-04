@@ -56,7 +56,7 @@ export const RECIPES = [
         content: 'Drizzle oil mixture as evenly as possible onto the popcorn',
       },
       {
-        content: 'Shake the shit out of that bowl',
+        content: 'Shake the sh*t out of that bowl',
         aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
       },
       {
@@ -70,6 +70,7 @@ export const RECIPES = [
   {
     title: 'PB&J',
     time: '30 minutes',
+    href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -88,7 +89,7 @@ export const RECIPES = [
         amount: '3 tablespoons',
       },
       {
-        name: 'Grape jelly',
+        name: 'Grape jelly or strawberry jam',
         amount: '3 tablespoons',
       },
       {
@@ -104,18 +105,22 @@ export const RECIPES = [
         content: 'Air pop a batch into your massive bowl',
       },
       {
-        content: 'Melt unsalted butter in a saucepan on medium heat',
+        content: 'Melt unsalted butter in a saucepan on low heat',
       },
       {
         content: 'Add sugar into saucepan and stir until mixed well',
       },
       {
         content:
-          'Add peanut butter and jelly to the saucepan and increase to medium/high heat',
+          'Add peanut butter and jelly to the saucepan and increase to medium heat',
       },
       {
         content:
           'Stir frequently until you have a bubbling, brown paste/liquid thing with no chunks of jelly',
+      },
+      {
+        content:
+          'Remove saucepan from heat, allowing the sauce to cool for a few minutes',
       },
       {
         content: 'Drizzle in a spiral or zigzag motion into the popcorn',
@@ -205,7 +210,7 @@ export const RECIPES = [
           'I prefer spiral, but this is where you can let your creativity shine',
       },
       {
-        content: 'Shake the shit out of that bowl',
+        content: 'Shake the sh*t out of that bowl',
         aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
       },
       {
@@ -280,7 +285,7 @@ export const RECIPES = [
           'I prefer spiral, but this is where you can let your creativity shine',
       },
       {
-        content: 'Shake the shit out of that bowl',
+        content: 'Shake the sh*t out of that bowl',
         aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
       },
       {
@@ -324,17 +329,21 @@ export const RECIPES = [
         content: 'Air pop a batch into your massive bowl',
       },
       {
-        content: 'Melt unsalted butter in a saucepan on medium heat',
+        content: 'Melt unsalted butter in a saucepan on low heat',
       },
       {
         content: 'Add sugar into saucepan and stir until mixed well',
       },
       {
-        content: 'Add Nutella to the saucepan and increase to medium/high heat',
+        content: 'Add Nutella to the saucepan and increase to medium heat',
       },
       {
         content:
           'Stir frequently until you have a bubbling, brown paste/liquid thing',
+      },
+      {
+        content:
+          'Remove saucepan from heat, allowing the sauce to cool for a few minutes',
       },
       {
         content: 'Drizzle in a spiral or zigzag motion into the popcorn',
@@ -425,7 +434,7 @@ export const RECIPES = [
           'I prefer spiral, but this is where you can let your creativity shine',
       },
       {
-        content: 'Shake the shit out of that bowl',
+        content: 'Shake the sh*t out of that bowl',
         aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
       },
       {
