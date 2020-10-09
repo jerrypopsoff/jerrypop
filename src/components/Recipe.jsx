@@ -10,6 +10,7 @@ import {
   StyledSteps,
   StyledTime,
   StyledTitle,
+  StyledVideo,
 } from '../styled-components/Recipe';
 import React from 'react';
 
@@ -18,6 +19,19 @@ export default function Recipe({ recipe }) {
     <StyledRecipe>
       <StyledTitle>{recipe.title}</StyledTitle>
       <StyledTime>{recipe.time}</StyledTime>
+      {recipe.href ? (
+        <StyledVideo>
+          <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            frameborder="0"
+            height="100%"
+            width="100%"
+            src={recipe.href}
+            title={recipe.title}
+          ></iframe>
+        </StyledVideo>
+      ) : null}
       <h5>Materials</h5>
       <StyledMaterials>
         {recipe.materials.map(({ amount, name }) => (

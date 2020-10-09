@@ -80,3 +80,14 @@ export const StyledStepContent = styled.span`
 export const StyledAside = styled.span`
   ${asideFont}
 `;
+
+export const StyledVideo = styled.div`
+  margin: 10px 0;
+  height: 258px;
+  text-align: center;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    height: 174px;
+  }
+`;
