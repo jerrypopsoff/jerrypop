@@ -23,8 +23,8 @@ export default function Recipe({ recipe }) {
         <StyledVideo>
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            frameborder="0"
+            allowFullScreen
+            frameBorder="0"
             height="100%"
             width="100%"
             src={recipe.href}
