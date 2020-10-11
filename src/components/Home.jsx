@@ -17,17 +17,20 @@ import SocialLinks from './SocialLinks';
 import logo from '../images/Jerrypop.png';
 import useWindowSize from '@rehooks/window-size';
 
-export default function Home({ children, heading }) {
+export default function Home() {
   const windowSize = useWindowSize();
 
   return (
     <StyledHome>
       <StyledLogo src={logo} alt="Jerrypop Logo" />
-      <StyledHeading>{heading}</StyledHeading>
-      <StyledContent>{children}</StyledContent>
+      <StyledHeading>Poppin’ off with Jerry</StyledHeading>
+      <StyledContent>
+        Life is too short to not eat popcorn. Find yourself an air popper and an
+        enormous bowl, and give these recipes a shot.
+      </StyledContent>
       <InteractiveLink
-        defaultText="🍿 Start poppin’ 🍿"
-        interactiveText="💥 Start poppin’ 💥"
+        defaultText="🍿 Pop off 🍿"
+        interactiveText="💥 Pop off 💥"
         to="/user/IfGqGIjqLIP4soMIrBI9ULIUmUy2"
       />
       <SocialLinks />
