@@ -1,7 +1,7 @@
 import {
+  StyledInstagramIcon,
   StyledSocialLink,
   StyledSocialLinkIcon,
-  StyledSocialLinkLargeIcon,
   StyledSocialLinksList,
   StyledSocialLinksListItem,
 } from '../styled-components/SocialLinks';
@@ -22,7 +22,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <StyledSocialLinkIcon
+          <StyledInstagramIcon
             alt="Jerrypop on Instagram"
             src={InstagramIcon}
           />
@@ -34,10 +34,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <StyledSocialLinkLargeIcon
-            alt="Jerrypop on YouTube"
-            src={YouTubeIcon}
-          />
+          <StyledSocialLinkIcon alt="Jerrypop on YouTube" src={YouTubeIcon} />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
     </StyledSocialLinksList>

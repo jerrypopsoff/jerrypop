@@ -9,7 +9,7 @@ export const StyledSocialLinksList = styled.ul`
 `;
 
 export const StyledSocialLinksListItem = styled.li`
-  padding: 16px;
+  margin: 16px;
 `;
 
 export const StyledSocialLink = styled.a`
@@ -18,8 +18,12 @@ export const StyledSocialLink = styled.a`
 
 export const StyledSocialLinkIcon = styled.img`
   height: 32px;
+  padding: 5px;
 `;
 
-export const StyledSocialLinkLargeIcon = styled.img`
-  height: 36px;
+/**
+ * Override for Instagram due to extra padding on the image asset
+ */
+export const StyledInstagramIcon = styled.img`
+  height: 43px;
 `;
