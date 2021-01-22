@@ -4,7 +4,7 @@ export const RECIPES = [
   {
     title: 'Rosemary Lemon Pepper',
     time: '60 minutes',
-    href: 'https://www.youtube.com/watch?v=Gvb7Lrm_5Ew',
+    href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
     materials: [
       {
         name: 'Popcorn kernels',
