@@ -3,7 +3,8 @@ export const USER_ID = 'IfGqGIjqLIP4soMIrBI9ULIUmUy2';
 export const RECIPES = [
   {
     title: 'Rosemary Lemon Pepper',
-    time: '5-8 minutes',
+    time: '60 minutes',
+    href: 'https://www.youtube.com/watch?v=Gvb7Lrm_5Ew',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -11,56 +12,79 @@ export const RECIPES = [
       },
       {
         name: 'Olive oil',
-        amount: '0.33-0.5 cups',
+        amount: '0.5 cup',
       },
       {
         name: 'Fresh rosemary',
-        amount: '2 teaspoons, finely chopped',
+        amount: 'A few sprigs or one clamshell thingy',
       },
       {
-        name: 'Fresh lemon juice',
-        amount: '2 teaspoons',
-      },
-      {
-        name: 'Freshly ground black pepper',
-        amount: '2 teaspoons',
+        name: 'Fresh lemon',
+        amount: '3 whole (zest only)',
       },
       {
         name: 'Garlic powder',
-        amount: '0.5 tablespoons',
+        amount: '0.75 tablespoons',
       },
       {
         name: 'Onion powder',
-        amount: '0.5 tablespoons',
+        amount: '0.75 tablespoons',
       },
       {
-        name: 'Sage',
+        name: 'Sugar',
         amount: '1 teaspoon',
       },
       {
-        name: 'Coarse kosher salt',
-        amount: 'To taste',
+        name: 'Salt',
+        amount: '1-2 tablespoons',
+      },
+      {
+        name: 'Freshly ground black pepper',
+        amount: '1-2 tablespoons',
       },
     ],
     steps: [
+      {
+        content: 'Preheat oven to the lowest possible temperature setting',
+      },
+      {
+        content:
+          'Zest two lemons onto a parchment-lined baking sheet and bake for 30-45 minutes',
+        aside:
+          'Alternatively, use a food dehydrator or your favorite lemon-pepper seasoning. Honestly, lemon-pepper seasoning is way easier and tastes basically the same, so I can’t help but recommend that as a dope alternative. Just use half portions of the other dry ingredients. You can even skip infusing the olive oil if you’re looking for a super easy snack that tastes great. Just get some rosemary involved somehow. Or don’t; I’m not your dad.',
+      },
+      {
+        content:
+          'Throw a couple sprigs of rosemary and the olive oil into a saucepan, and apply low heat for 5-10 minutes',
+      },
+      {
+        content:
+          'Remove saucepan from heat and allow to cool to room temperature',
+      },
+      {
+        content: 'Grind or blend dehydrated lemon zest into a powder',
+      },
       {
         content: 'Air pop a batch into your massive bowl',
       },
       {
         content:
-          'Thoroughly mix rosemary, lemon juice, black pepper, garlic powder, onion powder, and sage into olive oil',
-        aside:
-          'The lemon juice will separate from the oil, but I promise this is okay',
+          'Thoroughly mix lemon powder, garlic powder, onion powder, sugar, and black pepper into rosemary-infused olive oil',
       },
       {
-        content: 'Drizzle oil mixture as evenly as possible onto the popcorn',
+        content: 'Drizzle dat sauce onto the popcorn',
       },
       {
         content: 'Shake the sh*t out of that bowl',
-        aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
       },
       {
         content: 'Salt to taste, and shake the batch to mix',
+        aside:
+          'I like coarse kosher salt for a less consistent per-bite experience that pops ur socks off, but go with finely ground salt for more consistency',
+      },
+      {
+        content:
+          'Transfer popcorn to serving bowl and garnish with zest of remaining lemon, finely chopped fresh rosemary, and freshly ground black pepper to taste',
       },
       {
         content: 'Eat (or drink) popcorn',
@@ -69,7 +93,7 @@ export const RECIPES = [
   },
   {
     title: 'PB&J',
-    time: '30 minutes',
+    time: '40 minutes',
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
@@ -82,7 +106,7 @@ export const RECIPES = [
       },
       {
         name: 'Sugar',
-        amount: '2 tablespoons',
+        amount: '1 tablespoon',
       },
       {
         name: 'Peanut butter',
@@ -93,7 +117,7 @@ export const RECIPES = [
         amount: '0.75 cups',
       },
       {
-        name: 'Coarse kosher salt',
+        name: 'Salt',
         amount: 'To taste',
       },
     ],
@@ -134,7 +158,7 @@ export const RECIPES = [
         content: 'Salt to taste, and shake/stir the batch to mix',
       },
       {
-        content: 'Spread popcorn evenly on a tinfoil-lined baking sheet',
+        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
           'Popcorn heap should not accumulate more than 1-2 inches in height in any area of the pan',
       },
@@ -148,7 +172,7 @@ export const RECIPES = [
   },
   {
     title: 'Cilantro Lime Taco',
-    time: '5-8 minutes',
+    time: '10 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -191,7 +215,7 @@ export const RECIPES = [
         amount: 'to taste (1-2 teaspoons)',
       },
       {
-        name: 'Coarse kosher salt',
+        name: 'Salt',
         amount: 'To taste',
       },
     ],
@@ -229,7 +253,7 @@ export const RECIPES = [
   },
   {
     title: 'Cranked Curry Basil',
-    time: '5-8 minutes',
+    time: '10 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -264,7 +288,7 @@ export const RECIPES = [
         amount: '1-2 teaspoons',
       },
       {
-        name: 'Coarse kosher salt',
+        name: 'Salt',
         amount: 'To taste',
       },
     ],
@@ -298,7 +322,7 @@ export const RECIPES = [
   },
   {
     title: 'Chocolate Hazelnut',
-    time: '30 minutes',
+    time: '40 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -310,15 +334,19 @@ export const RECIPES = [
       },
       {
         name: 'Sugar',
-        amount: '1.5 tablespoons',
+        amount: '1 tablespoon',
       },
       {
         name: 'Nutella',
         amount: '1.25 cups',
       },
       {
-        name: 'Coarse kosher salt',
+        name: 'Salt',
         amount: 'To taste',
+      },
+      {
+        name: 'Espresso powder',
+        amount: '1 teaspoon (optional)',
       },
     ],
     steps: [
@@ -336,6 +364,8 @@ export const RECIPES = [
       },
       {
         content: 'Add Nutella to the saucepan and increase to medium heat',
+        aside:
+          'Add a lil espresso powder if you’re feeling fancy and want some depth',
       },
       {
         content:
@@ -357,7 +387,7 @@ export const RECIPES = [
         content: 'Salt to taste, and shake/stir the batch to mix',
       },
       {
-        content: 'Spread popcorn evenly on a tinfoil-lined baking sheet',
+        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
           'Popcorn heap should not accumulate more than 1-2 inches in height in any area of the pan',
       },
@@ -371,7 +401,7 @@ export const RECIPES = [
   },
   {
     title: 'Pad Thai',
-    time: '8-10 minutes',
+    time: '10 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -410,7 +440,7 @@ export const RECIPES = [
         amount: '1-2 teaspoons',
       },
       {
-        name: 'Coarse kosher salt',
+        name: 'Salt',
         amount: 'To taste',
       },
     ],
