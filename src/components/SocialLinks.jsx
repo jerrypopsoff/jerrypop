@@ -9,7 +9,7 @@ import InstagramIcon from '../images/InstagramIcon.png';
 import React from 'react';
 import YouTubeIcon from '../images/YouTubeIcon.png';
 
-const INSTAGRAM_FEED_URL = 'https://www.instagram.com/jerrypopdotcom/';
+const INSTAGRAM_FEED_URL = 'https://www.instagram.com/jerrypopsoff/';
 const YOU_TUBE_CHANNEL_URL =
   'https://www.youtube.com/channel/UC_3oErdLxGZgeTf8nrwsD3A';
 
