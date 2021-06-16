@@ -43,6 +43,12 @@ function step(element, intervalId) {
   }
 }
 
+/**
+ * Initialize the animation for a popcorn kernel element.
+ *
+ * @param {string} id The unique identifier and id attribute value for the
+ *   popcorn kernel element.
+ */
 export function animateKernel(id) {
   const element = document.querySelector(`#${id}`);
   if (!element) {
@@ -50,12 +56,8 @@ export function animateKernel(id) {
   }
 
   // Update starting position based on scroll position
-  if (window.scollY !== 0) {
     element.style.top = `${parseInt(element.style.top) - window.scrollY}px`;
-  }
-  if (window.scollX !== 0) {
     element.style.left = `${parseInt(element.style.left) - window.scrollX}px`;
-  }
 
   // Show the element
   element.style.display = 'block';
