@@ -24,6 +24,14 @@ export const StyledRecipe = styled.div`
   text-align: left;
   width: 500px;
 
+  -webkit-touch-callout: default; /* iOS Safari */
+  -webkit-user-select: text; /* Safari */
+  -khtml-user-select: text; /* Konqueror HTML */
+  -moz-user-select: text; /* Old versions of Firefox */
+  -ms-user-select: text; /* Internet Explorer/Edge */
+  user-select: text; /* Non-prefixed version, currently
+                      supported by Chrome, Edge, Opera and Firefox */
+
   @media (max-width: 600px) {
     width: calc(100% - 24px);
   }
