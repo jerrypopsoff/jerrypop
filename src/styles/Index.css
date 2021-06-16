@@ -7,6 +7,14 @@ body {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
 }
 
 a {
@@ -22,4 +30,40 @@ a:hover {
 
 :focus {
   outline-color: #9da2ff;
+}
+
+@keyframes kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.popcorn-kernel {
+  animation: kernel 0.5s infinite linear;
+  -webkit-animation: kernel 0.5s infinite linear;
+  height: 3vmin;
+  position: fixed;
+}
+
+.popcorn-kernel--reverse {
+  animation: reverse-kernel 0.5s infinite linear;
+  -webkit-animation: reverse-kernel 0.5s infinite linear;
 }
