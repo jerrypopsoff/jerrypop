@@ -15,12 +15,8 @@ export function initializeClickPop(documentElement) {
     const kernelElement = getKernelElement(
       documentElement,
       id,
-      /**
-       * Arbitrary offset values for aesthetic with cursor position; should
-       * scale these based on kernel/screen size.
-       */
-      e.pageX - 10,
-      e.pageY - 15,
+      e.pageX,
+      e.pageY,
       isRotatingClockwise,
     );
 
