@@ -3,6 +3,8 @@ import {
   KERNEL_TERMINAL_VELOCITY,
 } from '../constants/Physics';
 import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/Animation';
+import { getRandomInteger } from './Random';
+import kernel from '../images/Kernel.png';
 
 const DEFAULT_KERNEL_HEIGHT = 27;
 
@@ -56,8 +58,8 @@ export function animateKernel(id) {
   }
 
   // Update starting position based on scroll position
-    element.style.top = `${parseInt(element.style.top) - window.scrollY}px`;
-    element.style.left = `${parseInt(element.style.left) - window.scrollX}px`;
+  element.style.top = `${parseInt(element.style.top) - window.scrollY}px`;
+  element.style.left = `${parseInt(element.style.left) - window.scrollX}px`;
 
   // Show the element
   element.style.display = 'block';
@@ -66,4 +68,36 @@ export function animateKernel(id) {
   const intervalId = setInterval(() => {
     step(element, intervalId);
   }, KERNEL_FOUNTAIN_INTERVAL);
+}
+
+/**
+ * Initialize and return a reference to a randomized popcorn kernel element.
+ *
+ * @param {Document} documentElement
+ * @param {string} id
+ * @param {number} left
+ * @param {number} top
+ * @param {boolean} isRotatingClockwise
+ */
+export function getKernelElement(
+  documentElement,
+  id,
+  left,
+  top,
+  isRotatingClockwise,
+) {
+  const kernelElement = documentElement.createElement('img');
+
+  kernelElement.alt = 'Popcorn kernel';
+  kernelElement.className = isRotatingClockwise
+    ? 'popcorn-kernel'
+    : 'popcorn-kernel popcorn-kernel--reverse';
+  kernelElement.id = id;
+  kernelElement.src = kernel;
+  kernelElement.style = `display:'none';left:${left}px;top:${top}px;`;
+  kernelElement.setAttribute('aria-hidden', 'true');
+  kernelElement.setAttribute('data-x-velocity', getRandomInteger(-15, 15));
+  kernelElement.setAttribute('data-y-velocity', getRandomInteger(-20, -10));
+
+  return kernelElement;
 }
