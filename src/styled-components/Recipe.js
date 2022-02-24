@@ -10,7 +10,7 @@ const asideFont = `
   display: block;
   font-size: 12px;
   font-style: italic;
-  margin-top: 4px;
+  margin-top: 8px;
 `;
 
 export const StyledRecipe = styled.div`
@@ -50,12 +50,17 @@ export const StyledTime = styled.span`
   text-align: center;
 `;
 
+export const StyledRecipeHeading = styled.h5`
+  margin: 24px 0 16px;
+  text-transform: uppercase;
+`;
+
 export const StyledMaterials = styled.ul`
   ${listStyles}
 `;
 
 export const StyledMaterial = styled.li`
-  margin: 15px 0;
+  margin: 16px 0;
 `;
 
 export const StyledMaterialName = styled.span`
@@ -65,6 +70,7 @@ export const StyledMaterialName = styled.span`
 
 export const StyledMaterialAmount = styled.span`
   ${asideFont}
+  margin-top: 4px;
   text-transform: lowercase;
 `;
 
@@ -73,7 +79,7 @@ export const StyledSteps = styled.ol`
 `;
 
 export const StyledStep = styled.li`
-  margin: 12px 0;
+  margin: 16px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -90,7 +96,7 @@ export const StyledAside = styled.span`
 `;
 
 export const StyledVideo = styled.div`
-  margin: 10px 0;
+  margin: 16px 0;
   height: 258px;
   text-align: center;
   width: 100%;

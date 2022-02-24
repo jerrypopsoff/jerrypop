@@ -5,6 +5,7 @@ import {
   StyledMaterialName,
   StyledMaterials,
   StyledRecipe,
+  StyledRecipeHeading,
   StyledStep,
   StyledStepContent,
   StyledSteps,
@@ -32,7 +33,7 @@ export default function Recipe({ recipe }) {
           ></iframe>
         </StyledVideo>
       ) : null}
-      <h5>Materials</h5>
+      <StyledRecipeHeading>Materials</StyledRecipeHeading>
       <StyledMaterials>
         {recipe.materials.map(({ amount, name }) => (
           <StyledMaterial key={name}>
@@ -41,13 +42,13 @@ export default function Recipe({ recipe }) {
           </StyledMaterial>
         ))}
       </StyledMaterials>
-      <h5>Instructions</h5>
+      <StyledRecipeHeading>Instructions</StyledRecipeHeading>
       <StyledSteps>
         {recipe.steps.map(({ aside, content }) => (
           <StyledStep key={content}>
             <div>
               <StyledStepContent>{content}</StyledStepContent>
-              <StyledAside>{aside}</StyledAside>
+              <StyledAside dangerouslySetInnerHTML={{ __html: aside }} />
             </div>
           </StyledStep>
         ))}
