@@ -440,7 +440,7 @@ export const RECIPES = [
       },
       {
         content:
-          'Add hazelnut cocal spread and espresso powder to the saucepan and increase to medium heat',
+          'Add hazelnut cocoa spread and espresso powder to the saucepan and increase to medium heat',
       },
       {
         content: 'Stir frequently until you have a simmering, cohesive sauce',
