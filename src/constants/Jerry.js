@@ -8,7 +8,7 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
         name: 'Olive oil',
@@ -16,31 +16,31 @@ export const RECIPES = [
       },
       {
         name: 'Fresh rosemary',
-        amount: 'A few sprigs or one clamshell thingy',
+        amount: 'A few sprigs',
       },
       {
         name: 'Fresh lemon',
-        amount: '3 whole (zest only)',
+        amount: '5 whole (zest only)',
       },
       {
         name: 'Garlic powder',
-        amount: '0.75 tablespoons',
+        amount: '0.75 tbsp',
       },
       {
         name: 'Onion powder',
-        amount: '0.75 tablespoons',
+        amount: '0.75 tbsp',
       },
       {
         name: 'Sugar',
-        amount: '1 teaspoon',
-      },
-      {
-        name: 'Salt',
-        amount: '1-2 tablespoons',
+        amount: '1 tsp',
       },
       {
         name: 'Freshly ground black pepper',
-        amount: '1-2 tablespoons',
+        amount: 'To taste (~1-2 tbsp)',
+      },
+      {
+        name: 'Salt',
+        amount: 'To taste (~1 tbsp)',
       },
     ],
     steps: [
@@ -49,13 +49,13 @@ export const RECIPES = [
       },
       {
         content:
-          'Zest two lemons onto a parchment-lined baking sheet and bake for 30-45 minutes',
+          'Zest four lemons onto a parchment-lined baking sheet and bake for 30-45 minutes',
         aside:
-          'Alternatively, use a food dehydrator or your favorite lemon-pepper seasoning. Honestly, lemon-pepper seasoning is way easier and tastes basically the same, so I can’t help but recommend that as a dope alternative. Just use half portions of the other dry ingredients. You can even skip infusing the olive oil if you’re looking for a super easy snack that tastes great. Just get some rosemary involved somehow. Or don’t; I’m not your dad.',
+          'Alternatively, use a food dehydrator or your favorite lemon pepper seasoning. Honestly, lemon-pepper seasoning is way easier and tastes basically the same, so I can’t help but recommend that as an alternative. Just use 2 tbsp of that and half portions of the other dry ingredients. You can even skip infusing the olive oil if you’re looking for a super easy snack that tastes great. Just get some rosemary involved somehow. Or don’t; I’m not your dad.',
       },
       {
         content:
-          'Throw a couple sprigs of rosemary and the olive oil into a saucepan, and apply low heat for 5-10 minutes',
+          'Throw the sprigs of rosemary and the olive oil into a saucepan, and apply low heat for 5-10 minutes',
       },
       {
         content:
@@ -65,29 +65,29 @@ export const RECIPES = [
         content: 'Grind or blend dehydrated lemon zest into a powder',
       },
       {
-        content: 'Air pop a batch into your massive bowl',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content:
           'Thoroughly mix lemon powder, garlic powder, onion powder, sugar, and black pepper into rosemary-infused olive oil',
       },
       {
-        content: 'Drizzle dat sauce onto the popcorn',
+        content:
+          'Drizzle sauce onto the popcorn, and shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Shake the sh*t out of that bowl',
-      },
-      {
-        content: 'Salt to taste, and shake the batch to mix',
-        aside:
-          'I like coarse kosher salt for a less consistent per-bite experience that pops ur socks off, but go with finely ground salt for more consistency',
+        content: 'Salt to taste, and shake the bowl again to disperse the salt',
       },
       {
         content:
           'Transfer popcorn to serving bowl and garnish with zest of remaining lemon, finely chopped fresh rosemary, and freshly ground black pepper to taste',
       },
       {
-        content: 'Eat (or drink) popcorn',
+        content:
+          'Eat (or drink) popcorn, and make some lemonade with those lemons',
       },
     ],
   },
@@ -98,35 +98,38 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
         name: 'Unsalted butter',
-        amount: '3 tablespoons',
+        amount: '3 tbsp',
       },
       {
         name: 'Sugar',
-        amount: '1 tablespoon',
+        amount: '1 tbsp',
       },
       {
         name: 'Peanut butter',
-        amount: '0.75 cups',
+        amount: '0.75 cup',
       },
       {
         name: 'Grape jelly or strawberry jam',
-        amount: '0.75 cups',
+        amount: '0.75 cup',
       },
       {
         name: 'Salt',
-        amount: 'To taste',
+        amount: 'To taste (~1 tbsp)',
       },
     ],
     steps: [
       {
-        content: 'Preheat oven to 290F',
+        content: 'Preheat oven to 290°F',
       },
       {
-        content: 'Air pop a batch into your massive bowl',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -139,80 +142,80 @@ export const RECIPES = [
           'Add peanut butter and jelly to the saucepan and increase to medium heat',
       },
       {
-        content:
-          'Stir frequently until you have a bubbling, brown paste/liquid thing with no chunks of jelly',
+        content: 'Stir frequently until you have a simmering, cohesive sauce',
       },
       {
         content:
-          'Remove saucepan from heat, allowing the sauce to cool for a few minutes',
+          'Remove saucepan from heat for a few minutes, allowing the sauce to cool',
       },
       {
-        content: 'Drizzle in a spiral or zigzag motion into the popcorn',
+        content: 'Drizzle sauce onto the popcorn',
         aside:
-          'I prefer spiral, but this is where you can let your creativity shine',
+          'I prefer a spiral motion, but this is where you can let your creativity shine.',
       },
       {
-        content: 'Shake/stir the popcorn until evenly coated with the goods',
+        content:
+          'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake/stir the batch to mix',
+        content: 'Salt to taste, and shake/stir again to disperse the salt',
       },
       {
         content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
-          'Popcorn heap should not accumulate more than 1-2 inches in height in any area of the pan',
+          'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290F, stirring after 8 minutes',
+        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
       },
       {
-        content: 'Remove from oven and allow to cool 😎',
+        content: 'Remove from oven, and allow to cool before serving',
       },
     ],
   },
   {
-    title: 'Cilantro Lime Taco',
+    title: '“Cheesy” Chipotle Taco',
     time: '10 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
-        name: 'Canola oil',
-        amount: '0.33-0.5 cups',
-      },
-      {
-        name: 'Fresh cilantro',
-        amount: '0.5 tablespoons, finely chopped',
-      },
-      {
-        name: 'Fresh lime',
-        amount: '0.125-0.25 limes (1 wedge)',
-      },
-      {
-        name: 'Cumin',
-        amount: '1 tablespoon',
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
       },
       {
         name: 'Garlic powder',
-        amount: '0.5 tablespoons',
+        amount: '0.5 tbsp',
       },
       {
         name: 'Onion powder',
-        amount: '0.5 tablespoons',
+        amount: '0.5 tbsp',
+      },
+      {
+        name: 'Chipotle pepper powder',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Cumin',
+        amount: '1 tsp',
       },
       {
         name: 'Chili powder',
-        amount: '1 teaspoon',
-      },
-      {
-        name: 'Chipotle powder',
-        amount: '1 teaspoon',
+        amount: '1 tsp',
       },
       {
         name: 'Cayenne pepper',
-        amount: 'to taste (1-2 teaspoons)',
+        amount: 'To taste (~1-2 tsp)',
+      },
+      {
+        name: 'Lime juice powder (optional)',
+        amount: 'To taste (~0.25-1 tsp)',
+      },
+      {
+        name: 'Fresh cilantro, finely chopped (optional)',
+        amount: 'To taste',
       },
       {
         name: 'Salt',
@@ -221,33 +224,27 @@ export const RECIPES = [
     ],
     steps: [
       {
-        content: 'Air pop a batch into your massive bowl',
-      },
-      {
         content:
-          'Thoroughly mix cumin, garlic powder, onion powder, chili powder, chipotle powder, and cayenne pepper into canola oil',
-      },
-      {
-        content:
-          'Drizzle oil mixture in a spiral or zigzag motion into the popcorn',
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'I prefer spiral, but this is where you can let your creativity shine',
-      },
-      {
-        content: 'Shake the sh*t out of that bowl',
-        aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
-      },
-      {
-        content: 'Salt to taste, add cilantro, and shake the batch to mix',
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content:
-          'Squeeze lime wedge in a spiral or zigzag motion into the popcorn',
-        aside:
-          'I prefer spiral, but this is where you get to be a special snowflake',
+          'Thoroughly mix garlic powder, onion powder, chipotle pepper powder, cumin, chili powder, cayenne pepper, and lime juice powder into oil',
       },
       {
-        content: 'Eat it 😛',
+        content: 'Drizzle oil mixture onto the popcorn',
+      },
+      {
+        content:
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
+      },
+      {
+        content: 'Salt to taste, and shake again to disperse the salt',
+      },
+      {
+        content: 'Garnish with fresh cilantro and serve',
       },
     ],
   },
@@ -257,104 +254,105 @@ export const RECIPES = [
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
-        name: 'Canola oil',
-        amount: '0.33-0.5 cups',
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
       },
       {
         name: 'Fresh basil',
-        amount: '0.5 tablespoons, finely chopped',
+        amount: '1 tbsp, finely minced',
       },
       {
         name: 'Your favorite curry powder',
-        amount: '1 tablespoon',
+        amount: '1 tbsp',
       },
       {
         name: 'Garam masala',
-        amount: '1 teaspoon',
+        amount: '1 tsp',
       },
       {
         name: 'Garlic powder',
-        amount: '0.5 tablespoons',
+        amount: '0.5 tbsp',
       },
       {
         name: 'Onion powder',
-        amount: '0.5 tablespoons',
+        amount: '0.5 tbsp',
       },
       {
         name: 'Cayenne pepper',
-        amount: '1-2 teaspoons',
+        amount: 'To taste (~1-2 tsp)',
       },
       {
         name: 'Salt',
-        amount: 'To taste',
+        amount: 'To taste (~1 tbsp)',
       },
     ],
     steps: [
       {
-        content: 'Air pop a batch into your massive bowl',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content:
-          'Thoroughly mix basil, curry powder, garam masala, garlic powder, onion powder, and cayenne pepper into canola oil',
-        aside:
-          'Optionally leave half the basil aside to add as a garnish at the end',
+          'Thoroughly mix curry powder, garam masala, garlic powder, onion powder, cayenne pepper, and half the minced basil into oil',
+      },
+      {
+        content: 'Drizzle oil mixture onto the popcorn',
       },
       {
         content:
-          'Drizzle oil mixture in a spiral or zigzag motion into the popcorn',
-        aside:
-          'I prefer spiral, but this is where you can let your creativity shine',
-      },
-      {
-        content: 'Shake the sh*t out of that bowl',
-        aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
         content: 'Salt to taste, and shake the batch to mix',
       },
       {
-        content: '😛',
+        content: 'Garnish with remaining basil and enjoy',
       },
     ],
   },
   {
-    title: 'Chocolate Hazelnut',
+    title: 'Hazelnut Cocoa',
     time: '40 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
         name: 'Unsalted butter',
-        amount: '3 tablespoons',
+        amount: '3 tbsp',
       },
       {
         name: 'Sugar',
-        amount: '1 tablespoon',
+        amount: '1 tbsp',
       },
       {
-        name: 'Nutella',
-        amount: '1.25 cups',
-      },
-      {
-        name: 'Salt',
-        amount: 'To taste',
+        name: 'Hazelnut cocoa spread',
+        amount: '1.25 cup',
       },
       {
         name: 'Espresso powder',
-        amount: '1 teaspoon (optional)',
+        amount: '1 tsp (optional)',
+      },
+      {
+        name: 'Salt',
+        amount: 'To taste (~1 tbsp)',
       },
     ],
     steps: [
       {
-        content: 'Preheat oven to 290F',
+        content: 'Preheat oven to 290°F',
       },
       {
-        content: 'Air pop a batch into your massive bowl',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -363,115 +361,111 @@ export const RECIPES = [
         content: 'Add sugar into saucepan and stir until mixed well',
       },
       {
-        content: 'Add Nutella to the saucepan and increase to medium heat',
-        aside:
-          'Add a lil espresso powder if you’re feeling fancy and want some depth',
+        content:
+          'Add hazelnut cocal spread and espresso powder to the saucepan and increase to medium heat',
+      },
+      {
+        content: 'Stir frequently until you have a simmering, cohesive sauce',
       },
       {
         content:
-          'Stir frequently until you have a bubbling, brown paste/liquid thing',
+          'Remove saucepan from heat for a few minutes, allowing the sauce to cool',
+      },
+      {
+        content: 'Drizzle sauce onto the popcorn',
       },
       {
         content:
-          'Remove saucepan from heat, allowing the sauce to cool for a few minutes',
+          'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Drizzle in a spiral or zigzag motion into the popcorn',
-        aside:
-          'I prefer spiral, but this is where you can let your creativity shine',
-      },
-      {
-        content: 'Shake/stir the popcorn until evenly coated with the goods',
-      },
-      {
-        content: 'Salt to taste, and shake/stir the batch to mix',
+        content: 'Salt to taste, and shake/stir again to disperse the salt',
       },
       {
         content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
-          'Popcorn heap should not accumulate more than 1-2 inches in height in any area of the pan',
+          'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290F, stirring after 8 minutes',
+        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
       },
       {
-        content: 'Remove from oven and allow to cool 😎',
+        content: 'Remove from oven, and allow to cool before serving',
       },
     ],
   },
   {
-    title: 'Pad Thai',
+    title: '“Pad Thai”',
     time: '10 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
-        amount: '0.5 cups',
+        amount: '0.5 cup',
       },
       {
-        name: 'Canola oil',
-        amount: '0.33-0.5 cups',
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
       },
       {
         name: 'Your favorite thai curry powder',
-        amount: '1.5 tablespoons',
+        amount: '1.5 tbsp',
       },
       {
         name: 'Garlic powder',
-        amount: '0.5 tablespoons',
+        amount: '0.5 tbsp',
       },
       {
         name: 'Onion powder',
-        amount: '0.5 tablespoons',
-      },
-      {
-        name: 'Cayenne pepper',
-        amount: '1-2 teaspoons',
-      },
-      {
-        name: 'Fresh garlic chives (or green onion)',
-        amount: '0.5 tablespoons, finely chopped',
+        amount: '0.5 tbsp',
       },
       {
         name: 'Peanuts',
-        amount: '0.25-0.5 cups',
+        amount: '0.5 cup',
       },
       {
-        name: 'Crystallized lime (or lime juice powder)',
-        amount: '1-2 teaspoons',
+        name: 'Lime juice powder',
+        amount: 'To taste (~0.25-1 tsp)',
+      },
+      {
+        name: 'Cayenne pepper',
+        amount: 'To taste (~1-2 tsp)',
+      },
+      {
+        name: 'Fresh cilantro, finely chopped (optional)',
+        amount: 'To taste',
       },
       {
         name: 'Salt',
-        amount: 'To taste',
+        amount: 'To taste (~1 tbsp)',
       },
     ],
     steps: [
       {
-        content: 'Air pop a batch into your massive bowl',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
       },
       {
         content: 'Finely grind peanuts in a blender or food processor',
       },
       {
         content:
-          'Thoroughly mix thai curry powder, garlic powder, onion powder, cayenne pepper, garlic chives, 1 tablespoon of ground peanuts, and crystallized lime into canola oil',
-        aside:
-          'Optionally leave half the garlic chives aside to add as a garnish at the end',
+          'Thoroughly mix thai curry powder, garlic powder, onion powder, 1 tbsp of ground peanuts, lime juice powder, and cayenne pepper into oil',
+      },
+      {
+        content: 'Drizzle oil mixture onto the popcorn',
       },
       {
         content:
-          'Drizzle oil mixture in a spiral or zigzag motion into the popcorn',
-        aside:
-          'I prefer spiral, but this is where you can let your creativity shine',
-      },
-      {
-        content: 'Shake the sh*t out of that bowl',
-        aside: `Popcorn tastes way better after it picks up that kitchen floor flavor, so don't worry about it spilling out of your colossal bowl`,
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
         content: 'Salt to taste, and shake the batch to mix',
       },
       {
-        content: '😛',
+        content:
+          'Garnish with cilantro and remaining ground peanuts, and enjoy',
       },
     ],
   },
