@@ -238,7 +238,7 @@ export const RECIPES = [
       },
       {
         content:
-          'Shake the popcorn until sauce is evenly dispersed throughout kernels',
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
         content: 'Salt to taste, and shake again to disperse the salt',
@@ -305,7 +305,7 @@ export const RECIPES = [
       },
       {
         content:
-          'Shake the popcorn until sauce is evenly dispersed throughout kernels',
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
         content: 'Salt to taste, and shake the batch to mix',
@@ -458,7 +458,7 @@ export const RECIPES = [
       },
       {
         content:
-          'Shake the popcorn until sauce is evenly dispersed throughout kernels',
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
         content: 'Salt to taste, and shake the batch to mix',
