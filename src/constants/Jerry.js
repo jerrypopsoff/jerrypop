@@ -2,6 +2,80 @@ export const USER_ID = 'IfGqGIjqLIP4soMIrBI9ULIUmUy2';
 
 export const RECIPES = [
   {
+    title: 'Jalapeño Cheddar Popcorn',
+    time: '10 minutes',
+    href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
+    materials: [
+      {
+        name: 'Popcorn kernels',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Cheddar powder',
+        amount: '3 tbsp',
+      },
+      {
+        name: 'Pure ground jalapeño pepper',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Lime juice powder',
+        amount: '0.25 tsp',
+      },
+      {
+        name: 'Garlic powder',
+        amount: '0.5 tbsp',
+      },
+      {
+        name: 'Onion powder',
+        amount: '0.5 tbsp',
+      },
+      {
+        name: 'Freshly ground black pepper',
+        amount: '1 tsp',
+      },
+      {
+        name: 'Fresh chives, finely chopped',
+        amount: 'To taste (optional)',
+      },
+      {
+        name: 'Salt',
+        amount: '1-2 tbsp',
+      },
+    ],
+    steps: [
+      {
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+      },
+      {
+        content:
+          'Thoroughly mix cheddar powder, jalapeño pepper, lime juice powder, garlic powder, onion powder, and black pepper into oil',
+        aside:
+          'Add cheddar powder through a fine mesh sieve for optimal flavor dispersion.',
+      },
+      {
+        content: 'Drizzle oil mixture onto the popcorn',
+      },
+      {
+        content:
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
+      },
+      {
+        content: 'Add salt and shake the bowl again to disperse',
+      },
+      {
+        content: 'Garnish with chives and enjoy',
+      },
+    ],
+  },
+  {
     title: 'Rosemary Lemon Pepper Popcorn',
     time: '60 minutes',
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
@@ -186,6 +260,10 @@ export const RECIPES = [
         amount: '0.5 cup',
       },
       {
+        name: 'Nutritional yeast',
+        amount: '1.5 tbsp',
+      },
+      {
         name: 'Garlic powder',
         amount: '0.5 tbsp',
       },
@@ -231,7 +309,7 @@ export const RECIPES = [
       },
       {
         content:
-          'Thoroughly mix garlic powder, onion powder, chipotle pepper powder, cumin, chili powder, cayenne pepper, and lime juice powder into oil',
+          'Thoroughly mix nutritional yeast, garlic powder, onion powder, chipotle pepper powder, cumin, chili powder, cayenne pepper, and lime juice powder into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
