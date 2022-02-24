@@ -2,7 +2,7 @@ export const USER_ID = 'IfGqGIjqLIP4soMIrBI9ULIUmUy2';
 
 export const RECIPES = [
   {
-    title: 'Rosemary Lemon Pepper',
+    title: 'Rosemary Lemon Pepper Popcorn',
     time: '60 minutes',
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
     materials: [
@@ -36,11 +36,11 @@ export const RECIPES = [
       },
       {
         name: 'Freshly ground black pepper',
-        amount: 'To taste (~1-2 tbsp)',
+        amount: '1-2 tbsp',
       },
       {
         name: 'Salt',
-        amount: 'To taste (~1 tbsp)',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -79,11 +79,11 @@ export const RECIPES = [
           'Drizzle sauce onto the popcorn, and shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake the bowl again to disperse the salt',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content:
-          'Transfer popcorn to serving bowl and garnish with zest of remaining lemon, finely chopped fresh rosemary, and freshly ground black pepper to taste',
+          'Transfer popcorn to serving bowl and garnish with zest of remaining lemon, finely chopped fresh rosemary, and additional black pepper',
       },
       {
         content:
@@ -92,7 +92,7 @@ export const RECIPES = [
     ],
   },
   {
-    title: 'PB&J',
+    title: 'PB&J Popcorn',
     time: '40 minutes',
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
@@ -118,7 +118,7 @@ export const RECIPES = [
       },
       {
         name: 'Salt',
-        amount: 'To taste (~1 tbsp)',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -158,7 +158,7 @@ export const RECIPES = [
           'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake/stir again to disperse the salt',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content: 'Spread popcorn evenly on a parchment-lined baking sheet',
@@ -174,7 +174,7 @@ export const RECIPES = [
     ],
   },
   {
-    title: '“Cheesy” Chipotle Taco',
+    title: '“Cheesy” Chipotle Taco Popcorn',
     time: '10 minutes',
     materials: [
       {
@@ -207,19 +207,19 @@ export const RECIPES = [
       },
       {
         name: 'Cayenne pepper',
-        amount: 'To taste (~1-2 tsp)',
+        amount: '1 tsp (optional for heat)',
       },
       {
-        name: 'Lime juice powder (optional)',
-        amount: 'To taste (~0.25-1 tsp)',
+        name: 'Lime juice powder',
+        amount: '0.5 tsp (optional)',
       },
       {
-        name: 'Fresh cilantro, finely chopped (optional)',
-        amount: 'To taste',
+        name: 'Fresh cilantro, finely chopped',
+        amount: 'To taste (optional)',
       },
       {
         name: 'Salt',
-        amount: 'To taste',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -241,7 +241,7 @@ export const RECIPES = [
           'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake again to disperse the salt',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content: 'Garnish with fresh cilantro and serve',
@@ -249,7 +249,7 @@ export const RECIPES = [
     ],
   },
   {
-    title: 'Cranked Curry Basil',
+    title: 'Cranked Curry Basil Popcorn',
     time: '10 minutes',
     materials: [
       {
@@ -282,11 +282,11 @@ export const RECIPES = [
       },
       {
         name: 'Cayenne pepper',
-        amount: 'To taste (~1-2 tsp)',
+        amount: '2 tsp (optional for heat)',
       },
       {
         name: 'Salt',
-        amount: 'To taste (~1 tbsp)',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -308,7 +308,7 @@ export const RECIPES = [
           'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake the batch to mix',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content: 'Garnish with remaining basil and enjoy',
@@ -316,7 +316,7 @@ export const RECIPES = [
     ],
   },
   {
-    title: 'Hazelnut Cocoa',
+    title: 'Hazelnut Cocoa Popcorn',
     time: '40 minutes',
     materials: [
       {
@@ -341,7 +341,7 @@ export const RECIPES = [
       },
       {
         name: 'Salt',
-        amount: 'To taste (~1 tbsp)',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -379,7 +379,7 @@ export const RECIPES = [
           'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake/stir again to disperse the salt',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content: 'Spread popcorn evenly on a parchment-lined baking sheet',
@@ -395,7 +395,7 @@ export const RECIPES = [
     ],
   },
   {
-    title: '“Pad Thai”',
+    title: '“Pad Thai” Popcorn',
     time: '10 minutes',
     materials: [
       {
@@ -424,19 +424,19 @@ export const RECIPES = [
       },
       {
         name: 'Lime juice powder',
-        amount: 'To taste (~0.25-1 tsp)',
+        amount: '0.5 tsp',
       },
       {
         name: 'Cayenne pepper',
-        amount: 'To taste (~1-2 tsp)',
+        amount: '1 tsp (optional for heat',
       },
       {
-        name: 'Fresh cilantro, finely chopped (optional)',
-        amount: 'To taste',
+        name: 'Fresh cilantro, finely chopped',
+        amount: 'To taste (optional)',
       },
       {
         name: 'Salt',
-        amount: 'To taste (~1 tbsp)',
+        amount: '1-2 tbsp',
       },
     ],
     steps: [
@@ -461,7 +461,7 @@ export const RECIPES = [
           'Shake the bowl until sauce is evenly dispersed throughout kernels',
       },
       {
-        content: 'Salt to taste, and shake the batch to mix',
+        content: 'Add salt and shake the bowl again to disperse',
       },
       {
         content:
