@@ -38,7 +38,7 @@ export const StyledRecipe = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
-  margin: 0 0 5px;
+  margin: 0 0 4px;
   text-align: center;
   text-transform: uppercase;
 `;

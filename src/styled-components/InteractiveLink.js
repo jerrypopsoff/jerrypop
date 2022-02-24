@@ -9,7 +9,7 @@ export const StyledLink = styled(Link)`
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.25px;
-  margin: 5px 0;
+  margin: 8px 0;
   padding: 12px 24px;
 
   &:hover,

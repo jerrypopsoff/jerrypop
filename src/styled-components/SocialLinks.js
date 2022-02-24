@@ -18,7 +18,7 @@ export const StyledSocialLink = styled.a`
 
 export const StyledSocialLinkIcon = styled.img`
   height: 32px;
-  padding: 5px;
+  padding: 4px;
 `;
 
 /**
