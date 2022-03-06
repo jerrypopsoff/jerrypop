@@ -14,6 +14,11 @@ export const StyledLogo = styled.img`
   margin: 48px 12px 24px;
   pointer-events: none;
 
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+
   @keyframes rotation {
     0%,
     100% {
