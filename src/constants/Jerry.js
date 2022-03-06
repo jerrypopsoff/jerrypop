@@ -52,7 +52,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content:
@@ -142,7 +142,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content:
@@ -203,7 +203,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -305,7 +305,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content:
@@ -372,7 +372,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content:
@@ -430,7 +430,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -522,7 +522,7 @@ export const RECIPES = [
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
-          'Although air poppers are quick and convenient, I recommend <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> for outstanding texture.',
+          'Although air poppers are convenient, <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s stovetop method</a> is my favorite technique because it yields outstanding texture.',
       },
       {
         content: 'Finely grind peanuts in a blender or food processor',
