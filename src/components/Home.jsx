@@ -25,8 +25,8 @@ export default function Home() {
       <StyledLogo src={logo} alt="Jerrypop Logo" />
       <StyledHeading>Poppin’ off with Jerry</StyledHeading>
       <StyledContent>
-        Life is too short to not eat popcorn. Find yourself an air popper and an
-        enormous bowl, and give these recipes a shot.
+        Life is too short to not eat popcorn. Find yourself an enormous bowl,
+        and give these recipes a shot.
       </StyledContent>
       <InteractiveLink
         defaultText="🍿 Pop off 🍿"
