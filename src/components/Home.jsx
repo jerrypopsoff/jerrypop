@@ -14,7 +14,7 @@ import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
 import SocialLinks from './SocialLinks';
-import logo from '../images/Jerrypop.png';
+import logo from '../images/jerrypop.svg';
 import useWindowSize from '@rehooks/window-size';
 
 export default function Home() {
