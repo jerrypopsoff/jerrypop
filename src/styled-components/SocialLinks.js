@@ -4,12 +4,12 @@ export const StyledSocialLinksList = styled.ul`
   align-items: center;
   display: flex;
   list-style: none;
-  margin: 12px 0 0;
+  margin: 0;
   padding: 0;
 `;
 
 export const StyledSocialLinksListItem = styled.li`
-  margin: 16px;
+  margin: 0 4px;
 `;
 
 export const StyledSocialLink = styled.a`
@@ -17,13 +17,15 @@ export const StyledSocialLink = styled.a`
 `;
 
 export const StyledSocialLinkIcon = styled.img`
-  height: 32px;
+  height: 24px;
   padding: 4px;
+  width: 24px;
 `;
 
 /**
  * Override for Instagram due to extra padding on the image asset
  */
 export const StyledInstagramIcon = styled.img`
-  height: 43px;
+  height: 35px;
+  width: 35px;
 `;
