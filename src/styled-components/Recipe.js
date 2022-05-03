@@ -27,6 +27,16 @@ export const StyledRecipe = styled.div`
   @media (max-width: 600px) {
     width: calc(100% - 24px);
   }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: #555;
+    }
+  }
 `;
 
 export const StyledTitle = styled.h2`
