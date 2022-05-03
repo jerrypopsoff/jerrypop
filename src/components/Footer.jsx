@@ -1,12 +1,13 @@
 import { StyledFooter, StyledSpan } from '../styled-components/Footer';
 import React from 'react';
+import SocialLinks from './SocialLinks';
 
 export default function Footer() {
   return (
     <StyledFooter>
-      <StyledSpan>© {new Date().getFullYear()} Jerrypop</StyledSpan>
+      <StyledSpan>© {new Date().getFullYear()} Jerrypop, LLC</StyledSpan>
       <StyledSpan>
-        Artwork by{' '}
+        Art by{' '}
         <a
           href="http://anthonytesija.com"
           rel="noopener noreferrer"
@@ -14,6 +15,9 @@ export default function Footer() {
         >
           Anthony Tesija
         </a>
+      </StyledSpan>
+      <StyledSpan>
+        <SocialLinks />
       </StyledSpan>
     </StyledFooter>
   );

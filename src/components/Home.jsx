@@ -13,7 +13,6 @@ import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
 import InteractiveLink from './InteractiveLink';
 import KernelFountain from './KernelFountain';
 import React from 'react';
-import SocialLinks from './SocialLinks';
 import logo from '../images/jerrypop.svg';
 import useWindowSize from '@rehooks/window-size';
 
@@ -33,7 +32,6 @@ export default function Home() {
         interactiveText="💥 Pop off 💥"
         to="/user/IfGqGIjqLIP4soMIrBI9ULIUmUy2"
       />
-      <SocialLinks />
       <KernelFountain
         delay={KERNEL_FOUNTAIN_DELAY}
         duration={KERNEL_FOUNTAIN_DURATION}
