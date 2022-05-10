@@ -1,6 +1,20 @@
-import { StyledFooter, StyledSpan } from '../styled-components/Footer';
 import React from 'react';
 import SocialLinks from './SocialLinks';
+import styled from 'styled-components';
+
+const StyledFooter = styled.footer`
+  align-items: center;
+  display: flex;
+  font-size: 11px;
+  justify-content: space-around;
+  margin: 48px auto 12px;
+  max-width: 600px;
+`;
+
+const StyledSpan = styled.span`
+  display: block;
+  margin: 0 8px;
+`;
 
 export default function Footer() {
   return (

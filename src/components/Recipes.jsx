@@ -3,7 +3,13 @@ import PageHeading from './PageHeading';
 import { RECIPES } from '../constants/Jerry';
 import React from 'react';
 import Recipe from './Recipe';
-import { StyledUnorderedList } from '../styled-components/User';
+import styled from 'styled-components';
+
+const StyledUnorderedList = styled.ul`
+  padding: 0;
+  list-style: none;
+  margin: 0;
+`;
 
 export default function Recipes() {
   return (
