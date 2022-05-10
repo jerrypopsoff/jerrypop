@@ -6,8 +6,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledPageContent = styled.div`
-  margin: auto;
-  max-width: 800px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledParagraph = styled.p`
+  margin: 12px;
+  max-width: 600px;
+`;
+
+const StyledNavigationMenu = styled(NavigationMenu)`
+  margin-top: 48px;
 `;
 
 export default function Purchase() {
@@ -15,11 +25,11 @@ export default function Purchase() {
     <StyledPageContent>
       <PageHeading>Purchase</PageHeading>
       <PageSubHeading>Retailers</PageSubHeading>
-      <p>
+      <StyledParagraph>
         Jerrypop is not yet available for purchase from retailers. Interested in
         carrying Jerrypop at your retail location? Reach out to us at{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>!
-      </p>
+      </StyledParagraph>
       {/* <p>Jerrypop is available for purchase from the following retailers:</p>
       <ul>
         {RETAILERS.map(retailer => (
@@ -27,11 +37,11 @@ export default function Purchase() {
         ))}
       </ul> */}
       <PageSubHeading>Catering</PageSubHeading>
-      <p>
+      <StyledParagraph>
         Interested in serving Jerrypop at your event? Reach out to us at{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>!
-      </p>
-      <NavigationMenu />
+      </StyledParagraph>
+      <StyledNavigationMenu />
     </StyledPageContent>
   );
 }

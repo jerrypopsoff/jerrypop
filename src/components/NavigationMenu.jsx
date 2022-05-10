@@ -15,11 +15,11 @@ const StyledLink = styled(InteractiveLink)`
   width: 300px;
 `;
 
-export default function NavigationMenu() {
+export default function NavigationMenu({ ...props }) {
   const { pathname } = useLocation();
 
   return (
-    <StyledLinks>
+    <StyledLinks {...props}>
       {pathname !== '/' && (
         <StyledLink
           defaultText="🍿 Home 🍿"
