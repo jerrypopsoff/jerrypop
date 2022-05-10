@@ -1,19 +1,14 @@
-import {
-  StyledInteractiveLink,
-  StyledUnorderedList,
-} from '../styled-components/User';
+import NavigationMenu from './NavigationMenu';
+import PageHeading from './PageHeading';
 import { RECIPES } from '../constants/Jerry';
 import React from 'react';
 import Recipe from './Recipe';
+import { StyledUnorderedList } from '../styled-components/User';
 
-export default function User() {
+export default function Recipes() {
   return (
     <div>
-      <StyledInteractiveLink
-        defaultText="🍿 Home 🍿"
-        interactiveText="💥 Home 💥"
-        to="/"
-      />
+      <PageHeading>Recipes</PageHeading>
       <StyledUnorderedList>
         {RECIPES.map(recipe => (
           <li key={recipe.title}>
@@ -21,6 +16,7 @@ export default function User() {
           </li>
         ))}
       </StyledUnorderedList>
+      <NavigationMenu />
     </div>
   );
 }
