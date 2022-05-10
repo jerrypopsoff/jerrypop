@@ -1,7 +1,14 @@
 import { getRandomBoolean, getRandomInteger } from '../utilities/Random';
 import Kernel from './Kernel';
 import React from 'react';
-import { StyledKernelFountain } from '../styled-components/KernelFountain';
+import styled from 'styled-components';
+
+const StyledKernelFountain = styled.div`
+  position: fixed;
+  left: 0;
+  overflow: visible;
+  top: 0;
+`;
 
 export default function KernelFountain({
   delay,

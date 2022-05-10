@@ -1,8 +1,9 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Purchase from './components/Purchase';
 import React from 'react';
-import User from './components/User';
+import Recipes from './components/Recipes';
 import { initializeClickPop } from './utilities/ClickPop';
 
 export default function App() {
@@ -14,8 +15,11 @@ export default function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/user">
-          <User />
+        <Route exact path="/recipes">
+          <Recipes />
+        </Route>
+        <Route exact path="/purchase">
+          <Purchase />
         </Route>
         <Route path="*">
           <Home heading="Whoops! Someone spilled the kernels.">
