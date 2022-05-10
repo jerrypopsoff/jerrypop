@@ -41,13 +41,22 @@ const StyledLogo = styled.img`
   }
 `;
 
+const StyledParagraph = styled.p`
+  margin: 12px;
+  max-width: 600px;
+`;
+
 export default function Home() {
   const windowSize = useWindowSize();
 
   return (
     <StyledHome>
       <StyledLogo src={logo} alt="Jerrypop logo" />
-      <PageHeading>Poppin’ off with Jerry</PageHeading>
+      <PageHeading>Poppin’ off with Jerrypop</PageHeading>
+      <StyledParagraph>
+        Life is too short to not eat popcorn. Jerrypop is dedicated to
+        handcrafting quality popcorn in San Francisco, California.
+      </StyledParagraph>
       <NavigationMenu />
       <KernelFountain
         delay={KERNEL_FOUNTAIN_DELAY}
