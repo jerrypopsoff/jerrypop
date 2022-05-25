@@ -15,6 +15,7 @@ export default function Recipes() {
   return (
     <div>
       <PageHeading>Recipes</PageHeading>
+      <p>Select a recipe to view details.</p>
       <StyledUnorderedList>
         {RECIPES.map(recipe => (
           <li key={recipe.title}>

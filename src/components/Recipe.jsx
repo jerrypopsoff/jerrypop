@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const listStyles = `
@@ -20,6 +20,7 @@ const StyledRecipe = styled.div`
   border-radius: 5px;
   box-sizing: border-box;
   color: #222;
+  cursor: ${({ isCollapsed }) => (isCollapsed ? 'pointer' : 'default')};
   margin: 12px auto;
   padding: 20px;
   text-align: left;
@@ -28,6 +29,9 @@ const StyledRecipe = styled.div`
   @media (max-width: 600px) {
     width: calc(100% - 24px);
   }
+
+  ${({ isCollapsed }) =>
+    isCollapsed ? '&:hover, &:focus { color: #555; }' : ''}
 
   a {
     color: inherit;
@@ -110,10 +114,10 @@ const StyledVideo = styled.div`
 `;
 
 export default function Recipe({ recipe }) {
-  return (
-    <StyledRecipe>
-      <StyledTitle>{recipe.title}</StyledTitle>
-      <StyledTime>{recipe.time}</StyledTime>
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const recipeDetails = isCollapsed ? null : (
+    <>
       {recipe.href ? (
         <StyledVideo>
           <iframe
@@ -147,6 +151,28 @@ export default function Recipe({ recipe }) {
           </StyledStep>
         ))}
       </StyledSteps>
+    </>
+  );
+
+  const onRecipeClick = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const onRecipeKeyDown = ({ keyCode } = {}) => {
+    keyCode === 13 && setIsCollapsed(!isCollapsed);
+  };
+
+  return (
+    <StyledRecipe
+      isCollapsed={isCollapsed}
+      onClick={isCollapsed ? onRecipeClick : undefined}
+      onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
+      role={isCollapsed ? 'button' : undefined}
+      tabIndex={isCollapsed ? 0 : -1}
+    >
+      <StyledTitle>{recipe.title}</StyledTitle>
+      <StyledTime>{recipe.time}</StyledTime>
+      {recipeDetails}
     </StyledRecipe>
   );
 }

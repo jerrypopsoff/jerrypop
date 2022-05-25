@@ -7,7 +7,7 @@ const StyledLink = styled(Link)`
   align-items: center;
   background-color: #edeeff;
   border-radius: 4px;
-  color: #3e3e51;
+  color: #222;
   cursor: pointer;
   display: flex;
   font-size: 36px;
@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
 
   &:hover,
   &:focus {
-    color: #3e3e51;
+    color: #222;
   }
 `;
 
