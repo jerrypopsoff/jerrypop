@@ -1,4 +1,4 @@
-import { getRandomBoolean, getRandomInteger } from '../utilities/Random';
+import { getRandomBoolean, getRandomInteger } from '../utilities/random';
 import Kernel from './Kernel';
 import React from 'react';
 import styled from 'styled-components';

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import UseInteraction from '../hooks/UseInteraction';
 import styled from 'styled-components';
+import useInteraction from '../hooks/use-interaction';
 
 const StyledLink = styled(Link)`
   align-items: center;
@@ -30,7 +30,7 @@ export default function InteractiveLink({
   interactiveText,
   to,
 }) {
-  const [ref, isInteracting] = UseInteraction();
+  const [ref, isInteracting] = useInteraction();
 
   return (
     <StyledLink className={className} to={to} ref={ref}>

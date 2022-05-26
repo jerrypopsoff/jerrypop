@@ -2,13 +2,13 @@ import {
   KERNEL_FOUNTAIN_DELAY,
   KERNEL_FOUNTAIN_DURATION,
   KERNEL_FOUNTAIN_KERNEL_COUNT,
-} from '../constants/Animation';
+} from '../constants/animation';
 import {
   MAIN_LOGO_NARROW_HEIGHT_PX,
   MAIN_LOGO_WIDE_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
-import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
+import { getFountainLeft, getFountainTop } from '../utilities/kernel-fountain';
 import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';

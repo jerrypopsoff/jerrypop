@@ -1,10 +1,10 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Purchase from './components/Purchase';
+import Footer from './Footer';
+import Home from './Home';
+import Purchase from './Purchase';
 import React from 'react';
-import Recipes from './components/Recipes';
-import { initializeClickPop } from './utilities/ClickPop';
+import Recipes from './Recipes';
+import { initializeClickPop } from '../utilities/click-pop';
 
 export default function App() {
   initializeClickPop(document);
