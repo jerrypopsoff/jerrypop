@@ -4,7 +4,7 @@ import {
 } from '../constants/Physics';
 import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/Animation';
 import { getRandomInteger } from './Random';
-import kernel from '../images/Kernel.png';
+import kernel from '../images/kernel.svg';
 
 const DEFAULT_KERNEL_HEIGHT = 27;
 
