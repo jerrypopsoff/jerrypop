@@ -13,7 +13,7 @@ import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
 import React from 'react';
-import logo from '../images/jerrypop.svg';
+import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
 
