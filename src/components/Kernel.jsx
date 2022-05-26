@@ -1,7 +1,7 @@
 import React from 'react';
 import { animateKernel } from '../utilities/Kernel';
 import { getRandomInteger } from '../utilities/Random';
-import kernel from '../images/Kernel.png';
+import kernel from '../images/kernel.svg';
 import styled from 'styled-components';
 
 const StyledImage = styled.img`
