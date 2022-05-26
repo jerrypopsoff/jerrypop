@@ -1,9 +1,9 @@
 import {
   GRAVITATIONAL_ACCELERATION,
   KERNEL_TERMINAL_VELOCITY,
-} from '../constants/Physics';
-import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/Animation';
-import { getRandomInteger } from './Random';
+} from '../constants/physics';
+import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/animation';
+import { getRandomInteger } from './random';
 import kernel from '../images/kernel-with-border.svg';
 
 const DEFAULT_KERNEL_HEIGHT = 27;

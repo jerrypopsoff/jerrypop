@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Todo: Fix case where hover && focus, un-hover
-export default function UseInteraction() {
+export default function useInteraction() {
   const [value, setValue] = useState(false);
 
   const ref = useRef(null);

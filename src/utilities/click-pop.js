@@ -1,5 +1,5 @@
-import { animateKernel, getKernelElement } from './Kernel';
-import { getRandomBoolean } from './Random';
+import { animateKernel, getKernelElement } from './kernel';
+import { getRandomBoolean } from './random';
 
 let CLICK_POP_INDEX = 0;
 
