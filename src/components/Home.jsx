@@ -27,7 +27,7 @@ const StyledHome = styled.div`
 const StyledLogo = styled.img`
   animation: rotation 3s infinite ease-in-out;
   height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
-  margin: 48px 12px 24px;
+  margin: 48px 0 0;
   pointer-events: none;
 
   -webkit-touch-callout: none; /* iOS Safari */

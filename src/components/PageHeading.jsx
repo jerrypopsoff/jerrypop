@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const StyledPageHeading = styled.h1`
   font-size: 78px;
-  margin: 12px;
+  margin: 48px 0 12px;
   text-transform: uppercase;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
