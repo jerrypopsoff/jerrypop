@@ -1,6 +1,6 @@
-import InstagramIcon from '../images/InstagramIcon.png';
+import InstagramIcon from '../images/instagram-icon.svg';
 import React from 'react';
-import YouTubeIcon from '../images/YouTubeIcon.png';
+import YouTubeIcon from '../images/youtube-icon.svg';
 import styled from 'styled-components';
 
 const INSTAGRAM_FEED_URL = 'https://www.instagram.com/craftpopcorn/';
@@ -29,14 +29,6 @@ const StyledSocialLinkIcon = styled.img`
   width: 24px;
 `;
 
-/**
- * Override for Instagram due to extra padding on the image asset
- */
-const StyledInstagramIcon = styled.img`
-  height: 35px;
-  width: 35px;
-`;
-
 export default function SocialLinks() {
   return (
     <StyledSocialLinksList>
@@ -46,7 +38,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <StyledInstagramIcon
+          <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
             src={InstagramIcon}
           />
