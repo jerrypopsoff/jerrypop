@@ -3,6 +3,11 @@ import {
   KERNEL_FOUNTAIN_DURATION,
   KERNEL_FOUNTAIN_KERNEL_COUNT,
 } from '../constants/Animation';
+import {
+  MAIN_LOGO_NARROW_HEIGHT_PX,
+  MAIN_LOGO_WIDE_HEIGHT_PX,
+  WINDOW_BREAKPOINT_WIDTH_PX,
+} from '../constants/kernel-fountain';
 import { getFountainLeft, getFountainTop } from '../utilities/KernelFountain';
 import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
@@ -21,7 +26,7 @@ const StyledHome = styled.div`
 
 const StyledLogo = styled.img`
   animation: rotation 3s infinite ease-in-out;
-  height: 40vmin;
+  height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
   margin: 48px 12px 24px;
   pointer-events: none;
 
@@ -39,6 +44,10 @@ const StyledLogo = styled.img`
       transform: rotate(2deg);
     }
   }
+
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    height: ${MAIN_LOGO_NARROW_HEIGHT_PX}px;
+  }
 `;
 
 const StyledParagraph = styled.p`
@@ -47,7 +56,7 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
-  const windowSize = useWindowSize();
+  const { innerWidth } = useWindowSize();
 
   return (
     <StyledHome>
@@ -63,8 +72,8 @@ export default function Home() {
         duration={KERNEL_FOUNTAIN_DURATION}
         id="home-fountain"
         kernelCount={KERNEL_FOUNTAIN_KERNEL_COUNT}
-        left={getFountainLeft(windowSize)}
-        top={getFountainTop(windowSize)}
+        left={getFountainLeft(innerWidth)}
+        top={getFountainTop(innerWidth)}
       />
     </StyledHome>
   );
