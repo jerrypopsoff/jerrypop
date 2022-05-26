@@ -60,7 +60,7 @@ a:hover {
   -webkit-animation: reverse-kernel 0.5s infinite linear;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
   .popcorn-kernel {
     height: 22px;
   }
