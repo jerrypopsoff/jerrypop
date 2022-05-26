@@ -1,6 +1,6 @@
 import React from 'react';
-import { animateKernel } from '../utilities/Kernel';
-import { getRandomInteger } from '../utilities/Random';
+import { animateKernel } from '../utilities/kernel';
+import { getRandomInteger } from '../utilities/random';
 import kernel from '../images/kernel-with-border.svg';
 
 export default function Kernel({ delay, id, isRotatingClockwise, left, top }) {

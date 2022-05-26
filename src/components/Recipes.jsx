@@ -1,6 +1,6 @@
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
-import { RECIPES } from '../constants/Jerry';
+import { RECIPES } from '../constants/jerry';
 import React from 'react';
 import Recipe from './Recipe';
 import styled from 'styled-components';
