@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
-const StyledLinks = styled.div`
+const StyledLinks = styled.nav`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
