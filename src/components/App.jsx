@@ -4,6 +4,7 @@ import Home from './Home';
 import Purchase from './Purchase';
 import React from 'react';
 import Recipes from './Recipes';
+import ScrollToTop from './ScrollToTop';
 import { initializeClickPop } from '../utilities/click-pop';
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
           <Home />
