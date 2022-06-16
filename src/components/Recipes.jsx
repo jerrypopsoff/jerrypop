@@ -18,9 +18,7 @@ export default function Recipes() {
       <p>Select a recipe to view details.</p>
       <StyledUnorderedList>
         {RECIPES.map(recipe => (
-          <li key={recipe.title}>
-            <Recipe recipe={recipe} />
-          </li>
+          <Recipe key={recipe.title} recipe={recipe} />
         ))}
       </StyledUnorderedList>
       <NavigationMenu />
