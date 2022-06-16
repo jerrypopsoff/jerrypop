@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
+import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
 
 const listStyles = `
@@ -50,6 +51,7 @@ const StyledRecipe = styled.li`
 
       &:hover,
       &:focus {
+        ${dangleRotation}
         color: #555;
       }
     `;

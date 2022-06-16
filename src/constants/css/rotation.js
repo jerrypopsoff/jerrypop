@@ -13,3 +13,20 @@ export const lazyDangleRotation = css`
     }
   }
 `;
+
+export const dangleRotation = css`
+  animation: dangle 0.25s infinite linear;
+
+  @keyframes dangle {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-0.5deg);
+    }
+    75% {
+      transform: rotate(0.5deg);
+    }
+  }
+`;
