@@ -13,6 +13,7 @@ import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
 import React from 'react';
+import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/jerrypop.svg';
 import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
@@ -25,7 +26,7 @@ const StyledHome = styled.div`
 `;
 
 const StyledLogo = styled.img`
-  animation: rotation 3s infinite ease-in-out;
+  ${lazyDangleRotation}
   height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
   margin: 48px 0 0;
   pointer-events: none;
@@ -34,16 +35,6 @@ const StyledLogo = styled.img`
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Non-prefixed version, currently
                         supported by Chrome, Edge, Opera and Firefox */
-
-  @keyframes rotation {
-    0%,
-    100% {
-      transform: rotate(-2deg);
-    }
-    50% {
-      transform: rotate(2deg);
-    }
-  }
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     height: ${MAIN_LOGO_NARROW_HEIGHT_PX}px;

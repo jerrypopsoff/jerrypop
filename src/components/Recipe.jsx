@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { offsetPulse, pulse } from '../constants/css/pulse';
+import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
 
 const listStyles = `
@@ -14,13 +16,12 @@ const asideFont = `
   margin-top: 8px;
 `;
 
-const StyledRecipe = styled.div`
+const StyledRecipe = styled.li`
   background-color: #edeeff;
   border: 1px solid #edeeff;
   border-radius: 5px;
   box-sizing: border-box;
   color: #222;
-  cursor: ${({ isCollapsed }) => (isCollapsed ? 'pointer' : 'default')};
   margin: 12px auto;
   padding: 20px;
   text-align: left;
@@ -30,8 +31,31 @@ const StyledRecipe = styled.div`
     width: calc(100% - 24px);
   }
 
-  ${({ isCollapsed }) =>
-    isCollapsed ? '&:hover, &:focus { color: #555; }' : ''}
+  ${({ isCollapsed }) => {
+    if (!isCollapsed) {
+      return '';
+    }
+
+    return `
+      cursor: pointer;
+
+      &:not(:hover):not(:focus) {
+        &:nth-child(odd) {
+          ${pulse}
+        }
+
+        &:nth-child(even) {
+          ${offsetPulse}
+        }
+      }
+
+      &:hover,
+      &:focus {
+        ${dangleRotation}
+        color: #555;
+      }
+    `;
+  }}
 
   a {
     color: inherit;
@@ -168,7 +192,7 @@ export default function Recipe({ recipe }) {
       onClick={isCollapsed ? onRecipeClick : undefined}
       onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
       role={isCollapsed ? 'button' : undefined}
-      tabIndex={isCollapsed ? 0 : -1}
+      tabIndex={isCollapsed ? 0 : undefined}
     >
       <StyledTitle>{recipe.title}</StyledTitle>
       <StyledTime>{recipe.time}</StyledTime>
