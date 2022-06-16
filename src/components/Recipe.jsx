@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import {
-  dangleRotation,
-  offsetDangleRotation,
-} from '../constants/css/rotation';
+import { offsetPulse, pulse } from '../constants/css/pulse';
 import styled from 'styled-components';
 
 const listStyles = `
@@ -43,11 +40,11 @@ const StyledRecipe = styled.li`
 
       &:not(:hover):not(:focus) {
         &:nth-child(odd) {
-          ${dangleRotation}
+          ${pulse}
         }
 
         &:nth-child(even) {
-          ${offsetDangleRotation}
+          ${offsetPulse}
         }
       }
 
