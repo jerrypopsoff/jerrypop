@@ -40,7 +40,9 @@ export default function Purchase() {
       <PageSubHeading>Catering</PageSubHeading>
       <StyledParagraph>
         Interested in serving Jerrypop at your event? Reach out to us at{' '}
-        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
+        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>. Please include
+        your full name, location and date of the event, and estimated number of
+        guests. Expect a response within three business days.
       </StyledParagraph>
       <PageSubHeading>Order online</PageSubHeading>
       <OrderForm />
