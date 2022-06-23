@@ -9,7 +9,7 @@ export default function OrderForm() {
   return (
     <iframe
       frameBorder="0"
-      height={width < defaultWidth ? 2100 : 1920}
+      height={width < defaultWidth ? 1620 : 1450}
       marginHeight="0"
       marginWidth="0"
       src="https://docs.google.com/forms/d/e/1FAIpQLSdXm4aTzZVHn5RIYhC1xLy-MNtyRxohuU2tZCH-TPnU8GqGHw/viewform?embedded=true"
