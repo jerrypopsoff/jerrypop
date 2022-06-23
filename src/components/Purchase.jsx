@@ -1,4 +1,5 @@
 import NavigationMenu from './NavigationMenu';
+import OrderForm from './OrderForm';
 import PageHeading from './PageHeading';
 // import { RETAILERS } from '../constants/Retailers';
 import PageSubHeading from './PageSubHeading';
@@ -41,6 +42,8 @@ export default function Purchase() {
         Interested in serving Jerrypop at your event? Reach out to us at{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
       </StyledParagraph>
+      <PageSubHeading>Order online</PageSubHeading>
+      <OrderForm />
       <StyledNavigationMenu />
     </StyledPageContent>
   );
