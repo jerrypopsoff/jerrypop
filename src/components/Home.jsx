@@ -8,11 +8,11 @@ import {
   MAIN_LOGO_WIDE_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
-import React, { useEffect, useState } from 'react';
 import { getFountainLeft, getFountainTop } from '../utilities/kernel-fountain';
 import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
+import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/jerrypop.svg';
 import styled from 'styled-components';
@@ -47,19 +47,10 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
-  const { innerWidth } = useWindowSize();
-  const [hasKernelFountain, setHasKernelFountain] = useState(false);
+  const { innerWidth, outerWidth } = useWindowSize();
 
-  /**
-   * Delay kernel fountain insertion to ensure window size is fully
-   * initialized. This avoids the kernel fountain from appearing off screen for
-   * the Instagram built-in browser instance.
-   */
-  useEffect(() => {
-    setTimeout(() => {
-      setHasKernelFountain(true);
-    }, 250);
-  }, []);
+  // Instagram browser has a bug where innerWidth is fixed to 980px.
+  const viewportWidth = Math.min(innerWidth, outerWidth);
 
   return (
     <StyledHome>
@@ -70,16 +61,14 @@ export default function Home() {
         handcrafting quality popcorn in San Francisco, California.
       </StyledParagraph>
       <NavigationMenu />
-      {hasKernelFountain && (
-        <KernelFountain
-          delay={KERNEL_FOUNTAIN_DELAY}
-          duration={KERNEL_FOUNTAIN_DURATION}
-          id="home-fountain"
-          kernelCount={KERNEL_FOUNTAIN_KERNEL_COUNT}
-          left={getFountainLeft(innerWidth)}
-          top={getFountainTop(innerWidth)}
-        />
-      )}
+      <KernelFountain
+        delay={KERNEL_FOUNTAIN_DELAY}
+        duration={KERNEL_FOUNTAIN_DURATION}
+        id="home-fountain"
+        kernelCount={KERNEL_FOUNTAIN_KERNEL_COUNT}
+        left={getFountainLeft(viewportWidth)}
+        top={getFountainTop(viewportWidth)}
+      />
     </StyledHome>
   );
 }
