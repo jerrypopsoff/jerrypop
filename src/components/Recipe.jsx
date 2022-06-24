@@ -69,6 +69,7 @@ const StyledRecipe = styled.li`
 `;
 
 const StyledTitle = styled.h2`
+  font-size: 24px;
   margin: 0 0 4px;
   text-align: center;
   text-transform: uppercase;

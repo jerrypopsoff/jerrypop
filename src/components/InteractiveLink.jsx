@@ -1,22 +1,11 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { buttonStyle } from '../constants/css/button';
 import styled from 'styled-components';
 import useInteraction from '../hooks/use-interaction';
 
 const StyledLink = styled(Link)`
-  align-items: center;
-  background-color: #edeeff;
-  border-radius: 4px;
-  color: #222;
-  cursor: pointer;
-  display: flex;
-  font-size: 36px;
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 0.25px;
-  margin: 8px;
-  padding: 24px;
-  text-transform: uppercase;
+  ${buttonStyle}
 
   &:hover,
   &:focus {
