@@ -50,7 +50,8 @@ const StyledDialogBackdrop = styled.div`
 export default function OrderFormDialog({ onCloseOrderOnlineDialog }) {
   const { innerHeight, innerWidth } = useWindowSize();
   const verticalMargin = VERTICAL_MARGIN_PX;
-  const dialogHeight = innerHeight - 2 * verticalMargin;
+  // 150px is the minimum height to prevent content from being inaccessible.
+  const dialogHeight = Math.max(innerHeight - 2 * verticalMargin, 150);
   const defaultWidth = 600;
   const dialogWidth = Math.min(
     innerWidth - 2 * HORIZONTAL_MARGIN_PX,
