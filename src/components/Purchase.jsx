@@ -27,13 +27,10 @@ const StyledNavigationMenu = styled(NavigationMenu)`
 const StyledOrderOnlineButton = styled.button`
   ${buttonStyle}
   ${pulse}
-  border: none;
-  font-size: 24px;
 
   &:hover,
   &:focus {
     ${dangleRotation}
-    color: #444;
   }
 `;
 

@@ -39,20 +39,18 @@ const StyledRecipe = styled.li`
     return `
       cursor: pointer;
 
-      &:not(:hover):not(:focus) {
-        &:nth-child(odd) {
-          ${pulse}
-        }
+      &:nth-child(odd) {
+        ${pulse}
+      }
 
-        &:nth-child(even) {
-          ${offsetPulse}
-        }
+      &:nth-child(even) {
+        ${offsetPulse}
       }
 
       &:hover,
       &:focus {
         ${dangleRotation}
-        color: #555;
+        color: #444;
       }
     `;
   }}
@@ -63,7 +61,7 @@ const StyledRecipe = styled.li`
 
     &:hover,
     &:focus {
-      color: #555;
+      color: #444;
     }
   }
 `;

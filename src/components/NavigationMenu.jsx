@@ -1,7 +1,9 @@
-import InteractiveLink from '../components/InteractiveLink';
+import { Link, useLocation } from 'react-router-dom';
+import { offsetPulse, pulse } from '../constants/css/pulse';
 import React from 'react';
+import { buttonStyle } from '../constants/css/button';
+import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
 
 const StyledLinks = styled.nav`
   display: flex;
@@ -10,9 +12,18 @@ const StyledLinks = styled.nav`
   margin-top: 24px;
 `;
 
-const StyledLink = styled(InteractiveLink)`
-  height: 150px;
-  width: 300px;
+const StyledLink = styled(Link)`
+  ${buttonStyle}
+  ${pulse}
+
+  &:nth-child(even) {
+    ${offsetPulse}
+  }
+
+  &:hover,
+  &:focus {
+    ${dangleRotation}
+  }
 `;
 
 export default function NavigationMenu({ ...props }) {
@@ -20,26 +31,12 @@ export default function NavigationMenu({ ...props }) {
 
   return (
     <StyledLinks {...props}>
-      {pathname !== '/' && (
-        <StyledLink
-          defaultText="🍿 Home 🍿"
-          interactiveText="🏠 Home 🏠"
-          to="/"
-        />
-      )}
+      {pathname !== '/' && <StyledLink to="/">Home</StyledLink>}
       {pathname !== '/purchase' && (
-        <StyledLink
-          defaultText="🍿 Purchase 🍿"
-          interactiveText="💥 Purchase 💥"
-          to="/purchase"
-        />
+        <StyledLink to="/purchase">Purchase</StyledLink>
       )}
       {pathname !== '/recipes' && (
-        <StyledLink
-          defaultText="🍿 Recipes 🍿"
-          interactiveText="🧑‍🍳 Recipes 🧑‍🍳"
-          to="/recipes"
-        />
+        <StyledLink to="/recipes">Recipes</StyledLink>
       )}
     </StyledLinks>
   );
