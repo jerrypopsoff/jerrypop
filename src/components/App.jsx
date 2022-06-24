@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import Home from './Home';
+import NotFound from './NotFound';
 import Purchase from './Purchase';
 import React from 'react';
 import Recipes from './Recipes';
@@ -26,9 +27,7 @@ export default function App() {
           <Purchase />
         </Route>
         <Route path="*">
-          <Home heading="Whoops! Someone spilled the kernels.">
-            That page does not exist.
-          </Home>
+          <NotFound />
         </Route>
       </Switch>
       <Footer />
