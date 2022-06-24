@@ -47,10 +47,10 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
-  const { innerWidth, outerWidth } = useWindowSize();
+  const { innerWidth } = useWindowSize();
 
   // Instagram browser has a bug where innerWidth is fixed to 980px.
-  const viewportWidth = Math.min(innerWidth, outerWidth);
+  const viewportWidth = Math.min(innerWidth, window.screen.width);
 
   return (
     <StyledHome>
