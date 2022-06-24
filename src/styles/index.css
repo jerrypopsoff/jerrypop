@@ -53,6 +53,7 @@ a:hover {
   -webkit-animation: kernel 0.5s infinite linear;
   height: 36px;
   position: fixed;
+  z-index: 2001;
 }
 
 .popcorn-kernel--reverse {
