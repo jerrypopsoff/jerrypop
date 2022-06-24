@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import NavigationMenu from './NavigationMenu';
-import OrderForm from './OrderForm';
+import OrderFormDialog from './OrderFormDialog';
 import PageHeading from './PageHeading';
 // import { RETAILERS } from '../constants/Retailers';
 import PageSubHeading from './PageSubHeading';
-import React from 'react';
+import { buttonStyle } from '../constants/css/button';
+import { dangleRotation } from '../constants/css/rotation';
+import { pulse } from '../constants/css/pulse';
 import styled from 'styled-components';
 
 const StyledPageContent = styled.div`
@@ -21,10 +24,48 @@ const StyledNavigationMenu = styled(NavigationMenu)`
   margin-top: 48px;
 `;
 
+const StyledOrderOnlineButton = styled.button`
+  ${buttonStyle}
+  ${pulse}
+  border: none;
+
+  &:hover,
+  &:focus {
+    ${dangleRotation}
+    color: #444;
+  }
+`;
+
 export default function Purchase() {
+  const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
+
+  const onKeyDown = ({ key }) => {
+    if (key === 'Escape') {
+      onCloseOrderOnlineDialog();
+    }
+  };
+
+  const onCloseOrderOnlineDialog = () => {
+    setIsOrderFormVisible(false);
+    document.body.style.overflow = 'unset';
+    window.removeEventListener('keydown', onKeyDown);
+  };
+
+  const onClickOrderOnline = () => {
+    setIsOrderFormVisible(true);
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+  };
+
   return (
     <StyledPageContent>
       <PageHeading>Purchase</PageHeading>
+      <StyledOrderOnlineButton onClick={onClickOrderOnline}>
+        Order online
+      </StyledOrderOnlineButton>
+      {isOrderFormVisible && (
+        <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
+      )}
       <PageSubHeading>Retail</PageSubHeading>
       <StyledParagraph>
         Jerrypop is not yet available for purchase from retailers. Interested in
@@ -44,8 +85,6 @@ export default function Purchase() {
         your full name, location and date of the event, and estimated number of
         guests. Expect a response within three business days.
       </StyledParagraph>
-      <PageSubHeading>Order online</PageSubHeading>
-      <OrderForm />
       <StyledNavigationMenu />
     </StyledPageContent>
   );
