@@ -27,6 +27,7 @@ const StyledCloseButton = styled.button`
   border-radius: 50%;
   color: #222;
   cursor: pointer;
+  font-size: 16px;
   margin: 8px;
   padding: 8px 10px;
 
