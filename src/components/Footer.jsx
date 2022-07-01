@@ -6,9 +6,10 @@ const StyledFooter = styled.footer`
   align-items: center;
   display: flex;
   font-size: 11px;
-  justify-content: space-around;
-  margin: 48px auto 12px;
+  justify-content: space-between;
+  margin: 48px auto 16px;
   max-width: 600px;
+  padding: 0 16px;
 `;
 
 const StyledSpan = styled.span`
@@ -20,16 +21,6 @@ export default function Footer() {
   return (
     <StyledFooter>
       <StyledSpan>© {new Date().getFullYear()} Jerrypop, LLC</StyledSpan>
-      <StyledSpan>
-        Art by{' '}
-        <a
-          href="http://anthonytesija.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Anthony Tesija
-        </a>
-      </StyledSpan>
       <StyledSpan>
         <SocialLinks />
       </StyledSpan>
