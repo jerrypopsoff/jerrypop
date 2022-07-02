@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
+import { withTheme } from '../constants/css/theme';
 
 const listStyles = `
   margin-bottom: 0;
@@ -17,11 +18,10 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li`
-  background-color: ${({ theme }) => theme};
+  ${withTheme}
   border: 1px solid var(--main-theme-light);
   border-radius: 5px;
   box-sizing: border-box;
-  color: var(--main-theme-light);
   margin: 12px auto;
   padding: 20px;
   text-align: left;
