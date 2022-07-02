@@ -9,11 +9,13 @@
   --link-text-hover: #eee;
   --link-text-light: var(--main-theme-light);
 
+  --divider-light: #ddd;
+
   --modal-backdrop: #000;
   --modal-backdrop-opacity: 0.4;
 
   --close-icon-text: var(--default-text-dark);
-  --close-icon-hover-background: #ddd;
+  --close-icon-hover-background: var(--divider-light);
 }
 
 ::selection {
