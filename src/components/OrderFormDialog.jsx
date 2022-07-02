@@ -6,7 +6,7 @@ const VERTICAL_MARGIN_PX = 48;
 const HORIZONTAL_MARGIN_PX = 12;
 
 const StyledDialog = styled.dialog`
-  background-color: #edeeff;
+  background-color: var(--main-theme-light);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: #222;
+  color: var(--close-icon-text);
   cursor: pointer;
   font-size: 16px;
   margin: 8px;
@@ -33,15 +33,15 @@ const StyledCloseButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #ddd;
+    background-color: var(--close-icon-hover-background);
   }
 `;
 
 const StyledDialogBackdrop = styled.div`
-  background-color: #000;
+  background-color: var(--modal-backdrop);
   bottom: 0;
   left: 0;
-  opacity: 0.4;
+  opacity: var(--modal-backdrop-opacity);
   position: fixed;
   right: 0;
   top: 0;

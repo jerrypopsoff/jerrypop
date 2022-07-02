@@ -2,10 +2,10 @@ import { css } from 'styled-components';
 
 export const buttonStyle = css`
   align-items: center;
-  background-color: #edeeff;
+  background-color: var(--main-theme-light);
   border: none;
   border-radius: 4px;
-  color: #222;
+  color: var(--default-text-dark);
   cursor: pointer;
   display: flex;
   font-size: 24px;
@@ -19,6 +19,6 @@ export const buttonStyle = css`
 
   &:hover,
   &:focus {
-    color: #444;
+    color: var(--default-text-medium);
   }
 `;

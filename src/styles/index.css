@@ -1,6 +1,26 @@
+:root {
+  /* Update order form theme whenever these values change */
+
+  --main-theme-dark: #3e3e51;
+  --main-theme-medium: #9da2ff;
+  --main-theme-light: #edeeff;
+
+  --default-text-dark: #222;
+  --default-text-medium: #444;
+
+  --link-text-light: #6ee3ff;
+  --link-text-medium: #00ccff;
+
+  --modal-backdrop: #000;
+  --modal-backdrop-opacity: 0.4;
+
+  --close-icon-text: var(--default-text-dark);
+  --close-icon-hover-background: #ddd;
+}
+
 body {
-  background-color: #3e3e51;
-  color: #edeeff;
+  background-color: var(--main-theme-dark);
+  color: var(--main-theme-light);
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
@@ -10,18 +30,18 @@ body {
 }
 
 a {
-  color: #00ceff;
+  color: var(--link-text-medium);
   cursor: pointer;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #6ee3ff;
+  color: var(--link-text-light);
 }
 
 :focus {
-  outline-color: #9da2ff;
+  outline-color: var(--main-theme-medium);
 }
 
 @keyframes kernel {
