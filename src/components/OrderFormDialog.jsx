@@ -20,8 +20,14 @@ const StyledDialog = styled.dialog`
   z-index: 2000;
 `;
 
+const StyledDialogHeader = styled.header`
+  align-items: flex-end;
+  border-bottom: 1px solid var(--divider-light);
+  display: flex;
+  flex-direction: column;
+`;
+
 const StyledCloseButton = styled.button`
-  align-self: flex-end;
   background-color: transparent;
   border: none;
   border-radius: 50%;
@@ -69,12 +75,14 @@ export default function OrderFormDialog({ onCloseOrderOnlineDialog }) {
         dialogWidth={dialogWidth}
         open={true}
       >
-        <StyledCloseButton
-          aria-label="Close"
-          onClick={onCloseOrderOnlineDialog}
-        >
-          ✕
-        </StyledCloseButton>
+        <StyledDialogHeader>
+          <StyledCloseButton
+            aria-label="Close"
+            onClick={onCloseOrderOnlineDialog}
+          >
+            ✕
+          </StyledCloseButton>
+        </StyledDialogHeader>
         <iframe
           frameBorder="0"
           height={formHeight}
