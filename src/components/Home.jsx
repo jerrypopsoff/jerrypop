@@ -16,6 +16,7 @@ import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/jerrypop.svg';
 import styled from 'styled-components';
+import { toggleTheme } from '../utilities/theme';
 import useWindowSize from '@rehooks/window-size';
 
 const StyledHome = styled.div`
@@ -27,9 +28,9 @@ const StyledHome = styled.div`
 
 const StyledLogo = styled.img`
   ${lazyDangleRotation}
+  cursor: pointer;
   height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
   margin: 48px 0 0;
-  pointer-events: none;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -54,7 +55,7 @@ export default function Home() {
 
   return (
     <StyledHome>
-      <StyledLogo src={logo} alt="Jerrypop logo" />
+      <StyledLogo alt="Jerrypop logo" onClick={toggleTheme} src={logo} />
       <PageHeading>Poppin’ off with Jerrypop</PageHeading>
       <StyledParagraph>
         Life is too short to not eat popcorn. Jerrypop is dedicated to
