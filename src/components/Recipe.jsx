@@ -17,11 +17,11 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li`
-  background-color: var(--main-theme-light);
+  background-color: ${({ theme }) => theme};
   border: 1px solid var(--main-theme-light);
   border-radius: 5px;
   box-sizing: border-box;
-  color: var(--default-text-dark);
+  color: var(--main-theme-light);
   margin: 12px auto;
   padding: 20px;
   text-align: left;
@@ -50,7 +50,6 @@ const StyledRecipe = styled.li`
       &:hover,
       &:focus {
         ${dangleRotation}
-        color: var(--default-text-medium);
       }
     `;
   }}
@@ -191,6 +190,7 @@ export default function Recipe({ recipe }) {
       onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
       role={isCollapsed ? 'button' : undefined}
       tabIndex={isCollapsed ? 0 : undefined}
+      theme={recipe.theme}
     >
       <StyledTitle>{recipe.title}</StyledTitle>
       <StyledTime>{recipe.time}</StyledTime>

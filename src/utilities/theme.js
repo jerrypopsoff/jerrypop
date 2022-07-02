@@ -1,52 +1,14 @@
+import { THEME } from '../constants/theme';
+
 let CURRENT_THEME_INDEX;
 
 const THEMES = [
-  {
-    // Blue & hot pink
-    mainThemeDark: '#0072da',
-    mainThemeMedium: '#e93ab8',
-    textHighlight: '--main-theme-light',
-  },
-  {
-    // Hot pink & purple
-    mainThemeDark: '#e93ab8',
-    mainThemeMedium: '#835dd0',
-    textHighlight: '--main-theme-light',
-  },
-  {
-    // Cyan & yellow
-    mainThemeDark: '#2dccd3',
-    mainThemeMedium: '#f7ea48',
-    textHighlight: '#000',
-  },
-  {
-    // Purple & neon green
-    mainThemeDark: '#835dd0',
-    mainThemeMedium: '#97d700',
-    textHighlight: '#000',
-  },
-  {
-    // Yellow-orange & hot pink
-    mainThemeDark: '#f2a900',
-    mainThemeMedium: '#e93ab8',
-    textHighlight: '--main-theme-light',
-  },
-  {
-    // Green & yellow
-    mainThemeDark: '#00b140',
-    mainThemeMedium: '#f7ea48',
-    textHighlight: '#000',
-  },
-  // {
-  //   mainThemeDark: '#0072da',
-  //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '--main-theme-light',
-  // },
-  // {
-  //   mainThemeDark: '#9678d3',
-  //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '--main-theme-light',
-  // },
+  THEME.BLUE_PINK,
+  THEME.PINK_PURPLE,
+  THEME.CYAN_YELLOW,
+  THEME.PURPLE_GREEN,
+  THEME.ORANGE_PINK,
+  THEME.GREEN_YELLOW,
 ];
 
 export function toggleTheme() {
