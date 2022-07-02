@@ -2,24 +2,6 @@ let CURRENT_THEME_INDEX;
 
 const THEMES = [
   {
-    // Purple & neon green
-    mainThemeDark: '#835dd0',
-    mainThemeMedium: '#97d700',
-    textHighlight: '#000',
-  },
-  {
-    // Yellow-orange & hot pink
-    mainThemeDark: '#f2a900',
-    mainThemeMedium: '#e93ab8',
-    textHighlight: '--main-theme-light',
-  },
-  {
-    // Green & yellow
-    mainThemeDark: '#00b140',
-    mainThemeMedium: '#f7ea48',
-    textHighlight: '#000',
-  },
-  {
     // Blue & hot pink
     mainThemeDark: '#0072da',
     mainThemeMedium: '#e93ab8',
@@ -34,6 +16,24 @@ const THEMES = [
   {
     // Cyan & yellow
     mainThemeDark: '#2dccd3',
+    mainThemeMedium: '#f7ea48',
+    textHighlight: '#000',
+  },
+  {
+    // Purple & neon green
+    mainThemeDark: '#835dd0',
+    mainThemeMedium: '#97d700',
+    textHighlight: '#000',
+  },
+  {
+    // Yellow-orange & hot pink
+    mainThemeDark: '#f2a900',
+    mainThemeMedium: '#e93ab8',
+    textHighlight: '--main-theme-light',
+  },
+  {
+    // Green & yellow
+    mainThemeDark: '#00b140',
     mainThemeMedium: '#f7ea48',
     textHighlight: '#000',
   },
