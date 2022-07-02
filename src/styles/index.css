@@ -14,8 +14,7 @@
   --modal-backdrop: #000;
   --modal-backdrop-opacity: 0.4;
 
-  --close-icon-text: var(--default-text-dark);
-  --close-icon-hover-background: var(--divider-light);
+  --close-icon-hover-background: rgba(0, 0, 0, 0.1);
 }
 
 ::selection {

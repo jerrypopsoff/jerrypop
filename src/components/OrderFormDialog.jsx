@@ -7,6 +7,7 @@ const HORIZONTAL_MARGIN_PX = 12;
 
 const StyledDialog = styled.dialog`
   background-color: var(--main-theme-light);
+  border: none;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -22,20 +23,28 @@ const StyledDialog = styled.dialog`
 
 const StyledDialogHeader = styled.header`
   align-items: flex-end;
+  background-color: var(--text-highlight-background);
   border-bottom: 1px solid var(--divider-light);
+  border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
 `;
 
 const StyledCloseButton = styled.button`
+  align-items: center;
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--close-icon-text);
+  color: var(--text-highlight);
   cursor: pointer;
+  display: flex;
   font-size: 16px;
+  font-weight: bold;
+  height: 36px;
+  justify-content: center;
   margin: 8px;
-  padding: 8px 10px;
+  padding: 0;
+  width: 36px;
 
   &:hover,
   &:focus {
