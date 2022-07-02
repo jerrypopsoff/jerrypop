@@ -17,11 +17,11 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li`
-  background-color: #edeeff;
-  border: 1px solid #edeeff;
+  background-color: var(--main-theme-light);
+  border: 1px solid var(--main-theme-light);
   border-radius: 5px;
   box-sizing: border-box;
-  color: #222;
+  color: var(--default-text-dark);
   margin: 12px auto;
   padding: 20px;
   text-align: left;
@@ -50,7 +50,7 @@ const StyledRecipe = styled.li`
       &:hover,
       &:focus {
         ${dangleRotation}
-        color: #444;
+        color: var(--default-text-medium);
       }
     `;
   }}
@@ -61,7 +61,7 @@ const StyledRecipe = styled.li`
 
     &:hover,
     &:focus {
-      color: #444;
+      color: var(--default-text-medium);
     }
   }
 `;
