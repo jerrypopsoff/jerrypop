@@ -33,3 +33,20 @@ export const offsetPulse = css`
     }
   }
 `;
+
+export const bigPulse = css`
+  animation: bigPulse 2.5s infinite linear;
+
+  @keyframes bigPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(0.95);
+    }
+    75% {
+      transform: scale(1.05);
+    }
+  }
+`;

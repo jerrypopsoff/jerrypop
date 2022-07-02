@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialLinks from './SocialLinks';
+import ThemeToggleButton from './ThemeToggleButton';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -21,6 +22,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <StyledSpan>© {new Date().getFullYear()} Jerrypop, LLC</StyledSpan>
+      <ThemeToggleButton />
       <StyledSpan>
         <SocialLinks />
       </StyledSpan>
