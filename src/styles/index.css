@@ -1,21 +1,24 @@
 :root {
-  /* Update order form theme whenever these values change */
-
-  --main-theme-dark: #3e3e51;
-  --main-theme-medium: #9da2ff;
-  --main-theme-light: #edeeff;
+  --main-theme-light: #fff;
 
   --default-text-dark: #222;
   --default-text-medium: #444;
 
-  --link-text-hover: var(--main-theme-medium);
-  --link-text-light: #fff;
+  --text-highlight-background: var(--main-theme-medium);
+
+  --link-text-hover: #eee;
+  --link-text-light: var(--main-theme-light);
 
   --modal-backdrop: #000;
   --modal-backdrop-opacity: 0.4;
 
   --close-icon-text: var(--default-text-dark);
   --close-icon-hover-background: #ddd;
+}
+
+::selection {
+  background-color: var(--text-highlight-background);
+  color: var(--text-highlight);
 }
 
 body {

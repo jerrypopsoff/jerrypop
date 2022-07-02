@@ -8,9 +8,11 @@ import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
 import { initializeClickPop } from '../utilities/click-pop';
 import { logAsciiArt } from '../utilities/console-ascii-art';
+import { toggleTheme } from '../utilities/theme';
 
 export default function App() {
   initializeClickPop(document);
+  toggleTheme();
   logAsciiArt();
 
   return (
