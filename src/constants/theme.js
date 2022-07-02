@@ -2,12 +2,12 @@ export const THEME = {
   BLUE_PINK: {
     mainThemeDark: '#0072da',
     mainThemeMedium: '#e93ab8',
-    textHighlight: '--main-theme-light',
+    textHighlight: 'var(--main-theme-light)',
   },
   PINK_PURPLE: {
     mainThemeDark: '#e93ab8',
     mainThemeMedium: '#835dd0',
-    textHighlight: '--main-theme-light',
+    textHighlight: 'var(--main-theme-light)',
   },
   CYAN_YELLOW: {
     mainThemeDark: '#2dccd3',
@@ -22,7 +22,7 @@ export const THEME = {
   ORANGE_PINK: {
     mainThemeDark: '#f2a900',
     mainThemeMedium: '#e93ab8',
-    textHighlight: '--main-theme-light',
+    textHighlight: 'var(--main-theme-light)',
   },
   GREEN_YELLOW: {
     mainThemeDark: '#00b140',
@@ -32,11 +32,11 @@ export const THEME = {
   // BLUE_CYAN: {
   //   mainThemeDark: '#0072da',
   //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '--main-theme-light',
+  //   textHighlight: 'var(--main-theme-light)',
   // },
   // PURPLE_CYAN: {
   //   mainThemeDark: '#9678d3',
   //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '--main-theme-light',
+  //   textHighlight: 'var(--main-theme-light)',
   // },
 };
