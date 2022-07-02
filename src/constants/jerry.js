@@ -1,9 +1,12 @@
+import { THEME } from './theme';
+
 export const USER_ID = 'IfGqGIjqLIP4soMIrBI9ULIUmUy2';
 
 export const RECIPES = [
   {
     title: 'Jalapeño Cheddar Popcorn',
     time: '10 minutes',
+    theme: THEME.ORANGE_PINK.mainThemeDark,
     href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
     materials: [
       {
@@ -78,6 +81,7 @@ export const RECIPES = [
   {
     title: 'Rosemary Lemon Pepper Popcorn',
     time: '60 minutes',
+    theme: THEME.GREEN_YELLOW.mainThemeDark,
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
     materials: [
       {
@@ -168,6 +172,7 @@ export const RECIPES = [
   {
     title: 'PB&J Popcorn',
     time: '40 minutes',
+    theme: THEME.BLUE_PINK.mainThemeMedium,
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
@@ -248,8 +253,89 @@ export const RECIPES = [
     ],
   },
   {
+    title: 'Hazelnut Cocoa Popcorn',
+    time: '40 minutes',
+    theme: THEME.PURPLE_GREEN.mainThemeDark,
+    materials: [
+      {
+        name: 'Popcorn kernels',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Unsalted butter',
+        amount: '3 tbsp',
+      },
+      {
+        name: 'Sugar',
+        amount: '1 tbsp',
+      },
+      {
+        name: 'Hazelnut cocoa spread',
+        amount: '1.25 cup',
+      },
+      {
+        name: 'Espresso powder',
+        amount: '1 tsp (optional)',
+      },
+      {
+        name: 'Salt',
+        amount: '1-2 tbsp',
+      },
+    ],
+    steps: [
+      {
+        content: 'Preheat oven to 290°F',
+      },
+      {
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+      },
+      {
+        content: 'Melt unsalted butter in a saucepan on low heat',
+      },
+      {
+        content: 'Add sugar into saucepan and stir until mixed well',
+      },
+      {
+        content:
+          'Add hazelnut cocoa spread and espresso powder to the saucepan and increase to medium heat',
+      },
+      {
+        content: 'Stir frequently until you have a simmering, cohesive sauce',
+      },
+      {
+        content:
+          'Remove saucepan from heat for a few minutes, allowing the sauce to cool',
+      },
+      {
+        content: 'Drizzle sauce onto the popcorn',
+      },
+      {
+        content:
+          'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
+      },
+      {
+        content: 'Add salt and shake the bowl again to disperse',
+      },
+      {
+        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
+        aside:
+          'Ideally the baking sheet is large enough to spread kernels into a single layer.',
+      },
+      {
+        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
+      },
+      {
+        content: 'Remove from oven, and allow to cool before serving',
+      },
+    ],
+  },
+  {
     title: '“Cheesy” Chipotle Taco Popcorn',
     time: '10 minutes',
+    theme: THEME.ORANGE_PINK.mainThemeDark,
     materials: [
       {
         name: 'Popcorn kernels',
@@ -329,6 +415,7 @@ export const RECIPES = [
   {
     title: 'Cranked Curry Basil Popcorn',
     time: '10 minutes',
+    theme: THEME.GREEN_YELLOW.mainThemeDark,
     materials: [
       {
         name: 'Popcorn kernels',
@@ -394,87 +481,9 @@ export const RECIPES = [
     ],
   },
   {
-    title: 'Hazelnut Cocoa Popcorn',
-    time: '40 minutes',
-    materials: [
-      {
-        name: 'Popcorn kernels',
-        amount: '0.5 cup',
-      },
-      {
-        name: 'Unsalted butter',
-        amount: '3 tbsp',
-      },
-      {
-        name: 'Sugar',
-        amount: '1 tbsp',
-      },
-      {
-        name: 'Hazelnut cocoa spread',
-        amount: '1.25 cup',
-      },
-      {
-        name: 'Espresso powder',
-        amount: '1 tsp (optional)',
-      },
-      {
-        name: 'Salt',
-        amount: '1-2 tbsp',
-      },
-    ],
-    steps: [
-      {
-        content: 'Preheat oven to 290°F',
-      },
-      {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
-        aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
-      },
-      {
-        content: 'Melt unsalted butter in a saucepan on low heat',
-      },
-      {
-        content: 'Add sugar into saucepan and stir until mixed well',
-      },
-      {
-        content:
-          'Add hazelnut cocoa spread and espresso powder to the saucepan and increase to medium heat',
-      },
-      {
-        content: 'Stir frequently until you have a simmering, cohesive sauce',
-      },
-      {
-        content:
-          'Remove saucepan from heat for a few minutes, allowing the sauce to cool',
-      },
-      {
-        content: 'Drizzle sauce onto the popcorn',
-      },
-      {
-        content:
-          'Shake and stir the popcorn until sauce is evenly dispersed throughout kernels',
-      },
-      {
-        content: 'Add salt and shake the bowl again to disperse',
-      },
-      {
-        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
-        aside:
-          'Ideally the baking sheet is large enough to spread kernels into a single layer.',
-      },
-      {
-        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
-      },
-      {
-        content: 'Remove from oven, and allow to cool before serving',
-      },
-    ],
-  },
-  {
     title: '“Pad Thai” Popcorn',
     time: '10 minutes',
+    theme: THEME.PINK_PURPLE.mainThemeDark,
     materials: [
       {
         name: 'Popcorn kernels',
