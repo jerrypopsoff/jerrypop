@@ -8,8 +8,8 @@
   --default-text-dark: #222;
   --default-text-medium: #444;
 
-  --link-text-light: #6ee3ff;
-  --link-text-medium: #00ccff;
+  --link-text-hover: var(--main-theme-medium);
+  --link-text-light: #fff;
 
   --modal-backdrop: #000;
   --modal-backdrop-opacity: 0.4;
@@ -30,14 +30,14 @@ body {
 }
 
 a {
-  color: var(--link-text-medium);
+  color: var(--link-text-light);
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: var(--link-text-light);
+  color: var(--link-text-hover);
 }
 
 :focus {

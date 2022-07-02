@@ -57,7 +57,6 @@ const StyledRecipe = styled.li`
 
   a {
     color: inherit;
-    text-decoration: underline;
 
     &:hover,
     &:focus {

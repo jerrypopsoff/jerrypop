@@ -15,6 +15,7 @@ const StyledLinks = styled.nav`
 const StyledLink = styled(Link)`
   ${buttonStyle}
   ${pulse}
+  text-decoration: none;
 
   &:nth-child(even) {
     ${offsetPulse}
