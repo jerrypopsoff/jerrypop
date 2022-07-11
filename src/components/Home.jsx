@@ -14,7 +14,7 @@ import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
 import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
-import logo from '../images/jerrypop.svg';
+import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 import { toggleTheme } from '../utilities/theme';
 import useWindowSize from '@rehooks/window-size';
@@ -30,7 +30,7 @@ const StyledLogo = styled.img`
   ${lazyDangleRotation}
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
-  margin: 48px 0 0;
+  margin: 48px 0 -12px;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
