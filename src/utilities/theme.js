@@ -1,15 +1,6 @@
-import { THEME } from '../constants/theme';
+import { THEMES } from '../constants/theme';
 
 let CURRENT_THEME_INDEX;
-
-const THEMES = [
-  THEME.BLUE_PINK,
-  THEME.PINK_PURPLE,
-  THEME.CYAN_YELLOW,
-  THEME.PURPLE_GREEN,
-  THEME.ORANGE_PINK,
-  THEME.GREEN_YELLOW,
-];
 
 export function toggleTheme() {
   if (typeof CURRENT_THEME_INDEX !== 'number') {
