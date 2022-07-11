@@ -1,5 +1,5 @@
 export const WINDOW_BREAKPOINT_WIDTH_PX = 860;
-export const MAIN_LOGO_WIDE_HEIGHT_PX = 400;
-export const MAIN_LOGO_NARROW_HEIGHT_PX = 250;
+export const MAIN_LOGO_WIDE_HEIGHT_PX = 450;
+export const MAIN_LOGO_NARROW_HEIGHT_PX = 275;
 export const KERNEL_WIDE_HEIGHT_PX = 36;
 export const KERNEL_NARROW_HEIGHT_PX = 22;
