@@ -30,7 +30,7 @@ const StyledLogo = styled.img`
   ${lazyDangleRotation}
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
-  margin: 48px 0 -12px;
+  margin: 48px 0 -24px;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
