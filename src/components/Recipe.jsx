@@ -61,7 +61,7 @@ const StyledRecipe = styled.li`
 
     &:hover,
     &:focus {
-      color: var(--default-text-medium);
+      color: var(--link-text-hover);
     }
   }
 `;
