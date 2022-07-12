@@ -2,8 +2,10 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
   WORDMARK_NARROW_HEIGHT_PX,
   WORDMARK_NARROW_MARGIN_PX,
+  WORDMARK_NARROW_TOP_PX,
   WORDMARK_WIDE_HEIGHT_PX,
   WORDMARK_WIDE_MARGIN_PX,
+  WORDMARK_WIDE_TOP_PX,
 } from '../constants/kernel-fountain';
 import React from 'react';
 import styled from 'styled-components';
@@ -15,11 +17,11 @@ const StyledWordmark = styled.div`
   left: 0;
   position: fixed;
   right: 0;
-  top: -68px;
+  top: ${WORDMARK_WIDE_TOP_PX}px;
   z-index: -1;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    top: -48px;
+    top: ${WORDMARK_NARROW_TOP_PX}px;
   }
 
   > svg {
