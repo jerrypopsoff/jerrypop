@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Footer from './Footer';
+import { GlobalStyle } from '../constants/css/global-style';
 import Home from './Home';
 import NotFound from './NotFound';
 import Purchase from './Purchase';
@@ -16,23 +17,26 @@ export default function App() {
   logAsciiArt();
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/recipes">
-          <Recipes />
-        </Route>
-        <Route exact path="/purchase">
-          <Purchase />
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router>
+        <ScrollToTop />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/recipes">
+            <Recipes />
+          </Route>
+          <Route exact path="/purchase">
+            <Purchase />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }

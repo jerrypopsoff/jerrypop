@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 :root {
   --main-theme-light: #fff;
 
@@ -90,3 +93,4 @@ a:hover {
     height: 22px;
   }
 }
+`;
