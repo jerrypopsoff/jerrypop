@@ -8,9 +8,9 @@ const StyledFooter = styled.footer`
   display: flex;
   font-size: 11px;
   justify-content: space-between;
-  margin: 48px auto 16px;
+  margin: 48px auto 0;
   max-width: 600px;
-  padding: 0 16px;
+  padding: 0 16px 24px;
 `;
 
 const StyledSpan = styled.span`
