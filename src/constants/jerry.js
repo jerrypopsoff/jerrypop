@@ -1,12 +1,7 @@
-import { THEME } from './theme';
-
-export const USER_ID = 'IfGqGIjqLIP4soMIrBI9ULIUmUy2';
-
 export const RECIPES = [
   {
     title: 'Jalapeño Cheddar Popcorn',
     time: '10 minutes',
-    theme: THEME.ORANGE_PINK,
     href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
     materials: [
       {
@@ -81,7 +76,6 @@ export const RECIPES = [
   {
     title: 'Rosemary Lemon Pepper Popcorn',
     time: '60 minutes',
-    theme: THEME.GREEN_YELLOW,
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
     materials: [
       {
@@ -172,7 +166,6 @@ export const RECIPES = [
   {
     title: 'PB&J Popcorn',
     time: '40 minutes',
-    theme: THEME.PINK_PURPLE,
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
@@ -255,7 +248,6 @@ export const RECIPES = [
   {
     title: 'Hazelnut Cocoa Popcorn',
     time: '40 minutes',
-    theme: THEME.PURPLE_GREEN,
     materials: [
       {
         name: 'Popcorn kernels',
@@ -335,7 +327,6 @@ export const RECIPES = [
   {
     title: '“Cheesy” Chipotle Taco Popcorn',
     time: '10 minutes',
-    theme: THEME.ORANGE_PINK,
     materials: [
       {
         name: 'Popcorn kernels',
@@ -415,7 +406,6 @@ export const RECIPES = [
   {
     title: 'Cranked Curry Basil Popcorn',
     time: '10 minutes',
-    theme: THEME.GREEN_YELLOW,
     materials: [
       {
         name: 'Popcorn kernels',
@@ -483,7 +473,6 @@ export const RECIPES = [
   {
     title: '“Pad Thai” Popcorn',
     time: '10 minutes',
-    theme: THEME.PINK_PURPLE,
     materials: [
       {
         name: 'Popcorn kernels',

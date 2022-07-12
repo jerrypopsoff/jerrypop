@@ -41,13 +41,13 @@ export const THEME = {
   // VIOLET_CYAN: {
   //   mainThemeDark: '#9678d3',
   //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: 'var(--main-theme-light)',
+  //   textHighlight: '#000',
   // },
-  PURPLE_CYAN: {
-    mainThemeDark: '#835dd0',
-    mainThemeMedium: '#2dccd3',
-    textHighlight: 'var(--main-theme-light)',
-  },
+  // PURPLE_CYAN: {
+  //   mainThemeDark: '#835dd0',
+  //   mainThemeMedium: '#2dccd3',
+  //   textHighlight: '#000',
+  // },
 };
 
 export const THEMES = [
@@ -57,5 +57,4 @@ export const THEMES = [
   THEME.PURPLE_GREEN,
   THEME.ORANGE_PINK,
   THEME.GREEN_YELLOW,
-  THEME.PURPLE_CYAN,
 ];
