@@ -134,7 +134,7 @@ const StyledVideo = styled.div`
   }
 `;
 
-export default function Recipe({ recipe }) {
+export default function Recipe({ recipe, theme }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const recipeDetails = isCollapsed ? null : (
@@ -190,7 +190,7 @@ export default function Recipe({ recipe }) {
       onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
       role={isCollapsed ? 'button' : undefined}
       tabIndex={isCollapsed ? 0 : undefined}
-      theme={recipe.theme}
+      theme={theme}
     >
       <StyledTitle>{recipe.title}</StyledTitle>
       <StyledTime>{recipe.time}</StyledTime>

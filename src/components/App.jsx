@@ -26,7 +26,7 @@ export default function App() {
             <Home theme={theme} onToggleTheme={onToggleTheme} />
           </Route>
           <Route exact path="/recipes">
-            <Recipes />
+            <Recipes theme={theme} />
           </Route>
           <Route exact path="/purchase">
             <Purchase />
