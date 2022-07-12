@@ -9,6 +9,7 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
 import { getFountainLeft, getFountainTop } from '../utilities/kernel-fountain';
+import BackgroundWordmark from './BackgroundWordmark';
 import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
@@ -16,7 +17,6 @@ import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
-import { toggleTheme } from '../utilities/theme';
 import useWindowSize from '@rehooks/window-size';
 
 const StyledHome = styled.div`
@@ -47,7 +47,7 @@ const StyledParagraph = styled.p`
   max-width: 600px;
 `;
 
-export default function Home() {
+export default function Home({ theme, onToggleTheme }) {
   const { innerWidth } = useWindowSize();
 
   // Instagram browser has a bug where innerWidth is fixed to 980px.
@@ -55,7 +55,8 @@ export default function Home() {
 
   return (
     <StyledHome>
-      <StyledLogo alt="Jerrypop logo" onClick={toggleTheme} src={logo} />
+      <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+      <BackgroundWordmark fillColor={theme.mainThemeMedium} />
       <PageHeading>Poppin’ off with Jerrypop</PageHeading>
       <StyledParagraph>
         Life is too short to not eat popcorn. Jerrypop is dedicated to

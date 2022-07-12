@@ -18,11 +18,11 @@ const StyledSpan = styled.span`
   margin: 0 8px;
 `;
 
-export default function Footer() {
+export default function Footer({ onToggleTheme }) {
   return (
     <StyledFooter>
       <StyledSpan>© {new Date().getFullYear()} Jerrypop, LLC</StyledSpan>
-      <ThemeToggleButton />
+      <ThemeToggleButton onToggleTheme={onToggleTheme} />
       <StyledSpan>
         <SocialLinks />
       </StyledSpan>

@@ -2,11 +2,11 @@ export const THEME = {
   // PB&J
   BLUE_PINK: {
     mainThemeDark: '#0072da',
-    mainThemeMedium: '#e93ab8',
+    mainThemeMedium: '#ff409e',
     textHighlight: 'var(--main-theme-light)',
   },
   PINK_PURPLE: {
-    mainThemeDark: '#e93ab8',
+    mainThemeDark: '#ff409e',
     mainThemeMedium: '#835dd0',
     textHighlight: 'var(--main-theme-light)',
   },
@@ -24,7 +24,7 @@ export const THEME = {
   // Pad Thai?
   ORANGE_PINK: {
     mainThemeDark: '#f2a900',
-    mainThemeMedium: '#e93ab8',
+    mainThemeMedium: '#ff409e',
     textHighlight: 'var(--main-theme-light)',
   },
   // Rosemary Lemon Pepper

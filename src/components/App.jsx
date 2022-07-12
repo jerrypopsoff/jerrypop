@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { getCurrentTheme, toggleTheme } from '../utilities/theme';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import Home from './Home';
@@ -7,14 +8,15 @@ import Purchase from './Purchase';
 import React from 'react';
 import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
-import { initializeClickPop } from '../utilities/click-pop';
-import { logAsciiArt } from '../utilities/console-ascii-art';
-import { toggleTheme } from '../utilities/theme';
+import { useTheme } from '../hooks/use-theme';
 
 export default function App() {
-  initializeClickPop(document);
-  toggleTheme();
-  logAsciiArt();
+  const [theme, setTheme] = useTheme(getCurrentTheme());
+
+  const onToggleTheme = () => {
+    toggleTheme();
+    setTheme(getCurrentTheme());
+  };
 
   return (
     <>
@@ -23,7 +25,7 @@ export default function App() {
         <ScrollToTop />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home theme={theme} onToggleTheme={onToggleTheme} />
           </Route>
           <Route exact path="/recipes">
             <Recipes />
@@ -35,7 +37,7 @@ export default function App() {
             <NotFound />
           </Route>
         </Switch>
-        <Footer />
+        <Footer onToggleTheme={onToggleTheme} />
       </Router>
     </>
   );
