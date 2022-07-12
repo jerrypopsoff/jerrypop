@@ -1,23 +1,15 @@
 import {
-  KERNEL_FOUNTAIN_DELAY,
-  KERNEL_FOUNTAIN_DURATION,
-  KERNEL_FOUNTAIN_KERNEL_COUNT,
-} from '../constants/animation';
-import {
   MAIN_LOGO_NARROW_HEIGHT_PX,
   MAIN_LOGO_WIDE_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
-import { getFountainLeft, getFountainTop } from '../utilities/kernel-fountain';
 import BackgroundWordmark from './BackgroundWordmark';
-import KernelFountain from './KernelFountain';
 import NavigationMenu from './NavigationMenu';
 import PageHeading from './PageHeading';
 import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
-import useWindowSize from '@rehooks/window-size';
 
 const StyledHome = styled.div`
   align-items: center;
@@ -48,11 +40,6 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home({ theme, onToggleTheme }) {
-  const { innerWidth } = useWindowSize();
-
-  // Instagram browser has a bug where innerWidth is fixed to 980px.
-  const viewportWidth = Math.min(innerWidth, window.screen.width);
-
   return (
     <StyledHome>
       <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
@@ -63,14 +50,6 @@ export default function Home({ theme, onToggleTheme }) {
         handcrafting quality popcorn in San Francisco, California.
       </StyledParagraph>
       <NavigationMenu />
-      <KernelFountain
-        delay={KERNEL_FOUNTAIN_DELAY}
-        duration={KERNEL_FOUNTAIN_DURATION}
-        id="home-fountain"
-        kernelCount={KERNEL_FOUNTAIN_KERNEL_COUNT}
-        left={getFountainLeft(viewportWidth)}
-        top={getFountainTop(viewportWidth)}
-      />
     </StyledHome>
   );
 }

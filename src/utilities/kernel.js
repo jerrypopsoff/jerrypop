@@ -2,11 +2,11 @@ import {
   GRAVITATIONAL_ACCELERATION,
   KERNEL_TERMINAL_VELOCITY,
 } from '../constants/physics';
+import ColonelHead from '../images/colonel-head.svg';
 import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/animation';
 import { getRandomInteger } from './random';
-import kernel from '../images/kernel-with-border.svg';
 
-const DEFAULT_KERNEL_HEIGHT = 27;
+const DEFAULT_KERNEL_HEIGHT = 36; // Now an arbitrary const idk
 
 function step(element, intervalId) {
   if (!element) {
@@ -93,11 +93,11 @@ export function getKernelElement(
     ? 'popcorn-kernel'
     : 'popcorn-kernel popcorn-kernel--reverse';
   kernelElement.id = id;
-  kernelElement.src = kernel;
+  kernelElement.src = ColonelHead;
   kernelElement.style = `display:'none';left:${left}px;top:${top}px;`;
   kernelElement.setAttribute('aria-hidden', 'true');
-  kernelElement.setAttribute('data-x-velocity', getRandomInteger(-15, 15));
-  kernelElement.setAttribute('data-y-velocity', getRandomInteger(-20, -10));
+  kernelElement.setAttribute('data-x-velocity', getRandomInteger(-7, 7));
+  kernelElement.setAttribute('data-y-velocity', getRandomInteger(-25, -10));
 
   return kernelElement;
 }
