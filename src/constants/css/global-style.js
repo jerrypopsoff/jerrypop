@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 ::selection {
   background-color: var(--text-highlight-background);
   color: var(--text-highlight);
+  text-shadow: none;
 }
 
 body {
