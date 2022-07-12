@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
+import { withBoxShadow } from '../constants/css/shadow';
 
 const VERTICAL_MARGIN_PX = 48;
 const HORIZONTAL_MARGIN_PX = 12;
 
 const StyledDialog = styled.dialog`
+  ${withBoxShadow}
   background-color: var(--main-theme-light);
   border: none;
   border-radius: 5px;

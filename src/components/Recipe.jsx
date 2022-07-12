@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
+import { withBoxShadow } from '../constants/css/shadow';
 import { withTheme } from '../constants/css/theme';
 
 const listStyles = `
@@ -19,6 +20,7 @@ const asideFont = `
 
 const StyledRecipe = styled.li`
   ${withTheme}
+  ${withBoxShadow}
   border: 1px solid var(--main-theme-light);
   border-radius: 5px;
   box-sizing: border-box;

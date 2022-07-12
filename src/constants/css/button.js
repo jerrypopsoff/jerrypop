@@ -1,6 +1,8 @@
 import { css } from 'styled-components';
+import { withBoxShadow } from './shadow';
 
 export const buttonStyle = css`
+  ${withBoxShadow}
   align-items: center;
   background-color: var(--main-theme-light);
   border: none;
