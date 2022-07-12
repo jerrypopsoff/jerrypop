@@ -2,7 +2,6 @@ import React from 'react';
 import { bigPulse } from '../constants/css/pulse';
 import { buttonStyle } from '../constants/css/button';
 import styled from 'styled-components';
-import { toggleTheme } from '../utilities/theme';
 
 const StyledButton = styled.button`
   ${buttonStyle}
@@ -23,9 +22,9 @@ const StyledButtonIcon = styled.span`
   width: 24px;
 `;
 
-export default function ThemeToggleButton() {
+export default function ThemeToggleButton({ onToggleTheme }) {
   return (
-    <StyledButton aria-label="Toggle color scheme" onClick={toggleTheme}>
+    <StyledButton aria-label="Toggle color scheme" onClick={onToggleTheme}>
       <StyledButtonIcon aria-hidden="true" />
     </StyledButton>
   );
