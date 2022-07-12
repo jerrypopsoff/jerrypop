@@ -1,3 +1,7 @@
+import {
+  KERNEL_NARROW_HEIGHT_PX,
+  KERNEL_WIDE_HEIGHT_PX,
+} from '../kernel-fountain';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -78,7 +82,7 @@ a:hover {
 .popcorn-kernel {
   animation: kernel 0.5s infinite linear;
   -webkit-animation: kernel 0.5s infinite linear;
-  height: 36px;
+  height: ${KERNEL_WIDE_HEIGHT_PX}px;
   position: fixed;
   z-index: 2001;
 }
@@ -90,7 +94,7 @@ a:hover {
 
 @media (max-width: 860px) {
   .popcorn-kernel {
-    height: 22px;
+    height: ${KERNEL_NARROW_HEIGHT_PX}px;
   }
 }
 `;
