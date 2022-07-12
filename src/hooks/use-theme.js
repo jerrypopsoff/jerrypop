@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react';
+import { THEMES } from '../constants/theme';
 
-export function useTheme(initialTheme) {
-  const [theme, setTheme] = useState(initialTheme);
+let currentThemeIndex = 0;
+
+export function useTheme() {
+  const [theme, setTheme] = useState(THEMES[currentThemeIndex]);
+
+  const incrementTheme = () => {
+    ++currentThemeIndex;
+    setTheme(THEMES[currentThemeIndex % THEMES.length]);
+  };
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -13,5 +21,5 @@ export function useTheme(initialTheme) {
     );
   }, [theme]);
 
-  return [theme, setTheme];
+  return [theme, incrementTheme];
 }

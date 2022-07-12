@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { getCurrentTheme, toggleTheme } from '../utilities/theme';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import Home from './Home';
@@ -11,11 +10,10 @@ import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
 
 export default function App() {
-  const [theme, setTheme] = useTheme(getCurrentTheme());
+  const [theme, incrementTheme] = useTheme();
 
   const onToggleTheme = () => {
-    toggleTheme();
-    setTheme(getCurrentTheme());
+    incrementTheme();
   };
 
   return (
