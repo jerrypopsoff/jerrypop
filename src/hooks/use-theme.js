@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { THEMES } from '../constants/theme';
 import { getRandomInteger } from '../utilities/random';
 
@@ -7,10 +7,14 @@ let currentThemeIndex = getRandomInteger(0, THEMES.length - 1);
 export function useTheme() {
   const [theme, setTheme] = useState(THEMES[currentThemeIndex]);
 
-  const incrementTheme = () => {
+  /**
+   * `useCallback` prevents infinite re-render via the `useEffect` in the
+   * `RotateTheme` component.
+   */
+  const incrementTheme = useCallback(() => {
     ++currentThemeIndex;
     setTheme(THEMES[currentThemeIndex % THEMES.length]);
-  };
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute(
