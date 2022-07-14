@@ -28,6 +28,7 @@ const StyledNavigationMenu = styled(NavigationMenu)`
 const StyledOrderOnlineButton = styled.button`
   ${buttonStyle}
   ${pulse}
+  margin: 24px 0;
 
   &:hover,
   &:focus {
@@ -59,11 +60,11 @@ export default function Purchase() {
   return (
     <StyledPageContent>
       <PageHeading>Purchase</PageHeading>
-      <PageSubHeading>Products</PageSubHeading>
-      <Products />
       <StyledOrderOnlineButton onClick={onClickOrderOnline}>
         Order online
       </StyledOrderOnlineButton>
+      <PageSubHeading>Products</PageSubHeading>
+      <Products />
       {isOrderFormVisible && (
         <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
       )}

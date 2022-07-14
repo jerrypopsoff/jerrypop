@@ -6,26 +6,30 @@ import PbjFrontLabel from '../images/jerrypop-pbj-front-label.svg';
 import React from 'react';
 import Zoom from 'react-medium-image-zoom';
 import styled from 'styled-components';
+import { withBoxShadow } from '../constants/css/shadow';
 
-const StyledProductsContainer = styled.div`
-  margin-bottom: 12px;
+const StyledProductHeading = styled.h3`
+  text-transform: uppercase;
 `;
 
-const StyledProductContainer = styled.div`
-  margin: 8px 0;
+const StyledProductImages = styled.div`
+  height: 203px; // Mitigate screen flash for image loading state ending
+  margin-bottom: 24px;
 `;
 
 const StyledLabelImage = styled.img`
+  ${withBoxShadow}
   border: 1px solid var(--main-theme-light);
   border-radius: 4px;
-  margin: 4px;
+  margin: 8px;
   width: 150px;
 `;
 
 export default function Products() {
   return (
-    <StyledProductsContainer>
-      <StyledProductContainer>
+    <>
+      <StyledProductHeading>PB&J Craft Popcorn</StyledProductHeading>
+      <StyledProductImages>
         <Zoom>
           <StyledLabelImage
             alt="Front label for PB&J Craft Popcorn"
@@ -36,8 +40,9 @@ export default function Products() {
             src={PbjBackLabel}
           />
         </Zoom>
-      </StyledProductContainer>
-      <StyledProductContainer>
+      </StyledProductImages>
+      <StyledProductHeading>Habanero Ranch Craft Popcorn</StyledProductHeading>
+      <StyledProductImages>
         <Zoom>
           <StyledLabelImage
             alt="Front label for Habanero Ranch Craft Popcorn"
@@ -48,7 +53,7 @@ export default function Products() {
             src={HabaneroRanchBackLabel}
           />
         </Zoom>
-      </StyledProductContainer>
-    </StyledProductsContainer>
+      </StyledProductImages>
+    </>
   );
 }
