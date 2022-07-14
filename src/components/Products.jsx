@@ -25,12 +25,18 @@ const StyledLabelImage = styled.img`
   width: 150px;
 `;
 
+const OVERLAY_BG_COLOR_START = 'rgba(0, 0, 0, 0)';
+const OVERLAY_BG_COLOR_END = 'rgba(0, 0, 0, 0.8)';
+
 export default function Products() {
   return (
     <>
       <StyledProductHeading>PB&J Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
-        <Zoom>
+        <Zoom
+          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
+          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+        >
           <StyledLabelImage
             alt="Front label for PB&J Craft Popcorn"
             src={PbjFrontLabel}
@@ -43,7 +49,10 @@ export default function Products() {
       </StyledProductImages>
       <StyledProductHeading>Habanero Ranch Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
-        <Zoom>
+        <Zoom
+          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
+          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+        >
           <StyledLabelImage
             alt="Front label for Habanero Ranch Craft Popcorn"
             src={HabaneroRanchFrontLabel}
