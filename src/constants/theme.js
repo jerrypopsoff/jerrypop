@@ -16,48 +16,56 @@ export const THEME = {
   BLUE_PINK: {
     mainThemeDark: THEME_BLUE,
     mainThemeMedium: THEME_PINK,
-    textHighlight: WHITE,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: WHITE,
   },
   // ?
   PINK_PURPLE: {
     mainThemeDark: THEME_PINK,
     mainThemeMedium: THEME_PURPLE,
-    textHighlight: WHITE,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: WHITE,
   },
   // Habanero Ranch
   CYAN_YELLOW: {
     mainThemeDark: THEME_CYAN,
     mainThemeMedium: THEME_YELLOW,
-    textHighlight: BLACK,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: BLACK,
   },
   // ?
   PURPLE_GREEN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_LIGHT_GREEN,
-    textHighlight: BLACK,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
   },
   // Pad Thai?
   ORANGE_PINK: {
     mainThemeDark: THEME_ORANGE,
     mainThemeMedium: THEME_PINK,
-    textHighlight: WHITE,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: WHITE,
   },
   // Rosemary Lemon Pepper
   GREEN_YELLOW: {
     mainThemeDark: THEME_GREEN,
     mainThemeMedium: THEME_YELLOW,
-    textHighlight: BLACK,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
   },
   // BLUE_CYAN: {
   //   mainThemeDark: THEME_BLUE,
   //   mainThemeMedium: THEME_CYAN,
-  //   textHighlight: WHITE,
+  //   mainThemeTextOnDark: WHITE,
+  //   mainThemeTextOnMedium: BLACK,
   // },
-  // PURPLE_CYAN: {
-  //   mainThemeDark: THEME_PURPLE,
-  //   mainThemeMedium: THEME_CYAN,
-  //   textHighlight: BLACK,
-  // },
+  PURPLE_CYAN: {
+    mainThemeDark: THEME_PURPLE,
+    mainThemeMedium: THEME_CYAN,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
 };
 
 export const THEMES = [
@@ -67,4 +75,5 @@ export const THEMES = [
   THEME.PURPLE_GREEN,
   THEME.ORANGE_PINK,
   THEME.GREEN_YELLOW,
+  THEME.PURPLE_CYAN,
 ];
