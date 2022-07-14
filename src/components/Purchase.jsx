@@ -59,6 +59,7 @@ export default function Purchase() {
   return (
     <StyledPageContent>
       <PageHeading>Purchase</PageHeading>
+      <PageSubHeading>Products</PageSubHeading>
       <Products />
       <StyledOrderOnlineButton onClick={onClickOrderOnline}>
         Order online
