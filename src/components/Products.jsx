@@ -28,6 +28,7 @@ const OVERLAY_BG_COLOR_START = 'rgba(0, 0, 0, 0)';
 const OVERLAY_BG_COLOR_END = 'rgba(0, 0, 0, 0.8)';
 const ZOOM_TRANSITION_DURATION = 0;
 const ZOOM_WRAP_STYLE = { padding: '8px' };
+const ZOOM_ZOOM_MARGIN = 8;
 
 export default function Products() {
   return (
@@ -39,6 +40,7 @@ export default function Products() {
           overlayBgColorStart={OVERLAY_BG_COLOR_START}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
+          zoomMargin={ZOOM_ZOOM_MARGIN}
         >
           <StyledLabelImage
             alt="Front label for PB&J Craft Popcorn"
@@ -50,6 +52,7 @@ export default function Products() {
           overlayBgColorStart={OVERLAY_BG_COLOR_START}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
+          zoomMargin={ZOOM_ZOOM_MARGIN}
         >
           <StyledLabelImage
             alt="Back label for PB&J Craft Popcorn"
@@ -64,6 +67,7 @@ export default function Products() {
           overlayBgColorStart={OVERLAY_BG_COLOR_START}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
+          zoomMargin={ZOOM_ZOOM_MARGIN}
         >
           <StyledLabelImage
             alt="Front label for Habanero Ranch Craft Popcorn"
@@ -75,6 +79,7 @@ export default function Products() {
           overlayBgColorStart={OVERLAY_BG_COLOR_START}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
+          zoomMargin={ZOOM_ZOOM_MARGIN}
         >
           <StyledLabelImage
             alt="Back label for Habanero Ranch Craft Popcorn"
