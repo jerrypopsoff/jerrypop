@@ -54,12 +54,12 @@ export const THEME = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
-  // BLUE_CYAN: {
-  //   mainThemeDark: THEME_BLUE,
-  //   mainThemeMedium: THEME_CYAN,
-  //   mainThemeTextOnDark: WHITE,
-  //   mainThemeTextOnMedium: BLACK,
-  // },
+  BLUE_CYAN: {
+    mainThemeDark: THEME_BLUE,
+    mainThemeMedium: THEME_CYAN,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
   PURPLE_CYAN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_CYAN,
@@ -68,12 +68,16 @@ export const THEME = {
   },
 };
 
+/**
+ * Ordered to ensure each rotation introduces two new colors.
+ */
 export const THEMES = [
   THEME.BLUE_PINK,
-  THEME.PINK_PURPLE,
-  THEME.CYAN_YELLOW,
   THEME.PURPLE_GREEN,
   THEME.ORANGE_PINK,
+  THEME.CYAN_YELLOW,
+  THEME.PINK_PURPLE,
+  THEME.BLUE_CYAN,
   THEME.GREEN_YELLOW,
   THEME.PURPLE_CYAN,
 ];
