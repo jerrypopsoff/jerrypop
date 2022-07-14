@@ -8,7 +8,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 ::selection {
   background-color: var(--main-theme-medium);
-  color: var(--theme-text-highlight);
+  color: var(--theme-text-on-medium);
   text-shadow: none;
 }
 

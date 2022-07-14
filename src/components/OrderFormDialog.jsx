@@ -43,7 +43,7 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--theme-text-highlight);
+  color: var(--theme-text-on-medium);
   cursor: pointer;
   display: flex;
   font-size: 16px;

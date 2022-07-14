@@ -1,10 +1,9 @@
-import { GRAYSCALE_ULTRALIGHT, WHITE } from '../constants/color';
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
+import { GRAYSCALE_ULTRALIGHT } from '../constants/color';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { withBoxShadow } from '../constants/css/shadow';
-import { withTheme } from '../constants/css/theme';
 
 const listStyles = `
   margin-bottom: 0;
@@ -20,15 +19,20 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li`
-  ${withTheme}
   ${withBoxShadow}
-  border: 1px solid ${WHITE};
+  background-color: var(--main-theme-medium);
   border-radius: 5px;
   box-sizing: border-box;
+  color: var(--theme-text-on-medium);
   margin: 12px auto;
   padding: 20px;
   text-align: left;
   width: 500px;
+
+  *::selection {
+    background-color: var(--main-theme-dark);
+    color: var(--theme-text-on-dark);
+  }
 
   @media (max-width: 600px) {
     width: calc(100% - 24px);
