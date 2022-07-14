@@ -17,6 +17,7 @@ const StyledProductContainer = styled.div`
 
 const StyledLabelImage = styled.img`
   border: 1px solid var(--main-theme-light);
+  border-radius: 4px;
   margin: 4px;
   width: 150px;
 `;
