@@ -8,6 +8,7 @@ import {
   WORDMARK_WIDE_TOP_PX,
 } from '../constants/kernel-fountain';
 import React from 'react';
+import { WORDMARK_Z_INDEX } from '../constants/z-index';
 import styled from 'styled-components';
 
 const StyledWordmark = styled.div`
@@ -18,7 +19,7 @@ const StyledWordmark = styled.div`
   position: fixed;
   right: 0;
   top: ${WORDMARK_WIDE_TOP_PX}px;
-  z-index: -1;
+  z-index: ${WORDMARK_Z_INDEX};
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     top: ${WORDMARK_NARROW_TOP_PX}px;
