@@ -1,52 +1,62 @@
+import {
+  BLACK,
+  THEME_BLUE,
+  THEME_CYAN,
+  THEME_GREEN,
+  THEME_LIGHT_GREEN,
+  THEME_ORANGE,
+  THEME_PINK,
+  THEME_PURPLE,
+  THEME_YELLOW,
+  WHITE,
+} from './color';
+
 export const THEME = {
   // PB&J
   BLUE_PINK: {
-    mainThemeDark: '#0072da',
-    mainThemeMedium: '#ff409e',
-    textHighlight: 'var(--main-theme-light)',
+    mainThemeDark: THEME_BLUE,
+    mainThemeMedium: THEME_PINK,
+    textHighlight: WHITE,
   },
+  // ?
   PINK_PURPLE: {
-    mainThemeDark: '#ff409e',
-    mainThemeMedium: '#835dd0',
-    textHighlight: 'var(--main-theme-light)',
+    mainThemeDark: THEME_PINK,
+    mainThemeMedium: THEME_PURPLE,
+    textHighlight: WHITE,
   },
   // Habanero Ranch
   CYAN_YELLOW: {
-    mainThemeDark: '#2dccd3',
-    mainThemeMedium: '#f7ea48',
-    textHighlight: '#000',
+    mainThemeDark: THEME_CYAN,
+    mainThemeMedium: THEME_YELLOW,
+    textHighlight: BLACK,
   },
+  // ?
   PURPLE_GREEN: {
-    mainThemeDark: '#835dd0',
-    mainThemeMedium: '#97d700',
-    textHighlight: '#000',
+    mainThemeDark: THEME_PURPLE,
+    mainThemeMedium: THEME_LIGHT_GREEN,
+    textHighlight: BLACK,
   },
   // Pad Thai?
   ORANGE_PINK: {
-    mainThemeDark: '#f2a900',
-    mainThemeMedium: '#ff409e',
-    textHighlight: 'var(--main-theme-light)',
+    mainThemeDark: THEME_ORANGE,
+    mainThemeMedium: THEME_PINK,
+    textHighlight: WHITE,
   },
   // Rosemary Lemon Pepper
   GREEN_YELLOW: {
-    mainThemeDark: '#00b140',
-    mainThemeMedium: '#f7ea48',
-    textHighlight: '#000',
+    mainThemeDark: THEME_GREEN,
+    mainThemeMedium: THEME_YELLOW,
+    textHighlight: BLACK,
   },
   // BLUE_CYAN: {
-  //   mainThemeDark: '#0072da',
-  //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: 'var(--main-theme-light)',
-  // },
-  // VIOLET_CYAN: {
-  //   mainThemeDark: '#9678d3',
-  //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '#000',
+  //   mainThemeDark: THEME_BLUE,
+  //   mainThemeMedium: THEME_CYAN,
+  //   textHighlight: WHITE,
   // },
   // PURPLE_CYAN: {
-  //   mainThemeDark: '#835dd0',
-  //   mainThemeMedium: '#2dccd3',
-  //   textHighlight: '#000',
+  //   mainThemeDark: THEME_PURPLE,
+  //   mainThemeMedium: THEME_CYAN,
+  //   textHighlight: BLACK,
   // },
 };
 
