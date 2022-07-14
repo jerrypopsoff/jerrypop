@@ -1,3 +1,4 @@
+import { GRAYSCALE_ULTRALIGHT, WHITE } from '../color';
 import {
   KERNEL_NARROW_HEIGHT_PX,
   KERNEL_WIDE_HEIGHT_PX,
@@ -5,34 +6,15 @@ import {
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-:root {
-  --main-theme-light: #fff;
-
-  --default-text-dark: #222;
-  --default-text-medium: #444;
-
-  --text-highlight-background: var(--main-theme-medium);
-
-  --link-text-hover: #eee;
-  --link-text-light: var(--main-theme-light);
-
-  --divider-light: #ddd;
-
-  --modal-backdrop: #000;
-  --modal-backdrop-opacity: 0.4;
-
-  --close-icon-hover-background: rgba(0, 0, 0, 0.1);
-}
-
 ::selection {
-  background-color: var(--text-highlight-background);
-  color: var(--text-highlight);
+  background-color: var(--main-theme-medium);
+  color: var(--theme-text-highlight);
   text-shadow: none;
 }
 
 body {
   background-color: var(--main-theme-dark);
-  color: var(--main-theme-light);
+  color: ${WHITE};
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
@@ -42,14 +24,14 @@ body {
 }
 
 a {
-  color: var(--link-text-light);
+  color: ${WHITE};
   cursor: pointer;
   text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: var(--link-text-hover);
+  color: ${GRAYSCALE_ULTRALIGHT};
 }
 
 :focus {

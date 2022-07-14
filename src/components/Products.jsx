@@ -1,4 +1,5 @@
 import 'react-medium-image-zoom/dist/styles.css';
+import { DIALOG_BACKDROP, WHITE } from '../constants/color';
 import HabaneroRanchBackLabel from '../images/jerrypop-hr-rear-label.svg';
 import HabaneroRanchFrontLabel from '../images/jerrypop-hr-front-label.svg';
 import PbjBackLabel from '../images/jerrypop-pbj-rear-label.svg';
@@ -19,13 +20,11 @@ const StyledProductImages = styled.div`
 
 const StyledLabelImage = styled.img`
   ${withBoxShadow}
-  border: 1px solid var(--main-theme-light);
+  border: 1px solid ${WHITE};
   border-radius: 4px;
   width: 150px;
 `;
 
-const OVERLAY_BG_COLOR_START = 'rgba(0, 0, 0, 0)';
-const OVERLAY_BG_COLOR_END = 'rgba(0, 0, 0, 0.8)';
 const ZOOM_TRANSITION_DURATION = 0;
 const ZOOM_WRAP_STYLE = { padding: '8px' };
 const ZOOM_ZOOM_MARGIN = 8;
@@ -36,8 +35,7 @@ export default function Products() {
       <StyledProductHeading>PB&J Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
         <Zoom
-          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
-          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+          overlayBgColorEnd={DIALOG_BACKDROP}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
           zoomMargin={ZOOM_ZOOM_MARGIN}
@@ -48,8 +46,7 @@ export default function Products() {
           />
         </Zoom>
         <Zoom
-          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
-          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+          overlayBgColorEnd={DIALOG_BACKDROP}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
           zoomMargin={ZOOM_ZOOM_MARGIN}
@@ -63,8 +60,7 @@ export default function Products() {
       <StyledProductHeading>Habanero Ranch Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
         <Zoom
-          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
-          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+          overlayBgColorEnd={DIALOG_BACKDROP}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
           zoomMargin={ZOOM_ZOOM_MARGIN}
@@ -75,8 +71,7 @@ export default function Products() {
           />
         </Zoom>
         <Zoom
-          overlayBgColorEnd={OVERLAY_BG_COLOR_END}
-          overlayBgColorStart={OVERLAY_BG_COLOR_START}
+          overlayBgColorEnd={DIALOG_BACKDROP}
           transitionDuration={ZOOM_TRANSITION_DURATION}
           wrapStyle={ZOOM_WRAP_STYLE}
           zoomMargin={ZOOM_ZOOM_MARGIN}

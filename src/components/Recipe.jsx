@@ -1,3 +1,4 @@
+import { GRAYSCALE_ULTRALIGHT, WHITE } from '../constants/color';
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
 import { dangleRotation } from '../constants/css/rotation';
@@ -21,7 +22,7 @@ const asideFont = `
 const StyledRecipe = styled.li`
   ${withTheme}
   ${withBoxShadow}
-  border: 1px solid var(--main-theme-light);
+  border: 1px solid ${WHITE};
   border-radius: 5px;
   box-sizing: border-box;
   margin: 12px auto;
@@ -61,7 +62,7 @@ const StyledRecipe = styled.li`
 
     &:hover,
     &:focus {
-      color: var(--link-text-hover);
+      color: ${GRAYSCALE_ULTRALIGHT};
     }
   }
 `;

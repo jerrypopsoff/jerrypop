@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { THEME } from '../theme';
+import { WHITE } from '../color';
 import { css } from 'styled-components';
 
 /**
@@ -8,7 +9,7 @@ import { css } from 'styled-components';
  */
 export const withTheme = css`
   background-color: ${({ theme }) => theme.mainThemeDark};
-  color: var(--main-theme-light);
+  color: ${WHITE};
 
   // '*' is necessary for Chrome
   *::selection {

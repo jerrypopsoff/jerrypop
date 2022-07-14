@@ -1,13 +1,14 @@
+import { BLACK, WHITE } from '../color';
 import { css } from 'styled-components';
 import { withBoxShadow } from './shadow';
 
 export const buttonStyle = css`
   ${withBoxShadow}
   align-items: center;
-  background-color: var(--main-theme-light);
+  background-color: ${WHITE};
   border: none;
   border-radius: 4px;
-  color: var(--default-text-dark);
+  color: ${BLACK};
   cursor: pointer;
   display: flex;
   font-size: 24px;
@@ -21,6 +22,6 @@ export const buttonStyle = css`
 
   &:hover,
   &:focus {
-    color: var(--default-text-medium);
+    color: ${BLACK};
   }
 `;

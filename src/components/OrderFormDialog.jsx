@@ -1,3 +1,9 @@
+import {
+  DIALOG_BACKDROP,
+  GRAYSCALE_LIGHT,
+  ICON_HOVER_BACKGROUND,
+  WHITE,
+} from '../constants/color';
 import React from 'react';
 import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
@@ -8,7 +14,7 @@ const HORIZONTAL_MARGIN_PX = 12;
 
 const StyledDialog = styled.dialog`
   ${withBoxShadow}
-  background-color: var(--main-theme-light);
+  background-color: ${WHITE};
   border: none;
   border-radius: 5px;
   display: flex;
@@ -25,8 +31,8 @@ const StyledDialog = styled.dialog`
 
 const StyledDialogHeader = styled.header`
   align-items: flex-end;
-  background-color: var(--text-highlight-background);
-  border-bottom: 1px solid var(--divider-light);
+  background-color: var(--main-theme-medium);
+  border-bottom: 1px solid ${GRAYSCALE_LIGHT};
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
@@ -37,7 +43,7 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--text-highlight);
+  color: var(--theme-text-highlight);
   cursor: pointer;
   display: flex;
   font-size: 16px;
@@ -50,15 +56,14 @@ const StyledCloseButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: var(--close-icon-hover-background);
+    background-color: ${ICON_HOVER_BACKGROUND};
   }
 `;
 
 const StyledDialogBackdrop = styled.div`
-  background-color: var(--modal-backdrop);
+  background-color: ${DIALOG_BACKDROP};
   bottom: 0;
   left: 0;
-  opacity: var(--modal-backdrop-opacity);
   position: fixed;
   right: 0;
   top: 0;

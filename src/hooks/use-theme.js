@@ -21,7 +21,7 @@ export function useTheme() {
       'style',
       `--main-theme-dark: ${theme.mainThemeDark};
        --main-theme-medium: ${theme.mainThemeMedium};
-       --text-highlight: ${theme.textHighlight};
+       --theme-text-highlight: ${theme.textHighlight};
     `,
     );
   }, [theme]);
