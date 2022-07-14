@@ -4,6 +4,7 @@ import {
   ICON_HOVER_BACKGROUND,
   WHITE,
 } from '../constants/color';
+import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
 import React from 'react';
 import styled from 'styled-components';
 import useWindowSize from '@rehooks/window-size';
@@ -26,7 +27,7 @@ const StyledDialog = styled.dialog`
   position: fixed;
   top: ${VERTICAL_MARGIN_PX}px;
   width: ${({ dialogWidth }) => dialogWidth}px;
-  z-index: 2000;
+  z-index: ${DIALOG_Z_INDEX};
 `;
 
 const StyledDialogHeader = styled.header`
@@ -67,7 +68,7 @@ const StyledDialogBackdrop = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: ${DIALOG_BACKDROP_Z_INDEX};
 `;
 
 export default function OrderFormDialog({ onCloseOrderOnlineDialog }) {

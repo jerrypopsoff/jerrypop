@@ -1,5 +1,6 @@
 import 'react-medium-image-zoom/dist/styles.css';
 import { DIALOG_BACKDROP, WHITE } from '../constants/color';
+import { DIALOG_Z_INDEX } from '../constants/z-index';
 import HabaneroRanchBackLabel from '../images/jerrypop-hr-rear-label.svg';
 import HabaneroRanchFrontLabel from '../images/jerrypop-hr-front-label.svg';
 import PbjBackLabel from '../images/jerrypop-pbj-rear-label.svg';
@@ -25,62 +26,52 @@ const StyledLabelImage = styled.img`
   width: 150px;
 `;
 
-const ZOOM_TRANSITION_DURATION = 0;
-const ZOOM_WRAP_STYLE = { padding: '8px' };
-const ZOOM_ZOOM_MARGIN = 8;
+const ProductImageZoom = ({ children }) => {
+  return (
+    <Zoom
+      overlayBgColorEnd={DIALOG_BACKDROP}
+      transitionDuration={0}
+      wrapStyle={{ padding: '8px' }}
+      zoomMargin={8}
+      zoomZindex={DIALOG_Z_INDEX}
+    >
+      {children}
+    </Zoom>
+  );
+};
 
 export default function Products() {
   return (
     <>
       <StyledProductHeading>PB&J Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
-        <Zoom
-          overlayBgColorEnd={DIALOG_BACKDROP}
-          transitionDuration={ZOOM_TRANSITION_DURATION}
-          wrapStyle={ZOOM_WRAP_STYLE}
-          zoomMargin={ZOOM_ZOOM_MARGIN}
-        >
+        <ProductImageZoom>
           <StyledLabelImage
             alt="Front label for PB&J Craft Popcorn"
             src={PbjFrontLabel}
           />
-        </Zoom>
-        <Zoom
-          overlayBgColorEnd={DIALOG_BACKDROP}
-          transitionDuration={ZOOM_TRANSITION_DURATION}
-          wrapStyle={ZOOM_WRAP_STYLE}
-          zoomMargin={ZOOM_ZOOM_MARGIN}
-        >
+        </ProductImageZoom>
+        <ProductImageZoom>
           <StyledLabelImage
             alt="Back label for PB&J Craft Popcorn"
             src={PbjBackLabel}
           />
-        </Zoom>
+        </ProductImageZoom>
       </StyledProductImages>
       <StyledProductHeading>Habanero Ranch Craft Popcorn</StyledProductHeading>
       <StyledProductImages>
-        <Zoom
-          overlayBgColorEnd={DIALOG_BACKDROP}
-          transitionDuration={ZOOM_TRANSITION_DURATION}
-          wrapStyle={ZOOM_WRAP_STYLE}
-          zoomMargin={ZOOM_ZOOM_MARGIN}
-        >
+        <ProductImageZoom>
           <StyledLabelImage
             alt="Front label for Habanero Ranch Craft Popcorn"
             src={HabaneroRanchFrontLabel}
           />
-        </Zoom>
-        <Zoom
-          overlayBgColorEnd={DIALOG_BACKDROP}
-          transitionDuration={ZOOM_TRANSITION_DURATION}
-          wrapStyle={ZOOM_WRAP_STYLE}
-          zoomMargin={ZOOM_ZOOM_MARGIN}
-        >
+        </ProductImageZoom>
+        <ProductImageZoom>
           <StyledLabelImage
             alt="Back label for Habanero Ranch Craft Popcorn"
             src={HabaneroRanchBackLabel}
           />
-        </Zoom>
+        </ProductImageZoom>
       </StyledProductImages>
     </>
   );

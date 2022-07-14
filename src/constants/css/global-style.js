@@ -3,6 +3,7 @@ import {
   KERNEL_NARROW_HEIGHT_PX,
   KERNEL_WIDE_HEIGHT_PX,
 } from '../kernel-fountain';
+import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -67,7 +68,7 @@ a:hover {
   -webkit-animation: kernel 0.5s infinite linear;
   height: ${KERNEL_WIDE_HEIGHT_PX}px;
   position: fixed;
-  z-index: 2001;
+  z-index: ${POPCORN_KERNEL_Z_INDEX};
 }
 
 .popcorn-kernel--reverse {
