@@ -4,6 +4,7 @@ import OrderFormDialog from './OrderFormDialog';
 import PageHeading from './PageHeading';
 // import { RETAILERS } from '../constants/Retailers';
 import PageSubHeading from './PageSubHeading';
+import Products from './Products';
 import { buttonStyle } from '../constants/css/button';
 import { dangleRotation } from '../constants/css/rotation';
 import { pulse } from '../constants/css/pulse';
@@ -58,6 +59,8 @@ export default function Purchase() {
   return (
     <StyledPageContent>
       <PageHeading>Purchase</PageHeading>
+      <PageSubHeading>Products</PageSubHeading>
+      <Products />
       <StyledOrderOnlineButton onClick={onClickOrderOnline}>
         Order online
       </StyledOrderOnlineButton>
