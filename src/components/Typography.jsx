@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
+import { withLowTextShadow, withTextShadow } from '../constants/css/shadow';
 import React from 'react';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/kernel-fountain';
-import { withTextShadow } from '../constants/css/shadow';
 
 const headingStyle = css`
+  ${({ hasTextShadow }) => (hasTextShadow ? withTextShadow : undefined)}
   text-transform: uppercase;
 `;
 
 const withDynamicStyles = css`
   margin: ${({ margin }) => margin};
   max-width: ${({ maxWidth }) => maxWidth};
-  ${({ hasTextShadow }) => (hasTextShadow ? withTextShadow : undefined)}
 `;
 
 const StyledH1 = styled.h1`
@@ -43,6 +43,7 @@ const StyledH4 = styled.h4`
 
 const StyledP = styled.p`
   ${withDynamicStyles}
+  ${({ hasTextShadow }) => (hasTextShadow ? withLowTextShadow : undefined)}
 `;
 
 export default function Typography({
