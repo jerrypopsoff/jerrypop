@@ -1,6 +1,5 @@
 import {
   DIALOG_BACKDROP,
-  GRAYSCALE_LIGHT,
   ICON_HOVER_BACKGROUND,
   WHITE,
 } from '../constants/color';
@@ -32,8 +31,7 @@ const StyledDialog = styled.dialog`
 
 const StyledDialogHeader = styled.header`
   align-items: flex-end;
-  background-color: var(--main-theme-medium);
-  border-bottom: 1px solid ${GRAYSCALE_LIGHT};
+  background-color: var(--main-theme-dark);
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
@@ -44,7 +42,7 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--theme-text-on-medium);
+  color: var(--theme-text-on-dark);
   cursor: pointer;
   display: flex;
   font-family: sans-serif;

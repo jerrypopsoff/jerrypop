@@ -4,7 +4,6 @@
 
 // Grayscale colors
 export const BLACK = '#000';
-export const GRAYSCALE_LIGHT = '#ddd';
 export const GRAYSCALE_ULTRALIGHT = '#eee';
 export const WHITE = '#fff';
 
