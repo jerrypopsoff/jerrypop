@@ -5,7 +5,6 @@ import {
 } from '../kernel-fountain';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import { createGlobalStyle } from 'styled-components';
-import { withTextShadow } from './shadow';
 
 export const GlobalStyle = createGlobalStyle`
 ::selection {
@@ -42,10 +41,6 @@ a:hover {
 
 button {
   font-family: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  ${withTextShadow}
 }
 
 @keyframes kernel {

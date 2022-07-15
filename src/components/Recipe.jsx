@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
 import { GRAYSCALE_ULTRALIGHT } from '../constants/color';
+import Typography from './Typography';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { withBoxShadow } from '../constants/css/shadow';
@@ -71,23 +72,15 @@ const StyledRecipe = styled.li`
   }
 `;
 
-const StyledTitle = styled.h2`
+const StyledTitle = styled(Typography)`
   font-size: 24px;
-  margin: 0 0 4px;
   text-align: center;
-  text-transform: uppercase;
 `;
 
 const StyledTime = styled.span`
   display: block;
   font-size: 12px;
-  font-style: italic;
   text-align: center;
-`;
-
-const StyledRecipeHeading = styled.h5`
-  margin: 24px 0 16px;
-  text-transform: uppercase;
 `;
 
 const StyledMaterials = styled.ul`
@@ -161,7 +154,9 @@ export default function Recipe({ recipe, theme }) {
           ></iframe>
         </StyledVideo>
       ) : null}
-      <StyledRecipeHeading>Materials</StyledRecipeHeading>
+      <Typography hasTextShadow={false} margin="24px 0 16px" type="h4">
+        Materials
+      </Typography>
       <StyledMaterials>
         {recipe.materials.map(({ amount, name }) => (
           <StyledMaterial key={name}>
@@ -170,7 +165,9 @@ export default function Recipe({ recipe, theme }) {
           </StyledMaterial>
         ))}
       </StyledMaterials>
-      <StyledRecipeHeading>Instructions</StyledRecipeHeading>
+      <Typography hasTextShadow={false} margin="24px 0 16px" type="h4">
+        Instructions
+      </Typography>
       <StyledSteps>
         {recipe.steps.map(({ aside, content }) => (
           <StyledStep key={content}>
@@ -201,7 +198,9 @@ export default function Recipe({ recipe, theme }) {
       tabIndex={isCollapsed ? 0 : undefined}
       theme={theme}
     >
-      <StyledTitle>{recipe.title}</StyledTitle>
+      <StyledTitle hasTextShadow={false} margin="0 0 4px" type="h3">
+        {recipe.title}
+      </StyledTitle>
       <StyledTime>{recipe.time}</StyledTime>
       {recipeDetails}
     </StyledRecipe>

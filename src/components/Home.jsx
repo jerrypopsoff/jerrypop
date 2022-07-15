@@ -5,8 +5,8 @@ import {
 } from '../constants/kernel-fountain';
 import BackgroundWordmark from './BackgroundWordmark';
 import NavigationMenu from './NavigationMenu';
-import PageHeading from './PageHeading';
 import React from 'react';
+import Typography from './Typography';
 import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
@@ -34,21 +34,16 @@ const StyledLogo = styled.img`
   }
 `;
 
-const StyledParagraph = styled.p`
-  margin: 12px;
-  max-width: 600px;
-`;
-
 export default function Home({ theme, onToggleTheme }) {
   return (
     <StyledHome>
       <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      <PageHeading>Poppin’ off with Jerrypop</PageHeading>
-      <StyledParagraph>
+      <Typography type="h1">Poppin’ off with Jerrypop</Typography>
+      <Typography maxWidth="600px" type="p">
         Life is too short to not eat popcorn. Jerrypop is dedicated to
         handcrafting quality popcorn in San Francisco, California.
-      </StyledParagraph>
+      </Typography>
       <NavigationMenu />
     </StyledHome>
   );
