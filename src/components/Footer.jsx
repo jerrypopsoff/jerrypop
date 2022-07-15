@@ -1,6 +1,7 @@
 import React from 'react';
 import SocialLinks from './SocialLinks';
 import ThemeToggleButton from './ThemeToggleButton';
+import Typography from './Typography';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -13,19 +14,20 @@ const StyledFooter = styled.footer`
   padding: 0 16px 24px;
 `;
 
-const StyledSpan = styled.span`
-  display: block;
+const StyledSocialLinksContainer = styled.div`
   margin: 0 8px;
 `;
 
 export default function Footer({ onToggleTheme }) {
   return (
     <StyledFooter>
-      <StyledSpan>© {new Date().getFullYear()} Jerrypop, LLC</StyledSpan>
+      <Typography margin="0 8px" type="p">
+        © {new Date().getFullYear()} Jerrypop, LLC
+      </Typography>
       <ThemeToggleButton onToggleTheme={onToggleTheme} />
-      <StyledSpan>
+      <StyledSocialLinksContainer>
         <SocialLinks />
-      </StyledSpan>
+      </StyledSocialLinksContainer>
     </StyledFooter>
   );
 }

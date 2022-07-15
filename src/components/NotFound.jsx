@@ -1,12 +1,14 @@
 import NavigationMenu from './NavigationMenu';
-import PageHeading from './PageHeading';
 import React from 'react';
+import Typography from './Typography';
 
 export default function NotFound() {
   return (
     <>
-      <PageHeading>Ope!</PageHeading>
-      <p>Someone spilled the kernels. That page does not exist.</p>
+      <Typography type="h1">Ope!</Typography>
+      <Typography type="p">
+        Someone spilled the kernels. That page does not exist.
+      </Typography>
       <NavigationMenu />
     </>
   );

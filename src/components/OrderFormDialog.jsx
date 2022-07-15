@@ -47,6 +47,7 @@ const StyledCloseButton = styled.button`
   color: var(--theme-text-on-medium);
   cursor: pointer;
   display: flex;
+  font-family: sans-serif;
   font-size: 16px;
   font-weight: bold;
   height: 36px;

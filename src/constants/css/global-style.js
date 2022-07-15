@@ -16,12 +16,16 @@ export const GlobalStyle = createGlobalStyle`
 body {
   background-color: var(--main-theme-dark);
   color: ${WHITE};
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Shrikhand', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+  outline-color: var(--main-theme-medium);
 }
 
 a {
@@ -35,8 +39,8 @@ a:hover {
   color: ${GRAYSCALE_ULTRALIGHT};
 }
 
-:focus {
-  outline-color: var(--main-theme-medium);
+button {
+  font-family: inherit;
 }
 
 @keyframes kernel {
