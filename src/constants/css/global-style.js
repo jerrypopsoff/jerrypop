@@ -5,6 +5,7 @@ import {
 } from '../kernel-fountain';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import { createGlobalStyle } from 'styled-components';
+import { withTextShadow } from './shadow';
 
 export const GlobalStyle = createGlobalStyle`
 ::selection {
@@ -16,12 +17,16 @@ export const GlobalStyle = createGlobalStyle`
 body {
   background-color: var(--main-theme-dark);
   color: ${WHITE};
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Shrikhand', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+  outline-color: var(--main-theme-medium);
 }
 
 a {
@@ -35,8 +40,12 @@ a:hover {
   color: ${GRAYSCALE_ULTRALIGHT};
 }
 
-:focus {
-  outline-color: var(--main-theme-medium);
+button {
+  font-family: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  ${withTextShadow}
 }
 
 @keyframes kernel {
