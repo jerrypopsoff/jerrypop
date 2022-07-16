@@ -85,7 +85,6 @@ const StyledTime = styled.span`
 
 const StyledMaterials = styled.ul`
   ${listStyles}
-  font-family: 'Helvetica Neue', sans-serif;
 `;
 
 const StyledMaterial = styled.li`
@@ -105,7 +104,6 @@ const StyledMaterialAmount = styled.span`
 
 const StyledSteps = styled.ol`
   ${listStyles}
-  font-family: 'Helvetica Neue', sans-serif;
 `;
 
 const StyledStep = styled.li`

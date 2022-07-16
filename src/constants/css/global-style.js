@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
   background-color: var(--main-theme-dark);
   color: ${WHITE};
-  font-family: 'Shrikhand', 'Helvetica Neue', sans-serif;
+  font-family: 'Familjen Grotesk', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;

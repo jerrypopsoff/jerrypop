@@ -1,4 +1,5 @@
 @font-face {
-  font-family: 'Shrikhand';
-  src: local('Shrikhand'), url(./fonts/Shrikhand-Regular.ttf) format('opentype');
+  font-family: 'Familjen Grotesk';
+  src: local('Familjen Grotesk'),
+    url(./fonts/FamiljenGrotesk-Regular.ttf) format('opentype');
 }
