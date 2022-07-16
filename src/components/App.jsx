@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import Home from './Home';
+import Logo from './Logo';
 import NotFound from './NotFound';
 import Purchase from './Purchase';
 import React from 'react';
@@ -19,9 +20,10 @@ export default function App() {
       <Router>
         <RotateTheme rotateTheme={rotateTheme} />
         <ScrollToTop />
+        <Logo onToggleTheme={rotateTheme} theme={theme} />
         <Switch>
           <Route exact path="/">
-            <Home theme={theme} onToggleTheme={rotateTheme} />
+            <Home onToggleTheme={rotateTheme} theme={theme} />
           </Route>
           <Route exact path="/recipes">
             <Recipes theme={theme} />
@@ -30,7 +32,7 @@ export default function App() {
             <Purchase theme={theme} />
           </Route>
           <Route path="*">
-            <NotFound />
+            <NotFound theme={theme} />
           </Route>
         </Switch>
         <Footer onToggleTheme={rotateTheme} />
