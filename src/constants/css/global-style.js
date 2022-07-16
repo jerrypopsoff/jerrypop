@@ -1,4 +1,4 @@
-import { GRAYSCALE_ULTRALIGHT, WHITE } from '../color';
+import { GRAYSCALE_LIGHT, WHITE } from '../color';
 import {
   KERNEL_NARROW_HEIGHT_PX,
   KERNEL_WIDE_HEIGHT_PX,
@@ -36,7 +36,7 @@ a {
 
 a:focus,
 a:hover {
-  color: ${GRAYSCALE_ULTRALIGHT};
+  color: ${GRAYSCALE_LIGHT};
 }
 
 button {

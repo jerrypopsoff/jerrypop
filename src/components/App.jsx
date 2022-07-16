@@ -27,7 +27,7 @@ export default function App() {
             <Recipes theme={theme} />
           </Route>
           <Route exact path="/purchase">
-            <Purchase />
+            <Purchase theme={theme} />
           </Route>
           <Route path="*">
             <NotFound />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BackgroundWordmark from './BackgroundWordmark';
 import NavigationMenu from './NavigationMenu';
 import OrderFormDialog from './OrderFormDialog';
 // import { RETAILERS } from '../constants/Retailers';
@@ -30,7 +31,7 @@ const StyledOrderOnlineButton = styled.button`
   }
 `;
 
-export default function Purchase() {
+export default function Purchase({ theme }) {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
 
   const onKeyDown = ({ key }) => {
@@ -53,6 +54,11 @@ export default function Purchase() {
 
   return (
     <StyledPageContent>
+      <BackgroundWordmark
+        fillColor={theme.mainThemeMedium}
+        isCentered={true}
+        repeat={1}
+      />
       <Typography type="h1">Purchase</Typography>
       <StyledOrderOnlineButton onClick={onClickOrderOnline}>
         Order online
