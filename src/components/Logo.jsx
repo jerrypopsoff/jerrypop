@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import {
   MAIN_LOGO_NARROW_HEIGHT_PX,
   MAIN_LOGO_WIDE_HEIGHT_PX,
@@ -26,10 +27,23 @@ const StyledLogo = styled.img`
 `;
 
 export default function Logo({ onToggleTheme, theme }) {
+  const { pathname } = useLocation();
+
+  if (pathname === '/') {
+    return (
+      <>
+        <BackgroundWordmark fillColor={theme.mainThemeMedium} />
+        <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+      </>
+    );
+  }
+
   return (
     <>
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+      <Link to="/">
+        <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+      </Link>
     </>
   );
 }

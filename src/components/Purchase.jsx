@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import BackgroundWordmark from './BackgroundWordmark';
 import NavigationMenu from './NavigationMenu';
 import OrderFormDialog from './OrderFormDialog';
-// import { RETAILERS } from '../constants/Retailers';
 import Products from './Products';
+// import { RETAILERS } from '../constants/retailers';
 import Typography from './Typography';
 import styled from 'styled-components';
 
@@ -40,11 +39,6 @@ export default function Purchase({ theme }) {
 
   return (
     <StyledPageContent>
-      <BackgroundWordmark
-        fillColor={theme.mainThemeMedium}
-        isCentered={true}
-        repeat={1}
-      />
       <Typography type="h1">Purchase</Typography>
       <Products onClickOrderOnline={onClickOrderOnline} />
       {isOrderFormVisible && (
@@ -56,7 +50,11 @@ export default function Purchase({ theme }) {
         Interested in carrying them at your retail location? Reach out to{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
       </Typography>
-      {/* <p>Jerrypop is available for purchase from the following retailers:</p>
+      {/* <Typography maxWidth="600px" type="p">
+        My products are available for purchase from the following retailers.
+        Interested in carrying them at your retail location? Reach out to{' '}
+        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
+      </Typography>
       <ul>
         {RETAILERS.map(retailer => (
           <li key={retailer.displayName}>{retailer.displayName}</li>
