@@ -1,4 +1,7 @@
 @font-face {
   font-family: 'Open Sans';
-  src: local('Open Sans'), url(./fonts/OpenSans-Variable.ttf) format('opentype');
+  src: local('Open Sans'),
+    url(./fonts/OpenSans-Variable.ttf) format('ttf supports variations'),
+    url(./fonts/OpenSans-Variable.ttf) format('ttf-variations');
+  font-weight: 300 800;
 }
