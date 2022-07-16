@@ -8,12 +8,14 @@ import PbjFrontLabel from '../images/jerrypop-pbj-front-label.svg';
 import React from 'react';
 import Typography from './Typography';
 import Zoom from 'react-medium-image-zoom';
+import { buttonStyle } from '../constants/css/button';
+import { dangleRotation } from '../constants/css/rotation';
+import { pulse } from '../constants/css/pulse';
 import styled from 'styled-components';
 import { withBoxShadow } from '../constants/css/shadow';
 
 const StyledProductImages = styled.div`
   height: 203px; // Mitigate screen flash for image loading state ending
-  margin-bottom: 24px;
 `;
 
 const StyledLabelImage = styled.img`
@@ -21,6 +23,17 @@ const StyledLabelImage = styled.img`
   border: 1px solid ${WHITE};
   border-radius: 4px;
   width: 150px;
+`;
+
+const StyledOrderOnlineButton = styled.button`
+  ${buttonStyle}
+  ${pulse}
+  margin: 24px 0;
+
+  &:hover,
+  &:focus {
+    ${dangleRotation}
+  }
 `;
 
 const ProductImageZoom = ({ children }) => {
@@ -37,10 +50,10 @@ const ProductImageZoom = ({ children }) => {
   );
 };
 
-export default function Products() {
+export default function Products({ onClickOrderOnline }) {
   return (
     <>
-      <Typography type="h3">PB&J Craft Popcorn</Typography>
+      <Typography type="h2">PB&J Craft Popcorn</Typography>
       <StyledProductImages>
         <ProductImageZoom>
           <StyledLabelImage
@@ -55,7 +68,10 @@ export default function Products() {
           />
         </ProductImageZoom>
       </StyledProductImages>
-      <Typography type="h3">Habanero Ranch Craft Popcorn</Typography>
+      <StyledOrderOnlineButton onClick={onClickOrderOnline}>
+        Order online
+      </StyledOrderOnlineButton>
+      <Typography type="h2">Habanero Ranch Craft Popcorn</Typography>
       <StyledProductImages>
         <ProductImageZoom>
           <StyledLabelImage
@@ -70,6 +86,9 @@ export default function Products() {
           />
         </ProductImageZoom>
       </StyledProductImages>
+      <StyledOrderOnlineButton onClick={onClickOrderOnline}>
+        Order online
+      </StyledOrderOnlineButton>
     </>
   );
 }

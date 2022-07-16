@@ -39,10 +39,9 @@ export default function Home({ theme, onToggleTheme }) {
     <StyledHome>
       <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      <Typography type="h1">Poppin’ off with Jerrypop</Typography>
+      <Typography type="h1">Poppin’ off with Jerry</Typography>
       <Typography maxWidth="600px" type="p">
-        Life is too short to not eat popcorn. Jerrypop is dedicated to
-        handcrafting quality popcorn in San Francisco, California.
+        Locally handcrafted popcorn from San Francisco, California.
       </Typography>
       <NavigationMenu />
     </StyledHome>

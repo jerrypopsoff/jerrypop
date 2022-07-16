@@ -1,5 +1,4 @@
 @font-face {
-  font-family: 'Familjen Grotesk';
-  src: local('Familjen Grotesk'),
-    url(./fonts/FamiljenGrotesk-Regular.ttf) format('opentype');
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(./fonts/OpenSans-Variable.ttf) format('opentype');
 }
