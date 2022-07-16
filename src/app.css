@@ -1,4 +1,4 @@
 @font-face {
-  font-family: 'Shrikhand';
-  src: local('Shrikhand'), url(./fonts/Shrikhand-Regular.ttf) format('opentype');
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(./fonts/OpenSans-Variable.ttf) format('opentype');
 }
