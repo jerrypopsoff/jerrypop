@@ -1,6 +1,11 @@
+import {
+  BLACK,
+  GRAYSCALE_DARK,
+  GRAYSCALE_MEDIUM,
+  WHITE,
+} from '../constants/color';
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
-import { GRAYSCALE_ULTRALIGHT } from '../constants/color';
 import Typography from './Typography';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
@@ -21,19 +26,14 @@ const asideFont = `
 
 const StyledRecipe = styled.li`
   ${withBoxShadow}
-  background-color: var(--main-theme-medium);
+  background-color: ${WHITE};
   border-radius: 5px;
   box-sizing: border-box;
-  color: var(--theme-text-on-medium);
+  color: ${BLACK};
   margin: 12px auto;
   padding: 20px;
   text-align: left;
   width: 500px;
-
-  *::selection {
-    background-color: var(--main-theme-dark);
-    color: var(--theme-text-on-dark);
-  }
 
   @media (max-width: 600px) {
     width: calc(100% - 24px);
@@ -63,11 +63,11 @@ const StyledRecipe = styled.li`
   }}
 
   a {
-    color: inherit;
+    color: ${GRAYSCALE_DARK};
 
     &:hover,
     &:focus {
-      color: ${GRAYSCALE_ULTRALIGHT};
+      color: ${GRAYSCALE_MEDIUM};
     }
   }
 `;

@@ -4,7 +4,9 @@
 
 // Grayscale colors
 export const BLACK = '#000';
-export const GRAYSCALE_ULTRALIGHT = '#eee';
+export const GRAYSCALE_DARK = '#444';
+export const GRAYSCALE_MEDIUM = '#666';
+export const GRAYSCALE_LIGHT = '#eee';
 export const WHITE = '#fff';
 
 // Theme colors

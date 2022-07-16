@@ -1,3 +1,4 @@
+import BackgroundWordmark from './BackgroundWordmark';
 import NavigationMenu from './NavigationMenu';
 import { RECIPES } from '../constants/jerry';
 import React from 'react';
@@ -20,10 +21,12 @@ function getRecipeTheme(currentTheme, recipeIndex) {
 export default function Recipes({ theme: currentTheme }) {
   return (
     <>
+      <BackgroundWordmark
+        fillColor={currentTheme.mainThemeMedium}
+        isCentered={true}
+        repeat={4}
+      />
       <Typography type="h1">Recipes</Typography>
-      <Typography margin="12px 12px 24px" type="p">
-        Select a recipe to view details.
-      </Typography>
       <StyledUnorderedList>
         {RECIPES.map((recipe, index) => {
           const recipeTheme = getRecipeTheme(currentTheme, index);

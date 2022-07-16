@@ -7,8 +7,8 @@ export const KERNEL_WIDE_HEIGHT_PX = 56;
 export const KERNEL_NARROW_HEIGHT_PX = 42;
 
 export const WORDMARK_NARROW_HEIGHT_PX = 225;
-export const WORDMARK_NARROW_MARGIN_PX = -110;
-export const WORDMARK_NARROW_TOP_PX = -48;
+export const WORDMARK_NARROW_MARGIN_PX = -59;
+export const WORDMARK_NARROW_TOP_PX = 12;
 export const WORDMARK_WIDE_HEIGHT_PX = 360;
-export const WORDMARK_WIDE_MARGIN_PX = -180;
-export const WORDMARK_WIDE_TOP_PX = -88;
+export const WORDMARK_WIDE_MARGIN_PX = -94;
+export const WORDMARK_WIDE_TOP_PX = 12;

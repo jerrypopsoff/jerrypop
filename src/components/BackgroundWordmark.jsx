@@ -18,28 +18,41 @@ const StyledWordmark = styled.div`
   left: 0;
   position: fixed;
   right: 0;
-  top: ${WORDMARK_WIDE_TOP_PX}px;
   z-index: ${WORDMARK_Z_INDEX};
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    top: ${WORDMARK_NARROW_TOP_PX}px;
-  }
-
-  > svg {
-    height: ${WORDMARK_WIDE_HEIGHT_PX}px;
-    margin-bottom: ${WORDMARK_WIDE_MARGIN_PX}px;
-    width: auto;
-
-    @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-      height: ${WORDMARK_NARROW_HEIGHT_PX}px;
-      margin-bottom: ${WORDMARK_NARROW_MARGIN_PX}px;
+  ${({ isCentered }) => {
+    if (isCentered) {
+      return `
+        bottom: 0;
+        justify-content: center;
+        top: 0;
+      `;
     }
+
+    return `
+      top: ${WORDMARK_WIDE_TOP_PX}px;
+
+      @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+        top: ${WORDMARK_NARROW_TOP_PX}px;
+      }
+    `;
+  }}
+`;
+
+const StyledSvg = styled.svg`
+  height: ${WORDMARK_WIDE_HEIGHT_PX}px;
+  margin: ${WORDMARK_WIDE_MARGIN_PX}px 0;
+  width: auto;
+
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    height: ${WORDMARK_NARROW_HEIGHT_PX}px;
+    margin: ${WORDMARK_NARROW_MARGIN_PX}px 0;
   }
 `;
 
 function WordmarkImage({ fillColor }) {
   return (
-    <svg
+    <StyledSvg
       width="302"
       height="187"
       viewBox="0 0 302 187"
@@ -78,16 +91,22 @@ function WordmarkImage({ fillColor }) {
         d="M137.45 84.26C138.99 83.7 140.23 82.75 141.11 81.38C143.44 77.77 143.54 73.93 142.42 70.65C140.87 66.68 137.89 65.67 134.85 67.51C133.09 68.58 131.85 70.15 130.94 71.94C129.96 73.85 129.17 75.86 128.29 77.82C128.03 78.39 127.77 78.98 127.41 79.48C127.07 79.95 126.64 79.82 126.47 79.25C126.4 79.01 126.38 78.75 126.33 78.49C126.12 77.35 126 76.18 125.7 75.06C125.21 73.23 123.92 72.56 122.11 73.1C121.49 73.29 120.86 73.51 120.3 73.82C116.31 76.05 113.52 79.38 111.69 83.52C111.28 84.44 111.06 85.48 110.98 86.49C110.87 87.87 111.89 88.8 113.27 88.76C113.74 88.75 114.21 88.64 114.66 88.52C116.23 88.13 117.15 88.56 117.83 90.02C118.52 91.52 118.72 93.13 118.79 94.75C119.06 100.57 118.57 106.34 117.58 112.08C117.35 113.38 117.11 114.69 117.04 116.01C116.89 118.6 118.58 120.22 121.15 119.84C122.5 119.64 123.83 119.19 125.11 118.68C127.04 117.92 128.75 116.77 130.02 115.09C131.07 113.7 131.28 112.23 130.6 110.58C130.02 109.18 129.52 107.73 129.14 106.27C127.88 101.51 127.54 96.67 127.92 91.77C128.11 89.26 128.48 86.78 129.52 84.46C129.89 83.62 130.36 82.85 131.14 82.31C131.83 81.84 132.41 81.88 133.01 82.46C133.36 82.8 133.68 83.19 134.03 83.53C135.02 84.48 136.16 84.74 137.47 84.27L137.45 84.26Z"
         fill={fillColor}
       />
-    </svg>
+    </StyledSvg>
   );
 }
 
-export default function BackgroundWordmark({ fillColor }) {
+export default function BackgroundWordmark({
+  fillColor,
+  isCentered = false,
+  repeat = 3,
+}) {
   return (
-    <StyledWordmark aria-hidden="true">
-      <WordmarkImage fillColor={fillColor} />
-      <WordmarkImage fillColor={fillColor} />
-      <WordmarkImage fillColor={fillColor} />
+    <StyledWordmark aria-hidden="true" isCentered={isCentered}>
+      {Array.from({ length: repeat }).map((e, index) => (
+        <div key={index}>
+          <WordmarkImage fillColor={fillColor} />
+        </div>
+      ))}
     </StyledWordmark>
   );
 }
