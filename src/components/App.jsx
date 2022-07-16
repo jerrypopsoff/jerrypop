@@ -32,7 +32,7 @@ export default function App() {
             <Purchase theme={theme} />
           </Route>
           <Route path="*">
-            <NotFound theme={theme} />
+            <NotFound />
           </Route>
         </Switch>
         <Footer onToggleTheme={rotateTheme} />
