@@ -41,7 +41,7 @@ const ProductImageZoom = ({ children }) => {
     <Zoom
       overlayBgColorEnd={DIALOG_BACKDROP}
       transitionDuration={0}
-      wrapStyle={{ padding: '8px' }}
+      wrapStyle={{ margin: '8px' }}
       zoomMargin={8}
       zoomZindex={DIALOG_Z_INDEX}
     >
