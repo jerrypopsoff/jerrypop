@@ -1,7 +1,7 @@
 export const RECIPES = [
   {
     title: 'Jalapeño Cheddar Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
     materials: [
       {
@@ -165,7 +165,7 @@ export const RECIPES = [
   },
   {
     title: 'PB&J Popcorn',
-    time: '40 minutes',
+    time: '50 minutes',
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
@@ -238,7 +238,9 @@ export const RECIPES = [
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
+        aside:
+          'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
@@ -247,7 +249,7 @@ export const RECIPES = [
   },
   {
     title: 'Furikake Dashi Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -315,7 +317,7 @@ export const RECIPES = [
   },
   {
     title: 'Hazelnut Cocoa Popcorn',
-    time: '40 minutes',
+    time: '50 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -385,7 +387,9 @@ export const RECIPES = [
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
+        aside:
+          'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
@@ -394,7 +398,7 @@ export const RECIPES = [
   },
   {
     title: '“Cheesy” Chipotle Taco Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -473,7 +477,7 @@ export const RECIPES = [
   },
   {
     title: 'Cranked Curry Basil Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -540,7 +544,7 @@ export const RECIPES = [
   },
   {
     title: '“Pad Thai” Popcorn',
-    time: '10 minutes',
+    time: '18 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
