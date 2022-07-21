@@ -246,6 +246,74 @@ export const RECIPES = [
     ],
   },
   {
+    title: 'Furikake Dashi Popcorn',
+    time: '10 minutes',
+    materials: [
+      {
+        name: 'Popcorn kernels',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Nori furikake',
+        amount: '2 tbsp',
+      },
+      {
+        name: 'Hondashi',
+        amount: '1 tbsp',
+      },
+      {
+        name: 'Onion powder',
+        amount: '1 tbsp',
+      },
+      {
+        name: 'Shichimi togarashi',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Monosodium glutamate (MSG)',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Salt',
+        amount: '1-2 tbsp',
+      },
+      {
+        name: 'Dried bonito flake',
+        amount: '1-2 tbsp (optional)',
+      },
+    ],
+    steps: [
+      {
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+      },
+      {
+        content:
+          'Thoroughly mix Hondashi, onion powder, shichimi togarashi, MSG, and 1.5 tbsp of the nori furikake into oil',
+      },
+      {
+        content: 'Drizzle oil mixture onto the popcorn',
+      },
+      {
+        content:
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
+      },
+      {
+        content: 'Add salt and shake the bowl again to disperse',
+      },
+      {
+        content:
+          'Garnish with remaining nori furikake and dried bonito flake, and enjoy',
+      },
+    ],
+  },
+  {
     title: 'Hazelnut Cocoa Popcorn',
     time: '40 minutes',
     materials: [
