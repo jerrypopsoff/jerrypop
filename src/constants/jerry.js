@@ -1,7 +1,7 @@
 export const RECIPES = [
   {
     title: 'Jalapeño Cheddar Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
     materials: [
       {
@@ -165,7 +165,7 @@ export const RECIPES = [
   },
   {
     title: 'PB&J Popcorn',
-    time: '40 minutes',
+    time: '50 minutes',
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
@@ -238,7 +238,9 @@ export const RECIPES = [
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
+        aside:
+          'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
@@ -246,8 +248,76 @@ export const RECIPES = [
     ],
   },
   {
+    title: 'Furikake Dashi Popcorn',
+    time: '15 minutes',
+    materials: [
+      {
+        name: 'Popcorn kernels',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Canola oil (or any neutral oil)',
+        amount: '0.5 cup',
+      },
+      {
+        name: 'Nori furikake',
+        amount: '2 tbsp',
+      },
+      {
+        name: 'Hondashi',
+        amount: '1 tbsp',
+      },
+      {
+        name: 'Onion powder',
+        amount: '1 tbsp',
+      },
+      {
+        name: 'Shichimi togarashi',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Monosodium glutamate (MSG)',
+        amount: '2 tsp',
+      },
+      {
+        name: 'Salt',
+        amount: '1-2 tbsp',
+      },
+      {
+        name: 'Dried bonito flake',
+        amount: '1-2 tbsp (optional)',
+      },
+    ],
+    steps: [
+      {
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
+        aside:
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+      },
+      {
+        content:
+          'Thoroughly mix Hondashi, onion powder, shichimi togarashi, MSG, and 1.5 tbsp of the nori furikake into oil',
+      },
+      {
+        content: 'Drizzle oil mixture onto the popcorn',
+      },
+      {
+        content:
+          'Shake the bowl until sauce is evenly dispersed throughout kernels',
+      },
+      {
+        content: 'Add salt and shake the bowl again to disperse',
+      },
+      {
+        content:
+          'Garnish with remaining nori furikake and dried bonito flake, and enjoy',
+      },
+    ],
+  },
+  {
     title: 'Hazelnut Cocoa Popcorn',
-    time: '40 minutes',
+    time: '50 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -317,7 +387,9 @@ export const RECIPES = [
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
       },
       {
-        content: 'Bake for 16 minutes at 290°F, stirring after 8 minutes',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
+        aside:
+          'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
@@ -326,7 +398,7 @@ export const RECIPES = [
   },
   {
     title: '“Cheesy” Chipotle Taco Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -405,7 +477,7 @@ export const RECIPES = [
   },
   {
     title: 'Cranked Curry Basil Popcorn',
-    time: '10 minutes',
+    time: '15 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
@@ -472,7 +544,7 @@ export const RECIPES = [
   },
   {
     title: '“Pad Thai” Popcorn',
-    time: '10 minutes',
+    time: '18 minutes',
     materials: [
       {
         name: 'Popcorn kernels',
