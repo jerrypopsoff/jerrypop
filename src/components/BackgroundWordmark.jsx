@@ -13,36 +13,24 @@ const StyledWordmark = styled.div`
   display: flex;
   flex-direction: column;
   left: 0;
-  position: absolute;
+  opacity: ${({ isFixed }) => (isFixed ? '0.05' : '1.0')};
+  position: ${({ isFixed }) => (isFixed ? 'fixed' : 'absolute')};
   right: 0;
+  top: ${WORDMARK_WIDE_TOP_PX}px;
   z-index: ${WORDMARK_Z_INDEX};
 
-  ${({ isCentered }) => {
-    if (isCentered) {
-      return `
-        bottom: 0;
-        justify-content: center;
-        top: 0;
-      `;
-    }
-
-    return `
-      top: ${WORDMARK_WIDE_TOP_PX}px;
-
-      @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-        top: ${WORDMARK_NARROW_TOP_PX}px;
-      }
-    `;
-  }}
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    top: ${WORDMARK_NARROW_TOP_PX}px;
+  }
 `;
 
 export default function BackgroundWordmark({
   fillColor,
-  isCentered = false,
+  isFixed = false,
   repeat = 3,
 }) {
   return (
-    <StyledWordmark aria-hidden="true" isCentered={isCentered}>
+    <StyledWordmark aria-hidden="true" isFixed={isFixed}>
       {Array.from({ length: repeat }).map((e, index) => (
         <div key={index}>
           <WordmarkImage fillColor={fillColor} />
