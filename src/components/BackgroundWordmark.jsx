@@ -13,7 +13,7 @@ const StyledWordmark = styled.div`
   display: flex;
   flex-direction: column;
   left: 0;
-  opacity: ${({ isFixed }) => (isFixed ? '0.05' : '1.0')};
+  opacity: ${({ isFixed }) => (isFixed ? '0.1' : '1.0')};
   position: ${({ isFixed }) => (isFixed ? 'fixed' : 'absolute')};
   right: 0;
   top: ${WORDMARK_WIDE_TOP_PX}px;
