@@ -4,6 +4,7 @@ import {
   MAIN_LOGO_WIDE_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
+import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import { lazyDangleRotation } from '../constants/css/rotation';
@@ -32,10 +33,7 @@ export default function Logo({ onToggleTheme, theme }) {
   if (pathname === '/') {
     return (
       <>
-        <BackgroundWordmark
-          fillColor={theme.mainThemeTextOnDark}
-          isFixed={true}
-        />
+        <BackgroundWordmark fillColor={BLACK} isFixed={true} />
         <BackgroundWordmark fillColor={theme.mainThemeMedium} />
         <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
       </>
@@ -44,10 +42,7 @@ export default function Logo({ onToggleTheme, theme }) {
 
   return (
     <>
-      <BackgroundWordmark
-        fillColor={theme.mainThemeTextOnDark}
-        isFixed={true}
-      />
+      <BackgroundWordmark fillColor={BLACK} isFixed={true} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
       <Link to="/">
         <StyledLogo alt="Jerrypop logo" src={logo} />
