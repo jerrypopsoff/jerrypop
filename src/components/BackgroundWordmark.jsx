@@ -13,7 +13,7 @@ const StyledWordmark = styled.div`
   display: flex;
   flex-direction: column;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
   z-index: ${WORDMARK_Z_INDEX};
 
