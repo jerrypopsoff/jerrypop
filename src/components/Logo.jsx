@@ -32,6 +32,10 @@ export default function Logo({ onToggleTheme, theme }) {
   if (pathname === '/') {
     return (
       <>
+        <BackgroundWordmark
+          fillColor={theme.mainThemeTextOnDark}
+          isFixed={true}
+        />
         <BackgroundWordmark fillColor={theme.mainThemeMedium} />
         <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
       </>
@@ -40,9 +44,13 @@ export default function Logo({ onToggleTheme, theme }) {
 
   return (
     <>
+      <BackgroundWordmark
+        fillColor={theme.mainThemeTextOnDark}
+        isFixed={true}
+      />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
       <Link to="/">
-        <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+        <StyledLogo alt="Jerrypop logo" src={logo} />
       </Link>
     </>
   );
