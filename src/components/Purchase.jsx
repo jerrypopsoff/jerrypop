@@ -16,7 +16,7 @@ const StyledNavigationMenu = styled(NavigationMenu)`
   margin-top: 48px;
 `;
 
-export default function Purchase({ theme }) {
+export default function Purchase() {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
 
   const onKeyDown = ({ key }) => {

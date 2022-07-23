@@ -23,13 +23,13 @@ export default function App() {
         <Logo onToggleTheme={rotateTheme} theme={theme} />
         <Switch>
           <Route exact path="/">
-            <Home onToggleTheme={rotateTheme} theme={theme} />
+            <Home />
           </Route>
           <Route exact path="/recipes">
-            <Recipes theme={theme} />
+            <Recipes />
           </Route>
           <Route exact path="/purchase">
-            <Purchase theme={theme} />
+            <Purchase />
           </Route>
           <Route path="*">
             <NotFound />
