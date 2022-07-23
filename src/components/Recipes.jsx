@@ -2,7 +2,6 @@ import NavigationMenu from './NavigationMenu';
 import { RECIPES } from '../constants/jerry';
 import React from 'react';
 import Recipe from './Recipe';
-import { THEMES } from '../constants/theme';
 import Typography from './Typography';
 import styled from 'styled-components';
 
@@ -12,12 +11,7 @@ const StyledUnorderedList = styled.ul`
   margin: 0;
 `;
 
-function getRecipeTheme(currentTheme, recipeIndex) {
-  const otherThemes = THEMES.filter(theme => theme !== currentTheme);
-  return otherThemes[recipeIndex % otherThemes.length];
-}
-
-export default function Recipes({ theme: currentTheme }) {
+export default function Recipes() {
   return (
     <>
       <Typography type="h1">Recipes</Typography>
@@ -25,11 +19,8 @@ export default function Recipes({ theme: currentTheme }) {
         Select a recipe to view details.
       </Typography>
       <StyledUnorderedList>
-        {RECIPES.map((recipe, index) => {
-          const recipeTheme = getRecipeTheme(currentTheme, index);
-          return (
-            <Recipe key={recipe.title} recipe={recipe} theme={recipeTheme} />
-          );
+        {RECIPES.map(recipe => {
+          return <Recipe key={recipe.title} recipe={recipe} />;
         })}
       </StyledUnorderedList>
       <NavigationMenu />

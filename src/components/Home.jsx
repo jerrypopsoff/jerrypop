@@ -10,7 +10,7 @@ const StyledHome = styled.div`
   text-align: center;
 `;
 
-export default function Home({ onToggleTheme, theme }) {
+export default function Home() {
   return (
     <StyledHome>
       <Typography type="h1">Poppin’ off with Jerry</Typography>
