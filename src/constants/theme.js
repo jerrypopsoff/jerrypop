@@ -19,12 +19,11 @@ export const THEME = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: WHITE,
   },
-  // ?
-  PINK_PURPLE: {
-    mainThemeDark: THEME_PINK,
-    mainThemeMedium: THEME_PURPLE,
+  PURPLE_GREEN: {
+    mainThemeDark: THEME_PURPLE,
+    mainThemeMedium: THEME_LIGHT_GREEN,
     mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: WHITE,
+    mainThemeTextOnMedium: BLACK,
   },
   // Habanero Ranch
   CYAN_YELLOW: {
@@ -33,19 +32,17 @@ export const THEME = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: BLACK,
   },
-  // ?
-  PURPLE_GREEN: {
-    mainThemeDark: THEME_PURPLE,
-    mainThemeMedium: THEME_LIGHT_GREEN,
+  PINK_PURPLE: {
+    mainThemeDark: THEME_PINK,
+    mainThemeMedium: THEME_PURPLE,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: WHITE,
+  },
+  BLUE_ORANGE: {
+    mainThemeDark: THEME_BLUE,
+    mainThemeMedium: THEME_ORANGE,
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
-  },
-  // Pad Thai?
-  ORANGE_PINK: {
-    mainThemeDark: THEME_ORANGE,
-    mainThemeMedium: THEME_PINK,
-    mainThemeTextOnDark: BLACK,
-    mainThemeTextOnMedium: WHITE,
   },
   // Rosemary Lemon Pepper
   GREEN_YELLOW: {
@@ -54,21 +51,21 @@ export const THEME = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
-  BLUE_CYAN: {
-    mainThemeDark: THEME_BLUE,
-    mainThemeMedium: THEME_CYAN,
+  ORANGE_PURPLE: {
+    mainThemeDark: THEME_ORANGE,
+    mainThemeMedium: THEME_PURPLE,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: WHITE,
+  },
+  PINK_YELLOW: {
+    mainThemeDark: THEME_PINK,
+    mainThemeMedium: THEME_YELLOW,
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
   PURPLE_CYAN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_CYAN,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
-  PINK_YELLOW: {
-    mainThemeDark: THEME_PINK,
-    mainThemeMedium: THEME_YELLOW,
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
@@ -80,11 +77,11 @@ export const THEME = {
 export const THEMES = [
   THEME.BLUE_PINK,
   THEME.PURPLE_GREEN,
-  THEME.ORANGE_PINK,
   THEME.CYAN_YELLOW,
   THEME.PINK_PURPLE,
+  THEME.BLUE_ORANGE,
   THEME.GREEN_YELLOW,
-  THEME.BLUE_CYAN,
+  THEME.ORANGE_PURPLE,
   THEME.PINK_YELLOW,
   THEME.PURPLE_CYAN,
 ];
