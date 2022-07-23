@@ -46,12 +46,12 @@ export default function Purchase() {
       )}
       <Typography type="h2">Retail</Typography>
       <Typography maxWidth="600px" type="p">
-        My products are not yet available for purchase from retailers.
-        Interested in carrying them at your retail location? Reach out to{' '}
+        Products are not yet available for purchase from retailers. Interested
+        in carrying them at your retail location? Reach out to{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
       </Typography>
       {/* <Typography maxWidth="600px" type="p">
-        My products are available for purchase from the following retailers.
+        Products are available for purchase from the following retailers.
         Interested in carrying them at your retail location? Reach out to{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
       </Typography>
