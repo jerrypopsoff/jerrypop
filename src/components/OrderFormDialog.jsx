@@ -6,11 +6,12 @@ import {
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
 import React from 'react';
 import styled from 'styled-components';
-import useWindowSize from '@rehooks/window-size';
+import { useWindowSize } from '../hooks/use-window-size';
 import { withBoxShadow } from '../constants/css/shadow';
 
-const VERTICAL_MARGIN_PX = 48;
+const VERTICAL_MARGIN_PX = 24;
 const HORIZONTAL_MARGIN_PX = 12;
+const MINIMUM_DIALOG_HEIGHT = 150;
 
 const StyledDialog = styled.dialog`
   ${withBoxShadow}
@@ -72,9 +73,10 @@ const StyledDialogBackdrop = styled.div`
 
 export default function OrderFormDialog({ onCloseOrderOnlineDialog }) {
   const { innerHeight, innerWidth } = useWindowSize();
-  const verticalMargin = VERTICAL_MARGIN_PX;
-  // 150px is the minimum height to prevent content from being inaccessible.
-  const dialogHeight = Math.max(innerHeight - 2 * verticalMargin, 150);
+  const dialogHeight = Math.max(
+    innerHeight - 2 * VERTICAL_MARGIN_PX,
+    MINIMUM_DIALOG_HEIGHT,
+  );
   const defaultWidth = 600;
   const dialogWidth = Math.min(
     innerWidth - 2 * HORIZONTAL_MARGIN_PX,
