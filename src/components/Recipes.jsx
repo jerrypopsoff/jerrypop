@@ -19,7 +19,7 @@ export default function Recipes() {
         Select a recipe to view details.
       </Typography>
       <StyledUnorderedList>
-        {RECIPES.map(recipe => {
+        {RECIPES.map((recipe) => {
           return <Recipe key={recipe.title} recipe={recipe} />;
         })}
       </StyledUnorderedList>
