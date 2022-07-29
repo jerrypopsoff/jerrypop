@@ -5,6 +5,7 @@
   "root": true,
   "rules": {
     "prettier/prettier": "error",
-    "sort-imports": "error"
+    "sort-imports": "error",
+    "@typescript-eslint/no-explicit-any": "error"
   }
 }
