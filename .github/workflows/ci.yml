@@ -10,4 +10,5 @@ jobs:
           node-version: '16.x'
       - run: yarn install
       - run: yarn build
+      - run: yarn lint
       - run: yarn test --ci --watch-all=false
