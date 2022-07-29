@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import Home from './Home';
@@ -21,20 +21,12 @@ export default function App() {
         <RotateTheme rotateTheme={rotateTheme} />
         <ScrollToTop />
         <Logo onToggleTheme={rotateTheme} theme={theme} />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/recipes">
-            <Recipes />
-          </Route>
-          <Route exact path="/purchase">
-            <Purchase />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<Recipes />} path="/recipes" />
+          <Route element={<Purchase />} path="/purchase" />
+          <Route element={<NotFound />} path="*" />
+        </Routes>
         <Footer onToggleTheme={rotateTheme} />
       </Router>
     </>
