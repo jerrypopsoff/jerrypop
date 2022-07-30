@@ -14,7 +14,11 @@ export function useTheme(): [Theme, () => void] {
    */
   const incrementTheme = useCallback(() => {
     ++currentThemeIndex;
-    setTheme(THEMES[currentThemeIndex % THEMES.length]);
+    if (currentThemeIndex >= THEMES.length) {
+      currentThemeIndex = 0;
+    }
+
+    setTheme(THEMES[currentThemeIndex]);
   }, []);
 
   useEffect(() => {
