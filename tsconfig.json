@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    "target": "ESNext"
   },
   "exclude": ["cypress", "cypress.config.ts"],
   "extends": "@tsconfig/recommended/tsconfig.json"

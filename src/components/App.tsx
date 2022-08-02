@@ -22,6 +22,7 @@ const App: React.FC = () => {
         <ScrollToTop />
         <Logo onToggleTheme={rotateTheme} theme={theme} />
         <Routes>
+          {/* All routes must be represented in cypress/types/route-path.ts */}
           <Route element={<Home />} path="/" />
           <Route element={<Recipes />} path="/recipes" />
           <Route element={<Purchase />} path="/purchase" />

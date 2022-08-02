@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "noEmit": true,
+    "target": "ESNext",
     "types": ["cypress"]
   },
   "extends": "@tsconfig/recommended/tsconfig.json",
