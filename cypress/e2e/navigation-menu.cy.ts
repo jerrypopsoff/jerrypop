@@ -9,7 +9,7 @@ describe('navigation menu tests', () => {
         'have.length',
         path === RoutePath.NotFound ? 3 : 2,
       );
-      cy.get(`a[href="${path}"]`).should('have.length', 0);
+      cy.get(`a[href="${path}"]`).should('not.exist');
     });
   });
 

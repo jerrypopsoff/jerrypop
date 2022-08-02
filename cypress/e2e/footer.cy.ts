@@ -1,5 +1,5 @@
 import { RoutePath } from '../types/route-path';
-import { THEMES } from '../../src/constants/theme';
+import { verifyThemeToggle } from '../utilities/theme-toggle';
 
 describe('footer tests', () => {
   beforeEach(() => {
@@ -30,24 +30,7 @@ describe('footer tests', () => {
       );
   });
 
-  it('toggles the theme of the website', () => {
-    // Allow initial CSS to load.
-    cy.wait(500);
-
-    // Ensure theme rotation wraps properly back to original theme.
-    const rotationCount = THEMES.length + 1;
-    for (let i = 0; i < rotationCount; ++i) {
-      cy.get('body')
-        .invoke('css', 'background-color')
-        // eslint-disable-next-line no-loop-func
-        .then((initialBackgroundColor) => {
-          cy.get('button[aria-label="Toggle color scheme"]').click();
-          cy.get('body').should(
-            'not.have.css',
-            'background-color',
-            initialBackgroundColor,
-          );
-        });
-    }
+  it('toggles the website theme on toggle button click', () => {
+    verifyThemeToggle('button[aria-label="Toggle color scheme"]');
   });
 });
