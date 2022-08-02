@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "e2e": "yarn cypress run",
+    "e2e": "yarn cypress run --config baseUrl=http://localhost:3000,video=false",
+    "e2e:open": "yarn cypress open --config baseUrl=http://localhost:3000,video=false",
     "lint": "npx eslint --ignore-path .gitignore .",
     "start": "react-scripts start",
     "test": "react-scripts test"

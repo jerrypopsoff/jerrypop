@@ -1,9 +1,11 @@
-describe('general application tests', () => {
-  beforeEach(() => {
-    cy.visit('/');
-  });
+import { RoutePath } from '../types/route-path';
 
-  it('displays the Jerrypop logo', () => {
-    cy.get('img[alt="Jerrypop logo"]').should('have.length', 1);
+describe('general application tests', () => {
+  it('displays the Jerrypop logo and footer on every page', () => {
+    Object.values(RoutePath).forEach((path) => {
+      cy.visit(path);
+      cy.get('img[alt="Jerrypop logo"]').should('have.length', 1);
+      cy.get('footer').should('have.length', 1);
+    });
   });
 });
