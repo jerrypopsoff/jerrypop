@@ -6,6 +6,10 @@ describe('home page tests', () => {
     cy.visit(RoutePath.Home);
   });
 
+  it('displays the correct page title', () => {
+    cy.get('title').should('have.text', 'Jerrypop');
+  });
+
   it('displays informational text', () => {
     cy.get('#root').should('include.text', 'Poppin’ off with Jerry');
     cy.get('#root').should(

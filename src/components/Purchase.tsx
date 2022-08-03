@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import NavigationMenu from './NavigationMenu';
 import OrderFormDialog from './OrderFormDialog';
 import Products from './Products';
@@ -38,19 +39,25 @@ const Purchase: React.FC = () => {
   };
 
   return (
-    <StyledPageContent>
-      <Typography type="h1">Purchase</Typography>
-      <Products onClickOrderOnline={onClickOrderOnline} />
-      {isOrderFormVisible && (
-        <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
-      )}
-      <Typography type="h2">Retail</Typography>
-      <Typography maxWidth="600px" type="p">
-        Products are not yet available for purchase from retailers. Interested
-        in carrying them at your retail location? Reach out to{' '}
-        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-      </Typography>
-      {/* <Typography maxWidth="600px" type="p">
+    <>
+      <Helmet>
+        <title>Purchase · Jerrypop</title>
+      </Helmet>
+      <StyledPageContent>
+        <Typography type="h1">Purchase</Typography>
+        <Products onClickOrderOnline={onClickOrderOnline} />
+        {isOrderFormVisible && (
+          <OrderFormDialog
+            onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
+          />
+        )}
+        <Typography type="h2">Retail</Typography>
+        <Typography maxWidth="600px" type="p">
+          Products are not yet available for purchase from retailers. Interested
+          in carrying them at your retail location? Reach out to{' '}
+          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
+        </Typography>
+        {/* <Typography maxWidth="600px" type="p">
         Products are available for purchase from the following retailers.
         Interested in carrying them at your retail location? Reach out to{' '}
         <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
@@ -60,13 +67,14 @@ const Purchase: React.FC = () => {
           <li key={retailer.displayName}>{retailer.displayName}</li>
         ))}
       </ul> */}
-      <Typography type="h2">Catering</Typography>
-      <Typography maxWidth="600px" type="p">
-        Interested in serving craft popcorn at your event? Reach out to{' '}
-        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-      </Typography>
-      <StyledNavigationMenu />
-    </StyledPageContent>
+        <Typography type="h2">Catering</Typography>
+        <Typography maxWidth="600px" type="p">
+          Interested in serving craft popcorn at your event? Reach out to{' '}
+          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
+        </Typography>
+        <StyledNavigationMenu />
+      </StyledPageContent>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './Home';
 import Logo from './Logo';
 import NotFound from './NotFound';
@@ -15,7 +16,7 @@ const App: React.FC = () => {
   const [theme, rotateTheme] = useTheme();
 
   return (
-    <>
+    <HelmetProvider>
       <GlobalStyle />
       <Router>
         <RotateTheme rotateTheme={rotateTheme} />
@@ -30,7 +31,7 @@ const App: React.FC = () => {
         </Routes>
         <Footer onToggleTheme={rotateTheme} />
       </Router>
-    </>
+    </HelmetProvider>
   );
 };
 
