@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <% if (process.env.NODE_ENV === 'production') { %>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-114053742-1"
@@ -14,10 +14,10 @@
       gtag('js', new Date());
       gtag('config', 'UA-114053742-1');
     </script>
+    <% } %>
 
     <meta charset="utf-8" />
     <title>Jerrypop</title>
-    <!-- https://create-react-app.dev/docs/using-the-public-folder/ -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -34,7 +34,6 @@
     <meta property="og:url" content="https://jerrypop.com" />
     <meta property="og:image" content="https://jerrypop.com/jerrypop.png" />
 
-    <!-- See https://web.dev/add-manifest/ -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
