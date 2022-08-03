@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
@@ -12,13 +13,18 @@ const StyledHome = styled.div`
 
 const Home: React.FC = () => {
   return (
-    <StyledHome>
-      <Typography type="h1">Poppin’ off with Jerry</Typography>
-      <Typography maxWidth="600px" type="p">
-        Locally handcrafted popcorn from San Francisco, California.
-      </Typography>
-      <NavigationMenu />
-    </StyledHome>
+    <>
+      <Helmet>
+        <title>Jerrypop</title>
+      </Helmet>
+      <StyledHome>
+        <Typography type="h1">Poppin’ off with Jerry</Typography>
+        <Typography maxWidth="600px" type="p">
+          Locally handcrafted popcorn from San Francisco, California.
+        </Typography>
+        <NavigationMenu />
+      </StyledHome>
+    </>
   );
 };
 
