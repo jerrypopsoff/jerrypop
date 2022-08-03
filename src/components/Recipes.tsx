@@ -1,5 +1,5 @@
 import NavigationMenu from './NavigationMenu';
-import { RECIPES } from '../constants/jerry';
+import { RECIPES } from '../constants/recipe';
 import React from 'react';
 import Recipe from './Recipe';
 import Typography from './Typography';
