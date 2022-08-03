@@ -1,8 +1,5 @@
 import { GRAYSCALE_LIGHT, WHITE } from '../color';
-import {
-  KERNEL_NARROW_HEIGHT_PX,
-  KERNEL_WIDE_HEIGHT_PX,
-} from '../kernel-fountain';
+import { KERNEL_NARROW_SIZE_PX, KERNEL_WIDE_SIZE_PX } from '../kernel-fountain';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
@@ -71,8 +68,9 @@ button {
 .popcorn-kernel {
   animation: kernel 0.5s infinite linear;
   -webkit-animation: kernel 0.5s infinite linear;
-  height: ${KERNEL_WIDE_HEIGHT_PX}px;
+  height: ${KERNEL_WIDE_SIZE_PX}px;
   position: fixed;
+  width: ${KERNEL_WIDE_SIZE_PX}px;
   z-index: ${POPCORN_KERNEL_Z_INDEX};
 }
 
@@ -83,7 +81,8 @@ button {
 
 @media (max-width: 860px) {
   .popcorn-kernel {
-    height: ${KERNEL_NARROW_HEIGHT_PX}px;
+    height: ${KERNEL_NARROW_SIZE_PX}px;
+    width: ${KERNEL_NARROW_SIZE_PX}px;
   }
 }
 ` as unknown as React.FC;

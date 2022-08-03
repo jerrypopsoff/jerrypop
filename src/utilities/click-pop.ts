@@ -1,6 +1,6 @@
 import {
-  KERNEL_NARROW_HEIGHT_PX,
-  KERNEL_WIDE_HEIGHT_PX,
+  KERNEL_NARROW_SIZE_PX,
+  KERNEL_WIDE_SIZE_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
 import { animateKernel, getKernelElement } from './kernel';
@@ -43,11 +43,11 @@ export function initializeClickPop(documentElement: Document) {
     const windowInnerWidth = window.innerWidth ?? 0;
     const isWideScreen = windowInnerWidth > WINDOW_BREAKPOINT_WIDTH_PX;
     const xPosition = isWideScreen
-      ? pageX - KERNEL_WIDE_HEIGHT_PX / 2
-      : pageX - KERNEL_NARROW_HEIGHT_PX / 2;
+      ? pageX - KERNEL_WIDE_SIZE_PX / 2
+      : pageX - KERNEL_NARROW_SIZE_PX / 2;
     const yPosition = isWideScreen
-      ? pageY - KERNEL_WIDE_HEIGHT_PX / 2
-      : pageY - KERNEL_NARROW_HEIGHT_PX / 2;
+      ? pageY - KERNEL_WIDE_SIZE_PX / 2
+      : pageY - KERNEL_NARROW_SIZE_PX / 2;
     const numKernels = getRandomInteger(
       MIN_KERNELS_PER_CLICK,
       MAX_KERNELS_PER_CLICK,

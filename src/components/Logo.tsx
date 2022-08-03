@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import {
-  MAIN_LOGO_NARROW_HEIGHT_PX,
-  MAIN_LOGO_WIDE_HEIGHT_PX,
+  MAIN_LOGO_NARROW_SIZE_PX,
+  MAIN_LOGO_WIDE_SIZE_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/kernel-fountain';
 import { BLACK } from '../constants/color';
@@ -15,8 +15,9 @@ import styled from 'styled-components';
 const StyledLogo = styled.img`
   ${lazyDangleRotation}
   cursor: pointer;
-  height: ${MAIN_LOGO_WIDE_HEIGHT_PX}px;
+  height: ${MAIN_LOGO_WIDE_SIZE_PX}px;
   margin: 48px 0 -24px;
+  width: ${MAIN_LOGO_WIDE_SIZE_PX}px;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -24,7 +25,8 @@ const StyledLogo = styled.img`
                         supported by Chrome, Edge, Opera and Firefox */
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    height: ${MAIN_LOGO_NARROW_HEIGHT_PX}px;
+    height: ${MAIN_LOGO_NARROW_SIZE_PX}px;
+    width: ${MAIN_LOGO_NARROW_SIZE_PX}px;
   }
 `;
 
