@@ -17,6 +17,12 @@ interface Themes {
 }
 
 export const THEME: Themes = {
+  BLUE_ORANGE: {
+    mainThemeDark: THEME_BLUE,
+    mainThemeMedium: THEME_ORANGE,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
   // PB&J
   BLUE_PINK: {
     mainThemeDark: THEME_BLUE,
@@ -24,29 +30,11 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: WHITE,
   },
-  PURPLE_GREEN: {
-    mainThemeDark: THEME_PURPLE,
-    mainThemeMedium: THEME_LIGHT_GREEN,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
   // Habanero Ranch
   CYAN_YELLOW: {
     mainThemeDark: THEME_CYAN,
     mainThemeMedium: THEME_YELLOW,
     mainThemeTextOnDark: BLACK,
-    mainThemeTextOnMedium: BLACK,
-  },
-  PINK_PURPLE: {
-    mainThemeDark: THEME_PINK,
-    mainThemeMedium: THEME_PURPLE,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: WHITE,
-  },
-  BLUE_ORANGE: {
-    mainThemeDark: THEME_BLUE,
-    mainThemeMedium: THEME_ORANGE,
-    mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
   // Rosemary Lemon Pepper
@@ -62,6 +50,12 @@ export const THEME: Themes = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: WHITE,
   },
+  PINK_PURPLE: {
+    mainThemeDark: THEME_PINK,
+    mainThemeMedium: THEME_PURPLE,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: WHITE,
+  },
   PINK_YELLOW: {
     mainThemeDark: THEME_PINK,
     mainThemeMedium: THEME_YELLOW,
@@ -71,6 +65,12 @@ export const THEME: Themes = {
   PURPLE_CYAN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_CYAN,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
+  PURPLE_GREEN: {
+    mainThemeDark: THEME_PURPLE,
+    mainThemeMedium: THEME_LIGHT_GREEN,
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
