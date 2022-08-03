@@ -1,10 +1,10 @@
 export const WINDOW_BREAKPOINT_WIDTH_PX = 860;
 
-export const MAIN_LOGO_WIDE_HEIGHT_PX = 450;
-export const MAIN_LOGO_NARROW_HEIGHT_PX = 275;
+export const MAIN_LOGO_WIDE_SIZE_PX = 450;
+export const MAIN_LOGO_NARROW_SIZE_PX = 275;
 
-export const KERNEL_WIDE_HEIGHT_PX = 56;
-export const KERNEL_NARROW_HEIGHT_PX = 42;
+export const KERNEL_WIDE_SIZE_PX = 56;
+export const KERNEL_NARROW_SIZE_PX = 42;
 
 export const WORDMARK_NARROW_HEIGHT_PX = 225;
 export const WORDMARK_NARROW_MARGIN_PX = -59;

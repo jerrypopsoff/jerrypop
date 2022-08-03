@@ -2,63 +2,61 @@ import type { Recipe } from '../types/recipe';
 
 export const RECIPES: Recipe[] = [
   {
-    title: 'Jalapeño Cheddar Popcorn',
-    time: '15 minutes',
     href: 'https://www.youtube.com/embed/jS_gIQNXBIg',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Canola oil (or any neutral oil)',
-        amount: '0.5 cup',
       },
       {
-        name: 'Cheddar powder',
         amount: '3 tbsp',
+        name: 'Cheddar powder',
       },
       {
-        name: 'Pure ground jalapeño pepper',
         amount: '2 tsp',
+        name: 'Pure ground jalapeño pepper',
       },
       {
-        name: 'Lime juice powder',
         amount: '0.25 tsp',
+        name: 'Lime juice powder',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Garlic powder',
-        amount: '0.5 tbsp',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Onion powder',
-        amount: '0.5 tbsp',
       },
       {
-        name: 'Freshly ground black pepper',
         amount: '1 tsp',
+        name: 'Freshly ground black pepper',
       },
       {
-        name: 'Fresh chives, finely chopped',
         amount: 'To taste (optional)',
+        name: 'Fresh chives, finely chopped',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
-        content:
-          'Thoroughly mix cheddar powder, jalapeño pepper, lime juice powder, garlic powder, onion powder, and black pepper into oil',
         aside:
           'Add cheddar powder through a fine mesh sieve for optimal flavor dispersion.',
+        content:
+          'Thoroughly mix cheddar powder, jalapeño pepper, lime juice powder, garlic powder, onion powder, and black pepper into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
@@ -74,47 +72,47 @@ export const RECIPES: Recipe[] = [
         content: 'Garnish with chives and enjoy',
       },
     ],
+    time: '15 minutes',
+    title: 'Jalapeño Cheddar Popcorn',
   },
   {
-    title: 'Rosemary Lemon Pepper Popcorn',
-    time: '60 minutes',
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Olive oil',
-        amount: '0.5 cup',
       },
       {
-        name: 'Fresh rosemary',
         amount: 'A few sprigs',
+        name: 'Fresh rosemary',
       },
       {
-        name: 'Fresh lemon',
         amount: '5 whole (zest only)',
+        name: 'Fresh lemon',
       },
       {
+        amount: '0.75 tbsp',
         name: 'Garlic powder',
-        amount: '0.75 tbsp',
       },
       {
+        amount: '0.75 tbsp',
         name: 'Onion powder',
-        amount: '0.75 tbsp',
       },
       {
-        name: 'Sugar',
         amount: '1 tsp',
+        name: 'Sugar',
       },
       {
+        amount: '1-2 tbsp',
         name: 'Freshly ground black pepper',
-        amount: '1-2 tbsp',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
@@ -122,10 +120,10 @@ export const RECIPES: Recipe[] = [
         content: 'Preheat oven to the lowest possible temperature setting',
       },
       {
-        content:
-          'Zest four lemons onto a parchment-lined baking sheet and bake for 30-45 minutes',
         aside:
           'Alternatively, use a food dehydrator or your favorite lemon pepper seasoning. Honestly, lemon-pepper seasoning is way easier and tastes basically the same, so I can’t help but recommend that as an alternative. Just use 2 tbsp of that and half portions of the other dry ingredients. You can even skip infusing the olive oil if you’re looking for a super easy snack that tastes great. Just get some rosemary involved somehow. Or don’t; I’m not your dad.',
+        content:
+          'Zest four lemons onto a parchment-lined baking sheet and bake for 30-45 minutes',
       },
       {
         content:
@@ -139,10 +137,10 @@ export const RECIPES: Recipe[] = [
         content: 'Grind or blend dehydrated lemon zest into a powder',
       },
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content:
@@ -164,35 +162,35 @@ export const RECIPES: Recipe[] = [
           'Eat (or drink) popcorn, and make some lemonade with those lemons',
       },
     ],
+    time: '60 minutes',
+    title: 'Rosemary Lemon Pepper Popcorn',
   },
   {
-    title: 'PB&J Popcorn',
-    time: '50 minutes',
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
     materials: [
       {
-        name: 'Popcorn kernels',
         amount: '0.5 cup',
+        name: 'Popcorn kernels',
       },
       {
-        name: 'Unsalted butter',
         amount: '3 tbsp',
+        name: 'Unsalted butter',
       },
       {
-        name: 'Sugar',
         amount: '1 tbsp',
+        name: 'Sugar',
       },
       {
+        amount: '0.75 cup',
         name: 'Peanut butter',
-        amount: '0.75 cup',
       },
       {
+        amount: '0.75 cup',
         name: 'Grape jelly or strawberry jam',
-        amount: '0.75 cup',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
@@ -200,10 +198,10 @@ export const RECIPES: Recipe[] = [
         content: 'Preheat oven to 290°F',
       },
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -223,9 +221,9 @@ export const RECIPES: Recipe[] = [
           'Remove saucepan from heat for a few minutes, allowing the sauce to cool',
       },
       {
-        content: 'Drizzle sauce onto the popcorn',
         aside:
           'I prefer a spiral motion, but this is where you can let your creativity shine.',
+        content: 'Drizzle sauce onto the popcorn',
       },
       {
         content:
@@ -235,67 +233,67 @@ export const RECIPES: Recipe[] = [
         content: 'Add salt and shake the bowl again to disperse',
       },
       {
-        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
+        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
       },
       {
-        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
         aside:
           'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
       },
     ],
+    time: '50 minutes',
+    title: 'PB&J Popcorn',
   },
   {
-    title: 'Furikake Dashi Popcorn',
-    time: '15 minutes',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Canola oil (or any neutral oil)',
-        amount: '0.5 cup',
       },
       {
-        name: 'Nori furikake',
         amount: '2 tbsp',
+        name: 'Nori furikake',
       },
       {
+        amount: '1 tbsp',
         name: 'Hondashi',
-        amount: '1 tbsp',
       },
       {
+        amount: '1 tbsp',
         name: 'Onion powder',
-        amount: '1 tbsp',
       },
       {
+        amount: '2 tsp',
         name: 'Shichimi togarashi',
-        amount: '2 tsp',
       },
       {
+        amount: '2 tsp',
         name: 'Monosodium glutamate (MSG)',
-        amount: '2 tsp',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
       {
-        name: 'Dried bonito flake',
         amount: '1-2 tbsp (optional)',
+        name: 'Dried bonito flake',
       },
     ],
     steps: [
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content:
@@ -316,34 +314,34 @@ export const RECIPES: Recipe[] = [
           'Garnish with remaining nori furikake and dried bonito flake, and enjoy',
       },
     ],
+    time: '15 minutes',
+    title: 'Furikake Dashi Popcorn',
   },
   {
-    title: 'Hazelnut Cocoa Popcorn',
-    time: '50 minutes',
     materials: [
       {
-        name: 'Popcorn kernels',
         amount: '0.5 cup',
+        name: 'Popcorn kernels',
       },
       {
-        name: 'Unsalted butter',
         amount: '3 tbsp',
+        name: 'Unsalted butter',
       },
       {
-        name: 'Sugar',
         amount: '1 tbsp',
+        name: 'Sugar',
       },
       {
-        name: 'Hazelnut cocoa spread',
         amount: '1.25 cup',
+        name: 'Hazelnut cocoa spread',
       },
       {
-        name: 'Espresso powder',
         amount: '1 tsp (optional)',
+        name: 'Espresso powder',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
@@ -351,10 +349,10 @@ export const RECIPES: Recipe[] = [
         content: 'Preheat oven to 290°F',
       },
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content: 'Melt unsalted butter in a saucepan on low heat',
@@ -384,79 +382,79 @@ export const RECIPES: Recipe[] = [
         content: 'Add salt and shake the bowl again to disperse',
       },
       {
-        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
         aside:
           'Ideally the baking sheet is large enough to spread kernels into a single layer.',
+        content: 'Spread popcorn evenly on a parchment-lined baking sheet',
       },
       {
-        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
         aside:
           'Watch closely when making this for the first time because ovens vary, and popcorn is sensitive to burning. Advance to the next step when the popcorn is all or mostly dry to the touch.',
+        content: 'Bake for 20-30 minutes at 290°F, stirring every 5 minutes',
       },
       {
         content: 'Remove from oven, and allow to cool before serving',
       },
     ],
+    time: '50 minutes',
+    title: 'Hazelnut Cocoa Popcorn',
   },
   {
-    title: '“Cheesy” Chipotle Taco Popcorn',
-    time: '15 minutes',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Canola oil (or any neutral oil)',
-        amount: '0.5 cup',
       },
       {
-        name: 'Nutritional yeast',
         amount: '1.5 tbsp',
+        name: 'Nutritional yeast',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Garlic powder',
-        amount: '0.5 tbsp',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Onion powder',
-        amount: '0.5 tbsp',
       },
       {
-        name: 'Chipotle pepper powder',
         amount: '2 tsp',
+        name: 'Chipotle pepper powder',
       },
       {
+        amount: '1 tsp',
         name: 'Cumin',
-        amount: '1 tsp',
       },
       {
+        amount: '1 tsp',
         name: 'Chili powder',
-        amount: '1 tsp',
       },
       {
-        name: 'Cayenne pepper',
         amount: '1 tsp (optional for heat)',
+        name: 'Cayenne pepper',
       },
       {
-        name: 'Lime juice powder',
         amount: '0.5 tsp (optional)',
+        name: 'Lime juice powder',
       },
       {
-        name: 'Fresh cilantro, finely chopped',
         amount: 'To taste (optional)',
+        name: 'Fresh cilantro, finely chopped',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content:
@@ -476,54 +474,54 @@ export const RECIPES: Recipe[] = [
         content: 'Garnish with fresh cilantro and serve',
       },
     ],
+    time: '15 minutes',
+    title: '“Cheesy” Chipotle Taco Popcorn',
   },
   {
-    title: 'Cranked Curry Basil Popcorn',
-    time: '15 minutes',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Canola oil (or any neutral oil)',
-        amount: '0.5 cup',
       },
       {
-        name: 'Fresh basil',
         amount: '1 tbsp, finely minced',
+        name: 'Fresh basil',
       },
       {
-        name: 'Your favorite curry powder',
         amount: '1 tbsp',
+        name: 'Your favorite curry powder',
       },
       {
-        name: 'Garam masala',
         amount: '1 tsp',
+        name: 'Garam masala',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Garlic powder',
-        amount: '0.5 tbsp',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Onion powder',
-        amount: '0.5 tbsp',
       },
       {
-        name: 'Cayenne pepper',
         amount: '2 tsp (optional for heat)',
+        name: 'Cayenne pepper',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content:
@@ -543,58 +541,58 @@ export const RECIPES: Recipe[] = [
         content: 'Garnish with remaining basil and enjoy',
       },
     ],
+    time: '15 minutes',
+    title: 'Cranked Curry Basil Popcorn',
   },
   {
-    title: '“Pad Thai” Popcorn',
-    time: '18 minutes',
     materials: [
       {
+        amount: '0.5 cup',
         name: 'Popcorn kernels',
-        amount: '0.5 cup',
       },
       {
+        amount: '0.5 cup',
         name: 'Canola oil (or any neutral oil)',
-        amount: '0.5 cup',
       },
       {
-        name: 'Your favorite thai curry powder',
         amount: '1.5 tbsp',
+        name: 'Your favorite thai curry powder',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Garlic powder',
-        amount: '0.5 tbsp',
       },
       {
+        amount: '0.5 tbsp',
         name: 'Onion powder',
-        amount: '0.5 tbsp',
       },
       {
-        name: 'Peanuts',
         amount: '0.5 cup',
+        name: 'Peanuts',
       },
       {
-        name: 'Lime juice powder',
         amount: '0.5 tsp',
+        name: 'Lime juice powder',
       },
       {
-        name: 'Cayenne pepper',
         amount: '1 tsp (optional for heat',
+        name: 'Cayenne pepper',
       },
       {
-        name: 'Fresh cilantro, finely chopped',
         amount: 'To taste (optional)',
+        name: 'Fresh cilantro, finely chopped',
       },
       {
-        name: 'Salt',
         amount: '1-2 tbsp',
+        name: 'Salt',
       },
     ],
     steps: [
       {
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
         aside:
           'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+        content:
+          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
         content: 'Finely grind peanuts in a blender or food processor',
@@ -618,5 +616,7 @@ export const RECIPES: Recipe[] = [
           'Garnish with cilantro and remaining ground peanuts, and enjoy',
       },
     ],
+    time: '18 minutes',
+    title: '“Pad Thai” Popcorn',
   },
 ];
