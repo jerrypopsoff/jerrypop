@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { withLowTextShadow, withTextShadow } from '../constants/css/shadow';
 import React from 'react';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/kernel-fountain';
+import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
 const headingStyle = css<{ hasTextShadow?: boolean }>`
   ${({ hasTextShadow }) => (hasTextShadow ? withTextShadow : undefined)}

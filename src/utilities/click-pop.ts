@@ -2,7 +2,7 @@ import {
   KERNEL_NARROW_SIZE_PX,
   KERNEL_WIDE_SIZE_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
-} from '../constants/kernel-fountain';
+} from '../constants/breakpoint';
 import { animateKernel, getKernelElement } from './kernel';
 import { getRandomBoolean, getRandomInteger } from './random';
 

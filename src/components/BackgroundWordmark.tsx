@@ -2,7 +2,7 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
   WORDMARK_NARROW_TOP_PX,
   WORDMARK_WIDE_TOP_PX,
-} from '../constants/kernel-fountain';
+} from '../constants/breakpoint';
 import React from 'react';
 import { WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';

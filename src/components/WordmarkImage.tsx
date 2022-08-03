@@ -4,7 +4,7 @@ import {
   WORDMARK_NARROW_MARGIN_PX,
   WORDMARK_WIDE_HEIGHT_PX,
   WORDMARK_WIDE_MARGIN_PX,
-} from '../constants/kernel-fountain';
+} from '../constants/breakpoint';
 import React from 'react';
 import styled from 'styled-components';
 
