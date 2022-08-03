@@ -555,8 +555,8 @@ export const RECIPES: Recipe[] = [
         name: 'Canola oil (or any neutral oil)',
       },
       {
-        amount: '1.5 tbsp',
-        name: 'Your favorite thai curry powder',
+        amount: '1 tbsp',
+        name: 'Tamarind powder',
       },
       {
         amount: '0.5 tbsp',
@@ -575,7 +575,15 @@ export const RECIPES: Recipe[] = [
         name: 'Lime juice powder',
       },
       {
-        amount: '1 tsp (optional for heat',
+        amount: '1 tsp',
+        name: 'Monosodium glutamate (MSG)',
+      },
+      {
+        amount: '1 tsp',
+        name: 'Sugar',
+      },
+      {
+        amount: '1 tsp (optional for heat)',
         name: 'Cayenne pepper',
       },
       {
@@ -599,7 +607,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         content:
-          'Thoroughly mix thai curry powder, garlic powder, onion powder, 1 tbsp of ground peanuts, lime juice powder, and cayenne pepper into oil',
+          'Thoroughly mix tamarind powder, garlic powder, onion powder, 1 tbsp of ground peanuts, lime juice powder, MSG, sugar, and cayenne pepper into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
