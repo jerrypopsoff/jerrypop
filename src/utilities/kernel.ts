@@ -3,7 +3,7 @@ import {
   KERNEL_TERMINAL_VELOCITY,
 } from '../constants/physics';
 import ColonelHead from '../images/colonel-head.svg';
-import { KERNEL_FOUNTAIN_INTERVAL } from '../constants/animation';
+import { KERNEL_STEP_ANIMATION_INTERVAL } from '../constants/animation';
 import { getRandomInteger } from './random';
 
 const DEFAULT_KERNEL_HEIGHT = 36; // Now an arbitrary const idk
@@ -73,7 +73,7 @@ export function animateKernel(id: string) {
   // Invoke parabolic motion
   const intervalId = setInterval(() => {
     step(element, intervalId);
-  }, KERNEL_FOUNTAIN_INTERVAL);
+  }, KERNEL_STEP_ANIMATION_INTERVAL);
 }
 
 interface KernelElementProperties {

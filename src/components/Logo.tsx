@@ -3,7 +3,7 @@ import {
   MAIN_LOGO_NARROW_SIZE_PX,
   MAIN_LOGO_WIDE_SIZE_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
-} from '../constants/kernel-fountain';
+} from '../constants/breakpoint';
 import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';

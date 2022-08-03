@@ -1,5 +1,5 @@
 import { GRAYSCALE_LIGHT, WHITE } from '../color';
-import { KERNEL_NARROW_SIZE_PX, KERNEL_WIDE_SIZE_PX } from '../kernel-fountain';
+import { KERNEL_NARROW_SIZE_PX, KERNEL_WIDE_SIZE_PX } from '../breakpoint';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
