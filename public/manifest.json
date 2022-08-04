@@ -1,14 +1,34 @@
 {
-  "name": "Jerrypop",
+  "background_color": "#0072da",
+  "description": "Locally handcrafted popcorn in San Francisco, California.",
+  "display": "standalone",
+  "display_override": ["minimal-ui"],
   "icons": [
     {
+      "src": "colonel.svg",
+      "sizes": "248x247",
+      "type": "image/svg+xml"
+    },
+    {
       "src": "favicon.ico",
-      "sizes": "32x32 24x24 16x16",
+      "sizes": "32x32",
       "type": "image/x-icon"
     }
   ],
+  "name": "Jerrypop",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Purchase · Jerrypop",
+      "short_name": "Purchase",
+      "url": "/purchase"
+    },
+    {
+      "name": "Recipes · Jerrypop",
+      "short_name": "Recipes",
+      "url": "/recipes"
+    }
+  ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0072da"
 }
