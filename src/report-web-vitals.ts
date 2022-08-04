@@ -1,7 +1,7 @@
 import type { Metric, ReportHandler } from 'web-vitals';
 
 export function sendToAnalytics({ id, name, value }: Metric) {
-  if (!(ga instanceof Function)) {
+  if (!window.ga || !(ga instanceof Function)) {
     return;
   }
 

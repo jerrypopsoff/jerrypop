@@ -16,28 +16,30 @@ const App: React.FC = () => {
   const [theme, rotateTheme] = useTheme();
 
   return (
-    <HelmetProvider>
-      <GlobalStyle />
-      <Router>
-        <RotateTheme rotateTheme={rotateTheme} />
-        <ScrollToTop />
-        <Logo onToggleTheme={rotateTheme} theme={theme} />
-        <Routes>
-          {/**
-           * Each route should be represented in each of the following places:
-           *
-           * - cypress/e2e test module
-           * - cypress/types/route-path.ts
-           * - public/manifest.json `shortcuts` (optional)
-           */}
-          <Route element={<Home />} path="/" />
-          <Route element={<Recipes />} path="/recipes" />
-          <Route element={<Purchase />} path="/purchase" />
-          <Route element={<NotFound />} path="*" />
-        </Routes>
-        <Footer onToggleTheme={rotateTheme} />
-      </Router>
-    </HelmetProvider>
+    <React.StrictMode>
+      <HelmetProvider>
+        <GlobalStyle />
+        <Router>
+          <RotateTheme rotateTheme={rotateTheme} />
+          <ScrollToTop />
+          <Logo onToggleTheme={rotateTheme} theme={theme} />
+          <Routes>
+            {/**
+             * Each route should be represented in each of the following places:
+             *
+             * - cypress/e2e test module
+             * - cypress/types/route-path.ts
+             * - public/manifest.json `shortcuts` (optional)
+             */}
+            <Route element={<Home />} path="/" />
+            <Route element={<Recipes />} path="/recipes" />
+            <Route element={<Purchase />} path="/purchase" />
+            <Route element={<NotFound />} path="*" />
+          </Routes>
+          <Footer onToggleTheme={rotateTheme} />
+        </Router>
+      </HelmetProvider>
+    </React.StrictMode>
   );
 };
 
