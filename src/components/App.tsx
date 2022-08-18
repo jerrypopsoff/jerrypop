@@ -1,8 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import { HelmetProvider } from 'react-helmet-async';
-import Home from './Home';
 import Logo from './Logo';
 import NotFound from './NotFound';
 import Purchase from './Purchase';
@@ -31,12 +29,11 @@ const App: React.FC = () => {
              * - cypress/types/route-path.ts
              * - public/manifest.json `shortcuts` (optional)
              */}
-            <Route element={<Home />} path="/" />
+            <Route element={<></>} path="/" />
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<Purchase />} path="/purchase" />
             <Route element={<NotFound />} path="*" />
           </Routes>
-          <Footer onToggleTheme={rotateTheme} />
         </Router>
       </HelmetProvider>
     </React.StrictMode>

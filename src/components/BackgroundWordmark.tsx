@@ -1,8 +1,3 @@
-import {
-  WINDOW_BREAKPOINT_WIDTH_PX,
-  WORDMARK_NARROW_TOP_PX,
-  WORDMARK_WIDE_TOP_PX,
-} from '../constants/breakpoint';
 import React from 'react';
 import { WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';
@@ -13,15 +8,12 @@ const StyledWordmark = styled.div<{ isFixed: boolean }>`
   display: flex;
   flex-direction: column;
   left: 0;
+  margin: 314px 0;
   opacity: ${({ isFixed }) => (isFixed ? '0.1' : '1.0')};
   position: ${({ isFixed }) => (isFixed ? 'fixed' : 'absolute')};
   right: 0;
-  top: ${WORDMARK_WIDE_TOP_PX}px;
+  top: 0;
   z-index: ${WORDMARK_Z_INDEX};
-
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    top: ${WORDMARK_NARROW_TOP_PX}px;
-  }
 `;
 
 interface Props {

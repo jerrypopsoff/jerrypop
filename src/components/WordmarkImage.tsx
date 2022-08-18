@@ -1,7 +1,4 @@
 import {
-  WINDOW_BREAKPOINT_WIDTH_PX,
-  WORDMARK_NARROW_HEIGHT_PX,
-  WORDMARK_NARROW_MARGIN_PX,
   WORDMARK_WIDE_HEIGHT_PX,
   WORDMARK_WIDE_MARGIN_PX,
 } from '../constants/breakpoint';
@@ -12,11 +9,6 @@ const StyledSvg = styled.svg`
   height: ${WORDMARK_WIDE_HEIGHT_PX}px;
   margin: ${WORDMARK_WIDE_MARGIN_PX}px 0;
   width: auto;
-
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    height: ${WORDMARK_NARROW_HEIGHT_PX}px;
-    margin: ${WORDMARK_NARROW_MARGIN_PX}px 0;
-  }
 `;
 
 interface Props {
