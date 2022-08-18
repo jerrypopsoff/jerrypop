@@ -1,34 +1,58 @@
-import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
-import { RECIPES } from '../constants/recipe';
 import React from 'react';
-import Recipe from './Recipe';
 import Typography from './Typography';
 import styled from 'styled-components';
 
-const StyledUnorderedList = styled.ul`
-  padding: 0;
-  list-style: none;
-  margin: 0;
+const StyledBusinessCardFront = styled.div`
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 `;
 
+const StyledSpacer = styled.div`
+  height: 148px;
+`;
+
+const StyledContactInformation = styled(Typography)`
+  font-size: 36px;
+  font-weight: 300;
+  margin: 8px 0;
+  text-shadow: none;
+`;
+
+/**
+ * Screen dimensions: 680x1156
+ */
 const Recipes: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Recipes · Jerrypop</title>
-      </Helmet>
-      <Typography type="h1">Recipes</Typography>
-      <Typography margin="12px 12px 24px" type="p">
-        Select a recipe to view details.
+    <StyledBusinessCardFront>
+      <Typography
+        hasTextShadow={false}
+        fontSize={95}
+        margin="270px 0 -24px"
+        type="h1"
+      >
+        Jerry
       </Typography>
-      <StyledUnorderedList>
-        {RECIPES.map((recipe) => {
-          return <Recipe key={recipe.title} recipe={recipe} />;
-        })}
-      </StyledUnorderedList>
-      <NavigationMenu />
-    </>
+      <Typography hasTextShadow={false} fontSize={95} margin="0" type="h1">
+        Haagsma
+      </Typography>
+      <StyledContactInformation type="p">Owner & CEO</StyledContactInformation>
+      <StyledSpacer />
+      <StyledContactInformation type="p">415-570-8472</StyledContactInformation>
+      <StyledContactInformation type="p">
+        info@jerrypop.com
+      </StyledContactInformation>
+      <StyledContactInformation type="p">
+        www.jerrypop.com
+      </StyledContactInformation>
+      <StyledContactInformation type="p">
+        San Francisco, CA
+      </StyledContactInformation>
+    </StyledBusinessCardFront>
   );
 };
 
