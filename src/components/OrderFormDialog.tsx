@@ -9,8 +9,10 @@ import styled from 'styled-components';
 import { useWindowSize } from '../hooks/use-window-size';
 import { withBoxShadow } from '../constants/css/shadow';
 
-const VERTICAL_MARGIN_PX = 24;
-const HORIZONTAL_MARGIN_PX = 12;
+const DIALOG_HEADER_HEIGHT_PX = 52; // Height of header with close button
+const FORM_TOP_MARGIN_PX = 12; // Space between header and form
+const VERTICAL_MARGIN_PX = 24; // Vertial margin of entire dialog
+const HORIZONTAL_MARGIN_PX = 12; // Horizontal margin of entire dialog
 const MINIMUM_DIALOG_HEIGHT = 150;
 
 interface StyledDialogProps {
@@ -26,8 +28,6 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   display: flex;
   flex-direction: column;
   height: ${({ dialogHeight }) => dialogHeight}px;
-  left: 50vw;
-  margin-left: ${({ dialogWidth }) => (-1 * dialogWidth) / 2}px;
   padding: 0;
   position: fixed;
   top: ${VERTICAL_MARGIN_PX}px;
@@ -41,7 +41,7 @@ const StyledDialogHeader = styled.header`
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: ${FORM_TOP_MARGIN_PX}px;
 `;
 
 const StyledCloseButton = styled.button`
@@ -92,8 +92,7 @@ const OrderFormDialog: React.FC<Props> = ({ onCloseOrderOnlineDialog }) => {
     innerWidth - 2 * HORIZONTAL_MARGIN_PX,
     defaultWidth,
   );
-  // Buffer accounts for close button height + margin, bottom dialog margin.
-  const verticalBufferPx = 64;
+  const verticalBufferPx = DIALOG_HEADER_HEIGHT_PX + FORM_TOP_MARGIN_PX;
   const formHeight = dialogHeight - verticalBufferPx;
 
   return (
