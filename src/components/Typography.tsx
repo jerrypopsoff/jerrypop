@@ -8,9 +8,14 @@ const headingStyle = css<{ hasTextShadow?: boolean }>`
   text-transform: uppercase;
 `;
 
-const withDynamicStyles = css<{ margin?: string; maxWidth?: string }>`
+const withDynamicStyles = css<{
+  margin?: string;
+  maxWidth?: string;
+  textAlign?: string;
+}>`
   margin: ${({ margin }) => margin};
   max-width: ${({ maxWidth }) => maxWidth};
+  text-align: ${({ textAlign }) => textAlign};
 `;
 
 type TypeographyType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
@@ -20,6 +25,7 @@ interface Props {
   hasTextShadow?: boolean;
   margin?: string;
   maxWidth?: string;
+  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
   type: TypeographyType;
 }
 
