@@ -1,10 +1,14 @@
 import React from 'react';
 import Typography from './Typography';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import habpop from '../images/habpop.png';
 import styled from 'styled-components';
+import { getRandomInteger } from '../utilities/random';
 
 const StyledBusinessCardFront = styled.div`
   background-color: white;
-  color: black;
+  color: rgba(160, 37, 42, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -23,34 +27,62 @@ const StyledContactInformation = styled(Typography)`
   text-shadow: none;
 `;
 
+const StyledImage = styled.img`
+  position: fixed;
+  width: 150px;
+  z-index: -1;
+`;
+
+// const StyledBgImage = styled.div`
+//   background-image: url('../images/pepps.jpeg');
+//   position: fixed;
+//   top: 700px;
+//   left: 35vw;
+//   width: 400px;
+//   height: 400px;
+//   z-index: -1;
+// `;
+
 /**
  * Screen dimensions: 680x1156
  */
 const Recipes: React.FC = () => {
   return (
     <StyledBusinessCardFront>
-      <Typography
-        hasTextShadow={false}
-        fontSize={95}
-        margin="270px 0 -24px"
-        type="h1"
-      >
-        Jerry
+      {Array(50)
+        .fill(0)
+        .map(() => (
+          <StyledImage
+            src={habpop}
+            style={{
+              left: `${getRandomInteger(0, 850)}px`,
+              top: `${getRandomInteger(0, 1050)}px`,
+              transform: `rotate(${getRandomInteger(0, 359)}deg)`,
+            }}
+          />
+        ))}
+      {/* <StyledBgImage /> */}
+      <Typography fontSize={95} margin="300px 0 -24px" type="h1">
+        Chili pepper
       </Typography>
-      <Typography hasTextShadow={false} fontSize={95} margin="0" type="h1">
-        Haagsma
+      <Typography fontSize={95} margin="0" type="h1">
+        house warming
       </Typography>
-      <StyledContactInformation type="p">Owner & CEO</StyledContactInformation>
+      <StyledContactInformation type="p">
+        at jerrypop’s
+      </StyledContactInformation>
       <StyledSpacer />
-      <StyledContactInformation type="p">415-570-8472</StyledContactInformation>
       <StyledContactInformation type="p">
-        info@jerrypop.com
+        saturday 3 september 12-6pm
       </StyledContactInformation>
       <StyledContactInformation type="p">
-        www.jerrypop.com
+        1431 grove st
       </StyledContactInformation>
       <StyledContactInformation type="p">
-        San Francisco, CA
+        ample bites provided
+      </StyledContactInformation>
+      <StyledContactInformation type="p">
+        spicy margs (while supplies last)
       </StyledContactInformation>
     </StyledBusinessCardFront>
   );
