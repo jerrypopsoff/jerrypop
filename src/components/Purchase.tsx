@@ -51,12 +51,12 @@ const Purchase: React.FC = () => {
             onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
           />
         )}
-        <Typography type="h2">Retail</Typography>
+        {/* <Typography type="h2">Retail</Typography>
         <Typography maxWidth="600px" type="p">
           Products are not yet available for purchase from retailers. Interested
           in carrying them at your retail location? Reach out to{' '}
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-        </Typography>
+        </Typography> */}
         {/* <Typography maxWidth="600px" type="p">
         Products are available for purchase from the following retailers.
         Interested in carrying them at your retail location? Reach out to{' '}
@@ -67,11 +67,11 @@ const Purchase: React.FC = () => {
           <li key={retailer.displayName}>{retailer.displayName}</li>
         ))}
       </ul> */}
-        <Typography type="h2">Catering</Typography>
+        {/* <Typography type="h2">Catering</Typography>
         <Typography maxWidth="600px" type="p">
           Interested in serving craft popcorn at your event? Reach out to{' '}
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-        </Typography>
+        </Typography> */}
         <StyledNavigationMenu />
       </StyledPageContent>
     </>
