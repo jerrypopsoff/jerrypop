@@ -21,7 +21,6 @@ const StyledProductListing = styled.div`
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     flex-direction: column;
-    width: calc(100% - 24px);
   }
 `;
 
