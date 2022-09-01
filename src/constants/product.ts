@@ -14,7 +14,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     description:
-      'Hulless and crisp butterfly popcorn smothered in creamy, zesty ranch seasoning with a fiesty habanero kick. Locally popped, handcrafted, and packaged in a fully compostable bag.',
+      'Hulless and crisp butterfly popcorn smothered in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a fully compostable bag.',
     labelImage: HrFrontLabel,
     photograph: HrPhotograph,
     title: 'Habanero Ranch Craft Popcorn',
