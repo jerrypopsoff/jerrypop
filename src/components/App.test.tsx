@@ -41,15 +41,13 @@ describe('navigation menu', () => {
     await userEvent.click(linkElements[0]);
 
     linkElements = getAllByRole('link');
-    expect(linkElements.length).toEqual(8);
+    expect(linkElements.length).toEqual(6);
     expect(linkElements[0]).toHaveTextContent('');
-    expect(linkElements[1]).toHaveTextContent('info@jerrypop.com');
-    expect(linkElements[2]).toHaveTextContent('info@jerrypop.com');
-    expect(linkElements[3]).toHaveTextContent('Home');
-    expect(linkElements[4]).toHaveTextContent('Recipes');
+    expect(linkElements[1]).toHaveTextContent('Home');
+    expect(linkElements[2]).toHaveTextContent('Recipes');
 
     // Recipes route
-    await userEvent.click(linkElements[4]);
+    await userEvent.click(linkElements[2]);
 
     linkElements = getAllByRole('link');
     expect(linkElements.length).toEqual(6);
