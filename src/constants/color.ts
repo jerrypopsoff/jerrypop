@@ -28,19 +28,19 @@ export const THEME_BLUE = '#0072da';
  * Pantone 319c
  * CMYK #2ecddc
  */
-export const THEME_CYAN = '#2dccd3';
+export const THEME_CYAN = '#2ecddc';
 
 /**
  * Pantone 354c
  * CMYK #00b142
  */
-export const THEME_GREEN = '#00b140';
+export const THEME_GREEN = '#00b142';
 
 /**
  * Pantone 375c
  * CMYK #98d801
  */
-export const THEME_LIGHT_GREEN = '#97d700';
+export const THEME_LIGHT_GREEN = '#98d801';
 
 /**
  * Pantone 130c
