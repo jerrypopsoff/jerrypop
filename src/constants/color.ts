@@ -61,10 +61,10 @@ export const THEME_PINK = '#ff409e';
 export const THEME_PURPLE = '#835dd0';
 
 /**
- * Pantone 101c
- * CMYK #f7eb55
+ * Pantone 107c
+ * CMYK #fbe122
  */
-export const THEME_YELLOW = '#f7ea48';
+export const THEME_YELLOW = '#fbe122';
 
 /**
  * Pantone 534c
