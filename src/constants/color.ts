@@ -49,8 +49,8 @@ export const THEME_LIGHT_GREEN = '#98d801';
 export const THEME_ORANGE = '#f2a900';
 
 /**
- * Pantone 232c
- * CMYK #e93ab8
+ * Pantone 806c
+ * CMYK #ff3eb5
  */
 export const THEME_PINK = '#ff409e';
 
