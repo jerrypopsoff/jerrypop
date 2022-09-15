@@ -19,55 +19,46 @@ export const SHADOW = 'rgba(0, 0, 0, 0.2)';
  */
 
 /**
- * Pantone 285c
- * CMYK #0072da
+ * Pantone 285c #0072da
  */
 export const THEME_BLUE = '#0072da';
 
 /**
- * Pantone 319c
- * CMYK #2ecddc
+ * Pantone 319c #2ecddc
  */
-export const THEME_CYAN = '#2ecddc';
+export const THEME_CYAN = '#2dccd3';
 
 /**
- * Pantone 354c
- * CMYK #00b142
+ * Pantone 354c #00b142
  */
 export const THEME_GREEN = '#00b142';
 
 /**
- * Pantone 375c
- * CMYK #98d801
+ * Pantone 375c #98d801
  */
-export const THEME_LIGHT_GREEN = '#98d801';
+export const THEME_LIGHT_GREEN = '#97d700';
 
 /**
- * Pantone 130c
- * CMYK #f2a900
+ * Pantone 130c #f2a900
  */
 export const THEME_ORANGE = '#f2a900';
 
 /**
- * Pantone 806c
- * CMYK #ff3eb5
+ * Pantone 232c #e93ab8
  */
 export const THEME_PINK = '#ff409e';
 
 /**
- * Pantone 2088c
- * CMYK #835dd0
+ * Pantone 2088c #835dd0
  */
 export const THEME_PURPLE = '#835dd0';
 
 /**
- * Pantone 107c
- * CMYK #fbe122
+ * Pantone 101c #f7eb55
  */
-export const THEME_YELLOW = '#fbe122';
+export const THEME_YELLOW = '#f7ea48';
 
 /**
- * Pantone 534c
- * CMYK #1b365f
+ * Pantone 534c #1b365f
  */
 export const THEME_NAVY = '#1b365f';
