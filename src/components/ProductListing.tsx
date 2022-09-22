@@ -74,7 +74,7 @@ const ProductListing: React.FC<Props> = ({ onClickOrderOnline, product }) => {
           {product.description}
         </Typography>
         <StyledOrderOnlineButton onClick={onClickOrderOnline}>
-          Order for pickup
+          Order
         </StyledOrderOnlineButton>
       </StyledProductDetails>
     </StyledProductListing>
