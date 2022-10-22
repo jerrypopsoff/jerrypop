@@ -17,6 +17,14 @@ const StyledNavigationMenu = styled(NavigationMenu)`
   margin-top: 48px;
 `;
 
+const StyledLineItem = styled.div<{ margin?: string }>`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: ${({ margin }) => (margin ? margin : '4px 0')};
+  width: 410px;
+`;
+
 const Purchase: React.FC = () => {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
 
@@ -38,13 +46,43 @@ const Purchase: React.FC = () => {
     window.addEventListener('keydown', onKeyDown);
   };
 
+  /**
+   * 1. Open devtools to responsive mode
+   * 2. 492px wide 640px tall inner window dimensions
+   * 3. Zoom to 150%
+   * 4. Cmd + Shift + P, type "screenshot", select "Capture screenshot"
+   */
   return (
     <>
       <Helmet>
         <title>Purchase · Jerrypop</title>
       </Helmet>
       <StyledPageContent>
-        <Typography type="h1">Purchase</Typography>
+        {/* <Typography type="h1">Purchase</Typography> */}
+        <StyledLineItem margin="120px 0 4px">
+          <Typography margin="0" type="h3">
+            PB&J Craft Popcorn
+          </Typography>
+          <Typography margin="0" type="h3">
+            $12 · $6
+          </Typography>
+        </StyledLineItem>
+        <StyledLineItem>
+          <Typography margin="0" type="h3">
+            Habanero Ranch Craft Popcorn
+          </Typography>
+          <Typography margin="0" type="h3">
+            $9 · $4
+          </Typography>
+        </StyledLineItem>
+        <StyledLineItem margin="4px 0 200px">
+          <Typography margin="0" type="h3">
+            Sticker
+          </Typography>
+          <Typography margin="0" type="h3">
+            $1
+          </Typography>
+        </StyledLineItem>
         <Products onClickOrderOnline={onClickOrderOnline} />
         {isOrderFormVisible && (
           <OrderFormDialog

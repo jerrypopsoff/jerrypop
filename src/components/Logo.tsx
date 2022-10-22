@@ -8,15 +8,14 @@ import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import type { Theme } from '../types/theme';
-import { lazyDangleRotation } from '../constants/css/rotation';
+// import { lazyDangleRotation } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 
 const StyledLogo = styled.img`
-  ${lazyDangleRotation}
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_SIZE_PX}px;
-  margin: 48px 0 -24px;
+  margin: 138px 0 -24px;
   width: ${MAIN_LOGO_WIDE_SIZE_PX}px;
 
   -webkit-touch-callout: none; /* iOS Safari */
