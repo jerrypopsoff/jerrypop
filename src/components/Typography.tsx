@@ -6,6 +6,8 @@ import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 const headingStyle = css<{ hasTextShadow?: boolean }>`
   ${({ hasTextShadow }) => (hasTextShadow ? withTextShadow : undefined)}
   text-transform: uppercase;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
 `;
 
 const withDynamicStyles = css<{

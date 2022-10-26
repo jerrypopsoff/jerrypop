@@ -44,7 +44,7 @@ const Purchase: React.FC = () => {
             <StyledVeganIcon alt="Vegan icon" src={VeganIcon} />
           </Typography>
           <Typography margin="0" type="h3">
-            $12 · $6
+            $5 · $12
           </Typography>
         </StyledLineItem>
         <StyledLineItem>
@@ -52,7 +52,7 @@ const Purchase: React.FC = () => {
             Habanero Ranch Craft Popcorn
           </Typography>
           <Typography margin="0" type="h3">
-            $9 · $3
+            $3 · $9
           </Typography>
         </StyledLineItem>
         <StyledLineItem margin="4px 0">
@@ -64,6 +64,34 @@ const Purchase: React.FC = () => {
           </Typography>
         </StyledLineItem>
         <Typography type="h4">All packaging 100% compostable</Typography>
+        {/* <StyledLineItem margin="120px 0 4px">
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            PB&J Craft Popcorn
+            <StyledVeganIcon alt="Vegan icon" src={VeganIcon} />
+          </Typography>
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            $5 · $12
+          </Typography>
+        </StyledLineItem>
+        <StyledLineItem>
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            Habanero Ranch Craft Popcorn
+          </Typography>
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            $3 · $9
+          </Typography>
+        </StyledLineItem>
+        <StyledLineItem margin="4px 0">
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            Sticker
+          </Typography>
+          <Typography hasTextShadow={false} margin="0" type="h3">
+            $1
+          </Typography>
+        </StyledLineItem>
+        <Typography hasTextShadow={false} type="h4">
+          All packaging 100% compostable
+        </Typography> */}
       </StyledPageContent>
     </>
   );
