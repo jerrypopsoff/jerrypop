@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
-import OrderFormDialog from './OrderFormDialog';
-import Products from './Products';
-// import { RETAILERS } from '../constants/retailers';
 import Typography from './Typography';
 import styled from 'styled-components';
+import VeganIcon from '../images/vegan-icon-2.png';
 
 const StyledPageContent = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-`;
-
-const StyledNavigationMenu = styled(NavigationMenu)`
-  margin-top: 48px;
 `;
 
 const StyledLineItem = styled.div<{ margin?: string }>`
@@ -25,32 +18,19 @@ const StyledLineItem = styled.div<{ margin?: string }>`
   width: 410px;
 `;
 
+const StyledVeganIcon = styled.img`
+  height: 19px;
+  margin: -4px 6px;
+  width: 19px;
+`;
+
 const Purchase: React.FC = () => {
-  const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
-
-  const onKeyDown = ({ key }: KeyboardEvent) => {
-    if (key === 'Escape') {
-      onCloseOrderOnlineDialog();
-    }
-  };
-
-  const onCloseOrderOnlineDialog = () => {
-    setIsOrderFormVisible(false);
-    document.body.style.overflow = 'unset';
-    window.removeEventListener('keydown', onKeyDown);
-  };
-
-  const onClickOrderOnline = () => {
-    setIsOrderFormVisible(true);
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onKeyDown);
-  };
-
   /**
    * 1. Open devtools to responsive mode
-   * 2. 492px wide 640px tall inner window dimensions
+   * 2. 492px wide 682px tall inner window dimensions
    * 3. Zoom to 150%
    * 4. Cmd + Shift + P, type "screenshot", select "Capture screenshot"
+   * 5. Open file in Preview and print at 35% scale
    */
   return (
     <>
@@ -58,10 +38,10 @@ const Purchase: React.FC = () => {
         <title>Purchase · Jerrypop</title>
       </Helmet>
       <StyledPageContent>
-        {/* <Typography type="h1">Purchase</Typography> */}
         <StyledLineItem margin="120px 0 4px">
           <Typography margin="0" type="h3">
             PB&J Craft Popcorn
+            <StyledVeganIcon alt="Vegan icon" src={VeganIcon} />
           </Typography>
           <Typography margin="0" type="h3">
             $12 · $6
@@ -72,10 +52,10 @@ const Purchase: React.FC = () => {
             Habanero Ranch Craft Popcorn
           </Typography>
           <Typography margin="0" type="h3">
-            $9 · $4
+            $9 · $3
           </Typography>
         </StyledLineItem>
-        <StyledLineItem margin="4px 0 200px">
+        <StyledLineItem margin="4px 0">
           <Typography margin="0" type="h3">
             Sticker
           </Typography>
@@ -83,34 +63,7 @@ const Purchase: React.FC = () => {
             $1
           </Typography>
         </StyledLineItem>
-        <Products onClickOrderOnline={onClickOrderOnline} />
-        {isOrderFormVisible && (
-          <OrderFormDialog
-            onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
-          />
-        )}
-        {/* <Typography type="h2">Retail</Typography>
-        <Typography maxWidth="600px" type="p">
-          Products are not yet available for purchase from retailers. Interested
-          in carrying them at your retail location? Reach out to{' '}
-          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-        </Typography> */}
-        {/* <Typography maxWidth="600px" type="p">
-        Products are available for purchase from the following retailers.
-        Interested in carrying them at your retail location? Reach out to{' '}
-        <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-      </Typography>
-      <ul>
-        {RETAILERS.map(retailer => (
-          <li key={retailer.displayName}>{retailer.displayName}</li>
-        ))}
-      </ul> */}
-        {/* <Typography type="h2">Catering</Typography>
-        <Typography maxWidth="600px" type="p">
-          Interested in serving craft popcorn at your event? Reach out to{' '}
-          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-        </Typography> */}
-        <StyledNavigationMenu />
+        <Typography type="h4">All packaging 100% compostable</Typography>
       </StyledPageContent>
     </>
   );
