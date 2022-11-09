@@ -1,15 +1,13 @@
 import { RoutePath } from '../types/route-path';
 import { clickNavigationLink } from '../utilities/navigation-menu';
+import { NAVIGATION_MENU_ITEMS } from '../../src/constants/navigation';
 
 describe('navigation menu tests', () => {
   it('never presents a link to the current page', () => {
-    Object.values(RoutePath).forEach((path) => {
-      cy.visit(path);
-      cy.get('nav a').should(
-        'have.length',
-        path === RoutePath.NotFound ? 3 : 2,
-      );
-      cy.get(`a[href="${path}"]`).should('not.exist');
+    NAVIGATION_MENU_ITEMS.forEach((item) => {
+      cy.visit(item.to);
+      cy.get('nav a').should('have.length', 2);
+      cy.get(`a[href="${item.to}"]`).should('not.exist');
     });
   });
 
