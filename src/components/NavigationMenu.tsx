@@ -4,6 +4,7 @@ import React from 'react';
 import { buttonStyle } from '../constants/css/button';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
+import { NAVIGATION_MENU_ITEMS } from '../constants/navigation';
 
 const StyledLinks = styled.nav`
   display: flex;
@@ -32,12 +33,10 @@ const NavigationMenu: React.FC = () => {
 
   return (
     <StyledLinks>
-      {pathname !== '/' && <StyledLink to="/">Home</StyledLink>}
-      {pathname !== '/purchase' && (
-        <StyledLink to="/purchase">Purchase</StyledLink>
-      )}
-      {pathname !== '/recipes' && (
-        <StyledLink to="/recipes">Recipes</StyledLink>
+      {NAVIGATION_MENU_ITEMS.filter((item) => pathname !== item.to).map(
+        (item) => (
+          <StyledLink to={item.to}>{item.displayName}</StyledLink>
+        ),
       )}
     </StyledLinks>
   );

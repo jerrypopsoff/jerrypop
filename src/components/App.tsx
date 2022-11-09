@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import { GlobalStyle } from '../constants/css/global-style';
 import { HelmetProvider } from 'react-helmet-async';
+import About from './About';
 import Home from './Home';
 import Logo from './Logo';
 import NotFound from './NotFound';
@@ -34,6 +35,7 @@ const App: React.FC = () => {
             <Route element={<Home />} path="/" />
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<Purchase />} path="/purchase" />
+            <Route element={<About />} path="/about" />
             <Route element={<NotFound />} path="*" />
           </Routes>
           <Footer onToggleTheme={rotateTheme} />
