@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import styled from 'styled-components';
-import VeganIcon from '../images/vegan-icon-2.png';
+import VeganIcon from '../images/leaves-icon.svg';
+import InstagramIcon from '../images/instagram-icon.svg';
 
 const StyledPageContent = styled.div`
   align-items: center;
@@ -19,9 +20,23 @@ const StyledLineItem = styled.div<{ margin?: string }>`
 `;
 
 const StyledVeganIcon = styled.img`
-  height: 19px;
-  margin: -4px 6px;
-  width: 19px;
+  height: 12px;
+  margin: 0.5px 6px;
+`;
+
+const StyledSocialLinkIcon = styled.img`
+  height: 12px;
+  margin: -2px 5px;
+  width: 12px;
+`;
+
+const StyledSubtleTypography = styled(Typography)`
+  -webkit-text-stroke-width: 0px;
+`;
+
+const StyledInstagramTypography = styled(StyledSubtleTypography)`
+  font-weight: 500;
+  text-transform: lowercase;
 `;
 
 const Purchase: React.FC = () => {
@@ -29,8 +44,9 @@ const Purchase: React.FC = () => {
    * 1. Open devtools to responsive mode
    * 2. 492px wide 682px tall inner window dimensions
    * 3. Zoom to 150%
-   * 4. Cmd + Shift + P, type "screenshot", select "Capture screenshot"
-   * 5. Open file in Preview and print at 35% scale
+   * 4. Set leaves-icon.svg to appropriate color for background contrast
+   * 5. Cmd + Shift + P, type "screenshot", select "Capture screenshot"
+   * 6. Open file in Preview and print at 35% scale
    */
   return (
     <>
@@ -63,7 +79,18 @@ const Purchase: React.FC = () => {
             $1
           </Typography>
         </StyledLineItem>
-        <Typography type="h4">All packaging 100% compostable</Typography>
+        <StyledLineItem margin="24px 0">
+          <StyledSubtleTypography margin="0" type="h4">
+            All packaging 100% compostable
+          </StyledSubtleTypography>
+          <StyledInstagramTypography hasTextShadow={false} margin="0" type="h4">
+            <StyledSocialLinkIcon
+              alt="Jerrypop on Instagram"
+              src={InstagramIcon}
+            />
+            @craftpopcorn
+          </StyledInstagramTypography>
+        </StyledLineItem>
         {/* <StyledLineItem margin="120px 0 4px">
           <Typography hasTextShadow={false} margin="0" type="h3">
             PB&J Craft Popcorn
