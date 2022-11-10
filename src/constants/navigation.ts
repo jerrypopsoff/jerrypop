@@ -10,11 +10,15 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
     to: '/purchase',
   },
   {
+    displayName: 'Breweries & Retailers',
+    to: '/retailers',
+  },
+  {
     displayName: 'Recipes',
     to: '/recipes',
   },
   {
-    displayName: 'Breweries & Retailers',
-    to: '/retailers',
+    displayName: 'About',
+    to: '/about',
   },
 ];
