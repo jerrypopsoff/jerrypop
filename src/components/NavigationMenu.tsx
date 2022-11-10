@@ -35,7 +35,9 @@ const NavigationMenu: React.FC = () => {
     <StyledLinks>
       {NAVIGATION_MENU_ITEMS.filter((item) => pathname !== item.to).map(
         (item) => (
-          <StyledLink to={item.to}>{item.displayName}</StyledLink>
+          <StyledLink key={item.displayName} to={item.to}>
+            {item.displayName}
+          </StyledLink>
         ),
       )}
     </StyledLinks>
