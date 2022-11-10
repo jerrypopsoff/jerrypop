@@ -13,4 +13,8 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
     displayName: 'Recipes',
     to: '/recipes',
   },
+  {
+    displayName: 'Breweries & Retailers',
+    to: '/retailers',
+  },
 ];
