@@ -63,6 +63,7 @@ const StyledP = styled.p<StyledTypography>`
   ${withDynamicStyles}
   ${({ hasTextShadow }) => (hasTextShadow ? withLowTextShadow : undefined)}
   font-size: 16px;
+  font-weight: 500;
 `;
 
 const Typography: React.FC<Props> = ({
