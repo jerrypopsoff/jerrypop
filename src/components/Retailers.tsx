@@ -49,8 +49,8 @@ const Retailers: React.FC = () => {
           breweries & retailers whenever you are in their area.
         </Typography> */}
         <Typography maxWidth="600px" type="p">
-          Considering upleveling your brewery or retail location by stocking
-          locally handcrafted popcorn on your shelves? Reach out to{' '}
+          Want to pop off at your brewery or retail location with locally
+          handcrafted popcorn? Reach out to{' '}
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
         </Typography>
         {/* <Typography maxWidth="600px" type="h3">
