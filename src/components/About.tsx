@@ -16,7 +16,7 @@ const StyledAbout = styled.div`
 const StyledAboutPhotograph = styled.img`
   height: 534px;
   margin: 24px 0;
-  max-width: 600px;
+  max-width: 400px;
   width: 400px;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
