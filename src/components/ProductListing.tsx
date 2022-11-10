@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Product } from '../types/product';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
-const IMAGE_HEIGHT = 425;
+const IMAGE_HEIGHT = 519;
 const IMAGE_WIDTH = 340;
 const WIDTH_WIDE = 750;
 
