@@ -70,7 +70,10 @@ const Retailers: React.FC = () => {
             munchies
           </StyledReason>
         </StyledReasons>
-        <StyledProductsPhotograph src={ProductsPhotograph} />
+        <StyledProductsPhotograph
+          alt="Photograph of Jerrypop craft popcorn products"
+          src={ProductsPhotograph}
+        />
         <NavigationMenu />
       </StyledRetailers>
     </>
