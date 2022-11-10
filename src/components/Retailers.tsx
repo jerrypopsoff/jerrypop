@@ -13,14 +13,14 @@ const StyledRetailers = styled.div`
   text-align: center;
 `;
 
-const StyledReasons = styled.ul`
-  max-width: 600px;
-  text-align: left;
-`;
+// const StyledReasons = styled.ul`
+//   max-width: 600px;
+//   text-align: left;
+// `;
 
-const StyledReason = styled.li`
-  margin: 4px 0;
-`;
+// const StyledReason = styled.li`
+//   margin: 4px 0;
+// `;
 
 const StyledProductsPhotograph = styled.img`
   height: 616px;
@@ -53,7 +53,7 @@ const Retailers: React.FC = () => {
           locally handcrafted popcorn on your shelves? Reach out to{' '}
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
         </Typography>
-        <Typography maxWidth="600px" type="h3">
+        {/* <Typography maxWidth="600px" type="h3">
           Why carry Jerrypop?
         </Typography>
         <StyledReasons>
@@ -69,7 +69,7 @@ const Retailers: React.FC = () => {
             <b>Promote a sense of community</b> by offering locally handcrafted
             munchies
           </StyledReason>
-        </StyledReasons>
+        </StyledReasons> */}
         <StyledProductsPhotograph
           alt="Photograph of Jerrypop craft popcorn products"
           src={ProductsPhotograph}
