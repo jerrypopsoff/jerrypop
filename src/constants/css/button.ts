@@ -16,8 +16,8 @@ export const buttonStyle = css`
   justify-content: center;
   letter-spacing: 0.25px;
   margin: 8px;
-  min-width: 240px;
-  padding: 24px 0;
+  min-width: 192px;
+  padding: 24px;
   text-transform: uppercase;
 
   &:hover,
