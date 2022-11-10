@@ -3,6 +3,8 @@ import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
+import ProductsPhotograph from '../images/all-products-photograph.jpeg';
+import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledRetailers = styled.div`
   align-items: center;
@@ -14,6 +16,22 @@ const StyledRetailers = styled.div`
 const StyledReasons = styled.ul`
   max-width: 600px;
   text-align: left;
+`;
+
+const StyledReason = styled.li`
+  margin: 4px 0;
+`;
+
+const StyledProductsPhotograph = styled.img`
+  height: 616px;
+  margin: 24px 0;
+  max-width: 600px;
+  width: 600px;
+
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    height: auto;
+    width: 85vw;
+  }
 `;
 
 const Retailers: React.FC = () => {
@@ -39,19 +57,20 @@ const Retailers: React.FC = () => {
           Why carry Jerrypop?
         </Typography>
         <StyledReasons>
-          <li>
+          <StyledReason>
             <b>Generate excitement</b> by serving snacks with unique and bold
             flavor profiles
-          </li>
-          <li>
+          </StyledReason>
+          <StyledReason>
             <b>Bolster satisfaction</b> with sustainably produced and packaged
             nibbles
-          </li>
-          <li>
+          </StyledReason>
+          <StyledReason>
             <b>Promote a sense of community</b> by offering locally handcrafted
             munchies
-          </li>
+          </StyledReason>
         </StyledReasons>
+        <StyledProductsPhotograph src={ProductsPhotograph} />
         <NavigationMenu />
       </StyledRetailers>
     </>
