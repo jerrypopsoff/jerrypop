@@ -51,7 +51,8 @@ const Retailers: React.FC = () => {
         <Typography maxWidth="600px" type="p">
           Want to pop off at your brewery or retail location with locally
           handcrafted popcorn? Reach out to{' '}
-          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
+          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a> for pop ups,
+          pairings, and retail partnerships.
         </Typography>
         {/* <Typography maxWidth="600px" type="h3">
           Why carry Jerrypop?
