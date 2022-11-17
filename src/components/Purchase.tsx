@@ -63,7 +63,7 @@ const Purchase: React.FC = () => {
       </Helmet>
       <StyledPageLogo src={ThePageLogo} />
       <StyledPageContent>
-        {/* <StyledLineItem margin="120px 0 4px">
+        <StyledLineItem margin="102px 0 4px">
           <Typography margin="0" type="h3">
             PB&J Craft Popcorn
             <StyledVeganIcon alt="Vegan icon" src={VeganIcon} />
@@ -71,8 +71,8 @@ const Purchase: React.FC = () => {
           <Typography margin="0" type="h3">
             $9
           </Typography>
-        </StyledLineItem> */}
-        <StyledLineItem margin="102px 0 4px">
+        </StyledLineItem>
+        <StyledLineItem>
           <Typography margin="0" type="h3">
             Habanero Ranch Craft Popcorn
           </Typography>
