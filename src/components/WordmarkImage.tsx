@@ -15,7 +15,7 @@ const StyledSvg = styled.svg`
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     height: ${WORDMARK_NARROW_HEIGHT_PX}px;
-    margin: ${WORDMARK_NARROW_MARGIN_PX}px 0;
+    margin: ${WORDMARK_NARROW_MARGIN_PX}px 0 ${WORDMARK_NARROW_MARGIN_PX}px -225px;
   }
 `;
 

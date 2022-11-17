@@ -1,14 +1,14 @@
 export const WINDOW_BREAKPOINT_WIDTH_PX = 860;
 
 export const MAIN_LOGO_WIDE_SIZE_PX = 450;
-export const MAIN_LOGO_NARROW_SIZE_PX = 275;
+export const MAIN_LOGO_NARROW_SIZE_PX = 120;
 
 export const KERNEL_WIDE_SIZE_PX = 56;
 export const KERNEL_NARROW_SIZE_PX = 42;
 
-export const WORDMARK_NARROW_HEIGHT_PX = 225;
-export const WORDMARK_NARROW_MARGIN_PX = -59;
-export const WORDMARK_NARROW_TOP_PX = 100;
+export const WORDMARK_NARROW_HEIGHT_PX = 98;
+export const WORDMARK_NARROW_MARGIN_PX = -26;
+export const WORDMARK_NARROW_TOP_PX = 70;
 export const WORDMARK_WIDE_HEIGHT_PX = 360;
 export const WORDMARK_WIDE_MARGIN_PX = -94;
 export const WORDMARK_WIDE_TOP_PX = 12;

@@ -15,7 +15,7 @@ import styled from 'styled-components';
 const StyledLogo = styled.img`
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_SIZE_PX}px;
-  margin: 138px 0 -24px;
+  margin: 88px 0 -24px -225px;
   width: ${MAIN_LOGO_WIDE_SIZE_PX}px;
 
   -webkit-touch-callout: none; /* iOS Safari */

@@ -36,7 +36,7 @@ const App: React.FC = () => {
             <Route element={<Purchase />} path="/purchase" />
             <Route element={<NotFound />} path="*" />
           </Routes>
-          <Footer onToggleTheme={rotateTheme} />
+          {/* <Footer onToggleTheme={rotateTheme} /> */}
         </Router>
       </HelmetProvider>
     </React.StrictMode>

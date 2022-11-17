@@ -52,7 +52,7 @@ const StyledH2 = styled.h2<StyledTypography>`
 const StyledH3 = styled.h3<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 18px;
+  font-size: 20px;
 `;
 
 const StyledH4 = styled.h4<StyledTypography>`

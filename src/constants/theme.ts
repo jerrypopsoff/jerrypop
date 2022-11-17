@@ -80,13 +80,13 @@ export const THEME: Themes = {
  * Ordered to ensure each rotation introduces two new colors.
  */
 export const THEMES = [
-  THEME.BLUE_PINK,
+  // THEME.BLUE_PINK,
   // THEME.PURPLE_GREEN,
-  THEME.CYAN_YELLOW,
+  // THEME.CYAN_YELLOW,
   // THEME.PINK_PURPLE,
   // THEME.BLUE_ORANGE,
   // THEME.GREEN_YELLOW,
   // THEME.ORANGE_PURPLE,
-  // THEME.PINK_YELLOW,
+  THEME.PINK_YELLOW,
   // THEME.PURPLE_CYAN,
 ];
