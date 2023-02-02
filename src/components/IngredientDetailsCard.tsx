@@ -19,6 +19,7 @@ const StyledTitle = styled(Typography)`
 
 const StyledContent = styled(Typography)`
   font-size: 14px;
+  font-weight: 400;
   text-align: justify;
   text-transform: uppercase;
 `;
