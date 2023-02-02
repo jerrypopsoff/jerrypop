@@ -11,6 +11,7 @@ import Typography from './Typography';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { withBoxShadow } from '../constants/css/shadow';
+import { CARD_STYLE } from '../constants/css/card';
 
 const listStyles = `
   margin-bottom: 0;
@@ -26,19 +27,7 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
-  ${withBoxShadow}
-  background-color: ${WHITE};
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: ${BLACK};
-  margin: 12px auto;
-  padding: 20px;
-  text-align: left;
-  width: 500px;
-
-  @media (max-width: 600px) {
-    width: calc(100% - 24px);
-  }
+  ${CARD_STYLE}
 
   ${({ isCollapsed }) => {
     if (!isCollapsed) {
@@ -62,15 +51,6 @@ const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
       }
     `;
   }}
-
-  a {
-    color: ${GRAYSCALE_DARK};
-
-    &:hover,
-    &:focus {
-      color: ${GRAYSCALE_MEDIUM};
-    }
-  }
 `;
 
 const StyledTitle = styled(Typography)`
