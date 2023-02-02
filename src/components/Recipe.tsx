@@ -1,16 +1,10 @@
-import {
-  BLACK,
-  GRAYSCALE_DARK,
-  GRAYSCALE_MEDIUM,
-  WHITE,
-} from '../constants/color';
 import React, { useState } from 'react';
 import { offsetPulse, pulse } from '../constants/css/pulse';
 import { Recipe } from '../types/recipe';
 import Typography from './Typography';
 import { dangleRotation } from '../constants/css/rotation';
 import styled from 'styled-components';
-import { withBoxShadow } from '../constants/css/shadow';
+import { CARD_OUTER_STYLE, CARD_INNER_STYLE } from '../constants/css/card';
 
 const listStyles = `
   margin-bottom: 0;
@@ -26,19 +20,7 @@ const asideFont = `
 `;
 
 const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
-  ${withBoxShadow}
-  background-color: ${WHITE};
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: ${BLACK};
-  margin: 12px auto;
-  padding: 20px;
-  text-align: left;
-  width: 500px;
-
-  @media (max-width: 600px) {
-    width: calc(100% - 24px);
-  }
+  ${CARD_OUTER_STYLE}
 
   ${({ isCollapsed }) => {
     if (!isCollapsed) {
@@ -62,15 +44,10 @@ const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
       }
     `;
   }}
+`;
 
-  a {
-    color: ${GRAYSCALE_DARK};
-
-    &:hover,
-    &:focus {
-      color: ${GRAYSCALE_MEDIUM};
-    }
-  }
+const StyledInnerRecipe = styled.div`
+  ${CARD_INNER_STYLE}
 `;
 
 const StyledTitle = styled(Typography)`
@@ -202,11 +179,13 @@ const RecipeComponent: React.FC<Props> = ({ recipe }) => {
       role={isCollapsed ? 'button' : undefined}
       tabIndex={isCollapsed ? 0 : undefined}
     >
-      <StyledTitle hasTextShadow={false} margin="0 0 4px" type="h3">
-        {recipe.title}
-      </StyledTitle>
-      <StyledTime>{recipe.time}</StyledTime>
-      {recipeDetails}
+      <StyledInnerRecipe>
+        <StyledTitle hasTextShadow={false} margin="0 0 4px" type="h3">
+          {recipe.title}
+        </StyledTitle>
+        <StyledTime>{recipe.time}</StyledTime>
+        {recipeDetails}
+      </StyledInnerRecipe>
     </StyledRecipe>
   );
 };
