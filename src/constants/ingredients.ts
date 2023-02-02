@@ -1,0 +1,68 @@
+import { IngredientDetails } from '../types/ingredients';
+
+export const INGREDIENTS: IngredientDetails[] = [
+  {
+    allergens: ['Peanuts', 'Soy'],
+    ingredients: [
+      'STRAWBERRY JAM',
+      'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
+      'POPCORN',
+      'CANOLA OIL',
+      'REFINED COCONUT OIL',
+      'SUGAR',
+      'BAKING POWDER',
+      'SALT',
+    ],
+    title: 'PB&J',
+  },
+  {
+    allergens: ['Milk'],
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'BUTTERMILK POWDER',
+      'ONION POWDER',
+      'GARLIC POWDER',
+      'SALT',
+      'SUGAR',
+      'MONOSODIUM GLUTAMATE',
+      'GROUND HABANERO PEPPER',
+      'DILL',
+      'BLACK PEPPERCORN',
+      'CHIVES',
+      'PARSLEY',
+    ],
+    title: 'Habanero Ranch',
+  },
+  {
+    allergens: [],
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'EXTRA VIRGIN OLIVE OIL',
+      'GRANULATED GARLIC',
+      'GRANULATED ONION',
+      'SALT',
+      '100% NATURAL LEMON POWDER',
+      'SUGAR',
+      'ROSEMARY',
+      'BLACK PEPPERCORN',
+    ],
+    title: 'Rosemary Lemon Pepper',
+  },
+  {
+    allergens: ['Fish', 'Milk'],
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
+      'SALT',
+      'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
+      'MONOSODIUM GLUTAMATE',
+      'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
+      'GRANULATED ONION',
+      'SUGAR',
+    ],
+    title: 'Furikake Dashi',
+  },
+];
