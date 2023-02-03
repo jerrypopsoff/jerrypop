@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
-export const lazyDangleRotation = css`
-  animation: lazyDangle 3s infinite ease-in-out;
+export const SLOW_DANGLE_STYLE = css`
+  animation: slowDangle 3s infinite ease-in-out;
 
-  @keyframes lazyDangle {
+  @keyframes slowDangle {
     0%,
     100% {
       transform: rotate(-2deg);
@@ -14,7 +14,7 @@ export const lazyDangleRotation = css`
   }
 `;
 
-export const dangleRotation = css`
+export const DANGLE_STYLE = css`
   animation: dangle 0.25s infinite linear;
 
   @keyframes dangle {

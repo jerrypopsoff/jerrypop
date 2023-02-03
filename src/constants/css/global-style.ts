@@ -4,7 +4,7 @@ import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+export const GLOBAL_STYLE = createGlobalStyle`
 ::selection {
   background-color: var(--main-theme-medium);
   color: var(--theme-text-on-medium);

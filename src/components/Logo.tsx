@@ -8,12 +8,12 @@ import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import type { Theme } from '../types/theme';
-import { lazyDangleRotation } from '../constants/css/rotation';
+import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 
 const StyledLogo = styled.img`
-  ${lazyDangleRotation}
+  ${SLOW_DANGLE_STYLE}
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_SIZE_PX}px;
   margin: 48px 0 -24px;

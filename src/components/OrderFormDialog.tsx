@@ -7,7 +7,7 @@ import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
 import React from 'react';
 import styled from 'styled-components';
 import { useWindowSize } from '../hooks/use-window-size';
-import { withBoxShadow } from '../constants/css/shadow';
+import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
 
 const DIALOG_HEADER_HEIGHT_PX = 52; // Height of header with close button
 const FORM_TOP_MARGIN_PX = 12; // Space between header and form
@@ -21,7 +21,7 @@ interface StyledDialogProps {
 }
 
 const StyledDialog = styled.dialog<StyledDialogProps>`
-  ${withBoxShadow}
+  ${WITH_BOX_SHADOW_STYLE}
   background-color: ${WHITE};
   border: none;
   border-radius: 5px;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { WHITE } from '../constants/color';
-import { bigPulse } from '../constants/css/pulse';
-import { buttonStyle } from '../constants/css/button';
+import { LARGE_PULSE_STYLE } from '../constants/css/pulse';
+import { BUTTON_STYLE } from '../constants/css/button';
 import styled from 'styled-components';
-import { withBoxShadow } from '../constants/css/shadow';
+import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
 
 const StyledButton = styled.button`
-  ${buttonStyle}
+  ${BUTTON_STYLE}
 
   background-color: transparent;
   box-shadow: none;
@@ -16,8 +16,8 @@ const StyledButton = styled.button`
 `;
 
 const StyledButtonIcon = styled.span`
-  ${bigPulse}
-  ${withBoxShadow}
+  ${LARGE_PULSE_STYLE}
+  ${WITH_BOX_SHADOW_STYLE}
 
   background-color: var(--main-theme-medium);
   border: 1px solid ${WHITE};

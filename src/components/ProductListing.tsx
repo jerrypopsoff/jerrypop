@@ -1,8 +1,8 @@
 import React from 'react';
 import Typography from './Typography';
-import { buttonStyle } from '../constants/css/button';
-import { dangleRotation } from '../constants/css/rotation';
-import { pulse } from '../constants/css/pulse';
+import { BUTTON_STYLE } from '../constants/css/button';
+import { DANGLE_STYLE } from '../constants/css/rotation';
+import { PULSE_STYLE } from '../constants/css/pulse';
 import styled from 'styled-components';
 import { Product } from '../types/product';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
@@ -41,14 +41,14 @@ const StyledProductDetails = styled.div`
 `;
 
 const StyledOrderOnlineButton = styled.button`
-  ${buttonStyle}
-  ${pulse}
+  ${BUTTON_STYLE}
+  ${PULSE_STYLE}
   margin: 0;
   padding: 24px;
 
   &:hover,
   &:focus {
-    ${dangleRotation}
+    ${DANGLE_STYLE}
   }
 `;
 

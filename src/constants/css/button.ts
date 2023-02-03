@@ -1,9 +1,9 @@
 import { THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
-import { withBoxShadow } from './shadow';
+import { WITH_BOX_SHADOW_STYLE } from './shadow';
 
-export const buttonStyle = css`
-  ${withBoxShadow}
+export const BUTTON_STYLE = css`
+  ${WITH_BOX_SHADOW_STYLE}
   align-items: center;
   background-color: ${WHITE};
   border: none;

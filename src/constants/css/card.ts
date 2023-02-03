@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 import { GRAYSCALE_DARK, GRAYSCALE_MEDIUM, THEME_NAVY, WHITE } from '../color';
-import { withBoxShadow } from './shadow';
+import { WITH_BOX_SHADOW_STYLE } from './shadow';
 
 export const CARD_OUTER_STYLE = css`
-  ${withBoxShadow}
+  ${WITH_BOX_SHADOW_STYLE}
   background-color: ${WHITE};
   border-radius: 5px;
   box-sizing: border-box;

@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import { offsetPulse, pulse } from '../constants/css/pulse';
+import { OFFSET_PULSE_STYLE, PULSE_STYLE } from '../constants/css/pulse';
 import React from 'react';
-import { buttonStyle } from '../constants/css/button';
-import { dangleRotation } from '../constants/css/rotation';
+import { BUTTON_STYLE } from '../constants/css/button';
+import { DANGLE_STYLE } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { NAVIGATION_MENU_ITEMS } from '../constants/navigation';
 
@@ -14,17 +14,17 @@ const StyledLinks = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  ${buttonStyle}
-  ${pulse}
+  ${BUTTON_STYLE}
+  ${PULSE_STYLE}
   text-decoration: none;
 
   &:nth-child(even) {
-    ${offsetPulse}
+    ${OFFSET_PULSE_STYLE}
   }
 
   &:hover,
   &:focus {
-    ${dangleRotation}
+    ${DANGLE_STYLE}
   }
 `;
 
