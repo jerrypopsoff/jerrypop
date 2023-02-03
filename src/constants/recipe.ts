@@ -10,7 +10,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '3 tbsp',
@@ -84,7 +84,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Olive oil',
+        name: 'Extra virgin olive oil',
       },
       {
         amount: 'A few sprigs',
@@ -257,7 +257,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '2 tbsp',
@@ -406,7 +406,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '1.5 tbsp',
@@ -485,74 +485,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
-      },
-      {
-        amount: '1 tbsp, finely minced',
-        name: 'Fresh basil',
-      },
-      {
-        amount: '1 tbsp',
-        name: 'Your favorite curry powder',
-      },
-      {
-        amount: '1 tsp',
-        name: 'Garam masala',
-      },
-      {
-        amount: '0.5 tbsp',
-        name: 'Garlic powder',
-      },
-      {
-        amount: '0.5 tbsp',
-        name: 'Onion powder',
-      },
-      {
-        amount: '2 tsp (optional for heat)',
-        name: 'Cayenne pepper',
-      },
-      {
-        amount: '1-2 tbsp',
-        name: 'Salt',
-      },
-    ],
-    steps: [
-      {
-        aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
-        content:
-          'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
-      },
-      {
-        content:
-          'Thoroughly mix curry powder, garam masala, garlic powder, onion powder, cayenne pepper, and half the minced basil into oil',
-      },
-      {
-        content: 'Drizzle oil mixture onto the popcorn',
-      },
-      {
-        content:
-          'Shake the bowl until sauce is evenly dispersed throughout kernels',
-      },
-      {
-        content: 'Add salt and shake the bowl again to disperse',
-      },
-      {
-        content: 'Garnish with remaining basil and enjoy',
-      },
-    ],
-    time: '15 minutes',
-    title: 'Cranked Curry Basil',
-  },
-  {
-    materials: [
-      {
-        amount: '0.5 cup',
-        name: 'Popcorn kernels',
-      },
-      {
-        amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '1 tbsp',
