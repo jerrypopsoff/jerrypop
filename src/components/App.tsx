@@ -42,7 +42,7 @@ const App: React.FC = () => {
             <Route element={<Ingredients />} path="/ingredients" />
             <Route element={<NotFound />} path="*" />
           </Routes>
-          <Footer onToggleTheme={rotateTheme} />
+          <Footer />
         </Router>
       </HelmetProvider>
     </React.StrictMode>

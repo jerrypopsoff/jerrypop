@@ -1,5 +1,4 @@
 import { RoutePath } from '../types/route-path';
-import { verifyThemeToggle } from '../utilities/theme-toggle';
 
 describe('footer tests', () => {
   beforeEach(() => {
@@ -11,7 +10,6 @@ describe('footer tests', () => {
       'have.text',
       `© ${new Date().getFullYear()} Jerrypop, LLC`,
     );
-    cy.get('button[aria-label="Toggle color scheme"]').should('have.length', 1);
     cy.get('footer')
       .find('a')
       .eq(0)
@@ -28,9 +26,5 @@ describe('footer tests', () => {
         'href',
         'https://www.youtube.com/channel/UC_3oErdLxGZgeTf8nrwsD3A',
       );
-  });
-
-  it('toggles the website theme on toggle button click', () => {
-    verifyThemeToggle('button[aria-label="Toggle color scheme"]');
   });
 });

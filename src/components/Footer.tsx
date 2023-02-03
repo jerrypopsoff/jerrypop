@@ -1,6 +1,5 @@
 import React from 'react';
 import SocialLinks from './SocialLinks';
-import ThemeToggleButton from './ThemeToggleButton';
 import Typography from './Typography';
 import styled from 'styled-components';
 
@@ -21,17 +20,12 @@ const StyledCopyright = styled(Typography)`
   font-size: 11px;
 `;
 
-interface Props {
-  onToggleTheme: () => void;
-}
-
-const Footer: React.FC<Props> = ({ onToggleTheme }) => {
+const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <StyledCopyright margin="0 8px" type="p">
         © {new Date().getFullYear()} Jerrypop, LLC
       </StyledCopyright>
-      <ThemeToggleButton onToggleTheme={onToggleTheme} />
       <StyledSocialLinksContainer>
         <SocialLinks />
       </StyledSocialLinksContainer>
