@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { OFFSET_PULSE_STYLE, PULSE_STYLE } from '../constants/css/pulse';
 import React from 'react';
-import { BUTTON_STYLE } from '../constants/css/button';
+import { BUTTON_INNER_STYLE, BUTTON_STYLE } from '../constants/css/button';
 import { DANGLE_STYLE } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { NAVIGATION_MENU_ITEMS } from '../constants/navigation';
@@ -28,6 +28,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledInnerLink = styled.div`
+  ${BUTTON_INNER_STYLE}
+`;
+
 const NavigationMenu: React.FC = () => {
   const { pathname } = useLocation();
 
@@ -36,7 +40,7 @@ const NavigationMenu: React.FC = () => {
       {NAVIGATION_MENU_ITEMS.filter((item) => pathname !== item.to).map(
         (item) => (
           <StyledLink key={item.displayName} to={item.to}>
-            {item.displayName}
+            <StyledInnerLink>{item.displayName}</StyledInnerLink>
           </StyledLink>
         ),
       )}
