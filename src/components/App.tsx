@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
-import { GLOBAL_STYLE } from '../constants/css/global-style';
+import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
   return (
     <React.StrictMode>
       <HelmetProvider>
-        <GLOBAL_STYLE />
+        <GlobalStyle />
         <Router>
           <RotateTheme rotateTheme={rotateTheme} />
           <ScrollToTop />
