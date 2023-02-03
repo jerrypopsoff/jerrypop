@@ -10,7 +10,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '3 tbsp',
@@ -84,7 +84,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Olive oil',
+        name: 'Extra virgin olive oil',
       },
       {
         amount: 'A few sprigs',
@@ -257,7 +257,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '2 tbsp',
@@ -406,7 +406,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '1.5 tbsp',
@@ -485,7 +485,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 cup',
-        name: 'Canola oil (or any neutral oil)',
+        name: 'Neutral oil (canola)',
       },
       {
         amount: '1 tbsp',
