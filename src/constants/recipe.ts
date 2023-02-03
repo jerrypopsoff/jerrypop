@@ -174,7 +174,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '3 tbsp',
-        name: 'Unsalted butter',
+        name: 'Refined coconut oil',
       },
       {
         amount: '1 tbsp',
@@ -204,7 +204,7 @@ export const RECIPES: Recipe[] = [
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
-        content: 'Melt unsalted butter in a saucepan on low heat',
+        content: 'Melt coconut oil in a saucepan on low heat',
       },
       {
         content: 'Add sugar into saucepan and stir until mixed well',
@@ -336,7 +336,7 @@ export const RECIPES: Recipe[] = [
         name: 'Hazelnut cocoa spread',
       },
       {
-        amount: '1 tsp (optional)',
+        amount: '1 tsp',
         name: 'Espresso powder',
       },
       {
@@ -396,7 +396,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '50 minutes',
-    title: 'Hazelnut Cocoa',
+    title: 'Chocolate Hazelnut Espresso',
   },
   {
     materials: [
