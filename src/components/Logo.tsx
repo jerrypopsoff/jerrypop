@@ -8,12 +8,12 @@ import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import type { Theme } from '../types/theme';
-import { lazyDangleRotation } from '../constants/css/rotation';
+import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 
 const StyledLogo = styled.img`
-  ${lazyDangleRotation}
+  ${SLOW_DANGLE_STYLE}
   cursor: pointer;
   height: ${MAIN_LOGO_WIDE_SIZE_PX}px;
   margin: 48px 0 -24px;
@@ -37,24 +37,20 @@ interface Props {
 
 const Logo: React.FC<Props> = ({ onToggleTheme, theme }) => {
   const { pathname } = useLocation();
-
-  if (pathname === '/') {
-    return (
-      <>
-        <BackgroundWordmark fillColor={BLACK} isFixed={true} />
-        <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-        <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
-      </>
+  const logoElement =
+    pathname === '/' ? (
+      <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+    ) : (
+      <Link to="/">
+        <StyledLogo alt="Jerrypop logo" src={logo} />
+      </Link>
     );
-  }
 
   return (
     <>
       <BackgroundWordmark fillColor={BLACK} isFixed={true} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      <Link to="/">
-        <StyledLogo alt="Jerrypop logo" src={logo} />
-      </Link>
+      {logoElement}
     </>
   );
 };

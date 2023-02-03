@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const pulse = css`
+export const PULSE_STYLE = css`
   animation: pulse 3s infinite linear;
 
   @keyframes pulse {
@@ -17,7 +17,7 @@ export const pulse = css`
   }
 `;
 
-export const offsetPulse = css`
+export const OFFSET_PULSE_STYLE = css`
   animation: offsetPulse 3s infinite linear;
 
   @keyframes offsetPulse {
@@ -34,7 +34,7 @@ export const offsetPulse = css`
   }
 `;
 
-export const bigPulse = css`
+export const LARGE_PULSE_STYLE = css`
   animation: bigPulse 2.5s infinite linear;
 
   @keyframes bigPulse {

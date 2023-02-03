@@ -1,8 +1,8 @@
 import React from 'react';
 import Typography from './Typography';
-import { buttonStyle } from '../constants/css/button';
-import { dangleRotation } from '../constants/css/rotation';
-import { pulse } from '../constants/css/pulse';
+import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
+import { DANGLE_STYLE } from '../constants/css/rotation';
+import { PULSE_STYLE } from '../constants/css/pulse';
 import styled from 'styled-components';
 import { Product } from '../types/product';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
@@ -33,6 +33,7 @@ const StyledProductPhotograph = styled.img`
 
 const StyledProductDetails = styled.div`
   margin: 0 0 0 36px;
+  text-align: left;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     margin: 36px 0 0;
@@ -41,15 +42,18 @@ const StyledProductDetails = styled.div`
 `;
 
 const StyledOrderOnlineButton = styled.button`
-  ${buttonStyle}
-  ${pulse}
+  ${BUTTON_STYLE}
+  ${PULSE_STYLE}
   margin: 0;
-  padding: 24px;
 
   &:hover,
   &:focus {
-    ${dangleRotation}
+    ${DANGLE_STYLE}
   }
+`;
+
+const StyledInnerOrderOnlineButton = styled.div`
+  ${BUTTON_INNER_STYLE}
 `;
 
 interface Props {
@@ -74,7 +78,7 @@ const ProductListing: React.FC<Props> = ({ onClickOrderOnline, product }) => {
           {product.description}
         </Typography>
         <StyledOrderOnlineButton onClick={onClickOrderOnline}>
-          Order
+          <StyledInnerOrderOnlineButton>Order</StyledInnerOrderOnlineButton>
         </StyledOrderOnlineButton>
       </StyledProductDetails>
     </StyledProductListing>

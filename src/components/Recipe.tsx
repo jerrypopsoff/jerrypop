@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { offsetPulse, pulse } from '../constants/css/pulse';
+import { OFFSET_PULSE_STYLE, PULSE_STYLE } from '../constants/css/pulse';
 import { Recipe } from '../types/recipe';
 import Typography from './Typography';
-import { dangleRotation } from '../constants/css/rotation';
+import { DANGLE_STYLE } from '../constants/css/rotation';
 import styled from 'styled-components';
 import { CARD_OUTER_STYLE, CARD_INNER_STYLE } from '../constants/css/card';
 
@@ -31,16 +31,16 @@ const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
       cursor: pointer;
 
       &:nth-child(odd) {
-        ${pulse}
+        ${PULSE_STYLE}
       }
 
       &:nth-child(even) {
-        ${offsetPulse}
+        ${OFFSET_PULSE_STYLE}
       }
 
       &:hover,
       &:focus {
-        ${dangleRotation}
+        ${DANGLE_STYLE}
       }
     `;
   }}

@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
-import { GlobalStyle } from '../constants/css/global-style';
+import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
@@ -42,7 +42,7 @@ const App: React.FC = () => {
             <Route element={<Ingredients />} path="/ingredients" />
             <Route element={<NotFound />} path="*" />
           </Routes>
-          <Footer onToggleTheme={rotateTheme} />
+          <Footer />
         </Router>
       </HelmetProvider>
     </React.StrictMode>
