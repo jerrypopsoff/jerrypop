@@ -73,7 +73,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Jalapeño Cheddar Popcorn',
+    title: 'Jalapeño Cheddar',
   },
   {
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
@@ -163,7 +163,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '60 minutes',
-    title: 'Rosemary Lemon Pepper Popcorn',
+    title: 'Rosemary Lemon Pepper',
   },
   {
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
@@ -174,7 +174,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '3 tbsp',
-        name: 'Unsalted butter',
+        name: 'Refined coconut oil',
       },
       {
         amount: '1 tbsp',
@@ -204,7 +204,7 @@ export const RECIPES: Recipe[] = [
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
       {
-        content: 'Melt unsalted butter in a saucepan on low heat',
+        content: 'Melt coconut oil in a saucepan on low heat',
       },
       {
         content: 'Add sugar into saucepan and stir until mixed well',
@@ -247,7 +247,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '50 minutes',
-    title: 'PB&J Popcorn',
+    title: 'PB&J',
   },
   {
     materials: [
@@ -315,7 +315,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Furikake Dashi Popcorn',
+    title: 'Furikake Dashi',
   },
   {
     materials: [
@@ -336,7 +336,7 @@ export const RECIPES: Recipe[] = [
         name: 'Hazelnut cocoa spread',
       },
       {
-        amount: '1 tsp (optional)',
+        amount: '1 tsp',
         name: 'Espresso powder',
       },
       {
@@ -396,7 +396,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '50 minutes',
-    title: 'Hazelnut Cocoa Popcorn',
+    title: 'Chocolate Hazelnut Espresso',
   },
   {
     materials: [
@@ -475,7 +475,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: '“Cheesy” Chipotle Taco Popcorn',
+    title: '“Cheesy” Chipotle Taco',
   },
   {
     materials: [
@@ -542,7 +542,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Cranked Curry Basil Popcorn',
+    title: 'Cranked Curry Basil',
   },
   {
     materials: [
@@ -625,6 +625,6 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '18 minutes',
-    title: '“Pad Thai” Popcorn',
+    title: '“Pad Thai”',
   },
 ];
