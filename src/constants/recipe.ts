@@ -73,7 +73,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Jalapeño Cheddar Popcorn',
+    title: 'Jalapeño Cheddar',
   },
   {
     href: 'https://www.youtube.com/embed/Gvb7Lrm_5Ew',
@@ -163,7 +163,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '60 minutes',
-    title: 'Rosemary Lemon Pepper Popcorn',
+    title: 'Rosemary Lemon Pepper',
   },
   {
     href: 'https://www.youtube.com/embed/gY15dBRiWAs',
@@ -247,7 +247,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '50 minutes',
-    title: 'PB&J Popcorn',
+    title: 'PB&J',
   },
   {
     materials: [
@@ -315,7 +315,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Furikake Dashi Popcorn',
+    title: 'Furikake Dashi',
   },
   {
     materials: [
@@ -396,7 +396,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '50 minutes',
-    title: 'Hazelnut Cocoa Popcorn',
+    title: 'Hazelnut Cocoa',
   },
   {
     materials: [
@@ -475,7 +475,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: '“Cheesy” Chipotle Taco Popcorn',
+    title: '“Cheesy” Chipotle Taco',
   },
   {
     materials: [
@@ -542,7 +542,7 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '15 minutes',
-    title: 'Cranked Curry Basil Popcorn',
+    title: 'Cranked Curry Basil',
   },
   {
     materials: [
@@ -625,6 +625,6 @@ export const RECIPES: Recipe[] = [
       },
     ],
     time: '18 minutes',
-    title: '“Pad Thai” Popcorn',
+    title: '“Pad Thai”',
   },
 ];
