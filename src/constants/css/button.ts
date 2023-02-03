@@ -1,4 +1,4 @@
-import { BLACK, WHITE } from '../color';
+import { THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
 import { withBoxShadow } from './shadow';
 
@@ -8,7 +8,7 @@ export const buttonStyle = css`
   background-color: ${WHITE};
   border: none;
   border-radius: 4px;
-  color: ${BLACK};
+  color: ${THEME_NAVY};
   cursor: pointer;
   display: flex;
   font-size: 24px;
@@ -22,6 +22,6 @@ export const buttonStyle = css`
 
   &:hover,
   &:focus {
-    color: ${BLACK};
+    color: ${THEME_NAVY};
   }
 `;
