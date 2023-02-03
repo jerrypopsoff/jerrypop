@@ -37,24 +37,20 @@ interface Props {
 
 const Logo: React.FC<Props> = ({ onToggleTheme, theme }) => {
   const { pathname } = useLocation();
-
-  if (pathname === '/') {
-    return (
-      <>
-        <BackgroundWordmark fillColor={BLACK} isFixed={true} />
-        <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-        <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
-      </>
+  const logoElement =
+    pathname === '/' ? (
+      <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
+    ) : (
+      <Link to="/">
+        <StyledLogo alt="Jerrypop logo" src={logo} />
+      </Link>
     );
-  }
 
   return (
     <>
       <BackgroundWordmark fillColor={BLACK} isFixed={true} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      <Link to="/">
-        <StyledLogo alt="Jerrypop logo" src={logo} />
-      </Link>
+      {logoElement}
     </>
   );
 };
