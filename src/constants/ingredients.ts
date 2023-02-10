@@ -65,4 +65,20 @@ export const INGREDIENTS: IngredientDetails[] = [
     ],
     title: 'Furikake Dashi',
   },
+  {
+    allergens: [],
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'NUTRITIONAL YEAST (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12))',
+      'GRANULATED GARLIC',
+      'GRANULATED ONION',
+      'SALT',
+      'SICHUAN PEPPERCORN',
+      'MONOSODIUM GLUTAMATE',
+      'SUGAR',
+      'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
+    ],
+    title: 'Sichuan Nooch',
+  },
 ];
