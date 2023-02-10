@@ -3,6 +3,7 @@ import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
+import InstagramFeed from './InstagramFeed';
 
 const StyledHome = styled.div`
   align-items: center;
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
           Locally handcrafted popcorn from San Francisco, California.
         </Typography>
         <NavigationMenu />
+        <InstagramFeed />
       </StyledHome>
     </>
   );
