@@ -3,8 +3,9 @@ import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import AboutPhotograph from '../images/about-jerry.jpeg';
+
+const PHOTOGRAPH_MAX_WIDTH_PX = 400;
 
 const StyledAbout = styled.div`
   align-items: center;
@@ -16,12 +17,14 @@ const StyledAbout = styled.div`
 const StyledAboutPhotograph = styled.img`
   height: 534px;
   margin: 24px 0;
-  max-width: 400px;
-  width: 400px;
+  max-width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
+  width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+  @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
+    box-sizing: border-box;
     height: auto;
-    width: 85vw;
+    padding: 0 12px;
+    width: 100%;
   }
 `;
 

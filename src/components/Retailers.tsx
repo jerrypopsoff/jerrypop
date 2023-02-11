@@ -4,7 +4,8 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import ProductsPhotograph from '../images/all-products-photograph.jpeg';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
+
+const PHOTOGRAPH_MAX_WIDTH_PX = 600;
 
 const StyledRetailers = styled.div`
   align-items: center;
@@ -25,12 +26,14 @@ const StyledRetailers = styled.div`
 const StyledProductsPhotograph = styled.img`
   height: 616px;
   margin: 24px 0;
-  max-width: 600px;
-  width: 600px;
+  max-width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
+  width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+  @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
+    box-sizing: border-box;
     height: auto;
-    width: 85vw;
+    padding: 0 12px;
+    width: 100%;
   }
 `;
 
