@@ -14,3 +14,18 @@
 // ***********************************************************
 
 import './commands';
+
+Cypress.on('uncaught:exception', (err, _runnable) => {
+  if (err.message.includes('ResizeObserver loop limit exceeded')) {
+    /**
+     * Ignores benign errors introduced by
+     * [#197](https://github.com/ghaagsma/jerrypop/pull/197).
+     */
+    return false;
+  }
+
+  /**
+   * No return statement, so that other unexpected errors still cause test
+   * failures.
+   */
+});
