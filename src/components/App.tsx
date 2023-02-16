@@ -12,7 +12,6 @@ import Recipes from './Recipes';
 import RotateTheme from './RotateTheme';
 import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
-import Retailers from './Retailers';
 import Ingredients from './Ingredients';
 
 const App: React.FC = () => {
@@ -38,7 +37,6 @@ const App: React.FC = () => {
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<Purchase />} path="/purchase" />
             <Route element={<About />} path="/about" />
-            <Route element={<Retailers />} path="/retailers" />
             <Route element={<Ingredients />} path="/ingredients" />
             <Route element={<NotFound />} path="*" />
           </Routes>
