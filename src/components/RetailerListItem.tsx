@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LIGHT_HIGHLIGHT_BACKGROUND, WHITE } from '../constants/color';
+import { DANGLE_STYLE } from '../constants/css/rotation';
 import { Retailer } from '../types/retailer';
 import Typography from './Typography';
 
@@ -7,12 +9,21 @@ const BREAKPOINT_WIDTH = '475px';
 
 const StyledRetailerAnchor = styled.a`
   align-items: center;
+  border-radius: 5px;
   display: flex;
-  margin: 12px 0;
+  margin: 4px 0;
+  padding: 16px;
   text-decoration: none;
 
   @media (max-width: ${BREAKPOINT_WIDTH}) {
     flex-direction: column;
+  }
+
+  &:hover,
+  &:focus {
+    ${DANGLE_STYLE}
+    background-color: ${LIGHT_HIGHLIGHT_BACKGROUND};
+    color: ${WHITE};
   }
 `;
 

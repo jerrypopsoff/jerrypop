@@ -12,6 +12,7 @@ export const WHITE = '#fff';
  */
 export const DIALOG_BACKDROP = 'rgba(0, 0, 0, 0.8)';
 export const ICON_HOVER_BACKGROUND = 'rgba(0, 0, 0, 0.1)';
+export const LIGHT_HIGHLIGHT_BACKGROUND = 'rgba(255, 255, 255, 0.2)';
 export const SHADOW = 'rgba(0, 0, 0, 0.2)';
 
 /**
