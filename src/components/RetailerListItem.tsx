@@ -33,18 +33,13 @@ const StyledPhotograph = styled.img`
 `;
 
 const StyledInformation = styled.div`
-  margin: 0 0 0 32px;
+  margin: 0 32px;
   text-align: left;
 
   @media (max-width: ${BREAKPOINT_WIDTH}) {
-    margin: 16px 0 0 0;
+    margin: 16px 0 24px;
     text-align: center;
   }
-`;
-
-const StyledDescription = styled.span`
-  display: block;
-  font-size: 14px;
 `;
 
 interface Props {
@@ -66,7 +61,9 @@ const RetailerListItem: React.FC<Props> = ({
           <Typography margin="4px 0" type="h3">
             {name}
           </Typography>
-          <StyledDescription>{address}</StyledDescription>
+          <Typography margin="0" type="p">
+            {address}
+          </Typography>
         </StyledInformation>
       </StyledRetailerAnchor>
     </li>
