@@ -14,7 +14,7 @@ const WIDTH_WIDE = 750;
 const StyledProductListing = styled.div`
   align-items: center;
   display: flex;
-  margin: 48px 0;
+  margin: 12px 0 48px;
   max-width: ${WIDTH_WIDE}px;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
