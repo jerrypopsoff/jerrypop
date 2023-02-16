@@ -13,7 +13,7 @@ export const BUTTON_STYLE = css`
   font-weight: bold;
   letter-spacing: 0.25px;
   margin: 8px;
-  min-width: 192px;
+  min-width: 230px;
   padding: 6px;
 
   &:hover,
