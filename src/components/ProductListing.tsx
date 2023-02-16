@@ -71,7 +71,7 @@ const ProductListing: React.FC<Props> = ({ onClickOrderOnline, product }) => {
         />
       </StyledProductImageContainer>
       <StyledProductDetails>
-        <Typography margin="0" textAlign="left" type="h2">
+        <Typography margin="0" textAlign="left" type="h3">
           {product.title}
         </Typography>
         <Typography margin="24px 0 36px" textAlign="left" type="p">
