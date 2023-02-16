@@ -24,6 +24,9 @@ describe('navigation menu tests', () => {
     clickNavigationLink(RoutePath.Recipes);
     cy.url().should('include', RoutePath.Recipes);
 
+    clickNavigationLink(RoutePath.Ingredients);
+    cy.url().should('include', RoutePath.Ingredients);
+
     clickNavigationLink(RoutePath.About);
     cy.url().should('include', RoutePath.About);
   });

@@ -14,6 +14,10 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
     to: '/recipes',
   },
   {
+    displayName: 'Ingredients',
+    to: '/ingredients',
+  },
+  {
     displayName: 'About',
     to: '/about',
   },

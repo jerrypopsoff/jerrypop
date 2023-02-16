@@ -34,9 +34,19 @@
       "url": "/purchase"
     },
     {
+      "name": "About · Jerrypop",
+      "short_name": "About",
+      "url": "/about"
+    },
+    {
       "name": "Recipes · Jerrypop",
       "short_name": "Recipes",
       "url": "/recipes"
+    },
+    {
+      "name": "Ingredients · Jerrypop",
+      "short_name": "Ingredients",
+      "url": "/ingredients"
     }
   ],
   "start_url": ".",
