@@ -6,7 +6,7 @@ import Products from './Products';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
-import { Retailer } from '../types/retailer';
+import RetailerListItem from './RetailerListItem';
 
 const StyledPageContent = styled.div`
   align-items: center;
@@ -14,23 +14,9 @@ const StyledPageContent = styled.div`
   flex-direction: column;
 `;
 
-const StyledRetailersList = styled.ul`
+const StyledRetailerList = styled.ul`
   list-style: none;
   padding: 0;
-`;
-
-const StyledRetailersListItem = styled.li`
-  margin: 12px 0;
-`;
-
-const StyledRetailerName = styled.a`
-  font-size: 28px;
-`;
-
-const StyledRetailerDescription = styled.span`
-  display: block;
-  font-size: 14px;
-  margin-top: 4px;
 `;
 
 const StyledNavigationMenu = styled(NavigationMenu)`
@@ -69,20 +55,14 @@ const Purchase: React.FC = () => {
         <Typography maxWidth="600px" type="p">
           Jerrypop is available for purchase at the following locations:
         </Typography>
-        <StyledRetailersList>
-          {RETAILERS.map(({ address, href, name }: Retailer) => (
-            <StyledRetailersListItem>
-              <StyledRetailerName
-                href={href}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {name}
-              </StyledRetailerName>
-              <StyledRetailerDescription>{address}</StyledRetailerDescription>
-            </StyledRetailersListItem>
+        <StyledRetailerList>
+          {RETAILERS.map((retailer) => (
+            <RetailerListItem
+              key={retailer.name}
+              retailer={retailer}
+            ></RetailerListItem>
           ))}
-        </StyledRetailersList>
+        </StyledRetailerList>
         <Typography maxWidth="600px" type="p">
           Want to pop off at your brewery or retail location with locally
           handcrafted popcorn? Reach out to{' '}
