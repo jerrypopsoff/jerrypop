@@ -2,7 +2,7 @@ import { IngredientDetails } from '../types/ingredients';
 
 export const INGREDIENTS: IngredientDetails[] = [
   {
-    allergens: ['Peanuts', 'Soy', 'Tree nuts (coconut)'],
+    allergens: ['Peanuts', 'Soy'],
     ingredients: [
       'STRAWBERRY JAM',
       'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
