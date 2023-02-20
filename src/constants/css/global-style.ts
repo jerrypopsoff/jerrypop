@@ -69,6 +69,7 @@ button {
   animation: kernel 0.5s infinite linear;
   -webkit-animation: kernel 0.5s infinite linear;
   height: ${KERNEL_WIDE_SIZE_PX}px;
+  pointer-events: none;
   position: fixed;
   width: ${KERNEL_WIDE_SIZE_PX}px;
   z-index: ${POPCORN_KERNEL_Z_INDEX};
