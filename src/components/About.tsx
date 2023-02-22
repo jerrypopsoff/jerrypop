@@ -32,28 +32,35 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Jerrypop</title>
+        <title>About · Jerrypop</title>
       </Helmet>
       <StyledAbout>
-        <Typography type="h1">About Jerrypop</Typography>
+        <Typography type="h1">About Jerry</Typography>
         <StyledAboutPhotograph
           alt="Photograph of Jerry, founder and owner-operator of Jerrypop"
           src={AboutPhotograph}
         />
         <Typography maxWidth="600px" type="p">
-          I quit my job in April 2022 to live out my dream of starting a
+          My interest in popcorn sparked in 2013, when I began making lightly
+          flavored popcorn on my journey to losing 130 pounds in 14 months.
+          Afterward my focus shifted from healthy snacking to flavor blasting,
+          resulting in Jerrypop’s signature bold flavors and undeniably
+          satisfying crunch.
+        </Typography>
+        <Typography maxWidth="600px" type="p">
+          In April 2022 I quit my job to live out my dream of starting a
           business dedicated to producing the most satisfying craft popcorn in
           the world. Now that I’ve accomplished that goal, I have focused my
           efforts on sharing it with the lovely city of San Francisco.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          Although my dedication to quality is my highest priority, Jerrypop’s
-          mission is twofold. The packaged foods industry is in dire need of a
-          strong shift toward environmental sustainability. In addition to
+          Although my dedication to popcorn quality is my highest priority,
+          Jerrypop’s mission is twofold. The packaged foods industry is in need
+          of a strong shift toward environmental sustainability. In addition to
           sharing delightful craft popcorn with the world, I aim to minimize my
-          impact on the environment and influence others to do the same. Every
-          bag of Jerrypop is sustainably handcrafted and packaged in a 100%
-          compostable pouch.
+          impact on the environment and influence others to do the same. That is
+          why every bag of Jerrypop is sustainably handcrafted and packaged in a
+          100% compostable pouch.
         </Typography>
         <NavigationMenu />
       </StyledAbout>
