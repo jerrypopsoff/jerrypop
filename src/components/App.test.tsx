@@ -13,16 +13,12 @@ const getDocumentStyle = () => {
 };
 
 describe('theme', () => {
-  test('navigation can rotate theme', async () => {
-    const { getAllByRole, getByAltText } = render(<App />);
+  test('logo selection can rotate theme', async () => {
+    const { getByAltText } = render(<App />);
 
     const originalDocumentStyle = getDocumentStyle();
-    const linkElements = getAllByRole('link');
-    await userEvent.click(linkElements[0]);
+    await userEvent.click(getByAltText('Jerrypop logo'));
 
     expect(getDocumentStyle()).not.toEqual(originalDocumentStyle);
-
-    // Reset router state for next test
-    await userEvent.click(getByAltText('Jerrypop logo'));
   });
 });
