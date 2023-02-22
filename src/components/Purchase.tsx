@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
 import OrderFormDialog from './OrderFormDialog';
 import Products from './Products';
 import Typography from './Typography';
@@ -17,10 +16,6 @@ const StyledPageContent = styled.div`
 const StyledRetailerList = styled.ul`
   list-style: none;
   padding: 0;
-`;
-
-const StyledNavigationMenu = styled(NavigationMenu)`
-  margin-top: 48px;
 `;
 
 const Purchase: React.FC = () => {
@@ -81,7 +76,6 @@ const Purchase: React.FC = () => {
             onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
           />
         )}
-        <StyledNavigationMenu />
       </StyledPageContent>
     </>
   );

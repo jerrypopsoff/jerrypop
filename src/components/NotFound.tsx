@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
 
@@ -13,7 +12,6 @@ const NotFound: React.FC = () => {
       <Typography type="p">
         Someone spilled the kernels. That page does not exist.
       </Typography>
-      <NavigationMenu />
     </>
   );
 };

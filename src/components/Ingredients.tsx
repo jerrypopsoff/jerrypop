@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
@@ -29,7 +28,6 @@ const Ingredients: React.FC = () => {
           );
         })}
       </StyledUnorderedList>
-      <NavigationMenu />
     </>
   );
 };

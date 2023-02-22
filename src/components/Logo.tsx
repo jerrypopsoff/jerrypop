@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { BLACK } from '../constants/color';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
@@ -47,7 +46,6 @@ const Logo: React.FC<Props> = ({ onToggleTheme, theme }) => {
 
   return (
     <>
-      <BackgroundWordmark fillColor={BLACK} isFixed={true} />
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
       {logoElement}
     </>

@@ -1,5 +1,10 @@
 import { GRAYSCALE_LIGHT, WHITE } from '../color';
-import { KERNEL_NARROW_SIZE_PX, KERNEL_WIDE_SIZE_PX } from '../breakpoint';
+import {
+  KERNEL_NARROW_SIZE_PX,
+  KERNEL_WIDE_SIZE_PX,
+  MOBILE_NAVIGATION_BAR_HEIGHT_PX,
+  WINDOW_BREAKPOINT_WIDTH_PX,
+} from '../breakpoint';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
@@ -20,6 +25,10 @@ body {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    padding: ${MOBILE_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
+  }
 }
 
 :focus {
