@@ -1,3 +1,4 @@
+export const MOBILE_NAVIGATION_BAR_HEIGHT_PX = 98;
 export const WINDOW_BREAKPOINT_WIDTH_PX = 860;
 
 export const MAIN_LOGO_WIDE_SIZE_PX = 450;
