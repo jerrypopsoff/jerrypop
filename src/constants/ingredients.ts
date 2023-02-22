@@ -2,20 +2,6 @@ import { IngredientDetails } from '../types/ingredients';
 
 export const INGREDIENTS: IngredientDetails[] = [
   {
-    allergens: ['Peanuts', 'Soy'],
-    ingredients: [
-      'STRAWBERRY JAM',
-      'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
-      'POPCORN',
-      'CANOLA OIL',
-      'NATURALLY REFINED ORGANIC COCONUT OIL',
-      'SUGAR',
-      'BAKING POWDER',
-      'SALT',
-    ],
-    title: 'PB&J',
-  },
-  {
     allergens: ['Milk'],
     ingredients: [
       'POPCORN',
@@ -80,5 +66,19 @@ export const INGREDIENTS: IngredientDetails[] = [
       'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
     ],
     title: 'Sichuan Nooch',
+  },
+  {
+    allergens: ['Peanuts', 'Soy'],
+    ingredients: [
+      'STRAWBERRY JAM',
+      'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
+      'POPCORN',
+      'CANOLA OIL',
+      'NATURALLY REFINED ORGANIC COCONUT OIL',
+      'SUGAR',
+      'BAKING POWDER',
+      'SALT',
+    ],
+    title: 'PB&J',
   },
 ];
