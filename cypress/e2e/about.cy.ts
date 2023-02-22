@@ -6,6 +6,6 @@ describe('about page tests', () => {
   });
 
   it('displays the correct page title', () => {
-    cy.get('title').should('have.text', 'About Jerrypop');
+    cy.get('title').should('have.text', 'About · Jerrypop');
   });
 });
