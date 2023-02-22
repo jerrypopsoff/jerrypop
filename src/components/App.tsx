@@ -9,7 +9,6 @@ import NotFound from './NotFound';
 import Purchase from './Purchase';
 import React from 'react';
 import Recipes from './Recipes';
-import RotateTheme from './RotateTheme';
 import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
 import Ingredients from './Ingredients';
@@ -22,7 +21,6 @@ const App: React.FC = () => {
       <HelmetProvider>
         <GlobalStyle />
         <Router>
-          <RotateTheme rotateTheme={rotateTheme} />
           <ScrollToTop />
           <Logo onToggleTheme={rotateTheme} theme={theme} />
           <Routes>
