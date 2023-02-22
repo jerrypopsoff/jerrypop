@@ -20,6 +20,12 @@ export const NAVIGATION_BAR_CONTENT_STYLE = css`
   width: 100%;
 `;
 
+export const NAVIGATION_MENU_LIST_STYLE = css`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
 export const NAVIGATION_MENU_LINK_STYLE = css`
   color: ${THEME_NAVY};
   cursor: pointer;
@@ -32,4 +38,8 @@ export const NAVIGATION_MENU_LINK_STYLE = css`
   &:focus {
     color: ${THEME_NAVY};
   }
+`;
+
+export const NAVIGATION_BAR_WORDMARK_LINK_STYLE = css`
+  padding: 16px;
 `;

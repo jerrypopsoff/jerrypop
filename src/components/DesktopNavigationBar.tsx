@@ -6,7 +6,9 @@ import { NavigationMenuItem } from '../types/navigation';
 import {
   NAVIGATION_BAR_CONTENT_STYLE,
   NAVIGATION_BAR_STYLE,
+  NAVIGATION_BAR_WORDMARK_LINK_STYLE,
   NAVIGATION_MENU_LINK_STYLE,
+  NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 
@@ -25,7 +27,7 @@ const StyledNavigationBarContent = styled.div`
 `;
 
 const StyledWordmarkLink = styled(Link)`
-  padding: 16px;
+  ${NAVIGATION_BAR_WORDMARK_LINK_STYLE}
 `;
 
 const StyledWordmark = styled.img`
@@ -35,10 +37,8 @@ const StyledWordmark = styled.img`
 `;
 
 const StyledMenuItems = styled.ul`
+  ${NAVIGATION_MENU_LIST_STYLE}
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 `;
 
 const StyledNavigationMenuLink = styled(Link)`

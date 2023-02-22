@@ -16,7 +16,9 @@ import {
 import {
   NAVIGATION_BAR_CONTENT_STYLE,
   NAVIGATION_BAR_STYLE,
+  NAVIGATION_BAR_WORDMARK_LINK_STYLE,
   NAVIGATION_MENU_LINK_STYLE,
+  NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
 
 const MENU_ITEM_HEIGHT_PX = 70;
@@ -74,13 +76,13 @@ const StyledHamburgerLine = styled.div`
 `;
 
 const StyledWordmarkLink = styled(Link)`
-  padding: 16px;
+  ${NAVIGATION_BAR_WORDMARK_LINK_STYLE}
 `;
 
 const StyledWordmark = styled.img`
-  height: 36px;
+  height: 30px;
   margin-top: 8px;
-  width: 160px;
+  width: 134px;
 `;
 
 const StyledCloseButton = styled.button`
@@ -108,12 +110,10 @@ const StyledMenuItems = styled.ul<Slideable>`
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     ${SLIDE_STYLE}
     ${WITH_BOX_SHADOW_STYLE}
+    ${NAVIGATION_MENU_LIST_STYLE}
     background-color: ${WHITE};
     display: block;
     left: 6px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     position: absolute;
     right: 6px;
     top: -${({ slideDistancePx }) => slideDistancePx}px;
