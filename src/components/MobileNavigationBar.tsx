@@ -34,21 +34,25 @@ const SLIDE_STYLE = css<Slideable>`
     `translateY(${isOpen ? `${slideDistancePx}px` : '0'})`};
 `;
 
-const StyledNavigationBar = styled.nav<Slideable>`
+const StyledNavigationBar = styled.nav`
   display: none;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    ${SLIDE_STYLE}
-    ${NAVIGATION_BAR_STYLE}
-    left: 6px;
-    position: absolute;
-    right: 6px;
-    top: 0;
-    z-index: ${MOBILE_NAVIGATION_BAR_Z_INDEX};
+    display: block;
   }
 `;
 
-const StyledNavigationBarContent = styled.div`
+const StyledNavigationBarContent = styled.div<Slideable>`
+  ${SLIDE_STYLE}
+  ${NAVIGATION_BAR_STYLE}
+  left: 6px;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  z-index: ${MOBILE_NAVIGATION_BAR_Z_INDEX};
+`;
+
+const StyledNavigationBarContentInner = styled.div`
   ${NAVIGATION_BAR_CONTENT_STYLE}
 
   // Subtract border and parent padding
@@ -146,44 +150,46 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
 
   return (
     <>
-      <StyledNavigationBar
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
-      >
-        <StyledNavigationBarContent>
-          <StyledHamburgerButton
-            aria-label="Toggle navigation menu"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <StyledHamburgerLine aria-hidden="true" />
-            <StyledHamburgerLine aria-hidden="true" />
-            <StyledHamburgerLine aria-hidden="true" />
-          </StyledHamburgerButton>
-          <StyledWordmarkLink to="/">
-            <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
-          </StyledWordmarkLink>
+      <StyledNavigationBar>
+        <StyledNavigationBarContent
+          isOpen={isOpen}
+          slideDistancePx={navigationMenuItemsHeightPx}
+        >
+          <StyledNavigationBarContentInner>
+            <StyledHamburgerButton
+              aria-label="Toggle navigation menu"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <StyledHamburgerLine aria-hidden="true" />
+              <StyledHamburgerLine aria-hidden="true" />
+              <StyledHamburgerLine aria-hidden="true" />
+            </StyledHamburgerButton>
+            <StyledWordmarkLink to="/">
+              <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
+            </StyledWordmarkLink>
+          </StyledNavigationBarContentInner>
         </StyledNavigationBarContent>
-      </StyledNavigationBar>
-      <StyledMenuItems
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
-      >
-        <li>
-          <StyledCloseButton
-            aria-label="Close"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
-          </StyledCloseButton>
-        </li>
-        {navigationMenuItems.map(({ displayName, to }) => (
-          <li key={displayName}>
-            <StyledMenuItemLink onClick={() => setIsOpen(!isOpen)} to={to}>
-              <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
-            </StyledMenuItemLink>
+        <StyledMenuItems
+          isOpen={isOpen}
+          slideDistancePx={navigationMenuItemsHeightPx}
+        >
+          <li>
+            <StyledCloseButton
+              aria-label="Close"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
+            </StyledCloseButton>
           </li>
-        ))}
-      </StyledMenuItems>
+          {navigationMenuItems.map(({ displayName, to }) => (
+            <li key={displayName}>
+              <StyledMenuItemLink onClick={() => setIsOpen(!isOpen)} to={to}>
+                <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
+              </StyledMenuItemLink>
+            </li>
+          ))}
+        </StyledMenuItems>
+      </StyledNavigationBar>
     </>
   );
 };
