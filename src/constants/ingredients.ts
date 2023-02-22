@@ -2,7 +2,7 @@ import { IngredientDetails } from '../types/ingredients';
 
 export const INGREDIENTS: IngredientDetails[] = [
   {
-    allergens: ['Milk'],
+    allergens: ['MILK'],
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -37,7 +37,7 @@ export const INGREDIENTS: IngredientDetails[] = [
     title: 'Rosemary Lemon Pepper',
   },
   {
-    allergens: ['Fish', 'Milk'],
+    allergens: ['FISH', 'MILK'],
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -68,7 +68,7 @@ export const INGREDIENTS: IngredientDetails[] = [
     title: 'Sichuan Nooch',
   },
   {
-    allergens: ['Peanuts', 'Soy'],
+    allergens: ['PEANUTS', 'SOY'],
     ingredients: [
       'STRAWBERRY JAM',
       'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
@@ -80,5 +80,18 @@ export const INGREDIENTS: IngredientDetails[] = [
       'SALT',
     ],
     title: 'PB&J',
+  },
+  {
+    allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
+    ingredients: [
+      'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
+      'POPCORN',
+      'CANOLA OIL',
+      'NATURALLY REFINED ORGANIC COCONUT OIL',
+      'SUGAR',
+      'BAKING POWDER',
+      'SALT',
+    ],
+    title: 'Chocolate Hazelnut Espresso',
   },
 ];
