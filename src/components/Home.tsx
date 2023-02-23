@@ -22,10 +22,12 @@ const StyledHome = styled.div`
 `;
 
 const StyledThemeSection = styled.section`
+  align-items: center;
   background-color: var(--main-theme-dark);
   color: ${WHITE};
-  height: 362px;
-  text-align: center;
+  display: flex;
+  height: 400px;
+  justify-content: center;
   width: 100%;
   z-index: ${HOME_SECTION_BACKGROUND_Z_INDEX};
 `;

@@ -11,8 +11,6 @@ const StyledLogo = styled.img`
   ${SLOW_DANGLE_STYLE}
   cursor: pointer;
   height: 275px;
-  margin: 56px 0 -24px;
-  position: relative;
   width: 275px;
   z-index: ${HOME_LOGO_Z_INDEX};
 
