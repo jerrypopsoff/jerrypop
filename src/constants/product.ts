@@ -1,5 +1,5 @@
-import HrPhotograph from '../images/habanero-ranch-product.jpg';
-import PbjPhotograph from '../images/pbj-product.jpg';
+import HrPhotograph from '../images/product-habanero-ranch.jpg';
+import PbjPhotograph from '../images/product-pbj.jpg';
 import { Product } from '../types/product';
 
 export const PRODUCTS: Product[] = [
