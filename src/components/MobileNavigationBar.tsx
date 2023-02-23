@@ -63,6 +63,7 @@ const StyledHamburgerButton = styled.button`
   align-items: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -92,6 +93,7 @@ const StyledWordmark = styled.img`
 const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 0 6px;
   width: 100%;
 `;
@@ -105,7 +107,9 @@ const StyledCloseButtonIcon = styled.div`
   display: flex;
   font-size: 24px;
   font-weight: 500;
-  padding: 21px 16px;
+  // Add 2px just to be safe. Chrome on iPhone shows a tiny sliver of a gap.
+  height: ${MENU_ITEM_HEIGHT_PX + 2}px;
+  padding: 0 16px;
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -132,10 +136,13 @@ const StyledMenuItemLink = styled(Link)`
 `;
 
 const StyledMenuItemLinkInner = styled.div`
+  align-items: center;
   border: 2px solid ${THEME_NAVY};
   border-bottom: none;
   border-top: none;
-  padding: 22px 16px;
+  display: flex;
+  padding: 0 16px;
+  height: ${MENU_ITEM_HEIGHT_PX}px;
   text-align: left;
 `;
 
