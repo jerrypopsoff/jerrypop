@@ -6,7 +6,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['MILK'],
     description:
-      'Hulless and crisp popcorn smothered in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a fully compostable bag.',
+      'Hulless and crisp popcorn smothered in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -28,7 +28,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['PEANUTS', 'SOY'],
     description:
-      'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia. Locally popped, handcrafted, and packaged in a fully compostable bag.',
+      'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'STRAWBERRY JAM',
       'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
@@ -44,7 +44,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     allergens: [],
-    description: '',
+    description:
+      'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -61,7 +62,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     allergens: ['FISH', 'MILK'],
-    description: '',
+    description:
+      'Tastefully savory umami bomb popcorn featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -77,7 +79,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     allergens: [],
-    description: '',
+    description:
+      'Exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -95,7 +98,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
     description:
-      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with espresso. Locally popped, handcrafted, and packaged in a fully compostable bag.',
+      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
       'POPCORN',
