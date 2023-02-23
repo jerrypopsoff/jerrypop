@@ -8,6 +8,7 @@ import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
 import { DANGLE_STYLE } from '../constants/css/rotation';
 import { PULSE_STYLE } from '../constants/css/pulse';
+import RequestCateringDialog from './RequestCateringDialog';
 
 const StyledPageContent = styled.div`
   align-items: center;
@@ -20,7 +21,7 @@ const StyledRetailerList = styled.ul`
   padding: 0;
 `;
 
-const StyledOrderOnlineButton = styled.button`
+const StyledButton = styled.button`
   ${BUTTON_STYLE}
   ${PULSE_STYLE}
   margin: 12px 0;
@@ -31,14 +32,15 @@ const StyledOrderOnlineButton = styled.button`
   }
 `;
 
-const StyledInnerOrderOnlineButton = styled.div`
+const StyledInnerButton = styled.div`
   ${BUTTON_INNER_STYLE}
 `;
 
 const Purchase: React.FC = () => {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
+  const [isCateringFormVisible, setIsCateringFormVisible] = useState(false);
 
-  const onKeyDown = ({ key }: KeyboardEvent) => {
+  const onOrderOnlineKeyDown = ({ key }: KeyboardEvent) => {
     if (key === 'Escape') {
       onCloseOrderOnlineDialog();
     }
@@ -47,13 +49,31 @@ const Purchase: React.FC = () => {
   const onCloseOrderOnlineDialog = () => {
     setIsOrderFormVisible(false);
     document.body.style.overflow = 'unset';
-    window.removeEventListener('keydown', onKeyDown);
+    window.removeEventListener('keydown', onOrderOnlineKeyDown);
   };
 
   const onClickOrderOnline = () => {
     setIsOrderFormVisible(true);
     document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keydown', onOrderOnlineKeyDown);
+  };
+
+  const onRequestCateringKeyDown = ({ key }: KeyboardEvent) => {
+    if (key === 'Escape') {
+      onCloseRequestCateringDialog();
+    }
+  };
+
+  const onCloseRequestCateringDialog = () => {
+    setIsCateringFormVisible(false);
+    document.body.style.overflow = 'unset';
+    window.removeEventListener('keydown', onRequestCateringKeyDown);
+  };
+
+  const onClickRequestCatering = () => {
+    setIsCateringFormVisible(true);
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onRequestCateringKeyDown);
   };
 
   return (
@@ -64,12 +84,22 @@ const Purchase: React.FC = () => {
       <StyledPageContent>
         <Typography type="h1">Purchase</Typography>
         <Typography type="h2">Order</Typography>
-        <StyledOrderOnlineButton onClick={onClickOrderOnline}>
-          <StyledInnerOrderOnlineButton>Order</StyledInnerOrderOnlineButton>
-        </StyledOrderOnlineButton>
+        <Typography maxWidth="600px" type="p">
+          Order Jerrypop for local pickup or shipping.
+        </Typography>
+        <StyledButton onClick={onClickOrderOnline}>
+          <StyledInnerButton>Order</StyledInnerButton>
+        </StyledButton>
+        <Typography type="h2">Catering</Typography>
+        <Typography maxWidth="600px" type="p">
+          Serve Jerrypop at your event.
+        </Typography>
+        <StyledButton onClick={onClickRequestCatering}>
+          <StyledInnerButton>Request catering</StyledInnerButton>
+        </StyledButton>
         <Typography type="h2">Retail</Typography>
         <Typography maxWidth="600px" type="p">
-          Jerrypop is available for purchase at the following locations:
+          Purchase Jerrypop off the shelf at the following locations:
         </Typography>
         <StyledRetailerList>
           {RETAILERS.map((retailer) => (
@@ -85,15 +115,13 @@ const Purchase: React.FC = () => {
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a> for pop-ups,
           pairings, and retail partnerships.
         </Typography>
-        <Typography type="h2">Catering</Typography>
-        <Typography maxWidth="600px" type="p">
-          Interested in serving locally handcrafted popcorn at your event? Reach
-          out to <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
-        </Typography>
         {isOrderFormVisible && (
           <OrderFormDialog
             onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
           />
+        )}
+        {isCateringFormVisible && (
+          <RequestCateringDialog onCloseDialog={onCloseRequestCateringDialog} />
         )}
       </StyledPageContent>
     </>
