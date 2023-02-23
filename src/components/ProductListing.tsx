@@ -64,14 +64,12 @@ const ProductListing: React.FC<Props> = ({ product }) => {
   return (
     <StyledCard>
       <StyledInnerCard>
-        {product.photograph && (
-          <StyledProductImageContainer>
-            <StyledProductPhotograph
-              alt={`Photograph of ${product.title}`}
-              src={product.photograph}
-            />
-          </StyledProductImageContainer>
-        )}
+        <StyledProductImageContainer>
+          <StyledProductPhotograph
+            alt={`Photograph of ${product.title}`}
+            src={product.photograph}
+          />
+        </StyledProductImageContainer>
         <StyledTitle type="h3">{product.title}</StyledTitle>
         <StyledDescription margin="24px 0 0" type="p">
           {product.description}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { OFFSET_PULSE_STYLE, PULSE_STYLE } from '../constants/css/pulse';
 import { Recipe } from '../types/recipe';
 import Typography from './Typography';
 import { DANGLE_STYLE } from '../constants/css/rotation';
@@ -33,14 +32,6 @@ const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
 
     return `
       cursor: pointer;
-
-      &:nth-child(odd) {
-        ${PULSE_STYLE}
-      }
-
-      &:nth-child(even) {
-        ${OFFSET_PULSE_STYLE}
-      }
 
       &:hover,
       &:focus {
