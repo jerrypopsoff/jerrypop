@@ -78,14 +78,13 @@ const StyledDialogBackdrop = styled.div`
 `;
 
 interface Props {
-  onCloseOrderOnlineDialog: () => void;
+  onCloseDialog: () => void;
 }
 
 /**
- * Todo: de-duplicate between this file and
- * src/components/RequestCateringDialog.tsx.
+ * Todo: de-duplicate between this file and src/components/OrderFormDialog.tsx.
  */
-const OrderFormDialog: React.FC<Props> = ({ onCloseOrderOnlineDialog }) => {
+const RequestCateringDialog: React.FC<Props> = ({ onCloseDialog }) => {
   const { innerHeight, innerWidth } = useWindowSize();
   const dialogHeight = Math.max(
     innerHeight - 2 * VERTICAL_MARGIN_PX,
@@ -107,10 +106,7 @@ const OrderFormDialog: React.FC<Props> = ({ onCloseOrderOnlineDialog }) => {
         open={true}
       >
         <StyledDialogHeader>
-          <StyledCloseButton
-            aria-label="Close"
-            onClick={onCloseOrderOnlineDialog}
-          >
+          <StyledCloseButton aria-label="Close" onClick={onCloseDialog}>
             ✕
           </StyledCloseButton>
         </StyledDialogHeader>
@@ -119,16 +115,16 @@ const OrderFormDialog: React.FC<Props> = ({ onCloseOrderOnlineDialog }) => {
           height={formHeight}
           marginHeight={0}
           marginWidth={0}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdXm4aTzZVHn5RIYhC1xLy-MNtyRxohuU2tZCH-TPnU8GqGHw/viewform?embedded=true"
-          title="Jerrypop Order Form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckzswwrXnzRIOqxI5ktGX0r6DzhB0r16oGKiHvZ_aiFTMe8g/viewform?embedded=true"
+          title="Jerrypop Catering Request Form"
           width={dialogWidth}
         >
           Loading…
         </iframe>
       </StyledDialog>
-      <StyledDialogBackdrop onClick={onCloseOrderOnlineDialog} />
+      <StyledDialogBackdrop onClick={onCloseDialog} />
     </>
   );
 };
 
-export default OrderFormDialog;
+export default RequestCateringDialog;
