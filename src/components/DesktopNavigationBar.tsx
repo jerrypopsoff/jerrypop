@@ -14,7 +14,8 @@ import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 
 const StyledNavigationBar = styled.nav`
   ${NAVIGATION_BAR_STYLE}
-  margin: 0 6px;
+  margin: 0 auto;
+  max-width: 800px;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     display: none;
