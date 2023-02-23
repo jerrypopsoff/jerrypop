@@ -91,7 +91,7 @@ const Order: React.FC = () => {
       </Helmet>
       <StyledPageContent>
         <GlamorPhotograph
-          alt="Photograph of a black bowl of Jalapeño Cheddar Craft Popcorn on a wooden surface from directly above"
+          alt="Photograph of a bowl of Jalapeño Cheddar Craft Popcorn on a wooden surface from directly above"
           aspectRatio={2400 / 1350}
           fallbackSrc={JalapenoCheddarJpeg2400}
           fallbackSrcSet={`${JalapenoCheddarJpeg600} 600w, ${JalapenoCheddarJpeg1200} 1200w, ${JalapenoCheddarJpeg2400} 2400w`}
