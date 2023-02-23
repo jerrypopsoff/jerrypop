@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import type { Theme } from '../types/theme';

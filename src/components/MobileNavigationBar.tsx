@@ -6,7 +6,6 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
 import { THEME_NAVY, WHITE } from '../constants/color';
-import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import { NAVIGATION_MENU_Z_INDEX } from '../constants/z-index';
