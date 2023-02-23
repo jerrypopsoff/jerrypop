@@ -29,7 +29,6 @@ const Products: React.FC = () => {
         aspectRatio={8688 / 5792}
         fallbackSrc={Products2400}
         fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
-        maxHeightPx={550}
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
       <Typography type="h1">Products</Typography>

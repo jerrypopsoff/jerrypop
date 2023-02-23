@@ -23,11 +23,17 @@ const StyledPageContent = styled.div`
 
 const StyledRetailerList = styled.ul`
   list-style: none;
+  margin: 0;
   padding: 0;
   width: 100%;
 `;
 
 const StyledButton = styled.button`
+  ${BUTTON_STYLE}
+  margin: 12px 0;
+`;
+
+const StyledLink = styled.a`
   ${BUTTON_STYLE}
   margin: 12px 0;
 `;
@@ -83,7 +89,6 @@ const Order: React.FC = () => {
           aspectRatio={2400 / 1350}
           fallbackSrc={JalapenoCheddar2400}
           fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
-          maxHeightPx={450}
           srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
         />
         <Typography type="h1">Order</Typography>
@@ -92,13 +97,6 @@ const Order: React.FC = () => {
         </Typography>
         <StyledButton onClick={onClickOrderOnline}>Order</StyledButton>
         <Typography type="h1">How else can I get Jerrypop?</Typography>
-        <Typography type="h2">Catering</Typography>
-        <Typography maxWidth="600px" type="p">
-          Serve Jerrypop at your event.
-        </Typography>
-        <StyledButton onClick={onClickRequestCatering}>
-          Request catering
-        </StyledButton>
         <Typography type="h2">Retail</Typography>
         <Typography maxWidth="600px" type="p">
           Purchase Jerrypop off the shelf at the following locations:
@@ -117,6 +115,28 @@ const Order: React.FC = () => {
           <a href="mailto:info@jerrypop.com">info@jerrypop.com</a> for pop-ups,
           pairings, and retail partnerships.
         </Typography>
+        <Typography margin="78px 12px 12px" type="h2">
+          Pop-ups
+        </Typography>
+        <Typography maxWidth="600px" type="p">
+          Catch my next pop-up.
+        </Typography>
+        <StyledLink
+          href="https://www.instagram.com/craftpopcorn/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          See announcements
+        </StyledLink>
+        <Typography margin="78px 12px 12px" type="h2">
+          Catering
+        </Typography>
+        <Typography maxWidth="600px" type="p">
+          Serve Jerrypop at your event.
+        </Typography>
+        <StyledButton onClick={onClickRequestCatering}>
+          Request catering
+        </StyledButton>
         {isOrderFormVisible && (
           <OrderFormDialog
             onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}

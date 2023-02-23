@@ -29,7 +29,6 @@ const Recipes: React.FC = () => {
         aspectRatio={4032 / 3024}
         fallbackSrc={PbjSheet2400}
         fallbackSrcSet={`${PbjSheet600} 600w, ${PbjSheet1200} 1200w, ${PbjSheet2400} 2400w`}
-        maxHeightPx={500}
         srcSet={`${PbjSheetWebp600} 600w, ${PbjSheetWebp1200} 1200w, ${PbjSheetWebp2400} 2400w`}
       />
       <Typography type="h1">Recipes</Typography>

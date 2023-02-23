@@ -48,7 +48,7 @@ export const RECIPES: Recipe[] = [
     steps: [
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -138,7 +138,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -199,7 +199,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -291,7 +291,7 @@ export const RECIPES: Recipe[] = [
     steps: [
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -350,7 +350,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -452,7 +452,7 @@ export const RECIPES: Recipe[] = [
     steps: [
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },
@@ -531,7 +531,7 @@ export const RECIPES: Recipe[] = [
     steps: [
       {
         aside:
-          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noopener">Alton Brown’s perfect popcorn</a> technique.',
+          'My favorite method is <a href="https://www.foodnetwork.com/recipes/alton-brown/perfect-popcorn-recipe-1917417" target="_blank" rel="noreferrer">Alton Brown’s perfect popcorn</a> technique.',
         content:
           'Pop popcorn kernels via your favorite method and transfer to a massive mixing bowl',
       },

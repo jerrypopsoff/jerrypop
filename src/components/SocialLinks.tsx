@@ -38,7 +38,7 @@ const SocialLinks: React.FC = () => {
         <StyledSocialLink
           href={FACEBOOK_PROFILE_URL}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <StyledSocialLinkIcon alt="Jerrypop on Facebook" src={FacebookIcon} />
         </StyledSocialLink>
@@ -47,7 +47,7 @@ const SocialLinks: React.FC = () => {
         <StyledSocialLink
           href={INSTAGRAM_PROFILE_URL}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
@@ -59,7 +59,7 @@ const SocialLinks: React.FC = () => {
         <StyledSocialLink
           href={YOU_TUBE_CHANNEL_URL}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <StyledSocialLinkIcon alt="Jerrypop on YouTube" src={YouTubeIcon} />
         </StyledSocialLink>

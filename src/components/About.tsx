@@ -61,7 +61,6 @@ const About: React.FC = () => {
           aspectRatio={3557 / 2260}
           fallbackSrc={BlueberryPancake2400}
           fallbackSrcSet={`${BlueberryPancake600} 600w, ${BlueberryPancake1200} 1200w, ${BlueberryPancake2400} 2400w`}
-          maxHeightPx={500}
           srcSet={`${BlueberryPancakeWebp600} 600w, ${BlueberryPancakeWebp1200} 1200w, ${BlueberryPancakeWebp2400} 2400w`}
         />
         <Typography type="h1">About Jerry</Typography>

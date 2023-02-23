@@ -13,8 +13,6 @@ import { FOOTER_TOP_MARGIN_PX } from '../constants/breakpoint';
 import { Link } from 'react-router-dom';
 import { BUTTON_STYLE } from '../constants/css/button';
 
-const PHOTOGRAPH_MAX_HEIGHT_PX = 450;
-
 const StyledHome = styled.div`
   align-items: center;
   display: flex;
@@ -25,7 +23,7 @@ const StyledHome = styled.div`
 const StyledRegularSection = styled.section`
   align-items: center;
   display: flex;
-  height: ${PHOTOGRAPH_MAX_HEIGHT_PX - 2 * FOOTER_TOP_MARGIN_PX}px;
+  height: 294px;
   flex-direction: column;
   justify-content: center;
   margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
@@ -55,7 +53,6 @@ const Home: React.FC = () => {
           aspectRatio={17 / 10}
           fallbackSrc={HabaneroRanch2400}
           fallbackSrcSet={`${HabaneroRanch600} 600w, ${HabaneroRanch1200} 1200w, ${HabaneroRanch2400} 2400w`}
-          maxHeightPx={PHOTOGRAPH_MAX_HEIGHT_PX}
           srcSet={`${HabaneroRanchWebp600} 600w, ${HabaneroRanchWebp1200} 1200w, ${HabaneroRanchWebp2400} 2400w`}
         />
         <StyledRegularSection>
