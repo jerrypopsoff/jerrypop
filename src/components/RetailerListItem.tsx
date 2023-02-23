@@ -16,13 +16,7 @@ const StyledRetailerAnchor = styled.a`
   text-decoration: none;
 `;
 
-const StyledPhotograph = styled.img`
-  height: 200px;
-  width: 200px;
-`;
-
 const StyledInformation = styled.div`
-  margin: 16px 0 0;
   text-align: center;
 `;
 
@@ -31,7 +25,7 @@ interface Props {
 }
 
 const RetailerListItem: React.FC<Props> = ({
-  retailer: { address, href, name, photograph },
+  retailer: { address, href, name },
 }) => {
   return (
     <StyledListItem>
@@ -40,7 +34,6 @@ const RetailerListItem: React.FC<Props> = ({
         rel="noopener noreferrer"
         target="_blank"
       >
-        <StyledPhotograph alt={`Photograph of ${name}`} src={photograph} />
         <StyledInformation>
           <Typography margin="4px 0" type="h3">
             {name}
