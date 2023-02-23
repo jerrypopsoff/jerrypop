@@ -10,6 +10,8 @@ import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
 import { FOOTER_TOP_MARGIN_PX } from '../constants/breakpoint';
+import { Link } from 'react-router-dom';
+import { BUTTON_STYLE } from '../constants/css/button';
 
 const PHOTOGRAPH_MAX_HEIGHT_PX = 450;
 
@@ -32,9 +34,13 @@ const StyledRegularSection = styled.section`
 
 const StyledTagline = styled(Typography)`
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 16px;
   max-width: 600px;
   padding: 0 24px;
+`;
+
+const StyledCallToActionLink = styled(Link)`
+  ${BUTTON_STYLE}
 `;
 
 const Home: React.FC = () => {
@@ -56,6 +62,7 @@ const Home: React.FC = () => {
           <StyledTagline type="h1">
             Locally handcrafted San Francisco popcorn.
           </StyledTagline>
+          <StyledCallToActionLink to="/order">Order</StyledCallToActionLink>
         </StyledRegularSection>
       </StyledHome>
     </>
