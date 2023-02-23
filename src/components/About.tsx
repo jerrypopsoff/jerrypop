@@ -13,18 +13,33 @@ const StyledAbout = styled.div`
   text-align: center;
 `;
 
+const StyledPhotographContainer = styled.div`
+  height: 555px;
+  margin: 24px 0;
+  text-align: left;
+
+  @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
+    box-sizing: border-box;
+    height: unset;
+    padding: 0 12px;
+    width: 100%;
+  }
+`;
+
 const StyledAboutPhotograph = styled.img`
   height: 534px;
-  margin: 24px 0;
   max-width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
   width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
 
   @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
-    box-sizing: border-box;
-    height: auto;
-    padding: 0 12px;
+    height: unset;
     width: 100%;
   }
+`;
+
+const StyledPhotographCredit = styled(Typography)`
+  font-size: 12px;
+  margin: 4px 0 0;
 `;
 
 const About: React.FC = () => {
@@ -35,10 +50,22 @@ const About: React.FC = () => {
       </Helmet>
       <StyledAbout>
         <Typography type="h1">About Jerry</Typography>
-        <StyledAboutPhotograph
-          alt="Photograph of Jerry, founder and owner-operator of Jerrypop"
-          src={AboutPhotograph}
-        />
+        <StyledPhotographContainer>
+          <StyledAboutPhotograph
+            alt="Photograph of Jerry, founder and owner-operator of Jerrypop"
+            src={AboutPhotograph}
+          />
+          <StyledPhotographCredit type="p">
+            Photograph by{' '}
+            <a
+              href="https://www.malindiwalker.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Malindi Walker
+            </a>
+          </StyledPhotographCredit>
+        </StyledPhotographContainer>
         <Typography maxWidth="600px" type="p">
           My interest in popcorn sparked in 2013, when I began making lightly
           flavored popcorn on my journey to losing 130 pounds in 14 months.
