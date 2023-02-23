@@ -137,7 +137,7 @@ const RecipeComponent: React.FC<Props> = ({ recipe }) => {
           ></iframe>
         </StyledVideo>
       ) : null}
-      <Typography hasTextShadow={false} margin="24px 0 16px" type="h4">
+      <Typography margin="24px 0 16px" type="h4">
         Materials
       </Typography>
       <StyledMaterials>
@@ -148,7 +148,7 @@ const RecipeComponent: React.FC<Props> = ({ recipe }) => {
           </StyledMaterial>
         ))}
       </StyledMaterials>
-      <Typography hasTextShadow={false} margin="24px 0 16px" type="h4">
+      <Typography margin="24px 0 16px" type="h4">
         Instructions
       </Typography>
       <StyledSteps>
@@ -183,9 +183,7 @@ const RecipeComponent: React.FC<Props> = ({ recipe }) => {
       tabIndex={isCollapsed ? 0 : undefined}
     >
       <StyledInnerRecipe>
-        <StyledTitle hasTextShadow={false} type="h3">
-          {recipe.title}
-        </StyledTitle>
+        <StyledTitle type="h3">{recipe.title}</StyledTitle>
         <StyledTime>{recipe.time}</StyledTime>
         {recipeDetails}
       </StyledInnerRecipe>
