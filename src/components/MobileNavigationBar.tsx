@@ -29,7 +29,7 @@ interface Slideable {
 }
 
 const SLIDE_STYLE = css<Slideable>`
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform: ${({ isOpen, slideDistancePx }) =>
     `translateY(${isOpen ? `${slideDistancePx}px` : '0'})`};
 `;
