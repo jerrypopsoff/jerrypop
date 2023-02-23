@@ -4,11 +4,14 @@ import Typography from './Typography';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { useTheme } from '../hooks/use-theme';
-import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
+import {
+  FOOTER_TOP_MARGIN_PX,
+  WINDOW_NARROW_WIDTH_PX,
+} from '../constants/breakpoint';
 import { WHITE } from '../constants/color';
 
 const StyledFooter = styled.footer`
-  margin: 78px 0 0;
+  margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
 `;
 
 const StyledThemeSection = styled.div`
