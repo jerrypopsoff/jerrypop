@@ -5,12 +5,12 @@ import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
-import Products600 from '../images/glamorous-products-600.jpg';
-import Products1200 from '../images/glamorous-products-1200.jpg';
-import Products2400 from '../images/glamorous-products-2400.jpg';
-import ProductsWebp600 from '../images/glamorous-products-600.webp';
-import ProductsWebp1200 from '../images/glamorous-products-1200.webp';
-import ProductsWebp2400 from '../images/glamorous-products-2400.webp';
+import Products600 from '../images/glamorous-packaging-600.jpg';
+import Products1200 from '../images/glamorous-packaging-1200.jpg';
+import Products2400 from '../images/glamorous-packaging-2400.jpg';
+import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
+import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
+import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
 
 const StyledUnorderedList = styled.ul`
   padding: 0;
@@ -26,10 +26,10 @@ const Products: React.FC = () => {
       </Helmet>
       <GlamorPhotograph
         alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bartop"
-        aspectRatio={1 / 1}
+        aspectRatio={8688 / 5792}
         fallbackSrc={Products2400}
         fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
-        maxHeightPx={500}
+        maxHeightPx={550}
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
       <Typography type="h1">Products</Typography>
