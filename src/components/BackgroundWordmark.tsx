@@ -1,5 +1,5 @@
 import React from 'react';
-import { HOME_WORDMARK_Z_INDEX } from '../constants/z-index';
+import { BACKGROUND_WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';
 import styled from 'styled-components';
 
@@ -8,7 +8,7 @@ const StyledWordmark = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: ${HOME_WORDMARK_Z_INDEX};
+  z-index: ${BACKGROUND_WORDMARK_Z_INDEX};
 `;
 
 interface Props {
