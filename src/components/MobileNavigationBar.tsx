@@ -101,11 +101,11 @@ const StyledCloseButtonIcon = styled.div`
   border: 2px solid ${THEME_NAVY};
   border-bottom: none;
   border-top: none;
+  color: ${THEME_NAVY};
   display: flex;
   font-size: 24px;
   font-weight: 500;
-  height: ${MENU_ITEM_HEIGHT_PX}px;
-  padding-left: 16px;
+  padding: 21px 16px;
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -135,7 +135,7 @@ const StyledMenuItemLinkInner = styled.div`
   border: 2px solid ${THEME_NAVY};
   border-bottom: none;
   border-top: none;
-  padding: 20px 0 20px 16px;
+  padding: 22px 16px;
   text-align: left;
 `;
 
