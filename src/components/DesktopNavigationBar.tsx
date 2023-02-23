@@ -64,9 +64,11 @@ const DesktopNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
         </StyledWordmarkLink>
         <StyledMenuItems>
           {navigationMenuItems.map(({ displayName, to }) => (
-            <StyledNavigationMenuLink key={displayName} to={to}>
-              {displayName}
-            </StyledNavigationMenuLink>
+            <li key={displayName}>
+              <StyledNavigationMenuLink to={to}>
+                {displayName}
+              </StyledNavigationMenuLink>
+            </li>
           ))}
         </StyledMenuItems>
       </StyledNavigationBarContent>

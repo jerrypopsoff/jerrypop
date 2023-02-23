@@ -13,6 +13,7 @@ import HabaneroRanchJpeg2400 from '../images/glamorous-habanero-ranch-2400.jpeg'
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
+import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledHome = styled.div`
   align-items: center;
@@ -30,6 +31,10 @@ const StyledThemeSection = styled.section`
   justify-content: center;
   width: 100%;
   z-index: ${HOME_SECTION_BACKGROUND_Z_INDEX};
+
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    height: 280px;
+  }
 `;
 
 const StyledRegularSection = styled.section`

@@ -1,15 +1,15 @@
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import React from 'react';
 import styled from 'styled-components';
+import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledSvg = styled.svg`
   height: 225px;
   margin: -59px 0;
   width: auto;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    height: 225px;
-    margin: -59px 0;
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    height: 155px;
+    margin: -40px 0;
   }
 `;
 

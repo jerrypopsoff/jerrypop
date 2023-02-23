@@ -6,6 +6,7 @@ import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 import { HOME_LOGO_Z_INDEX } from '../constants/z-index';
+import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledLogo = styled.img`
   ${SLOW_DANGLE_STYLE}
@@ -18,6 +19,11 @@ const StyledLogo = styled.img`
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Non-prefixed version, currently
                         supported by Chrome, Edge, Opera and Firefox */
+
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    height: 175px;
+    width: 175px;
+  }
 `;
 
 interface Props {
