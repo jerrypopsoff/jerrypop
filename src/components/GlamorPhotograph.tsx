@@ -16,7 +16,6 @@ const StyledImageContainer = styled.div<StyledGlamorPhotographProps>`
 
 const StyledImage = styled(OptimizedImage)<StyledGlamorPhotographProps>`
   aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
-  background-color: var(--main-theme-medium);
   max-height: ${({ $maxHeightPx }) =>
     $maxHeightPx ? `${$maxHeightPx}px` : ''};
   object-fit: cover;
