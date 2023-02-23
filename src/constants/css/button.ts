@@ -2,29 +2,22 @@ import { THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
 
 export const BUTTON_STYLE = css`
-  background-color: ${WHITE};
+  align-items: center;
+  background-color: ${THEME_NAVY};
   border: none;
-  border-radius: 5px;
-  color: ${THEME_NAVY};
+  border-radius: 3px;
+  color: ${WHITE};
   cursor: pointer;
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
   letter-spacing: 0.25px;
   margin: 8px;
-  min-width: 230px;
-  padding: 6px;
+  padding: 16px 24px;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
-    color: ${THEME_NAVY};
+    color: ${WHITE};
   }
-`;
-
-export const BUTTON_INNER_STYLE = css`
-  align-items: center;
-  border: 2px solid ${THEME_NAVY};
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
 `;

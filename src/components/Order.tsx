@@ -5,7 +5,7 @@ import Typography from './Typography';
 import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
-import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
+import { BUTTON_STYLE } from '../constants/css/button';
 import { DANGLE_STYLE } from '../constants/css/rotation';
 import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -36,10 +36,6 @@ const StyledButton = styled.button`
   &:focus {
     ${DANGLE_STYLE}
   }
-`;
-
-const StyledInnerButton = styled.div`
-  ${BUTTON_INNER_STYLE}
 `;
 
 const Order: React.FC = () => {
@@ -100,16 +96,14 @@ const Order: React.FC = () => {
         <Typography maxWidth="600px" type="p">
           Order Jerrypop for local pickup or shipping.
         </Typography>
-        <StyledButton onClick={onClickOrderOnline}>
-          <StyledInnerButton>Order</StyledInnerButton>
-        </StyledButton>
+        <StyledButton onClick={onClickOrderOnline}>Order</StyledButton>
         <Typography type="h1">How else can I get Jerrypop?</Typography>
         <Typography type="h2">Catering</Typography>
         <Typography maxWidth="600px" type="p">
           Serve Jerrypop at your event.
         </Typography>
         <StyledButton onClick={onClickRequestCatering}>
-          <StyledInnerButton>Request catering</StyledInnerButton>
+          Request catering
         </StyledButton>
         <Typography type="h2">Retail</Typography>
         <Typography maxWidth="600px" type="p">
