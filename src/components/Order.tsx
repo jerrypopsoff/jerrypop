@@ -10,9 +10,9 @@ import { DANGLE_STYLE } from '../constants/css/rotation';
 import { PULSE_STYLE } from '../constants/css/pulse';
 import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
-import JalapenoCheddarJpeg600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
-import JalapenoCheddarJpeg1200 from '../images/glamorous-jalapeno-cheddar-1200.jpeg';
-import JalapenoCheddarJpeg2400 from '../images/glamorous-jalapeno-cheddar-2400.jpeg';
+import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
+import JalapenoCheddar1200 from '../images/glamorous-jalapeno-cheddar-1200.jpeg';
+import JalapenoCheddar2400 from '../images/glamorous-jalapeno-cheddar-2400.jpeg';
 import JalapenoCheddarWebp600 from '../images/glamorous-jalapeno-cheddar-600.webp';
 import JalapenoCheddarWebp1200 from '../images/glamorous-jalapeno-cheddar-1200.webp';
 import JalapenoCheddarWebp2400 from '../images/glamorous-jalapeno-cheddar-2400.webp';
@@ -93,8 +93,8 @@ const Order: React.FC = () => {
         <GlamorPhotograph
           alt="Photograph of a bowl of Jalapeño Cheddar Craft Popcorn on a wooden surface from directly above"
           aspectRatio={2400 / 1350}
-          fallbackSrc={JalapenoCheddarJpeg2400}
-          fallbackSrcSet={`${JalapenoCheddarJpeg600} 600w, ${JalapenoCheddarJpeg1200} 1200w, ${JalapenoCheddarJpeg2400} 2400w`}
+          fallbackSrc={JalapenoCheddar2400}
+          fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
           maxHeightPx={450}
           srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
         />

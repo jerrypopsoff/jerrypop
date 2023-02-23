@@ -7,9 +7,9 @@ import { useTheme } from '../hooks/use-theme';
 import { WHITE } from '../constants/color';
 import { HOME_SECTION_BACKGROUND_Z_INDEX } from '../constants/z-index';
 import GlamorPhotograph from './GlamorPhotograph';
-import HabaneroRanchJpeg600 from '../images/glamorous-habanero-ranch-600.jpeg';
-import HabaneroRanchJpeg1200 from '../images/glamorous-habanero-ranch-1200.jpeg';
-import HabaneroRanchJpeg2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
+import HabaneroRanch600 from '../images/glamorous-habanero-ranch-600.jpeg';
+import HabaneroRanch1200 from '../images/glamorous-habanero-ranch-1200.jpeg';
+import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
@@ -69,8 +69,8 @@ const Home: React.FC = () => {
           <GlamorPhotograph
             alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wooden surface taken from directly above"
             aspectRatio={17 / 10}
-            fallbackSrc={HabaneroRanchJpeg2400}
-            fallbackSrcSet={`${HabaneroRanchJpeg600} 600w, ${HabaneroRanchJpeg1200} 1200w, ${HabaneroRanchJpeg2400} 2400w`}
+            fallbackSrc={HabaneroRanch2400}
+            fallbackSrcSet={`${HabaneroRanch600} 600w, ${HabaneroRanch1200} 1200w, ${HabaneroRanch2400} 2400w`}
             maxHeightPx={600}
             srcSet={`${HabaneroRanchWebp600} 600w, ${HabaneroRanchWebp1200} 1200w, ${HabaneroRanchWebp2400} 2400w`}
           />

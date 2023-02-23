@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
-import ProductsJpg600 from '../images/glamorous-products-600.jpg';
-import ProductsJpg1200 from '../images/glamorous-products-1200.jpg';
-import ProductsJpg2400 from '../images/glamorous-products-2400.jpg';
+import Products600 from '../images/glamorous-products-600.jpg';
+import Products1200 from '../images/glamorous-products-1200.jpg';
+import Products2400 from '../images/glamorous-products-2400.jpg';
 import ProductsWebp600 from '../images/glamorous-products-600.webp';
 import ProductsWebp1200 from '../images/glamorous-products-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-products-2400.webp';
@@ -27,8 +27,8 @@ const Products: React.FC = () => {
       <GlamorPhotograph
         alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bartop"
         aspectRatio={1 / 1}
-        fallbackSrc={ProductsJpg2400}
-        fallbackSrcSet={`${ProductsJpg600} 600w, ${ProductsJpg1200} 1200w, ${ProductsJpg2400} 2400w`}
+        fallbackSrc={Products2400}
+        fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
         maxHeightPx={500}
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
