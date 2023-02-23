@@ -7,15 +7,12 @@ import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 
-const LOGO_NARROW_SIZE_PX = 275;
-const LOGO_WIDE_SIZE_PX = 450;
-
 const StyledLogo = styled.img`
   ${SLOW_DANGLE_STYLE}
   cursor: pointer;
-  height: ${LOGO_WIDE_SIZE_PX}px;
+  height: 275px;
   margin: 56px 0 -24px;
-  width: ${LOGO_WIDE_SIZE_PX}px;
+  width: 275px;
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -23,8 +20,6 @@ const StyledLogo = styled.img`
                         supported by Chrome, Edge, Opera and Firefox */
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    height: ${LOGO_NARROW_SIZE_PX}px;
-    width: ${LOGO_NARROW_SIZE_PX}px;
   }
 `;
 

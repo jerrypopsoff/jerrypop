@@ -5,12 +5,34 @@ import styled from 'styled-components';
 import InstagramFeed from './InstagramFeed';
 import Logo from './Logo';
 import { useTheme } from '../hooks/use-theme';
+import { WHITE } from '../constants/color';
+import { HOME_SECTION_BACKGROUND_Z_INDEX } from '../constants/z-index';
 
 const StyledHome = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   text-align: center;
+`;
+
+const StyledThemeSection = styled.section`
+  background-color: var(--main-theme-dark);
+  color: ${WHITE};
+  height: 362px;
+  text-align: center;
+  width: 100%;
+  z-index: ${HOME_SECTION_BACKGROUND_Z_INDEX};
+`;
+
+const StyledRegularSection = styled.section`
+  background-color: ${WHITE};
+  width: 100%;
+  z-index: ${HOME_SECTION_BACKGROUND_Z_INDEX};
+`;
+
+const StyledTagline = styled(Typography)`
+  font-size: 18px;
+  text-transform: none;
 `;
 
 const Home: React.FC = () => {
@@ -22,12 +44,15 @@ const Home: React.FC = () => {
         <title>Jerrypop</title>
       </Helmet>
       <StyledHome>
-        <Logo onToggleTheme={rotateTheme} theme={theme} />
-        <Typography type="h1">Poppin’ off with Jerry</Typography>
-        <Typography maxWidth="600px" type="p">
-          Locally handcrafted popcorn from San Francisco, California.
-        </Typography>
-        <InstagramFeed />
+        <StyledThemeSection>
+          <Logo onToggleTheme={rotateTheme} theme={theme} />
+        </StyledThemeSection>
+        <StyledRegularSection>
+          <StyledTagline margin="48px auto" maxWidth="600px" type="h1">
+            Locally handcrafted San Francisco popcorn.
+          </StyledTagline>
+          <InstagramFeed />
+        </StyledRegularSection>
       </StyledHome>
     </>
   );

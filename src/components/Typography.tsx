@@ -37,7 +37,7 @@ type StyledTypography = Omit<Props, 'type'>;
 const StyledH1 = styled.h1<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 78px;
+  font-size: 54px;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     font-size: 48px;
@@ -71,7 +71,7 @@ const StyledP = styled.p<StyledTypography>`
 `;
 
 const Typography: React.FC<Props> = ({
-  hasTextShadow = true,
+  hasTextShadow = false,
   margin,
   type,
   ...props

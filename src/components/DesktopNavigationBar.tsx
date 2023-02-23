@@ -15,7 +15,10 @@ import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 const StyledNavigationBar = styled.nav`
   ${NAVIGATION_BAR_STYLE}
   margin: 0 auto;
-  max-width: 800px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     display: none;
@@ -44,7 +47,7 @@ const StyledMenuItems = styled.ul`
 
 const StyledNavigationMenuLink = styled(Link)`
   ${NAVIGATION_MENU_LINK_STYLE}
-  font-size: 16px;
+  font-size: 14px;
   padding: 12px 24px 20px;
 `;
 

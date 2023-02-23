@@ -10,8 +10,8 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
     to: '/products',
   },
   {
-    displayName: 'Purchase',
-    to: '/purchase',
+    displayName: 'Order',
+    to: '/order',
   },
   {
     displayName: 'Recipes',

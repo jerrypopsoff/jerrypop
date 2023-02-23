@@ -4,7 +4,6 @@ import useScript from '../hooks/use-script';
 
 const StyledInstagramFeed = styled.div`
   box-sizing: border-box;
-  margin: 36px 0 0;
   padding: 0 12px;
   width: 100%;
 `;
