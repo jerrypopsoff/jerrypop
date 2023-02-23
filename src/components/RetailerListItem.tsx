@@ -30,11 +30,7 @@ const RetailerListItem: React.FC<Props> = ({
 }) => {
   return (
     <StyledListItem>
-      <StyledRetailerAnchor
-        href={href}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <StyledRetailerAnchor href={href} rel="noreferrer" target="_blank">
         <StyledInformation>
           <Typography margin="4px 0" type="h3">
             {name}
