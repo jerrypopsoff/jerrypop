@@ -36,7 +36,7 @@ const StyledWordmarkLink = styled(Link)`
 
 const StyledWordmark = styled.img`
   height: 36px;
-  margin-top: 16px;
+  margin: 16px 4px 0 0;
   width: 160px;
 `;
 
