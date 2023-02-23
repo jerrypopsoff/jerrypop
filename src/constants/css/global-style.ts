@@ -1,4 +1,4 @@
-import { GRAYSCALE_LIGHT, THEME_NAVY, WHITE } from '../color';
+import { THEME_NAVY } from '../color';
 import {
   DESKTOP_NAVIGATION_BAR_HEIGHT_PX,
   KERNEL_NARROW_SIZE_PX,
@@ -36,14 +36,14 @@ body {
 }
 
 a {
-  color: ${WHITE};
+  color: ${THEME_NAVY};
   cursor: pointer;
   text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: ${GRAYSCALE_LIGHT};
+  color: ${THEME_NAVY};
 }
 
 button {

@@ -4,7 +4,6 @@ import {
   WITH_TEXT_SHADOW_STYLE,
 } from '../constants/css/shadow';
 import React from 'react';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
 const headingStyle = css<{ hasTextShadow?: boolean }>`
   ${({ hasTextShadow }) => (hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined)}
@@ -37,11 +36,7 @@ type StyledTypography = Omit<Props, 'type'>;
 const StyledH1 = styled.h1<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 54px;
-
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    font-size: 48px;
-  }
+  font-size: 48px;
 `;
 
 const StyledH2 = styled.h2<StyledTypography>`

@@ -19,6 +19,7 @@ const StyledPageContent = styled.div`
 const StyledRetailerList = styled.ul`
   list-style: none;
   padding: 0;
+  width: 100%;
 `;
 
 const StyledButton = styled.button`

@@ -21,9 +21,6 @@ const StyledLogo = styled.img`
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Non-prefixed version, currently
                         supported by Chrome, Edge, Opera and Firefox */
-
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-  }
 `;
 
 interface Props {

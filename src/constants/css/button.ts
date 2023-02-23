@@ -1,9 +1,7 @@
 import { THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
-import { WITH_BOX_SHADOW_STYLE } from './shadow';
 
 export const BUTTON_STYLE = css`
-  ${WITH_BOX_SHADOW_STYLE}
   background-color: ${WHITE};
   border: none;
   border-radius: 5px;
