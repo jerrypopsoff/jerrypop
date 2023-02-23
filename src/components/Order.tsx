@@ -89,7 +89,6 @@ const Order: React.FC = () => {
           aspectRatio={2400 / 1350}
           fallbackSrc={JalapenoCheddar2400}
           fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
-          maxHeightPx={450}
           srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
         />
         <Typography type="h1">Order</Typography>

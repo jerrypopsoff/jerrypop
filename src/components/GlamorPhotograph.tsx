@@ -4,20 +4,18 @@ import OptimizedImage from './OptimizedImage';
 
 interface StyledGlamorPhotographProps {
   $aspectRatio: number;
-  $maxHeightPx?: number;
+  $maxHeightPx: number;
 }
 
 const StyledImageContainer = styled.div<StyledGlamorPhotographProps>`
   height: calc(100% / ${({ $aspectRatio }) => $aspectRatio});
-  max-height: ${({ $maxHeightPx }) =>
-    $maxHeightPx ? `${$maxHeightPx}px` : ''};
+  max-height: ${({ $maxHeightPx }) => $maxHeightPx}px;
   width: 100%;
 `;
 
 const StyledImage = styled(OptimizedImage)<StyledGlamorPhotographProps>`
   aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
-  max-height: ${({ $maxHeightPx }) =>
-    $maxHeightPx ? `${$maxHeightPx}px` : ''};
+  max-height: ${({ $maxHeightPx }) => $maxHeightPx}px;
   object-fit: cover;
   width: 100%;
 `;
@@ -37,7 +35,7 @@ const GlamorPhotograph: React.FC<Props> = ({
   aspectRatio = 16 / 9,
   fallbackSrc,
   fallbackSrcSet,
-  maxHeightPx,
+  maxHeightPx = 450,
   srcSet,
   type = 'image/webp',
 }) => {
