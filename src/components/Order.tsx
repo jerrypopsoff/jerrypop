@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE } from '../constants/css/button';
-import { DANGLE_STYLE } from '../constants/css/rotation';
 import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
 import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
@@ -31,11 +30,6 @@ const StyledRetailerList = styled.ul`
 const StyledButton = styled.button`
   ${BUTTON_STYLE}
   margin: 12px 0;
-
-  &:hover,
-  &:focus {
-    ${DANGLE_STYLE}
-  }
 `;
 
 const Order: React.FC = () => {

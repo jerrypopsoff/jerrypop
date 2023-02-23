@@ -1,5 +1,6 @@
 import { THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
+import { DANGLE_STYLE } from './rotation';
 
 export const BUTTON_STYLE = css`
   align-items: center;
@@ -14,10 +15,12 @@ export const BUTTON_STYLE = css`
   letter-spacing: 0.25px;
   margin: 8px;
   padding: 16px 24px;
+  text-decoration: none;
   text-transform: uppercase;
 
   &:hover,
   &:focus {
+    ${DANGLE_STYLE}
     color: ${WHITE};
   }
 `;
