@@ -6,13 +6,14 @@ import Typography from './Typography';
 
 const StyledListItem = styled.li`
   ${CARD_OUTER_STYLE}
+  margin: 12px auto;
 `;
 
 const StyledRetailerAnchor = styled.a`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 8px;
   text-decoration: none;
 `;
 
