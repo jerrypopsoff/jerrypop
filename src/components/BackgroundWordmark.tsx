@@ -1,5 +1,5 @@
 import React from 'react';
-import { WORDMARK_Z_INDEX } from '../constants/z-index';
+import { HOME_WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';
 import styled from 'styled-components';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
@@ -12,7 +12,7 @@ const StyledWordmark = styled.div`
   position: absolute;
   right: 0;
   top: 150px;
-  z-index: ${WORDMARK_Z_INDEX};
+  z-index: ${HOME_WORDMARK_Z_INDEX};
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     top: 117px;

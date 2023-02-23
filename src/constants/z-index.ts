@@ -10,5 +10,6 @@ export const NAVIGATION_MENU_Z_INDEX = 1997;
 /**
  * Home page
  */
-export const WORDMARK_Z_INDEX = -1;
-export const HOME_SECTION_BACKGROUND_Z_INDEX = -2;
+export const HOME_WORDMARK_Z_INDEX = 2;
+export const HOME_LOGO_Z_INDEX = 3;
+export const HOME_SECTION_BACKGROUND_Z_INDEX = 1;
