@@ -7,7 +7,6 @@ import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
 import { DANGLE_STYLE } from '../constants/css/rotation';
-import { PULSE_STYLE } from '../constants/css/pulse';
 import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
 import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
@@ -31,7 +30,6 @@ const StyledRetailerList = styled.ul`
 
 const StyledButton = styled.button`
   ${BUTTON_STYLE}
-  ${PULSE_STYLE}
   margin: 12px 0;
 
   &:hover,
@@ -105,6 +103,7 @@ const Order: React.FC = () => {
         <StyledButton onClick={onClickOrderOnline}>
           <StyledInnerButton>Order</StyledInnerButton>
         </StyledButton>
+        <Typography type="h1">How else can I get Jerrypop?</Typography>
         <Typography type="h2">Catering</Typography>
         <Typography maxWidth="600px" type="p">
           Serve Jerrypop at your event.
