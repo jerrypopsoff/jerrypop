@@ -7,7 +7,6 @@ import React from 'react';
 
 const headingStyle = css<{ hasTextShadow?: boolean }>`
   ${({ hasTextShadow }) => (hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined)}
-  text-transform: uppercase;
 `;
 
 const withDynamicStyles = css<{
@@ -36,7 +35,7 @@ type StyledTypography = Omit<Props, 'type'>;
 const StyledH1 = styled.h1<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 32px;
+  font-size: 28px;
 `;
 
 const StyledH2 = styled.h2<StyledTypography>`

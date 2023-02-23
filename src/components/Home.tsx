@@ -48,7 +48,6 @@ const StyledTagline = styled(Typography)`
   margin: 78px auto;
   max-width: 600px;
   padding: 0 24px;
-  text-transform: none;
 `;
 
 const Home: React.FC = () => {
