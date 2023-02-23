@@ -1,19 +1,18 @@
 import React from 'react';
-import { WORDMARK_Z_INDEX } from '../constants/z-index';
+import { HOME_WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';
 import styled from 'styled-components';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
-const StyledWordmark = styled.div<{ isFixed: boolean }>`
+const StyledWordmark = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   left: 0;
-  opacity: ${({ isFixed }) => (isFixed ? '0.05' : '1.0')};
-  position: ${({ isFixed }) => (isFixed ? 'fixed' : 'absolute')};
+  position: absolute;
   right: 0;
   top: 150px;
-  z-index: ${WORDMARK_Z_INDEX};
+  z-index: ${HOME_WORDMARK_Z_INDEX};
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     top: 117px;
@@ -22,17 +21,12 @@ const StyledWordmark = styled.div<{ isFixed: boolean }>`
 
 interface Props {
   fillColor: string;
-  isFixed?: boolean;
   repeat?: number;
 }
 
-const BackgroundWordmark: React.FC<Props> = ({
-  fillColor,
-  isFixed = false,
-  repeat = 3,
-}) => {
+const BackgroundWordmark: React.FC<Props> = ({ fillColor, repeat = 3 }) => {
   return (
-    <StyledWordmark aria-hidden="true" isFixed={isFixed}>
+    <StyledWordmark aria-hidden="true">
       {Array.from({ length: repeat }).map((e, index) => (
         <div key={index}>
           <WordmarkImage fillColor={fillColor} />

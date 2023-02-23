@@ -5,14 +5,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
 import NotFound from './NotFound';
-import Purchase from './Purchase';
+import Order from './Order';
 import React from 'react';
 import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
 import NavigationBar from './NavigationBar';
-import { BLACK } from '../constants/color';
-import BackgroundWordmark from './BackgroundWordmark';
 import Products from './Products';
 
 const App: React.FC = () => {
@@ -25,7 +23,6 @@ const App: React.FC = () => {
         <Router>
           <ScrollToTop />
           <NavigationBar />
-          <BackgroundWordmark fillColor={BLACK} isFixed={true} />
           <Routes>
             {/**
              * Each route should be represented in each of the following places:
@@ -37,7 +34,7 @@ const App: React.FC = () => {
              */}
             <Route element={<Home />} path="/" />
             <Route element={<Products />} path="/products" />
-            <Route element={<Purchase />} path="/purchase" />
+            <Route element={<Order />} path="/order" />
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<About />} path="/about" />
             <Route element={<NotFound />} path="*" />

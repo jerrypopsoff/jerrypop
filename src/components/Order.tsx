@@ -19,6 +19,7 @@ const StyledPageContent = styled.div`
 const StyledRetailerList = styled.ul`
   list-style: none;
   padding: 0;
+  width: 100%;
 `;
 
 const StyledButton = styled.button`
@@ -36,7 +37,7 @@ const StyledInnerButton = styled.div`
   ${BUTTON_INNER_STYLE}
 `;
 
-const Purchase: React.FC = () => {
+const Order: React.FC = () => {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
   const [isCateringFormVisible, setIsCateringFormVisible] = useState(false);
 
@@ -79,11 +80,10 @@ const Purchase: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Purchase · Jerrypop</title>
+        <title>Order · Jerrypop</title>
       </Helmet>
       <StyledPageContent>
-        <Typography type="h1">Purchase</Typography>
-        <Typography type="h2">Order</Typography>
+        <Typography type="h1">Order</Typography>
         <Typography maxWidth="600px" type="p">
           Order Jerrypop for local pickup or shipping.
         </Typography>
@@ -128,4 +128,4 @@ const Purchase: React.FC = () => {
   );
 };
 
-export default Purchase;
+export default Order;

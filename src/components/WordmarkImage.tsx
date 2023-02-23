@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledSvg = styled.svg`
-  height: 360px;
-  margin: -94px 0;
+  height: 225px;
+  margin: -59px 0;
   width: auto;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {

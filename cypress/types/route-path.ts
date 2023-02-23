@@ -3,6 +3,6 @@ export enum RoutePath {
   Home = '/',
   NotFound = '/not-found',
   Products = '/products',
-  Purchase = '/purchase',
+  Order = '/order',
   Recipes = '/recipes',
 }

@@ -6,13 +6,9 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
 import { THEME_NAVY, WHITE } from '../constants/color';
-import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import { NavigationMenuItem } from '../types/navigation';
-import {
-  MOBILE_NAVIGATION_BAR_Z_INDEX,
-  MOBILE_NAVIGATION_MENU_Z_INDEX,
-} from '../constants/z-index';
+import { NAVIGATION_MENU_Z_INDEX } from '../constants/z-index';
 import {
   NAVIGATION_BAR_CONTENT_STYLE,
   NAVIGATION_BAR_STYLE,
@@ -45,18 +41,16 @@ const StyledNavigationBar = styled.nav`
 const StyledNavigationBarContent = styled.div<Slideable>`
   ${SLIDE_STYLE}
   ${NAVIGATION_BAR_STYLE}
-  left: 6px;
+  left: 0;
+  padding: 0;
   position: absolute;
-  right: 6px;
+  right: 0;
   top: 0;
-  z-index: ${MOBILE_NAVIGATION_BAR_Z_INDEX};
 `;
 
 const StyledNavigationBarContentInner = styled.div`
   ${NAVIGATION_BAR_CONTENT_STYLE}
-
-  // Subtract border and parent padding
-  height: ${MOBILE_NAVIGATION_BAR_HEIGHT_PX - 8}px;
+  height: ${MOBILE_NAVIGATION_BAR_HEIGHT_PX}px;
 `;
 
 const StyledHamburgerButton = styled.button`
@@ -94,22 +88,19 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0 6px;
+  padding: 0;
   width: 100%;
 `;
 
 const StyledCloseButtonIcon = styled.div`
   align-items: center;
-  border: 2px solid ${THEME_NAVY};
-  border-bottom: none;
-  border-top: none;
   color: ${THEME_NAVY};
   display: flex;
   font-size: 24px;
   font-weight: 500;
   // Add 2px just to be safe. Chrome on iPhone shows a tiny sliver of a gap.
   height: ${MENU_ITEM_HEIGHT_PX + 2}px;
-  padding: 0 16px;
+  padding: 0 24px;
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -117,31 +108,27 @@ const StyledMenuItems = styled.ul<Slideable>`
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     ${SLIDE_STYLE}
-    ${WITH_BOX_SHADOW_STYLE}
     ${NAVIGATION_MENU_LIST_STYLE}
     background-color: ${WHITE};
     display: block;
-    left: 6px;
+    left: 0;
     position: absolute;
-    right: 6px;
+    right: 0;
     top: -${({ slideDistancePx }) => slideDistancePx}px;
-    z-index: ${MOBILE_NAVIGATION_MENU_Z_INDEX};
+    z-index: ${NAVIGATION_MENU_Z_INDEX};
   }
 `;
 
 const StyledMenuItemLink = styled(Link)`
   ${NAVIGATION_MENU_LINK_STYLE}
-  padding: 0 6px;
+  padding: 0;
 `;
 
 const StyledMenuItemLinkInner = styled.div`
   align-items: center;
-  border: 2px solid ${THEME_NAVY};
-  border-bottom: none;
-  border-top: none;
   display: flex;
   font-size: 16px;
-  padding: 0 16px;
+  padding: 0 24px;
   height: ${MENU_ITEM_HEIGHT_PX}px;
   text-align: left;
 `;

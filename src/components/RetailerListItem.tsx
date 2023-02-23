@@ -1,30 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LIGHT_HIGHLIGHT_BACKGROUND, WHITE } from '../constants/color';
-import { DANGLE_STYLE } from '../constants/css/rotation';
+import { CARD_OUTER_STYLE } from '../constants/css/card';
 import { Retailer } from '../types/retailer';
 import Typography from './Typography';
 
-const BREAKPOINT_WIDTH = '475px';
+const StyledListItem = styled.li`
+  ${CARD_OUTER_STYLE}
+`;
 
 const StyledRetailerAnchor = styled.a`
   align-items: center;
-  border-radius: 5px;
   display: flex;
-  margin: 4px 0;
+  flex-direction: column;
   padding: 16px;
   text-decoration: none;
-
-  @media (max-width: ${BREAKPOINT_WIDTH}) {
-    flex-direction: column;
-  }
-
-  &:hover,
-  &:focus {
-    ${DANGLE_STYLE}
-    background-color: ${LIGHT_HIGHLIGHT_BACKGROUND};
-    color: ${WHITE};
-  }
 `;
 
 const StyledPhotograph = styled.img`
@@ -33,13 +22,8 @@ const StyledPhotograph = styled.img`
 `;
 
 const StyledInformation = styled.div`
-  margin: 0 32px;
-  text-align: left;
-
-  @media (max-width: ${BREAKPOINT_WIDTH}) {
-    margin: 16px 0 24px;
-    text-align: center;
-  }
+  margin: 16px 0 0;
+  text-align: center;
 `;
 
 interface Props {
@@ -50,7 +34,7 @@ const RetailerListItem: React.FC<Props> = ({
   retailer: { address, href, name, photograph },
 }) => {
   return (
-    <li>
+    <StyledListItem>
       <StyledRetailerAnchor
         href={href}
         rel="noopener noreferrer"
@@ -66,7 +50,7 @@ const RetailerListItem: React.FC<Props> = ({
           </Typography>
         </StyledInformation>
       </StyledRetailerAnchor>
-    </li>
+    </StyledListItem>
   );
 };
 

@@ -72,25 +72,15 @@ const ProductListing: React.FC<Props> = ({ product }) => {
             />
           </StyledProductImageContainer>
         )}
-        <StyledTitle hasTextShadow={false} type="h3">
-          {product.title}
-        </StyledTitle>
-        <StyledDescription hasTextShadow={false} margin="24px 0 0" type="p">
+        <StyledTitle type="h3">{product.title}</StyledTitle>
+        <StyledDescription margin="24px 0 0" type="p">
           {product.description}
         </StyledDescription>
-        <StyledIngredientListContent
-          hasTextShadow={false}
-          margin="24px 0 0"
-          type="p"
-        >
+        <StyledIngredientListContent margin="24px 0 0" type="p">
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>
         {product.allergens.length ? (
-          <StyledIngredientListContent
-            hasTextShadow={false}
-            margin="16px 0 0"
-            type="p"
-          >
+          <StyledIngredientListContent margin="16px 0 0" type="p">
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}

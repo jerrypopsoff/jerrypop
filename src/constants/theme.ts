@@ -17,6 +17,12 @@ interface Themes {
 }
 
 export const THEME: Themes = {
+  BLUE_CYAN: {
+    mainThemeDark: THEME_BLUE,
+    mainThemeMedium: THEME_CYAN,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
   BLUE_ORANGE: {
     mainThemeDark: THEME_BLUE,
     mainThemeMedium: THEME_ORANGE,
@@ -81,12 +87,13 @@ export const THEME: Themes = {
  */
 export const THEMES = [
   THEME.BLUE_PINK,
-  // THEME.PURPLE_GREEN,
-  // THEME.CYAN_YELLOW,
-  // THEME.PINK_PURPLE,
-  // THEME.BLUE_ORANGE,
+  THEME.PURPLE_GREEN,
+  THEME.CYAN_YELLOW,
+  THEME.PINK_PURPLE,
+  THEME.BLUE_ORANGE,
   THEME.GREEN_YELLOW,
+  THEME.BLUE_CYAN,
   THEME.ORANGE_PURPLE,
-  THEME.PINK_YELLOW,
   THEME.PURPLE_CYAN,
+  THEME.PINK_YELLOW,
 ];

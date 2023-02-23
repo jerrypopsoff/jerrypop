@@ -1,5 +1,6 @@
-import { GRAYSCALE_LIGHT, WHITE } from '../color';
+import { THEME_NAVY } from '../color';
 import {
+  DESKTOP_NAVIGATION_BAR_HEIGHT_PX,
   KERNEL_NARROW_SIZE_PX,
   KERNEL_WIDE_SIZE_PX,
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
@@ -17,11 +18,10 @@ export const GLOBAL_STYLE = createGlobalStyle`
 }
 
 body {
-  background-color: var(--main-theme-dark);
-  color: ${WHITE};
+  color: ${THEME_NAVY};
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: ${DESKTOP_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,14 +36,14 @@ body {
 }
 
 a {
-  color: ${WHITE};
+  color: ${THEME_NAVY};
   cursor: pointer;
   text-decoration: underline;
 }
 
 a:focus,
 a:hover {
-  color: ${GRAYSCALE_LIGHT};
+  color: ${THEME_NAVY};
 }
 
 button {
