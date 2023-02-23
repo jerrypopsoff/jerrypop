@@ -158,7 +158,7 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
               <StyledHamburgerLine aria-hidden="true" />
               <StyledHamburgerLine aria-hidden="true" />
             </StyledHamburgerButton>
-            <StyledWordmarkLink to="/">
+            <StyledWordmarkLink onClick={() => setIsOpen(false)} to="/">
               <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
             </StyledWordmarkLink>
           </StyledNavigationBarContentInner>
@@ -177,7 +177,7 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
           </li>
           {navigationMenuItems.map(({ displayName, to }) => (
             <li key={displayName}>
-              <StyledMenuItemLink onClick={() => setIsOpen(!isOpen)} to={to}>
+              <StyledMenuItemLink onClick={() => setIsOpen(false)} to={to}>
                 <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
               </StyledMenuItemLink>
             </li>
