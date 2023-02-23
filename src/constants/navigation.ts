@@ -6,16 +6,16 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
     to: '/',
   },
   {
+    displayName: 'Products',
+    to: '/products',
+  },
+  {
     displayName: 'Purchase',
     to: '/purchase',
   },
   {
     displayName: 'Recipes',
     to: '/recipes',
-  },
-  {
-    displayName: 'Ingredients',
-    to: '/ingredients',
   },
   {
     displayName: 'About',

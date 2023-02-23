@@ -18,14 +18,14 @@ describe('navigation menu tests', () => {
     clickNavigationLink(RoutePath.Home);
     cy.url().should('include', RoutePath.Home);
 
+    clickNavigationLink(RoutePath.Products);
+    cy.url().should('include', RoutePath.Products);
+
     clickNavigationLink(RoutePath.Purchase);
     cy.url().should('include', RoutePath.Purchase);
 
     clickNavigationLink(RoutePath.Recipes);
     cy.url().should('include', RoutePath.Recipes);
-
-    clickNavigationLink(RoutePath.Ingredients);
-    cy.url().should('include', RoutePath.Ingredients);
 
     clickNavigationLink(RoutePath.About);
     cy.url().should('include', RoutePath.About);

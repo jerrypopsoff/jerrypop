@@ -7,7 +7,7 @@ export const CARD_OUTER_STYLE = css`
   background-color: ${WHITE};
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 12px auto;
+  margin: 24px auto;
   padding: 8px;
   width: 500px;
 
@@ -20,7 +20,7 @@ export const CARD_INNER_STYLE = css`
   border: 2px solid ${THEME_NAVY};
   border-radius: 5px;
   color: ${THEME_NAVY};
-  padding: 20px;
+  padding: 24px 16px;
   text-align: left;
 
   a {
@@ -31,4 +31,10 @@ export const CARD_INNER_STYLE = css`
       color: ${GRAYSCALE_MEDIUM};
     }
   }
+`;
+
+export const CARD_TITLE_STYLE = css`
+  font-size: 24px;
+  margin: 0 0 4px;
+  text-align: center;
 `;

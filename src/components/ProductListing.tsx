@@ -1,87 +1,97 @@
 import React from 'react';
 import Typography from './Typography';
-import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
-import { DANGLE_STYLE } from '../constants/css/rotation';
-import { PULSE_STYLE } from '../constants/css/pulse';
 import styled from 'styled-components';
 import { Product } from '../types/product';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
+import {
+  CARD_INNER_STYLE,
+  CARD_OUTER_STYLE,
+  CARD_TITLE_STYLE,
+} from '../constants/css/card';
 
-const IMAGE_HEIGHT = 519;
-const IMAGE_WIDTH = 340;
-const WIDTH_WIDE = 750;
+const IMAGE_HEIGHT_PX = 300;
+const IMAGE_WIDTH_PX = 300;
 
-const StyledProductListing = styled.div`
-  align-items: center;
-  display: flex;
-  margin: 12px 0 48px;
-  max-width: ${WIDTH_WIDE}px;
+const StyledCard = styled.li`
+  ${CARD_OUTER_STYLE}
+`;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    flex-direction: column;
-  }
+const StyledInnerCard = styled.div`
+  ${CARD_INNER_STYLE}
 `;
 
 const StyledProductImageContainer = styled.div`
-  height: ${IMAGE_HEIGHT}px; // Mitigate screen flash for image loading state ending
+  align-items: center;
+  display: flex;
+  height: ${IMAGE_HEIGHT_PX}px; // Mitigate screen flash for image loading state ending
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @media (max-width: 390px) {
+    height: 220px;
+  }
 `;
 
 const StyledProductPhotograph = styled.img`
-  height: ${IMAGE_HEIGHT}px;
-  width: ${IMAGE_WIDTH}px;
-`;
+  height: ${IMAGE_HEIGHT_PX}px;
+  width: ${IMAGE_WIDTH_PX}px;
 
-const StyledProductDetails = styled.div`
-  margin: 0 0 0 36px;
-  text-align: left;
-
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    margin: 36px 0 0;
-    width: ${IMAGE_WIDTH}px;
+  @media (max-width: 390px) {
+    height: 220px;
+    width: 220px;
   }
 `;
 
-const StyledOrderOnlineButton = styled.button`
-  ${BUTTON_STYLE}
-  ${PULSE_STYLE}
-  margin: 0;
-
-  &:hover,
-  &:focus {
-    ${DANGLE_STYLE}
-  }
+const StyledTitle = styled(Typography)`
+  ${CARD_TITLE_STYLE}
 `;
 
-const StyledInnerOrderOnlineButton = styled.div`
-  ${BUTTON_INNER_STYLE}
+const StyledIngredientListContent = styled(Typography)`
+  font-size: 14px;
+  font-weight: 400;
+  text-align: justify;
+  text-transform: uppercase;
 `;
 
 interface Props {
-  onClickOrderOnline: () => void;
   product: Product;
 }
 
-const ProductListing: React.FC<Props> = ({ onClickOrderOnline, product }) => {
+const ProductListing: React.FC<Props> = ({ product }) => {
   return (
-    <StyledProductListing>
-      <StyledProductImageContainer>
-        <StyledProductPhotograph
-          alt={`Photograph of ${product.title}`}
-          src={product.photograph}
-        />
-      </StyledProductImageContainer>
-      <StyledProductDetails>
-        <Typography margin="0" textAlign="left" type="h3">
+    <StyledCard>
+      <StyledInnerCard>
+        {product.photograph && (
+          <StyledProductImageContainer>
+            <StyledProductPhotograph
+              alt={`Photograph of ${product.title}`}
+              src={product.photograph}
+            />
+          </StyledProductImageContainer>
+        )}
+        <StyledTitle hasTextShadow={false} type="h3">
           {product.title}
-        </Typography>
-        <Typography margin="24px 0 36px" textAlign="left" type="p">
+        </StyledTitle>
+        <Typography hasTextShadow={false} margin="24px 0 0" type="p">
           {product.description}
         </Typography>
-        <StyledOrderOnlineButton onClick={onClickOrderOnline}>
-          <StyledInnerOrderOnlineButton>Order</StyledInnerOrderOnlineButton>
-        </StyledOrderOnlineButton>
-      </StyledProductDetails>
-    </StyledProductListing>
+        <StyledIngredientListContent
+          hasTextShadow={false}
+          margin="24px 0 0"
+          type="p"
+        >
+          <b>Ingredients:</b> {product.ingredients.join(', ')}
+        </StyledIngredientListContent>
+        {product.allergens.length ? (
+          <StyledIngredientListContent
+            hasTextShadow={false}
+            margin="16px 0 0"
+            type="p"
+          >
+            <b>Contains:</b> {product.allergens.join(', ')}
+          </StyledIngredientListContent>
+        ) : null}
+      </StyledInnerCard>
+    </StyledCard>
   );
 };
 
