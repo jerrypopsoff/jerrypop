@@ -1,5 +1,9 @@
-import HrPhotograph from '../images/habanero-ranch-product.jpg';
-import PbjPhotograph from '../images/pbj-product.jpg';
+import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
+import PbjPhotograph from '../images/product-pbj.jpg';
+import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
+import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
+import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
+import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpg';
 import { Product } from '../types/product';
 
 export const PRODUCTS: Product[] = [
@@ -22,7 +26,7 @@ export const PRODUCTS: Product[] = [
       'CHIVES',
       'PARSLEY',
     ],
-    photograph: HrPhotograph,
+    photograph: HabaneroRanchPhotograph,
     title: 'Habanero Ranch Craft Popcorn',
   },
   {
@@ -58,6 +62,7 @@ export const PRODUCTS: Product[] = [
       'ROSEMARY',
       'BLACK PEPPERCORN',
     ],
+    photograph: RosemaryLemonPepperPhotograph,
     title: 'Rosemary Lemon Pepper Craft Popcorn',
   },
   {
@@ -75,6 +80,7 @@ export const PRODUCTS: Product[] = [
       'GRANULATED ONION',
       'SUGAR',
     ],
+    photograph: FurikakeDashiPhotograph,
     title: 'Furikake Dashi Craft Popcorn',
   },
   {
@@ -93,6 +99,7 @@ export const PRODUCTS: Product[] = [
       'SUGAR',
       'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
     ],
+    photograph: SichuanNoochPhotograph,
     title: 'Sichuan Nooch Craft Popcorn',
   },
   {
@@ -108,6 +115,7 @@ export const PRODUCTS: Product[] = [
       'BAKING POWDER',
       'SALT',
     ],
+    photograph: ChocolateHazelnutEspressoPhotograph,
     title: 'Chocolate Hazelnut Espresso Craft Popcorn',
   },
 ];
