@@ -4,7 +4,11 @@ import { Recipe } from '../types/recipe';
 import Typography from './Typography';
 import { DANGLE_STYLE } from '../constants/css/rotation';
 import styled from 'styled-components';
-import { CARD_OUTER_STYLE, CARD_INNER_STYLE } from '../constants/css/card';
+import {
+  CARD_OUTER_STYLE,
+  CARD_INNER_STYLE,
+  CARD_TITLE_STYLE,
+} from '../constants/css/card';
 
 const listStyles = `
   margin-bottom: 0;
@@ -51,8 +55,7 @@ const StyledInnerRecipe = styled.div`
 `;
 
 const StyledTitle = styled(Typography)`
-  font-size: 24px;
-  text-align: center;
+  ${CARD_TITLE_STYLE}
 `;
 
 const StyledTime = styled.span`
@@ -180,7 +183,7 @@ const RecipeComponent: React.FC<Props> = ({ recipe }) => {
       tabIndex={isCollapsed ? 0 : undefined}
     >
       <StyledInnerRecipe>
-        <StyledTitle hasTextShadow={false} margin="0 0 4px" type="h3">
+        <StyledTitle hasTextShadow={false} type="h3">
           {recipe.title}
         </StyledTitle>
         <StyledTime>{recipe.time}</StyledTime>

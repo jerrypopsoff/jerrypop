@@ -10,10 +10,10 @@ import React from 'react';
 import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
-import Ingredients from './Ingredients';
 import NavigationBar from './NavigationBar';
 import { BLACK } from '../constants/color';
 import BackgroundWordmark from './BackgroundWordmark';
+import Products from './Products';
 
 const App: React.FC = () => {
   useTheme();
@@ -32,13 +32,14 @@ const App: React.FC = () => {
              *
              * - cypress/e2e test module
              * - cypress/types/route-path.ts
+             * - constants/navigation.ts (optional)
              * - public/manifest.json `shortcuts` (optional)
              */}
             <Route element={<Home />} path="/" />
-            <Route element={<Recipes />} path="/recipes" />
+            <Route element={<Products />} path="/products" />
             <Route element={<Purchase />} path="/purchase" />
+            <Route element={<Recipes />} path="/recipes" />
             <Route element={<About />} path="/about" />
-            <Route element={<Ingredients />} path="/ingredients" />
             <Route element={<NotFound />} path="*" />
           </Routes>
           <Footer />

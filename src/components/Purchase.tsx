@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import OrderFormDialog from './OrderFormDialog';
-import Products from './Products';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
+import { BUTTON_STYLE, BUTTON_INNER_STYLE } from '../constants/css/button';
+import { DANGLE_STYLE } from '../constants/css/rotation';
+import { PULSE_STYLE } from '../constants/css/pulse';
 
 const StyledPageContent = styled.div`
   align-items: center;
@@ -16,6 +18,21 @@ const StyledPageContent = styled.div`
 const StyledRetailerList = styled.ul`
   list-style: none;
   padding: 0;
+`;
+
+const StyledOrderOnlineButton = styled.button`
+  ${BUTTON_STYLE}
+  ${PULSE_STYLE}
+  margin: 12px 0;
+
+  &:hover,
+  &:focus {
+    ${DANGLE_STYLE}
+  }
+`;
+
+const StyledInnerOrderOnlineButton = styled.div`
+  ${BUTTON_INNER_STYLE}
 `;
 
 const Purchase: React.FC = () => {
@@ -46,6 +63,10 @@ const Purchase: React.FC = () => {
       </Helmet>
       <StyledPageContent>
         <Typography type="h1">Purchase</Typography>
+        <Typography type="h2">Order</Typography>
+        <StyledOrderOnlineButton onClick={onClickOrderOnline}>
+          <StyledInnerOrderOnlineButton>Order</StyledInnerOrderOnlineButton>
+        </StyledOrderOnlineButton>
         <Typography type="h2">Retail</Typography>
         <Typography maxWidth="600px" type="p">
           Jerrypop is available for purchase at the following locations:
@@ -69,8 +90,6 @@ const Purchase: React.FC = () => {
           Interested in serving locally handcrafted popcorn at your event? Reach
           out to <a href="mailto:info@jerrypop.com">info@jerrypop.com</a>.
         </Typography>
-        <Typography type="h2">Online</Typography>
-        <Products onClickOrderOnline={onClickOrderOnline} />
         {isOrderFormVisible && (
           <OrderFormDialog
             onCloseOrderOnlineDialog={onCloseOrderOnlineDialog}
