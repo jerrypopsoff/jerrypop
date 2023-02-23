@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
-import InstagramFeed from './InstagramFeed';
+// import InstagramFeed from './InstagramFeed';
 import Logo from './Logo';
 import { useTheme } from '../hooks/use-theme';
 import { WHITE } from '../constants/color';
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           <StyledTagline margin="48px auto" maxWidth="600px" type="h1">
             Locally handcrafted San Francisco popcorn.
           </StyledTagline>
-          <InstagramFeed />
+          {/* <InstagramFeed /> */}
         </StyledRegularSection>
       </StyledHome>
     </>
