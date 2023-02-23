@@ -45,6 +45,10 @@ const StyledTitle = styled(Typography)`
   ${CARD_TITLE_STYLE}
 `;
 
+const StyledDescription = styled(Typography)`
+  font-weight: 400;
+`;
+
 const StyledIngredientListContent = styled(Typography)`
   font-size: 14px;
   font-weight: 400;
@@ -71,9 +75,9 @@ const ProductListing: React.FC<Props> = ({ product }) => {
         <StyledTitle hasTextShadow={false} type="h3">
           {product.title}
         </StyledTitle>
-        <Typography hasTextShadow={false} margin="24px 0 0" type="p">
+        <StyledDescription hasTextShadow={false} margin="24px 0 0" type="p">
           {product.description}
-        </Typography>
+        </StyledDescription>
         <StyledIngredientListContent
           hasTextShadow={false}
           margin="24px 0 0"
