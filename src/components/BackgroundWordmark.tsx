@@ -1,12 +1,8 @@
-import {
-  WINDOW_BREAKPOINT_WIDTH_PX,
-  WORDMARK_NARROW_TOP_PX,
-  WORDMARK_WIDE_TOP_PX,
-} from '../constants/breakpoint';
 import React from 'react';
 import { WORDMARK_Z_INDEX } from '../constants/z-index';
 import WordmarkImage from './WordmarkImage';
 import styled from 'styled-components';
+import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledWordmark = styled.div<{ isFixed: boolean }>`
   align-items: center;
@@ -16,11 +12,11 @@ const StyledWordmark = styled.div<{ isFixed: boolean }>`
   opacity: ${({ isFixed }) => (isFixed ? '0.05' : '1.0')};
   position: ${({ isFixed }) => (isFixed ? 'fixed' : 'absolute')};
   right: 0;
-  top: ${WORDMARK_WIDE_TOP_PX}px;
+  top: 150px;
   z-index: ${WORDMARK_Z_INDEX};
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    top: ${WORDMARK_NARROW_TOP_PX}px;
+    top: 117px;
   }
 `;
 

@@ -4,7 +4,6 @@ import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
-import Logo from './Logo';
 import NotFound from './NotFound';
 import Purchase from './Purchase';
 import React from 'react';
@@ -12,9 +11,12 @@ import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
 import Ingredients from './Ingredients';
+import NavigationBar from './NavigationBar';
+import { BLACK } from '../constants/color';
+import BackgroundWordmark from './BackgroundWordmark';
 
 const App: React.FC = () => {
-  const [theme, rotateTheme] = useTheme();
+  useTheme();
 
   return (
     <React.StrictMode>
@@ -22,7 +24,8 @@ const App: React.FC = () => {
         <GlobalStyle />
         <Router>
           <ScrollToTop />
-          <Logo onToggleTheme={rotateTheme} theme={theme} />
+          <NavigationBar />
+          <BackgroundWordmark fillColor={BLACK} isFixed={true} />
           <Routes>
             {/**
              * Each route should be represented in each of the following places:

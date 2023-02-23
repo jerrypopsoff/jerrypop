@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import NavigationMenu from './NavigationMenu';
 import { RECIPES } from '../constants/recipe';
 import React from 'react';
 import Recipe from './Recipe';
@@ -27,7 +26,6 @@ const Recipes: React.FC = () => {
           return <Recipe key={recipe.title} recipe={recipe} />;
         })}
       </StyledUnorderedList>
-      <NavigationMenu />
     </>
   );
 };

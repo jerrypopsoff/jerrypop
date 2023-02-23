@@ -34,21 +34,25 @@ const SLIDE_STYLE = css<Slideable>`
     `translateY(${isOpen ? `${slideDistancePx}px` : '0'})`};
 `;
 
-const StyledNavigationBar = styled.nav<Slideable>`
+const StyledNavigationBar = styled.nav`
   display: none;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    ${SLIDE_STYLE}
-    ${NAVIGATION_BAR_STYLE}
-    left: 6px;
-    position: absolute;
-    right: 6px;
-    top: 0;
-    z-index: ${MOBILE_NAVIGATION_BAR_Z_INDEX};
+    display: block;
   }
 `;
 
-const StyledNavigationBarContent = styled.div`
+const StyledNavigationBarContent = styled.div<Slideable>`
+  ${SLIDE_STYLE}
+  ${NAVIGATION_BAR_STYLE}
+  left: 6px;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  z-index: ${MOBILE_NAVIGATION_BAR_Z_INDEX};
+`;
+
+const StyledNavigationBarContentInner = styled.div`
   ${NAVIGATION_BAR_CONTENT_STYLE}
 
   // Subtract border and parent padding
@@ -59,6 +63,7 @@ const StyledHamburgerButton = styled.button`
   align-items: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -88,6 +93,7 @@ const StyledWordmark = styled.img`
 const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 0 6px;
   width: 100%;
 `;
@@ -97,11 +103,13 @@ const StyledCloseButtonIcon = styled.div`
   border: 2px solid ${THEME_NAVY};
   border-bottom: none;
   border-top: none;
+  color: ${THEME_NAVY};
   display: flex;
   font-size: 24px;
   font-weight: 500;
-  height: ${MENU_ITEM_HEIGHT_PX}px;
-  padding-left: 16px;
+  // Add 2px just to be safe. Chrome on iPhone shows a tiny sliver of a gap.
+  height: ${MENU_ITEM_HEIGHT_PX + 2}px;
+  padding: 0 16px;
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -128,10 +136,13 @@ const StyledMenuItemLink = styled(Link)`
 `;
 
 const StyledMenuItemLinkInner = styled.div`
+  align-items: center;
   border: 2px solid ${THEME_NAVY};
   border-bottom: none;
   border-top: none;
-  padding: 20px 0 20px 16px;
+  display: flex;
+  padding: 0 16px;
+  height: ${MENU_ITEM_HEIGHT_PX}px;
   text-align: left;
 `;
 
@@ -146,44 +157,46 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
 
   return (
     <>
-      <StyledNavigationBar
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
-      >
-        <StyledNavigationBarContent>
-          <StyledHamburgerButton
-            aria-label="Toggle navigation menu"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <StyledHamburgerLine aria-hidden="true" />
-            <StyledHamburgerLine aria-hidden="true" />
-            <StyledHamburgerLine aria-hidden="true" />
-          </StyledHamburgerButton>
-          <StyledWordmarkLink to="/">
-            <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
-          </StyledWordmarkLink>
+      <StyledNavigationBar>
+        <StyledNavigationBarContent
+          isOpen={isOpen}
+          slideDistancePx={navigationMenuItemsHeightPx}
+        >
+          <StyledNavigationBarContentInner>
+            <StyledHamburgerButton
+              aria-label="Toggle navigation menu"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <StyledHamburgerLine aria-hidden="true" />
+              <StyledHamburgerLine aria-hidden="true" />
+              <StyledHamburgerLine aria-hidden="true" />
+            </StyledHamburgerButton>
+            <StyledWordmarkLink to="/">
+              <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
+            </StyledWordmarkLink>
+          </StyledNavigationBarContentInner>
         </StyledNavigationBarContent>
-      </StyledNavigationBar>
-      <StyledMenuItems
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
-      >
-        <li>
-          <StyledCloseButton
-            aria-label="Close"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
-          </StyledCloseButton>
-        </li>
-        {navigationMenuItems.map(({ displayName, to }) => (
-          <li key={displayName}>
-            <StyledMenuItemLink onClick={() => setIsOpen(!isOpen)} to={to}>
-              <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
-            </StyledMenuItemLink>
+        <StyledMenuItems
+          isOpen={isOpen}
+          slideDistancePx={navigationMenuItemsHeightPx}
+        >
+          <li>
+            <StyledCloseButton
+              aria-label="Close"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
+            </StyledCloseButton>
           </li>
-        ))}
-      </StyledMenuItems>
+          {navigationMenuItems.map(({ displayName, to }) => (
+            <li key={displayName}>
+              <StyledMenuItemLink onClick={() => setIsOpen(!isOpen)} to={to}>
+                <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
+              </StyledMenuItemLink>
+            </li>
+          ))}
+        </StyledMenuItems>
+      </StyledNavigationBar>
     </>
   );
 };
