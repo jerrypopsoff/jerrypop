@@ -2,40 +2,50 @@ import React from 'react';
 import styled from 'styled-components';
 import OptimizedImage from './OptimizedImage';
 
-const ASPECT_RATIO = 16 / 9;
-const MAX_HEIGHT = '450px';
+interface StyledGlamorPhotographProps {
+  $aspectRatio: number;
+  $maxHeightPx?: number;
+}
 
-const StyledImageContainer = styled.div`
-  height: calc(100% / ${ASPECT_RATIO});
-  max-height: ${MAX_HEIGHT};
+const StyledImageContainer = styled.div<StyledGlamorPhotographProps>`
+  height: calc(100% / ${({ $aspectRatio }) => $aspectRatio});
+  max-height: ${({ $maxHeightPx }) =>
+    $maxHeightPx ? `${$maxHeightPx}px` : ''};
 `;
 
-const StyledImage = styled(OptimizedImage)`
-  aspect-ratio: ${ASPECT_RATIO};
+const StyledImage = styled(OptimizedImage)<StyledGlamorPhotographProps>`
+  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
   background-color: var(--main-theme-medium);
-  max-height: ${MAX_HEIGHT};
+  max-height: ${({ $maxHeightPx }) =>
+    $maxHeightPx ? `${$maxHeightPx}px` : ''};
   object-fit: cover;
   width: 100%;
 `;
 
 interface Props {
   alt: string;
+  aspectRatio?: number;
   fallbackSrc: string;
   fallbackSrcSet: string;
+  maxHeightPx?: number;
   srcSet: string;
   type?: string;
 }
 
 const GlamorPhotograph: React.FC<Props> = ({
   alt,
+  aspectRatio = 16 / 9,
   fallbackSrc,
   fallbackSrcSet,
+  maxHeightPx,
   srcSet,
   type = 'image/webp',
 }) => {
   return (
-    <StyledImageContainer>
+    <StyledImageContainer $aspectRatio={aspectRatio} $maxHeightPx={maxHeightPx}>
       <StyledImage
+        $aspectRatio={aspectRatio}
+        $maxHeightPx={maxHeightPx}
         alt={alt}
         fallbackSrc={fallbackSrc}
         fallbackSrcSet={fallbackSrcSet}
