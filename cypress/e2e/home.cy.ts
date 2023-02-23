@@ -18,6 +18,9 @@ describe('home page tests', () => {
   });
 
   it('toggles the website theme on logo click', () => {
-    verifyThemeToggle('img[alt="Jerrypop logo"]');
+    verifyThemeToggle(
+      'button[aria-label="Toggle website theme"]',
+      'footer > div',
+    );
   });
 });
