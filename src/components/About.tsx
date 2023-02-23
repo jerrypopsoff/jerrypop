@@ -58,10 +58,10 @@ const About: React.FC = () => {
       <StyledAbout>
         <GlamorPhotograph
           alt="Photograph of a red bowl of Blueberry Pancake Craft Popcorn taken outdoors from directly above"
-          aspectRatio={1 / 1}
+          aspectRatio={3557 / 2260}
           fallbackSrc={BlueberryPancake2400}
           fallbackSrcSet={`${BlueberryPancake600} 600w, ${BlueberryPancake1200} 1200w, ${BlueberryPancake2400} 2400w`}
-          maxHeightPx={550}
+          maxHeightPx={500}
           srcSet={`${BlueberryPancakeWebp600} 600w, ${BlueberryPancakeWebp1200} 1200w, ${BlueberryPancakeWebp2400} 2400w`}
         />
         <Typography type="h1">About Jerry</Typography>
