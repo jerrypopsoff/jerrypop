@@ -36,13 +36,13 @@ type StyledTypography = Omit<Props, 'type'>;
 const StyledH1 = styled.h1<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 48px;
+  font-size: 32px;
 `;
 
 const StyledH2 = styled.h2<StyledTypography>`
   ${headingStyle}
   ${withDynamicStyles}
-  font-size: 36px;
+  font-size: 24px;
 `;
 
 const StyledH3 = styled.h3<StyledTypography>`
@@ -61,8 +61,8 @@ const StyledP = styled.p<StyledTypography>`
   ${withDynamicStyles}
   ${({ hasTextShadow }) =>
     hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
 `;
 
 const Typography: React.FC<Props> = ({

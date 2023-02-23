@@ -22,7 +22,6 @@ export const CARD_INNER_STYLE = css`
 `;
 
 export const CARD_TITLE_STYLE = css`
-  font-size: 24px;
-  margin: 0 0 4px;
+  margin: 0 0 8px;
   text-align: center;
 `;

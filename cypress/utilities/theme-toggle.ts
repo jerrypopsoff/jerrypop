@@ -7,7 +7,8 @@ export function verifyThemeToggle(toggleButtonSelector: string) {
   // Ensure theme rotation wraps properly back to original theme.
   const rotationCount = THEMES.length + 1;
   for (let i = 0; i < rotationCount; ++i) {
-    cy.get('body')
+    cy.get('section')
+      .first()
       .invoke('css', 'background-color')
       // eslint-disable-next-line no-loop-func
       .then((previousBackgroundColor) => {

@@ -11,10 +11,9 @@ describe('home page tests', () => {
   });
 
   it('displays informational text', () => {
-    cy.get('#root').should('include.text', 'Poppin’ off with Jerry');
     cy.get('#root').should(
       'include.text',
-      'Locally handcrafted popcorn from San Francisco, California.',
+      'Locally handcrafted San Francisco popcorn.',
     );
   });
 
