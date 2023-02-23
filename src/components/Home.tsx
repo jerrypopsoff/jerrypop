@@ -67,7 +67,7 @@ const Home: React.FC = () => {
             Locally handcrafted San Francisco popcorn.
           </StyledTagline>
           <GlamorPhotograph
-            alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wood surface taken from directly above"
+            alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wooden surface taken from directly above"
             aspectRatio={17 / 10}
             fallbackSrc={HabaneroRanchJpeg2400}
             fallbackSrcSet={`${HabaneroRanchJpeg600} 600w, ${HabaneroRanchJpeg1200} 1200w, ${HabaneroRanchJpeg2400} 2400w`}
