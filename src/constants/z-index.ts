@@ -8,8 +8,7 @@ export const NAVIGATION_BAR_Z_INDEX = 1998;
 export const NAVIGATION_MENU_Z_INDEX = 1997;
 
 /**
- * Home page
+ * Footer
  */
-export const HOME_WORDMARK_Z_INDEX = 2;
-export const HOME_LOGO_Z_INDEX = 3;
-export const HOME_SECTION_BACKGROUND_Z_INDEX = 1;
+export const BACKGROUND_WORDMARK_Z_INDEX = 1;
+export const LOGO_Z_INDEX = 2;

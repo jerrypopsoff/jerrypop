@@ -2,12 +2,36 @@ import React from 'react';
 import SocialLinks from './SocialLinks';
 import Typography from './Typography';
 import styled from 'styled-components';
+import Logo from './Logo';
+import { useTheme } from '../hooks/use-theme';
+import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
+import { WHITE } from '../constants/color';
 
 const StyledFooter = styled.footer`
+  margin: 78px 0 0;
+`;
+
+const StyledThemeSection = styled.div`
+  align-items: center;
+  background-color: var(--main-theme-dark);
+  color: ${WHITE};
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    height: 280px;
+  }
+`;
+
+const StyledFooterInformation = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 78px auto 0;
+  margin: 24px auto 0;
   max-width: 600px;
   padding: 0 16px 24px;
 `;
@@ -21,14 +45,21 @@ const StyledCopyright = styled(Typography)`
 `;
 
 const Footer: React.FC = () => {
+  const [theme, rotateTheme] = useTheme();
+
   return (
     <StyledFooter>
-      <StyledCopyright margin="0 8px" type="p">
-        © {new Date().getFullYear()} Jerrypop, LLC
-      </StyledCopyright>
-      <StyledSocialLinksContainer>
-        <SocialLinks />
-      </StyledSocialLinksContainer>
+      <StyledThemeSection>
+        <Logo onToggleTheme={rotateTheme} theme={theme} />
+      </StyledThemeSection>
+      <StyledFooterInformation>
+        <StyledCopyright margin="0 8px" type="p">
+          © {new Date().getFullYear()} Jerrypop, LLC
+        </StyledCopyright>
+        <StyledSocialLinksContainer>
+          <SocialLinks />
+        </StyledSocialLinksContainer>
+      </StyledFooterInformation>
     </StyledFooter>
   );
 };

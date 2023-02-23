@@ -1,19 +1,24 @@
-import { Link, useLocation } from 'react-router-dom';
 import BackgroundWordmark from './BackgroundWordmark';
 import React from 'react';
 import type { Theme } from '../types/theme';
 import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
-import { HOME_LOGO_Z_INDEX } from '../constants/z-index';
+import { LOGO_Z_INDEX } from '../constants/z-index';
 import { WINDOW_NARROW_WIDTH_PX } from '../constants/breakpoint';
 
-const StyledLogo = styled.img`
+const StyledButton = styled.button`
   ${SLOW_DANGLE_STYLE}
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  position: absolute;
+  z-index: ${LOGO_Z_INDEX};
+`;
+
+const StyledLogo = styled.img`
   height: 275px;
   width: 275px;
-  z-index: ${HOME_LOGO_Z_INDEX};
 
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -32,20 +37,12 @@ interface Props {
 }
 
 const Logo: React.FC<Props> = ({ onToggleTheme, theme }) => {
-  const { pathname } = useLocation();
-  const logoElement =
-    pathname === '/' ? (
-      <StyledLogo alt="Jerrypop logo" onClick={onToggleTheme} src={logo} />
-    ) : (
-      <Link to="/">
-        <StyledLogo alt="Jerrypop logo" src={logo} />
-      </Link>
-    );
-
   return (
     <>
       <BackgroundWordmark fillColor={theme.mainThemeMedium} />
-      {logoElement}
+      <StyledButton aria-label="Toggle website theme" onClick={onToggleTheme}>
+        <StyledLogo alt="Jerrypop logo" src={logo} />
+      </StyledButton>
     </>
   );
 };
