@@ -4,6 +4,13 @@ import React from 'react';
 import Recipe from './Recipe';
 import Typography from './Typography';
 import styled from 'styled-components';
+import GlamorPhotograph from './GlamorPhotograph';
+import PbjSheet600 from '../images/glamorous-pbj-sheet-600.jpeg';
+import PbjSheet1200 from '../images/glamorous-pbj-sheet-1200.jpeg';
+import PbjSheet2400 from '../images/glamorous-pbj-sheet-2400.jpeg';
+import PbjSheetWebp600 from '../images/glamorous-pbj-sheet-600.webp';
+import PbjSheetWebp1200 from '../images/glamorous-pbj-sheet-1200.webp';
+import PbjSheetWebp2400 from '../images/glamorous-pbj-sheet-2400.webp';
 
 const StyledUnorderedList = styled.ul`
   padding: 0;
@@ -17,6 +24,14 @@ const Recipes: React.FC = () => {
       <Helmet>
         <title>Recipes · Jerrypop</title>
       </Helmet>
+      <GlamorPhotograph
+        alt="Photograph of PB&J Craft Popcorn spread onto a baking sheet"
+        aspectRatio={4032 / 3024}
+        fallbackSrc={PbjSheet2400}
+        fallbackSrcSet={`${PbjSheet600} 600w, ${PbjSheet1200} 1200w, ${PbjSheet2400} 2400w`}
+        maxHeightPx={500}
+        srcSet={`${PbjSheetWebp600} 600w, ${PbjSheetWebp1200} 1200w, ${PbjSheetWebp2400} 2400w`}
+      />
       <Typography type="h1">Recipes</Typography>
       <Typography margin="12px 12px 24px" type="p">
         Select a recipe to view details.

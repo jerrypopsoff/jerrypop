@@ -11,11 +11,11 @@ const StyledImageContainer = styled.div<StyledGlamorPhotographProps>`
   height: calc(100% / ${({ $aspectRatio }) => $aspectRatio});
   max-height: ${({ $maxHeightPx }) =>
     $maxHeightPx ? `${$maxHeightPx}px` : ''};
+  width: 100%;
 `;
 
 const StyledImage = styled(OptimizedImage)<StyledGlamorPhotographProps>`
   aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
-  background-color: var(--main-theme-medium);
   max-height: ${({ $maxHeightPx }) =>
     $maxHeightPx ? `${$maxHeightPx}px` : ''};
   object-fit: cover;

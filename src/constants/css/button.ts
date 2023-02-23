@@ -27,5 +27,4 @@ export const BUTTON_INNER_STYLE = css`
   display: flex;
   justify-content: center;
   padding: 20px;
-  text-transform: uppercase;
 `;

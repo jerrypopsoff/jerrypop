@@ -74,7 +74,6 @@ const StyledMaterial = styled.li`
 
 const StyledMaterialName = styled.span`
   display: block;
-  text-transform: uppercase;
 `;
 
 const StyledMaterialAmount = styled.span`

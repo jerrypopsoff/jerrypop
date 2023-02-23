@@ -3,6 +3,13 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import AboutPhotograph from '../images/about-jerry.jpeg';
+import GlamorPhotograph from './GlamorPhotograph';
+import BlueberryPancake600 from '../images/glamorous-blueberry-pancake-600.jpeg';
+import BlueberryPancake1200 from '../images/glamorous-blueberry-pancake-1200.jpeg';
+import BlueberryPancake2400 from '../images/glamorous-blueberry-pancake-2400.jpeg';
+import BlueberryPancakeWebp600 from '../images/glamorous-blueberry-pancake-600.webp';
+import BlueberryPancakeWebp1200 from '../images/glamorous-blueberry-pancake-1200.webp';
+import BlueberryPancakeWebp2400 from '../images/glamorous-blueberry-pancake-2400.webp';
 
 const PHOTOGRAPH_MAX_WIDTH_PX = 400;
 
@@ -49,6 +56,14 @@ const About: React.FC = () => {
         <title>About · Jerrypop</title>
       </Helmet>
       <StyledAbout>
+        <GlamorPhotograph
+          alt="Photograph of a red bowl of Blueberry Pancake Craft Popcorn taken outdoors from directly above"
+          aspectRatio={3557 / 2260}
+          fallbackSrc={BlueberryPancake2400}
+          fallbackSrcSet={`${BlueberryPancake600} 600w, ${BlueberryPancake1200} 1200w, ${BlueberryPancake2400} 2400w`}
+          maxHeightPx={500}
+          srcSet={`${BlueberryPancakeWebp600} 600w, ${BlueberryPancakeWebp1200} 1200w, ${BlueberryPancakeWebp2400} 2400w`}
+        />
         <Typography type="h1">About Jerry</Typography>
         <StyledPhotographContainer>
           <StyledAboutPhotograph
