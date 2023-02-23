@@ -32,6 +32,7 @@ const StyledRegularSection = styled.section`
 
 const StyledTagline = styled(Typography)`
   font-size: 18px;
+  padding: 0 24px;
   text-transform: none;
 `;
 
