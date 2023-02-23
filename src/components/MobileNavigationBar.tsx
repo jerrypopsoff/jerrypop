@@ -21,7 +21,7 @@ import {
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
 
-const MENU_ITEM_HEIGHT_PX = 70;
+const MENU_ITEM_HEIGHT_PX = 60;
 
 interface Slideable {
   isOpen: boolean;
@@ -131,7 +131,6 @@ const StyledMenuItems = styled.ul<Slideable>`
 
 const StyledMenuItemLink = styled(Link)`
   ${NAVIGATION_MENU_LINK_STYLE}
-  font-size: 22px;
   padding: 0 6px;
 `;
 
@@ -141,6 +140,7 @@ const StyledMenuItemLinkInner = styled.div`
   border-bottom: none;
   border-top: none;
   display: flex;
+  font-size: 16px;
   padding: 0 16px;
   height: ${MENU_ITEM_HEIGHT_PX}px;
   text-align: left;
