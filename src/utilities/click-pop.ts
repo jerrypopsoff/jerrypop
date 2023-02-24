@@ -6,7 +6,7 @@ import {
 import { animateKernel, getKernelElement } from './kernel';
 import { getRandomBoolean, getRandomInteger } from './random';
 
-let MAX_KERNELS_PER_CLICK = 1;
+let MAX_KERNELS_PER_CLICK = 3;
 let MIN_KERNELS_PER_CLICK = 1;
 
 export function increaseKernelCount() {

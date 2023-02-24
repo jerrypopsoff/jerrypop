@@ -10,7 +10,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['MILK'],
     description:
-      'Hulless and crisp popcorn smothered in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a compostable bag.',
+      'Hulless and crisp popcorn coated in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
     description:
-      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
+      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
       'POPCORN',

@@ -6,16 +6,17 @@ import { Product } from '../types/product';
 const IMAGE_HEIGHT_PX = 300;
 const IMAGE_WIDTH_PX = 300;
 
-const BREAKPOINT_PX = 824;
+const BREAKPOINT_PX = 700;
 
 const StyledCard = styled.li`
   align-items: center;
   display: flex;
-  margin: 32px auto;
-  width: ${BREAKPOINT_PX - 24}px;
+  margin: 32px 24px;
+  width: ${BREAKPOINT_PX - 48}px;
 
   @media (max-width: ${BREAKPOINT_PX}px) {
     flex-direction: column;
+    margin: 32px 0;
     width: calc(100% - 48px);
   }
 `;

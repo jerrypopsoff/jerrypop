@@ -13,7 +13,10 @@ import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
 
 const StyledUnorderedList = styled.ul`
+  display: flex;
+  flex-flow: wrap;
   padding: 0;
+  justify-content: center;
   list-style: none;
   margin: 0;
 `;
