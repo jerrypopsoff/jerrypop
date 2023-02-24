@@ -9,7 +9,10 @@ import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
-import { FOOTER_TOP_MARGIN_PX } from '../constants/breakpoint';
+import {
+  FOOTER_TOP_MARGIN_PX,
+  WINDOW_BREAKPOINT_WIDTH_PX,
+} from '../constants/breakpoint';
 import { Link } from 'react-router-dom';
 import { BUTTON_STYLE } from '../constants/css/button';
 
@@ -28,6 +31,10 @@ const StyledRegularSection = styled.section`
   justify-content: center;
   margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
   width: 100%;
+
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+    height: auto;
+  }
 `;
 
 const StyledTagline = styled(Typography)`
