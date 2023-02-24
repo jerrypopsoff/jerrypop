@@ -11,11 +11,18 @@ import Products2400 from '../images/glamorous-packaging-2400.jpg';
 import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
 import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
+import { PRODUCTS_BREAKPOINT_PX } from '../constants/breakpoint';
 
 const StyledUnorderedList = styled.ul`
+  display: flex;
+  flex-flow: wrap;
   padding: 0;
   list-style: none;
-  margin: 0;
+  margin: 0 24px;
+
+  @media (max-width: ${PRODUCTS_BREAKPOINT_PX}px) {
+    margin: 0;
+  }
 `;
 
 const Products: React.FC = () => {
