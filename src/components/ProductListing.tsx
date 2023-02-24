@@ -2,21 +2,22 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { Product } from '../types/product';
-import {
-  CARD_INNER_STYLE,
-  CARD_OUTER_STYLE,
-  CARD_TITLE_STYLE,
-} from '../constants/css/card';
 
 const IMAGE_HEIGHT_PX = 300;
 const IMAGE_WIDTH_PX = 300;
 
-const StyledCard = styled.li`
-  ${CARD_OUTER_STYLE}
-`;
+const BREAKPOINT_PX = 824;
 
-const StyledInnerCard = styled.div`
-  ${CARD_INNER_STYLE}
+const StyledCard = styled.li`
+  align-items: center;
+  display: flex;
+  margin: 32px auto;
+  width: ${BREAKPOINT_PX - 24}px;
+
+  @media (max-width: ${BREAKPOINT_PX}px) {
+    flex-direction: column;
+    width: calc(100% - 48px);
+  }
 `;
 
 const StyledProductImageContainer = styled.div`
@@ -24,10 +25,12 @@ const StyledProductImageContainer = styled.div`
   display: flex;
   height: ${IMAGE_HEIGHT_PX}px; // Mitigate screen flash for image loading state ending
   justify-content: center;
-  margin-bottom: 24px;
 
-  @media (max-width: 390px) {
-    height: 220px;
+  @media (max-width: ${BREAKPOINT_PX}px) {
+    height: calc(100vw - 48px);
+    max-height: ${IMAGE_HEIGHT_PX}px;
+    max-width: ${IMAGE_WIDTH_PX}px;
+    width: calc(100vw - 48px);
   }
 `;
 
@@ -35,22 +38,30 @@ const StyledProductPhotograph = styled.img`
   height: ${IMAGE_HEIGHT_PX}px;
   width: ${IMAGE_WIDTH_PX}px;
 
-  @media (max-width: 390px) {
-    height: 220px;
-    width: 220px;
+  @media (max-width: ${BREAKPOINT_PX}px) {
+    height: calc(100vw - 48px);
+    max-height: ${IMAGE_HEIGHT_PX}px;
+    max-width: ${IMAGE_WIDTH_PX}px;
+    width: calc(100vw - 48px);
   }
 `;
 
-const StyledTitle = styled(Typography)`
-  ${CARD_TITLE_STYLE}
+const StyledListingInformation = styled.div`
+  margin: 0 0 0 32px;
+  text-align: left;
+
+  @media (max-width: ${BREAKPOINT_PX}px) {
+    margin: 32px auto;
+    max-width: ${IMAGE_WIDTH_PX}px;
+  }
 `;
 
-const StyledDescription = styled(Typography)`
-  font-weight: 400;
-`;
+const StyledTitle = styled(Typography)``;
+
+const StyledDescription = styled(Typography)``;
 
 const StyledIngredientListContent = styled(Typography)`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   text-align: justify;
   text-transform: uppercase;
@@ -63,18 +74,20 @@ interface Props {
 const ProductListing: React.FC<Props> = ({ product }) => {
   return (
     <StyledCard>
-      <StyledInnerCard>
-        <StyledProductImageContainer>
-          <StyledProductPhotograph
-            alt={`Photograph of ${product.title}`}
-            src={product.photograph}
-          />
-        </StyledProductImageContainer>
-        <StyledTitle type="h3">{product.title}</StyledTitle>
+      <StyledProductImageContainer>
+        <StyledProductPhotograph
+          alt={`Photograph of ${product.title}`}
+          src={product.photograph}
+        />
+      </StyledProductImageContainer>
+      <StyledListingInformation>
+        <StyledTitle margin="0" type="h3">
+          {product.title}
+        </StyledTitle>
         <StyledDescription margin="24px 0 0" type="p">
           {product.description}
         </StyledDescription>
-        <StyledIngredientListContent margin="24px 0 0" type="p">
+        <StyledIngredientListContent margin="32px 0 0" type="p">
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>
         {product.allergens.length ? (
@@ -82,7 +95,7 @@ const ProductListing: React.FC<Props> = ({ product }) => {
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}
-      </StyledInnerCard>
+      </StyledListingInformation>
     </StyledCard>
   );
 };
