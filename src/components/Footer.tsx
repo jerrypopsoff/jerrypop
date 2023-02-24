@@ -8,7 +8,7 @@ import {
   FOOTER_TOP_MARGIN_PX,
   WINDOW_NARROW_WIDTH_PX,
 } from '../constants/breakpoint';
-import { WHITE } from '../constants/color';
+import { THEME_NAVY, WHITE } from '../constants/color';
 import { increaseKernelCount } from '../utilities/click-pop';
 
 const StyledFooter = styled.footer`
@@ -47,6 +47,7 @@ const StyledSocialLinksContainer = styled.div`
 const StyledPopcornButton = styled.button`
   background-color: transparent;
   border: none;
+  color: ${THEME_NAVY};
 `;
 
 const StyledCopyright = styled(Typography)`
