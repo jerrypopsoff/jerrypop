@@ -2,21 +2,21 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { Product } from '../types/product';
-import { PRODUCTS_BREAKPOINT_PX } from '../constants/breakpoint';
 
 const IMAGE_HEIGHT_PX = 300;
 const IMAGE_WIDTH_PX = 300;
 
+const BREAKPOINT_PX = 700;
+
 const StyledCard = styled.li`
   align-items: center;
   display: flex;
-  margin: 32px auto;
-  padding: 0 24px;
-  width: ${PRODUCTS_BREAKPOINT_PX - 48}px;
+  margin: 32px 24px;
+  width: ${BREAKPOINT_PX - 48}px;
 
-  @media (max-width: ${PRODUCTS_BREAKPOINT_PX}px) {
+  @media (max-width: ${BREAKPOINT_PX}px) {
     flex-direction: column;
-    padding: 0;
+    margin: 32px 0;
     width: calc(100% - 48px);
   }
 `;
@@ -27,7 +27,7 @@ const StyledProductImageContainer = styled.div`
   height: ${IMAGE_HEIGHT_PX}px; // Mitigate screen flash for image loading state ending
   justify-content: center;
 
-  @media (max-width: ${PRODUCTS_BREAKPOINT_PX}px) {
+  @media (max-width: ${BREAKPOINT_PX}px) {
     height: calc(100vw - 48px);
     max-height: ${IMAGE_HEIGHT_PX}px;
     max-width: ${IMAGE_WIDTH_PX}px;
@@ -39,7 +39,7 @@ const StyledProductPhotograph = styled.img`
   height: ${IMAGE_HEIGHT_PX}px;
   width: ${IMAGE_WIDTH_PX}px;
 
-  @media (max-width: ${PRODUCTS_BREAKPOINT_PX}px) {
+  @media (max-width: ${BREAKPOINT_PX}px) {
     height: calc(100vw - 48px);
     max-height: ${IMAGE_HEIGHT_PX}px;
     max-width: ${IMAGE_WIDTH_PX}px;
@@ -51,7 +51,7 @@ const StyledListingInformation = styled.div`
   margin: 0 0 0 32px;
   text-align: left;
 
-  @media (max-width: ${PRODUCTS_BREAKPOINT_PX}px) {
+  @media (max-width: ${BREAKPOINT_PX}px) {
     margin: 32px auto;
     max-width: ${IMAGE_WIDTH_PX}px;
   }
