@@ -6,8 +6,13 @@ import {
 import { animateKernel, getKernelElement } from './kernel';
 import { getRandomBoolean, getRandomInteger } from './random';
 
-const MAX_KERNELS_PER_CLICK = 5;
-const MIN_KERNELS_PER_CLICK = 2;
+let MAX_KERNELS_PER_CLICK = 1;
+let MIN_KERNELS_PER_CLICK = 1;
+
+export function increaseKernelCount() {
+  MAX_KERNELS_PER_CLICK++;
+  MIN_KERNELS_PER_CLICK++;
+}
 
 let clickPopIndex = 0;
 

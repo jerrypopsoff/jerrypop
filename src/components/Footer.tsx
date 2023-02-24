@@ -9,6 +9,7 @@ import {
   WINDOW_NARROW_WIDTH_PX,
 } from '../constants/breakpoint';
 import { WHITE } from '../constants/color';
+import { increaseKernelCount } from '../utilities/click-pop';
 
 const StyledFooter = styled.footer`
   margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
@@ -43,6 +44,11 @@ const StyledSocialLinksContainer = styled.div`
   margin: 0 8px;
 `;
 
+const StyledPopcornButton = styled.button`
+  background-color: transparent;
+  border: none;
+`;
+
 const StyledCopyright = styled(Typography)`
   font-size: 11px;
 `;
@@ -56,9 +62,11 @@ const Footer: React.FC = () => {
         <Logo onToggleTheme={rotateTheme} theme={theme} />
       </StyledThemeSection>
       <StyledFooterInformation>
-        <StyledCopyright margin="0 8px" type="p">
-          © {new Date().getFullYear()} Jerrypop, LLC
-        </StyledCopyright>
+        <StyledPopcornButton onClick={() => increaseKernelCount()}>
+          <StyledCopyright margin="0 8px" type="p">
+            © {new Date().getFullYear()} Jerrypop, LLC
+          </StyledCopyright>
+        </StyledPopcornButton>
         <StyledSocialLinksContainer>
           <SocialLinks />
         </StyledSocialLinksContainer>
