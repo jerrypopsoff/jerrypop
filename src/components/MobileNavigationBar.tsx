@@ -5,8 +5,9 @@ import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
-import { THEME_NAVY, WHITE } from '../constants/color';
+import { SOFT_WHITE, THEME_NAVY, WHITE } from '../constants/color';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
+import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import { NAVIGATION_MENU_Z_INDEX } from '../constants/z-index';
 import {
@@ -16,6 +17,7 @@ import {
   NAVIGATION_MENU_LINK_STYLE,
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
+import { isDarkMode } from '../utilities/dark-mode';
 
 const MENU_ITEM_HEIGHT_PX = 60;
 
@@ -72,6 +74,10 @@ const StyledHamburgerLine = styled.div`
   background-color: ${THEME_NAVY};
   height: 2px;
   width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${SOFT_WHITE};
+  }
 `;
 
 const StyledWordmarkLink = styled(Link)`
@@ -101,6 +107,10 @@ const StyledCloseButtonIcon = styled.div`
   // Add 2px just to be safe. Chrome on iPhone shows a tiny sliver of a gap.
   height: ${MENU_ITEM_HEIGHT_PX + 2}px;
   padding: 0 24px;
+
+  @media (prefers-color-scheme: dark) {
+    color: ${SOFT_WHITE};
+  }
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -116,6 +126,10 @@ const StyledMenuItems = styled.ul<Slideable>`
     right: 0;
     top: -${({ slideDistancePx }) => slideDistancePx}px;
     z-index: ${NAVIGATION_MENU_Z_INDEX};
+
+    @media (prefers-color-scheme: dark) {
+      background-color: ${THEME_NAVY};
+    }
   }
 `;
 
@@ -138,6 +152,7 @@ interface Props {
 }
 
 const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
+  const isDark = isDarkMode();
   const [isOpen, setIsOpen] = useState(false);
   const navigationMenuItemsHeightPx =
     (navigationMenuItems.length + 1) * MENU_ITEM_HEIGHT_PX;
@@ -159,7 +174,10 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
               <StyledHamburgerLine aria-hidden="true" />
             </StyledHamburgerButton>
             <StyledWordmarkLink onClick={() => setIsOpen(false)} to="/">
-              <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
+              <StyledWordmark
+                alt="Jerrypop brand wordmark"
+                src={isDark ? WordmarkSvgDark : WordmarkSvg}
+              />
             </StyledWordmarkLink>
           </StyledNavigationBarContentInner>
         </StyledNavigationBarContent>

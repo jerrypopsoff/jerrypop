@@ -1,8 +1,12 @@
 import FacebookIcon from '../images/facebook-icon.svg';
+import FacebookIconDark from '../images/facebook-icon-dark.svg';
 import InstagramIcon from '../images/instagram-icon.svg';
+import InstagramIconDark from '../images/instagram-icon-dark.svg';
 import React from 'react';
 import YouTubeIcon from '../images/youtube-icon.svg';
+import YouTubeIconDark from '../images/youtube-icon-dark.svg';
 import styled from 'styled-components';
+import { isDarkMode } from '../utilities/dark-mode';
 
 const FACEBOOK_PROFILE_URL = 'https://www.facebook.com/craftpopcorn/';
 const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/craftpopcorn/';
@@ -32,6 +36,8 @@ const StyledSocialLinkIcon = styled.img`
 `;
 
 const SocialLinks: React.FC = () => {
+  const isDark = isDarkMode();
+
   return (
     <StyledSocialLinksList>
       <StyledSocialLinksListItem>
@@ -40,7 +46,10 @@ const SocialLinks: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <StyledSocialLinkIcon alt="Jerrypop on Facebook" src={FacebookIcon} />
+          <StyledSocialLinkIcon
+            alt="Jerrypop on Facebook"
+            src={isDark ? FacebookIconDark : FacebookIcon}
+          />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
       <StyledSocialLinksListItem>
@@ -51,7 +60,7 @@ const SocialLinks: React.FC = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
-            src={InstagramIcon}
+            src={isDark ? InstagramIconDark : InstagramIcon}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -61,7 +70,10 @@ const SocialLinks: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <StyledSocialLinkIcon alt="Jerrypop on YouTube" src={YouTubeIcon} />
+          <StyledSocialLinkIcon
+            alt="Jerrypop on YouTube"
+            src={isDark ? YouTubeIconDark : YouTubeIcon}
+          />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
     </StyledSocialLinksList>

@@ -1,6 +1,9 @@
 import {
   DIALOG_BACKDROP,
   ICON_HOVER_BACKGROUND,
+  ICON_HOVER_LIGHT_BACKGROUND,
+  SOFT_WHITE,
+  THEME_NAVY,
   WHITE,
 } from '../constants/color';
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
@@ -33,6 +36,10 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   top: ${VERTICAL_MARGIN_PX}px;
   width: ${({ dialogWidth }) => dialogWidth}px;
   z-index: ${DIALOG_Z_INDEX};
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${THEME_NAVY};
+  }
 `;
 
 const StyledDialogHeader = styled.header`
@@ -42,6 +49,10 @@ const StyledDialogHeader = styled.header`
   display: flex;
   flex-direction: column;
   margin-bottom: ${FORM_TOP_MARGIN_PX}px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${THEME_NAVY};
+  }
 `;
 
 const StyledCloseButton = styled.button`
@@ -64,6 +75,15 @@ const StyledCloseButton = styled.button`
   &:hover,
   &:focus {
     background-color: ${ICON_HOVER_BACKGROUND};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: ${SOFT_WHITE};
+
+    &:hover,
+    &:focus {
+      background-color: ${ICON_HOVER_LIGHT_BACKGROUND};
+    }
   }
 `;
 

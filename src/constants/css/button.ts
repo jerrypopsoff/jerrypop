@@ -1,4 +1,4 @@
-import { THEME_NAVY, WHITE } from '../color';
+import { SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
 import { DANGLE_STYLE } from './rotation';
 
@@ -22,5 +22,15 @@ export const BUTTON_STYLE = css`
   &:focus {
     ${DANGLE_STYLE}
     color: ${WHITE};
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${SOFT_WHITE};
+    color: ${THEME_NAVY};
+
+    &:hover,
+    &:focus {
+      color: ${THEME_NAVY};
+    }
   }
 `;

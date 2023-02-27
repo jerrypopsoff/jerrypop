@@ -11,6 +11,8 @@ import {
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
+import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
+import { isDarkMode } from '../utilities/dark-mode';
 
 const StyledNavigationBar = styled.nav`
   ${NAVIGATION_BAR_STYLE}
@@ -56,11 +58,16 @@ interface Props {
 }
 
 const DesktopNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
+  const isDark = isDarkMode();
+
   return (
     <StyledNavigationBar>
       <StyledNavigationBarContent>
         <StyledWordmarkLink to="/">
-          <StyledWordmark alt="Jerrypop brand wordmark" src={WordmarkSvg} />
+          <StyledWordmark
+            alt="Jerrypop brand wordmark"
+            src={isDark ? WordmarkSvgDark : WordmarkSvg}
+          />
         </StyledWordmarkLink>
         <StyledMenuItems>
           {navigationMenuItems.map(({ displayName, to }) => (
