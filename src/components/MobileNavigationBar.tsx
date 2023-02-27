@@ -5,7 +5,7 @@ import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
-import { SOFT_WHITE, THEME_NAVY, WHITE } from '../constants/color';
+import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY, WHITE } from '../constants/color';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
@@ -128,7 +128,7 @@ const StyledMenuItems = styled.ul<Slideable>`
     z-index: ${NAVIGATION_MENU_Z_INDEX};
 
     @media (prefers-color-scheme: dark) {
-      background-color: ${THEME_NAVY};
+      background-color: ${SOFT_BLACK};
     }
   }
 `;

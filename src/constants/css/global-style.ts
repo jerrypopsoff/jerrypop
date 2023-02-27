@@ -1,4 +1,10 @@
-import { GRAYSCALE_FILTER, SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
+import {
+  GRAYSCALE_FILTER,
+  SOFT_BLACK,
+  SOFT_WHITE,
+  THEME_NAVY,
+  WHITE,
+} from '../color';
 import {
   DESKTOP_NAVIGATION_BAR_HEIGHT_PX,
   KERNEL_NARROW_SIZE_PX,
@@ -32,7 +38,7 @@ body {
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${THEME_NAVY};
+    background-color: ${SOFT_BLACK};
     color: ${SOFT_WHITE};
   }
 }
