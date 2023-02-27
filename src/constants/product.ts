@@ -3,7 +3,7 @@ import PbjPhotograph from '../images/product-pbj.jpg';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
-import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpg';
+import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpeg';
 import { Product } from '../types/product';
 
 export const PRODUCTS: Product[] = [
