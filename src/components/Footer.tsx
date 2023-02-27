@@ -8,7 +8,7 @@ import {
   FOOTER_TOP_MARGIN_PX,
   WINDOW_NARROW_WIDTH_PX,
 } from '../constants/breakpoint';
-import { SOFT_WHITE, THEME_NAVY } from '../constants/color';
+import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY } from '../constants/color';
 import { increaseKernelCount } from '../utilities/click-pop';
 
 const StyledFooter = styled.footer`
@@ -30,12 +30,7 @@ const StyledThemeSection = styled.div`
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: transparent;
-    padding: 31px 0;
-
-    @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
-      padding: 23px 0;
-    }
+    background-color: ${SOFT_BLACK};
   }
 `;
 
