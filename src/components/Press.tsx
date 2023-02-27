@@ -58,7 +58,7 @@ const Press: React.FC = () => {
       <Typography type="h1">Press</Typography>
       <StyledTileList>
         {ARTICLES.map((article) => (
-          <StyledListItem>
+          <StyledListItem key={article.title}>
             <StyledArticleListItem
               as="a"
               href={article.href}
