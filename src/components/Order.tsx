@@ -146,12 +146,17 @@ const Order: React.FC = () => {
             ></RetailerListItem>
           ))}
         </StyledRetailerList>
-        <StyledSectionTagline type="p">
-          Want to pop off at your brewery or retail location with locally
-          handcrafted popcorn? Reach out to{' '}
-          <a href="mailto:info@jerrypop.com">info@jerrypop.com</a> for pop-ups,
-          pairings, and retail partnerships.
-        </StyledSectionTagline>
+        <Typography margin="24px 0 0" type="p">
+          Want to pop off at your business with locally handcrafted popcorn?{' '}
+          <a
+            href="mailto:info@jerrypop.com?subject=Jerrypop%20partnership%20inquiry"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Reach out
+          </a>{' '}
+          about pop-ups, pairings, and retail partnerships.
+        </Typography>
       </StyledSection>
       {isOrderFormVisible && (
         <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
