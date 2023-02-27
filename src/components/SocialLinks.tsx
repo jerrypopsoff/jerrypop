@@ -1,3 +1,5 @@
+import EmailIcon from '../images/email-icon.svg';
+import EmailIconDark from '../images/email-icon-dark.svg';
 import FacebookIcon from '../images/facebook-icon.svg';
 import FacebookIconDark from '../images/facebook-icon-dark.svg';
 import InstagramIcon from '../images/instagram-icon.svg';
@@ -12,6 +14,7 @@ const FACEBOOK_PROFILE_URL = 'https://www.facebook.com/craftpopcorn/';
 const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/craftpopcorn/';
 const YOU_TUBE_CHANNEL_URL =
   'https://www.youtube.com/channel/UC_3oErdLxGZgeTf8nrwsD3A';
+const EMAIL_URL = 'mailto:info@jerrypop.com';
 
 const StyledSocialLinksList = styled.ul`
   align-items: center;
@@ -73,6 +76,14 @@ const SocialLinks: React.FC = () => {
           <StyledSocialLinkIcon
             alt="Jerrypop on YouTube"
             src={isDark ? YouTubeIconDark : YouTubeIcon}
+          />
+        </StyledSocialLink>
+      </StyledSocialLinksListItem>
+      <StyledSocialLinksListItem>
+        <StyledSocialLink href={EMAIL_URL} target="_blank" rel="noreferrer">
+          <StyledSocialLinkIcon
+            alt="Email Jerrypop"
+            src={isDark ? EmailIconDark : EmailIcon}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>

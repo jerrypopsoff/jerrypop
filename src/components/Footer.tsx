@@ -41,10 +41,18 @@ const StyledFooterInformation = styled.div`
   margin: 24px auto 0;
   max-width: 600px;
   padding: 0 16px 24px;
+
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const StyledSocialLinksContainer = styled.div`
   margin: 0 8px;
+
+  @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
+    margin: 0 8px 12px;
+  }
 `;
 
 const StyledPopcornButton = styled.button`
