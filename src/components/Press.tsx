@@ -16,21 +16,16 @@ import {
   StyledTileList,
   StyledTileListItem,
 } from '../constants/css/tile-list';
-import { TILE_LIST_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import { ARTICLES } from '../constants/press';
 
 const StyledListItem = styled.li`
+  display: flex;
+  justify-content: center;
   width: 100%;
 `;
 
 const StyledArticleListItem = styled(StyledTileListItem)`
-  margin: 0 auto;
-  padding: 32px 24px;
   text-decoration: none;
-
-  @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    padding: 32px 0;
-  }
 `;
 
 const StyledArticlePublication = styled(Typography)`
