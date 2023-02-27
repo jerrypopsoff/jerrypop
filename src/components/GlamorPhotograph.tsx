@@ -47,6 +47,7 @@ const GlamorPhotograph: React.FC<Props> = ({
         alt={alt}
         fallbackSrc={fallbackSrc}
         fallbackSrcSet={fallbackSrcSet}
+        fetchPriority="high"
         sizes="100vw"
         srcSet={srcSet}
         type={type}

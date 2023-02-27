@@ -1,9 +1,15 @@
 import React from 'react';
 
-interface Props {
+interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
   fallbackSrc: string;
   fallbackSrcSet: string;
+  /**
+   * Todo: Remove this and src/types/img-fetch-priority.d.ts once the
+   * resolution for {@link https://github.com/facebook/react/issues/25682}
+   * lands.
+   */
+  fetchPriority?: 'high' | 'low' | 'auto';
   sizes: string;
   srcSet: string;
   type?: string;
@@ -35,6 +41,7 @@ const OptimizedImage: React.FC<Props> = ({
   alt,
   fallbackSrc,
   fallbackSrcSet,
+  fetchPriority,
   sizes,
   srcSet,
   type = 'image/webp',
@@ -45,6 +52,7 @@ const OptimizedImage: React.FC<Props> = ({
       <source srcSet={srcSet} sizes={sizes} type={type} />
       <img
         alt={alt}
+        fetchpriority={fetchPriority}
         src={fallbackSrc}
         srcSet={fallbackSrcSet}
         sizes={sizes}
