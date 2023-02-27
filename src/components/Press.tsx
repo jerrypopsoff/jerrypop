@@ -34,7 +34,7 @@ const StyledArticleListItem = styled(StyledTileListItem)`
 `;
 
 const StyledArticlePublication = styled(Typography)`
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   text-transform: uppercase;
 `;
 
