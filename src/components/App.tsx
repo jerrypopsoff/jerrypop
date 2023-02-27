@@ -12,6 +12,7 @@ import ScrollToTop from './ScrollToTop';
 import { useTheme } from '../hooks/use-theme';
 import NavigationBar from './NavigationBar';
 import Products from './Products';
+import Press from './Press';
 
 const App: React.FC = () => {
   useTheme();
@@ -37,6 +38,7 @@ const App: React.FC = () => {
             <Route element={<Order />} path="/order" />
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<About />} path="/about" />
+            <Route element={<Press />} path="/press" />
             <Route element={<NotFound />} path="*" />
           </Routes>
           <Footer />
