@@ -1,4 +1,4 @@
-import { THEME_NAVY } from '../color';
+import { GRAYSCALE_FILTER, SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
 import {
   DESKTOP_NAVIGATION_BAR_HEIGHT_PX,
   KERNEL_NARROW_SIZE_PX,
@@ -18,6 +18,7 @@ export const GLOBAL_STYLE = createGlobalStyle`
 }
 
 body {
+  background-color: ${WHITE};
   color: ${THEME_NAVY};
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -29,21 +30,38 @@ body {
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     padding: ${MOBILE_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: ${THEME_NAVY};
+    color: ${SOFT_WHITE};
+  }
 }
 
 :focus {
   outline-color: var(--main-theme-medium);
 }
 
+img:not([src*='.svg']) {
+  filter: ${GRAYSCALE_FILTER};
+}
+
 a {
   color: ${THEME_NAVY};
   cursor: pointer;
   text-decoration: underline;
+
+  @media (prefers-color-scheme: dark) {
+    color: ${SOFT_WHITE};
+  }
 }
 
 a:focus,
 a:hover {
   color: ${THEME_NAVY};
+
+  @media (prefers-color-scheme: dark) {
+    color: ${SOFT_WHITE};
+  }
 }
 
 button {
