@@ -2,7 +2,6 @@ import React from 'react';
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
-import styled from 'styled-components';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import Products600 from '../images/glamorous-packaging-600.jpg';
@@ -11,15 +10,7 @@ import Products2400 from '../images/glamorous-packaging-2400.jpg';
 import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
 import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
-
-const StyledUnorderedList = styled.ul`
-  display: flex;
-  flex-flow: wrap;
-  padding: 0;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-`;
+import { StyledTileList } from '../constants/css/tile-list';
 
 const Products: React.FC = () => {
   return (
@@ -35,11 +26,11 @@ const Products: React.FC = () => {
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
       <Typography type="h1">Products</Typography>
-      <StyledUnorderedList>
+      <StyledTileList>
         {PRODUCTS.map((product) => (
           <ProductListing key={product.title} product={product} />
         ))}
-      </StyledUnorderedList>
+      </StyledTileList>
     </>
   );
 };

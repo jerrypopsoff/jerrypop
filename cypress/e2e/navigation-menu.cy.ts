@@ -6,7 +6,7 @@ describe('navigation menu tests', () => {
   it('always presents a link to the current page', () => {
     NAVIGATION_MENU_ITEMS.forEach((item) => {
       cy.visit(item.to);
-      cy.get('nav a').should('have.length', 12);
+      cy.get('nav a').should('have.length', 14);
       cy.get(`a[href="${item.to}"]`).should('exist');
     });
   });

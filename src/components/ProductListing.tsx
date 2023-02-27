@@ -2,60 +2,12 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { Product } from '../types/product';
-
-const IMAGE_HEIGHT_PX = 300;
-const IMAGE_WIDTH_PX = 300;
-
-const BREAKPOINT_PX = 700;
-
-const StyledCard = styled.li`
-  align-items: center;
-  display: flex;
-  margin: 32px 24px;
-  width: ${BREAKPOINT_PX - 48}px;
-
-  @media (max-width: ${BREAKPOINT_PX}px) {
-    flex-direction: column;
-    margin: 32px 0;
-    width: calc(100% - 48px);
-  }
-`;
-
-const StyledProductImageContainer = styled.div`
-  align-items: center;
-  display: flex;
-  height: ${IMAGE_HEIGHT_PX}px; // Mitigate screen flash for image loading state ending
-  justify-content: center;
-
-  @media (max-width: ${BREAKPOINT_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${IMAGE_HEIGHT_PX}px;
-    max-width: ${IMAGE_WIDTH_PX}px;
-    width: calc(100vw - 48px);
-  }
-`;
-
-const StyledProductPhotograph = styled.img`
-  height: ${IMAGE_HEIGHT_PX}px;
-  width: ${IMAGE_WIDTH_PX}px;
-
-  @media (max-width: ${BREAKPOINT_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${IMAGE_HEIGHT_PX}px;
-    max-width: ${IMAGE_WIDTH_PX}px;
-    width: calc(100vw - 48px);
-  }
-`;
-
-const StyledListingInformation = styled.div`
-  margin: 0 0 0 32px;
-  text-align: left;
-
-  @media (max-width: ${BREAKPOINT_PX}px) {
-    margin: 32px auto;
-    max-width: ${IMAGE_WIDTH_PX}px;
-  }
-`;
+import {
+  StyledTileImage,
+  StyledTileImageContainer,
+  StyledTileInformation,
+  StyledTileListItem,
+} from '../constants/css/tile-list';
 
 const StyledTitle = styled(Typography)``;
 
@@ -74,14 +26,14 @@ interface Props {
 
 const ProductListing: React.FC<Props> = ({ product }) => {
   return (
-    <StyledCard>
-      <StyledProductImageContainer>
-        <StyledProductPhotograph
+    <StyledTileListItem>
+      <StyledTileImageContainer>
+        <StyledTileImage
           alt={`Photograph of ${product.title}`}
           src={product.photograph}
         />
-      </StyledProductImageContainer>
-      <StyledListingInformation>
+      </StyledTileImageContainer>
+      <StyledTileInformation>
         <StyledTitle margin="0" type="h3">
           {product.title}
         </StyledTitle>
@@ -96,8 +48,8 @@ const ProductListing: React.FC<Props> = ({ product }) => {
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}
-      </StyledListingInformation>
-    </StyledCard>
+      </StyledTileInformation>
+    </StyledTileListItem>
   );
 };
 
