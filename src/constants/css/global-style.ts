@@ -48,7 +48,9 @@ body {
 }
 
 img:not([src*='.svg']) {
-  filter: ${GRAYSCALE_FILTER};
+  @media (prefers-color-scheme: dark) {
+    filter: ${GRAYSCALE_FILTER};
+  }
 }
 
 a {
