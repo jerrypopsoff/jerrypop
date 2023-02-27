@@ -26,5 +26,9 @@ describe('footer tests', () => {
         'href',
         'https://www.youtube.com/channel/UC_3oErdLxGZgeTf8nrwsD3A',
       );
+    cy.get('footer')
+      .find('a')
+      .eq(3)
+      .should('have.attr', 'href', 'mailto:info@jerrypop.com');
   });
 });
