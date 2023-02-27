@@ -1,8 +1,7 @@
 import { css } from 'styled-components';
-import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
+import { SOFT_WHITE, THEME_NAVY } from '../color';
 
 export const CARD_OUTER_STYLE = css`
-  background-color: ${WHITE};
   border-radius: 5px;
   box-sizing: border-box;
   margin: 36px auto;
@@ -11,10 +10,6 @@ export const CARD_OUTER_STYLE = css`
 
   @media (max-width: 548px) {
     width: calc(100% - 24px);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_BLACK};
   }
 `;
 
