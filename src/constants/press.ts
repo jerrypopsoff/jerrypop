@@ -3,6 +3,7 @@ import WashingtonPostArticleImage from '../images/washington-post-photograph.png
 
 export const ARTICLES: PressArticle[] = [
   {
+    date: '27 February 2023',
     href: 'https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/',
     image: WashingtonPostArticleImage,
     imageAltText:

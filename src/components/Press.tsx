@@ -34,12 +34,17 @@ const StyledArticleListItem = styled(StyledTileListItem)`
 `;
 
 const StyledArticlePublication = styled(Typography)`
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   text-transform: uppercase;
 `;
 
 const StyledArticleTitle = styled(Typography)`
   margin: 0;
+`;
+
+const StyledArticleDate = styled(Typography)`
+  font-size: 12px;
+  margin: 16px 0 0;
 `;
 
 const Press: React.FC = () => {
@@ -75,6 +80,7 @@ const Press: React.FC = () => {
                 <StyledArticleTitle type="h2">
                   {article.title}
                 </StyledArticleTitle>
+                <StyledArticleDate type="p">{article.date}</StyledArticleDate>
               </StyledTileInformation>
             </StyledArticleListItem>
           </StyledListItem>

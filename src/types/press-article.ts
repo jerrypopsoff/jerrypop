@@ -1,4 +1,5 @@
 export interface PressArticle {
+  date: string;
   href: string;
   image: string;
   imageAltText: string;
