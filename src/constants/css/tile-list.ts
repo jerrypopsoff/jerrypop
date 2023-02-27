@@ -59,7 +59,7 @@ export const StyledTileInformation = styled.div`
   text-align: left;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    margin: 32px auto;
+    margin: 32px auto 0;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
   }
 `;
