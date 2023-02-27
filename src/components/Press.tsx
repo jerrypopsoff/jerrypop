@@ -18,6 +18,7 @@ import {
 } from '../constants/css/tile-list';
 import { TILE_LIST_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import { ARTICLES } from '../constants/press';
+import { THEME_NAVY } from '../constants/color';
 
 const StyledListItem = styled.li`
   width: 100%;
@@ -34,12 +35,20 @@ const StyledArticleListItem = styled(StyledTileListItem)`
 `;
 
 const StyledArticlePublication = styled(Typography)`
-  margin: 0 0 8px;
-  text-transform: uppercase;
+  border-bottom: 1px solid ${THEME_NAVY};
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 0 12px;
+  padding: 0 0 12px;
 `;
 
 const StyledArticleTitle = styled(Typography)`
   margin: 0;
+`;
+
+const StyledArticleDate = styled(Typography)`
+  font-size: 12px;
+  margin: 12px 0 0;
 `;
 
 const Press: React.FC = () => {
@@ -75,6 +84,7 @@ const Press: React.FC = () => {
                 <StyledArticleTitle type="h2">
                   {article.title}
                 </StyledArticleTitle>
+                <StyledArticleDate type="p">{article.date}</StyledArticleDate>
               </StyledTileInformation>
             </StyledArticleListItem>
           </StyledListItem>
