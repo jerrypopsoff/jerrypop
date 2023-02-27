@@ -50,7 +50,7 @@ const Press: React.FC = () => {
       </Helmet>
       <GlamorPhotograph
         alt="Photograph of a wooden bowl of Baklava Craft Popcorn taken outdoors"
-        aspectRatio={1800 / 2400}
+        aspectRatio={3024 / 3082}
         fallbackSrc={Baklava2400}
         fallbackSrcSet={`${Baklava600} 600w, ${Baklava1200} 1200w, ${Baklava2400} 2400w`}
         srcSet={`${BaklavaWebp600} 600w, ${BaklavaWebp1200} 1200w, ${BaklavaWebp2400} 2400w`}
