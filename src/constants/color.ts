@@ -8,6 +8,7 @@ export const WHITE = '#fff';
  * Dark mode colors
  */
 export const GRAYSCALE_FILTER = 'grayscale(25%)';
+export const SOFT_BLACK = 'rgb(32, 32, 32)';
 export const SOFT_WHITE = 'rgb(250, 250, 250)';
 export const ICON_HOVER_LIGHT_BACKGROUND = 'rgba(250, 250, 250, 0.1)';
 
