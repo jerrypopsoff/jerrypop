@@ -2,8 +2,8 @@ import {
   DIALOG_BACKDROP,
   ICON_HOVER_BACKGROUND,
   ICON_HOVER_LIGHT_BACKGROUND,
+  SOFT_BLACK,
   SOFT_WHITE,
-  THEME_NAVY,
   WHITE,
 } from '../constants/color';
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
@@ -38,7 +38,7 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   z-index: ${DIALOG_Z_INDEX};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${THEME_NAVY};
+    background-color: ${SOFT_BLACK};
   }
 `;
 
@@ -51,7 +51,7 @@ const StyledDialogHeader = styled.header`
   margin-bottom: ${FORM_TOP_MARGIN_PX}px;
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${THEME_NAVY};
+    background-color: ${SOFT_BLACK};
   }
 `;
 

@@ -32,7 +32,7 @@ const RetailerListItem: React.FC<Props> = ({
     <StyledListItem>
       <StyledRetailerAnchor href={href} rel="noreferrer" target="_blank">
         <StyledInformation>
-          <Typography margin="4px 0" type="h3">
+          <Typography margin="0 0 4px" type="h3">
             {name}
           </Typography>
           <Typography margin="0" type="p">

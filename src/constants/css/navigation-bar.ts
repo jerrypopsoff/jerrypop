@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
+import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
 import { NAVIGATION_BAR_Z_INDEX } from '../z-index';
 
 export const NAVIGATION_BAR_STYLE = css`
@@ -8,7 +8,7 @@ export const NAVIGATION_BAR_STYLE = css`
   z-index: ${NAVIGATION_BAR_Z_INDEX};
 
   @media (prefers-color-scheme: dark) {
-    background-color: ${THEME_NAVY};
+    background-color: ${SOFT_BLACK};
     color: ${SOFT_WHITE};
   }
 `;
