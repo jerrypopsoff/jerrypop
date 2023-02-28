@@ -10,7 +10,15 @@ import {
 } from '../constants/css/tile-list';
 import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 
-const StyledTitle = styled(Typography)``;
+const StyledTitle = styled(Typography)`
+  margin: 0;
+`;
+
+const StyledSubtitle = styled(Typography)`
+  font-size: 12px;
+  margin: 4px 0 0;
+  text-transform: uppercase;
+`;
 
 const StyledDescription = styled(Typography)``;
 
@@ -38,17 +46,16 @@ const ProductListing: React.FC<Props> = ({ product }) => {
         />
       </StyledTileImageContainer>
       <StyledTileInformation>
-        <StyledTitle margin="0" type="h3">
-          {product.title}
-        </StyledTitle>
-        <StyledDescription margin="24px 0 0" type="p">
+        <StyledTitle type="h2">{product.title}</StyledTitle>
+        <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
+        <StyledDescription margin="16px 0 0" type="p">
           {product.description}
         </StyledDescription>
-        <StyledIngredientListContent margin="32px 0 0" type="p">
+        <StyledIngredientListContent margin="16px 0 0" type="p">
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>
         {product.allergens.length ? (
-          <StyledIngredientListContent margin="16px 0 0" type="p">
+          <StyledIngredientListContent margin="8px 0 0" type="p">
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}

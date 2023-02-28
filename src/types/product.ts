@@ -4,5 +4,6 @@ export interface Product {
   ingredients: string[];
   image: string;
   imageWebp: string;
+  subtitle: string;
   title: string;
 }

@@ -36,7 +36,8 @@ export const PRODUCTS: Product[] = [
       'CHIVES',
       'PARSLEY',
     ],
-    title: 'Habanero Ranch Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Habanero Ranch',
   },
   {
     allergens: ['PEANUTS', 'SOY'],
@@ -54,7 +55,8 @@ export const PRODUCTS: Product[] = [
       'BAKING POWDER',
       'SALT',
     ],
-    title: 'PB&J Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'PB&J',
   },
   {
     allergens: ['MILK'],
@@ -74,7 +76,8 @@ export const PRODUCTS: Product[] = [
       'CHIVES',
       'BLACK PEPPERCORN',
     ],
-    title: 'Goat Cheese Chive Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Goat Cheese Chive',
   },
   {
     allergens: ['FISH', 'MILK'],
@@ -93,7 +96,8 @@ export const PRODUCTS: Product[] = [
       'GRANULATED ONION',
       'SUGAR',
     ],
-    title: 'Furikake Dashi Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Furikake Dashi',
   },
   {
     allergens: [],
@@ -113,7 +117,8 @@ export const PRODUCTS: Product[] = [
       'ROSEMARY',
       'BLACK PEPPERCORN',
     ],
-    title: 'Rosemary Lemon Pepper Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Rosemary Lemon Pepper',
   },
   {
     allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
@@ -130,7 +135,8 @@ export const PRODUCTS: Product[] = [
       'BAKING POWDER',
       'SALT',
     ],
-    title: 'Chocolate Hazelnut Espresso Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Chocolate Hazelnut Espresso',
   },
   {
     allergens: [],
@@ -150,6 +156,7 @@ export const PRODUCTS: Product[] = [
       'SUGAR',
       'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
     ],
-    title: 'Sichuan Nooch Craft Popcorn',
+    subtitle: 'Craft Popcorn',
+    title: 'Sichuan Nooch',
   },
 ];

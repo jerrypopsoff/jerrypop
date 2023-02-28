@@ -56,11 +56,11 @@ export const StyledTileImage = styled(OptimizedImage)`
 `;
 
 export const StyledTileInformation = styled.div`
-  margin: 0 0 0 32px;
+  margin: 0 0 0 24px;
   text-align: left;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    margin: 32px auto 0;
+    margin: 24px auto 0;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
   }
 `;
