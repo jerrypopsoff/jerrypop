@@ -1,11 +1,4 @@
-import {
-  DIALOG_BACKDROP,
-  ICON_HOVER_BACKGROUND,
-  ICON_HOVER_LIGHT_BACKGROUND,
-  SOFT_BLACK,
-  SOFT_WHITE,
-  WHITE,
-} from '../constants/color';
+import { DIALOG_BACKDROP } from '../constants/color';
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
 import React from 'react';
 import styled from 'styled-components';
@@ -25,7 +18,7 @@ interface StyledDialogProps {
 
 const StyledDialog = styled.dialog<StyledDialogProps>`
   ${WITH_BOX_SHADOW_STYLE}
-  background-color: ${WHITE};
+  background-color: var(--color-background);
   border: none;
   border-radius: 5px;
   display: flex;
@@ -36,23 +29,14 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   top: ${VERTICAL_MARGIN_PX}px;
   width: ${({ dialogWidth }) => dialogWidth}px;
   z-index: ${DIALOG_Z_INDEX};
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_BLACK};
-  }
 `;
 
 const StyledDialogHeader = styled.header`
   align-items: flex-end;
-  background-color: var(--main-theme-dark);
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
   margin-bottom: ${FORM_TOP_MARGIN_PX}px;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_BLACK};
-  }
 `;
 
 const StyledCloseButton = styled.button`
@@ -60,7 +44,7 @@ const StyledCloseButton = styled.button`
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--theme-text-on-dark);
+  color: var(--color-foreground);
   cursor: pointer;
   display: flex;
   font-family: sans-serif;
@@ -74,16 +58,7 @@ const StyledCloseButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${ICON_HOVER_BACKGROUND};
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-
-    &:hover,
-    &:focus {
-      background-color: ${ICON_HOVER_LIGHT_BACKGROUND};
-    }
+    background-color: var(--icon-hover-background);
   }
 `;
 

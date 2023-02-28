@@ -1,5 +1,4 @@
 import { css } from 'styled-components';
-import { SOFT_WHITE, THEME_NAVY } from '../color';
 
 export const CARD_OUTER_STYLE = css`
   border-radius: 5px;
@@ -15,13 +14,8 @@ export const CARD_OUTER_STYLE = css`
 
 export const CARD_INNER_STYLE = css`
   border-radius: 5px;
-  color: ${THEME_NAVY};
   padding: 24px 16px;
   text-align: left;
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-  }
 `;
 
 export const CARD_TITLE_STYLE = css`

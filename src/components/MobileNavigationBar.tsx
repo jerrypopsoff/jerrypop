@@ -5,7 +5,6 @@ import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
-import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY, WHITE } from '../constants/color';
 import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
@@ -43,6 +42,7 @@ const StyledNavigationBar = styled.nav`
 const StyledNavigationBarContent = styled.div<Slideable>`
   ${SLIDE_STYLE}
   ${NAVIGATION_BAR_STYLE}
+  background-color: var(--color-background);
   left: 0;
   padding: 0;
   position: absolute;
@@ -71,13 +71,9 @@ const StyledHamburgerButton = styled.button`
 `;
 
 const StyledHamburgerLine = styled.div`
-  background-color: ${THEME_NAVY};
+  background-color: var(--color-foreground);
   height: 2px;
   width: 100%;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_WHITE};
-  }
 `;
 
 const StyledWordmarkLink = styled(Link)`
@@ -100,17 +96,13 @@ const StyledCloseButton = styled.button`
 
 const StyledCloseButtonIcon = styled.div`
   align-items: center;
-  color: ${THEME_NAVY};
+  color: var(--color-foreground);
   display: flex;
   font-size: 24px;
   font-weight: 500;
   // Add 2px just to be safe. Chrome on iPhone shows a tiny sliver of a gap.
   height: ${MENU_ITEM_HEIGHT_PX + 2}px;
   padding: 0 24px;
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-  }
 `;
 
 const StyledMenuItems = styled.ul<Slideable>`
@@ -119,17 +111,13 @@ const StyledMenuItems = styled.ul<Slideable>`
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     ${SLIDE_STYLE}
     ${NAVIGATION_MENU_LIST_STYLE}
-    background-color: ${WHITE};
+    background-color: var(--color-background);
     display: block;
     left: 0;
     position: absolute;
     right: 0;
     top: -${({ slideDistancePx }) => slideDistancePx}px;
     z-index: ${NAVIGATION_MENU_Z_INDEX};
-
-    @media (prefers-color-scheme: dark) {
-      background-color: ${SOFT_BLACK};
-    }
   }
 `;
 

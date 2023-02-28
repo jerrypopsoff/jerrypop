@@ -8,7 +8,6 @@ import {
   FOOTER_TOP_MARGIN_PX,
   WINDOW_NARROW_WIDTH_PX,
 } from '../constants/breakpoint';
-import { SOFT_WHITE, THEME_NAVY } from '../constants/color';
 import { increaseKernelCount } from '../utilities/click-pop';
 
 const StyledFooter = styled.footer`
@@ -17,7 +16,7 @@ const StyledFooter = styled.footer`
 
 const StyledThemeSection = styled.div`
   align-items: center;
-  background-color: var(--main-theme-dark);
+  background-color: var(--color-theme-background);
   display: flex;
   height: 400px;
   justify-content: center;
@@ -27,10 +26,6 @@ const StyledThemeSection = styled.div`
 
   @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
     height: 280px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${THEME_NAVY};
   }
 `;
 
@@ -58,11 +53,7 @@ const StyledSocialLinksContainer = styled.div`
 const StyledPopcornButton = styled.button`
   background-color: transparent;
   border: none;
-  color: ${THEME_NAVY};
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-  }
+  color: var(--color-foreground);
 `;
 
 const StyledCopyright = styled(Typography)`
