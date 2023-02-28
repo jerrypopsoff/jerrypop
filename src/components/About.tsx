@@ -72,7 +72,7 @@ const About: React.FC = () => {
             alt="Photograph of Jerry, founder and owner-operator of Jerrypop"
             fallbackSrc={AboutPhotograph}
             fallbackSrcSet={`${AboutPhotograph} 800w`}
-            sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PHOTOGRAPH_BREAKPOINT_PX}), 95vw`}
+            sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PHOTOGRAPH_BREAKPOINT_PX}px), 95vw`}
             srcSet={`${AboutPhotographWebp} 800w`}
           />
           <StyledPhotographCredit type="p">

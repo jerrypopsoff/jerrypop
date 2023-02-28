@@ -33,7 +33,7 @@ const ProductListing: React.FC<Props> = ({ product }) => {
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
           fallbackSrcSet={`${product.image} 600w`}
-          sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}), 95vw`}
+          sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
           srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>

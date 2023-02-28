@@ -71,7 +71,7 @@ const Press: React.FC = () => {
                   alt={article.imageAltText}
                   fallbackSrc={article.image}
                   fallbackSrcSet={`${article.image} 600w`}
-                  sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}), 95vw`}
+                  sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
                   srcSet={`${article.imageWebp} 600w`}
                 />
               </StyledTileImageContainer>
