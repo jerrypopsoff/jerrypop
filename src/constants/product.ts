@@ -1,6 +1,7 @@
 import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
 import PbjPhotograph from '../images/product-pbj.jpg';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
+import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpeg';
@@ -45,6 +46,25 @@ export const PRODUCTS: Product[] = [
     ],
     photograph: PbjPhotograph,
     title: 'PB&J Craft Popcorn',
+  },
+  {
+    allergens: ['MILK'],
+    description:
+      'Funky, creamy goat milk popcorn with abundant chives for a delicate herbal finish. Locally popped, handcrafted, and packaged in a compostable bag.',
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'GOAT MILK POWDER',
+      'GRANULATED GARLIC',
+      'GRANULATED ONION',
+      'SALT',
+      'MONOSODIUM GLUTAMATE',
+      'SUGAR',
+      'CHIVES',
+      'BLACK PEPPERCORN',
+    ],
+    photograph: GoatCheeseChivePhotograph,
+    title: 'Goat Cheese Chive Craft Popcorn',
   },
   {
     allergens: ['FISH', 'MILK'],
