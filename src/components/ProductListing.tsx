@@ -8,6 +8,7 @@ import {
   StyledTileInformation,
   StyledTileListItem,
 } from '../constants/css/tile-list';
+import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledTitle = styled(Typography)``;
 
@@ -30,7 +31,10 @@ const ProductListing: React.FC<Props> = ({ product }) => {
       <StyledTileImageContainer>
         <StyledTileImage
           alt={`Photograph of ${product.title}`}
-          src={product.photograph}
+          fallbackSrc={product.image}
+          fallbackSrcSet={`${product.image} 600w`}
+          sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}), 95vw`}
+          srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>
       <StyledTileInformation>

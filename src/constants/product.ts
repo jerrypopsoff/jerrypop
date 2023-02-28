@@ -1,10 +1,17 @@
 import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
+import HabaneroRanchPhotographWebp from '../images/product-habanero-ranch.webp';
 import PbjPhotograph from '../images/product-pbj.jpg';
+import PbjPhotographWebp from '../images/product-pbj.webp';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
+import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
+import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
+import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
+import SichuanNoochPhotographWebp from '../images/product-sichuan-nooch.webp';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpeg';
+import FurikakeDashiPhotographWebp from '../images/product-furikake-dashi.webp';
 import { Product } from '../types/product';
 
 export const PRODUCTS: Product[] = [
@@ -12,6 +19,8 @@ export const PRODUCTS: Product[] = [
     allergens: ['MILK'],
     description:
       'Hulless and crisp popcorn coated in creamy, zesty ranch seasoning with a habanero kick. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: HabaneroRanchPhotograph,
+    imageWebp: HabaneroRanchPhotographWebp,
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -27,13 +36,14 @@ export const PRODUCTS: Product[] = [
       'CHIVES',
       'PARSLEY',
     ],
-    photograph: HabaneroRanchPhotograph,
     title: 'Habanero Ranch Craft Popcorn',
   },
   {
     allergens: ['PEANUTS', 'SOY'],
     description:
       'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: PbjPhotograph,
+    imageWebp: PbjPhotographWebp,
     ingredients: [
       'STRAWBERRY JAM',
       'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
@@ -44,13 +54,14 @@ export const PRODUCTS: Product[] = [
       'BAKING POWDER',
       'SALT',
     ],
-    photograph: PbjPhotograph,
     title: 'PB&J Craft Popcorn',
   },
   {
     allergens: ['MILK'],
     description:
       'Funky, creamy goat milk popcorn with abundant chives for a delicate herbal finish. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: GoatCheeseChivePhotograph,
+    imageWebp: GoatCheeseChivePhotographWebp,
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -63,13 +74,14 @@ export const PRODUCTS: Product[] = [
       'CHIVES',
       'BLACK PEPPERCORN',
     ],
-    photograph: GoatCheeseChivePhotograph,
     title: 'Goat Cheese Chive Craft Popcorn',
   },
   {
     allergens: ['FISH', 'MILK'],
     description:
       'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: FurikakeDashiPhotograph,
+    imageWebp: FurikakeDashiPhotographWebp,
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -81,13 +93,14 @@ export const PRODUCTS: Product[] = [
       'GRANULATED ONION',
       'SUGAR',
     ],
-    photograph: FurikakeDashiPhotograph,
     title: 'Furikake Dashi Craft Popcorn',
   },
   {
     allergens: [],
     description:
       'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: RosemaryLemonPepperPhotograph,
+    imageWebp: RosemaryLemonPepperPhotographWebp,
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -100,13 +113,14 @@ export const PRODUCTS: Product[] = [
       'ROSEMARY',
       'BLACK PEPPERCORN',
     ],
-    photograph: RosemaryLemonPepperPhotograph,
     title: 'Rosemary Lemon Pepper Craft Popcorn',
   },
   {
     allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
     description:
       'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: ChocolateHazelnutEspressoPhotograph,
+    imageWebp: ChocolateHazelnutEspressoPhotographWebp,
     ingredients: [
       'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
       'POPCORN',
@@ -116,13 +130,14 @@ export const PRODUCTS: Product[] = [
       'BAKING POWDER',
       'SALT',
     ],
-    photograph: ChocolateHazelnutEspressoPhotograph,
     title: 'Chocolate Hazelnut Espresso Craft Popcorn',
   },
   {
     allergens: [],
     description:
       'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: SichuanNoochPhotograph,
+    imageWebp: SichuanNoochPhotographWebp,
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
@@ -135,7 +150,6 @@ export const PRODUCTS: Product[] = [
       'SUGAR',
       'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
     ],
-    photograph: SichuanNoochPhotograph,
     title: 'Sichuan Nooch Craft Popcorn',
   },
 ];

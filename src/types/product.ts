@@ -2,6 +2,7 @@ export interface Product {
   allergens: string[];
   description: string;
   ingredients: string[];
-  photograph: string;
+  image: string;
+  imageWebp: string;
   title: string;
 }
