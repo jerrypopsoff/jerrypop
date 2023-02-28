@@ -30,6 +30,7 @@ describe('navigation menu tests', () => {
 
   it('allows direct navigation to hidden pages', () => {
     cy.visit(RoutePath.Recipes);
-    cy.url().should('not.include', RoutePath.Recipes);
+    cy.url().should('include', RoutePath.Recipes);
+    cy.get(`nav a[href="${RoutePath.Recipes}"]`).should('not.exist');
   });
 });
