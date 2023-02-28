@@ -1,13 +1,12 @@
-import { SOFT_WHITE, THEME_NAVY, WHITE } from '../color';
 import { css } from 'styled-components';
 import { DANGLE_STYLE } from './rotation';
 
 export const BUTTON_STYLE = css`
   align-items: center;
-  background-color: ${THEME_NAVY};
+  background-color: var(--color-foreground);
   border: none;
   border-radius: 3px;
-  color: ${WHITE};
+  color: var(--color-background);
   cursor: pointer;
   display: flex;
   font-size: 14px;
@@ -21,16 +20,6 @@ export const BUTTON_STYLE = css`
   &:hover,
   &:focus {
     ${DANGLE_STYLE}
-    color: ${WHITE};
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_WHITE};
-    color: ${THEME_NAVY};
-
-    &:hover,
-    &:focus {
-      color: ${THEME_NAVY};
-    }
+    color: var(--color-background);
   }
 `;

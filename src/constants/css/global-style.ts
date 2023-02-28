@@ -1,5 +1,6 @@
 import {
-  GRAYSCALE_FILTER,
+  ICON_HOVER_BACKGROUND,
+  ICON_HOVER_LIGHT_BACKGROUND,
   SOFT_BLACK,
   SOFT_WHITE,
   THEME_NAVY,
@@ -24,8 +25,22 @@ export const GLOBAL_STYLE = createGlobalStyle`
 }
 
 body {
-  background-color: ${WHITE};
-  color: ${THEME_NAVY};
+  --color-background: ${WHITE};
+  --color-foreground: ${THEME_NAVY};
+  --color-theme-background: var(--main-theme-dark);
+  --icon-hover-background: ${ICON_HOVER_BACKGROUND};
+  --image-filter: none;
+
+  @media (prefers-color-scheme: dark) {
+    --color-background: ${SOFT_BLACK};
+    --color-foreground: ${SOFT_WHITE};
+    --color-theme-background: ${THEME_NAVY};
+    --icon-hover-background: ${ICON_HOVER_LIGHT_BACKGROUND};
+    --image-filter: grayscale(0.15);
+  }
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: ${DESKTOP_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
@@ -36,11 +51,6 @@ body {
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
     padding: ${MOBILE_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: ${SOFT_BLACK};
-    color: ${SOFT_WHITE};
-  }
 }
 
 :focus {
@@ -48,28 +58,18 @@ body {
 }
 
 img:not([src*='.svg']) {
-  @media (prefers-color-scheme: dark) {
-    filter: ${GRAYSCALE_FILTER};
-  }
+  filter: var(--image-filter);
 }
 
 a {
-  color: ${THEME_NAVY};
+  color: var(--color-foreground);
   cursor: pointer;
   text-decoration: underline;
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-  }
 }
 
 a:focus,
 a:hover {
-  color: ${THEME_NAVY};
-
-  @media (prefers-color-scheme: dark) {
-    color: ${SOFT_WHITE};
-  }
+  color: var(--color-foreground);
 }
 
 button {
