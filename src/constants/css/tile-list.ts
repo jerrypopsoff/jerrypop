@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import OptimizedImage from '../../components/OptimizedImage';
 import {
   TILE_LIST_BREAKPOINT_WIDTH_PX,
   TILE_LIST_IMAGE_HEIGHT_PX,
@@ -42,7 +43,7 @@ export const StyledTileImageContainer = styled.div`
   }
 `;
 
-export const StyledTileImage = styled.img`
+export const StyledTileImage = styled(OptimizedImage)`
   height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
   width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
 
