@@ -19,7 +19,7 @@ const Products: React.FC = () => {
         <title>Products · Jerrypop</title>
       </Helmet>
       <GlamorPhotograph
-        alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bartop"
+        alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bar top"
         aspectRatio={8688 / 5792}
         fallbackSrc={Products2400}
         fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
