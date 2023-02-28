@@ -122,7 +122,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: [],
     description:
-      'Exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
+      'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
       'POPCORN',
       'CANOLA OIL',
