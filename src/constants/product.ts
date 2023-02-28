@@ -1,6 +1,7 @@
 import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
 import PbjPhotograph from '../images/product-pbj.jpg';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
+import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpeg';
@@ -47,6 +48,43 @@ export const PRODUCTS: Product[] = [
     title: 'PB&J Craft Popcorn',
   },
   {
+    allergens: ['MILK'],
+    description:
+      'Funky, creamy goat milk popcorn with abundant chives for a delicate herbal finish. Locally popped, handcrafted, and packaged in a compostable bag.',
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'GOAT MILK POWDER',
+      'GRANULATED GARLIC',
+      'GRANULATED ONION',
+      'SALT',
+      'MONOSODIUM GLUTAMATE',
+      'SUGAR',
+      'CHIVES',
+      'BLACK PEPPERCORN',
+    ],
+    photograph: GoatCheeseChivePhotograph,
+    title: 'Goat Cheese Chive Craft Popcorn',
+  },
+  {
+    allergens: ['FISH', 'MILK'],
+    description:
+      'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
+      'SALT',
+      'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
+      'MONOSODIUM GLUTAMATE',
+      'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
+      'GRANULATED ONION',
+      'SUGAR',
+    ],
+    photograph: FurikakeDashiPhotograph,
+    title: 'Furikake Dashi Craft Popcorn',
+  },
+  {
     allergens: [],
     description:
       'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. Locally popped, handcrafted, and packaged in a compostable bag.',
@@ -66,43 +104,6 @@ export const PRODUCTS: Product[] = [
     title: 'Rosemary Lemon Pepper Craft Popcorn',
   },
   {
-    allergens: ['FISH', 'MILK'],
-    description:
-      'Tastefully savory umami bomb popcorn featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
-    ingredients: [
-      'POPCORN',
-      'CANOLA OIL',
-      'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
-      'SALT',
-      'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
-      'MONOSODIUM GLUTAMATE',
-      'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
-      'GRANULATED ONION',
-      'SUGAR',
-    ],
-    photograph: FurikakeDashiPhotograph,
-    title: 'Furikake Dashi Craft Popcorn',
-  },
-  {
-    allergens: [],
-    description:
-      'Exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
-    ingredients: [
-      'POPCORN',
-      'CANOLA OIL',
-      'NUTRITIONAL YEAST (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12))',
-      'GRANULATED GARLIC',
-      'GRANULATED ONION',
-      'SALT',
-      'SICHUAN PEPPERCORN',
-      'MONOSODIUM GLUTAMATE',
-      'SUGAR',
-      'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
-    ],
-    photograph: SichuanNoochPhotograph,
-    title: 'Sichuan Nooch Craft Popcorn',
-  },
-  {
     allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
     description:
       'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
@@ -117,5 +118,24 @@ export const PRODUCTS: Product[] = [
     ],
     photograph: ChocolateHazelnutEspressoPhotograph,
     title: 'Chocolate Hazelnut Espresso Craft Popcorn',
+  },
+  {
+    allergens: [],
+    description:
+      'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn for the thrill-seekers. Locally popped, handcrafted, and packaged in a compostable bag.',
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'NUTRITIONAL YEAST (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12))',
+      'GRANULATED GARLIC',
+      'GRANULATED ONION',
+      'SALT',
+      'SICHUAN PEPPERCORN',
+      'MONOSODIUM GLUTAMATE',
+      'SUGAR',
+      'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
+    ],
+    photograph: SichuanNoochPhotograph,
+    title: 'Sichuan Nooch Craft Popcorn',
   },
 ];
