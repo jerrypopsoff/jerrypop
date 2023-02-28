@@ -47,6 +47,24 @@ export const PRODUCTS: Product[] = [
     title: 'PB&J Craft Popcorn',
   },
   {
+    allergens: ['FISH', 'MILK'],
+    description:
+      'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
+      'SALT',
+      'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
+      'MONOSODIUM GLUTAMATE',
+      'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
+      'GRANULATED ONION',
+      'SUGAR',
+    ],
+    photograph: FurikakeDashiPhotograph,
+    title: 'Furikake Dashi Craft Popcorn',
+  },
+  {
     allergens: [],
     description:
       'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. Locally popped, handcrafted, and packaged in a compostable bag.',
@@ -66,22 +84,20 @@ export const PRODUCTS: Product[] = [
     title: 'Rosemary Lemon Pepper Craft Popcorn',
   },
   {
-    allergens: ['FISH', 'MILK'],
+    allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
     description:
-      'Tastefully savory umami bomb popcorn featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
+      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
     ingredients: [
+      'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
       'POPCORN',
       'CANOLA OIL',
-      'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
-      'SALT',
-      'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
-      'MONOSODIUM GLUTAMATE',
-      'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
-      'GRANULATED ONION',
+      'NATURALLY REFINED ORGANIC COCONUT OIL',
       'SUGAR',
+      'BAKING POWDER',
+      'SALT',
     ],
-    photograph: FurikakeDashiPhotograph,
-    title: 'Furikake Dashi Craft Popcorn',
+    photograph: ChocolateHazelnutEspressoPhotograph,
+    title: 'Chocolate Hazelnut Espresso Craft Popcorn',
   },
   {
     allergens: [],
@@ -101,21 +117,5 @@ export const PRODUCTS: Product[] = [
     ],
     photograph: SichuanNoochPhotograph,
     title: 'Sichuan Nooch Craft Popcorn',
-  },
-  {
-    allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
-    description:
-      'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. Locally popped, handcrafted, and packaged in a compostable bag.',
-    ingredients: [
-      'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
-      'POPCORN',
-      'CANOLA OIL',
-      'NATURALLY REFINED ORGANIC COCONUT OIL',
-      'SUGAR',
-      'BAKING POWDER',
-      'SALT',
-    ],
-    photograph: ChocolateHazelnutEspressoPhotograph,
-    title: 'Chocolate Hazelnut Espresso Craft Popcorn',
   },
 ];
