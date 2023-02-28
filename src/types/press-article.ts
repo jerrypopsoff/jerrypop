@@ -3,6 +3,7 @@ export interface PressArticle {
   href: string;
   image: string;
   imageAltText: string;
+  imageWebp: string;
   publication: string;
   title: string;
 }

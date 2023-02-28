@@ -17,6 +17,7 @@ import {
   StyledTileListItem,
 } from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
+import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 
 const StyledListItem = styled.li`
   display: flex;
@@ -66,7 +67,13 @@ const Press: React.FC = () => {
               target="_blank"
             >
               <StyledTileImageContainer>
-                <StyledTileImage src={article.image} />
+                <StyledTileImage
+                  alt={article.imageAltText}
+                  fallbackSrc={article.image}
+                  fallbackSrcSet={`${article.image} 600w`}
+                  sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}), 95vw`}
+                  srcSet={`${article.imageWebp} 600w`}
+                />
               </StyledTileImageContainer>
               <StyledTileInformation>
                 <StyledArticlePublication type="p">
