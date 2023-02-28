@@ -3,6 +3,7 @@ import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import AboutPhotograph from '../images/about-jerry.jpeg';
+import AboutPhotographWebp from '../images/about-jerry.webp';
 import GlamorPhotograph from './GlamorPhotograph';
 import BlueberryPancake600 from '../images/glamorous-blueberry-pancake-600.jpeg';
 import BlueberryPancake1200 from '../images/glamorous-blueberry-pancake-1200.jpeg';
@@ -10,8 +11,10 @@ import BlueberryPancake2400 from '../images/glamorous-blueberry-pancake-2400.jpe
 import BlueberryPancakeWebp600 from '../images/glamorous-blueberry-pancake-600.webp';
 import BlueberryPancakeWebp1200 from '../images/glamorous-blueberry-pancake-1200.webp';
 import BlueberryPancakeWebp2400 from '../images/glamorous-blueberry-pancake-2400.webp';
+import OptimizedImage from './OptimizedImage';
 
 const PHOTOGRAPH_MAX_WIDTH_PX = 400;
+const PHOTOGRAPH_BREAKPOINT_PX = PHOTOGRAPH_MAX_WIDTH_PX + 24;
 
 const StyledAbout = styled.div`
   align-items: center;
@@ -25,7 +28,7 @@ const StyledPhotographContainer = styled.div`
   margin: 24px 0;
   text-align: left;
 
-  @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
+  @media (max-width: ${PHOTOGRAPH_BREAKPOINT_PX}px) {
     box-sizing: border-box;
     height: unset;
     padding: 0 12px;
@@ -33,12 +36,12 @@ const StyledPhotographContainer = styled.div`
   }
 `;
 
-const StyledAboutPhotograph = styled.img`
+const StyledAboutPhotograph = styled(OptimizedImage)`
   height: 534px;
   max-width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
   width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
 
-  @media (max-width: ${PHOTOGRAPH_MAX_WIDTH_PX + 24}px) {
+  @media (max-width: ${PHOTOGRAPH_BREAKPOINT_PX}px) {
     height: unset;
     width: 100%;
   }
@@ -67,7 +70,10 @@ const About: React.FC = () => {
         <StyledPhotographContainer>
           <StyledAboutPhotograph
             alt="Photograph of Jerry, founder and owner-operator of Jerrypop"
-            src={AboutPhotograph}
+            fallbackSrc={AboutPhotograph}
+            fallbackSrcSet={`${AboutPhotograph} 800w`}
+            sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PHOTOGRAPH_BREAKPOINT_PX}), 95vw`}
+            srcSet={`${AboutPhotographWebp} 800w`}
           />
           <StyledPhotographCredit type="p">
             Photograph by{' '}
