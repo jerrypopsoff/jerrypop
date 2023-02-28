@@ -94,10 +94,18 @@ const About: React.FC = () => {
           satisfying crunch.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          In April 2022 I quit my job to live out my dream of starting a
-          business dedicated to producing the most satisfying craft popcorn in
-          the world. Now that I’ve accomplished that goal, I have focused my
-          efforts on sharing it with the lovely city of San Francisco.
+          In April 2022 I{' '}
+          <a
+            href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            quit my job
+          </a>{' '}
+          to live out my dream of starting a business dedicated to producing the
+          most satisfying craft popcorn in the world. Now that I’ve accomplished
+          that goal, I have focused my efforts on sharing it with the lovely
+          city of San Francisco.
         </Typography>
         <Typography maxWidth="600px" type="p">
           Although my dedication to popcorn quality is my highest priority,

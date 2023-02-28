@@ -6,7 +6,7 @@ describe('navigation menu tests', () => {
   it('always presents a link to the current page', () => {
     NAVIGATION_MENU_ITEMS.forEach((item) => {
       cy.visit(item.to);
-      cy.get('nav a').should('have.length', 14);
+      cy.get('nav a').should('have.length', 12);
       cy.get(`a[href="${item.to}"]`).should('exist');
     });
   });
@@ -24,10 +24,13 @@ describe('navigation menu tests', () => {
     clickNavigationLink(RoutePath.Order);
     cy.url().should('include', RoutePath.Order);
 
-    clickNavigationLink(RoutePath.Recipes);
-    cy.url().should('include', RoutePath.Recipes);
-
     clickNavigationLink(RoutePath.About);
     cy.url().should('include', RoutePath.About);
+  });
+
+  it('allows direct navigation to hidden pages', () => {
+    cy.visit(RoutePath.Recipes);
+    cy.url().should('include', RoutePath.Recipes);
+    cy.get(`nav a[href="${RoutePath.Recipes}"]`).should('not.exist');
   });
 });
