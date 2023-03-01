@@ -18,7 +18,7 @@ const StyledThemeSection = styled.div`
   align-items: center;
   background-color: var(--color-theme-background);
   display: flex;
-  height: 400px;
+  height: 350px;
   justify-content: center;
   overflow: hidden;
   position: relative;
