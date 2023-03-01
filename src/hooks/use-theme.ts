@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import { THEMES } from '../constants/theme';
 import type { Theme } from '../types/theme';
-import { getRandomInteger } from '../utilities/random';
 
-let currentThemeIndex = getRandomInteger(0, THEMES.length - 1);
+let currentThemeIndex = 0;
 
 export function useTheme(): [Theme, () => void] {
   const [theme, setTheme] = useState(THEMES[currentThemeIndex]);
