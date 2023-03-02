@@ -7,8 +7,8 @@ export const WHITE = '#fff';
 /**
  * Dark mode colors
  */
-export const SOFT_BLACK = 'rgb(32, 32, 32)';
-export const SOFT_WHITE = 'rgb(250, 250, 250)';
+export const SOFT_BLACK = '#212121';
+export const SOFT_WHITE = '#fafafa';
 export const ICON_HOVER_LIGHT_BACKGROUND = 'rgba(250, 250, 250, 0.1)';
 
 /**
