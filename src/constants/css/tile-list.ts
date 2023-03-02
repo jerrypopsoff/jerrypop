@@ -6,6 +6,9 @@ import {
   TILE_LIST_IMAGE_WIDTH_PX,
 } from '../breakpoint';
 
+/**
+ * Todo: export `css` rather than component instances.
+ */
 export const StyledTileList = styled.ul`
   display: flex;
   flex-flow: wrap;
