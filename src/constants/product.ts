@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
   {
     allergens: ['MILK'],
     description:
-      'Funky, creamy goat milk popcorn with abundant chives for a delicate herbal finish. Locally popped, handcrafted, and packaged in a compostable bag.',
+      'Creamy, tangy goat milk popcorn with abundant chives for a delicate, herbal finish. Locally popped, handcrafted, and packaged in a compostable bag.',
     image: GoatCheeseChivePhotograph,
     imageWebp: GoatCheeseChivePhotographWebp,
     ingredients: [
