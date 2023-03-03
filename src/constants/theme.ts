@@ -50,6 +50,12 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  ORANGE_PINK: {
+    mainThemeDark: THEME_ORANGE,
+    mainThemeMedium: THEME_PINK,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: WHITE,
+  },
   ORANGE_PURPLE: {
     mainThemeDark: THEME_ORANGE,
     mainThemeMedium: THEME_PURPLE,
@@ -90,6 +96,7 @@ export const THEMES = [
   THEME.PURPLE_GREEN,
   THEME.CYAN_YELLOW,
   THEME.PINK_PURPLE,
+  THEME.ORANGE_PINK,
   THEME.BLUE_ORANGE,
   THEME.GREEN_YELLOW,
   THEME.BLUE_CYAN,
