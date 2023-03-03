@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     title: 'Goat Cheese Chive',
   },
   {
-    allergens: ['FISH', 'MILK'],
+    allergens: ['FISH (TUNA)', 'MILK'],
     description:
       'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi. Locally popped, handcrafted, and packaged in a compostable bag.',
     image: FurikakeDashiPhotograph,
