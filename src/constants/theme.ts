@@ -86,6 +86,12 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  YELLOW_GREEN: {
+    mainThemeDark: THEME_YELLOW,
+    mainThemeMedium: THEME_GREEN,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: WHITE,
+  },
 };
 
 /**
@@ -101,6 +107,7 @@ export const THEMES = [
   THEME.GREEN_YELLOW,
   THEME.BLUE_CYAN,
   THEME.ORANGE_PURPLE,
+  THEME.YELLOW_GREEN,
   THEME.PURPLE_CYAN,
   THEME.PINK_YELLOW,
 ];
