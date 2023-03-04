@@ -181,9 +181,14 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
               <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
             </StyledCloseButton>
           </li>
-          {navigationMenuItems.map(({ displayName, to }) => (
+          {navigationMenuItems.map(({ displayName, isExternal, to }) => (
             <li key={displayName}>
-              <StyledMenuItemLink onClick={() => setIsOpen(false)} to={to}>
+              <StyledMenuItemLink
+                onClick={() => setIsOpen(false)}
+                rel={isExternal ? 'noreferrer' : undefined}
+                target={isExternal ? '_blank' : undefined}
+                to={to}
+              >
                 <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
               </StyledMenuItemLink>
             </li>

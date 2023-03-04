@@ -70,9 +70,13 @@ const DesktopNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
           />
         </StyledWordmarkLink>
         <StyledMenuItems>
-          {navigationMenuItems.map(({ displayName, to }) => (
+          {navigationMenuItems.map(({ displayName, isExternal, to }) => (
             <li key={displayName}>
-              <StyledNavigationMenuLink to={to}>
+              <StyledNavigationMenuLink
+                rel={isExternal ? 'noreferrer' : undefined}
+                target={isExternal ? '_blank' : undefined}
+                to={to}
+              >
                 {displayName}
               </StyledNavigationMenuLink>
             </li>
