@@ -43,6 +43,11 @@ export const THEME_GREEN = '#00b142';
 export const THEME_LIGHT_GREEN = '#97d700';
 
 /**
+ * Pantone 534c #1b365f
+ */
+export const THEME_NAVY = '#1b365f';
+
+/**
  * Pantone 130c #f2a900
  */
 export const THEME_ORANGE = '#f2a900';
@@ -58,11 +63,11 @@ export const THEME_PINK = '#ff409e';
 export const THEME_PURPLE = '#835dd0';
 
 /**
+ * Pantone 192c #e40046
+ */
+export const THEME_RED = '#fa0052';
+
+/**
  * Pantone 101c #f7eb55
  */
 export const THEME_YELLOW = '#f7ea48';
-
-/**
- * Pantone 534c #1b365f
- */
-export const THEME_NAVY = '#1b365f';
