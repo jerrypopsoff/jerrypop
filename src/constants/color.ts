@@ -58,6 +58,12 @@ export const THEME_PINK = '#ff409e';
 export const THEME_PURPLE = '#835dd0';
 
 /**
+ * Pantone 192c #e40046
+ */
+export const THEME_RED = '#fa0052';
+// export const THEME_RED = '#e40046';
+
+/**
  * Pantone 101c #f7eb55
  */
 export const THEME_YELLOW = '#f7ea48';

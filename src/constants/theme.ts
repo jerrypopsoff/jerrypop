@@ -7,6 +7,7 @@ import {
   THEME_ORANGE,
   THEME_PINK,
   THEME_PURPLE,
+  THEME_RED,
   THEME_YELLOW,
   WHITE,
 } from './color';
@@ -50,15 +51,15 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
-  ORANGE_PINK: {
-    mainThemeDark: THEME_ORANGE,
-    mainThemeMedium: THEME_PINK,
-    mainThemeTextOnDark: BLACK,
-    mainThemeTextOnMedium: WHITE,
-  },
   ORANGE_PURPLE: {
     mainThemeDark: THEME_ORANGE,
     mainThemeMedium: THEME_PURPLE,
+    mainThemeTextOnDark: BLACK,
+    mainThemeTextOnMedium: WHITE,
+  },
+  ORANGE_RED: {
+    mainThemeDark: THEME_ORANGE,
+    mainThemeMedium: THEME_RED,
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: WHITE,
   },
@@ -102,7 +103,7 @@ export const THEMES = [
   THEME.PURPLE_GREEN,
   THEME.CYAN_YELLOW,
   THEME.PINK_PURPLE,
-  THEME.ORANGE_PINK,
+  THEME.ORANGE_RED,
   THEME.BLUE_ORANGE,
   THEME.GREEN_YELLOW,
   THEME.BLUE_CYAN,
