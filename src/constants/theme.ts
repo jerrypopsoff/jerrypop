@@ -44,7 +44,6 @@ export const THEME: Themes = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: BLACK,
   },
-  // Rosemary Lemon Pepper
   GREEN_YELLOW: {
     mainThemeDark: THEME_GREEN,
     mainThemeMedium: THEME_YELLOW,
@@ -57,12 +56,14 @@ export const THEME: Themes = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: WHITE,
   },
+  // Chipotle Chive Cheddar
   ORANGE_RED: {
     mainThemeDark: THEME_ORANGE,
     mainThemeMedium: THEME_RED,
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: WHITE,
   },
+  // Furikake Dashi
   PINK_PURPLE: {
     mainThemeDark: THEME_PINK,
     mainThemeMedium: THEME_PURPLE,
@@ -75,6 +76,7 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  // Sichuan Nooch
   PURPLE_CYAN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_CYAN,
@@ -87,6 +89,7 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  // Rosemary Lemon Pepper
   YELLOW_GREEN: {
     mainThemeDark: THEME_YELLOW,
     mainThemeMedium: THEME_GREEN,
@@ -100,15 +103,15 @@ export const THEME: Themes = {
  */
 export const THEMES = [
   THEME.BLUE_PINK,
-  THEME.PURPLE_GREEN,
   THEME.CYAN_YELLOW,
   THEME.PINK_PURPLE,
-  THEME.ORANGE_RED,
-  THEME.BLUE_ORANGE,
-  THEME.GREEN_YELLOW,
-  THEME.BLUE_CYAN,
-  THEME.ORANGE_PURPLE,
   THEME.YELLOW_GREEN,
   THEME.PURPLE_CYAN,
-  THEME.PINK_YELLOW,
+  THEME.ORANGE_RED,
+  // THEME.PURPLE_GREEN,
+  // THEME.BLUE_ORANGE,
+  // THEME.GREEN_YELLOW,
+  // THEME.BLUE_CYAN,
+  // THEME.ORANGE_PURPLE,
+  // THEME.PINK_YELLOW,
 ];
