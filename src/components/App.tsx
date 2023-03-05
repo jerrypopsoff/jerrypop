@@ -13,6 +13,7 @@ import { useTheme } from '../hooks/use-theme';
 import NavigationBar from './NavigationBar';
 import Products from './Products';
 import Press from './Press';
+import Merch from './Merch';
 
 const App: React.FC = () => {
   useTheme();
@@ -39,6 +40,7 @@ const App: React.FC = () => {
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<About />} path="/about" />
             <Route element={<Press />} path="/press" />
+            <Route element={<Merch />} path="/merch" />
             <Route element={<NotFound />} path="*" />
           </Routes>
           <Footer />
