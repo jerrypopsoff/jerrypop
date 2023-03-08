@@ -158,7 +158,8 @@ const About: React.FC = () => {
               directly appreciate
             </i>
           </a>
-          ,” and I could not feel more fulfilled.
+          ,” and I could not feel more grateful for the friends and customers
+          who have supported me thus far.
         </Typography>
         <Typography type="h2">Mission</Typography>
         <Typography maxWidth="600px" type="p">
