@@ -42,7 +42,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.35;
+  line-height: 1.25;
   margin: 0;
   padding: ${DESKTOP_NAVIGATION_BAR_HEIGHT_PX}px 0 0;
   text-align: center;
