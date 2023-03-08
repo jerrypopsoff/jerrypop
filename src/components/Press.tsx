@@ -31,7 +31,6 @@ const StyledArticleListItem = styled(StyledTileListItem)`
 
 const StyledArticlePublication = styled(Typography)`
   margin: 0 0 12px;
-  line-height: 17px;
   text-transform: uppercase;
 `;
 
@@ -41,7 +40,6 @@ const StyledArticleTitle = styled(Typography)`
 
 const StyledArticleDate = styled(Typography)`
   font-size: 12px;
-  line-height: 15px;
   margin: 16px 0 0;
 `;
 

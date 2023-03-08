@@ -62,7 +62,6 @@ const StyledP = styled.p<StyledTypography>`
     hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
   font-size: 15px;
   font-weight: 400;
-  line-height: 21px;
 `;
 
 const Typography: React.FC<Props> = ({
