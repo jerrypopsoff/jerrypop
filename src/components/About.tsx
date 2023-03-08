@@ -49,6 +49,7 @@ const StyledAboutPhotograph = styled(OptimizedImage)`
 
 const StyledPhotographCredit = styled(Typography)`
   font-size: 12px;
+  line-height: 12px;
   margin: 4px 0 0;
 `;
 
