@@ -58,7 +58,6 @@ const StyledPopcornButton = styled.button`
 
 const StyledCopyright = styled(Typography)`
   font-size: 11px;
-  line-height: 15px;
   margin: 0 8px;
 `;
 

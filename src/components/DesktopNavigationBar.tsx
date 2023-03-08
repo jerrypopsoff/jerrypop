@@ -50,7 +50,7 @@ const StyledMenuItems = styled.ul`
 const StyledNavigationMenuLink = styled(Link)`
   ${NAVIGATION_MENU_LINK_STYLE}
   font-size: 14px;
-  padding: 12px 24px 20px;
+  padding: 12px 24px 16px;
 `;
 
 interface Props {
