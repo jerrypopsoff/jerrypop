@@ -58,6 +58,8 @@ const StyledPopcornButton = styled.button`
 
 const StyledCopyright = styled(Typography)`
   font-size: 11px;
+  line-height: 15px;
+  margin: 0 8px;
 `;
 
 const Footer: React.FC = () => {
@@ -70,7 +72,7 @@ const Footer: React.FC = () => {
       </StyledThemeSection>
       <StyledFooterInformation>
         <StyledPopcornButton onClick={() => increaseKernelCount()}>
-          <StyledCopyright margin="0 8px" type="p">
+          <StyledCopyright type="p">
             © {new Date().getFullYear()} Jerrypop, LLC
           </StyledCopyright>
         </StyledPopcornButton>
