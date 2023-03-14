@@ -129,8 +129,8 @@ const About: React.FC = () => {
           I’ve had the opportunity to share my love of popcorn with others and
           bring delight to people’s lives. It’s been an incredible journey, and
           I could not have done it without the support of my friends and
-          customers. Thank you for being part of this journey with me, and I
-          look forward to sharing more adventures with you soon.
+          customers. Thank you for being part of this adventure with me. I look
+          forward to sharing more with you soon.
         </Typography>
         <Typography type="h2">Mission</Typography>
         <Typography maxWidth="600px" type="p">
