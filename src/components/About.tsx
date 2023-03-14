@@ -88,50 +88,30 @@ const About: React.FC = () => {
         </StyledPhotographContainer>
         <Typography type="h2">Backstory</Typography>
         <Typography maxWidth="600px" type="p">
-          My interest in popcorn sparked in 2013 in Ann Arbor, MI. My college
-          roommate’s parents bought us ten pounds of popcorn kernels, and we
-          challenged ourselves to use the entire supply before our lease ended
-          four months later. Although buttered & salted popcorn is a classic
-          that I will always love, there was only so much we could eat before
-          feeling compelled to experiment. We developed a few simple flavors
-          like <i>spicy cajun</i> and <i>cinnamon sugar</i>, and we brought
-          gigantic bowls of them to our friends’ house parties to share with
-          anyone in need of a snack.
+          In 2013 my interest in popcorn was sparked when my college roommate’s
+          parents bought us ten pounds of kernels, and we challenged ourselves
+          to use the entire supply before finals. After experimenting with
+          flavors I discovered air-popped popcorn was a healthier alternative to
+          junk food, and I continued inventing new varieties on my journey to
+          losing 130 pounds.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          Later in 2013, starting a career in software engineering brought me to
-          Fort Lauderdale, FL. Shortly after relocating, I began a journey of
-          losing 130 pounds in 14 months. Replacing junk food with lightly
-          seasoned, air-popped popcorn helped me limit my calorie intake without
-          giving up my favorite food group: snacks. In the meantime I continued
-          inventing and perfecting new flavors and techniques, including my
-          signature <i>Habanero Ranch</i> and <i>PB&J</i> craft popcorn
-          varieties.
+          In 2015 I earned the nickname “Jerrypop” among friends for showing up
+          to every gathering with a bold new flavor of handcrafted popcorn, such
+          as PB&J or Habanero Ranch.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          It didn’t take long for me to earn a reputation with my friends for
-          showing up to every social gathering with a bold new flavor of
-          handcrafted popcorn, and in 2015 the nickname “Jerrypop” was born.
-        </Typography>
-        <Typography maxWidth="600px" type="p">
-          In 2017 my career as a software engineer brought me to lovely San
-          Francisco, CA, where I spent a few more years developing and honing
-          craft popcorn flavors and techniques. As a means to cope with the
-          abrupt lifestyle changes caused by COVID-19, I delved into a new
-          hobby: video production. I began filming, editing, and producing{' '}
+          After moving to San Francisco in 2017, I continued to hone my craft,
+          eventually turning to{' '}
           <a
             href="https://youtube.com/@craftpopcorn"
             rel="noreferrer"
             target="_blank"
           >
-            <i>Poppin’ off with Jerry</i>
-          </a>
-          , a series of videos demonstrating how to make craft popcorn at home.
-        </Typography>
-        <Typography maxWidth="600px" type="p">
-          In April 2022 my popcorn obsession had reached unprecedented levels.
-          After two of my closest friends stepped away from their careers to
-          pursue their passions full-time, I was inspired to{' '}
+            video production
+          </a>{' '}
+          during the pandemic to share my techniques and learnings. In April
+          2022 I{' '}
           <a
             href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
             rel="noreferrer"
@@ -139,35 +119,26 @@ const About: React.FC = () => {
           >
             quit my job
           </a>{' '}
-          to live out my dream of starting a business dedicated to producing and
-          sharing the most satisfying popcorn in the world.
+          to pursue my dream of starting a business dedicated to producing the
+          most satisfying popcorn in the world.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          Since then I have poured myself into Jerrypop as a solo
-          owner-operator, taking on work spanning numerous functions including
-          recipe development, ingredient sourcing, food manufacturing,
-          cleaning/sanitization, distribution, finance, marketing, sales, web
-          design/development, event coordination, and more. Jerrypop “
-          <a
-            href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <i>
-              has been an opportunity to let my creativity shine in ways people
-              directly appreciate
-            </i>
-          </a>
-          ,” and I could not feel more grateful for the friends and customers
-          who have supported me thus far.
+          As the solo owner-operator of Jerrypop, I handle numerous functions
+          including recipe development, ingredient sourcing, manufacturing,
+          distribution, marketing, sales, web design, and more. Through Jerrypop
+          I’ve had the opportunity to share my love of popcorn with others and
+          bring delight to people’s lives. It’s been an incredible journey, and
+          I could not have done it without the support of my friends and
+          customers. Thank you for being part of this adventure with me. I look
+          forward to sharing more with you soon.
         </Typography>
         <Typography type="h2">Mission</Typography>
         <Typography maxWidth="600px" type="p">
-          At Jerrypop, I am committed to quality, sustainability, and customer
-          satisfaction. My popcorn is made with only the finest ingredients and
-          carefully crafted to ensure every bite is full of bold flavor and
-          satisfying crunch. I believe that snacking should be an experience,
-          and I’m dedicated to providing that experience to my customers.
+          I am committed to quality, sustainability, and customer satisfaction.
+          My popcorn is made with only the finest ingredients and carefully
+          crafted to ensure every bite is full of bold flavor and satisfying
+          crunch. I believe that snacking should be an experience, and I’m
+          dedicated to providing the best experience for my customers.
         </Typography>
         <Typography maxWidth="600px" type="p">
           My mission is twofold: to create delicious popcorn and promote
