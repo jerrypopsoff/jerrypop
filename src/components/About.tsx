@@ -111,7 +111,7 @@ const About: React.FC = () => {
             video production
           </a>{' '}
           during the pandemic to share my techniques and learnings. In April
-          2022, I{' '}
+          2022 I{' '}
           <a
             href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
             rel="noreferrer"
@@ -125,20 +125,20 @@ const About: React.FC = () => {
         <Typography maxWidth="600px" type="p">
           As the solo owner-operator of Jerrypop, I handle numerous functions
           including recipe development, ingredient sourcing, manufacturing,
-          distribution, marketing, sales, web design, and more. Through
-          Jerrypop, I’ve had the opportunity to share my love of popcorn with
-          others and bring delight to people’s lives. It’s been an incredible
-          journey, and I could not have done it without the support of my
-          friends and customers. Thank you for being part of this journey with
-          me, and I look forward to sharing more adventures with you soon.
+          distribution, marketing, sales, web design, and more. Through Jerrypop
+          I’ve had the opportunity to share my love of popcorn with others and
+          bring delight to people’s lives. It’s been an incredible journey, and
+          I could not have done it without the support of my friends and
+          customers. Thank you for being part of this journey with me, and I
+          look forward to sharing more adventures with you soon.
         </Typography>
         <Typography type="h2">Mission</Typography>
         <Typography maxWidth="600px" type="p">
-          At Jerrypop, I am committed to quality, sustainability, and customer
-          satisfaction. My popcorn is made with only the finest ingredients and
-          carefully crafted to ensure every bite is full of bold flavor and
-          satisfying crunch. I believe that snacking should be an experience,
-          and I’m dedicated to providing that experience to my customers.
+          I am committed to quality, sustainability, and customer satisfaction.
+          My popcorn is made with only the finest ingredients and carefully
+          crafted to ensure every bite is full of bold flavor and satisfying
+          crunch. I believe that snacking should be an experience, and I’m
+          dedicated to providing the best experience for my customers.
         </Typography>
         <Typography maxWidth="600px" type="p">
           My mission is twofold: to create delicious popcorn and promote
