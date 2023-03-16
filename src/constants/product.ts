@@ -2,6 +2,8 @@ import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
 import HabaneroRanchPhotographWebp from '../images/product-habanero-ranch.webp';
 import PbjPhotograph from '../images/product-pbj.jpg';
 import PbjPhotographWebp from '../images/product-pbj.webp';
+import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.jpg';
+import ChiopotleCheddarPhotographWebp from '../images/product-chipotle-cheddar.webp';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
@@ -27,7 +29,7 @@ export const PRODUCTS: Product[] = [
       'BUTTERMILK POWDER',
       'ONION POWDER',
       'GARLIC POWDER',
-      'SALT',
+      'KOSHER SALT',
       'SUGAR',
       'MONOSODIUM GLUTAMATE',
       'GROUND HABANERO PEPPER',
@@ -53,10 +55,32 @@ export const PRODUCTS: Product[] = [
       'NATURALLY REFINED ORGANIC COCONUT OIL',
       'SUGAR',
       'BAKING POWDER',
-      'SALT',
+      'KOSHER SALT',
     ],
     subtitle: 'Craft Popcorn',
     title: 'PB&J',
+  },
+  {
+    allergens: ['MILK'],
+    description:
+      'The perfect combination of smoky chipotle, tangy cheddar, and zesty lime. Locally popped, handcrafted, and packaged in a compostable bag.',
+    image: ChiopotleCheddarPhotograph,
+    imageWebp: ChiopotleCheddarPhotographWebp,
+    ingredients: [
+      'POPCORN',
+      'CANOLA OIL',
+      'CHEDDAR CHEESE POWDER (GRANULAR CHEESE (MILK, CHEESE CULTURE, SALT, ENZYMES), WHEY, SUNFLOWER OIL, WHEY PROTEIN CONCENTRATE, LACTOSE, MALTODEXTRIN, SALT, BLUE CHEESE (MILK, CHEESE CULTURE, SALT, ENZYMES), SODIUM PHOSPHATE, CITRIC ACID, LACTIC ACID, YELLOW 5, YELLOW 6)',
+      'GRANULATED GARLIC',
+      'ONION POWDER',
+      'KOSHER SALT',
+      'CHIPOTLE POWDER',
+      'MONOSODIUM GLUTAMATE',
+      'SUGAR',
+      'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
+      'BLACK PEPPERCORN',
+    ],
+    subtitle: 'Craft Popcorn',
+    title: 'Chipotle Cheddar',
   },
   {
     allergens: ['MILK'],
@@ -70,7 +94,7 @@ export const PRODUCTS: Product[] = [
       'GOAT MILK POWDER',
       'GRANULATED GARLIC',
       'ONION POWDER',
-      'SALT',
+      'KOSHER SALT',
       'MONOSODIUM GLUTAMATE',
       'SUGAR',
       'CHIVES',
@@ -89,7 +113,7 @@ export const PRODUCTS: Product[] = [
       'POPCORN',
       'CANOLA OIL',
       'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
-      'SALT',
+      'KOSHER SALT',
       'BONITO SOUP STOCK (SALT, MONOSODIUM GLUTAMATE, LACTOSE (MILK), SUGAR, DRIED BONITO TUNA, DISODIUM INOSINATE, YEAST EXTRACT, BONITO TUNA BROTH, DISODIUM SUCCINATE, BONITO TUNA EXTRACT, XYLOSE, MALTOSE, DEXTROSE)',
       'MONOSODIUM GLUTAMATE',
       'SHICHIMI TOGARASHI (CHILI PEPPER, ORANGE PEEL, BLACK SESAME SEED, SEAWEED, WHITE SESAME SEED, JAPANESE PEPPER, GINGER)',
@@ -111,7 +135,7 @@ export const PRODUCTS: Product[] = [
       'EXTRA VIRGIN OLIVE OIL',
       'GRANULATED GARLIC',
       'ONION POWDER',
-      'SALT',
+      'KOSHER SALT',
       'SUGAR',
       'CRYSTALLIZED LEMON (CITRIC ACID, LEMON OIL, LEMON JUICE)',
       'ROSEMARY',
@@ -133,7 +157,7 @@ export const PRODUCTS: Product[] = [
       'NATURALLY REFINED ORGANIC COCONUT OIL',
       'SUGAR',
       'BAKING POWDER',
-      'SALT',
+      'KOSHER SALT',
     ],
     subtitle: 'Craft Popcorn',
     title: 'Chocolate Hazelnut Espresso',
@@ -150,7 +174,7 @@ export const PRODUCTS: Product[] = [
       'NUTRITIONAL YEAST (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12))',
       'GRANULATED GARLIC',
       'ONION POWDER',
-      'SALT',
+      'KOSHER SALT',
       'SICHUAN PEPPERCORN',
       'MONOSODIUM GLUTAMATE',
       'SUGAR',
