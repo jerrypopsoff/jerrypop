@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import OrderFormDialog from './OrderFormDialog';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE } from '../constants/css/button';
-import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
 import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
 import JalapenoCheddar1200 from '../images/glamorous-jalapeno-cheddar-1200.jpeg';
@@ -14,6 +12,8 @@ import JalapenoCheddar2400 from '../images/glamorous-jalapeno-cheddar-2400.jpeg'
 import JalapenoCheddarWebp600 from '../images/glamorous-jalapeno-cheddar-600.webp';
 import JalapenoCheddarWebp1200 from '../images/glamorous-jalapeno-cheddar-1200.webp';
 import JalapenoCheddarWebp2400 from '../images/glamorous-jalapeno-cheddar-2400.webp';
+import FormDialog from './FormDialog';
+import { useDialogState } from '../hooks/use-form-dialog';
 
 const StyledSection = styled.section`
   align-items: center;
@@ -50,44 +50,17 @@ const StyledLink = styled.a`
 `;
 
 const Order: React.FC = () => {
-  const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
-  const [isCateringFormVisible, setIsCateringFormVisible] = useState(false);
+  const {
+    closeDialog: closeOrderFormDialog,
+    isFormVisible: isOrderFormVisible,
+    openDialog: openOrderFormDialog,
+  } = useDialogState();
 
-  const onOrderOnlineKeyDown = ({ key }: KeyboardEvent) => {
-    if (key === 'Escape') {
-      onCloseOrderOnlineDialog();
-    }
-  };
-
-  const onCloseOrderOnlineDialog = () => {
-    setIsOrderFormVisible(false);
-    document.body.style.overflow = 'unset';
-    window.removeEventListener('keydown', onOrderOnlineKeyDown);
-  };
-
-  const onClickOrderOnline = () => {
-    setIsOrderFormVisible(true);
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onOrderOnlineKeyDown);
-  };
-
-  const onRequestCateringKeyDown = ({ key }: KeyboardEvent) => {
-    if (key === 'Escape') {
-      onCloseRequestCateringDialog();
-    }
-  };
-
-  const onCloseRequestCateringDialog = () => {
-    setIsCateringFormVisible(false);
-    document.body.style.overflow = 'unset';
-    window.removeEventListener('keydown', onRequestCateringKeyDown);
-  };
-
-  const onClickRequestCatering = () => {
-    setIsCateringFormVisible(true);
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onRequestCateringKeyDown);
-  };
+  const {
+    closeDialog: closeCateringFormDialog,
+    isFormVisible: isCateringFormVisible,
+    openDialog: openCateringFormDialog,
+  } = useDialogState();
 
   return (
     <>
@@ -106,7 +79,7 @@ const Order: React.FC = () => {
         <StyledSectionTagline type="p">
           Order Jerrypop for local pickup or shipping.
         </StyledSectionTagline>
-        <StyledButton onClick={onClickOrderOnline}>Order</StyledButton>
+        <StyledButton onClick={openOrderFormDialog}>Order</StyledButton>
       </StyledSection>
       <Typography margin="0 12px" type="h1">
         How else can I get Jerrypop?
@@ -116,7 +89,7 @@ const Order: React.FC = () => {
         <StyledSectionTagline type="p">
           Serve Jerrypop at your next event.
         </StyledSectionTagline>
-        <StyledButton onClick={onClickRequestCatering}>
+        <StyledButton onClick={openCateringFormDialog}>
           Request catering
         </StyledButton>
       </StyledSection>
@@ -159,10 +132,18 @@ const Order: React.FC = () => {
         </Typography>
       </StyledSection>
       {isOrderFormVisible && (
-        <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
+        <FormDialog
+          onCloseFormDialog={closeOrderFormDialog}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdXm4aTzZVHn5RIYhC1xLy-MNtyRxohuU2tZCH-TPnU8GqGHw/viewform?embedded=true"
+          title="Jerrypop Order Form"
+        />
       )}
       {isCateringFormVisible && (
-        <RequestCateringDialog onCloseDialog={onCloseRequestCateringDialog} />
+        <FormDialog
+          onCloseFormDialog={closeCateringFormDialog}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckzswwrXnzRIOqxI5ktGX0r6DzhB0r16oGKiHvZ_aiFTMe8g/viewform?embedded=true"
+          title="Jerrypop Catering Request Form"
+        />
       )}
     </>
   );
