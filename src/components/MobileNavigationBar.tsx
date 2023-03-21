@@ -170,6 +170,7 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
           </StyledNavigationBarContentInner>
         </StyledNavigationBarContent>
         <StyledMenuItems
+          aria-hidden={isOpen ? undefined : 'true'}
           isOpen={isOpen}
           slideDistancePx={navigationMenuItemsHeightPx}
         >
@@ -177,6 +178,7 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
             <StyledCloseButton
               aria-label="Close"
               onClick={() => setIsOpen(!isOpen)}
+              tabIndex={isOpen ? 0 : -1}
             >
               <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
             </StyledCloseButton>
@@ -186,6 +188,7 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
               <StyledMenuItemLink
                 onClick={() => setIsOpen(false)}
                 rel={isExternal ? 'noreferrer' : undefined}
+                tabIndex={isOpen ? 0 : -1}
                 target={isExternal ? '_blank' : undefined}
                 to={to}
               >
