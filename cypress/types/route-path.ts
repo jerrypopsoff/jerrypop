@@ -6,4 +6,5 @@ export enum RoutePath {
   Products = '/products',
   Order = '/order',
   Recipes = '/recipes',
+  Retail = '/retail',
 }

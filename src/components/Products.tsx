@@ -10,7 +10,12 @@ import Products2400 from '../images/glamorous-packaging-2400.jpg';
 import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
 import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
-import { StyledTileList } from '../constants/css/tile-list';
+import { TILE_LIST_STYLE } from '../constants/css/tile-list';
+import styled from 'styled-components';
+
+const StyledTileList = styled.ul`
+  ${TILE_LIST_STYLE}
+`;
 
 const Products: React.FC = () => {
   return (
@@ -26,6 +31,10 @@ const Products: React.FC = () => {
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
       <Typography type="h1">Products</Typography>
+      <Typography margin="12px 12px 24px" type="p">
+        Each item is locally popped, handcrafted, and sealed in a compostable
+        bag.
+      </Typography>
       <StyledTileList>
         {PRODUCTS.map((product) => (
           <ProductListing key={product.title} product={product} />

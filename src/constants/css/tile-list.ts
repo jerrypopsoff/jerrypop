@@ -1,15 +1,10 @@
-import styled from 'styled-components';
-import OptimizedImage from '../../components/OptimizedImage';
+import { css } from 'styled-components';
 import {
   TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_HEIGHT_PX,
   TILE_LIST_IMAGE_WIDTH_PX,
 } from '../breakpoint';
 
-/**
- * Todo: export `css` rather than component instances.
- */
-export const StyledTileList = styled.ul`
+export const TILE_LIST_STYLE = css`
   display: flex;
   flex-flow: wrap;
   padding: 0;
@@ -18,7 +13,7 @@ export const StyledTileList = styled.ul`
   margin: 0;
 `;
 
-export const StyledTileListItem = styled.li`
+export const TILE_LIST_ITEM_STYLE = css`
   align-items: center;
   display: flex;
   margin: 32px 24px;
@@ -31,34 +26,36 @@ export const StyledTileListItem = styled.li`
   }
 `;
 
-export const StyledTileImageContainer = styled.div`
+export const TILE_IMAGE_CONTAINER_STYLE = css<{ $aspectRatio: number }>`
   align-items: center;
   display: flex;
   // Mitigate screen flash for image loading state ending
-  height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
   justify-content: center;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+    height: unset;
+    max-height: ${({ $aspectRatio }) =>
+      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - 48px);
   }
 `;
 
-export const StyledTileImage = styled(OptimizedImage)`
-  height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+export const TILE_IMAGE_STYLE = css<{ $aspectRatio: number }>`
+  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
   width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+    height: unset;
+    max-height: ${({ $aspectRatio }) =>
+      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - 48px);
   }
 `;
 
-export const StyledTileInformation = styled.div`
+export const TILE_INFORMATION_STYLE = css`
   margin: 0 0 0 24px;
   text-align: left;
 

@@ -10,14 +10,23 @@ import BaklavaWebp1200 from '../images/glamorous-baklava-1200.webp';
 import BaklavaWebp2400 from '../images/glamorous-baklava-2400.webp';
 import styled from 'styled-components';
 import {
-  StyledTileImage,
-  StyledTileImageContainer,
-  StyledTileInformation,
-  StyledTileList,
-  StyledTileListItem,
+  TILE_LIST_STYLE,
+  TILE_LIST_ITEM_STYLE,
+  TILE_IMAGE_CONTAINER_STYLE,
+  TILE_IMAGE_STYLE,
+  TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
 import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import OptimizedImage from './OptimizedImage';
+
+const StyledTileList = styled.ul`
+  ${TILE_LIST_STYLE}
+`;
+
+const StyledTileListItem = styled.li`
+  ${TILE_LIST_ITEM_STYLE}
+`;
 
 const StyledListItem = styled.li`
   display: flex;
@@ -29,13 +38,21 @@ const StyledArticleListItem = styled(StyledTileListItem)`
   text-decoration: none;
 `;
 
+const StyledTileImageContainer = styled.div`
+  ${TILE_IMAGE_CONTAINER_STYLE}
+`;
+
+const StyledTileImage = styled(OptimizedImage)`
+  ${TILE_IMAGE_STYLE}
+`;
+
+const StyledTileInformation = styled.div`
+  ${TILE_INFORMATION_STYLE}
+`;
+
 const StyledArticlePublication = styled(Typography)`
   margin: 0 0 12px;
   text-transform: uppercase;
-`;
-
-const StyledArticleTitle = styled(Typography)`
-  margin: 0;
 `;
 
 const StyledArticleDate = styled(Typography)`
@@ -66,8 +83,9 @@ const Press: React.FC = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <StyledTileImageContainer>
+              <StyledTileImageContainer $aspectRatio={1}>
                 <StyledTileImage
+                  $aspectRatio={1}
                   alt={article.imageAltText}
                   fallbackSrc={article.image}
                   fallbackSrcSet={`${article.image} 600w`}
@@ -79,9 +97,9 @@ const Press: React.FC = () => {
                 <StyledArticlePublication type="p">
                   {article.publication}
                 </StyledArticlePublication>
-                <StyledArticleTitle type="h2">
+                <Typography margin="0" type="h2">
                   {article.title}
-                </StyledArticleTitle>
+                </Typography>
                 <StyledArticleDate type="p">{article.date}</StyledArticleDate>
               </StyledTileInformation>
             </StyledArticleListItem>
