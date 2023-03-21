@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import OrderFormDialog from './OrderFormDialog';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE } from '../constants/css/button';
-import RequestCateringDialog from './RequestCateringDialog';
 import GlamorPhotograph from './GlamorPhotograph';
 import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
 import JalapenoCheddar1200 from '../images/glamorous-jalapeno-cheddar-1200.jpeg';
@@ -14,6 +12,7 @@ import JalapenoCheddar2400 from '../images/glamorous-jalapeno-cheddar-2400.jpeg'
 import JalapenoCheddarWebp600 from '../images/glamorous-jalapeno-cheddar-600.webp';
 import JalapenoCheddarWebp1200 from '../images/glamorous-jalapeno-cheddar-1200.webp';
 import JalapenoCheddarWebp2400 from '../images/glamorous-jalapeno-cheddar-2400.webp';
+import FormDialog from './FormDialog';
 
 const StyledSection = styled.section`
   align-items: center;
@@ -159,10 +158,18 @@ const Order: React.FC = () => {
         </Typography>
       </StyledSection>
       {isOrderFormVisible && (
-        <OrderFormDialog onCloseOrderOnlineDialog={onCloseOrderOnlineDialog} />
+        <FormDialog
+          onCloseFormDialog={onCloseOrderOnlineDialog}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdXm4aTzZVHn5RIYhC1xLy-MNtyRxohuU2tZCH-TPnU8GqGHw/viewform?embedded=true"
+          title="Jerrypop Order Form"
+        />
       )}
       {isCateringFormVisible && (
-        <RequestCateringDialog onCloseDialog={onCloseRequestCateringDialog} />
+        <FormDialog
+          onCloseFormDialog={onCloseRequestCateringDialog}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSckzswwrXnzRIOqxI5ktGX0r6DzhB0r16oGKiHvZ_aiFTMe8g/viewform?embedded=true"
+          title="Jerrypop Catering Request Form"
+        />
       )}
     </>
   );
