@@ -88,28 +88,6 @@ const Order: React.FC = () => {
         How else can I get Jerrypop?
       </Typography> */}
       <StyledSection>
-        <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
-        <StyledSectionTagline type="p">
-          Serve Jerrypop at your next event.
-        </StyledSectionTagline>
-        <StyledButton onClick={openCateringFormDialog}>
-          Request catering
-        </StyledButton>
-      </StyledSection>
-      <StyledSection>
-        <StyledSectionHeading type="h2">Pop-ups</StyledSectionHeading>
-        <StyledSectionTagline type="p">
-          Catch my next pop-up.
-        </StyledSectionTagline>
-        <StyledLink
-          href="https://www.instagram.com/craftpopcorn/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          See announcements
-        </StyledLink>
-      </StyledSection>
-      <StyledSection>
         <StyledSectionHeading type="h2">Retail</StyledSectionHeading>
         <StyledSectionTagline type="p">
           Purchase Jerrypop off the shelf at the following locations:
@@ -133,6 +111,28 @@ const Order: React.FC = () => {
           </a>{' '}
           about pop-ups, pairings, and retail partnerships.
         </Typography>
+      </StyledSection>
+      <StyledSection>
+        <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
+        <StyledSectionTagline type="p">
+          Serve Jerrypop at your next event.
+        </StyledSectionTagline>
+        <StyledButton onClick={openCateringFormDialog}>
+          Order catering
+        </StyledButton>
+      </StyledSection>
+      <StyledSection>
+        <StyledSectionHeading type="h2">Pop-ups</StyledSectionHeading>
+        <StyledSectionTagline type="p">
+          Catch my next pop-up.
+        </StyledSectionTagline>
+        <StyledLink
+          href="https://www.instagram.com/craftpopcorn/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          See announcements
+        </StyledLink>
       </StyledSection>
       {isOrderFormVisible && (
         <FormDialog
