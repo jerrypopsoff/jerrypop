@@ -1,7 +1,6 @@
 import { css } from 'styled-components';
 import {
   TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_HEIGHT_PX,
   TILE_LIST_IMAGE_WIDTH_PX,
 } from '../breakpoint';
 
@@ -27,28 +26,30 @@ export const TILE_LIST_ITEM_STYLE = css`
   }
 `;
 
-export const TILE_IMAGE_CONTAINER_STYLE = css`
+export const TILE_IMAGE_CONTAINER_STYLE = css<{ $aspectRatio: number }>`
   align-items: center;
   display: flex;
   // Mitigate screen flash for image loading state ending
-  height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
   justify-content: center;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+    height: unset;
+    max-height: ${({ $aspectRatio }) =>
+      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - 48px);
   }
 `;
 
-export const TILE_IMAGE_STYLE = css`
-  height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+export const TILE_IMAGE_STYLE = css<{ $aspectRatio: number }>`
+  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
   width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    height: calc(100vw - 48px);
-    max-height: ${TILE_LIST_IMAGE_HEIGHT_PX}px;
+    height: unset;
+    max-height: ${({ $aspectRatio }) =>
+      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - 48px);
   }

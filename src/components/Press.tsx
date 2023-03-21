@@ -87,8 +87,9 @@ const Press: React.FC = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <StyledTileImageContainer>
+              <StyledTileImageContainer $aspectRatio={1}>
                 <StyledTileImage
+                  $aspectRatio={1}
                   alt={article.imageAltText}
                   fallbackSrc={article.image}
                   fallbackSrcSet={`${article.image} 600w`}

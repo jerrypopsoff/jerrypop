@@ -53,8 +53,9 @@ interface Props {
 const ProductListing: React.FC<Props> = ({ product }) => {
   return (
     <StyledTileListItem>
-      <StyledTileImageContainer>
+      <StyledTileImageContainer $aspectRatio={1}>
         <StyledTileImage
+          $aspectRatio={1}
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
           fallbackSrcSet={`${product.image} 600w`}
