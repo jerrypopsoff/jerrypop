@@ -37,8 +37,6 @@ const StyledSubtitle = styled(Typography)`
   text-transform: uppercase;
 `;
 
-const StyledDescription = styled(Typography)``;
-
 const StyledIngredientListContent = styled(Typography)`
   font-size: 12px;
   font-weight: 400;
@@ -66,9 +64,9 @@ const ProductListing: React.FC<Props> = ({ product }) => {
       <StyledTileInformation>
         <StyledTitle type="h2">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
-        <StyledDescription margin="16px 0 0" type="p">
+        <Typography margin="16px 0 0" type="p">
           {product.description}
-        </StyledDescription>
+        </Typography>
         <StyledIngredientListContent margin="16px 0 0" type="p">
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>

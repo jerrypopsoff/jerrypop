@@ -55,10 +55,6 @@ const StyledArticlePublication = styled(Typography)`
   text-transform: uppercase;
 `;
 
-const StyledArticleTitle = styled(Typography)`
-  margin: 0;
-`;
-
 const StyledArticleDate = styled(Typography)`
   font-size: 12px;
   margin: 16px 0 0;
@@ -101,9 +97,9 @@ const Press: React.FC = () => {
                 <StyledArticlePublication type="p">
                   {article.publication}
                 </StyledArticlePublication>
-                <StyledArticleTitle type="h2">
+                <Typography margin="0" type="h2">
                   {article.title}
-                </StyledArticleTitle>
+                </Typography>
                 <StyledArticleDate type="p">{article.date}</StyledArticleDate>
               </StyledTileInformation>
             </StyledArticleListItem>
