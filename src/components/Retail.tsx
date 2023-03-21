@@ -71,7 +71,7 @@ const Retail: React.FC = () => {
       />
       <Typography type="h1">Retail</Typography>
       <StyledOrderDescription type="p">
-        Support small business and delight your customers by carrying Jerrypop
+        Support a small business and delight your customers by carrying Jerrypop
         at your retail location. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
       </StyledOrderDescription>
