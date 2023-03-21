@@ -53,7 +53,8 @@ const Order: React.FC = () => {
   const {
     closeDialog: closeOrderFormDialog,
     isFormVisible: isOrderFormVisible,
-    openDialog: openOrderFormDialog,
+    // Uncomment the following to re-enable orders.
+    // openDialog: openOrderFormDialog,
   } = useDialogState();
 
   const {
