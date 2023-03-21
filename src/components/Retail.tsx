@@ -94,16 +94,20 @@ const Retail: React.FC = () => {
           30 bags per flavor ($135-$165).
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
+          Shelf life
+        </StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionDetails>
+          4 weeks after delivery date.
+        </StyledLogisticsDescriptionDetails>
+        <StyledLogisticsDescriptionTerm>
           Delivery
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
           Hand delivered for $5.00 + $2.00 per mile from 1431 Grove Street.
         </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>
-          Shelf life
-        </StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionTerm>Menu</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after delivery date.
+          Complimentary laminated menu cards available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
