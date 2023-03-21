@@ -129,6 +129,7 @@ const Retail: React.FC = () => {
           title="Jerrypop Retail Order Form"
         />
       )}
+      <StyledButton onClick={openDialog}>Order</StyledButton>
     </>
   );
 };
