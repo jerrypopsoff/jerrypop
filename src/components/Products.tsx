@@ -31,6 +31,10 @@ const Products: React.FC = () => {
         srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
       />
       <Typography type="h1">Products</Typography>
+      <Typography margin="12px 12px 24px" type="p">
+        Each item is locally popped, handcrafted, and sealed in a compostable
+        bag.
+      </Typography>
       <StyledTileList>
         {PRODUCTS.map((product) => (
           <ProductListing key={product.title} product={product} />
