@@ -3,12 +3,12 @@ import { PRICED_PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
-import Products600 from '../images/glamorous-packaging-600.jpg';
-import Products1200 from '../images/glamorous-packaging-1200.jpg';
-import Products2400 from '../images/glamorous-packaging-2400.jpg';
-import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
-import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
-import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
+import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
+import GlamorousChipotleCheddar1200 from '../images/glamorous-chipotle-cheddar-1200.jpg';
+import GlamorousChipotleCheddar2400 from '../images/glamorous-chipotle-cheddar-2400.jpg';
+import GlamorousChipotleCheddarWebp600 from '../images/glamorous-chipotle-cheddar-600.webp';
+import GlamorousChipotleCheddarWebp1200 from '../images/glamorous-chipotle-cheddar-1200.webp';
+import GlamorousChipotleCheddarWebp2400 from '../images/glamorous-chipotle-cheddar-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import PricingListItem from './PricingListItem';
 import { Link } from 'react-router-dom';
@@ -44,13 +44,12 @@ const Retail: React.FC = () => {
       <Helmet>
         <title>Retail · Jerrypop</title>
       </Helmet>
-      {/* Todo: Update glamor photograph. */}
       <GlamorPhotograph
-        alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bar top"
-        aspectRatio={8688 / 5792}
-        fallbackSrc={Products2400}
-        fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
-        srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
+        alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
+        aspectRatio={2080 / 1170}
+        fallbackSrc={GlamorousChipotleCheddar2400}
+        fallbackSrcSet={`${GlamorousChipotleCheddar600} 600w, ${GlamorousChipotleCheddar1200} 1200w, ${GlamorousChipotleCheddar2400} 2400w`}
+        srcSet={`${GlamorousChipotleCheddarWebp600} 600w, ${GlamorousChipotleCheddarWebp1200} 1200w, ${GlamorousChipotleCheddarWebp2400} 2400w`}
       />
       <Typography type="h1">Retail</Typography>
       <Typography type="p">
