@@ -53,7 +53,8 @@ const Order: React.FC = () => {
   const {
     closeDialog: closeOrderFormDialog,
     isFormVisible: isOrderFormVisible,
-    openDialog: openOrderFormDialog,
+    // Uncomment the following to re-enable orders.
+    // openDialog: openOrderFormDialog,
   } = useDialogState();
 
   const {
@@ -74,7 +75,10 @@ const Order: React.FC = () => {
         fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
         srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
       />
-      <StyledSection>
+      {/* Comment the following when re-enabling orders. */}
+      <Typography type="h1">Order</Typography>
+      {/* Uncomment the following to re-enable orders. */}
+      {/* <StyledSection>
         <StyledSectionHeading type="h1">Order</StyledSectionHeading>
         <StyledSectionTagline type="p">
           Order Jerrypop for local pickup or shipping.
@@ -83,29 +87,7 @@ const Order: React.FC = () => {
       </StyledSection>
       <Typography margin="0 12px" type="h1">
         How else can I get Jerrypop?
-      </Typography>
-      <StyledSection>
-        <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
-        <StyledSectionTagline type="p">
-          Serve Jerrypop at your next event.
-        </StyledSectionTagline>
-        <StyledButton onClick={openCateringFormDialog}>
-          Request catering
-        </StyledButton>
-      </StyledSection>
-      <StyledSection>
-        <StyledSectionHeading type="h2">Pop-ups</StyledSectionHeading>
-        <StyledSectionTagline type="p">
-          Catch my next pop-up.
-        </StyledSectionTagline>
-        <StyledLink
-          href="https://www.instagram.com/craftpopcorn/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          See announcements
-        </StyledLink>
-      </StyledSection>
+      </Typography> */}
       <StyledSection>
         <StyledSectionHeading type="h2">Retail</StyledSectionHeading>
         <StyledSectionTagline type="p">
@@ -130,6 +112,28 @@ const Order: React.FC = () => {
           </a>{' '}
           about pop-ups, pairings, and retail partnerships.
         </Typography>
+      </StyledSection>
+      <StyledSection>
+        <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
+        <StyledSectionTagline type="p">
+          Serve Jerrypop at your next event.
+        </StyledSectionTagline>
+        <StyledButton onClick={openCateringFormDialog}>
+          Order catering
+        </StyledButton>
+      </StyledSection>
+      <StyledSection>
+        <StyledSectionHeading type="h2">Pop-ups</StyledSectionHeading>
+        <StyledSectionTagline type="p">
+          Catch my next pop-up.
+        </StyledSectionTagline>
+        <StyledLink
+          href="https://www.instagram.com/craftpopcorn/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          See announcements
+        </StyledLink>
       </StyledSection>
       {isOrderFormVisible && (
         <FormDialog
