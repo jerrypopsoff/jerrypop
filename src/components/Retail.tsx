@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PRICED_PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { BUTTON_STYLE } from '../constants/css/button';
 import FormDialog from './FormDialog';
+import { useDialogState } from '../hooks/use-form-dialog';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -54,26 +55,7 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Retail: React.FC = () => {
-  // Todo: Extract dialog functionality into common code.
-  const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
-
-  const onOrderKeyDown = ({ key }: KeyboardEvent) => {
-    if (key === 'Escape') {
-      onCloseOrderDialog();
-    }
-  };
-
-  const onCloseOrderDialog = () => {
-    setIsOrderFormVisible(false);
-    document.body.style.overflow = 'unset';
-    window.removeEventListener('keydown', onOrderKeyDown);
-  };
-
-  const onClickOrder = () => {
-    setIsOrderFormVisible(true);
-    document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onOrderKeyDown);
-  };
+  const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
@@ -93,7 +75,7 @@ const Retail: React.FC = () => {
         location. Each item is locally popped, handcrafted, and sealed in a
         compostable bag.
       </StyledOrderDescription>
-      <StyledButton onClick={onClickOrder}>Order</StyledButton>
+      <StyledButton onClick={openDialog}>Order</StyledButton>
       <Typography type="h2">Pricing</Typography>
       <StyledTileList>
         {PRICED_PRODUCTS.map((pricedProduct) => (
@@ -140,9 +122,9 @@ const Retail: React.FC = () => {
           for photographs, ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
-      {isOrderFormVisible && (
+      {isFormVisible && (
         <FormDialog
-          onCloseFormDialog={onCloseOrderDialog}
+          onCloseFormDialog={closeDialog}
           src="https://docs.google.com/forms/d/e/1FAIpQLSdScSBYHFVzm4iJqMV5jHPxPO0ZZ_9Dc7T3gEjUqlVg5Cr64Q/viewform?embedded=true"
           title="Jerrypop Retail Order Form"
         />
