@@ -71,9 +71,9 @@ const Retail: React.FC = () => {
       />
       <Typography type="h1">Retail</Typography>
       <StyledOrderDescription type="p">
-        Support my small business by ordering Jerrypop to sell at your retail
-        location. Each item is locally popped, handcrafted, and sealed in a
-        compostable bag.
+        Support small business and delight your customers by carrying Jerrypop
+        at your retail location. Each item is locally popped, handcrafted, and
+        sealed in a compostable bag.
       </StyledOrderDescription>
       <StyledButton onClick={openDialog}>Order</StyledButton>
       <Typography type="h2">Pricing</Typography>
@@ -103,17 +103,18 @@ const Retail: React.FC = () => {
           Delivery
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Hand delivered for $5.00 + $2.00 per mile from 1431 Grove Street.
+          Hand delivered to you for $5.00 + $2.00 per mile from 1431 Grove
+          Street.
         </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>Menu</StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
           Complimentary laminated menu cards available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Cash or check accepted upon product delivery or via mail. Online or
-          in-person card payments accepted with a 3.5% processing fee. Invoice
-          provided by Jerrypop.
+          Cash or check accepted upon product delivery. Online or in-person card
+          payments accepted with a 3.5% processing fee. Invoice available upon
+          request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
@@ -123,7 +124,7 @@ const Retail: React.FC = () => {
           <Link rel="noreferrer" target="_blank" to="/products">
             Products
           </Link>{' '}
-          for photographs, ingredients, and allergens.
+          for product photographs, ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
       {isFormVisible && (
