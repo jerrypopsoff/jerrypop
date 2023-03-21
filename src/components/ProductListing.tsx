@@ -3,12 +3,29 @@ import Typography from './Typography';
 import styled from 'styled-components';
 import { Product } from '../types/product';
 import {
-  StyledTileImage,
-  StyledTileImageContainer,
-  StyledTileInformation,
-  StyledTileListItem,
+  TILE_LIST_ITEM_STYLE,
+  TILE_IMAGE_CONTAINER_STYLE,
+  TILE_IMAGE_STYLE,
+  TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
 import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import OptimizedImage from './OptimizedImage';
+
+const StyledTileListItem = styled.li`
+  ${TILE_LIST_ITEM_STYLE}
+`;
+
+const StyledTileImageContainer = styled.div`
+  ${TILE_IMAGE_CONTAINER_STYLE}
+`;
+
+const StyledTileImage = styled(OptimizedImage)`
+  ${TILE_IMAGE_STYLE}
+`;
+
+const StyledTileInformation = styled.div`
+  ${TILE_INFORMATION_STYLE}
+`;
 
 const StyledTitle = styled(Typography)`
   margin: 0;

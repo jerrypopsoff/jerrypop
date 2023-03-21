@@ -10,7 +10,12 @@ import Products2400 from '../images/glamorous-packaging-2400.jpg';
 import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
 import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
-import { StyledTileList } from '../constants/css/tile-list';
+import { TILE_LIST_STYLE } from '../constants/css/tile-list';
+import styled from 'styled-components';
+
+const StyledTileList = styled.ul`
+  ${TILE_LIST_STYLE}
+`;
 
 const Products: React.FC = () => {
   return (
