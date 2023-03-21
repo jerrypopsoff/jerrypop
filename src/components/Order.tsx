@@ -74,7 +74,10 @@ const Order: React.FC = () => {
         fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
         srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
       />
-      <StyledSection>
+      {/* Comment the following when re-enabling orders. */}
+      <Typography type="h1">Order</Typography>
+      {/* Uncomment the following to re-enable orders. */}
+      {/* <StyledSection>
         <StyledSectionHeading type="h1">Order</StyledSectionHeading>
         <StyledSectionTagline type="p">
           Order Jerrypop for local pickup or shipping.
@@ -83,7 +86,7 @@ const Order: React.FC = () => {
       </StyledSection>
       <Typography margin="0 12px" type="h1">
         How else can I get Jerrypop?
-      </Typography>
+      </Typography> */}
       <StyledSection>
         <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
         <StyledSectionTagline type="p">
