@@ -14,6 +14,18 @@ import JalapenoCheddarWebp1200 from '../images/glamorous-jalapeno-cheddar-1200.w
 import JalapenoCheddarWebp2400 from '../images/glamorous-jalapeno-cheddar-2400.webp';
 import FormDialog from './FormDialog';
 import { useDialogState } from '../hooks/use-form-dialog';
+import {
+  CATERING_ORDER_FORM_SRC,
+  CATERING_ORDER_FORM_TITLE,
+  DIRECT_ORDER_FORM_SRC,
+  DIRECT_ORDER_FORM_TITLE,
+  RETAIL_ORDER_FORM_SRC,
+  RETAIL_ORDER_FORM_TITLE,
+} from '../constants/form';
+
+const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
+const POP_UP_REQUEST_EMAIL_BODY =
+  "Hi Jerrypop,\n\nI'd like for you to pop up at my event at [location] on [date] from [time range]. Are you available?\n\nThanks,\n[name]";
 
 const StyledSection = styled.section`
   align-items: center;
@@ -55,6 +67,12 @@ const Order: React.FC = () => {
     isFormVisible: isOrderFormVisible,
     // Uncomment the following to re-enable orders.
     // openDialog: openOrderFormDialog,
+  } = useDialogState();
+
+  const {
+    closeDialog: closeRetailFormDialog,
+    isFormVisible: isRetailFormVisible,
+    openDialog: openRetailFormDialog,
   } = useDialogState();
 
   const {
@@ -101,17 +119,10 @@ const Order: React.FC = () => {
             ></RetailerListItem>
           ))}
         </StyledRetailerList>
-        <Typography margin="24px 0 0" type="p">
-          Want to pop off at your business with locally handcrafted popcorn?{' '}
-          <a
-            href="mailto:info@jerrypop.com?subject=Jerrypop%20partnership%20inquiry"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Reach out
-          </a>{' '}
-          about pop-ups, pairings, and retail partnerships.
+        <Typography margin="24px 0" type="p">
+          Want to pop off at your business with locally handcrafted popcorn?
         </Typography>
+        <StyledButton onClick={openRetailFormDialog}>Order retail</StyledButton>
       </StyledSection>
       <StyledSection>
         <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
@@ -125,7 +136,17 @@ const Order: React.FC = () => {
       <StyledSection>
         <StyledSectionHeading type="h2">Pop-ups</StyledSectionHeading>
         <StyledSectionTagline type="p">
-          Catch my next pop-up.
+          Catch my next pop-up or{' '}
+          <a
+            href={`mailto:info@jerrypop.com?subject=${encodeURIComponent(
+              POP_UP_REQUEST_EMAIL_SUBJECT,
+            )}&body=${encodeURIComponent(POP_UP_REQUEST_EMAIL_BODY)}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            request a pop-up
+          </a>{' '}
+          at your event.
         </StyledSectionTagline>
         <StyledLink
           href="https://www.instagram.com/craftpopcorn/"
@@ -138,15 +159,22 @@ const Order: React.FC = () => {
       {isOrderFormVisible && (
         <FormDialog
           onCloseFormDialog={closeOrderFormDialog}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdXm4aTzZVHn5RIYhC1xLy-MNtyRxohuU2tZCH-TPnU8GqGHw/viewform?embedded=true"
-          title="Jerrypop Order Form"
+          src={DIRECT_ORDER_FORM_SRC}
+          title={DIRECT_ORDER_FORM_TITLE}
+        />
+      )}
+      {isRetailFormVisible && (
+        <FormDialog
+          onCloseFormDialog={closeRetailFormDialog}
+          src={RETAIL_ORDER_FORM_SRC}
+          title={RETAIL_ORDER_FORM_TITLE}
         />
       )}
       {isCateringFormVisible && (
         <FormDialog
           onCloseFormDialog={closeCateringFormDialog}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSckzswwrXnzRIOqxI5ktGX0r6DzhB0r16oGKiHvZ_aiFTMe8g/viewform?embedded=true"
-          title="Jerrypop Catering Request Form"
+          src={CATERING_ORDER_FORM_SRC}
+          title={CATERING_ORDER_FORM_TITLE}
         />
       )}
     </>

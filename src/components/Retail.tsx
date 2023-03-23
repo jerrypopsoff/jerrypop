@@ -16,6 +16,10 @@ import styled from 'styled-components';
 import { BUTTON_STYLE } from '../constants/css/button';
 import FormDialog from './FormDialog';
 import { useDialogState } from '../hooks/use-form-dialog';
+import {
+  RETAIL_ORDER_FORM_SRC,
+  RETAIL_ORDER_FORM_TITLE,
+} from '../constants/form';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -130,8 +134,8 @@ const Retail: React.FC = () => {
       {isFormVisible && (
         <FormDialog
           onCloseFormDialog={closeDialog}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdScSBYHFVzm4iJqMV5jHPxPO0ZZ_9Dc7T3gEjUqlVg5Cr64Q/viewform?embedded=true"
-          title="Jerrypop Retail Order Form"
+          src={RETAIL_ORDER_FORM_SRC}
+          title={RETAIL_ORDER_FORM_TITLE}
         />
       )}
       <StyledButton onClick={openDialog}>Order</StyledButton>
