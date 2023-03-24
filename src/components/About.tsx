@@ -91,9 +91,9 @@ const About: React.FC = () => {
           In 2013 my interest in popcorn was sparked when my college roommate’s
           parents bought us ten pounds of kernels, and we challenged ourselves
           to use the entire supply before finals. After experimenting with
-          flavors I discovered air-popped popcorn was a healthier alternative to
-          junk food, and I continued inventing new varieties on my journey to
-          losing 130 pounds.
+          flavors I discovered popcorn was a healthier alternative to junk food,
+          and I continued inventing new varieties on my journey to losing 130
+          pounds.
         </Typography>
         <Typography maxWidth="600px" type="p">
           In 2015 I earned the nickname “Jerrypop” among friends for showing up
