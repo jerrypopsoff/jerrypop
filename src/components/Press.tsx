@@ -51,13 +51,14 @@ const StyledTileInformation = styled.div`
 `;
 
 const StyledArticlePublication = styled(Typography)`
-  margin: 0 0 12px;
+  font-weight: 300;
+  margin: 0 0 8px;
   text-transform: uppercase;
 `;
 
 const StyledArticleDate = styled(Typography)`
   font-size: 12px;
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 `;
 
 const Press: React.FC = () => {
