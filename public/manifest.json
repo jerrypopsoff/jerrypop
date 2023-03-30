@@ -1,6 +1,6 @@
 {
   "background_color": "#212121",
-  "description": "Locally handcrafted popcorn in San Francisco, California.",
+  "description": "Locally handcrafted San Francisco popcorn.",
   "display": "standalone",
   "display_override": ["minimal-ui"],
   "icons": [
