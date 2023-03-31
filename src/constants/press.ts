@@ -14,7 +14,7 @@ export const ARTICLES: PressArticle[] = [
     imageAltText: 'Photograph of Jerry giving an interview for RSI News.',
     imageWebp: RsiNewsArticleImageWebp,
     publication: 'RSI News',
-    title: 'Interview — Silicon Valley in crisis',
+    title: 'Interview — Silicon Valley in Crisis Flaunts Optimism',
   },
   {
     date: '2 March 2023',
