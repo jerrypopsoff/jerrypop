@@ -1,12 +1,24 @@
 import { PressArticle } from '../types/press-article';
 import AppleNewsArticleImage from '../images/press-apple-news.png';
 import AppleNewsArticleImageWebp from '../images/press-apple-news.webp';
+import LocalishArticleImage from '../images/press-localish.jpg';
+import LocalishArticleImageWebp from '../images/press-localish.webp';
 import RsiNewsArticleImage from '../images/press-rsi-news.png';
 import RsiNewsArticleImageWebp from '../images/press-rsi-news.webp';
 import WashingtonPostArticleImage from '../images/press-washington-post.png';
 import WashingtonPostArticleImageWebp from '../images/press-washington-post.webp';
 
 export const ARTICLES: PressArticle[] = [
+  {
+    date: '2 April 2023',
+    href: 'https://abc7news.com/jerrypop-jerry-haagsma-handcrafted-popcorn-unique-bay-area/13037479/',
+    image: LocalishArticleImage,
+    imageAltText:
+      'Photograph of Jerrypop craft popcorn spilling out of mason jars onto a wooden bartop.',
+    imageWebp: LocalishArticleImageWebp,
+    publication: 'ABC7 News',
+    title: 'Jerrypop in San Francisco produces fun, zany popcorn',
+  },
   {
     date: '29 March 2023',
     href: 'https://www.rsi.ch/play/tv/telegiornale/video/telegiornale?urn=urn:rsi:video:16135075&startTime=1766',
