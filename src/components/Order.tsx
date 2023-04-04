@@ -22,6 +22,7 @@ import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
+import { Link } from 'react-router-dom';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
 const POP_UP_REQUEST_EMAIL_BODY =
@@ -34,6 +35,10 @@ const StyledSection = styled.section`
   margin: 86px auto;
   max-width: 600px;
   padding: 0 12px;
+
+  &:first-of-type {
+    margin-top: 48px;
+  }
 `;
 
 const StyledSectionHeading = styled(Typography)`
@@ -46,7 +51,7 @@ const StyledSectionTagline = styled(Typography)`
 
 const StyledRetailerList = styled.ul`
   list-style: none;
-  margin: -12px 0;
+  margin: -24px 0;
   padding: 0;
   width: 100%;
 `;
@@ -127,7 +132,8 @@ const Order: React.FC = () => {
       <StyledSection>
         <StyledSectionHeading type="h2">Catering</StyledSectionHeading>
         <StyledSectionTagline type="p">
-          Serve Jerrypop at your next event.
+          Serve Jerrypop at your next event.{' '}
+          <Link to="/catering">See pricing</Link>.
         </StyledSectionTagline>
         <StyledButton onClick={openCateringFormDialog}>
           Order catering

@@ -96,7 +96,7 @@ const Retail: React.FC = () => {
           Minimum order
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          30 bags per flavor ($135-$165).
+          30 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Shelf life

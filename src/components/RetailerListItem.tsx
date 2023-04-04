@@ -6,7 +6,7 @@ import Typography from './Typography';
 
 const StyledListItem = styled.li`
   ${CARD_OUTER_STYLE}
-  margin: 12px auto;
+  margin: 24px auto;
 `;
 
 const StyledRetailerAnchor = styled.a`
