@@ -4,18 +4,24 @@ import HabaneroRanchPackagingImage from '../images/packaging-habanero-ranch.png'
 import HabaneroRanchPackagingImageWebp from '../images/packaging-habanero-ranch.webp';
 import PbjPhotograph from '../images/product-pbj.jpg';
 import PbjPhotographWebp from '../images/product-pbj.webp';
+import PbjPackagingImage from '../images/packaging-pbj.png';
+import PbjPackagingImageWebp from '../images/packaging-pbj.webp';
 import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.jpg';
 import ChiopotleCheddarPhotographWebp from '../images/product-chipotle-cheddar.webp';
 import ChipotleCheddarPackagingImage from '../images/packaging-chipotle-cheddar.png';
 import ChipotleCheddarPackagingImageWebp from '../images/packaging-chipotle-cheddar.webp';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
+import ChocolateHazelnutEspressoPackagingImage from '../images/packaging-chocolate-hazelnut-espresso.png';
+import ChocolateHazelnutEspressoPackagingImageWebp from '../images/packaging-chocolate-hazelnut-espresso.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
 import GoatCheeseChivePackagingImage from '../images/packaging-goat-cheese-chive.png';
 import GoatCheeseChivePackagingImageWebp from '../images/packaging-goat-cheese-chive.webp';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
 import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
+import RosemaryLemonPepperPackagingImage from '../images/packaging-rosemary-lemon-pepper.png';
+import RosemaryLemonPepperPackagingImageWebp from '../images/packaging-rosemary-lemon-pepper.webp';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.jpeg';
 import SichuanNoochPhotographWebp from '../images/product-sichuan-nooch.webp';
 import SichuanNoochPackagingImage from '../images/packaging-sichuan-nooch.png';
@@ -49,10 +55,12 @@ const HABANERO_RANCH: RetailProduct = {
   ],
   packagingImage: HabaneroRanchPackagingImage,
   packagingImageWebp: HabaneroRanchPackagingImageWebp,
+  priceCatering: 6.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Habanero Ranch',
+  weight: '1.7 OZ',
 };
 
 const PBJ: Product = {
@@ -71,8 +79,12 @@ const PBJ: Product = {
     'BAKING POWDER',
     'KOSHER SALT',
   ],
+  packagingImage: PbjPackagingImage,
+  packagingImageWebp: PbjPackagingImageWebp,
+  priceCatering: 10.0,
   subtitle: 'Craft Popcorn',
   title: 'PB&J',
+  weight: '3.7 OZ',
 };
 
 const CHIPOTLE_CHEDDAR: RetailProduct = {
@@ -96,10 +108,12 @@ const CHIPOTLE_CHEDDAR: RetailProduct = {
   ],
   packagingImage: ChipotleCheddarPackagingImage,
   packagingImageWebp: ChipotleCheddarPackagingImageWebp,
+  priceCatering: 6.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Chipotle Cheddar',
+  weight: '1.7 OZ',
 };
 
 const GOAT_CHEESE_CHIVE: RetailProduct = {
@@ -122,10 +136,12 @@ const GOAT_CHEESE_CHIVE: RetailProduct = {
   ],
   packagingImage: GoatCheeseChivePackagingImage,
   packagingImageWebp: GoatCheeseChivePackagingImageWebp,
+  priceCatering: 6.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Goat Cheese Chive',
+  weight: '1.7 OZ',
 };
 
 const FURIKAKE_DASHI: RetailProduct = {
@@ -147,10 +163,12 @@ const FURIKAKE_DASHI: RetailProduct = {
   ],
   packagingImage: FurikakeDashiPackagingImage,
   packagingImageWebp: FurikakeDashiPackagingImageWebp,
+  priceCatering: 7.0,
   priceMsrp: 8.0,
   priceRetailer: 5.5,
   subtitle: 'Craft Popcorn',
   title: 'Furikake Dashi',
+  weight: '1.7 OZ',
 };
 
 const ROSEMARY_LEMON_PEPPER: Product = {
@@ -171,8 +189,12 @@ const ROSEMARY_LEMON_PEPPER: Product = {
     'ROSEMARY',
     'BLACK PEPPERCORN',
   ],
+  packagingImage: RosemaryLemonPepperPackagingImage,
+  packagingImageWebp: RosemaryLemonPepperPackagingImageWebp,
+  priceCatering: 6.0,
   subtitle: 'Craft Popcorn',
   title: 'Rosemary Lemon Pepper',
+  weight: '1.7 OZ',
 };
 
 const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
@@ -190,8 +212,12 @@ const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
     'BAKING POWDER',
     'KOSHER SALT',
   ],
+  packagingImage: ChocolateHazelnutEspressoPackagingImage,
+  packagingImageWebp: ChocolateHazelnutEspressoPackagingImageWebp,
+  priceCatering: 10.0,
   subtitle: 'Craft Popcorn',
   title: 'Chocolate Hazelnut Espresso',
+  weight: '3.4 OZ',
 };
 
 const SICHUAN_NOOCH: RetailProduct = {
@@ -214,21 +240,23 @@ const SICHUAN_NOOCH: RetailProduct = {
   ],
   packagingImage: SichuanNoochPackagingImage,
   packagingImageWebp: SichuanNoochPackagingImageWebp,
+  priceCatering: 7.0,
   priceMsrp: 8.0,
   priceRetailer: 5.5,
   subtitle: 'Craft Popcorn',
   title: 'Sichuan Nooch',
+  weight: '1.7 OZ',
 };
 
 export const PRODUCTS: Product[] = [
   HABANERO_RANCH,
-  PBJ,
   CHIPOTLE_CHEDDAR,
   GOAT_CHEESE_CHIVE,
   FURIKAKE_DASHI,
-  ROSEMARY_LEMON_PEPPER,
-  CHOCOLATE_HAZELNUT_ESPRESSO,
   SICHUAN_NOOCH,
+  ROSEMARY_LEMON_PEPPER,
+  PBJ,
+  CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
 
 export const PRICED_PRODUCTS: RetailProduct[] = [

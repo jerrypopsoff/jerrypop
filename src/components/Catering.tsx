@@ -1,5 +1,5 @@
 import React from 'react';
-import { PRICED_PRODUCTS } from '../constants/product';
+import { PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -17,8 +17,8 @@ import { BUTTON_STYLE } from '../constants/css/button';
 import FormDialog from './FormDialog';
 import { useDialogState } from '../hooks/use-form-dialog';
 import {
-  RETAIL_ORDER_FORM_SRC,
-  RETAIL_ORDER_FORM_TITLE,
+  CATERING_ORDER_FORM_SRC,
+  CATERING_ORDER_FORM_TITLE,
 } from '../constants/form';
 
 const StyledOrderDescription = styled(Typography)`
@@ -58,13 +58,13 @@ const StyledLogisticsDescriptionDetails = styled.dd`
   text-align: left;
 `;
 
-const Retail: React.FC = () => {
+const Catering: React.FC = () => {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
       <Helmet>
-        <title>Retail · Jerrypop</title>
+        <title>Catering · Jerrypop</title>
       </Helmet>
       <GlamorPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
@@ -73,53 +73,37 @@ const Retail: React.FC = () => {
         fallbackSrcSet={`${GlamorousChipotleCheddar600} 600w, ${GlamorousChipotleCheddar1200} 1200w, ${GlamorousChipotleCheddar2400} 2400w`}
         srcSet={`${GlamorousChipotleCheddarWebp600} 600w, ${GlamorousChipotleCheddarWebp1200} 1200w, ${GlamorousChipotleCheddarWebp2400} 2400w`}
       />
-      <Typography type="h1">Retail</Typography>
+      <Typography type="h1">Catering</Typography>
       <StyledOrderDescription type="p">
-        Support a small business and delight your customers by carrying Jerrypop
-        at your retail location. Each item is locally popped, handcrafted, and
+        Support a small business and make your event unforgettable by serving
+        Jerrypop craft popcorn. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
       </StyledOrderDescription>
       <StyledButton onClick={openDialog}>Order</StyledButton>
-      <Typography type="h2">Pricing</Typography>
-      <StyledTileList>
-        {PRICED_PRODUCTS.map((pricedProduct) => (
-          <PricingListItem
-            key={pricedProduct.title}
-            product={pricedProduct}
-            type="retail"
-          />
-        ))}
-      </StyledTileList>
       <Typography type="h2">Logistics</Typography>
       <StyledLogisticsDescriptionList>
         <StyledLogisticsDescriptionTerm>
           Minimum order
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          30 bags per flavor ($135-$165).
+          25 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Shelf life
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after delivery date.
+          4 weeks after pickup date.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
-          Delivery
+          Pickup location
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Hand delivered to you for $5.00 + $2.00 per mile from 1431 Grove
-          Street.
-        </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
-        <StyledLogisticsDescriptionDetails>
-          Complimentary laminated menu cards available upon request.
+          1431 Grove Street, San Francisco, CA 94117.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Cash or check accepted upon product delivery. Online or in-person card
-          payments accepted with a 3.5% processing fee. Invoice available upon
-          request.
+          Cash or check accepted upon pickup. Online or in-person card payments
+          accepted with a 3.5% processing fee. Invoice available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
@@ -132,11 +116,21 @@ const Retail: React.FC = () => {
           for product photographs, ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
+      <Typography type="h2">Pricing</Typography>
+      <StyledTileList>
+        {PRODUCTS.map((product) => (
+          <PricingListItem
+            key={product.title}
+            product={product}
+            type="catering"
+          />
+        ))}
+      </StyledTileList>
       {isFormVisible && (
         <FormDialog
           onCloseFormDialog={closeDialog}
-          src={RETAIL_ORDER_FORM_SRC}
-          title={RETAIL_ORDER_FORM_TITLE}
+          src={CATERING_ORDER_FORM_SRC}
+          title={CATERING_ORDER_FORM_TITLE}
         />
       )}
       <StyledButton onClick={openDialog}>Order</StyledButton>
@@ -144,4 +138,4 @@ const Retail: React.FC = () => {
   );
 };
 
-export default Retail;
+export default Catering;

@@ -15,6 +15,7 @@ import Products from './Products';
 import Press from './Press';
 import Merch from './Merch';
 import Retail from './Retail';
+import Catering from './Catering';
 
 const App: React.FC = () => {
   useTheme();
@@ -42,6 +43,7 @@ const App: React.FC = () => {
             <Route element={<About />} path="/about" />
             <Route element={<Press />} path="/press" />
             <Route element={<Merch />} path="/merch" />
+            <Route element={<Catering />} path="/catering" />
             <Route element={<Retail />} path="/retail" />
             <Route element={<NotFound />} path="*" />
           </Routes>
