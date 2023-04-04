@@ -9,6 +9,7 @@ export interface Product {
   priceCatering: number;
   subtitle: string;
   title: string;
+  weight: string;
 }
 
 export interface RetailProduct extends Product {

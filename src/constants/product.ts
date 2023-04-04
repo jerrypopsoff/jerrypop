@@ -60,6 +60,7 @@ const HABANERO_RANCH: RetailProduct = {
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Habanero Ranch',
+  weight: '1.7 OZ',
 };
 
 const PBJ: Product = {
@@ -83,6 +84,7 @@ const PBJ: Product = {
   priceCatering: 10.0,
   subtitle: 'Craft Popcorn',
   title: 'PB&J',
+  weight: '3.7 OZ',
 };
 
 const CHIPOTLE_CHEDDAR: RetailProduct = {
@@ -111,6 +113,7 @@ const CHIPOTLE_CHEDDAR: RetailProduct = {
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Chipotle Cheddar',
+  weight: '1.7 OZ',
 };
 
 const GOAT_CHEESE_CHIVE: RetailProduct = {
@@ -138,6 +141,7 @@ const GOAT_CHEESE_CHIVE: RetailProduct = {
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Goat Cheese Chive',
+  weight: '1.7 OZ',
 };
 
 const FURIKAKE_DASHI: RetailProduct = {
@@ -164,6 +168,7 @@ const FURIKAKE_DASHI: RetailProduct = {
   priceRetailer: 5.5,
   subtitle: 'Craft Popcorn',
   title: 'Furikake Dashi',
+  weight: '1.7 OZ',
 };
 
 const ROSEMARY_LEMON_PEPPER: Product = {
@@ -189,6 +194,7 @@ const ROSEMARY_LEMON_PEPPER: Product = {
   priceCatering: 6.0,
   subtitle: 'Craft Popcorn',
   title: 'Rosemary Lemon Pepper',
+  weight: '1.7 OZ',
 };
 
 const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
@@ -211,6 +217,7 @@ const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   priceCatering: 10.0,
   subtitle: 'Craft Popcorn',
   title: 'Chocolate Hazelnut Espresso',
+  weight: '3.4 OZ',
 };
 
 const SICHUAN_NOOCH: RetailProduct = {
@@ -238,6 +245,7 @@ const SICHUAN_NOOCH: RetailProduct = {
   priceRetailer: 5.5,
   subtitle: 'Craft Popcorn',
   title: 'Sichuan Nooch',
+  weight: '1.7 OZ',
 };
 
 export const PRODUCTS: Product[] = [

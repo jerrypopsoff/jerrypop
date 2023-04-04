@@ -88,7 +88,7 @@ const PricingListItem: React.FC<Props> = ({ product, type }) => {
       </StyledTileImageContainer>
       <StyledTileInformation>
         <StyledTitle type="h3">{product.title}</StyledTitle>
-        <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
+        <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">
           {product.description}
         </Typography>
