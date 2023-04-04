@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
-import { RetailProduct } from '../types/product';
+import { Product, RetailProduct } from '../types/product';
 import {
   TILE_LIST_ITEM_STYLE,
   TILE_IMAGE_CONTAINER_STYLE,
@@ -61,41 +61,55 @@ const StyledPricingDescriptionDetails = styled.dd`
   }
 `;
 
-interface Props {
-  pricedProduct: RetailProduct;
+interface CateringProps {
+  product: Product;
+  type: 'catering';
 }
 
-const PricingListItem: React.FC<Props> = ({ pricedProduct }) => {
+interface RetailProps {
+  product: RetailProduct;
+  type: 'retail';
+}
+
+type Props = CateringProps | RetailProps;
+
+const PricingListItem: React.FC<Props> = ({ product, type }) => {
   return (
     <StyledTileListItem>
       <StyledTileImageContainer $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}>
         <StyledTileImage
           $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}
-          alt={`Front packaging label for ${pricedProduct.title}`}
-          fallbackSrc={pricedProduct.packagingImage}
-          fallbackSrcSet={`${pricedProduct.packagingImage} 600w`}
+          alt={`Front packaging label for ${product.title}`}
+          fallbackSrc={product.packagingImage}
+          fallbackSrcSet={`${product.packagingImage} 600w`}
           sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
-          srcSet={`${pricedProduct.packagingImageWebp} 600w`}
+          srcSet={`${product.packagingImageWebp} 600w`}
         />
       </StyledTileImageContainer>
       <StyledTileInformation>
-        <StyledTitle type="h3">{pricedProduct.title}</StyledTitle>
-        <StyledSubtitle type="p">{pricedProduct.subtitle}</StyledSubtitle>
+        <StyledTitle type="h3">{product.title}</StyledTitle>
+        <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">
-          {pricedProduct.description}
+          {product.description}
         </Typography>
         <StyledPricingDescriptionList>
+          {type === 'retail' && (
+            <>
+              <StyledPricingDescriptionTerm>
+                Suggested retail price
+              </StyledPricingDescriptionTerm>
+              <StyledPricingDescriptionDetails>
+                {displayCurrency(product.priceMsrp)}
+              </StyledPricingDescriptionDetails>
+            </>
+          )}
           <StyledPricingDescriptionTerm>
-            Suggested retail price
+            {type === 'retail' ? 'Your price' : 'Price'}
           </StyledPricingDescriptionTerm>
           <StyledPricingDescriptionDetails>
-            {displayCurrency(pricedProduct.priceMsrp)}
-          </StyledPricingDescriptionDetails>
-          <StyledPricingDescriptionTerm>
-            Your price
-          </StyledPricingDescriptionTerm>
-          <StyledPricingDescriptionDetails>
-            {displayCurrency(pricedProduct.priceRetailer)}
+            {displayCurrency(
+              type === 'retail' ? product.priceRetailer : product.priceCatering,
+            )}
           </StyledPricingDescriptionDetails>
         </StyledPricingDescriptionList>
       </StyledTileInformation>

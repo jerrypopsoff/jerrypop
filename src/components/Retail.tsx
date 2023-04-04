@@ -85,7 +85,8 @@ const Retail: React.FC = () => {
         {PRICED_PRODUCTS.map((pricedProduct) => (
           <PricingListItem
             key={pricedProduct.title}
-            pricedProduct={pricedProduct}
+            product={pricedProduct}
+            type="retail"
           />
         ))}
       </StyledTileList>
