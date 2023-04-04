@@ -4,13 +4,14 @@ export interface Product {
   ingredients: string[];
   image: string;
   imageWebp: string;
+  packagingImage: string;
+  packagingImageWebp: string;
+  priceCatering: number;
   subtitle: string;
   title: string;
 }
 
 export interface RetailProduct extends Product {
-  packagingImage: string;
-  packagingImageWebp: string;
   priceMsrp: number;
   priceRetailer: number;
 }
