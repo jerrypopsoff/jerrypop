@@ -62,6 +62,10 @@ const StyledCloseButton = styled.button`
   }
 `;
 
+const StyledIframe = styled.iframe`
+  border: none;
+`;
+
 const StyledDialogBackdrop = styled.div`
   background-color: ${DIALOG_BACKDROP};
   bottom: 0;
@@ -104,8 +108,7 @@ const FormDialog: React.FC<Props> = ({ onCloseFormDialog, src, title }) => {
             ✕
           </StyledCloseButton>
         </StyledDialogHeader>
-        <iframe
-          frameBorder="0"
+        <StyledIframe
           height={formHeight}
           marginHeight={0}
           marginWidth={0}
@@ -114,7 +117,7 @@ const FormDialog: React.FC<Props> = ({ onCloseFormDialog, src, title }) => {
           width={dialogWidth}
         >
           Loading…
-        </iframe>
+        </StyledIframe>
       </StyledDialog>
       <StyledDialogBackdrop onClick={onCloseFormDialog} />
     </>

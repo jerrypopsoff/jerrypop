@@ -102,8 +102,10 @@ const Catering: React.FC = () => {
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Cash or check accepted upon pickup. Online or in-person card payments
-          accepted with a 3.5% processing fee. Invoice available upon request.
+          To avoid waste, payment is required before ingredients are sourced and
+          production begins. Checks accepted via mail. Cash or check accepted
+          in-person. Online or in-person card payments accepted with a 3.5%
+          processing fee. Invoice available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
