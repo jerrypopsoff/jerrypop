@@ -21,11 +21,7 @@ describe('footer tests', () => {
     cy.get('footer')
       .find('a')
       .eq(2)
-      .should(
-        'have.attr',
-        'href',
-        'https://www.youtube.com/channel/UC_3oErdLxGZgeTf8nrwsD3A',
-      );
+      .should('have.attr', 'href', 'https://www.youtube.com/@craftpopcorn');
     cy.get('footer')
       .find('a')
       .eq(3)
