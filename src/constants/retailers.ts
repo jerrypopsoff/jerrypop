@@ -11,4 +11,9 @@ export const RETAILERS: Retailer[] = [
     href: 'https://nickiesbarsf.com/',
     name: 'Nickieʼs',
   },
+  {
+    address: '1050 26th Street',
+    href: 'http://harmonicbrewing.com/',
+    name: 'Harmonic Brewing',
+  },
 ];
