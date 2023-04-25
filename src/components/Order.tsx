@@ -17,8 +17,6 @@ import { useDialogState } from '../hooks/use-form-dialog';
 import {
   CATERING_ORDER_FORM_SRC,
   CATERING_ORDER_FORM_TITLE,
-  DIRECT_ORDER_FORM_SRC,
-  DIRECT_ORDER_FORM_TITLE,
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
@@ -67,12 +65,11 @@ const StyledLink = styled.a`
 `;
 
 const Order: React.FC = () => {
-  const {
-    closeDialog: closeOrderFormDialog,
-    isFormVisible: isOrderFormVisible,
-    // Uncomment the following to re-enable orders.
-    // openDialog: openOrderFormDialog,
-  } = useDialogState();
+  // const {
+  //   closeDialog: closeOrderFormDialog,
+  //   isFormVisible: isOrderFormVisible,
+  //   openDialog: openOrderFormDialog,
+  // } = useDialogState();
 
   const {
     closeDialog: closeRetailFormDialog,
@@ -98,19 +95,31 @@ const Order: React.FC = () => {
         fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
         srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
       />
-      {/* Comment the following when re-enabling orders. */}
       <Typography type="h1">Order</Typography>
-      {/* Uncomment the following to re-enable orders. */}
-      {/* <StyledSection>
-        <StyledSectionHeading type="h1">Order</StyledSectionHeading>
+      <StyledSection>
         <StyledSectionTagline type="p">
-          Order Jerrypop for local pickup or shipping.
+          Direct orders are coming soon! Follow me on{' '}
+          <a
+            href="https://www.instagram.com/craftpopcorn/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Instagram
+          </a>{' '}
+          or{' '}
+          <a
+            href="https://www.facebook.com/craftpopcorn/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Facebook
+          </a>{' '}
+          to be the first to know when you can order directly.
         </StyledSectionTagline>
-        <StyledButton onClick={openOrderFormDialog}>Order</StyledButton>
       </StyledSection>
       <Typography margin="0 12px" type="h1">
         How else can I get Jerrypop?
-      </Typography> */}
+      </Typography>
       <StyledSection>
         <StyledSectionHeading type="h2">Retail</StyledSectionHeading>
         <StyledSectionTagline type="p">
@@ -162,13 +171,13 @@ const Order: React.FC = () => {
           See announcements
         </StyledLink>
       </StyledSection>
-      {isOrderFormVisible && (
+      {/* {isOrderFormVisible && (
         <FormDialog
           onCloseFormDialog={closeOrderFormDialog}
           src={DIRECT_ORDER_FORM_SRC}
           title={DIRECT_ORDER_FORM_TITLE}
         />
-      )}
+      )} */}
       {isRetailFormVisible && (
         <FormDialog
           onCloseFormDialog={closeRetailFormDialog}

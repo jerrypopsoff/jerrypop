@@ -33,6 +33,7 @@ const StyledTitle = styled(Typography)`
 
 const StyledSubtitle = styled(Typography)`
   font-size: 12px;
+  line-height: 1.25;
   margin: 4px 0 0;
   text-transform: uppercase;
 `;
@@ -40,6 +41,7 @@ const StyledSubtitle = styled(Typography)`
 const StyledIngredientListContent = styled(Typography)`
   font-size: 12px;
   font-weight: 400;
+  line-height: 1.25;
   text-align: justify;
   text-transform: uppercase;
 `;
