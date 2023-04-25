@@ -143,7 +143,7 @@ const About: React.FC = () => {
         <Typography maxWidth="600px" type="p">
           My mission is twofold: to create delicious popcorn and promote
           environmental sustainability. Every bag of Jerrypop is sustainably
-          handcrafted and packaged in a 100% compostable pouch. I believe that
+          crafted and packaged in a 100% compostable pouch. I believe that
           businesses have a responsibility to minimize their impact on the
           environment, and I hope to inspire others to do the same.
         </Typography>

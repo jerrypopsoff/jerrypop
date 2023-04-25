@@ -134,7 +134,7 @@ const Order: React.FC = () => {
           ))}
         </StyledRetailerList>
         <Typography margin="24px 0" type="p">
-          Want to pop off at your business with locally handcrafted popcorn?
+          Want to pop off at your business with locally crafted popcorn?
         </Typography>
         <StyledButton onClick={openRetailFormDialog}>Order retail</StyledButton>
       </StyledSection>

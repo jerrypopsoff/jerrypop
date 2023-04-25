@@ -64,7 +64,7 @@ const Home: React.FC = () => {
         />
         <StyledRegularSection>
           <StyledTagline type="h1">
-            Locally handcrafted San Francisco popcorn.
+            Locally crafted San Francisco popcorn.
           </StyledTagline>
           <StyledCallToActionLink to="/order">Order</StyledCallToActionLink>
         </StyledRegularSection>
