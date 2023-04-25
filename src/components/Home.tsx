@@ -26,14 +26,14 @@ const StyledHome = styled.div`
 const StyledRegularSection = styled.section`
   align-items: center;
   display: flex;
-  height: 314px;
   flex-direction: column;
   justify-content: center;
   margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
+  padding: 105px 0;
   width: 100%;
 
   @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
-    height: 157px;
+    padding: 15px 0;
   }
 `;
 
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
         />
         <StyledRegularSection>
           <StyledTagline type="h1">
-            Locally handcrafted San Francisco popcorn.
+            Locally crafted San Francisco popcorn.
           </StyledTagline>
           <StyledCallToActionLink to="/order">Order</StyledCallToActionLink>
         </StyledRegularSection>

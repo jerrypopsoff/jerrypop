@@ -13,7 +13,7 @@ describe('home page tests', () => {
   it('displays informational text', () => {
     cy.get('#root').should(
       'include.text',
-      'Locally handcrafted San Francisco popcorn.',
+      'Locally crafted San Francisco popcorn.',
     );
   });
 

@@ -60,6 +60,7 @@ const StyledP = styled.p<StyledTypography>`
   ${withDynamicStyles}
   ${({ hasTextShadow }) =>
     hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
+  line-height: 1.5;
   font-size: 15px;
   font-weight: 400;
 `;
