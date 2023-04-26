@@ -16,4 +16,9 @@ export const RETAILERS: Retailer[] = [
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
   },
+  {
+    address: '18 Harlan Place',
+    href: 'https://www.harlanrecords.com/',
+    name: 'Harlan Records',
+  },
 ];
