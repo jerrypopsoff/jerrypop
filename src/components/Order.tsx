@@ -49,7 +49,7 @@ const StyledSectionTagline = styled(Typography)`
 
 const StyledRetailerList = styled.ul`
   list-style: none;
-  margin: -24px 0;
+  margin: -12px 0;
   padding: 0;
   width: 100%;
 `;
