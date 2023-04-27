@@ -32,7 +32,7 @@ import FurikakeDashiPackagingImage from '../images/packaging-furikake-dashi.png'
 import FurikakeDashiPackagingImageWebp from '../images/packaging-furikake-dashi.webp';
 import { RetailProduct, Product } from '../types/product';
 
-const HABANERO_RANCH: RetailProduct = {
+export const HABANERO_RANCH: RetailProduct = {
   allergens: ['MILK'],
   description:
     'Hulless and crisp popcorn coated in creamy, zesty ranch seasoning with a habanero kick.',
@@ -63,7 +63,7 @@ const HABANERO_RANCH: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-const PBJ: Product = {
+export const PBJ: Product = {
   allergens: ['PEANUTS', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia.',
@@ -87,7 +87,7 @@ const PBJ: Product = {
   weight: '3.7 OZ',
 };
 
-const CHIPOTLE_CHEDDAR: RetailProduct = {
+export const CHIPOTLE_CHEDDAR: RetailProduct = {
   allergens: ['MILK'],
   description:
     'The perfect combination of smoky chipotle, tangy cheddar, and zesty lime.',
@@ -116,7 +116,7 @@ const CHIPOTLE_CHEDDAR: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-const GOAT_CHEESE_CHIVE: RetailProduct = {
+export const GOAT_CHEESE_CHIVE: RetailProduct = {
   allergens: ['MILK'],
   description:
     'Creamy, tangy goat milk popcorn with abundant chives for a delicate, herbal finish.',
@@ -144,7 +144,7 @@ const GOAT_CHEESE_CHIVE: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-const FURIKAKE_DASHI: RetailProduct = {
+export const FURIKAKE_DASHI: RetailProduct = {
   allergens: ['MILK', 'SESAME', 'TUNA'],
   description:
     'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi.',
@@ -171,7 +171,7 @@ const FURIKAKE_DASHI: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-const ROSEMARY_LEMON_PEPPER: Product = {
+export const ROSEMARY_LEMON_PEPPER: Product = {
   allergens: [],
   description:
     'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper.',
@@ -197,7 +197,7 @@ const ROSEMARY_LEMON_PEPPER: Product = {
   weight: '1.7 OZ',
 };
 
-const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
+export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso.',
@@ -220,7 +220,7 @@ const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   weight: '3.4 OZ',
 };
 
-const SICHUAN_NOOCH: RetailProduct = {
+export const SICHUAN_NOOCH: RetailProduct = {
   allergens: [],
   description:
     'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn for the thrill-seekers.',

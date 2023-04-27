@@ -49,7 +49,7 @@ const StyledSectionTagline = styled(Typography)`
 
 const StyledRetailerList = styled.ul`
   list-style: none;
-  margin: -24px 0;
+  margin: -12px 0;
   padding: 0;
   width: 100%;
 `;
@@ -134,7 +134,7 @@ const Order: React.FC = () => {
           ))}
         </StyledRetailerList>
         <Typography margin="24px 0" type="p">
-          Want to pop off at your business with locally crafted popcorn?
+          Want to carry locally crafted popcorn at your business?
         </Typography>
         <StyledButton onClick={openRetailFormDialog}>Order retail</StyledButton>
       </StyledSection>
