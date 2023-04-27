@@ -80,16 +80,6 @@ const Retail: React.FC = () => {
         sealed in a compostable bag.
       </StyledOrderDescription>
       <StyledButton onClick={openDialog}>Order</StyledButton>
-      <Typography type="h2">Pricing</Typography>
-      <StyledTileList>
-        {PRICED_PRODUCTS.map((pricedProduct) => (
-          <PricingListItem
-            key={pricedProduct.title}
-            product={pricedProduct}
-            type="retail"
-          />
-        ))}
-      </StyledTileList>
       <Typography type="h2">Logistics</Typography>
       <StyledLogisticsDescriptionList>
         <StyledLogisticsDescriptionTerm>
@@ -132,6 +122,16 @@ const Retail: React.FC = () => {
           for product photographs, ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
+      <Typography type="h2">Pricing</Typography>
+      <StyledTileList>
+        {PRICED_PRODUCTS.map((pricedProduct) => (
+          <PricingListItem
+            key={pricedProduct.title}
+            product={pricedProduct}
+            type="retail"
+          />
+        ))}
+      </StyledTileList>
       {isFormVisible && (
         <FormDialog
           onCloseFormDialog={closeDialog}

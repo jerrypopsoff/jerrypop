@@ -21,12 +21,16 @@ const StyledInformation = styled.div`
   text-align: center;
 `;
 
+const StyledDetail = styled(Typography)`
+  font-size: 13px;
+`;
+
 interface Props {
   retailer: Retailer;
 }
 
 const RetailerListItem: React.FC<Props> = ({
-  retailer: { address, href, name },
+  retailer: { address, href, name, products },
 }) => {
   return (
     <StyledListItem>
@@ -35,9 +39,12 @@ const RetailerListItem: React.FC<Props> = ({
           <Typography margin="0 0 4px" type="h3">
             {name}
           </Typography>
-          <Typography margin="0" type="p">
+          <StyledDetail margin="0" type="p">
             {address}
-          </Typography>
+          </StyledDetail>
+          <StyledDetail margin="2px 0 0" type="p">
+            {products.map(({ title }) => title).join(', ')}
+          </StyledDetail>
         </StyledInformation>
       </StyledRetailerAnchor>
     </StyledListItem>
