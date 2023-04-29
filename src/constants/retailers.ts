@@ -31,4 +31,10 @@ export const RETAILERS: Retailer[] = [
     name: 'Harlan Records',
     products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
   },
+  {
+    address: '2245 3rd Street',
+    href: 'https://www.olfactorybrewing.com/',
+    name: 'Olfactory Brewing',
+    products: [HABANERO_RANCH],
+  },
 ];
