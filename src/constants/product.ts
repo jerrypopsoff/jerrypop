@@ -174,7 +174,7 @@ export const FURIKAKE_DASHI: RetailProduct = {
 export const ROSEMARY_LEMON_PEPPER: Product = {
   allergens: [],
   description:
-    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper.',
+    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. This variety is only available in unmarked packaging.',
   image: RosemaryLemonPepperPhotograph,
   imageWebp: RosemaryLemonPepperPhotographWebp,
   ingredients: [
@@ -200,7 +200,7 @@ export const ROSEMARY_LEMON_PEPPER: Product = {
 export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
   description:
-    'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso.',
+    'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. This variety is only available in unmarked packaging.',
   image: ChocolateHazelnutEspressoPhotograph,
   imageWebp: ChocolateHazelnutEspressoPhotographWebp,
   ingredients: [
