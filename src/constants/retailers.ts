@@ -13,17 +13,17 @@ export const RETAILERS: Retailer[] = [
     name: 'The Page',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
-  {
-    address: '466 Haight Street',
-    href: 'https://nickiesbarsf.com/',
-    name: 'Nickieʼs',
-    products: [GOAT_CHEESE_CHIVE],
-  },
+  // {
+  //   address: '466 Haight Street',
+  //   href: 'https://nickiesbarsf.com/',
+  //   name: 'Nickieʼs',
+  //   products: [GOAT_CHEESE_CHIVE],
+  // },
   {
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [CHIPOTLE_CHEDDAR],
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
     address: '18 Harlan Place',
