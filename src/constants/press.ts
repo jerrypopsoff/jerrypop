@@ -1,6 +1,8 @@
 import { PressArticle } from '../types/press-article';
 import AppleNewsArticleImage from '../images/press-apple-news.png';
 import AppleNewsArticleImageWebp from '../images/press-apple-news.webp';
+import CbsArticleImage from '../images/press-cbs-bay-area.jpeg';
+import CbsArticleImageWebp from '../images/press-cbs-bay-area.webp';
 import LocalishArticleImage from '../images/press-localish.jpg';
 import LocalishArticleImageWebp from '../images/press-localish.webp';
 import RsiNewsArticleImage from '../images/press-rsi-news.png';
@@ -9,6 +11,17 @@ import WashingtonPostArticleImage from '../images/press-washington-post.png';
 import WashingtonPostArticleImageWebp from '../images/press-washington-post.webp';
 
 export const ARTICLES: PressArticle[] = [
+  {
+    date: '19 May 2023',
+    href: 'https://www.cbsnews.com/sanfrancisco/news/tech-employees-look-to-reinvent-themselves-amid-mass-layoffs/',
+    image: CbsArticleImage,
+    imageAltText:
+      'Photograph of Jerry pouring salt into a batter bowl during craft popcorn production.',
+    imageWebp: CbsArticleImageWebp,
+    publication: 'CBS Bay Area',
+    title:
+      'From programmer to popcorn-popper, tech worker takes a leap of faith',
+  },
   {
     date: '2 April 2023',
     href: 'https://abc7news.com/jerrypop-jerry-haagsma-handcrafted-popcorn-unique-bay-area/13037479/',
