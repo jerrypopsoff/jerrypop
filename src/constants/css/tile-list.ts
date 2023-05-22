@@ -4,6 +4,9 @@ import {
   TILE_LIST_IMAGE_WIDTH_PX,
 } from '../breakpoint';
 
+export const TILE_HORIZONTAL_MARGIN_PX = 24;
+export const TILE_VERTICAL_MARGIN_PX = 32;
+
 export const TILE_LIST_STYLE = css`
   display: flex;
   flex-flow: wrap;
@@ -16,13 +19,13 @@ export const TILE_LIST_STYLE = css`
 export const TILE_LIST_ITEM_STYLE = css`
   align-items: center;
   display: flex;
-  margin: 32px 24px;
-  width: ${TILE_LIST_BREAKPOINT_WIDTH_PX - 48}px;
+  margin: ${TILE_VERTICAL_MARGIN_PX}px ${TILE_HORIZONTAL_MARGIN_PX}px;
+  width: ${TILE_LIST_BREAKPOINT_WIDTH_PX - 2 * TILE_HORIZONTAL_MARGIN_PX}px;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
     flex-direction: column;
-    margin: 32px 0;
-    width: calc(100% - 48px);
+    margin: ${TILE_VERTICAL_MARGIN_PX}px 0;
+    width: calc(100% - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;
 
@@ -38,7 +41,7 @@ export const TILE_IMAGE_CONTAINER_STYLE = css<{ $aspectRatio: number }>`
     max-height: ${({ $aspectRatio }) =>
       $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
-    width: calc(100vw - 48px);
+    width: calc(100vw - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;
 
@@ -51,12 +54,12 @@ export const TILE_IMAGE_STYLE = css<{ $aspectRatio: number }>`
     max-height: ${({ $aspectRatio }) =>
       $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
     max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
-    width: calc(100vw - 48px);
+    width: calc(100vw - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;
 
 export const TILE_INFORMATION_STYLE = css`
-  margin: 0 0 0 24px;
+  margin: 0 0 0 ${TILE_HORIZONTAL_MARGIN_PX}px;
   text-align: left;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
