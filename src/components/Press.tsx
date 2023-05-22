@@ -17,7 +17,10 @@ import {
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
-import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import {
+  TILE_LIST_BREAKPOINT_WIDTH_PX,
+  TILE_LIST_IMAGE_WIDTH_PX,
+} from '../constants/breakpoint';
 import OptimizedImage from './OptimizedImage';
 
 const StyledTileList = styled.ul`
@@ -28,14 +31,20 @@ const StyledTileListItem = styled.li`
   ${TILE_LIST_ITEM_STYLE}
 `;
 
-const StyledListItem = styled.li`
+const StyledArticleListItem = styled.a`
+  align-items: center;
   display: flex;
-  justify-content: center;
-  width: 100%;
-`;
-
-const StyledArticleListItem = styled(StyledTileListItem)`
+  // Margin and padding provide rectangular focus state outline.
+  margin: -8px;
+  padding: 8px;
   text-decoration: none;
+
+  @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 `;
 
 const StyledTileImageContainer = styled.div`
@@ -77,9 +86,8 @@ const Press: React.FC = () => {
       <Typography type="h1">Press</Typography>
       <StyledTileList>
         {ARTICLES.map((article) => (
-          <StyledListItem key={article.title}>
+          <StyledTileListItem key={article.title}>
             <StyledArticleListItem
-              as="a"
               href={article.href}
               rel="noreferrer"
               target="_blank"
@@ -104,7 +112,7 @@ const Press: React.FC = () => {
                 <StyledArticleDate type="p">{article.date}</StyledArticleDate>
               </StyledTileInformation>
             </StyledArticleListItem>
-          </StyledListItem>
+          </StyledTileListItem>
         ))}
       </StyledTileList>
     </>
