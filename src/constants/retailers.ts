@@ -4,7 +4,6 @@ import {
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
 } from './product';
 
 export const RETAILERS: Retailer[] = [
@@ -24,7 +23,7 @@ export const RETAILERS: Retailer[] = [
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
     address: '18 Harlan Place',
@@ -36,6 +35,6 @@ export const RETAILERS: Retailer[] = [
     address: '2245 3rd Street',
     href: 'https://www.olfactorybrewing.com/',
     name: 'Olfactory Brewing',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [HABANERO_RANCH],
   },
 ];
