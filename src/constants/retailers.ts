@@ -4,6 +4,7 @@ import {
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
+  SICHUAN_NOOCH,
 } from './product';
 
 export const RETAILERS: Retailer[] = [
@@ -35,6 +36,6 @@ export const RETAILERS: Retailer[] = [
     address: '2245 3rd Street',
     href: 'https://www.olfactorybrewing.com/',
     name: 'Olfactory Brewing',
-    products: [HABANERO_RANCH],
+    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH, SICHUAN_NOOCH],
   },
 ];
