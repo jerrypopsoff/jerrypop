@@ -8,7 +8,7 @@ import {
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 import OptimizedImage from './OptimizedImage';
 
 const StyledTileListItem = styled.li`
@@ -59,7 +59,7 @@ const ProductListing: React.FC<Props> = ({ product }) => {
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
           fallbackSrcSet={`${product.image} 600w`}
-          sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
+          sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
           srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>

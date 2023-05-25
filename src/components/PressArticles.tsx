@@ -11,7 +11,7 @@ import {
 import { ARTICLES } from '../constants/press';
 import {
   TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_WIDTH_PX,
+  DEFAULT_TILE_LIST_IMAGE_WIDTH_PX,
 } from '../constants/breakpoint';
 import OptimizedImage from './OptimizedImage';
 
@@ -78,7 +78,7 @@ const PressArticles: React.FC = () => {
                 alt={article.imageAltText}
                 fallbackSrc={article.image}
                 fallbackSrcSet={`${article.image} 600w`}
-                sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
+                sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
                 srcSet={`${article.imageWebp} 600w`}
               />
             </StyledTileImageContainer>

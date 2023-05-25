@@ -12,7 +12,7 @@ import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp'
 import {
   FOOTER_TOP_MARGIN_PX,
   TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_WIDTH_PX,
+  DEFAULT_TILE_LIST_IMAGE_WIDTH_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
 import { Link } from 'react-router-dom';
@@ -62,7 +62,7 @@ const StyledDivider = styled.div`
   width: ${TILE_LIST_BREAKPOINT_WIDTH_PX - 2 * TILE_HORIZONTAL_MARGIN_PX}px;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
+    max-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100% - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;

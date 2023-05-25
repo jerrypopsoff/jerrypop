@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import {
   TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_WIDTH_PX,
+  DEFAULT_TILE_LIST_IMAGE_WIDTH_PX,
 } from '../breakpoint';
 
 export const TILE_HORIZONTAL_MARGIN_PX = 24;
@@ -29,41 +29,53 @@ export const TILE_LIST_ITEM_STYLE = css`
   }
 `;
 
-export const TILE_IMAGE_CONTAINER_STYLE = css<{ $aspectRatio: number }>`
+export const TILE_IMAGE_CONTAINER_STYLE = css<{
+  $aspectRatio: number;
+  $imageWidthPx?: number;
+}>`
   align-items: center;
   display: flex;
   // Mitigate screen flash for image loading state ending
-  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
+  height: ${({ $aspectRatio, $imageWidthPx }) =>
+    $aspectRatio * ($imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX)}px;
   justify-content: center;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
     height: unset;
-    max-height: ${({ $aspectRatio }) =>
-      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
-    max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
+    max-height: ${({ $aspectRatio, $imageWidthPx }) =>
+      $aspectRatio * ($imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX)}px;
+    max-width: ${({ $imageWidthPx }) =>
+      $imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;
 
-export const TILE_IMAGE_STYLE = css<{ $aspectRatio: number }>`
-  height: ${({ $aspectRatio }) => $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
-  width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
+export const TILE_IMAGE_STYLE = css<{
+  $aspectRatio: number;
+  $imageWidthPx?: number;
+}>`
+  height: ${({ $aspectRatio, $imageWidthPx }) =>
+    $aspectRatio * ($imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX)}px;
+  width: ${({ $imageWidthPx }) =>
+    $imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
     height: unset;
-    max-height: ${({ $aspectRatio }) =>
-      $aspectRatio * TILE_LIST_IMAGE_WIDTH_PX}px;
-    max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
+    max-height: ${({ $aspectRatio, $imageWidthPx }) =>
+      $aspectRatio * ($imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX)}px;
+    max-width: ${({ $imageWidthPx }) =>
+      $imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px;
     width: calc(100vw - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
   }
 `;
 
-export const TILE_INFORMATION_STYLE = css`
+export const TILE_INFORMATION_STYLE = css<{ $imageWidthPx?: number }>`
   margin: 0 0 0 ${TILE_HORIZONTAL_MARGIN_PX}px;
   text-align: left;
 
   @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
     margin: 24px auto 0;
-    max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
+    max-width: ${({ $imageWidthPx }) =>
+      $imageWidthPx ?? DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px;
   }
 `;

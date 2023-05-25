@@ -8,7 +8,7 @@ import {
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 import OptimizedImage from './OptimizedImage';
 import { displayCurrency } from '../utilities/currency';
 
