@@ -52,10 +52,14 @@ interface Props {
 
 const ProductListing: React.FC<Props> = ({ product }) => {
   return (
-    <StyledTileListItem>
-      <StyledTileImageContainer $aspectRatio={1}>
+    <StyledTileListItem $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}>
+      <StyledTileImageContainer
+        $aspectRatio={1}
+        $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+      >
         <StyledTileImage
           $aspectRatio={1}
+          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
           fallbackSrcSet={`${product.image} 600w`}
@@ -63,7 +67,7 @@ const ProductListing: React.FC<Props> = ({ product }) => {
           srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>
-      <StyledTileInformation>
+      <StyledTileInformation $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}>
         <StyledTitle type="h2">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">
