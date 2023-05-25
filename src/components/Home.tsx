@@ -9,8 +9,8 @@ import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import {
-  DEFAULT_TILE_LIST_IMAGE_WIDTH_PX,
   FOOTER_TOP_MARGIN_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';

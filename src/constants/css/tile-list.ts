@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
-export const TILE_HORIZONTAL_MARGIN_PX = 24;
-export const TILE_VERTICAL_MARGIN_PX = 32;
+const TILE_HORIZONTAL_MARGIN_PX = 24;
+const TILE_VERTICAL_MARGIN_PX = 32;
 
 function getTileListBreakpointWidth({
   $imageWidthPx,
@@ -10,6 +10,8 @@ function getTileListBreakpointWidth({
 }) {
   return 2 * $imageWidthPx + 3 * TILE_HORIZONTAL_MARGIN_PX;
 }
+
+export const DEFAULT_TILE_LIST_IMAGE_WIDTH_PX = 300;
 
 export const TILE_LIST_STYLE = css`
   display: flex;

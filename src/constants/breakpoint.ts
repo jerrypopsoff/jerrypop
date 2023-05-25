@@ -8,6 +8,3 @@ export const KERNEL_WIDE_SIZE_PX = 56;
 export const KERNEL_NARROW_SIZE_PX = 42;
 
 export const FOOTER_TOP_MARGIN_PX = 56;
-
-export const TILE_LIST_BREAKPOINT_WIDTH_PX = 700;
-export const DEFAULT_TILE_LIST_IMAGE_WIDTH_PX = 300;

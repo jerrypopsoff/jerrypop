@@ -10,7 +10,7 @@ import {
   TILE_LIST_ITEM_LINK_STYLE,
 } from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
-import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
 
 const StyledTileList = styled.ul`
