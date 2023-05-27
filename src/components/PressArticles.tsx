@@ -7,12 +7,10 @@ import {
   TILE_IMAGE_CONTAINER_STYLE,
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
+  TILE_LIST_ITEM_LINK_STYLE,
 } from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
-import {
-  TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_WIDTH_PX,
-} from '../constants/breakpoint';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
 
 const StyledTileList = styled.ul`
@@ -24,19 +22,7 @@ const StyledTileListItem = styled.li`
 `;
 
 const StyledArticleListItem = styled.a`
-  align-items: center;
-  display: flex;
-  // Margin and padding provide rectangular focus state outline.
-  margin: -8px;
-  padding: 8px;
-  text-decoration: none;
-
-  @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    flex-direction: column;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
+  ${TILE_LIST_ITEM_LINK_STYLE}
 `;
 
 const StyledTileImageContainer = styled.div`
@@ -66,23 +52,33 @@ const PressArticles: React.FC = () => {
   return (
     <StyledTileList>
       {ARTICLES.map((article) => (
-        <StyledTileListItem key={article.title}>
+        <StyledTileListItem
+          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+          key={article.title}
+        >
           <StyledArticleListItem
+            $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
             href={article.href}
             rel="noreferrer"
             target="_blank"
           >
-            <StyledTileImageContainer $aspectRatio={1}>
+            <StyledTileImageContainer
+              $aspectRatio={1}
+              $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+            >
               <StyledTileImage
                 $aspectRatio={1}
+                $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
                 alt={article.imageAltText}
                 fallbackSrc={article.image}
                 fallbackSrcSet={`${article.image} 600w`}
-                sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
+                sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
                 srcSet={`${article.imageWebp} 600w`}
               />
             </StyledTileImageContainer>
-            <StyledTileInformation>
+            <StyledTileInformation
+              $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+            >
               <StyledArticlePublication type="p">
                 {article.publication}
               </StyledArticlePublication>

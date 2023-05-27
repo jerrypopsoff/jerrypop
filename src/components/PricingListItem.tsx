@@ -8,11 +8,11 @@ import {
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import { TILE_LIST_IMAGE_WIDTH_PX } from '../constants/breakpoint';
 import OptimizedImage from './OptimizedImage';
 import { displayCurrency } from '../utilities/currency';
 
 const PACKAGING_IMAGE_ASPECT_RATIO = 1.285;
+const PACKAGING_IMAGE_WIDTH_PX = 240;
 
 const StyledTileListItem = styled.li`
   ${TILE_LIST_ITEM_STYLE}
@@ -75,18 +75,22 @@ type Props = CateringProps | RetailProps;
 
 const PricingListItem: React.FC<Props> = ({ product, type }) => {
   return (
-    <StyledTileListItem>
-      <StyledTileImageContainer $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}>
+    <StyledTileListItem $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}>
+      <StyledTileImageContainer
+        $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}
+        $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}
+      >
         <StyledTileImage
           $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}
+          $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}
           alt={`Front packaging label for ${product.title}`}
           fallbackSrc={product.packagingImage}
           fallbackSrcSet={`${product.packagingImage} 600w`}
-          sizes={`${TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
+          sizes={`${PACKAGING_IMAGE_WIDTH_PX}px (min-width: ${PACKAGING_IMAGE_WIDTH_PX}px), 95vw`}
           srcSet={`${product.packagingImageWebp} 600w`}
         />
       </StyledTileImageContainer>
-      <StyledTileInformation>
+      <StyledTileInformation $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}>
         <StyledTitle type="h3">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">

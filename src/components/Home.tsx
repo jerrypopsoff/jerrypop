@@ -9,19 +9,15 @@ import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
+import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import {
   FOOTER_TOP_MARGIN_PX,
-  TILE_LIST_BREAKPOINT_WIDTH_PX,
-  TILE_LIST_IMAGE_WIDTH_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
 import { Link } from 'react-router-dom';
 import { BUTTON_STYLE } from '../constants/css/button';
 import PressArticles from './PressArticles';
-import {
-  TILE_HORIZONTAL_MARGIN_PX,
-  TILE_VERTICAL_MARGIN_PX,
-} from '../constants/css/tile-list';
+import { TILE_LIST_DIVIDER_STYLE } from '../constants/css/tile-list';
 
 const StyledHome = styled.div`
   align-items: center;
@@ -56,15 +52,7 @@ const StyledCallToActionLink = styled(Link)`
 `;
 
 const StyledDivider = styled.div`
-  background-color: var(--color-foreground);
-  height: 1px;
-  margin-bottom: ${TILE_VERTICAL_MARGIN_PX}px;
-  width: ${TILE_LIST_BREAKPOINT_WIDTH_PX - 2 * TILE_HORIZONTAL_MARGIN_PX}px;
-
-  @media (max-width: ${TILE_LIST_BREAKPOINT_WIDTH_PX}px) {
-    max-width: ${TILE_LIST_IMAGE_WIDTH_PX}px;
-    width: calc(100% - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
-  }
+  ${TILE_LIST_DIVIDER_STYLE}
 `;
 
 const Home: React.FC = () => {
@@ -87,7 +75,10 @@ const Home: React.FC = () => {
           </StyledTagline>
           <StyledCallToActionLink to="/order">Order</StyledCallToActionLink>
         </StyledRegularSection>
-        <StyledDivider aria-hidden={true} />
+        <StyledDivider
+          aria-hidden={true}
+          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+        />
         <PressArticles />
       </StyledHome>
     </>
