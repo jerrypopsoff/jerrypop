@@ -34,7 +34,7 @@ export const ARTICLES: PressArticle[] = [
   },
   {
     date: '29 March 2023',
-    href: 'https://www.rsi.ch/play/tv/telegiornale/video/telegiornale?urn=urn:rsi:video:16135075&startTime=1766',
+    href: 'https://www.rsi.ch/news/mondo/La-Silicon-Valley-in-crisi-ostenta-ottimismo-16135462.html',
     image: RsiNewsArticleImage,
     imageAltText: 'Photograph of Jerry giving an interview for RSI News.',
     imageWebp: RsiNewsArticleImageWebp,
