@@ -92,7 +92,8 @@ const Catering: React.FC = () => {
           Shelf life
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after pickup date.
+          4 weeks after pickup date recommended for optimum flavor and
+          freshness.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Pickup location

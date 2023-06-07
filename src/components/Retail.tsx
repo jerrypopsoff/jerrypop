@@ -92,7 +92,8 @@ const Retail: React.FC = () => {
           Shelf life
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after delivery date.
+          4 weeks after delivery date recommended for optimum flavor and
+          freshness.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Delivery
