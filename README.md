@@ -2,7 +2,7 @@
 
 This repository contains the source code for [jerrypop.com](https://jerrypop.com). This project was bootstrapped with [Create React App](https://createreactapp.dev/).
 
-## Available Scripts
+## Available scripts
 
 In the project directory, you can run each of the following commands:
 
@@ -34,3 +34,11 @@ yarn e2e --spec "cypress/e2e/application.cy.js"
 ### `yarn e2e:open`
 
 Open the end-to-end testing application, allowing selective execution of specific tests and modules against the application being served locally via `yarn start`. This technique exposes more information that can be useful for debugging.
+
+## Miscellaneous commands
+
+### Clear stale branches locally
+
+1. Switch to main convergence branch via `git checkout main`
+1. Delete stale remote branches via `git fetch && git remote prune origin`
+1. Delete stale local branches via `git branch --merged | egrep -v main | xargs git branch -d`
