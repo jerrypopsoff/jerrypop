@@ -44,4 +44,40 @@ export const RETAILERS: Retailer[] = [
     name: 'Woods Lowside',
     products: [SICHUAN_NOOCH],
   },
+  {
+    address: 'Cole Valley Market · 960 Cole Street',
+    href: 'https://lukeslocal.com/',
+    name: 'Lukeʼs Local',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
+  },
+  {
+    address: 'Cow Hollow Market · 2190 Union Street',
+    href: 'https://lukeslocal.com/',
+    name: 'Lukeʼs Local',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
+  },
+  {
+    address: 'North Beach Market · 580 Green Street',
+    href: 'https://lukeslocal.com/',
+    name: 'Lukeʼs Local',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
+  },
 ];
