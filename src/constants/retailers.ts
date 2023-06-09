@@ -14,12 +14,6 @@ export const RETAILERS: Retailer[] = [
     name: 'The Page',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
-  // {
-  //   address: '466 Haight Street',
-  //   href: 'https://nickiesbarsf.com/',
-  //   name: 'Nickieʼs',
-  //   products: [GOAT_CHEESE_CHIVE],
-  // },
   {
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
@@ -37,5 +31,17 @@ export const RETAILERS: Retailer[] = [
     href: 'https://www.olfactorybrewing.com/',
     name: 'Olfactory Brewing',
     products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH, SICHUAN_NOOCH],
+  },
+  {
+    address: '466 Haight Street',
+    href: 'https://nickiesbarsf.com/',
+    name: 'Nickieʼs',
+    products: [GOAT_CHEESE_CHIVE],
+  },
+  {
+    address: '530 Haight Street',
+    href: 'https://www.woodsbeer.com/lowside',
+    name: 'Woods Lowside',
+    products: [SICHUAN_NOOCH],
   },
 ];
