@@ -78,6 +78,7 @@ export const PBJ: Product = {
     'SUGAR',
     'BAKING POWDER',
     'KOSHER SALT',
+    'CRYSTALLIZED LEMON (CITRIC ACID, LEMON OIL, LEMON JUICE)',
   ],
   packagingImage: PbjPackagingImage,
   packagingImageWebp: PbjPackagingImageWebp,
