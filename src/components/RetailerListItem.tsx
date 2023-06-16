@@ -7,12 +7,16 @@ import Typography from './Typography';
 const StyledListItem = styled.li`
   ${CARD_OUTER_STYLE}
   margin: 24px auto;
+  max-width: 400px;
 `;
 
 const StyledRetailerAnchor = styled.a`
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
   padding: 8px;
   text-decoration: none;
 `;
@@ -21,8 +25,15 @@ const StyledInformation = styled.div`
   text-align: center;
 `;
 
-const StyledDetail = styled(Typography)`
+const StyledAddress = styled(Typography)`
   font-size: 13px;
+  font-style: italic;
+  margin: 0;
+`;
+
+const StyledProducts = styled(Typography)`
+  font-size: 13px;
+  margin: 4px 0 0;
 `;
 
 interface Props {
@@ -39,12 +50,10 @@ const RetailerListItem: React.FC<Props> = ({
           <Typography margin="0 0 4px" type="h3">
             {name}
           </Typography>
-          <StyledDetail margin="0" type="p">
-            {address}
-          </StyledDetail>
-          <StyledDetail margin="2px 0 0" type="p">
+          <StyledAddress type="p">{address}</StyledAddress>
+          <StyledProducts type="p">
             {products.map(({ title }) => title).join(', ')}
-          </StyledDetail>
+          </StyledProducts>
         </StyledInformation>
       </StyledRetailerAnchor>
     </StyledListItem>

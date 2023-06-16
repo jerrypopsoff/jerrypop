@@ -31,7 +31,6 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   margin: 86px auto;
-  max-width: 600px;
   padding: 0 12px;
 
   &:first-of-type {
@@ -48,6 +47,8 @@ const StyledSectionTagline = styled(Typography)`
 `;
 
 const StyledRetailerList = styled.ul`
+  display: flex;
+  flex-flow: wrap;
   list-style: none;
   margin: -12px 0;
   padding: 0;
@@ -97,7 +98,7 @@ const Order: React.FC = () => {
       />
       <Typography type="h1">Order</Typography>
       <StyledSection>
-        <StyledSectionTagline type="p">
+        <StyledSectionTagline maxWidth="600px" type="p">
           Direct orders are coming soon! Follow me on{' '}
           <a
             href="https://www.instagram.com/craftpopcorn/"
