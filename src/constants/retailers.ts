@@ -12,7 +12,7 @@ export const RETAILERS: Retailer[] = [
     address: '298 Divisadero Street',
     href: 'http://www.thepagebar.com/',
     name: 'The Page',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
+    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
   },
   {
     address: '1050 26th Street',
@@ -38,12 +38,12 @@ export const RETAILERS: Retailer[] = [
     name: 'Nickieʼs',
     products: [GOAT_CHEESE_CHIVE],
   },
-  {
-    address: '530 Haight Street',
-    href: 'https://www.woodsbeer.com/lowside',
-    name: 'Woods Lowside',
-    products: [SICHUAN_NOOCH],
-  },
+  // {
+  //   address: '530 Haight Street',
+  //   href: 'https://www.woodsbeer.com/lowside',
+  //   name: 'Woods Lowside',
+  //   products: [SICHUAN_NOOCH],
+  // },
   {
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
