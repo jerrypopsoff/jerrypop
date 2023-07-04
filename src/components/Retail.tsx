@@ -109,8 +109,8 @@ const Retail: React.FC = () => {
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
           Cash or check accepted upon product delivery. Online or in-person card
-          payments accepted with a 3.5% processing fee. Invoice available upon
-          request. Net 30 payment terms available upon request.
+          payments accepted with a 3.5% processing fee. Net 30 payment terms
+          available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
