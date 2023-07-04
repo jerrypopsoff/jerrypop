@@ -99,8 +99,8 @@ const Retail: React.FC = () => {
           Delivery
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Hand delivered to you for $5.00 + $2.00 per mile from 1431 Grove
-          Street.
+          First delivery free. Subsequent orders hand delivered to you for $5.00
+          + $2.00 per mile from 1431 Grove Street.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
@@ -110,7 +110,7 @@ const Retail: React.FC = () => {
         <StyledLogisticsDescriptionDetails>
           Cash or check accepted upon product delivery. Online or in-person card
           payments accepted with a 3.5% processing fee. Invoice available upon
-          request.
+          request. Net 30 payment terms available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
