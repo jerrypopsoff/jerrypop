@@ -89,24 +89,28 @@ const Catering: React.FC = () => {
           15 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
-          Shelf life
-        </StyledLogisticsDescriptionTerm>
-        <StyledLogisticsDescriptionDetails>
-          4 weeks after pickup date recommended for optimum flavor and
-          freshness.
-        </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>
           Pickup location
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
           1431 Grove Street, San Francisco, CA 94117.
         </StyledLogisticsDescriptionDetails>
+        <StyledLogisticsDescriptionTerm>
+          Lead time
+        </StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionDetails>
+          Typically two weeks from order date to fulfillment date.
+        </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          To avoid waste, payment is required before ingredients are sourced and
-          production begins. Checks accepted via mail. Cash or check accepted
-          in-person. Online or in-person card payments accepted with a 3.5%
-          processing fee. Invoice available upon request.
+          To avoid waste, full payment via cash, check, card (online or
+          in-person), or tap is required before production.
+        </StyledLogisticsDescriptionDetails>
+        <StyledLogisticsDescriptionTerm>
+          Shelf life
+        </StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionDetails>
+          4 weeks after pickup date recommended for optimum flavor and
+          freshness.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information

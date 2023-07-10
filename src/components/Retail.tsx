@@ -89,17 +89,19 @@ const Retail: React.FC = () => {
           15 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
-          Shelf life
+          Lead time
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after delivery date recommended for optimum flavor and
-          freshness.
+          Orders made by Sunday at 9pm will be freshly crafted and delivered to
+          your location the following Thursday or Friday. For example, an order
+          placed Friday the 13th will be delivered Thursday the 19th or Friday
+          the 20th.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
-          Delivery
+          Delivery fee
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          First delivery free. Subsequent orders hand delivered to you for $5.00
+          First delivery is free. Subsequent orders are hand delivered for $5.00
           + $2.00 per mile from 1431 Grove Street.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
@@ -110,7 +112,14 @@ const Retail: React.FC = () => {
         <StyledLogisticsDescriptionDetails>
           Cash or check accepted upon product delivery. Online or in-person card
           payments accepted with a 3.5% processing fee. Net 30 payment terms
-          available upon request.
+          with mailed check available upon request.
+        </StyledLogisticsDescriptionDetails>
+        <StyledLogisticsDescriptionTerm>
+          Shelf life
+        </StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionDetails>
+          4 weeks after delivery date recommended for optimum flavor and
+          freshness.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Additional information
