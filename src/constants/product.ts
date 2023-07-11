@@ -224,7 +224,7 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
 export const SICHUAN_NOOCH: RetailProduct = {
   allergens: [],
   description:
-    'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn for the thrill-seekers.',
+    'Toasted sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn.',
   image: SichuanNoochPhotograph,
   imageWebp: SichuanNoochPhotographWebp,
   ingredients: [
