@@ -38,12 +38,12 @@ export const RETAILERS: Retailer[] = [
     name: 'Nickieʼs',
     products: [GOAT_CHEESE_CHIVE],
   },
-  {
-    address: '530 Haight Street',
-    href: 'https://www.woodsbeer.com/lowside',
-    name: 'Woods Lowside',
-    products: [SICHUAN_NOOCH],
-  },
+  // {
+  //   address: '530 Haight Street',
+  //   href: 'https://www.woodsbeer.com/lowside',
+  //   name: 'Woods Lowside',
+  //   products: [SICHUAN_NOOCH],
+  // },
   {
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
