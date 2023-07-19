@@ -92,17 +92,15 @@ const Retail: React.FC = () => {
           Lead time
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Orders made by Sunday at 9pm will be freshly crafted and delivered to
-          your location the following Thursday or Friday. For example, an order
-          placed Friday the 13th will be delivered Thursday the 19th or Friday
-          the 20th.
+          Order by 9pm Sunday for delivery on Thursday or Friday of the same
+          week.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Delivery fee
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          First delivery is free. Subsequent orders are hand delivered for $5.00
-          + $2.00 per mile from 1431 Grove Street.
+          First delivery free. Subsequent orders delivered for $5.00 + $2.00 per
+          mile from 1431 Grove Street.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>

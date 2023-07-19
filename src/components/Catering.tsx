@@ -98,7 +98,7 @@ const Catering: React.FC = () => {
           Lead time
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Typically two weeks from order date to fulfillment date.
+          Typically less than two weeks from order date to fulfillment date.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
