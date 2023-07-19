@@ -31,7 +31,7 @@ const App: React.FC = () => {
             {/**
              * Each route should be represented in each of the following places:
              *
-             * - cypress/e2e test module
+             * - cypress/e2e/[route-name].ts module
              * - cypress/types/route-path.ts
              * - constants/navigation.ts (optional)
              * - public/manifest.json `shortcuts` (optional)
