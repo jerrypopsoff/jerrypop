@@ -129,7 +129,7 @@ const Order: React.FC = () => {
         <StyledRetailerList>
           {RETAILERS.map((retailer) => (
             <RetailerListItem
-              key={retailer.name}
+              key={retailer.address}
               retailer={retailer}
             ></RetailerListItem>
           ))}
