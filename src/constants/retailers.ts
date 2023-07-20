@@ -30,7 +30,13 @@ export const RETAILERS: Retailer[] = [
     address: '2245 3rd Street',
     href: 'https://www.olfactorybrewing.com/',
     name: 'Olfactory Brewing',
-    products: [FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
   },
   {
     address: '466 Haight Street',
@@ -79,5 +85,23 @@ export const RETAILERS: Retailer[] = [
       HABANERO_RANCH,
       SICHUAN_NOOCH,
     ],
+  },
+  {
+    address: '1400 Guerrero Street',
+    href: 'https://www.instagram.com/26thandguerreromarket/',
+    name: '26th & Guerrero Market',
+    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
+  },
+  {
+    address: '3394 22nd Street',
+    href: 'https://www.instagram.com/lone_palm_bar/',
+    name: 'Lone Palm Bar',
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
+  },
+  {
+    address: '853 Valencia Street',
+    href: 'https://www.citybeerstore.com/',
+    name: 'City Beer Store',
+    products: [FURIKAKE_DASHI],
   },
 ];
