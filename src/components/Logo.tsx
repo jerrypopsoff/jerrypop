@@ -16,7 +16,9 @@ const StyledButton = styled.button`
   ${SLOW_DANGLE_STYLE}
   background-color: transparent;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
+  overflow: visible;
   padding: 0;
   position: absolute;
   z-index: ${LOGO_Z_INDEX};
