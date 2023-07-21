@@ -18,7 +18,7 @@ export const RETAILERS: Retailer[] = [
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [HABANERO_RANCH],
+    products: [CHIPOTLE_CHEDDAR, GOAT_CHEESE_CHIVE],
   },
   {
     address: '18 Harlan Place',
