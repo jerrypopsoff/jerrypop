@@ -42,9 +42,7 @@ const StyledRegularSection = styled.section`
 
 const StyledTagline = styled(Typography)`
   font-size: 18px;
-  margin: 0 0 16px;
   max-width: 600px;
-  padding: 0 24px;
 `;
 
 const StyledCallToActionLink = styled(Link)`
@@ -70,8 +68,11 @@ const Home: React.FC = () => {
           srcSet={`${HabaneroRanchWebp600} 600w, ${HabaneroRanchWebp1200} 1200w, ${HabaneroRanchWebp2400} 2400w`}
         />
         <StyledRegularSection>
-          <StyledTagline type="h1">
+          <StyledTagline margin="0 24px 8px" type="h1">
             Locally crafted San Francisco popcorn.
+          </StyledTagline>
+          <StyledTagline margin="0 24px 16px" type="h1">
+            Bold flavors. Compostable packaging.
           </StyledTagline>
           <StyledCallToActionLink to="/order">Order</StyledCallToActionLink>
         </StyledRegularSection>
