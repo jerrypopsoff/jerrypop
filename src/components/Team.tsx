@@ -44,7 +44,7 @@ const StyledTeamMemberName = styled(Typography)`
 `;
 
 const StyledTeamMemberTitle = styled(Typography)`
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
   margin: 8px 0;
   text-transform: uppercase;
@@ -53,48 +53,6 @@ const StyledTeamMemberTitle = styled(Typography)`
 const Team: React.FC = () => {
   return (
     <StyledTeamMemberList>
-      <StyledTeamMemberListItem>
-        <StyledTeamMemberPhotograph
-          alt="Photograph of Kristen Rigney-Jimenez, Jerrypop Sales & Marketing Representative"
-          fallbackSrc={AboutKristenPhotograph}
-          fallbackSrcSet={`${AboutKristenPhotograph} 600w`}
-          sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PAGE_BREAKPOINT_PX}px), 95vw`}
-          srcSet={`${AboutKristenPhotographWebp} 600w`}
-        />
-        <StyledTeamMemberName type="h2">
-          Kristen Rigney-Jimenez
-        </StyledTeamMemberName>
-        <StyledTeamMemberTitle type="h3">
-          Sales & Marketing Representative
-        </StyledTeamMemberTitle>
-        <Typography margin="12px 0" type="p">
-          I’m a Bay Area native, born and raised in the East Bay. I have a
-          degree in Child Development and have spent the past several years as a
-          preschool teacher in San Francisco.
-        </Typography>
-        <Typography margin="12px 0" type="p">
-          I met Jerry through mutual friends and quickly discovered why he’d
-          earned the nickname <i>Jerrypop</i>. Whenever heading to a gathering,
-          I found myself eagerly anticipating whatever new flavor of popcorn
-          Jerry might be supplying.
-        </Typography>
-        <Typography margin="12px 0" type="p">
-          Fast forward a few years later, and Jerry had transformed his passion
-          into a quickly ripening business. While searching for low-waste favors
-          for our upcoming wedding, my now-husband and I inquired about
-          Jerrypop's catering. Jerry went above and beyond, even making custom
-          bags for the occasion! We ordered two flavors — Chipotle Cheddar and
-          Furikake Dashi — and they were a total hit! Better yet, we felt great
-          that our guests thoroughly enjoyed them and that they weren't tossed
-          into a junk drawer or landfill after our big day.
-        </Typography>
-        <Typography margin="12px 0" type="p">
-          I joined Jerrypop because not only do I love the exciting flavors, but
-          because I believe in the mission of sustainability that the company
-          stands on. It thrills me that Jerrypop is a trailblazer in the snack
-          industry for doing things the way they should have always been done.
-        </Typography>
-      </StyledTeamMemberListItem>
       <StyledTeamMemberListItem>
         <StyledTeamMemberPhotograph
           alt="Photograph of Jerry Haagsma, Jerrypop Founder"
@@ -147,6 +105,48 @@ const Team: React.FC = () => {
           of popcorn with others and bring delight to people’s lives. It’s been
           an incredible journey, and I could not have done it without the
           support of my friends and customers.
+        </Typography>
+      </StyledTeamMemberListItem>
+      <StyledTeamMemberListItem>
+        <StyledTeamMemberPhotograph
+          alt="Photograph of Kristen Rigney-Jimenez, Jerrypop Sales & Marketing Representative"
+          fallbackSrc={AboutKristenPhotograph}
+          fallbackSrcSet={`${AboutKristenPhotograph} 600w`}
+          sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PAGE_BREAKPOINT_PX}px), 95vw`}
+          srcSet={`${AboutKristenPhotographWebp} 600w`}
+        />
+        <StyledTeamMemberName type="h2">
+          Kristen Rigney-Jimenez
+        </StyledTeamMemberName>
+        <StyledTeamMemberTitle type="h3">
+          Sales & Marketing Representative
+        </StyledTeamMemberTitle>
+        <Typography margin="12px 0" type="p">
+          I’m a Bay Area native, born and raised in the East Bay. I have a
+          degree in Child Development and have spent the past several years as a
+          preschool teacher in San Francisco.
+        </Typography>
+        <Typography margin="12px 0" type="p">
+          I met Jerry through mutual friends and quickly discovered why he’d
+          earned the nickname <i>Jerrypop</i>. Whenever heading to a gathering,
+          I found myself eagerly anticipating whatever new flavor of popcorn
+          Jerry might be supplying.
+        </Typography>
+        <Typography margin="12px 0" type="p">
+          Fast forward a few years later, and Jerry had transformed his passion
+          into a quickly ripening business. While searching for low-waste favors
+          for our upcoming wedding, my now-husband and I inquired about
+          Jerrypop's catering. Jerry went above and beyond, even making custom
+          bags for the occasion! We ordered two flavors — Chipotle Cheddar and
+          Furikake Dashi — and they were a total hit! Better yet, we felt great
+          that our guests thoroughly enjoyed them and that they weren't tossed
+          into a junk drawer or landfill after our big day.
+        </Typography>
+        <Typography margin="12px 0" type="p">
+          I joined Jerrypop because not only do I love the exciting flavors, but
+          because I believe in the mission of sustainability that the company
+          stands on. It thrills me that Jerrypop is a trailblazer in the snack
+          industry for doing things the way they should have always been done.
         </Typography>
       </StyledTeamMemberListItem>
     </StyledTeamMemberList>
