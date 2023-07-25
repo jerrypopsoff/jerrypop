@@ -1,4 +1,4 @@
-import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpg';
+import HabaneroRanchPhotograph from '../images/product-habanero-ranch.jpeg';
 import HabaneroRanchPhotographWebp from '../images/product-habanero-ranch.webp';
 import HabaneroRanchPackagingImage from '../images/packaging-habanero-ranch.png';
 import HabaneroRanchPackagingImageWebp from '../images/packaging-habanero-ranch.webp';
@@ -6,7 +6,7 @@ import PbjPhotograph from '../images/product-pbj.jpg';
 import PbjPhotographWebp from '../images/product-pbj.webp';
 import PbjPackagingImage from '../images/packaging-pbj.png';
 import PbjPackagingImageWebp from '../images/packaging-pbj.webp';
-import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.jpg';
+import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.jpeg';
 import ChiopotleCheddarPhotographWebp from '../images/product-chipotle-cheddar.webp';
 import ChipotleCheddarPackagingImage from '../images/packaging-chipotle-cheddar.png';
 import ChipotleCheddarPackagingImageWebp from '../images/packaging-chipotle-cheddar.webp';

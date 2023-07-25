@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
 const POP_UP_REQUEST_EMAIL_BODY =
-  "Hi Jerrypop,\n\nI'd like for you to pop up at my event at [location] on [date] from [time range]. Are you available?\n\nThanks,\n[name]";
+  "Hi Jerrypop,\n\nI'd like for you to pop up at [my event] at [location] on [date] from [time range]. Are you available?\n\nThanks,\n[name]";
 
 const StyledSection = styled.section`
   align-items: center;
