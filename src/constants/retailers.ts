@@ -38,12 +38,12 @@ export const RETAILERS: Retailer[] = [
       SICHUAN_NOOCH,
     ],
   },
-  {
-    address: '466 Haight Street',
-    href: 'https://nickiesbarsf.com/',
-    name: 'Nickieʼs',
-    products: [GOAT_CHEESE_CHIVE],
-  },
+  // {
+  //   address: '466 Haight Street',
+  //   href: 'https://nickiesbarsf.com/',
+  //   name: 'Nickieʼs',
+  //   products: [GOAT_CHEESE_CHIVE],
+  // },
   // {
   //   address: '530 Haight Street',
   //   href: 'https://www.woodsbeer.com/lowside',
