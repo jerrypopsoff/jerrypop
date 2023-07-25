@@ -7,6 +7,8 @@
 # ```
 # ./convert-responsive-image src/images/glamorous-jalapeno-cheddar.jpeg
 # ```
+#
+# https://web.dev/serve-responsive-images/
 
 filename=$(basename -- "$1")
 extension="${filename##*.}"

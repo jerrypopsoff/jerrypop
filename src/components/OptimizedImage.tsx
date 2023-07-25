@@ -16,26 +16,8 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
 }
 
 /**
- * 1. Convert images to webp format using the `cwebp` command. Quality score of
- * 80 seems to yield best results.
- *
- * ```console
- * brew install webp
- * cwebp -q 80 flower.png -o flower.webp
- * ```
- *
- * {@link https://web.dev/serve-images-webp/}
- * {@link https://www.joshwcomeau.com/performance/embracing-modern-image-formats/}
- *
- * 2. Resize image via ImageMagick to fit within desired space (e.g. 300px wide
- * by 200px tall).
- *
- * ```console
- * brew install imagemagick
- * convert flower.jpg -resize 300x200 flower-small.jpg
- * ```
- *
- * {@link https://web.dev/serve-responsive-images/}
+ * Use scripts/convert-responsive-image.sh to convert image files to
+ * appropriate size and format.
  */
 const OptimizedImage: React.FC<Props> = ({
   alt,
