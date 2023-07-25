@@ -38,12 +38,6 @@ export const RETAILERS: Retailer[] = [
       SICHUAN_NOOCH,
     ],
   },
-  {
-    address: '466 Haight Street',
-    href: 'https://nickiesbarsf.com/',
-    name: 'Nickieʼs',
-    products: [GOAT_CHEESE_CHIVE],
-  },
   // {
   //   address: '530 Haight Street',
   //   href: 'https://www.woodsbeer.com/lowside',
@@ -93,15 +87,21 @@ export const RETAILERS: Retailer[] = [
     products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
   },
   {
-    address: '3394 22nd Street',
-    href: 'https://www.instagram.com/lone_palm_bar/',
-    name: 'Lone Palm Bar',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
-  },
-  {
     address: '853 Valencia Street',
     href: 'https://www.citybeerstore.com/',
     name: 'City Beer Store',
     products: [FURIKAKE_DASHI],
+  },
+  {
+    address: '466 Haight Street',
+    href: 'https://nickiesbarsf.com/',
+    name: 'Nickieʼs',
+    products: [GOAT_CHEESE_CHIVE],
+  },
+  {
+    address: '3394 22nd Street',
+    href: 'https://www.instagram.com/lone_palm_bar/',
+    name: 'Lone Palm Bar',
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
   },
 ];
