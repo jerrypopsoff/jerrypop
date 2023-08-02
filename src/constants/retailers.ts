@@ -110,4 +110,10 @@ export const RETAILERS: Retailer[] = [
     name: 'Le Marché Cezanne',
     products: [FURIKAKE_DASHI, HABANERO_RANCH],
   },
+  {
+    address: '300 Valencia Street',
+    href: 'https://www.healthyspirits.com/',
+    name: 'Healthy Spirits',
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
+  },
 ];
