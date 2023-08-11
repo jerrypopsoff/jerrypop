@@ -14,6 +14,10 @@ import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-haz
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
 import ChocolateHazelnutEspressoPackagingImage from '../images/packaging-chocolate-hazelnut-espresso.png';
 import ChocolateHazelnutEspressoPackagingImageWebp from '../images/packaging-chocolate-hazelnut-espresso.webp';
+import FieryMalaLimePhotograph from '../images/product-fiery-mala-lime.jpeg';
+import FieryMalaLimePhotographWebp from '../images/product-fiery-mala-lime.webp';
+import FieryMalaLimePackagingImage from '../images/packaging-fiery-mala-lime.png';
+import FieryMalaLimePackagingImageWebp from '../images/packaging-fiery-mala-lime.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
 import GoatCheeseChivePackagingImage from '../images/packaging-goat-cheese-chive.png';
@@ -221,6 +225,34 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   weight: '3.4 OZ',
 };
 
+export const FIERY_MALA_LIME: RetailProduct = {
+  allergens: [],
+  description:
+    'Taking inspiration from San Francisco’s incredible landscape of Sichuan cuisine and Mexican chili-lime seasoning, this popcorn blasts your senses with fiery Sichuan chili pepper, numbing Sichuan peppercorn, and tangy lime.',
+  image: FieryMalaLimePhotograph,
+  imageWebp: FieryMalaLimePhotographWebp,
+  ingredients: [
+    'POPCORN',
+    'CANOLA OIL',
+    'GRANULATED GARLIC',
+    'SICHUAN CHILI PEPPER',
+    'ONION POWDER',
+    'KOSHER SALT',
+    'SICHUAN PEPPERCORN',
+    'MONOSODIUM GLUTAMATE',
+    'SUGAR',
+    'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
+  ],
+  packagingImage: FieryMalaLimePackagingImage,
+  packagingImageWebp: FieryMalaLimePackagingImageWebp,
+  priceCatering: 7.0,
+  priceMsrp: 7.0,
+  priceRetailer: 4.5,
+  subtitle: 'Craft Popcorn',
+  title: 'Fiery Málà Lime',
+  weight: '1.7 OZ',
+};
+
 export const SICHUAN_NOOCH: RetailProduct = {
   allergens: [],
   description:
@@ -250,20 +282,21 @@ export const SICHUAN_NOOCH: RetailProduct = {
 };
 
 export const PRODUCTS: Product[] = [
-  HABANERO_RANCH,
   CHIPOTLE_CHEDDAR,
-  GOAT_CHEESE_CHIVE,
   FURIKAKE_DASHI,
+  GOAT_CHEESE_CHIVE,
+  HABANERO_RANCH,
   SICHUAN_NOOCH,
+  FIERY_MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
   PBJ,
   CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
 
 export const PRICED_PRODUCTS: RetailProduct[] = [
-  HABANERO_RANCH,
   CHIPOTLE_CHEDDAR,
-  GOAT_CHEESE_CHIVE,
   FURIKAKE_DASHI,
+  GOAT_CHEESE_CHIVE,
+  HABANERO_RANCH,
   SICHUAN_NOOCH,
 ];
