@@ -222,7 +222,7 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   priceCatering: 12.0,
   subtitle: 'Craft Popcorn',
   title: 'Chocolate Hazelnut Espresso',
-  weight: '3.4 OZ',
+  weight: '2.8 OZ',
 };
 
 export const FIERY_MALA_LIME: RetailProduct = {
