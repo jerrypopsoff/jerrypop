@@ -38,12 +38,6 @@ export const RETAILERS: Retailer[] = [
       SICHUAN_NOOCH,
     ],
   },
-  // {
-  //   address: '530 Haight Street',
-  //   href: 'https://www.woodsbeer.com/lowside',
-  //   name: 'Woods Lowside',
-  //   products: [SICHUAN_NOOCH],
-  // },
   {
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
@@ -98,12 +92,6 @@ export const RETAILERS: Retailer[] = [
     name: 'Nickieʼs',
     products: [CHIPOTLE_CHEDDAR, GOAT_CHEESE_CHIVE],
   },
-  // {
-  //   address: '3394 22nd Street',
-  //   href: 'https://www.instagram.com/lone_palm_bar/',
-  //   name: 'Lone Palm Bar',
-  //   products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
-  // },
   {
     address: '1426 18th Street',
     href: 'https://www.lemarchecezanne.com/',
