@@ -98,12 +98,12 @@ export const RETAILERS: Retailer[] = [
     name: 'Nickieʼs',
     products: [CHIPOTLE_CHEDDAR, GOAT_CHEESE_CHIVE],
   },
-  {
-    address: '3394 22nd Street',
-    href: 'https://www.instagram.com/lone_palm_bar/',
-    name: 'Lone Palm Bar',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
-  },
+  // {
+  //   address: '3394 22nd Street',
+  //   href: 'https://www.instagram.com/lone_palm_bar/',
+  //   name: 'Lone Palm Bar',
+  //   products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH],
+  // },
   {
     address: '1426 18th Street',
     href: 'https://www.lemarchecezanne.com/',
