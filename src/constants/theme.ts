@@ -18,18 +18,6 @@ interface Themes {
 }
 
 export const THEME: Themes = {
-  BLUE_CYAN: {
-    mainThemeDark: THEME_BLUE,
-    mainThemeMedium: THEME_CYAN,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
-  BLUE_ORANGE: {
-    mainThemeDark: THEME_BLUE,
-    mainThemeMedium: THEME_ORANGE,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
   // PB&J
   BLUE_PINK: {
     mainThemeDark: THEME_BLUE,
@@ -44,19 +32,7 @@ export const THEME: Themes = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: BLACK,
   },
-  GREEN_YELLOW: {
-    mainThemeDark: THEME_GREEN,
-    mainThemeMedium: THEME_YELLOW,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
-  ORANGE_PURPLE: {
-    mainThemeDark: THEME_ORANGE,
-    mainThemeMedium: THEME_PURPLE,
-    mainThemeTextOnDark: BLACK,
-    mainThemeTextOnMedium: WHITE,
-  },
-  // Chipotle Chive Cheddar
+  // Chipotle Cheddar
   ORANGE_RED: {
     mainThemeDark: THEME_ORANGE,
     mainThemeMedium: THEME_RED,
@@ -70,12 +46,6 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: WHITE,
   },
-  PINK_YELLOW: {
-    mainThemeDark: THEME_PINK,
-    mainThemeMedium: THEME_YELLOW,
-    mainThemeTextOnDark: WHITE,
-    mainThemeTextOnMedium: BLACK,
-  },
   // Sichuan Nooch
   PURPLE_CYAN: {
     mainThemeDark: THEME_PURPLE,
@@ -83,13 +53,14 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  // Chocolate Hazelnut Espresso
   PURPLE_GREEN: {
     mainThemeDark: THEME_PURPLE,
     mainThemeMedium: THEME_LIGHT_GREEN,
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
-  // Rosemary Lemon Pepper
+  // Goat Cheese Chive
   YELLOW_GREEN: {
     mainThemeDark: THEME_YELLOW,
     mainThemeMedium: THEME_GREEN,
@@ -108,10 +79,4 @@ export const THEMES = [
   THEME.PINK_PURPLE,
   THEME.YELLOW_GREEN,
   THEME.PURPLE_CYAN,
-  // THEME.PURPLE_GREEN,
-  // THEME.BLUE_ORANGE,
-  // THEME.GREEN_YELLOW,
-  // THEME.BLUE_CYAN,
-  // THEME.ORANGE_PURPLE,
-  // THEME.PINK_YELLOW,
 ];
