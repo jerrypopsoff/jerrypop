@@ -32,6 +32,13 @@ export const THEME: Themes = {
     mainThemeTextOnDark: BLACK,
     mainThemeTextOnMedium: BLACK,
   },
+  // Rosemary Lemon Pepper
+  GREEN_YELLOW: {
+    mainThemeDark: THEME_GREEN,
+    mainThemeMedium: THEME_YELLOW,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
   // Chipotle Cheddar
   ORANGE_RED: {
     mainThemeDark: THEME_ORANGE,
@@ -60,6 +67,13 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
+  // Fiery Mala Lime
+  RED_GREEN: {
+    mainThemeDark: THEME_RED,
+    mainThemeMedium: THEME_LIGHT_GREEN,
+    mainThemeTextOnDark: WHITE,
+    mainThemeTextOnMedium: BLACK,
+  },
   // Goat Cheese Chive
   YELLOW_GREEN: {
     mainThemeDark: THEME_YELLOW,
@@ -79,4 +93,6 @@ export const THEMES = [
   THEME.PINK_PURPLE,
   THEME.YELLOW_GREEN,
   THEME.PURPLE_CYAN,
+  THEME.RED_GREEN,
+  THEME.GREEN_YELLOW,
 ];
