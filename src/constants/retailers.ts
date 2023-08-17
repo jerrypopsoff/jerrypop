@@ -104,4 +104,16 @@ export const RETAILERS: Retailer[] = [
     name: 'Healthy Spirits',
     products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
   },
+  {
+    address: '2545 24th Street',
+    href: 'https://www.juniorbarsf.com/',
+    name: 'Junior',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
+  },
 ];
