@@ -216,6 +216,7 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
     'SUGAR',
     'BAKING POWDER',
     'KOSHER SALT',
+    'ESPRESSO POWDER',
   ],
   packagingImage: ChocolateHazelnutEspressoPackagingImage,
   packagingImageWebp: ChocolateHazelnutEspressoPackagingImageWebp,
