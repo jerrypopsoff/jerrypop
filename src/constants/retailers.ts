@@ -75,28 +75,10 @@ export const RETAILERS: Retailer[] = [
     ],
   },
   {
-    address: '1400 Guerrero Street',
-    href: 'https://www.instagram.com/26thandguerreromarket/',
-    name: '26th & Guerrero Market',
-    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
-  },
-  {
     address: '853 Valencia Street',
     href: 'https://www.citybeerstore.com/',
     name: 'City Beer Store',
     products: [FURIKAKE_DASHI],
-  },
-  {
-    address: '466 Haight Street',
-    href: 'https://nickiesbarsf.com/',
-    name: 'Nickieʼs',
-    products: [CHIPOTLE_CHEDDAR, GOAT_CHEESE_CHIVE],
-  },
-  {
-    address: '1426 18th Street',
-    href: 'https://www.lemarchecezanne.com/',
-    name: 'Le Marché Cezanne',
-    products: [FURIKAKE_DASHI, HABANERO_RANCH],
   },
   {
     address: '300 Valencia Street',
