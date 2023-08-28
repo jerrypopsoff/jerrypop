@@ -86,7 +86,7 @@ const Retail: React.FC = () => {
           Minimum order
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          15 bags per flavor.
+          10 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Lead time
