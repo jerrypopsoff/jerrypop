@@ -43,7 +43,7 @@ const About: React.FC = () => {
           customers.
         </Typography>
         <Typography maxWidth="600px" type="p">
-          Our mission is twofold: to create delicious popcorn and promote
+          Our mission is twofold: to create delicious popcorn and to promote
           environmental sustainability. Every bag of Jerrypop is sustainably
           crafted and packaged in a 100% compostable pouch. We believe that
           businesses have a responsibility to minimize their impact on the
