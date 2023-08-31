@@ -3,7 +3,7 @@ import Typography from './Typography';
 import styled from 'styled-components';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
 import AboutJerryPhotographWebp from '../images/about-jerry.webp';
-import AboutKristenPhotograph from '../images/about-kristen.png';
+import AboutKristenPhotograph from '../images/about-kristen.jpeg';
 import AboutKristenPhotographWebp from '../images/about-kristen.webp';
 import OptimizedImage from './OptimizedImage';
 
