@@ -43,7 +43,7 @@ export const HABANERO_RANCH: RetailProduct = {
   image: HabaneroRanchPhotograph,
   imageWebp: HabaneroRanchPhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'BUTTERMILK POWDER',
     'ONION POWDER',
@@ -76,7 +76,7 @@ export const PBJ: Product = {
   ingredients: [
     'STRAWBERRY JAM',
     'PEANUT BUTTER (ROASTED PEANUTS, SUGAR, HYDROGENATED VEGETABLE OIL (COTTONSEED, SOYBEAN AND RAPESEED OIL), SALT)',
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'NATURALLY REFINED ORGANIC COCONUT OIL',
     'SUGAR',
@@ -99,7 +99,7 @@ export const CHIPOTLE_CHEDDAR: RetailProduct = {
   image: ChiopotleCheddarPhotograph,
   imageWebp: ChiopotleCheddarPhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'CHEDDAR CHEESE POWDER (GRANULAR CHEESE (MILK, CHEESE CULTURE, SALT, ENZYMES), WHEY, SUNFLOWER OIL, WHEY PROTEIN CONCENTRATE, LACTOSE, MALTODEXTRIN, SALT, BLUE CHEESE (MILK, CHEESE CULTURE, SALT, ENZYMES), SODIUM PHOSPHATE, CITRIC ACID, LACTIC ACID, YELLOW 5, YELLOW 6)',
     'GRANULATED GARLIC',
@@ -128,7 +128,7 @@ export const GOAT_CHEESE_CHIVE: RetailProduct = {
   image: GoatCheeseChivePhotograph,
   imageWebp: GoatCheeseChivePhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'GOAT MILK POWDER',
     'GRANULATED GARLIC',
@@ -156,7 +156,7 @@ export const FURIKAKE_DASHI: RetailProduct = {
   image: FurikakeDashiPhotograph,
   imageWebp: FurikakeDashiPhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'NORI KOMI FURIKAKE (SESAME SEED, SUGAR, SEAWEED, SALT, MALTODEXTRIN, DISODIUM SUCCINATE, DISODIUM INOSINATE)',
     'KOSHER SALT',
@@ -183,7 +183,7 @@ export const ROSEMARY_LEMON_PEPPER: Product = {
   image: RosemaryLemonPepperPhotograph,
   imageWebp: RosemaryLemonPepperPhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'EXTRA VIRGIN OLIVE OIL',
     'GRANULATED GARLIC',
@@ -210,7 +210,7 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   imageWebp: ChocolateHazelnutEspressoPhotographWebp,
   ingredients: [
     'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'NATURALLY REFINED ORGANIC COCONUT OIL',
     'SUGAR',
@@ -233,14 +233,13 @@ export const FIERY_MALA_LIME: RetailProduct = {
   image: FieryMalaLimePhotograph,
   imageWebp: FieryMalaLimePhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'GRANULATED GARLIC',
     'SICHUAN CHILI PEPPER',
     'ONION POWDER',
     'KOSHER SALT',
     'SICHUAN PEPPERCORN',
-    'MONOSODIUM GLUTAMATE',
     'SUGAR',
     'CRYSTALLIZED LIME (CITRIC ACID, LIME OIL, LIME JUICE, MALTODEXTRIN)',
   ],
@@ -261,7 +260,7 @@ export const SICHUAN_NOOCH: RetailProduct = {
   image: SichuanNoochPhotograph,
   imageWebp: SichuanNoochPhotographWebp,
   ingredients: [
-    'POPCORN',
+    'NON-GMO POPCORN',
     'CANOLA OIL',
     'NUTRITIONAL YEAST (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12))',
     'GRANULATED GARLIC',
