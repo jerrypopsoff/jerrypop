@@ -24,7 +24,7 @@ export const RETAILERS: Retailer[] = [
     address: '18 Harlan Place',
     href: 'https://www.harlanrecords.com/',
     name: 'Harlan Records',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
+    products: [FURIKAKE_DASHI],
   },
   // {
   //   address: '2245 3rd Street',
