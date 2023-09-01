@@ -24,20 +24,20 @@ export const RETAILERS: Retailer[] = [
     address: '18 Harlan Place',
     href: 'https://www.harlanrecords.com/',
     name: 'Harlan Records',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
+    products: [FURIKAKE_DASHI],
   },
-  {
-    address: '2245 3rd Street',
-    href: 'https://www.olfactorybrewing.com/',
-    name: 'Olfactory Brewing',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      FURIKAKE_DASHI,
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      SICHUAN_NOOCH,
-    ],
-  },
+  // {
+  //   address: '2245 3rd Street',
+  //   href: 'https://www.olfactorybrewing.com/',
+  //   name: 'Olfactory Brewing',
+  //   products: [
+  //     CHIPOTLE_CHEDDAR,
+  //     FURIKAKE_DASHI,
+  //     GOAT_CHEESE_CHIVE,
+  //     HABANERO_RANCH,
+  //     SICHUAN_NOOCH,
+  //   ],
+  // },
   {
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
@@ -97,5 +97,23 @@ export const RETAILERS: Retailer[] = [
       HABANERO_RANCH,
       SICHUAN_NOOCH,
     ],
+  },
+  {
+    address: '3500 22nd Street',
+    href: 'https://www.doloresdeluxe.com/',
+    name: 'Dolores Deluxe',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      FURIKAKE_DASHI,
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      SICHUAN_NOOCH,
+    ],
+  },
+  {
+    address: '1400 Guerrero Street',
+    href: 'https://www.instagram.com/26thandguerreromarket/',
+    name: '26th & Guerrero Market',
+    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
   },
 ];
