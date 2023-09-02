@@ -103,9 +103,11 @@ const Retail: React.FC = () => {
           for $5.00. Please indicate if you have a preferred delivery timeframe
           (Thursday 4-7pm or Friday 9am-3pm).
         </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionTerm>
+          Equipment
+        </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Complimentary laminated menu cards available upon request.
+          Signs and clip strips available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
