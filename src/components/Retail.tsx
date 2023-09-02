@@ -96,15 +96,18 @@ const Retail: React.FC = () => {
           week.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
-          Delivery fee
+          Delivery
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          First delivery free. Subsequent orders delivered for $5.00 + $2.00 per
-          mile from 1431 Grove Street.
+          First delivery free. Subsequent orders delivered within San Francisco
+          for $5.00. Please indicate if you have a preferred delivery timeframe
+          (Thursday 4-7pm or Friday 9am-3pm).
         </StyledLogisticsDescriptionDetails>
-        <StyledLogisticsDescriptionTerm>Menus</StyledLogisticsDescriptionTerm>
+        <StyledLogisticsDescriptionTerm>
+          Equipment
+        </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Complimentary laminated menu cards available upon request.
+          Signs and clip strips available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
