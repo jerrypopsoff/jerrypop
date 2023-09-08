@@ -18,7 +18,7 @@ export const RETAILERS: Retailer[] = [
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [FURIKAKE_DASHI, HABANERO_RANCH],
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
     address: '18 Harlan Place',
@@ -109,6 +109,12 @@ export const RETAILERS: Retailer[] = [
       HABANERO_RANCH,
       SICHUAN_NOOCH,
     ],
+  },
+  {
+    address: '858 Rhode Island Street',
+    href: 'https://chiotrasgrocery.com/',
+    name: 'Chiotras Grocery',
+    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
     address: '1400 Guerrero Street',
