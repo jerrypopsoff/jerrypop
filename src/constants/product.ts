@@ -18,6 +18,8 @@ import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg'
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
 import GoatCheeseChivePackagingImage from '../images/packaging-goat-cheese-chive.png';
 import GoatCheeseChivePackagingImageWebp from '../images/packaging-goat-cheese-chive.webp';
+import ItalianSausagePhotograph from '../images/product-italian-sausage.jpeg';
+import ItalianSausagePhotographWebp from '../images/product-italian-sausage.webp';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
 import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
 import RosemaryLemonPepperPackagingImage from '../images/packaging-rosemary-lemon-pepper.png';
@@ -245,6 +247,35 @@ export const FIERY_MALA_LIME: RetailProduct = {
   weight: '1.7 OZ',
 };
 
+export const ITALIAN_SAUSAGE: Product = {
+  allergens: [],
+  description:
+    'The finest herbs and spices available capture the delicious flavors of my Sicilian grandmother’s signature Italian sausage pasta.',
+  image: ItalianSausagePhotograph,
+  imageWebp: ItalianSausagePhotographWebp,
+  ingredients: [
+    'NON-GMO POPCORN',
+    'CANOLA OIL',
+    'GRANULATED GARLIC',
+    'ONION POWDER',
+    'SALT',
+    'FENNEL SEED',
+    'EXTRA VIRGIN OLIVE OIL',
+    'CANE SUGAR',
+    'TOMATO POWDER',
+    'CRUSHED RED PEPPER',
+    'PAPRIKA',
+    'SMOKED PAPRIKA',
+    'BASIL',
+    'BLACK PEPPERCORN',
+    'OREGANO',
+  ],
+  priceCatering: 7.0,
+  subtitle: 'Craft Popcorn',
+  title: 'Italian Sausage',
+  weight: '1.7 OZ',
+};
+
 export const SICHUAN_NOOCH: RetailProduct = {
   allergens: [],
   description:
@@ -291,6 +322,7 @@ export const PRODUCTS: Product[] = [
   SICHUAN_NOOCH,
   FIERY_MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
+  ITALIAN_SAUSAGE,
   PBJ,
   CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
