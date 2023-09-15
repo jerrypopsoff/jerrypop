@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
-import { Product, RetailProduct } from '../types/product';
+import { CateringProduct, RetailProduct } from '../types/product';
 import {
   TILE_LIST_ITEM_STYLE,
   TILE_IMAGE_CONTAINER_STYLE,
@@ -62,7 +62,7 @@ const StyledPricingDescriptionDetails = styled.dd`
 `;
 
 interface CateringProps {
-  product: Product;
+  product: CateringProduct;
   type: 'catering';
 }
 

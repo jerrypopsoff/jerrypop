@@ -4,16 +4,12 @@ import HabaneroRanchPackagingImage from '../images/packaging-habanero-ranch.png'
 import HabaneroRanchPackagingImageWebp from '../images/packaging-habanero-ranch.webp';
 import PbjPhotograph from '../images/product-pbj.jpg';
 import PbjPhotographWebp from '../images/product-pbj.webp';
-import PbjPackagingImage from '../images/packaging-pbj.png';
-import PbjPackagingImageWebp from '../images/packaging-pbj.webp';
 import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.jpeg';
 import ChiopotleCheddarPhotographWebp from '../images/product-chipotle-cheddar.webp';
 import ChipotleCheddarPackagingImage from '../images/packaging-chipotle-cheddar.png';
 import ChipotleCheddarPackagingImageWebp from '../images/packaging-chipotle-cheddar.webp';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
-import ChocolateHazelnutEspressoPackagingImage from '../images/packaging-chocolate-hazelnut-espresso.png';
-import ChocolateHazelnutEspressoPackagingImageWebp from '../images/packaging-chocolate-hazelnut-espresso.webp';
 import FieryMalaLimePhotograph from '../images/product-fiery-mala-lime.jpeg';
 import FieryMalaLimePhotographWebp from '../images/product-fiery-mala-lime.webp';
 import FieryMalaLimePackagingImage from '../images/packaging-fiery-mala-lime.png';
@@ -34,7 +30,7 @@ import FurikakeDashiPhotograph from '../images/product-furikake-dashi.jpeg';
 import FurikakeDashiPhotographWebp from '../images/product-furikake-dashi.webp';
 import FurikakeDashiPackagingImage from '../images/packaging-furikake-dashi.png';
 import FurikakeDashiPackagingImageWebp from '../images/packaging-furikake-dashi.webp';
-import { RetailProduct, Product } from '../types/product';
+import { RetailProduct, Product, CateringProduct } from '../types/product';
 
 export const HABANERO_RANCH: RetailProduct = {
   allergens: ['MILK'],
@@ -84,8 +80,6 @@ export const PBJ: Product = {
     'SALT',
     'CRYSTALLIZED LEMON',
   ],
-  packagingImage: PbjPackagingImage,
-  packagingImageWebp: PbjPackagingImageWebp,
   priceCatering: 12.0,
   subtitle: 'Craft Popcorn',
   title: 'PB&J',
@@ -176,7 +170,7 @@ export const FURIKAKE_DASHI: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const ROSEMARY_LEMON_PEPPER: Product = {
+export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
   allergens: [],
   description:
     'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. This variety is only available in unmarked packaging.',
@@ -218,8 +212,6 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
     'SALT',
     'ESPRESSO POWDER',
   ],
-  packagingImage: ChocolateHazelnutEspressoPackagingImage,
-  packagingImageWebp: ChocolateHazelnutEspressoPackagingImageWebp,
   priceCatering: 12.0,
   subtitle: 'Craft Popcorn',
   title: 'Chocolate Hazelnut Espresso',
@@ -281,6 +273,16 @@ export const SICHUAN_NOOCH: RetailProduct = {
   weight: '1.7 OZ',
 };
 
+export const CATERING_PRODUCTS: CateringProduct[] = [
+  CHIPOTLE_CHEDDAR,
+  FURIKAKE_DASHI,
+  GOAT_CHEESE_CHIVE,
+  HABANERO_RANCH,
+  SICHUAN_NOOCH,
+  FIERY_MALA_LIME,
+  ROSEMARY_LEMON_PEPPER,
+];
+
 export const PRODUCTS: Product[] = [
   CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
@@ -293,7 +295,7 @@ export const PRODUCTS: Product[] = [
   CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
 
-export const PRICED_PRODUCTS: RetailProduct[] = [
+export const RETAIL_PRODUCTS: RetailProduct[] = [
   CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
