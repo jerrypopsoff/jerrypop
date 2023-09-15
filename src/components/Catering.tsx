@@ -1,5 +1,5 @@
 import React from 'react';
-import { PRODUCTS } from '../constants/product';
+import { CATERING_PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -125,7 +125,7 @@ const Catering: React.FC = () => {
       </StyledLogisticsDescriptionList>
       <Typography type="h2">Pricing</Typography>
       <StyledTileList>
-        {PRODUCTS.map((product) => (
+        {CATERING_PRODUCTS.map((product) => (
           <PricingListItem
             key={product.title}
             product={product}
