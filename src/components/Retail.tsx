@@ -107,7 +107,7 @@ const Retail: React.FC = () => {
           Equipment
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Signs and clip strips available upon request.
+          Signs, shelf toppers, and clip strips available upon request.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>Payment</StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
