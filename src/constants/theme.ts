@@ -67,7 +67,7 @@ export const THEME: Themes = {
     mainThemeTextOnDark: WHITE,
     mainThemeTextOnMedium: BLACK,
   },
-  // Fiery Mala Lime
+  // Málà Lime
   RED_GREEN: {
     mainThemeDark: THEME_RED,
     mainThemeMedium: THEME_LIGHT_GREEN,
