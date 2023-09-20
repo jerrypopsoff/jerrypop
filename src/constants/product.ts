@@ -10,10 +10,10 @@ import ChipotleCheddarPackagingImage from '../images/packaging-chipotle-cheddar.
 import ChipotleCheddarPackagingImageWebp from '../images/packaging-chipotle-cheddar.webp';
 import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
-import FieryMalaLimePhotograph from '../images/product-fiery-mala-lime.jpeg';
-import FieryMalaLimePhotographWebp from '../images/product-fiery-mala-lime.webp';
-import FieryMalaLimePackagingImage from '../images/packaging-fiery-mala-lime.png';
-import FieryMalaLimePackagingImageWebp from '../images/packaging-fiery-mala-lime.webp';
+import MalaLimePhotograph from '../images/product-mala-lime.jpeg';
+import MalaLimePhotographWebp from '../images/product-mala-lime.webp';
+import MalaLimePackagingImage from '../images/packaging-mala-lime.png';
+import MalaLimePackagingImageWebp from '../images/packaging-mala-lime.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.jpeg';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
 import GoatCheeseChivePackagingImage from '../images/packaging-goat-cheese-chive.png';
@@ -220,12 +220,12 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
   weight: '2.8 OZ',
 };
 
-export const FIERY_MALA_LIME: RetailProduct = {
+export const MALA_LIME: RetailProduct = {
   allergens: [],
   description:
     'Taking inspiration from San Francisco’s incredible landscape of Sichuan cuisine and Mexican chili-lime seasoning, this popcorn blasts your senses with fiery Sichuan chili pepper, numbing Sichuan peppercorn, and tangy lime.',
-  image: FieryMalaLimePhotograph,
-  imageWebp: FieryMalaLimePhotographWebp,
+  image: MalaLimePhotograph,
+  imageWebp: MalaLimePhotographWebp,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -237,13 +237,13 @@ export const FIERY_MALA_LIME: RetailProduct = {
     'CANE SUGAR',
     'CRYSTALLIZED LIME',
   ],
-  packagingImage: FieryMalaLimePackagingImage,
-  packagingImageWebp: FieryMalaLimePackagingImageWebp,
+  packagingImage: MalaLimePackagingImage,
+  packagingImageWebp: MalaLimePackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
-  title: 'Fiery Málà Lime',
+  title: 'Málà Lime',
   weight: '1.7 OZ',
 };
 
@@ -310,7 +310,7 @@ export const CATERING_PRODUCTS: CateringProduct[] = [
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   SICHUAN_NOOCH,
-  FIERY_MALA_LIME,
+  MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
 ];
 
@@ -320,7 +320,7 @@ export const PRODUCTS: Product[] = [
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   SICHUAN_NOOCH,
-  FIERY_MALA_LIME,
+  MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
   ITALIAN_SAUSAGE,
   PBJ,
