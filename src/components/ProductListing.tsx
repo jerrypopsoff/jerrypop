@@ -8,7 +8,6 @@ import {
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
 import {
   PRODUCT_IMAGE_ASPECT_RATIO,
