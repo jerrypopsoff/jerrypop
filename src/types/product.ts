@@ -10,10 +10,7 @@ export interface Product {
   weight: string;
 }
 
-export interface CateringProduct extends Product {
-  packagingImage: string;
-  packagingImageWebp: string;
-}
+export interface CateringProduct extends Product {}
 
 export interface RetailProduct extends CateringProduct {
   priceMsrp: number;

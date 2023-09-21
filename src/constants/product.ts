@@ -1,38 +1,25 @@
 import HabaneroRanchPhotograph from '../images/product-habanero-ranch.png';
 import HabaneroRanchPhotographWebp from '../images/product-habanero-ranch.webp';
-import HabaneroRanchPackagingImage from '../images/packaging-habanero-ranch.png';
-import HabaneroRanchPackagingImageWebp from '../images/packaging-habanero-ranch.webp';
-import PbjPhotograph from '../images/product-pbj.jpg';
+import PbjPhotograph from '../images/product-pbj.png';
 import PbjPhotographWebp from '../images/product-pbj.webp';
 import ChiopotleCheddarPhotograph from '../images/product-chipotle-cheddar.png';
 import ChiopotleCheddarPhotographWebp from '../images/product-chipotle-cheddar.webp';
-import ChipotleCheddarPackagingImage from '../images/packaging-chipotle-cheddar.png';
-import ChipotleCheddarPackagingImageWebp from '../images/packaging-chipotle-cheddar.webp';
-import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.jpg';
+import ChocolateHazelnutEspressoPhotograph from '../images/product-chocolate-hazelnut-espresso.png';
 import ChocolateHazelnutEspressoPhotographWebp from '../images/product-chocolate-hazelnut-espresso.webp';
 import MalaLimePhotograph from '../images/product-mala-lime.png';
 import MalaLimePhotographWebp from '../images/product-mala-lime.webp';
-import MalaLimePackagingImage from '../images/packaging-mala-lime.png';
-import MalaLimePackagingImageWebp from '../images/packaging-mala-lime.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.png';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
-import GoatCheeseChivePackagingImage from '../images/packaging-goat-cheese-chive.png';
-import GoatCheeseChivePackagingImageWebp from '../images/packaging-goat-cheese-chive.webp';
-import ItalianSausagePhotograph from '../images/product-italian-sausage.jpeg';
-import ItalianSausagePhotographWebp from '../images/product-italian-sausage.webp';
-import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.jpeg';
+import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.png';
 import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
-import RosemaryLemonPepperPackagingImage from '../images/packaging-rosemary-lemon-pepper.png';
-import RosemaryLemonPepperPackagingImageWebp from '../images/packaging-rosemary-lemon-pepper.webp';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.png';
 import SichuanNoochPhotographWebp from '../images/product-sichuan-nooch.webp';
-import SichuanNoochPackagingImage from '../images/packaging-sichuan-nooch.png';
-import SichuanNoochPackagingImageWebp from '../images/packaging-sichuan-nooch.webp';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.png';
 import FurikakeDashiPhotographWebp from '../images/product-furikake-dashi.webp';
-import FurikakeDashiPackagingImage from '../images/packaging-furikake-dashi.png';
-import FurikakeDashiPackagingImageWebp from '../images/packaging-furikake-dashi.webp';
 import { RetailProduct, Product, CateringProduct } from '../types/product';
+
+export const PRODUCT_IMAGE_ASPECT_RATIO = 1.285;
+export const PRODUCT_IMAGE_WIDTH_PX = 240;
 
 export const HABANERO_RANCH: RetailProduct = {
   allergens: ['MILK'],
@@ -55,8 +42,6 @@ export const HABANERO_RANCH: RetailProduct = {
     'CHIVES',
     'PARSLEY',
   ],
-  packagingImage: HabaneroRanchPackagingImage,
-  packagingImageWebp: HabaneroRanchPackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
@@ -107,8 +92,6 @@ export const CHIPOTLE_CHEDDAR: RetailProduct = {
     'CRYSTALLIZED LIME',
     'BLACK PEPPERCORN',
   ],
-  packagingImage: ChipotleCheddarPackagingImage,
-  packagingImageWebp: ChipotleCheddarPackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
@@ -135,8 +118,6 @@ export const GOAT_CHEESE_CHIVE: RetailProduct = {
     'CHIVES',
     'BLACK PEPPERCORN',
   ],
-  packagingImage: GoatCheeseChivePackagingImage,
-  packagingImageWebp: GoatCheeseChivePackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
@@ -162,8 +143,6 @@ export const FURIKAKE_DASHI: RetailProduct = {
     'ONION POWDER',
     'CANE SUGAR',
   ],
-  packagingImage: FurikakeDashiPackagingImage,
-  packagingImageWebp: FurikakeDashiPackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
@@ -190,8 +169,6 @@ export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
     'ROSEMARY',
     'BLACK PEPPERCORN',
   ],
-  packagingImage: RosemaryLemonPepperPackagingImage,
-  packagingImageWebp: RosemaryLemonPepperPackagingImageWebp,
   priceCatering: 7.0,
   subtitle: 'Craft Popcorn',
   title: 'Rosemary Lemon Pepper',
@@ -237,8 +214,6 @@ export const MALA_LIME: RetailProduct = {
     'CANE SUGAR',
     'CRYSTALLIZED LIME',
   ],
-  packagingImage: MalaLimePackagingImage,
-  packagingImageWebp: MalaLimePackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
@@ -251,8 +226,8 @@ export const ITALIAN_SAUSAGE: Product = {
   allergens: [],
   description:
     'The finest herbs and spices available capture the delicious flavors of my Sicilian grandmother’s signature Italian sausage pasta.',
-  image: ItalianSausagePhotograph,
-  imageWebp: ItalianSausagePhotographWebp,
+  image: MalaLimePhotograph,
+  imageWebp: MalaLimePhotographWebp,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -294,8 +269,6 @@ export const SICHUAN_NOOCH: RetailProduct = {
     'CANE SUGAR',
     'CRYSTALLIZED LIME',
   ],
-  packagingImage: SichuanNoochPackagingImage,
-  packagingImageWebp: SichuanNoochPackagingImageWebp,
   priceCatering: 7.0,
   priceMsrp: 7.0,
   priceRetailer: 4.5,
