@@ -8,8 +8,11 @@ import {
   TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
+import {
+  PRODUCT_IMAGE_ASPECT_RATIO,
+  PRODUCT_IMAGE_WIDTH_PX,
+} from '../constants/product';
 
 const StyledTileListItem = styled.li`
   ${TILE_LIST_ITEM_STYLE}
@@ -52,22 +55,22 @@ interface Props {
 
 const ProductListing: React.FC<Props> = ({ product }) => {
   return (
-    <StyledTileListItem $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}>
+    <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
       <StyledTileImageContainer
-        $aspectRatio={1}
-        $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+        $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
+        $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
       >
         <StyledTileImage
-          $aspectRatio={1}
-          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+          $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
+          $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
           fallbackSrcSet={`${product.image} 600w`}
-          sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
+          sizes={`${PRODUCT_IMAGE_WIDTH_PX}px (min-width: ${PRODUCT_IMAGE_WIDTH_PX}px), 95vw`}
           srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>
-      <StyledTileInformation $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}>
+      <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
         <StyledTitle type="h2">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">

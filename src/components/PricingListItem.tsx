@@ -10,9 +10,10 @@ import {
 } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
 import { displayCurrency } from '../utilities/currency';
-
-const PACKAGING_IMAGE_ASPECT_RATIO = 1.285;
-const PACKAGING_IMAGE_WIDTH_PX = 240;
+import {
+  PRODUCT_IMAGE_ASPECT_RATIO,
+  PRODUCT_IMAGE_WIDTH_PX,
+} from '../constants/product';
 
 const StyledTileListItem = styled.li`
   ${TILE_LIST_ITEM_STYLE}
@@ -75,22 +76,22 @@ type Props = CateringProps | RetailProps;
 
 const PricingListItem: React.FC<Props> = ({ product, type }) => {
   return (
-    <StyledTileListItem $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}>
+    <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
       <StyledTileImageContainer
-        $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}
-        $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}
+        $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
+        $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
       >
         <StyledTileImage
-          $aspectRatio={PACKAGING_IMAGE_ASPECT_RATIO}
-          $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}
-          alt={`Front packaging label for ${product.title}`}
-          fallbackSrc={product.packagingImage}
-          fallbackSrcSet={`${product.packagingImage} 600w`}
-          sizes={`${PACKAGING_IMAGE_WIDTH_PX}px (min-width: ${PACKAGING_IMAGE_WIDTH_PX}px), 95vw`}
-          srcSet={`${product.packagingImageWebp} 600w`}
+          $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
+          $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
+          alt={`Photograph of ${product.title}`}
+          fallbackSrc={product.image}
+          fallbackSrcSet={`${product.image} 600w`}
+          sizes={`${PRODUCT_IMAGE_WIDTH_PX}px (min-width: ${PRODUCT_IMAGE_WIDTH_PX}px), 95vw`}
+          srcSet={`${product.imageWebp} 600w`}
         />
       </StyledTileImageContainer>
-      <StyledTileInformation $imageWidthPx={PACKAGING_IMAGE_WIDTH_PX}>
+      <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
         <StyledTitle type="h3">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">
