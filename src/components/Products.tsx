@@ -4,12 +4,12 @@ import { PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
-import Products600 from '../images/glamorous-packaging-600.jpg';
-import Products1200 from '../images/glamorous-packaging-1200.jpg';
-import Products2400 from '../images/glamorous-packaging-2400.jpg';
-import ProductsWebp600 from '../images/glamorous-packaging-600.webp';
-import ProductsWebp1200 from '../images/glamorous-packaging-1200.webp';
-import ProductsWebp2400 from '../images/glamorous-packaging-2400.webp';
+import Products600 from '../images/glamorous-mala-lime-600.jpeg';
+import Products1200 from '../images/glamorous-mala-lime-1200.jpeg';
+import Products2400 from '../images/glamorous-mala-lime-2400.jpeg';
+import ProductsWebp600 from '../images/glamorous-mala-lime-600.webp';
+import ProductsWebp1200 from '../images/glamorous-mala-lime-1200.webp';
+import ProductsWebp2400 from '../images/glamorous-mala-lime-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import styled from 'styled-components';
 
@@ -24,7 +24,7 @@ const Products: React.FC = () => {
         <title>Products · Jerrypop</title>
       </Helmet>
       <GlamorPhotograph
-        alt="Photograph of packaged Jerrypop craft popcorn varieties on a wooden bar top"
+        alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}
         fallbackSrc={Products2400}
         fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}

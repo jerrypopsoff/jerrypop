@@ -6,12 +6,12 @@ import { RETAILERS } from '../constants/retailers';
 import RetailerListItem from './RetailerListItem';
 import { BUTTON_STYLE } from '../constants/css/button';
 import GlamorPhotograph from './GlamorPhotograph';
-import JalapenoCheddar600 from '../images/glamorous-jalapeno-cheddar-600.jpeg';
-import JalapenoCheddar1200 from '../images/glamorous-jalapeno-cheddar-1200.jpeg';
-import JalapenoCheddar2400 from '../images/glamorous-jalapeno-cheddar-2400.jpeg';
-import JalapenoCheddarWebp600 from '../images/glamorous-jalapeno-cheddar-600.webp';
-import JalapenoCheddarWebp1200 from '../images/glamorous-jalapeno-cheddar-1200.webp';
-import JalapenoCheddarWebp2400 from '../images/glamorous-jalapeno-cheddar-2400.webp';
+import Order600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
+import Order1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.jpeg';
+import Order2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.jpeg';
+import OrderWebp600 from '../images/glamorous-chocolate-hazelnut-espresso-600.webp';
+import OrderWebp1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.webp';
+import OrderWebp2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.webp';
 import FormDialog from './FormDialog';
 import { useDialogState } from '../hooks/use-form-dialog';
 import {
@@ -90,11 +90,11 @@ const Order: React.FC = () => {
         <title>Order · Jerrypop</title>
       </Helmet>
       <GlamorPhotograph
-        alt="Photograph of a bowl of Jalapeño Cheddar Craft Popcorn on a wooden surface from directly above"
+        alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
         aspectRatio={2400 / 1350}
-        fallbackSrc={JalapenoCheddar2400}
-        fallbackSrcSet={`${JalapenoCheddar600} 600w, ${JalapenoCheddar1200} 1200w, ${JalapenoCheddar2400} 2400w`}
-        srcSet={`${JalapenoCheddarWebp600} 600w, ${JalapenoCheddarWebp1200} 1200w, ${JalapenoCheddarWebp2400} 2400w`}
+        fallbackSrc={Order2400}
+        fallbackSrcSet={`${Order600} 600w, ${Order1200} 1200w, ${Order2400} 2400w`}
+        srcSet={`${OrderWebp600} 600w, ${OrderWebp1200} 1200w, ${OrderWebp2400} 2400w`}
       />
       <Typography type="h1">Order</Typography>
       <StyledSection>
