@@ -129,7 +129,7 @@ export const GOAT_CHEESE_CHIVE: RetailProduct = {
 export const FURIKAKE_DASHI: RetailProduct = {
   allergens: ['MILK', 'SESAME', 'TUNA'],
   description:
-    'A tastefully savory umami bomb featuring nori furikake, bonito stock, and shichimi togarashi.',
+    'A tastefully savory umami bomb featuring nori furikake, smoked bonito tuna, and shichimi togarashi.',
   image: FurikakeDashiPhotograph,
   imageWebp: FurikakeDashiPhotographWebp,
   ingredients: [
