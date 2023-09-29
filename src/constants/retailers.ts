@@ -104,4 +104,10 @@ export const RETAILERS: Retailer[] = [
     name: 'Tahona Mercado',
     products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
   },
+  {
+    address: '466 Haight Street',
+    href: 'https://nickiesbarsf.com/',
+    name: 'Nickieʼs',
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
+  },
 ];
