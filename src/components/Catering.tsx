@@ -92,7 +92,7 @@ const Catering: React.FC = () => {
           Pickup location
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          1431 Grove Street, San Francisco, CA 94117.
+          343 Bartlett Street, San Francisco, CA 94110.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Lead time
@@ -109,7 +109,7 @@ const Catering: React.FC = () => {
           Shelf life
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          4 weeks after pickup date recommended for optimum flavor and
+          3 weeks after pickup date recommended for optimum flavor and
           freshness.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
