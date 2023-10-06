@@ -42,11 +42,6 @@
       "name": "About · Jerrypop",
       "short_name": "About",
       "url": "/about"
-    },
-    {
-      "name": "Press · Jerrypop",
-      "short_name": "Press",
-      "url": "/press"
     }
   ],
   "start_url": ".",

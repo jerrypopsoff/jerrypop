@@ -8,6 +8,5 @@ export const NAVIGATION_MENU_ITEMS: NavigationMenuItem[] = [
   { displayName: 'Order', to: '/order' },
   { displayName: 'Catering', to: '/catering' },
   { displayName: 'About', to: '/about' },
-  { displayName: 'Press', to: '/press' },
   { displayName: 'Merch', isExternal: true, to: MERCH_HREF },
 ];
