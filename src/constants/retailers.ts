@@ -93,12 +93,6 @@ export const RETAILERS: Retailer[] = [
     products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
-    address: '1400 Guerrero Street',
-    href: 'https://www.instagram.com/26thandguerreromarket/',
-    name: '26th & Guerrero Market',
-    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
-  },
-  {
     address: '1168 Leavenworth Street',
     href: 'https://tahonamercado.com/',
     name: 'Tahona Mercado',
@@ -109,5 +103,16 @@ export const RETAILERS: Retailer[] = [
     href: 'https://nickiesbarsf.com/',
     name: 'Nickieʼs',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
+  },
+  {
+    address: '2801 22nd Street',
+    href: 'https://www.geminibottlesf.com/',
+    name: 'Gemini Bottle Co.',
+    products: [
+      CHIPOTLE_CHEDDAR,
+      GOAT_CHEESE_CHIVE,
+      FURIKAKE_DASHI,
+      SICHUAN_NOOCH,
+    ],
   },
 ];
