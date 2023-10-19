@@ -12,13 +12,13 @@ export const RETAILERS: Retailer[] = [
     address: '298 Divisadero Street',
     href: 'http://www.thepagebar.com/',
     name: 'The Page',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
   },
   {
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
   },
   {
     address: '18 Harlan Place',
@@ -69,12 +69,6 @@ export const RETAILERS: Retailer[] = [
     products: [FURIKAKE_DASHI],
   },
   {
-    address: '300 Valencia Street',
-    href: 'https://www.healthyspirits.com/',
-    name: 'Healthy Spirits',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
-  },
-  {
     address: '2545 24th Street',
     href: 'https://www.juniorbarsf.com/',
     name: 'Junior',
@@ -93,12 +87,6 @@ export const RETAILERS: Retailer[] = [
     products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
-    address: '1168 Leavenworth Street',
-    href: 'https://tahonamercado.com/',
-    name: 'Tahona Mercado',
-    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
-  },
-  {
     address: '466 Haight Street',
     href: 'https://nickiesbarsf.com/',
     name: 'Nickieʼs',
@@ -114,5 +102,11 @@ export const RETAILERS: Retailer[] = [
       FURIKAKE_DASHI,
       SICHUAN_NOOCH,
     ],
+  },
+  {
+    address: '179 West Portal Avenue',
+    href: 'https://sherwoodsf.com/',
+    name: 'The Sherwood SF',
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
   },
 ];
