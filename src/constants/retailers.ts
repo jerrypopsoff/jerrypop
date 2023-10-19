@@ -63,6 +63,12 @@ export const RETAILERS: Retailer[] = [
     ],
   },
   {
+    address: '853 Valencia Street',
+    href: 'https://www.citybeerstore.com/',
+    name: 'City Beer Store',
+    products: [FURIKAKE_DASHI],
+  },
+  {
     address: '2545 24th Street',
     href: 'https://www.juniorbarsf.com/',
     name: 'Junior',
