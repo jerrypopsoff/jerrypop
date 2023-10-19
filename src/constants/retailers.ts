@@ -12,13 +12,13 @@ export const RETAILERS: Retailer[] = [
     address: '298 Divisadero Street',
     href: 'http://www.thepagebar.com/',
     name: 'The Page',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
   },
   {
     address: '1050 26th Street',
     href: 'http://harmonicbrewing.com/',
     name: 'Harmonic Brewing',
-    products: [CHIPOTLE_CHEDDAR, SICHUAN_NOOCH],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
   },
   {
     address: '18 Harlan Place',
