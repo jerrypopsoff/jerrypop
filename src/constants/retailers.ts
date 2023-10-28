@@ -30,23 +30,13 @@ export const RETAILERS: Retailer[] = [
     address: 'Cow Hollow Market · 2190 Union Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      FURIKAKE_DASHI,
-      HABANERO_RANCH,
-      SICHUAN_NOOCH,
-    ],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: 'North Beach Market · 580 Green Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      FURIKAKE_DASHI,
-      HABANERO_RANCH,
-      SICHUAN_NOOCH,
-    ],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: '853 Valencia Street',
