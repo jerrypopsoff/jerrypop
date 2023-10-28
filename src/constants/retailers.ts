@@ -15,12 +15,6 @@ export const RETAILERS: Retailer[] = [
     products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
   },
   {
-    address: '1050 26th Street',
-    href: 'http://harmonicbrewing.com/',
-    name: 'Harmonic Brewing',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
-  },
-  {
     address: '18 Harlan Place',
     href: 'https://www.harlanrecords.com/',
     name: 'Harlan Records',
@@ -30,13 +24,7 @@ export const RETAILERS: Retailer[] = [
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      FURIKAKE_DASHI,
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      SICHUAN_NOOCH,
-    ],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
   },
   {
     address: 'Cow Hollow Market · 2190 Union Street',
@@ -45,7 +33,6 @@ export const RETAILERS: Retailer[] = [
     products: [
       CHIPOTLE_CHEDDAR,
       FURIKAKE_DASHI,
-      GOAT_CHEESE_CHIVE,
       HABANERO_RANCH,
       SICHUAN_NOOCH,
     ],
@@ -57,7 +44,6 @@ export const RETAILERS: Retailer[] = [
     products: [
       CHIPOTLE_CHEDDAR,
       FURIKAKE_DASHI,
-      GOAT_CHEESE_CHIVE,
       HABANERO_RANCH,
       SICHUAN_NOOCH,
     ],
@@ -85,12 +71,6 @@ export const RETAILERS: Retailer[] = [
     href: 'https://chiotrasgrocery.com/',
     name: 'Chiotras Grocery',
     products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE, HABANERO_RANCH],
-  },
-  {
-    address: '466 Haight Street',
-    href: 'https://nickiesbarsf.com/',
-    name: 'Nickieʼs',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
   {
     address: '2801 22nd Street',
