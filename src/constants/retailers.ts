@@ -2,7 +2,6 @@ import { Retailer } from '../types/retailer';
 import {
   CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
-  GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   SICHUAN_NOOCH,
 } from './product';
@@ -24,7 +23,7 @@ export const RETAILERS: Retailer[] = [
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: 'Cow Hollow Market · 2190 Union Street',
@@ -48,35 +47,18 @@ export const RETAILERS: Retailer[] = [
     address: '2545 24th Street',
     href: 'https://www.juniorbarsf.com/',
     name: 'Junior',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      FURIKAKE_DASHI,
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      SICHUAN_NOOCH,
-    ],
+    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
-    address: '858 Rhode Island Street',
-    href: 'https://chiotrasgrocery.com/',
-    name: 'Chiotras Grocery',
-    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE, HABANERO_RANCH],
-  },
-  {
-    address: '2801 22nd Street',
-    href: 'https://www.geminibottlesf.com/',
-    name: 'Gemini Bottle Co.',
-    products: [
-      CHIPOTLE_CHEDDAR,
-      GOAT_CHEESE_CHIVE,
-      FURIKAKE_DASHI,
-      SICHUAN_NOOCH,
-    ],
+    address: '1168 Leavenworth Street',
+    href: 'https://tahonamercado.com/',
+    name: 'Tahona Mercado',
+    products: [HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: '179 West Portal Avenue',
     href: 'https://sherwoodsf.com/',
     name: 'The Sherwood SF',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI],
+    products: [FURIKAKE_DASHI, HABANERO_RANCH],
   },
 ];
