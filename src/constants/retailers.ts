@@ -11,13 +11,13 @@ export const RETAILERS: Retailer[] = [
     address: '298 Divisadero Street',
     href: 'http://www.thepagebar.com/',
     name: 'The Page',
-    products: [CHIPOTLE_CHEDDAR, HABANERO_RANCH],
+    products: [HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: '18 Harlan Place',
     href: 'https://www.harlanrecords.com/',
     name: 'Harlan Records',
-    products: [FURIKAKE_DASHI],
+    products: [SICHUAN_NOOCH],
   },
   {
     address: 'Cole Valley Market · 960 Cole Street',
@@ -60,5 +60,11 @@ export const RETAILERS: Retailer[] = [
     href: 'https://sherwoodsf.com/',
     name: 'The Sherwood SF',
     products: [FURIKAKE_DASHI, HABANERO_RANCH],
+  },
+  {
+    address: '2245 3rd Street',
+    href: 'https://www.olfactorybrewing.com/',
+    name: 'Olfactory Brewing',
+    products: [HABANERO_RANCH, SICHUAN_NOOCH],
   },
 ];
