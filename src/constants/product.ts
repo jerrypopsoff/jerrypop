@@ -74,7 +74,7 @@ export const PBJ: CateringProduct = {
   weight: '3.7 OZ',
 };
 
-export const CHIPOTLE_CHEDDAR: RetailProduct = {
+export const CHIPOTLE_CHEDDAR: CateringProduct = {
   allergens: ['MILK'],
   description:
     'The perfect combination of smoky chipotle, tangy cheddar, and zesty lime.',
@@ -94,8 +94,6 @@ export const CHIPOTLE_CHEDDAR: RetailProduct = {
     'BLACK PEPPERCORN',
   ],
   priceCatering: 7.0,
-  priceMsrp: 7.0,
-  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Chipotle Cheddar',
   weight: '1.7 OZ',
@@ -152,10 +150,10 @@ export const FURIKAKE_DASHI: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
+export const ROSEMARY_LEMON_PEPPER: RetailProduct = {
   allergens: [],
   description:
-    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. This variety is only available in unmarked packaging.',
+    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper.',
   image: RosemaryLemonPepperPhotograph,
   imageWebp: RosemaryLemonPepperPhotographWebp,
   ingredients: [
@@ -171,6 +169,8 @@ export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
     'BLACK PEPPERCORN',
   ],
   priceCatering: 7.0,
+  priceMsrp: 7.0,
+  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Rosemary Lemon Pepper',
   weight: '1.7 OZ',
@@ -252,7 +252,7 @@ export const ITALIAN_SAUSAGE: CateringProduct = {
   weight: '1.7 OZ',
 };
 
-export const SICHUAN_NOOCH: RetailProduct = {
+export const SICHUAN_NOOCH: CateringProduct = {
   allergens: [],
   description:
     'Toasted Sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn.',
@@ -271,8 +271,6 @@ export const SICHUAN_NOOCH: RetailProduct = {
     'CRYSTALLIZED LIME',
   ],
   priceCatering: 7.0,
-  priceMsrp: 7.0,
-  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Sichuan Nooch',
   weight: '1.7 OZ',
@@ -291,11 +289,9 @@ export const REQUEST_A_FLAVOR: CateringProduct = {
 };
 
 export const CATERING_PRODUCTS: CateringProduct[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
   MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
   REQUEST_A_FLAVOR,
@@ -315,9 +311,9 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const RETAIL_PRODUCTS: RetailProduct[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
+  MALA_LIME,
+  ROSEMARY_LEMON_PEPPER,
 ];
