@@ -17,6 +17,7 @@ import SichuanNoochPhotographWebp from '../images/product-sichuan-nooch.webp';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.png';
 import FurikakeDashiPhotographWebp from '../images/product-furikake-dashi.webp';
 import { RetailProduct, Product, CateringProduct } from '../types/product';
+import { INSTAGRAM_PROFILE_URL } from './url';
 
 export const PRODUCT_IMAGE_ASPECT_RATIO = 1.285;
 export const PRODUCT_IMAGE_WIDTH_PX = 240;
@@ -50,7 +51,7 @@ export const HABANERO_RANCH: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const PBJ: Product = {
+export const PBJ: CateringProduct = {
   allergens: ['PEANUTS', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia.',
@@ -175,7 +176,7 @@ export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
   weight: '1.7 OZ',
 };
 
-export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
+export const CHOCOLATE_HAZELNUT_ESPRESSO: CateringProduct = {
   allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. This variety is only available in unmarked packaging.',
@@ -222,7 +223,7 @@ export const MALA_LIME: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const ITALIAN_SAUSAGE: Product = {
+export const ITALIAN_SAUSAGE: CateringProduct = {
   allergens: [],
   description:
     'The finest herbs and spices available capture the delicious flavors of my Sicilian grandmother’s signature Italian sausage pasta.',
@@ -277,6 +278,18 @@ export const SICHUAN_NOOCH: RetailProduct = {
   weight: '1.7 OZ',
 };
 
+export const REQUEST_A_FLAVOR: CateringProduct = {
+  allergens: [],
+  description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
+  image: MalaLimePhotograph,
+  imageWebp: MalaLimePhotographWebp,
+  ingredients: [],
+  priceCatering: { max: 12, min: 7 },
+  subtitle: 'Craft Popcorn',
+  title: 'Request a Flavor',
+  weight: '1.7 - 3.7 OZ',
+};
+
 export const CATERING_PRODUCTS: CateringProduct[] = [
   CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
@@ -285,6 +298,7 @@ export const CATERING_PRODUCTS: CateringProduct[] = [
   SICHUAN_NOOCH,
   MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
+  REQUEST_A_FLAVOR,
 ];
 
 export const PRODUCTS: Product[] = [
