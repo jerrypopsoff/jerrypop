@@ -10,6 +10,8 @@ import MalaLimePhotograph from '../images/product-mala-lime.png';
 import MalaLimePhotographWebp from '../images/product-mala-lime.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.png';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
+import RequestAFlavorPhotograph from '../images/product-request-a-flavor.png';
+import RequestAFlavorPhotographWebp from '../images/product-request-a-flavor.webp';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.png';
 import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.png';
@@ -279,8 +281,8 @@ export const SICHUAN_NOOCH: CateringProduct = {
 export const REQUEST_A_FLAVOR: CateringProduct = {
   allergens: [],
   description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
-  image: MalaLimePhotograph,
-  imageWebp: MalaLimePhotographWebp,
+  image: RequestAFlavorPhotograph,
+  imageWebp: RequestAFlavorPhotographWebp,
   ingredients: [],
   priceCatering: { max: 12, min: 7 },
   subtitle: 'Craft Popcorn',
@@ -298,16 +300,11 @@ export const CATERING_PRODUCTS: CateringProduct[] = [
 ];
 
 export const PRODUCTS: Product[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
   MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
-  ITALIAN_SAUSAGE,
-  PBJ,
-  CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
 
 export const RETAIL_PRODUCTS: RetailProduct[] = [
