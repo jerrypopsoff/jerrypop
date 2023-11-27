@@ -95,7 +95,7 @@ const PricingListItem: React.FC<Props> = ({ product, type }) => {
         <StyledTitle type="h3">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
         <Typography margin="16px 0 0" type="p">
-          {product.description}
+          <span dangerouslySetInnerHTML={{ __html: product.description }} />
         </Typography>
         <StyledPricingDescriptionList>
           {type === 'retail' && (
