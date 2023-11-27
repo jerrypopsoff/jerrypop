@@ -10,6 +10,8 @@ import MalaLimePhotograph from '../images/product-mala-lime.png';
 import MalaLimePhotographWebp from '../images/product-mala-lime.webp';
 import GoatCheeseChivePhotograph from '../images/product-goat-cheese-chive.png';
 import GoatCheeseChivePhotographWebp from '../images/product-goat-cheese-chive.webp';
+import RequestAFlavorPhotograph from '../images/product-request-a-flavor.png';
+import RequestAFlavorPhotographWebp from '../images/product-request-a-flavor.webp';
 import RosemaryLemonPepperPhotograph from '../images/product-rosemary-lemon-pepper.png';
 import RosemaryLemonPepperPhotographWebp from '../images/product-rosemary-lemon-pepper.webp';
 import SichuanNoochPhotograph from '../images/product-sichuan-nooch.png';
@@ -17,6 +19,7 @@ import SichuanNoochPhotographWebp from '../images/product-sichuan-nooch.webp';
 import FurikakeDashiPhotograph from '../images/product-furikake-dashi.png';
 import FurikakeDashiPhotographWebp from '../images/product-furikake-dashi.webp';
 import { RetailProduct, Product, CateringProduct } from '../types/product';
+import { INSTAGRAM_PROFILE_URL } from './url';
 
 export const PRODUCT_IMAGE_ASPECT_RATIO = 1.285;
 export const PRODUCT_IMAGE_WIDTH_PX = 240;
@@ -50,7 +53,7 @@ export const HABANERO_RANCH: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const PBJ: Product = {
+export const PBJ: CateringProduct = {
   allergens: ['PEANUTS', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia.',
@@ -73,7 +76,7 @@ export const PBJ: Product = {
   weight: '3.7 OZ',
 };
 
-export const CHIPOTLE_CHEDDAR: RetailProduct = {
+export const CHIPOTLE_CHEDDAR: CateringProduct = {
   allergens: ['MILK'],
   description:
     'The perfect combination of smoky chipotle, tangy cheddar, and zesty lime.',
@@ -93,8 +96,6 @@ export const CHIPOTLE_CHEDDAR: RetailProduct = {
     'BLACK PEPPERCORN',
   ],
   priceCatering: 7.0,
-  priceMsrp: 7.0,
-  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Chipotle Cheddar',
   weight: '1.7 OZ',
@@ -151,10 +152,10 @@ export const FURIKAKE_DASHI: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
+export const ROSEMARY_LEMON_PEPPER: RetailProduct = {
   allergens: [],
   description:
-    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper. This variety is only available in unmarked packaging.',
+    'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper.',
   image: RosemaryLemonPepperPhotograph,
   imageWebp: RosemaryLemonPepperPhotographWebp,
   ingredients: [
@@ -170,12 +171,14 @@ export const ROSEMARY_LEMON_PEPPER: CateringProduct = {
     'BLACK PEPPERCORN',
   ],
   priceCatering: 7.0,
+  priceMsrp: 7.0,
+  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Rosemary Lemon Pepper',
   weight: '1.7 OZ',
 };
 
-export const CHOCOLATE_HAZELNUT_ESPRESSO: Product = {
+export const CHOCOLATE_HAZELNUT_ESPRESSO: CateringProduct = {
   allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. This variety is only available in unmarked packaging.',
@@ -222,7 +225,7 @@ export const MALA_LIME: RetailProduct = {
   weight: '1.7 OZ',
 };
 
-export const ITALIAN_SAUSAGE: Product = {
+export const ITALIAN_SAUSAGE: CateringProduct = {
   allergens: [],
   description:
     'The finest herbs and spices available capture the delicious flavors of my Sicilian grandmother’s signature Italian sausage pasta.',
@@ -251,7 +254,7 @@ export const ITALIAN_SAUSAGE: Product = {
   weight: '1.7 OZ',
 };
 
-export const SICHUAN_NOOCH: RetailProduct = {
+export const SICHUAN_NOOCH: CateringProduct = {
   allergens: [],
   description:
     'Toasted Sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn.',
@@ -270,40 +273,44 @@ export const SICHUAN_NOOCH: RetailProduct = {
     'CRYSTALLIZED LIME',
   ],
   priceCatering: 7.0,
-  priceMsrp: 7.0,
-  priceRetailer: 4.5,
   subtitle: 'Craft Popcorn',
   title: 'Sichuan Nooch',
   weight: '1.7 OZ',
 };
 
+export const REQUEST_A_FLAVOR: CateringProduct = {
+  allergens: [],
+  description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
+  image: RequestAFlavorPhotograph,
+  imageWebp: RequestAFlavorPhotographWebp,
+  ingredients: [],
+  priceCatering: { max: 12, min: 7 },
+  subtitle: 'Craft Popcorn',
+  title: 'Request a Flavor',
+  weight: '1.7 - 3.7 OZ',
+};
+
 export const CATERING_PRODUCTS: CateringProduct[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
   MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
+  REQUEST_A_FLAVOR,
 ];
 
 export const PRODUCTS: Product[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
   MALA_LIME,
   ROSEMARY_LEMON_PEPPER,
-  ITALIAN_SAUSAGE,
-  PBJ,
-  CHOCOLATE_HAZELNUT_ESPRESSO,
 ];
 
 export const RETAIL_PRODUCTS: RetailProduct[] = [
-  CHIPOTLE_CHEDDAR,
   FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
-  SICHUAN_NOOCH,
+  MALA_LIME,
+  ROSEMARY_LEMON_PEPPER,
 ];
