@@ -23,25 +23,19 @@ export const RETAILERS: Retailer[] = [
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
+    products: [FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: 'Cow Hollow Market · 2190 Union Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
+    products: [FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: 'North Beach Market · 580 Green Street',
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
-  },
-  {
-    address: '853 Valencia Street',
-    href: 'https://www.citybeerstore.com/',
-    name: 'City Beer Store',
-    products: [FURIKAKE_DASHI],
+    products: [FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: '2545 24th Street',
@@ -65,6 +59,18 @@ export const RETAILERS: Retailer[] = [
     address: '2245 3rd Street',
     href: 'https://www.olfactorybrewing.com/',
     name: 'Olfactory Brewing',
+    products: [HABANERO_RANCH, SICHUAN_NOOCH],
+  },
+  {
+    address: '2801 22nd Street',
+    href: 'https://www.geminibottlesf.com/',
+    name: 'Gemini Bottle Co.',
+    products: [HABANERO_RANCH, SICHUAN_NOOCH],
+  },
+  {
+    address: '3500 22nd Street',
+    href: 'https://www.doloresdeluxe.com/',
+    name: 'Dolores Deluxe',
     products: [HABANERO_RANCH, SICHUAN_NOOCH],
   },
 ];
