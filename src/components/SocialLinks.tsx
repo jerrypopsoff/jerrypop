@@ -9,11 +9,12 @@ import YouTubeIcon from '../images/youtube-icon.svg';
 import YouTubeIconDark from '../images/youtube-icon-dark.svg';
 import styled from 'styled-components';
 import { isDarkMode } from '../utilities/dark-mode';
-
-const FACEBOOK_PROFILE_URL = 'https://www.facebook.com/craftpopcorn/';
-const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/craftpopcorn/';
-const YOU_TUBE_CHANNEL_URL = 'https://www.youtube.com/@craftpopcorn';
-const EMAIL_URL = 'mailto:info@jerrypop.com';
+import {
+  EMAIL_URL,
+  FACEBOOK_PROFILE_URL,
+  INSTAGRAM_PROFILE_URL,
+  YOU_TUBE_CHANNEL_URL,
+} from '../constants/url';
 
 const StyledSocialLinksList = styled.ul`
   align-items: center;

@@ -6,6 +6,7 @@ import AboutJerryPhotographWebp from '../images/about-jerry.webp';
 import AboutKristenPhotograph from '../images/about-kristen.jpeg';
 import AboutKristenPhotographWebp from '../images/about-kristen.webp';
 import OptimizedImage from './OptimizedImage';
+import { YOU_TUBE_CHANNEL_URL } from '../constants/url';
 
 const PHOTOGRAPH_MAX_HEIGHT_PX = 400;
 const PHOTOGRAPH_MAX_WIDTH_PX = 300;
@@ -79,11 +80,7 @@ const Team: React.FC = () => {
         <Typography margin="12px 0" type="p">
           After moving to San Francisco in 2017, I continued to hone my craft,
           eventually turning to{' '}
-          <a
-            href="https://youtube.com/@craftpopcorn"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
             video production
           </a>{' '}
           during the pandemic to share my popcorn techniques and learnings. In
