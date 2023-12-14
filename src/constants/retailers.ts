@@ -1,10 +1,5 @@
 import { Retailer } from '../types/retailer';
-import {
-  CHIPOTLE_CHEDDAR,
-  FURIKAKE_DASHI,
-  HABANERO_RANCH,
-  SICHUAN_NOOCH,
-} from './product';
+import { FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH } from './product';
 
 export const RETAILERS: Retailer[] = [
   {
@@ -36,18 +31,6 @@ export const RETAILERS: Retailer[] = [
     href: 'https://lukeslocal.com/',
     name: 'Lukeʼs Local',
     products: [FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
-  },
-  {
-    address: '2545 24th Street',
-    href: 'https://www.juniorbarsf.com/',
-    name: 'Junior',
-    products: [CHIPOTLE_CHEDDAR, FURIKAKE_DASHI, HABANERO_RANCH, SICHUAN_NOOCH],
-  },
-  {
-    address: '1168 Leavenworth Street',
-    href: 'https://tahonamercado.com/',
-    name: 'Tahona Mercado',
-    products: [HABANERO_RANCH, SICHUAN_NOOCH],
   },
   {
     address: '179 West Portal Avenue',
