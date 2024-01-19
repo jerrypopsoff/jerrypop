@@ -14,12 +14,12 @@ export const RETAILERS: Retailer[] = [
     name: 'The Page',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH],
   },
-  // {
-  //   address: '18 Harlan Place',
-  //   href: 'https://www.harlanrecords.com/',
-  //   name: 'Harlan Records',
-  //   products: [SICHUAN_NOOCH],
-  // },
+  {
+    address: '18 Harlan Place',
+    href: 'https://www.harlanrecords.com/',
+    name: 'Harlan Records',
+    products: [FURIKAKE_DASHI],
+  },
   {
     address: 'Cole Valley Market · 960 Cole Street',
     href: 'https://lukeslocal.com/',
@@ -132,5 +132,11 @@ export const RETAILERS: Retailer[] = [
       MALA_LIME,
       ROSEMARY_LEMON_PEPPER,
     ],
+  },
+  {
+    address: '1168 Leavenworth Street',
+    href: 'https://tahonamercado.com/',
+    name: 'Tahona Mercado',
+    products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
   },
 ];
