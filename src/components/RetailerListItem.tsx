@@ -7,7 +7,7 @@ import Typography from './Typography';
 const StyledListItem = styled.li`
   ${CARD_OUTER_STYLE}
   margin: 24px auto;
-  max-width: 400px;
+  max-width: 350px;
 `;
 
 const StyledRetailerAnchor = styled.a`
