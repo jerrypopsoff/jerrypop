@@ -92,16 +92,13 @@ const Retail: React.FC = () => {
           Lead time
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          Order by 9pm Sunday for delivery on Thursday or Friday of the same
-          week.
+          Order by 9pm Sunday for delivery on Friday of the same week.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Delivery
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          First delivery free. Subsequent orders delivered within San Francisco
-          for $5.00. Please indicate if you have a preferred delivery timeframe
-          (Thursday 4-7pm or Friday 9am-3pm).
+          First delivery free. Subsequent orders delivered for $5.00.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Equipment
