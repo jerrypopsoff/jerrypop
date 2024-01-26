@@ -68,12 +68,12 @@ export const RETAILERS: Retailer[] = [
   //   name: '26th & Guerrero Market',
   //   products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
   // },
-  // {
-  //   address: '853 Valencia Street',
-  //   href: 'https://www.citybeerstore.com/',
-  //   name: 'City Beer Store',
-  //   products: [FURIKAKE_DASHI],
-  // },
+  {
+    address: '853 Valencia Street',
+    href: 'https://www.citybeerstore.com/',
+    name: 'City Beer Store',
+    products: [FURIKAKE_DASHI],
+  },
   // {
   //   address: '2245 3rd Street',
   //   href: 'https://www.olfactorybrewing.com/',
@@ -138,5 +138,16 @@ export const RETAILERS: Retailer[] = [
     href: 'https://tahonamercado.com/',
     name: 'Tahona Mercado',
     products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
+  },
+  {
+    address: '488 Hayes Street',
+    href: 'https://www.brasstackssf.com/',
+    name: 'Brass Tacks',
+    products: [
+      GOAT_CHEESE_CHIVE,
+      FURIKAKE_DASHI,
+      HABANERO_RANCH,
+      ROSEMARY_LEMON_PEPPER,
+    ],
   },
 ];
