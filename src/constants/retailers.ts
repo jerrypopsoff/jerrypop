@@ -57,12 +57,6 @@ export const RETAILERS: Retailer[] = [
     ],
   },
   // {
-  //   address: '179 West Portal Avenue',
-  //   href: 'https://sherwoodsf.com/',
-  //   name: 'The Sherwood SF',
-  //   products: [HABANERO_RANCH],
-  // },
-  // {
   //   address: '1400 Guerrero Street',
   //   href: 'https://www.instagram.com/26thandguerreromarket/',
   //   name: '26th & Guerrero Market',
@@ -149,5 +143,11 @@ export const RETAILERS: Retailer[] = [
       HABANERO_RANCH,
       ROSEMARY_LEMON_PEPPER,
     ],
+  },
+  {
+    address: '179 West Portal Avenue',
+    href: 'https://sherwoodsf.com/',
+    name: 'The Sherwood SF',
+    products: [MALA_LIME, ROSEMARY_LEMON_PEPPER],
   },
 ];
