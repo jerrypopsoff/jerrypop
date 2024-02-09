@@ -74,18 +74,18 @@ export const RETAILERS: Retailer[] = [
   //   name: 'Olfactory Brewing',
   //   products: [HABANERO_RANCH, SICHUAN_NOOCH],
   // },
-  {
-    address: '2801 22nd Street',
-    href: 'https://www.geminibottlesf.com/',
-    name: 'Gemini Bottle Co.',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      FURIKAKE_DASHI,
-      HABANERO_RANCH,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
+  // {
+  //   address: '2801 22nd Street',
+  //   href: 'https://www.geminibottlesf.com/',
+  //   name: 'Gemini Bottle Co.',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     FURIKAKE_DASHI,
+  //     HABANERO_RANCH,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
   // {
   //   address: '3500 22nd Street',
   //   href: 'https://www.doloresdeluxe.com/',
@@ -104,35 +104,29 @@ export const RETAILERS: Retailer[] = [
   //   name: 'Le Marché Cezanne',
   //   products: [FURIKAKE_DASHI, HABANERO_RANCH],
   // },
-  {
-    address: '300 Valencia Street',
-    href: 'https://www.healthyspirits.com/',
-    name: 'Healthy Spirits',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      FURIKAKE_DASHI,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
-  {
-    address: '2545 24th Street',
-    href: 'https://www.juniorbarsf.com/',
-    name: 'Junior',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      FURIKAKE_DASHI,
-      HABANERO_RANCH,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
-  {
-    address: '1168 Leavenworth Street',
-    href: 'https://tahonamercado.com/',
-    name: 'Tahona Mercado',
-    products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
-  },
+  // {
+  //   address: '300 Valencia Street',
+  //   href: 'https://www.healthyspirits.com/',
+  //   name: 'Healthy Spirits',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     FURIKAKE_DASHI,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
+  // {
+  //   address: '2545 24th Street',
+  //   href: 'https://www.juniorbarsf.com/',
+  //   name: 'Junior',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     FURIKAKE_DASHI,
+  //     HABANERO_RANCH,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
   {
     address: '488 Hayes Street',
     href: 'https://www.brasstackssf.com/',
@@ -143,6 +137,18 @@ export const RETAILERS: Retailer[] = [
       HABANERO_RANCH,
       ROSEMARY_LEMON_PEPPER,
     ],
+  },
+  {
+    address: '482 Hayes Street',
+    href: 'https://www.aninasf.com/',
+    name: 'Anina',
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
+  },
+  {
+    address: '1168 Leavenworth Street',
+    href: 'https://tahonamercado.com/',
+    name: 'Tahona Mercado',
+    products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
   },
   {
     address: '179 West Portal Avenue',
