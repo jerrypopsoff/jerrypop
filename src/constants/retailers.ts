@@ -144,16 +144,28 @@ export const RETAILERS: Retailer[] = [
     name: 'Anina',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
   },
-  {
-    address: '1168 Leavenworth Street',
-    href: 'https://tahonamercado.com/',
-    name: 'Tahona Mercado',
-    products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
-  },
+  // {
+  //   address: '1168 Leavenworth Street',
+  //   href: 'https://tahonamercado.com/',
+  //   name: 'Tahona Mercado',
+  //   products: [GOAT_CHEESE_CHIVE, ROSEMARY_LEMON_PEPPER],
+  // },
   {
     address: '179 West Portal Avenue',
     href: 'https://sherwoodsf.com/',
     name: 'The Sherwood SF',
     products: [MALA_LIME, ROSEMARY_LEMON_PEPPER],
+  },
+  {
+    address: '550 Divisadero Street',
+    href: 'https://biritemarket.com/',
+    name: 'Bi-Rite Market',
+    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
+  },
+  {
+    address: '3639 18th Street',
+    href: 'https://biritemarket.com/',
+    name: 'Bi-Rite Market',
+    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
   },
 ];
