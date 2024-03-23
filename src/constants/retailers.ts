@@ -94,7 +94,12 @@ export const RETAILERS: Retailer[] = [
     address: '179 West Portal Avenue',
     href: 'https://sherwoodsf.com/',
     name: 'The Sherwood SF',
-    products: [FURIKAKE_DASHI, GOAT_CHEESE_CHIVE],
+    products: [
+      GOAT_CHEESE_CHIVE,
+      FURIKAKE_DASHI,
+      HABANERO_RANCH,
+      ROSEMARY_LEMON_PEPPER,
+    ],
   },
   {
     address: '550 Divisadero Street',
