@@ -119,23 +119,29 @@ export const RETAILERS: Retailer[] = [
     name: 'Tahona Mercado',
     products: [GOAT_CHEESE_CHIVE, MALA_LIME],
   },
+  {
+    address: '2801 22nd Street',
+    href: 'https://www.geminibottlesf.com/',
+    name: 'Gemini Bottle Co.',
+    products: [
+      GOAT_CHEESE_CHIVE,
+      FURIKAKE_DASHI,
+      HABANERO_RANCH,
+      MALA_LIME,
+      ROSEMARY_LEMON_PEPPER,
+    ],
+  },
+  {
+    address: '1542 Broadway (Oakland)',
+    href: 'https://feelmoresocial.com/',
+    name: 'Feelmore Social Club',
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, MALA_LIME],
+  },
   // {
   //   address: '2245 3rd Street',
   //   href: 'https://www.olfactorybrewing.com/',
   //   name: 'Olfactory Brewing',
   //   products: [HABANERO_RANCH, SICHUAN_NOOCH],
-  // },
-  // {
-  //   address: '2801 22nd Street',
-  //   href: 'https://www.geminibottlesf.com/',
-  //   name: 'Gemini Bottle Co.',
-  //   products: [
-  //     GOAT_CHEESE_CHIVE,
-  //     FURIKAKE_DASHI,
-  //     HABANERO_RANCH,
-  //     MALA_LIME,
-  //     ROSEMARY_LEMON_PEPPER,
-  //   ],
   // },
   // {
   //   address: '3500 22nd Street',
