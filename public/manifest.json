@@ -34,11 +34,6 @@
       "url": "/products"
     },
     {
-      "name": "Order · Jerrypop",
-      "short_name": "Order",
-      "url": "/order"
-    },
-    {
       "name": "About · Jerrypop",
       "short_name": "About",
       "url": "/about"
