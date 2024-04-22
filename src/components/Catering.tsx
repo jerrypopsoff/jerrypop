@@ -3,12 +3,12 @@ import { CATERING_PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
-import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
-import GlamorousChipotleCheddar1200 from '../images/glamorous-chipotle-cheddar-1200.jpg';
-import GlamorousChipotleCheddar2400 from '../images/glamorous-chipotle-cheddar-2400.jpg';
-import GlamorousChipotleCheddarWebp600 from '../images/glamorous-chipotle-cheddar-600.webp';
-import GlamorousChipotleCheddarWebp1200 from '../images/glamorous-chipotle-cheddar-1200.webp';
-import GlamorousChipotleCheddarWebp2400 from '../images/glamorous-chipotle-cheddar-2400.webp';
+import ChocolateHazelnutEspresso600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
+import ChocolateHazelnutEspresso1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.jpeg';
+import ChocolateHazelnutEspresso2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.jpeg';
+import ChocolateHazelnutEspressoWebp600 from '../images/glamorous-chocolate-hazelnut-espresso-600.webp';
+import ChocolateHazelnutEspressoWebp1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.webp';
+import ChocolateHazelnutEspressoWebp2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import PricingListItem from './PricingListItem';
 import { Link } from 'react-router-dom';
@@ -67,11 +67,11 @@ const Catering: React.FC = () => {
         <title>Catering · Jerrypop</title>
       </Helmet>
       <GlamorPhotograph
-        alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
-        aspectRatio={2080 / 1170}
-        fallbackSrc={GlamorousChipotleCheddar2400}
-        fallbackSrcSet={`${GlamorousChipotleCheddar600} 600w, ${GlamorousChipotleCheddar1200} 1200w, ${GlamorousChipotleCheddar2400} 2400w`}
-        srcSet={`${GlamorousChipotleCheddarWebp600} 600w, ${GlamorousChipotleCheddarWebp1200} 1200w, ${GlamorousChipotleCheddarWebp2400} 2400w`}
+        alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
+        aspectRatio={2400 / 1350}
+        fallbackSrc={ChocolateHazelnutEspresso2400}
+        fallbackSrcSet={`${ChocolateHazelnutEspresso600} 600w, ${ChocolateHazelnutEspresso1200} 1200w, ${ChocolateHazelnutEspresso2400} 2400w`}
+        srcSet={`${ChocolateHazelnutEspressoWebp600} 600w, ${ChocolateHazelnutEspressoWebp1200} 1200w, ${ChocolateHazelnutEspressoWebp2400} 2400w`}
       />
       <Typography type="h1">Catering</Typography>
       <StyledOrderDescription type="p">
