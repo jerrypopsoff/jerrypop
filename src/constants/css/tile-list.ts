@@ -97,10 +97,13 @@ export const TILE_INFORMATION_STYLE = css<{ $imageWidthPx: number }>`
   }
 `;
 
-export const TILE_LIST_DIVIDER_STYLE = css<{ $imageWidthPx: number }>`
+export const TILE_LIST_DIVIDER_STYLE = css<{
+  $imageWidthPx: number;
+  $margin?: string;
+}>`
   background-color: var(--color-foreground);
   height: 1px;
-  margin-bottom: ${TILE_VERTICAL_MARGIN_PX}px;
+  margin: ${({ $margin }) => $margin};
   width: ${({ $imageWidthPx }) =>
     2 * $imageWidthPx + TILE_HORIZONTAL_MARGIN_PX}px;
 
