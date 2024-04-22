@@ -11,10 +11,7 @@ describe('home page tests', () => {
   });
 
   it('displays informational text', () => {
-    cy.get('#root').should(
-      'include.text',
-      'Locally crafted San Francisco popcorn.',
-    );
+    cy.get('#root').should('include.text', 'How to buy');
   });
 
   it('toggles the website theme on logo click', () => {

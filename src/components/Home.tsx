@@ -101,10 +101,7 @@ const Home: React.FC = () => {
           <Typography type="p">Purchase at the following locations:</Typography>
           <StyledRetailerList>
             {RETAILERS.map((retailer) => (
-              <RetailerListItem
-                key={retailer.address}
-                retailer={retailer}
-              ></RetailerListItem>
+              <RetailerListItem key={retailer.address} retailer={retailer} />
             ))}
           </StyledRetailerList>
           <Typography type="p">
