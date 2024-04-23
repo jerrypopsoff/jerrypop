@@ -6,7 +6,7 @@ describe('navigation menu tests', () => {
   it('always presents a link to the current page', () => {
     NAVIGATION_MENU_ITEMS.filter((item) => !item.isExternal).forEach((item) => {
       cy.visit(item.to);
-      cy.get('nav a').should('have.length', 14);
+      cy.get('nav a').should('have.length', 12);
       cy.get(`a[href="${item.to}"]`).should('exist');
     });
   });
@@ -20,9 +20,6 @@ describe('navigation menu tests', () => {
 
     clickNavigationLink(RoutePath.Products);
     cy.url().should('include', RoutePath.Products);
-
-    clickNavigationLink(RoutePath.Order);
-    cy.url().should('include', RoutePath.Order);
 
     clickNavigationLink(RoutePath.About);
     cy.url().should('include', RoutePath.About);

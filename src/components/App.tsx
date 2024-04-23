@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
 import NotFound from './NotFound';
-import Order from './Order';
 import React from 'react';
 import Recipes from './Recipes';
 import ScrollToTop from './ScrollToTop';
@@ -37,7 +36,6 @@ const App: React.FC = () => {
              */}
             <Route element={<Home />} path="/" />
             <Route element={<Products />} path="/products" />
-            <Route element={<Order />} path="/order" />
             <Route element={<Recipes />} path="/recipes" />
             <Route element={<About />} path="/about" />
             <Route element={<Merch />} path="/merch" />
