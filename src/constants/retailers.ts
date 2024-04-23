@@ -19,28 +19,28 @@ export const RETAILERS: Retailer[] = [
   //   name: 'Harlan Records',
   //   products: [],
   // },
-  {
-    address: 'Cole Valley Market · 960 Cole Street',
-    href: 'https://lukeslocal.com/',
-    name: 'Lukeʼs Local',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
-  {
-    address: 'Cow Hollow Market · 2190 Union Street',
-    href: 'https://lukeslocal.com/',
-    name: 'Lukeʼs Local',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
+  // {
+  //   address: 'Cole Valley Market · 960 Cole Street',
+  //   href: 'https://lukeslocal.com/',
+  //   name: 'Lukeʼs Local',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     HABANERO_RANCH,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
+  // {
+  //   address: 'Cow Hollow Market · 2190 Union Street',
+  //   href: 'https://lukeslocal.com/',
+  //   name: 'Lukeʼs Local',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     HABANERO_RANCH,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
   {
     address: 'North Beach Market · 580 Green Street',
     href: 'https://lukeslocal.com/',
@@ -76,12 +76,12 @@ export const RETAILERS: Retailer[] = [
     name: 'Junior',
     products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
   },
-  {
-    address: '179 West Portal Avenue',
-    href: 'https://sherwoodsf.com/',
-    name: 'The Sherwood SF',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
-  },
+  // {
+  //   address: '179 West Portal Avenue',
+  //   href: 'https://sherwoodsf.com/',
+  //   name: 'The Sherwood SF',
+  //   products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
+  // },
   {
     address: '550 Divisadero Street',
     href: 'https://biritemarket.com/',
