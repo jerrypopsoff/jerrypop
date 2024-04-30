@@ -19,17 +19,17 @@ export const RETAILERS: Retailer[] = [
   //   name: 'Harlan Records',
   //   products: [],
   // },
-  // {
-  //   address: 'Cole Valley Market · 960 Cole Street',
-  //   href: 'https://lukeslocal.com/',
-  //   name: 'Lukeʼs Local',
-  //   products: [
-  //     GOAT_CHEESE_CHIVE,
-  //     HABANERO_RANCH,
-  //     MALA_LIME,
-  //     ROSEMARY_LEMON_PEPPER,
-  //   ],
-  // },
+  {
+    address: 'Cole Valley Market · 960 Cole Street',
+    href: 'https://lukeslocal.com/',
+    name: 'Lukeʼs Local',
+    products: [
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      MALA_LIME,
+      ROSEMARY_LEMON_PEPPER,
+    ],
+  },
   // {
   //   address: 'Cow Hollow Market · 2190 Union Street',
   //   href: 'https://lukeslocal.com/',
@@ -68,7 +68,12 @@ export const RETAILERS: Retailer[] = [
     address: '482 Hayes Street',
     href: 'https://www.aninasf.com/',
     name: 'Anina',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
+    products: [
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      MALA_LIME,
+      ROSEMARY_LEMON_PEPPER,
+    ],
   },
   {
     address: '2545 24th Street',
