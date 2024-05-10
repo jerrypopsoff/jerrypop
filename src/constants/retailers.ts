@@ -30,17 +30,17 @@ export const RETAILERS: Retailer[] = [
       ROSEMARY_LEMON_PEPPER,
     ],
   },
-  // {
-  //   address: 'Cow Hollow Market · 2190 Union Street',
-  //   href: 'https://lukeslocal.com/',
-  //   name: 'Lukeʼs Local',
-  //   products: [
-  //     GOAT_CHEESE_CHIVE,
-  //     HABANERO_RANCH,
-  //     MALA_LIME,
-  //     ROSEMARY_LEMON_PEPPER,
-  //   ],
-  // },
+  {
+    address: 'Cow Hollow Market · 2190 Union Street',
+    href: 'https://lukeslocal.com/',
+    name: 'Lukeʼs Local',
+    products: [
+      GOAT_CHEESE_CHIVE,
+      HABANERO_RANCH,
+      MALA_LIME,
+      ROSEMARY_LEMON_PEPPER,
+    ],
+  },
   {
     address: 'North Beach Market · 580 Green Street',
     href: 'https://lukeslocal.com/',
@@ -99,12 +99,12 @@ export const RETAILERS: Retailer[] = [
     name: 'Bi-Rite Market',
     products: [GOAT_CHEESE_CHIVE],
   },
-  {
-    address: '1168 Leavenworth Street',
-    href: 'https://tahonamercado.com/',
-    name: 'Tahona Mercado',
-    products: [GOAT_CHEESE_CHIVE, MALA_LIME],
-  },
+  // {
+  //   address: '1168 Leavenworth Street',
+  //   href: 'https://tahonamercado.com/',
+  //   name: 'Tahona Mercado',
+  //   products: [GOAT_CHEESE_CHIVE, MALA_LIME],
+  // },
   {
     address: '2801 22nd Street',
     href: 'https://www.geminibottlesf.com/',
@@ -120,7 +120,7 @@ export const RETAILERS: Retailer[] = [
     address: '1542 Broadway (Oakland)',
     href: 'https://feelmoresocial.com/',
     name: 'Feelmore Social Club',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, MALA_LIME],
+    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
   },
   // {
   //   address: '2245 3rd Street',
