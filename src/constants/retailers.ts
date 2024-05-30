@@ -87,35 +87,35 @@ export const RETAILERS: Retailer[] = [
   //   name: 'The Sherwood SF',
   //   products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
   // },
-  {
-    address: '550 Divisadero Street',
-    href: 'https://biritemarket.com/',
-    name: 'Bi-Rite Market',
-    products: [GOAT_CHEESE_CHIVE],
-  },
-  {
-    address: '3639 18th Street',
-    href: 'https://biritemarket.com/',
-    name: 'Bi-Rite Market',
-    products: [GOAT_CHEESE_CHIVE],
-  },
+  // {
+  //   address: '550 Divisadero Street',
+  //   href: 'https://biritemarket.com/',
+  //   name: 'Bi-Rite Market',
+  //   products: [GOAT_CHEESE_CHIVE],
+  // },
+  // {
+  //   address: '3639 18th Street',
+  //   href: 'https://biritemarket.com/',
+  //   name: 'Bi-Rite Market',
+  //   products: [GOAT_CHEESE_CHIVE],
+  // },
   // {
   //   address: '1168 Leavenworth Street',
   //   href: 'https://tahonamercado.com/',
   //   name: 'Tahona Mercado',
   //   products: [GOAT_CHEESE_CHIVE, MALA_LIME],
   // },
-  {
-    address: '2801 22nd Street',
-    href: 'https://www.geminibottlesf.com/',
-    name: 'Gemini Bottle Co.',
-    products: [
-      GOAT_CHEESE_CHIVE,
-      HABANERO_RANCH,
-      MALA_LIME,
-      ROSEMARY_LEMON_PEPPER,
-    ],
-  },
+  // {
+  //   address: '2801 22nd Street',
+  //   href: 'https://www.geminibottlesf.com/',
+  //   name: 'Gemini Bottle Co.',
+  //   products: [
+  //     GOAT_CHEESE_CHIVE,
+  //     HABANERO_RANCH,
+  //     MALA_LIME,
+  //     ROSEMARY_LEMON_PEPPER,
+  //   ],
+  // },
   {
     address: '1542 Broadway (Oakland)',
     href: 'https://feelmoresocial.com/',
