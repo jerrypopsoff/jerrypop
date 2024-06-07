@@ -116,12 +116,12 @@ export const RETAILERS: Retailer[] = [
   //     ROSEMARY_LEMON_PEPPER,
   //   ],
   // },
-  {
-    address: '1542 Broadway (Oakland)',
-    href: 'https://feelmoresocial.com/',
-    name: 'Feelmore Social Club',
-    products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
-  },
+  // {
+  //   address: '1542 Broadway (Oakland)',
+  //   href: 'https://feelmoresocial.com/',
+  //   name: 'Feelmore Social Club',
+  //   products: [GOAT_CHEESE_CHIVE, HABANERO_RANCH, ROSEMARY_LEMON_PEPPER],
+  // },
   // {
   //   address: '2245 3rd Street',
   //   href: 'https://www.olfactorybrewing.com/',
