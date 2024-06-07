@@ -18,11 +18,11 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '2 tsp',
-        name: 'Pure ground jalapeño pepper',
+        name: 'Ground jalapeño pepper',
       },
       {
         amount: '0.25 tsp',
-        name: 'Lime juice powder',
+        name: 'Crystallized lime',
       },
       {
         amount: '0.5 tbsp',
@@ -56,7 +56,7 @@ export const RECIPES: Recipe[] = [
         aside:
           'Add cheddar powder through a fine mesh sieve for optimal flavor dispersion.',
         content:
-          'Thoroughly mix cheddar powder, jalapeño pepper, lime juice powder, garlic powder, onion powder, and black pepper into oil',
+          'Thoroughly mix cheddar powder, jalapeño pepper, crystallized lime, garlic powder, onion powder, and black pepper into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
@@ -268,16 +268,8 @@ export const RECIPES: Recipe[] = [
         name: 'Hondashi',
       },
       {
-        amount: '1 tbsp',
-        name: 'Onion powder',
-      },
-      {
         amount: '2 tsp',
         name: 'Shichimi togarashi',
-      },
-      {
-        amount: '2 tsp',
-        name: 'Monosodium glutamate (MSG)',
       },
       {
         amount: '1-2 tbsp',
@@ -297,7 +289,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         content:
-          'Thoroughly mix Hondashi, onion powder, shichimi togarashi, MSG, and 1.5 tbsp of the nori furikake into oil',
+          'Thoroughly mix Hondashi, shichimi togarashi, and 1.5 tbsp of the nori furikake into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
@@ -438,7 +430,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 tsp (optional)',
-        name: 'Lime juice powder',
+        name: 'Crystallized lime',
       },
       {
         amount: 'To taste (optional)',
@@ -458,7 +450,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         content:
-          'Thoroughly mix nutritional yeast, garlic powder, onion powder, chipotle pepper powder, cumin, chili powder, cayenne pepper, and lime juice powder into oil',
+          'Thoroughly mix nutritional yeast, garlic powder, onion powder, chipotle pepper powder, cumin, chili powder, cayenne pepper, and crystallized lime into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
@@ -505,11 +497,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         amount: '0.5 tsp',
-        name: 'Lime juice powder',
-      },
-      {
-        amount: '1 tsp',
-        name: 'Monosodium glutamate (MSG)',
+        name: 'Crystallized lime',
       },
       {
         amount: '1 tsp',
@@ -540,7 +528,7 @@ export const RECIPES: Recipe[] = [
       },
       {
         content:
-          'Thoroughly mix tamarind powder, garlic powder, onion powder, 1 tbsp of ground peanuts, lime juice powder, MSG, sugar, and cayenne pepper into oil',
+          'Thoroughly mix tamarind powder, garlic powder, onion powder, 1 tbsp of ground peanuts, crystallized lime, sugar, and cayenne pepper into oil',
       },
       {
         content: 'Drizzle oil mixture onto the popcorn',
