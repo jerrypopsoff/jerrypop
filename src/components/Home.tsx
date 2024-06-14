@@ -13,12 +13,6 @@ import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import PressArticles from './PressArticles';
 import { TILE_LIST_DIVIDER_STYLE } from '../constants/css/tile-list';
 import { BUTTON_STYLE } from '../constants/css/button';
-import FormDialog from './FormDialog';
-import {
-  RETAIL_ORDER_FORM_SRC,
-  RETAIL_ORDER_FORM_TITLE,
-} from '../constants/form';
-import { useDialogState } from '../hooks/use-form-dialog';
 import { Link } from 'react-router-dom';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
@@ -49,12 +43,6 @@ const StyledDivider = styled.div`
 `;
 
 const Home: React.FC = () => {
-  const {
-    closeDialog: closeRetailFormDialog,
-    isFormVisible: isRetailFormVisible,
-    openDialog: openRetailFormDialog,
-  } = useDialogState();
-
   return (
     <>
       <Helmet>
@@ -111,13 +99,6 @@ const Home: React.FC = () => {
         <Typography type="h1">Press</Typography>
         <PressArticles />
       </StyledHome>
-      {isRetailFormVisible && (
-        <FormDialog
-          onCloseFormDialog={closeRetailFormDialog}
-          src={RETAIL_ORDER_FORM_SRC}
-          title={RETAIL_ORDER_FORM_TITLE}
-        />
-      )}
     </>
   );
 };
