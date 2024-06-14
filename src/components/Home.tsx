@@ -13,8 +13,6 @@ import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import PressArticles from './PressArticles';
 import { TILE_LIST_DIVIDER_STYLE } from '../constants/css/tile-list';
 import { BUTTON_STYLE } from '../constants/css/button';
-import { RETAILERS } from '../constants/retailers';
-import RetailerListItem from './RetailerListItem';
 import FormDialog from './FormDialog';
 import {
   RETAIL_ORDER_FORM_SRC,
@@ -32,19 +30,6 @@ const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-`;
-
-const StyledRetailerList = styled.ul`
-  display: flex;
-  flex-flow: wrap;
-  list-style: none;
-  margin: -12px 0;
-  padding: 0;
-  width: 100%;
-`;
-
-const StyledButton = styled.button`
-  ${BUTTON_STYLE}
 `;
 
 const StyledSection = styled.section`
@@ -83,13 +68,10 @@ const Home: React.FC = () => {
           fallbackSrcSet={`${HabaneroRanch600} 600w, ${HabaneroRanch1200} 1200w, ${HabaneroRanch2400} 2400w`}
           srcSet={`${HabaneroRanchWebp600} 600w, ${HabaneroRanchWebp1200} 1200w, ${HabaneroRanchWebp2400} 2400w`}
         />
-        <Typography type="h1">How to buy</Typography>
-        <Typography type="p">
-          There are three ways to purchase locally crafted, responsibly packaged
-          San Francisco popcorn.
-        </Typography>
         <StyledSection>
-          <Typography type="h2">Catering</Typography>
+          <Typography margin="12px" type="h1">
+            Catering
+          </Typography>
           <Typography type="p">
             Place a wholesale pickup order to make your space or event
             unforgettable.
@@ -97,22 +79,9 @@ const Home: React.FC = () => {
           <StyledLink to="/catering">Order catering</StyledLink>
         </StyledSection>
         <StyledSection>
-          <Typography type="h2">Retail</Typography>
-          <Typography type="p">Purchase at the following locations:</Typography>
-          <StyledRetailerList>
-            {RETAILERS.map((retailer) => (
-              <RetailerListItem key={retailer.address} retailer={retailer} />
-            ))}
-          </StyledRetailerList>
-          <Typography type="p">
-            Want to carry locally crafted popcorn at your business?
+          <Typography margin="12px" type="h1">
+            Pop-ups
           </Typography>
-          <StyledButton onClick={openRetailFormDialog}>
-            Order retail
-          </StyledButton>
-        </StyledSection>
-        <StyledSection>
-          <Typography type="h2">Pop-ups</Typography>
           <Typography type="p">
             Catch my next pop-up or{' '}
             <a
