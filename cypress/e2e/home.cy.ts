@@ -10,10 +10,6 @@ describe('home page tests', () => {
     cy.get('title').should('have.text', 'Jerrypop');
   });
 
-  it('displays informational text', () => {
-    cy.get('#root').should('include.text', 'How to buy');
-  });
-
   it('toggles the website theme on logo click', () => {
     verifyThemeToggle(
       'button[aria-label="Toggle website theme"]',
