@@ -21,14 +21,14 @@ import { isDarkMode } from '../utilities/dark-mode';
 const MENU_ITEM_HEIGHT_PX = 60;
 
 interface Slideable {
-  isOpen: boolean;
-  slideDistancePx: number;
+  $isOpen: boolean;
+  $slideDistancePx: number;
 }
 
 const SLIDE_STYLE = css<Slideable>`
   transition: transform 0.3s ease-in-out;
-  transform: ${({ isOpen, slideDistancePx }) =>
-    `translateY(${isOpen ? `${slideDistancePx}px` : '0'})`};
+  transform: ${({ $isOpen, $slideDistancePx }) =>
+    `translateY(${$isOpen ? `${$slideDistancePx}px` : '0'})`};
 `;
 
 const StyledNavigationBar = styled.nav`
@@ -116,7 +116,7 @@ const StyledMenuItems = styled.ul<Slideable>`
     left: 0;
     position: absolute;
     right: 0;
-    top: -${({ slideDistancePx }) => slideDistancePx}px;
+    top: -${({ $slideDistancePx }) => $slideDistancePx}px;
     z-index: ${NAVIGATION_MENU_Z_INDEX};
   }
 `;
@@ -148,8 +148,8 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
   return (
     <StyledNavigationBar>
       <StyledNavigationBarContent
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
+        $isOpen={isOpen}
+        $slideDistancePx={navigationMenuItemsHeightPx}
       >
         <StyledNavigationBarContentInner>
           <StyledHamburgerButton
@@ -170,8 +170,8 @@ const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
       </StyledNavigationBarContent>
       <StyledMenuItems
         aria-hidden={isOpen ? undefined : 'true'}
-        isOpen={isOpen}
-        slideDistancePx={navigationMenuItemsHeightPx}
+        $isOpen={isOpen}
+        $slideDistancePx={navigationMenuItemsHeightPx}
       >
         <li>
           <StyledCloseButton

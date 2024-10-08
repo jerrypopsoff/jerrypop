@@ -5,8 +5,9 @@ import {
 } from '../constants/css/shadow';
 import React from 'react';
 
-const headingStyle = css<{ hasTextShadow?: boolean }>`
-  ${({ hasTextShadow }) => (hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined)}
+const headingStyle = css<{ $hasTextShadow?: boolean }>`
+  ${({ $hasTextShadow }) =>
+    $hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined}
 `;
 
 const withDynamicStyles = css<{
@@ -30,36 +31,42 @@ interface Props {
   type: TypeographyType;
 }
 
-type StyledTypography = Omit<Props, 'type'>;
+interface StyledTypographyHTMLElementProps {
+  children: React.ReactNode;
+  $hasTextShadow?: boolean;
+  margin?: string;
+  maxWidth?: string;
+  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
+}
 
-const StyledH1 = styled.h1<StyledTypography>`
+const StyledH1 = styled.h1<StyledTypographyHTMLElementProps>`
   ${headingStyle}
   ${withDynamicStyles}
   font-size: 28px;
 `;
 
-const StyledH2 = styled.h2<StyledTypography>`
+const StyledH2 = styled.h2<StyledTypographyHTMLElementProps>`
   ${headingStyle}
   ${withDynamicStyles}
   font-size: 24px;
 `;
 
-const StyledH3 = styled.h3<StyledTypography>`
+const StyledH3 = styled.h3<StyledTypographyHTMLElementProps>`
   ${headingStyle}
   ${withDynamicStyles}
   font-size: 18px;
 `;
 
-const StyledH4 = styled.h4<StyledTypography>`
+const StyledH4 = styled.h4<StyledTypographyHTMLElementProps>`
   ${headingStyle}
   ${withDynamicStyles}
   font-size: 14px;
 `;
 
-const StyledP = styled.p<StyledTypography>`
+const StyledP = styled.p<StyledTypographyHTMLElementProps>`
   ${withDynamicStyles}
-  ${({ hasTextShadow }) =>
-    hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
+  ${({ $hasTextShadow }) =>
+    $hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
   line-height: 1.5;
   font-size: 15px;
   font-weight: 400;
@@ -75,7 +82,7 @@ const Typography: React.FC<Props> = ({
     case 'h1':
       return (
         <StyledH1
-          hasTextShadow={hasTextShadow}
+          $hasTextShadow={hasTextShadow}
           margin={margin ?? '48px 12px 12px'}
           {...props}
         />
@@ -83,7 +90,7 @@ const Typography: React.FC<Props> = ({
     case 'h2':
       return (
         <StyledH2
-          hasTextShadow={hasTextShadow}
+          $hasTextShadow={hasTextShadow}
           margin={margin ?? '36px 12px 12px'}
           {...props}
         />
@@ -91,7 +98,7 @@ const Typography: React.FC<Props> = ({
     case 'h3':
       return (
         <StyledH3
-          hasTextShadow={hasTextShadow}
+          $hasTextShadow={hasTextShadow}
           margin={margin ?? '24px 12px 12px'}
           {...props}
         />
@@ -99,7 +106,7 @@ const Typography: React.FC<Props> = ({
     case 'h4':
       return (
         <StyledH4
-          hasTextShadow={hasTextShadow}
+          $hasTextShadow={hasTextShadow}
           margin={margin ?? '18px 12px 12px'}
           {...props}
         />
@@ -108,7 +115,7 @@ const Typography: React.FC<Props> = ({
     default:
       return (
         <StyledP
-          hasTextShadow={hasTextShadow}
+          $hasTextShadow={hasTextShadow}
           margin={margin ?? '12px'}
           {...props}
         />

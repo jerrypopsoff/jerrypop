@@ -15,19 +15,25 @@ import {
   PRODUCT_IMAGE_WIDTH_PX,
 } from '../constants/product';
 
-const StyledTileListItem = styled.li`
+const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
   ${TILE_LIST_ITEM_STYLE}
 `;
 
-const StyledTileImageContainer = styled.div`
+const StyledTileImageContainer = styled.div<{
+  $aspectRatio: number;
+  $imageWidthPx: number;
+}>`
   ${TILE_IMAGE_CONTAINER_STYLE}
 `;
 
-const StyledTileImage = styled(OptimizedImage)`
+const StyledTileImage = styled(OptimizedImage)<{
+  $aspectRatio: number;
+  $imageWidthPx: number;
+}>`
   ${TILE_IMAGE_STYLE}
 `;
 
-const StyledTileInformation = styled.div`
+const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
   ${TILE_INFORMATION_STYLE}
 `;
 

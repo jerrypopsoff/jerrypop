@@ -9,9 +9,7 @@ import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
 import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
 import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
 import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
-import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import PressArticles from './PressArticles';
-import { TILE_LIST_DIVIDER_STYLE } from '../constants/css/tile-list';
 import { BUTTON_STYLE } from '../constants/css/button';
 import { Link } from 'react-router-dom';
 
@@ -36,10 +34,6 @@ const StyledSection = styled.section`
 
 const StyledLink = styled(Link)`
   ${BUTTON_STYLE}
-`;
-
-const StyledDivider = styled.div`
-  ${TILE_LIST_DIVIDER_STYLE}
 `;
 
 const Home: React.FC = () => {
@@ -91,11 +85,6 @@ const Home: React.FC = () => {
             See announcements
           </StyledLink>
         </StyledSection>
-        <StyledDivider
-          aria-hidden={true}
-          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
-          $margin="24px 0"
-        />
         <Typography type="h1">Press</Typography>
         <PressArticles />
       </StyledHome>

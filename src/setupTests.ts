@@ -5,7 +5,7 @@
  *
  * @example expect(element).toHaveTextContent(/react/i);
  */
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 
 /**
  * Mock `window.scrollTo` globally to avoid console errors for invoking
