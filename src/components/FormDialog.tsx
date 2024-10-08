@@ -12,8 +12,8 @@ const HORIZONTAL_MARGIN_PX = 12; // Horizontal margin of entire dialog
 const MINIMUM_DIALOG_HEIGHT = 150;
 
 interface StyledDialogProps {
-  dialogHeight: number;
-  dialogWidth: number;
+  $dialogHeight: number;
+  $dialogWidth: number;
 }
 
 const StyledDialog = styled.dialog<StyledDialogProps>`
@@ -23,11 +23,11 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: ${({ dialogHeight }) => dialogHeight}px;
+  height: ${({ $dialogHeight }) => $dialogHeight}px;
   padding: 0;
   position: fixed;
   top: ${VERTICAL_MARGIN_PX}px;
-  width: ${({ dialogWidth }) => dialogWidth}px;
+  width: ${({ $dialogWidth }) => $dialogWidth}px;
   z-index: ${DIALOG_Z_INDEX};
 `;
 
@@ -99,8 +99,8 @@ const FormDialog: React.FC<Props> = ({ onCloseFormDialog, src, title }) => {
   return (
     <>
       <StyledDialog
-        dialogHeight={dialogHeight}
-        dialogWidth={dialogWidth}
+        $dialogHeight={dialogHeight}
+        $dialogWidth={dialogWidth}
         open={true}
       >
         <StyledDialogHeader>
@@ -110,8 +110,6 @@ const FormDialog: React.FC<Props> = ({ onCloseFormDialog, src, title }) => {
         </StyledDialogHeader>
         <StyledIframe
           height={formHeight}
-          marginHeight={0}
-          marginWidth={0}
           src={src}
           title={title}
           width={dialogWidth}
