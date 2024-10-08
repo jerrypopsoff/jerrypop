@@ -1,23 +1,13 @@
 import App from './App';
 import { render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 
-/**
- * Note: state needs to be manually reset at the end of tests because these are
- * application integration tests.
- */
+test('heading is rendered appropriately', () => {
+  const { getByRole } = render(<App />);
 
-const getDocumentStyle = () => {
-  return document.documentElement.getAttribute('style');
-};
+  const heading = getByRole('heading');
 
-describe('theme', () => {
-  test('logo selection can rotate theme', async () => {
-    const { getByAltText } = render(<App />);
-
-    const originalDocumentStyle = getDocumentStyle();
-    await userEvent.click(getByAltText('Jerrypop logo'));
-
-    expect(getDocumentStyle()).not.toEqual(originalDocumentStyle);
-  });
+  expect(heading).toHaveTextContent('React Playground');
 });
+
+// await userEvent.click(getByAltText('Jerrypop logo'));
