@@ -96,19 +96,3 @@ export const TILE_INFORMATION_STYLE = css<{ $imageWidthPx: number }>`
     margin: 24px auto 0;
   }
 `;
-
-export const TILE_LIST_DIVIDER_STYLE = css<{
-  $imageWidthPx: number;
-  $margin?: string;
-}>`
-  background-color: var(--color-foreground);
-  height: 1px;
-  margin: ${({ $margin }) => $margin};
-  width: ${({ $imageWidthPx }) =>
-    2 * $imageWidthPx + TILE_HORIZONTAL_MARGIN_PX}px;
-
-  @media (max-width: ${getTileListBreakpointWidth}px) {
-    max-width: ${({ $imageWidthPx }) => $imageWidthPx}px;
-    width: calc(100% - ${2 * TILE_HORIZONTAL_MARGIN_PX}px);
-  }
-`;
