@@ -86,7 +86,7 @@ const Catering: React.FC = () => {
           Minimum order
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          10 bags per flavor.
+          15 bags per flavor.
         </StyledLogisticsDescriptionDetails>
         <StyledLogisticsDescriptionTerm>
           Pickup location
