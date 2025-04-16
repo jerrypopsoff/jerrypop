@@ -3,14 +3,22 @@
 CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 # Set variable for terminal output.
 TERM = "xterm"
-[[plugins]]
-  # Execute Cypress end-to-end tests against the deployed URL.
-  package = "netlify-plugin-cypress"
-    [plugins.inputs]
-    record = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "frame-ancestors 'self'"
+    X-Content-Type-Options = "nosniff"
+
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[plugins]]
+  # Execute Cypress end-to-end tests against the deployed URL.
+  package = "netlify-plugin-cypress"
+    [plugins.inputs]
+    record = true
