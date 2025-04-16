@@ -85,7 +85,7 @@ importers:
         specifier: ^13.15.0
         version: 13.15.0
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-react-app:
         specifier: ^7.0.1
@@ -2102,8 +2102,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001667:
-    resolution: {integrity: sha512-7LTwJjcRkzKFmtqGsibMeuXmvFDfZq/nzIjnmgCGzKKRVzjD72selLDK1oPF/Oxzmt4fNcPvTDvGqSDG4tCALw==}
+  caniuse-lite@1.0.30001714:
+    resolution: {integrity: sha512-mtgapdwDLSSBnCI3JokHM7oEQBLxiJKVRtg10AxM1AyeiKcM96f0Mkbqeq+1AbiCtvMcHRulAAEMu693JrSWqg==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -8797,7 +8797,7 @@ snapshots:
   autoprefixer@10.4.8(postcss@8.4.38):
     dependencies:
       browserslist: 4.24.0
-      caniuse-lite: 1.0.30001667
+      caniuse-lite: 1.0.30001714
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.1.0
@@ -9040,7 +9040,7 @@ snapshots:
 
   browserslist@4.24.0:
     dependencies:
-      caniuse-lite: 1.0.30001667
+      caniuse-lite: 1.0.30001714
       electron-to-chromium: 1.5.33
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.24.0)
@@ -9118,11 +9118,11 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.24.0
-      caniuse-lite: 1.0.30001667
+      caniuse-lite: 1.0.30001714
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001667: {}
+  caniuse-lite@1.0.30001714: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
