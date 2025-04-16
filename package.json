@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "e2e": "npx cypress run --config baseUrl=http://localhost:3000,video=false",
-    "e2e:open": "npx cypress open --config baseUrl=http://localhost:3000,video=false",
+    "e2e": "npx cypress run",
+    "e2e:open": "npx cypress open",
     "lint": "npx eslint .",
     "start": "react-scripts start",
     "test": "react-scripts test"
