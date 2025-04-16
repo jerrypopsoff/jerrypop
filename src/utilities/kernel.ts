@@ -47,7 +47,7 @@ function step(
     if (!element || !element.parentNode) {
       return;
     }
-    element.parentNode.removeChild(element);
+    element.remove();
   }
 }
 
