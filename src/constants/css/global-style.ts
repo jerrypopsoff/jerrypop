@@ -14,8 +14,8 @@ import {
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../breakpoint';
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
-import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import { FC } from 'react';
 
 export const GLOBAL_STYLE = createGlobalStyle`
 ::selection {
@@ -122,4 +122,4 @@ button {
     width: ${KERNEL_NARROW_SIZE_PX}px;
   }
 }
-` as unknown as React.FC;
+` as unknown as FC;

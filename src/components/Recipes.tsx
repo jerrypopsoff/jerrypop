@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { RECIPES } from '../constants/recipe';
-import React from 'react';
 import Recipe from './Recipe';
 import Typography from './Typography';
 import styled from 'styled-components';
@@ -18,7 +17,7 @@ const StyledUnorderedList = styled.ul`
   margin: 0;
 `;
 
-const Recipes: React.FC = () => {
+const Recipes = () => {
   return (
     <>
       <Helmet>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
@@ -47,7 +46,7 @@ const StyledTeamMemberTitle = styled(Typography)`
   text-transform: uppercase;
 `;
 
-const Team: React.FC = () => {
+const Team = () => {
   return (
     <StyledTeamMemberList>
       <StyledTeamMemberListItem>

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Theme } from '../types/theme';
 import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
@@ -41,7 +40,7 @@ interface Props {
   theme: Theme;
 }
 
-const Logo: React.FC<Props> = ({ onToggleTheme, theme }) => {
+const Logo = ({ onToggleTheme, theme }: Props) => {
   return (
     <>
       <StyledWordmark fillColor={theme.mainThemeMedium} />

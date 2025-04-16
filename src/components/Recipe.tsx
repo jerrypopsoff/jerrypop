@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Recipe } from '../types/recipe';
 import Typography from './Typography';
 import { DANGLE_STYLE } from '../constants/css/rotation';
@@ -109,7 +109,7 @@ interface Props {
   recipe: Recipe;
 }
 
-const RecipeComponent: React.FC<Props> = ({ recipe }) => {
+const RecipeComponent = ({ recipe }: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const recipeDetails = isCollapsed ? null : (

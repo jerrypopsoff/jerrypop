@@ -1,6 +1,5 @@
 import { DIALOG_BACKDROP } from '../constants/color';
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
-import React from 'react';
 import styled from 'styled-components';
 import { useWindowSize } from '../hooks/use-window-size';
 import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
@@ -82,7 +81,7 @@ interface Props {
   title: string;
 }
 
-const FormDialog: React.FC<Props> = ({ onCloseFormDialog, src, title }) => {
+const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
   const { innerHeight, innerWidth } = useWindowSize();
   const dialogHeight = Math.max(
     innerHeight - 2 * VERTICAL_MARGIN_PX,

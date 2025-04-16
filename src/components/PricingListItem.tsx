@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import { CateringProduct, RetailProduct } from '../types/product';
@@ -80,7 +79,7 @@ interface RetailProps {
 
 type Props = CateringProps | RetailProps;
 
-const PricingListItem: React.FC<Props> = ({ product, type }) => {
+const PricingListItem = ({ product, type }: Props) => {
   return (
     <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
       <StyledTileImageContainer
