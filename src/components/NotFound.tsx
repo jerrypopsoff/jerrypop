@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
 import Typography from './Typography';
 
-const NotFound: React.FC = () => {
+const NotFound = () => {
   return (
     <>
       <Helmet>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
@@ -139,7 +139,7 @@ interface Props {
   navigationMenuItems: NavigationMenuItem[];
 }
 
-const MobileNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
+const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
   const isDark = isDarkMode();
   const [isOpen, setIsOpen] = useState(false);
   const navigationMenuItemsHeightPx =

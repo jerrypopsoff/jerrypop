@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
@@ -17,7 +16,7 @@ const StyledTileList = styled.ul`
   ${TILE_LIST_STYLE}
 `;
 
-const Products: React.FC = () => {
+const Products = () => {
   return (
     <>
       <Helmet>

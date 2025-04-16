@@ -1,4 +1,3 @@
-import React from 'react';
 import SocialLinks from './SocialLinks';
 import Typography from './Typography';
 import styled from 'styled-components';
@@ -61,7 +60,7 @@ const StyledCopyright = styled(Typography)`
   margin: 0 8px;
 `;
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const [theme, rotateTheme] = useTheme();
 
   return (

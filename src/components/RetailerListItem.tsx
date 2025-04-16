@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { CARD_OUTER_STYLE } from '../constants/css/card';
 import { Retailer } from '../types/retailer';
@@ -40,9 +39,9 @@ interface Props {
   retailer: Retailer;
 }
 
-const RetailerListItem: React.FC<Props> = ({
+const RetailerListItem = ({
   retailer: { address, href, name, products },
-}) => {
+}: Props) => {
   return (
     <StyledListItem>
       <StyledRetailerAnchor href={href} rel="noreferrer" target="_blank">

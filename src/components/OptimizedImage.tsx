@@ -1,6 +1,6 @@
-import React from 'react';
+import { ImgHTMLAttributes } from 'react';
 
-interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface Props extends ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
   fallbackSrc: string;
   fallbackSrcSet: string;
@@ -19,7 +19,7 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
  * Use scripts/convert-responsive-image.sh to convert image files to
  * appropriate size and format.
  */
-const OptimizedImage: React.FC<Props> = ({
+const OptimizedImage = ({
   alt,
   fallbackSrc,
   fallbackSrcSet,
@@ -28,7 +28,7 @@ const OptimizedImage: React.FC<Props> = ({
   srcSet,
   type = 'image/webp',
   ...delegated
-}) => {
+}: Props) => {
   return (
     <picture>
       <source srcSet={srcSet} sizes={sizes} type={type} />

@@ -4,7 +4,6 @@ import FacebookIcon from '../images/facebook-icon.svg';
 import FacebookIconDark from '../images/facebook-icon-dark.svg';
 import InstagramIcon from '../images/instagram-icon.svg';
 import InstagramIconDark from '../images/instagram-icon-dark.svg';
-import React from 'react';
 import YouTubeIcon from '../images/youtube-icon.svg';
 import YouTubeIconDark from '../images/youtube-icon-dark.svg';
 import styled from 'styled-components';
@@ -38,7 +37,7 @@ const StyledSocialLinkIcon = styled.img`
   width: 24px;
 `;
 
-const SocialLinks: React.FC = () => {
+const SocialLinks = () => {
   const isDark = isDarkMode();
 
   return (

@@ -5,9 +5,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import About from './About';
 import Home from './Home';
 import NotFound from './NotFound';
-import React from 'react';
+import { StrictMode } from 'react';
 import Recipes from './Recipes';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTopOnPathChange from './ScrollToTopOnPathChange';
 import { useTheme } from '../hooks/use-theme';
 import NavigationBar from './NavigationBar';
 import Products from './Products';
@@ -15,15 +15,15 @@ import Merch from './Merch';
 import Retail from './Retail';
 import Catering from './Catering';
 
-const App: React.FC = () => {
+const App = () => {
   useTheme();
 
   return (
-    <React.StrictMode>
+    <StrictMode>
       <HelmetProvider>
         <GlobalStyle />
         <Router>
-          <ScrollToTop />
+          <ScrollToTopOnPathChange />
           <NavigationBar />
           <Routes>
             {/**
@@ -46,7 +46,7 @@ const App: React.FC = () => {
           <Footer />
         </Router>
       </HelmetProvider>
-    </React.StrictMode>
+    </StrictMode>
   );
 };
 
