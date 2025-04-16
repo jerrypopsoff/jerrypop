@@ -1,17 +1,13 @@
-interface Material {
-  amount: string;
-  name: string;
-}
-
-interface Step {
-  aside?: string;
-  content: string;
-}
-
 export interface Recipe {
   href?: string;
-  materials: Material[];
-  steps: Step[];
+  materials: {
+    amount: string;
+    name: string;
+  }[];
+  steps: {
+    aside?: string;
+    content: string;
+  }[];
   time: string;
   title: string;
 }

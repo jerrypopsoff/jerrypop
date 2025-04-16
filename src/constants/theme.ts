@@ -13,11 +13,9 @@ import {
 } from './color';
 import type { Theme } from '../types/theme';
 
-interface Themes {
+export const THEME: {
   [themeName: string]: Theme;
-}
-
-export const THEME: Themes = {
+} = {
   // PB&J
   BLUE_PINK: {
     mainThemeDark: THEME_BLUE,
