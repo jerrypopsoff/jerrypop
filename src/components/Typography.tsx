@@ -11,13 +11,13 @@ const headingStyle = css<{ $hasTextShadow?: boolean }>`
 `;
 
 const withDynamicStyles = css<{
-  margin?: string;
-  maxWidth?: string;
-  textAlign?: string;
+  $margin?: string;
+  $maxWidth?: string;
+  $textAlign?: string;
 }>`
-  margin: ${({ margin }) => margin};
-  max-width: ${({ maxWidth }) => maxWidth};
-  text-align: ${({ textAlign }) => textAlign};
+  margin: ${({ $margin }) => $margin};
+  max-width: ${({ $maxWidth }) => $maxWidth};
+  text-align: ${({ $textAlign }) => $textAlign};
 `;
 
 type TypeographyType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
@@ -34,9 +34,9 @@ interface Props {
 interface StyledTypographyHTMLElementProps {
   children: ReactNode;
   $hasTextShadow?: boolean;
-  margin?: string;
-  maxWidth?: string;
-  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
+  $margin?: string;
+  $maxWidth?: string;
+  $textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
 }
 
 const StyledH1 = styled.h1<StyledTypographyHTMLElementProps>`
@@ -75,6 +75,8 @@ const StyledP = styled.p<StyledTypographyHTMLElementProps>`
 const Typography = ({
   hasTextShadow = false,
   margin,
+  maxWidth,
+  textAlign,
   type,
   ...props
 }: Props) => {
@@ -83,7 +85,9 @@ const Typography = ({
       return (
         <StyledH1
           $hasTextShadow={hasTextShadow}
-          margin={margin ?? '48px 12px 12px'}
+          $margin={margin ?? '48px 12px 12px'}
+          $maxWidth={maxWidth}
+          $textAlign={textAlign}
           {...props}
         />
       );
@@ -91,7 +95,9 @@ const Typography = ({
       return (
         <StyledH2
           $hasTextShadow={hasTextShadow}
-          margin={margin ?? '36px 12px 12px'}
+          $margin={margin ?? '36px 12px 12px'}
+          $maxWidth={maxWidth}
+          $textAlign={textAlign}
           {...props}
         />
       );
@@ -99,7 +105,9 @@ const Typography = ({
       return (
         <StyledH3
           $hasTextShadow={hasTextShadow}
-          margin={margin ?? '24px 12px 12px'}
+          $margin={margin ?? '24px 12px 12px'}
+          $maxWidth={maxWidth}
+          $textAlign={textAlign}
           {...props}
         />
       );
@@ -107,7 +115,9 @@ const Typography = ({
       return (
         <StyledH4
           $hasTextShadow={hasTextShadow}
-          margin={margin ?? '18px 12px 12px'}
+          $margin={margin ?? '18px 12px 12px'}
+          $maxWidth={maxWidth}
+          $textAlign={textAlign}
           {...props}
         />
       );
@@ -116,7 +126,9 @@ const Typography = ({
       return (
         <StyledP
           $hasTextShadow={hasTextShadow}
-          margin={margin ?? '12px'}
+          $margin={margin ?? '12px'}
+          $maxWidth={maxWidth}
+          $textAlign={textAlign}
           {...props}
         />
       );
