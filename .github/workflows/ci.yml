@@ -1,14 +1,27 @@
 name: CI
-on: [push]
+on:
+  - pull_request
+  - synchronize
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-      - run: yarn install
-      - run: yarn build
-      - run: yarn lint
-      - run: yarn test --ci --watch-all=false
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build application
+        run: pnpm build
+      # Todo: move lint/test into separate workflows
+      - name: Lint source code
+        run: pnpm lint
+      - name: Execute unit tests
+        run: pnpm test --ci --watch-all=false

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "e2e": "yarn cypress run --config baseUrl=http://localhost:3000,video=false",
-    "e2e:open": "yarn cypress open --config baseUrl=http://localhost:3000,video=false",
+    "e2e": "npx cypress run --config baseUrl=http://localhost:3000,video=false",
+    "e2e:open": "npx cypress open --config baseUrl=http://localhost:3000,video=false",
     "lint": "npx eslint .",
     "start": "react-scripts start",
     "test": "react-scripts test"
@@ -23,6 +23,7 @@
     "@babel/plugin-syntax-flow": "^7.25.7",
     "@babel/plugin-transform-react-jsx": "^7.25.7",
     "@eslint/compat": "^1.2.0",
+    "@eslint/eslintrc": "^3.3.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
