@@ -1,0 +1,20 @@
+name: Execute unit tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
+      - name: Execute unit tests
+        run: pnpm test --ci --watch-all=false
