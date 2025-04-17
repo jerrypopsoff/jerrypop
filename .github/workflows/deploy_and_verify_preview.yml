@@ -19,8 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-dependencies
-      - name: Build application
-        run: pnpm build
       - name: Install Netlify CLI
         run: npm install netlify-cli@20.0.1 -g
       - name: Deploy to Netlify
@@ -29,10 +27,13 @@ jobs:
           NETLIFY_PAT: ${{ secrets.NETLIFY_PAT }}
         run: |
           netlify deploy \
-            --dir build \
-            --site $NETLIFY_SITE_ID \
+            --alias ${{ github.event.pull_request.number }} \
             --auth $NETLIFY_PAT \
+            --build \
+            --context deploy-preview \
             --json \
+            --message "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}" \
+            --site $NETLIFY_SITE_ID \
             > deploy_output.json
       - name: Generate preview deployment URL
         id: url_preview
