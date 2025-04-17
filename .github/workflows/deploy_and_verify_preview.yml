@@ -18,21 +18,11 @@ jobs:
       preview_url: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 10
-          run_install: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-      - name: Install Netlify CLI
-        run: npm install netlify-cli@20.0.1 -g
-      - name: Install dependencies
-        run: pnpm install
+      - uses: ./.github/actions/setup-dependencies
       - name: Build application
         run: pnpm build
+      - name: Install Netlify CLI
+        run: npm install netlify-cli@20.0.1 -g
       - name: Deploy to Netlify
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -71,16 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
-          run_install: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
+      - uses: ./.github/actions/setup-dependencies
       - name: Cache Cypress binary
         uses: actions/cache@v4
         with:
