@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -18,7 +17,7 @@ const StyledAbout = styled.div`
   text-align: center;
 `;
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <>
       <Helmet>

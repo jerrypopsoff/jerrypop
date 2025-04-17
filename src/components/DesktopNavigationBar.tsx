@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
 import styled from 'styled-components';
 import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
 import { NavigationMenuItem } from '../types/navigation';
@@ -57,7 +56,7 @@ interface Props {
   navigationMenuItems: NavigationMenuItem[];
 }
 
-const DesktopNavigationBar: React.FC<Props> = ({ navigationMenuItems }) => {
+const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
   const isDark = isDarkMode();
 
   return (

@@ -16,17 +16,15 @@ export function increaseKernelCount() {
 
 let clickPopIndex = 0;
 
-interface PopNewKernelArguments {
-  documentElement: Document;
-  xPosition: number;
-  yPosition: number;
-}
-
 function popNewKernel({
   documentElement,
   xPosition,
   yPosition,
-}: PopNewKernelArguments) {
+}: {
+  documentElement: Document;
+  xPosition: number;
+  yPosition: number;
+}) {
   const id = `click-pop-${clickPopIndex++}`;
   const kernelElement = getKernelElement(documentElement, {
     id,

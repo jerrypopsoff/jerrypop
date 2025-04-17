@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import OptimizedImage from './OptimizedImage';
 
@@ -30,7 +29,7 @@ interface Props {
   type?: string;
 }
 
-const GlamorPhotograph: React.FC<Props> = ({
+const GlamorPhotograph = ({
   alt,
   aspectRatio = 16 / 9,
   fallbackSrc,
@@ -38,7 +37,7 @@ const GlamorPhotograph: React.FC<Props> = ({
   maxHeightPx = 450,
   srcSet,
   type = 'image/webp',
-}) => {
+}: Props) => {
   return (
     <StyledImageContainer $aspectRatio={aspectRatio} $maxHeightPx={maxHeightPx}>
       <StyledImage

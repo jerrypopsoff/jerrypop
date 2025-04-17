@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface Props {
   fillColor: string;
 }
 
-const WordmarkRepeated: React.FC<Props> = ({ fillColor, ...props }) => {
+const WordmarkRepeated = ({ fillColor, ...props }: Props) => {
   return (
     <svg
       width="301"

@@ -1,0 +1,91 @@
+name: Deploy Preview and Execute End-to-end Tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  statuses: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    outputs:
+      preview_url: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
+      - name: Build application
+        run: pnpm build
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_PAT: ${{ secrets.NETLIFY_PAT }}
+        run: |
+          npx netlify deploy \
+            --alias ${{ github.event.pull_request.number }} \
+            --auth $NETLIFY_PAT \
+            --dir build \
+            --json \
+            --message "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}" \
+            --site $NETLIFY_SITE_ID \
+            > deploy_output.json
+      - name: Generate preview deployment URL
+        id: url_preview
+        run: |
+          NETLIFY_PREVIEW_URL=$(jq -r '.deploy_url' deploy_output.json)
+          echo "NETLIFY_PREVIEW_URL=$NETLIFY_PREVIEW_URL" >> "$GITHUB_OUTPUT"
+      - name: Add preview deployment link to status checks
+        uses: actions/github-script@v7
+        env:
+          NETLIFY_PREVIEW_URL: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
+        with:
+          script: |
+            const previewUrl = process.env.NETLIFY_PREVIEW_URL;
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.payload.pull_request.head.sha,
+              state: 'success',
+              target_url: previewUrl,
+              description: 'Successfully deployed preview',
+              context: 'View preview deployment',
+            });
+
+  end-to-end-test:
+    needs: deploy-preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
+      - name: Cache Cypress binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-binary-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            cypress-binary-${{ runner.os }}-
+      - name: Install Cypress binary
+        run: npx cypress install
+      - name: Execute Cypress test suite
+        uses: cypress-io/github-action@v6
+        id: cypress
+        env:
+          CYPRESS_BASE_URL: ${{ needs.deploy-preview.outputs.preview_url }}
+        with:
+          browser: chrome
+          headed: false
+      - name: Upload Cypress screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

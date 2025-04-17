@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -36,7 +35,7 @@ const StyledLink = styled(Link)`
   ${BUTTON_STYLE}
 `;
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <>
       <Helmet>

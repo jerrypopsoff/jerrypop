@@ -1,4 +1,3 @@
-import React from 'react';
 import { CATERING_PRODUCTS } from '../constants/product';
 import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
@@ -58,7 +57,7 @@ const StyledLogisticsDescriptionDetails = styled.dd`
   text-align: left;
 `;
 
-const Catering: React.FC = () => {
+const Catering = () => {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (

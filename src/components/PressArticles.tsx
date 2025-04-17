@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from './Typography';
 import styled from 'styled-components';
 import {
@@ -54,7 +53,7 @@ const StyledArticleDate = styled(Typography)`
   margin: 12px 0 0;
 `;
 
-const PressArticles: React.FC = () => {
+const PressArticles = () => {
   return (
     <StyledTileList>
       {ARTICLES.map((article) => (

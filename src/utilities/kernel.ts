@@ -47,7 +47,7 @@ function step(
     if (!element || !element.parentNode) {
       return;
     }
-    element.parentNode.removeChild(element);
+    element.remove();
   }
 }
 
@@ -76,19 +76,22 @@ export function animateKernel(id: string) {
   }, KERNEL_STEP_ANIMATION_INTERVAL);
 }
 
-interface KernelElementProperties {
-  id: string;
-  isRotatingClockwise: boolean;
-  left: number;
-  top: number;
-}
-
 /**
  * Initialize and return a reference to a randomized popcorn kernel element.
  */
 export function getKernelElement(
   documentElement: Document,
-  { id, left, top, isRotatingClockwise }: KernelElementProperties,
+  {
+    id,
+    left,
+    top,
+    isRotatingClockwise,
+  }: {
+    id: string;
+    isRotatingClockwise: boolean;
+    left: number;
+    top: number;
+  },
 ) {
   const kernelElement = documentElement.createElement('img');
 
