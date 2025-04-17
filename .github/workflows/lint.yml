@@ -12,7 +12,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup-dependencies
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
       - name: Lint source code
         run: pnpm lint

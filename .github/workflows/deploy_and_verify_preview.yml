@@ -17,8 +17,10 @@ jobs:
     outputs:
       preview_url: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup-dependencies
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
       - name: Install Netlify CLI
         run: npm install netlify-cli@20.0.1 -g
       - name: Deploy to Netlify
@@ -61,8 +63,10 @@ jobs:
     needs: deploy-preview
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup-dependencies
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
       - name: Cache Cypress binary
         uses: actions/cache@v4
         with:
