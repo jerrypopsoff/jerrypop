@@ -1,3 +1,4 @@
+import '../app.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
