@@ -1,4 +1,10 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { getMetadata } from '../utilities/metadata';
+import { getViewport } from '../utilities/viewport';
+
+export const metadata = getMetadata();
+
+export const viewport = getViewport();
 
 export default function RootLayout({
   children,
@@ -8,23 +14,6 @@ export default function RootLayout({
   return (
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head>
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
-        <title>Jerrypop</title>
-        <meta
-          name="description"
-          content="Locally crafted San Francisco popcorn. Bold flavors. Compostable packaging."
-        />
-        <meta name="theme-color" content="#0072da" />
-        <meta property="og:title" content="Jerrypop" />
-        <meta
-          property="og:description"
-          content="Locally crafted San Francisco popcorn. Bold flavors. Compostable packaging."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://jerrypop.com" />
-        <meta property="og:image" content="https://jerrypop.com/jerrypop.png" />
-
         {/* Todo: https://nextjs.org/docs/app/building-your-application/optimizing/metadata */}
         {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
       </head>
