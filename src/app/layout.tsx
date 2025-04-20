@@ -13,10 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" prefix="og: https://ogp.me/ns#">
-      <head>
-        {/* Todo: https://nextjs.org/docs/app/building-your-application/optimizing/metadata */}
-        {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
-      </head>
+      <head></head>
       <body>
         <div id="root">{children}</div>
         {process.env.NODE_ENV === 'production' && (

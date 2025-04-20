@@ -1,8 +1,5 @@
 import { Metadata } from 'next';
-
-const TITLE = 'Jerrypop';
-const DESCRIPTION =
-  'Locally crafted San Francisco popcorn. Bold flavors. Compostable packaging.';
+import { DESCRIPTION, TITLE } from '../constants/metadata';
 
 export function getMetadata(): Metadata {
   return {
