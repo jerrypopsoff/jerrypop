@@ -15,7 +15,6 @@ export function generateStaticParams() {
     { slug: ['merch'] },
     { slug: ['catering'] },
     { slug: ['retail'] },
-    // Todo: how to handle not found page?
   ];
 }
 
