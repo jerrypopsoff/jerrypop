@@ -3,16 +3,28 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "target": "esnext"
+    "target": "esnext",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": ["cypress", "cypress.config.ts"],
   "extends": "@tsconfig/recommended/tsconfig.json",
-  "inlude": ["src"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "build/types/**/*.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ]
 }

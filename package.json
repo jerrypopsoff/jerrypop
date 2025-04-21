@@ -3,11 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "react-scripts build",
+    "build": "next build",
+    "dev": "next dev --turbopack",
     "e2e": "npx cypress run",
     "e2e:open": "npx cypress open",
     "lint": "npx eslint .",
-    "start": "react-scripts start",
+    "start": "npx serve@latest ./build",
     "test": "react-scripts test"
   },
   "dependencies": {
