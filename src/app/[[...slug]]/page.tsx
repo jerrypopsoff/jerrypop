@@ -7,7 +7,16 @@ import { ClientOnly } from './client';
  */
 
 export function generateStaticParams() {
-  return [{ slug: [''] }];
+  return [
+    { slug: [''] },
+    { slug: ['products'] },
+    { slug: ['recipes'] },
+    { slug: ['about'] },
+    { slug: ['merch'] },
+    { slug: ['catering'] },
+    { slug: ['retail'] },
+    // Todo: how to handle not found page?
+  ];
 }
 
 export default function Page() {

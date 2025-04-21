@@ -45,9 +45,17 @@ const Home = () => {
         <GlamorPhotograph
           alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wooden surface taken from directly above"
           aspectRatio={17 / 10}
-          fallbackSrc={HabaneroRanch2400}
-          fallbackSrcSet={`${HabaneroRanch600} 600w, ${HabaneroRanch1200} 1200w, ${HabaneroRanch2400} 2400w`}
-          srcSet={`${HabaneroRanchWebp600} 600w, ${HabaneroRanchWebp1200} 1200w, ${HabaneroRanchWebp2400} 2400w`}
+          fallbackSrc={HabaneroRanch2400.src}
+          fallbackSourceSet={[
+            { size: '600w', src: HabaneroRanch600.src },
+            { size: '1200w', src: HabaneroRanch1200.src },
+            { size: '2400w', src: HabaneroRanch2400.src },
+          ]}
+          sourceSet={[
+            { size: '600w', src: HabaneroRanchWebp600.src },
+            { size: '1200w', src: HabaneroRanchWebp1200.src },
+            { size: '2400w', src: HabaneroRanchWebp2400.src },
+          ]}
         />
         <StyledSection>
           <Typography margin="12px" type="h1">

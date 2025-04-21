@@ -25,9 +25,17 @@ const Products = () => {
       <GlamorPhotograph
         alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}
-        fallbackSrc={Products2400}
-        fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
-        srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
+        fallbackSrc={Products2400.src}
+        fallbackSourceSet={[
+          { size: '600w', src: Products600.src },
+          { size: '1200w', src: Products1200.src },
+          { size: '2400w', src: Products2400.src },
+        ]}
+        sourceSet={[
+          { size: '600w', src: ProductsWebp600.src },
+          { size: '1200w', src: ProductsWebp1200.src },
+          { size: '2400w', src: ProductsWebp2400.src },
+        ]}
       />
       <Typography type="h1">Products</Typography>
       <Typography margin="12px 12px 24px" type="p">

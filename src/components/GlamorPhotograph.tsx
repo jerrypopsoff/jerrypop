@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import OptimizedImage from './OptimizedImage';
+import { SourceSet } from '../types/image';
 
 interface StyledGlamorPhotographProps {
   $aspectRatio: number;
@@ -23,9 +24,9 @@ interface Props {
   alt: string;
   aspectRatio?: number;
   fallbackSrc: string;
-  fallbackSrcSet: string;
+  fallbackSourceSet: SourceSet;
   maxHeightPx?: number;
-  srcSet: string;
+  sourceSet: SourceSet;
   type?: string;
 }
 
@@ -33,9 +34,9 @@ const GlamorPhotograph = ({
   alt,
   aspectRatio = 16 / 9,
   fallbackSrc,
-  fallbackSrcSet,
+  fallbackSourceSet,
   maxHeightPx = 450,
-  srcSet,
+  sourceSet,
   type = 'image/webp',
 }: Props) => {
   return (
@@ -45,10 +46,10 @@ const GlamorPhotograph = ({
         $maxHeightPx={maxHeightPx}
         alt={alt}
         fallbackSrc={fallbackSrc}
-        fallbackSrcSet={fallbackSrcSet}
+        fallbackSourceSet={fallbackSourceSet}
         fetchPriority="high"
         sizes="100vw"
-        srcSet={srcSet}
+        sourceSet={sourceSet}
         type={type}
       />
     </StyledImageContainer>

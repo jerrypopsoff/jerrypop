@@ -163,7 +163,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
           <StyledWordmarkLink onClick={() => setIsOpen(false)} to="/">
             <StyledWordmark
               alt="Jerrypop brand wordmark"
-              src={isDark ? WordmarkSvgDark : WordmarkSvg}
+              src={isDark ? WordmarkSvgDark.src : WordmarkSvg.src}
             />
           </StyledWordmarkLink>
         </StyledNavigationBarContentInner>

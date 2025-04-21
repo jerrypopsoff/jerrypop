@@ -28,8 +28,8 @@ export const HABANERO_RANCH: RetailProduct = {
   allergens: ['MILK'],
   description:
     'Hulless and crisp popcorn coated in creamy, zesty ranch seasoning with a habanero kick.',
-  image: HabaneroRanchPhotograph,
-  imageWebp: HabaneroRanchPhotographWebp,
+  image: HabaneroRanchPhotograph.src,
+  imageWebp: HabaneroRanchPhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -57,8 +57,8 @@ export const PBJ: CateringProduct = {
   allergens: ['PEANUTS', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in peanut butter and strawberry jam. A vegan-friendly blast of sweet and salty nostalgia.',
-  image: PbjPhotograph,
-  imageWebp: PbjPhotographWebp,
+  image: PbjPhotograph.src,
+  imageWebp: PbjPhotographWebp.src,
   ingredients: [
     'STRAWBERRY JAM',
     'PEANUT BUTTER',
@@ -80,8 +80,8 @@ export const CHIPOTLE_CHEDDAR: CateringProduct = {
   allergens: ['MILK'],
   description:
     'The perfect combination of smoky chipotle, tangy cheddar, and zesty lime.',
-  image: ChiopotleCheddarPhotograph,
-  imageWebp: ChiopotleCheddarPhotographWebp,
+  image: ChiopotleCheddarPhotograph.src,
+  imageWebp: ChiopotleCheddarPhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -105,8 +105,8 @@ export const GOAT_CHEESE_CHIVE: RetailProduct = {
   allergens: ['MILK'],
   description:
     'Creamy, tangy goat milk popcorn with abundant chives for a delicate, herbal finish.',
-  image: GoatCheeseChivePhotograph,
-  imageWebp: GoatCheeseChivePhotographWebp,
+  image: GoatCheeseChivePhotograph.src,
+  imageWebp: GoatCheeseChivePhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'NON-GMO SUNFLOWER OIL',
@@ -130,8 +130,8 @@ export const FURIKAKE_DASHI: RetailProduct = {
   allergens: ['SESAME', 'TUNA'],
   description:
     'A tastefully savory umami bomb featuring nori furikake, smoked bonito tuna, and shichimi togarashi.',
-  image: FurikakeDashiPhotograph,
-  imageWebp: FurikakeDashiPhotographWebp,
+  image: FurikakeDashiPhotograph.src,
+  imageWebp: FurikakeDashiPhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'NON-GMO SUNFLOWER OIL',
@@ -154,8 +154,8 @@ export const ROSEMARY_LEMON_PEPPER: RetailProduct = {
   allergens: [],
   description:
     'Herbaceous and citrus-forward popcorn balanced with freshly ground black pepper.',
-  image: RosemaryLemonPepperPhotograph,
-  imageWebp: RosemaryLemonPepperPhotographWebp,
+  image: RosemaryLemonPepperPhotograph.src,
+  imageWebp: RosemaryLemonPepperPhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'NON-GMO SUNFLOWER OIL',
@@ -180,8 +180,8 @@ export const CHOCOLATE_HAZELNUT_ESPRESSO: CateringProduct = {
   allergens: ['TREE NUTS (HAZELNUTS)', 'MILK', 'SOY'],
   description:
     'Large and crunchy popcorn smothered in chocolate hazelnut spread. A blast of rich chocolate perfectly balanced with hazelnut and espresso. This variety is only available in unmarked packaging.',
-  image: ChocolateHazelnutEspressoPhotograph,
-  imageWebp: ChocolateHazelnutEspressoPhotographWebp,
+  image: ChocolateHazelnutEspressoPhotograph.src,
+  imageWebp: ChocolateHazelnutEspressoPhotographWebp.src,
   ingredients: [
     'HAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN, VANILLIN)',
     'NON-GMO POPCORN',
@@ -202,8 +202,8 @@ export const MALA_LIME: RetailProduct = {
   allergens: [],
   description:
     'Taking inspiration from San Francisco’s incredible landscape of Sichuan cuisine and Mexican chili-lime seasoning, this popcorn blasts your senses with fiery Sichuan chili pepper, numbing Sichuan peppercorn, and tangy lime.',
-  image: MalaLimePhotograph,
-  imageWebp: MalaLimePhotographWebp,
+  image: MalaLimePhotograph.src,
+  imageWebp: MalaLimePhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'NON-GMO SUNFLOWER OIL',
@@ -227,8 +227,8 @@ export const ITALIAN_SAUSAGE: CateringProduct = {
   allergens: [],
   description:
     'The finest herbs and spices available capture the delicious flavors of my Sicilian grandmother’s signature Italian sausage pasta.',
-  image: MalaLimePhotograph,
-  imageWebp: MalaLimePhotographWebp,
+  image: MalaLimePhotograph.src,
+  imageWebp: MalaLimePhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -256,8 +256,8 @@ export const SICHUAN_NOOCH: CateringProduct = {
   allergens: [],
   description:
     'Toasted Sichuan peppercorn and nutritional yeast shine in this exceptionally tingly, tangy, and funky popcorn.',
-  image: SichuanNoochPhotograph,
-  imageWebp: SichuanNoochPhotographWebp,
+  image: SichuanNoochPhotograph.src,
+  imageWebp: SichuanNoochPhotographWebp.src,
   ingredients: [
     'NON-GMO POPCORN',
     'CANOLA OIL',
@@ -279,8 +279,8 @@ export const SICHUAN_NOOCH: CateringProduct = {
 export const REQUEST_A_FLAVOR: CateringProduct = {
   allergens: [],
   description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
-  image: RequestAFlavorPhotograph,
-  imageWebp: RequestAFlavorPhotographWebp,
+  image: RequestAFlavorPhotograph.src,
+  imageWebp: RequestAFlavorPhotographWebp.src,
   ingredients: [],
   priceCatering: { max: 12, min: 7 },
   subtitle: 'Craft Popcorn',

@@ -100,7 +100,7 @@ export function getKernelElement(
     ? 'popcorn-kernel'
     : 'popcorn-kernel popcorn-kernel--reverse';
   kernelElement.id = id;
-  kernelElement.src = ColonelHead;
+  kernelElement.src = ColonelHead.src;
   kernelElement.setAttribute(
     'style',
     `display:'none';left:${left}px;top:${top}px;`,

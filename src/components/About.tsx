@@ -27,9 +27,17 @@ const About = () => {
         <GlamorPhotograph
           alt="Photograph of a red bowl of Blueberry Pancake Craft Popcorn taken outdoors from directly above"
           aspectRatio={3557 / 2260}
-          fallbackSrc={BlueberryPancake2400}
-          fallbackSrcSet={`${BlueberryPancake600} 600w, ${BlueberryPancake1200} 1200w, ${BlueberryPancake2400} 2400w`}
-          srcSet={`${BlueberryPancakeWebp600} 600w, ${BlueberryPancakeWebp1200} 1200w, ${BlueberryPancakeWebp2400} 2400w`}
+          fallbackSrc={BlueberryPancake2400.src}
+          fallbackSourceSet={[
+            { size: '600w', src: BlueberryPancake600.src },
+            { size: '1200w', src: BlueberryPancake1200.src },
+            { size: '2400w', src: BlueberryPancake2400.src },
+          ]}
+          sourceSet={[
+            { size: '600w', src: BlueberryPancakeWebp600.src },
+            { size: '1200w', src: BlueberryPancakeWebp1200.src },
+            { size: '2400w', src: BlueberryPancakeWebp2400.src },
+          ]}
         />
         <Typography type="h1">About</Typography>
         <Typography type="h2">Mission</Typography>

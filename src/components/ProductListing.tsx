@@ -70,9 +70,9 @@ const ProductListing = ({ product }: Props) => {
           $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
           alt={`Photograph of ${product.title}`}
           fallbackSrc={product.image}
-          fallbackSrcSet={`${product.image} 600w`}
+          fallbackSourceSet={[{ size: '600w', src: product.image }]}
           sizes={`${PRODUCT_IMAGE_WIDTH_PX}px (min-width: ${PRODUCT_IMAGE_WIDTH_PX}px), 95vw`}
-          srcSet={`${product.imageWebp} 600w`}
+          sourceSet={[{ size: '600w', src: product.imageWebp }]}
         />
       </StyledTileImageContainer>
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>

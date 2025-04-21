@@ -76,9 +76,9 @@ const PressArticles = () => {
                 $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
                 alt={article.imageAltText}
                 fallbackSrc={article.image}
-                fallbackSrcSet={`${article.image} 600w`}
+                fallbackSourceSet={[{ size: '600w', src: article.image }]}
                 sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
-                srcSet={`${article.imageWebp} 600w`}
+                sourceSet={[{ size: '600w', src: article.imageWebp }]}
               />
             </StyledTileImageContainer>
             <StyledTileInformation

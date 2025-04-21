@@ -1,17 +1,10 @@
 import { ImgHTMLAttributes } from 'react';
+import { SourceSet } from '../types/image';
 
 interface Props extends ImgHTMLAttributes<HTMLImageElement> {
-  alt: string;
   fallbackSrc: string;
-  fallbackSrcSet: string;
-  /**
-   * Todo: Remove this and src/types/img-fetch-priority.d.ts once the
-   * resolution for {@link https://github.com/facebook/react/issues/25682}
-   * lands.
-   */
-  fetchPriority?: 'high' | 'low' | 'auto';
-  sizes: string;
-  srcSet: string;
+  fallbackSourceSet: SourceSet;
+  sourceSet: SourceSet;
   type?: string;
 }
 
@@ -20,21 +13,23 @@ interface Props extends ImgHTMLAttributes<HTMLImageElement> {
  * appropriate size and format.
  */
 const OptimizedImage = ({
-  alt,
   fallbackSrc,
-  fallbackSrcSet,
-  fetchPriority,
+  fallbackSourceSet,
   sizes,
-  srcSet,
+  sourceSet,
   type = 'image/webp',
   ...delegated
 }: Props) => {
+  // e.g. `${HabaneroRanch600.src} 600w, ${HabaneroRanch1200} 1200w, ${HabaneroRanch2400} 2400w`;
+  const fallbackSrcSet = fallbackSourceSet
+    .map(({ size, src }) => `${src} ${size}`)
+    .join(', ');
+  const srcSet = sourceSet.map(({ size, src }) => `${src} ${size}`).join(', ');
+
   return (
     <picture>
       <source srcSet={srcSet} sizes={sizes} type={type} />
       <img
-        alt={alt}
-        fetchpriority={fetchPriority}
         src={fallbackSrc}
         srcSet={fallbackSrcSet}
         sizes={sizes}
