@@ -1,42 +1,38 @@
 # Jerrypop
 
-This repository contains the source code for [jerrypop.com](https://jerrypop.com). This project was bootstrapped with [Create React App](https://createreactapp.dev/).
+This repository contains the source code for [jerrypop.com](https://jerrypop.com).
 
 ## Scripts
 
-### `pnpm start`
+### `pnpm dev`
 
-Runs the application in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will automatically reload if you make edits.
+Runs the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `pnpm test`
 
-Launches the test runner in the interactive watch mode.
+Launch the unit test runner in interactive watch mode.
 
 ### `pnpm build`
 
-Builds the application for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+Build the application for production.
+
+### `pnpm start`
+
+Run the application in production mode based on the latest execution of `pnpm build`.
 
 ### `pnpm lint`
 
-Execute static analysis for the application source code, displaying any issues in the terminal.
+Execute static analysis for the application source code.
 
 ### `pnpm e2e`
 
-Execute all end-to-end tests against the application being served locally via `pnpm start`. [Options](https://docs.cypress.io/guides/guides/command-line#cypress-run) can be specified via command line arguments, like so:
+Execute all end-to-end tests against the application being served locally. [Options](https://docs.cypress.io/guides/guides/command-line#cypress-run) can be specified via command line arguments.
 
 ```bash
-# Execute the tests specified in `cypress/e2e/application.cy.js`
-pnpm e2e --spec "cypress/e2e/application.cy.js"
+# Execute the tests specified in `cypress/e2e/application.cy.ts`
+pnpm e2e --spec "cypress/e2e/application.cy.ts"
 ```
 
 ### `pnpm e2e:open`
 
-Open the end-to-end testing application, allowing selective execution of specific tests and modules against the application being served locally via `pnpm start`. This technique exposes more information that can be useful for debugging.
-
-## Miscellaneous commands
-
-### Clear stale branches locally
-
-1. Switch to main convergence branch via `git checkout main`
-1. Delete stale remote branches via `git fetch && git remote prune origin`
-1. Delete stale local branches via `git branch --merged | egrep -v main | xargs git branch -d`
+Open the end-to-end testing application, allowing selective execution of specific tests and modules against the application being served locally. This technique exposes more information that can be useful for debugging.
