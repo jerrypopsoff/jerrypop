@@ -17,4 +17,4 @@ jobs:
       - name: Setup dependencies
         uses: ./.github/actions/setup-dependencies
       - name: Execute unit tests
-        run: pnpm test --ci --watch-all=false
+        run: pnpm test
