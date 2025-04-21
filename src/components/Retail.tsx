@@ -1,5 +1,4 @@
 import { RETAIL_PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
@@ -62,9 +61,7 @@ const Retail = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Retail · Jerrypop</title>
-      </Helmet>
+      {/* <title>Retail · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
         aspectRatio={2080 / 1170}

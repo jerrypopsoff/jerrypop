@@ -1,6 +1,5 @@
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import Products600 from '../images/glamorous-mala-lime-600.jpeg';
@@ -19,9 +18,7 @@ const StyledTileList = styled.ul`
 const Products = () => {
   return (
     <>
-      <Helmet>
-        <title>Products · Jerrypop</title>
-      </Helmet>
+      {/* <title>Products · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}

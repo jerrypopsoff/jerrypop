@@ -1,5 +1,4 @@
 import { CATERING_PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import ChocolateHazelnutEspresso600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
@@ -62,9 +61,7 @@ const Catering = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Catering · Jerrypop</title>
-      </Helmet>
+      {/* <title>Catering · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
         aspectRatio={2400 / 1350}

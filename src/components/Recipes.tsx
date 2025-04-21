@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { RECIPES } from '../constants/recipe';
 import Recipe from './Recipe';
 import Typography from './Typography';
@@ -20,9 +19,7 @@ const StyledUnorderedList = styled.ul`
 const Recipes = () => {
   return (
     <>
-      <Helmet>
-        <title>Recipes · Jerrypop</title>
-      </Helmet>
+      {/* <title>Recipes · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of PB&J Craft Popcorn spread onto a baking sheet"
         aspectRatio={4032 / 3024}

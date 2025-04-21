@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -20,9 +19,7 @@ const StyledAbout = styled.div`
 const About = () => {
   return (
     <>
-      <Helmet>
-        <title>About · Jerrypop</title>
-      </Helmet>
+      {/* <title>About · Jerrypop</title> */}
       <StyledAbout>
         <GlamorPhotograph
           alt="Photograph of a red bowl of Blueberry Pancake Craft Popcorn taken outdoors from directly above"

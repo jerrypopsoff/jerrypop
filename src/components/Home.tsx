@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -38,9 +37,7 @@ const StyledLink = styled(Link)`
 const Home = () => {
   return (
     <>
-      <Helmet>
-        <title>Jerrypop</title>
-      </Helmet>
+      {/* <title>Jerrypop</title> */}
       <StyledHome>
         <GlamorPhotograph
           alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wooden surface taken from directly above"
