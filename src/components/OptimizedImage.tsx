@@ -13,6 +13,7 @@ interface Props extends ImgHTMLAttributes<HTMLImageElement> {
  * appropriate size and format.
  */
 const OptimizedImage = ({
+  alt,
   fallbackSrc,
   fallbackSourceSet,
   sizes,
@@ -30,6 +31,7 @@ const OptimizedImage = ({
     <picture>
       <source srcSet={srcSet} sizes={sizes} type={type} />
       <img
+        alt={alt}
         src={fallbackSrc}
         srcSet={fallbackSrcSet}
         sizes={sizes}
