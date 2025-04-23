@@ -9,8 +9,7 @@
     "e2e:open": "npx cypress open",
     "lint": "npx eslint .",
     "start": "npx serve@latest ./build",
-    "test": "vitest",
-    "type-check": "tsc --noEmit"
+    "test": "vitest"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
