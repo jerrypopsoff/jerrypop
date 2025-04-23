@@ -1,3 +1,5 @@
+import 'react';
+
 /**
  * TypeScript type augmentation for React's <img> element to support the
  * 'fetchpriority' attribute, which is now part of the HTML spec but not yet
