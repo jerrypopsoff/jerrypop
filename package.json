@@ -1,6 +1,6 @@
 {
   "name": "jerrypop",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -9,7 +9,8 @@
     "e2e:open": "npx cypress open",
     "lint": "npx eslint .",
     "start": "npx serve@latest ./build",
-    "test": "vitest"
+    "test": "vitest",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
