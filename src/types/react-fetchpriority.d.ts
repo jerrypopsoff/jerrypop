@@ -1,4 +1,5 @@
-import 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from 'react';
 
 /**
  * TypeScript type augmentation for React's <img> element to support the
