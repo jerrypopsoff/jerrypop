@@ -18,6 +18,7 @@ import {
   CATERING_ORDER_FORM_SRC,
   CATERING_ORDER_FORM_TITLE,
 } from '../constants/form';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -57,11 +58,11 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Catering = () => {
+  useDocumentTitle('Catering · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
-      {/* <title>Catering · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
         aspectRatio={2400 / 1350}

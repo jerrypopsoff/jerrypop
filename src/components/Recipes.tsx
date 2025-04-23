@@ -9,6 +9,7 @@ import PbjSheet2400 from '../images/glamorous-pbj-sheet-2400.jpeg';
 import PbjSheetWebp600 from '../images/glamorous-pbj-sheet-600.webp';
 import PbjSheetWebp1200 from '../images/glamorous-pbj-sheet-1200.webp';
 import PbjSheetWebp2400 from '../images/glamorous-pbj-sheet-2400.webp';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledUnorderedList = styled.ul`
   padding: 0;
@@ -17,9 +18,10 @@ const StyledUnorderedList = styled.ul`
 `;
 
 const Recipes = () => {
+  useDocumentTitle('Recipes · Jerrypop');
+
   return (
     <>
-      {/* <title>Recipes · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of PB&J Craft Popcorn spread onto a baking sheet"
         aspectRatio={4032 / 3024}

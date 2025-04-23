@@ -18,6 +18,7 @@ import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -57,11 +58,11 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Retail = () => {
+  useDocumentTitle('Retail · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
-      {/* <title>Retail · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
         aspectRatio={2080 / 1170}
