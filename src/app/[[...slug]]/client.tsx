@@ -11,7 +11,5 @@ export function ClientOnly() {
   useClickPop();
   useConsoleAsciiArt();
 
-  console.log('isProduction', isProduction());
-
   return <App />;
 }
