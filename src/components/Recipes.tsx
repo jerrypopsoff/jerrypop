@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { RECIPES } from '../constants/recipe';
 import Recipe from './Recipe';
 import Typography from './Typography';
@@ -10,6 +9,7 @@ import PbjSheet2400 from '../images/glamorous-pbj-sheet-2400.jpeg';
 import PbjSheetWebp600 from '../images/glamorous-pbj-sheet-600.webp';
 import PbjSheetWebp1200 from '../images/glamorous-pbj-sheet-1200.webp';
 import PbjSheetWebp2400 from '../images/glamorous-pbj-sheet-2400.webp';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledUnorderedList = styled.ul`
   padding: 0;
@@ -18,17 +18,24 @@ const StyledUnorderedList = styled.ul`
 `;
 
 const Recipes = () => {
+  useDocumentTitle('Recipes · Jerrypop');
+
   return (
     <>
-      <Helmet>
-        <title>Recipes · Jerrypop</title>
-      </Helmet>
       <GlamorPhotograph
         alt="Photograph of PB&J Craft Popcorn spread onto a baking sheet"
         aspectRatio={4032 / 3024}
-        fallbackSrc={PbjSheet2400}
-        fallbackSrcSet={`${PbjSheet600} 600w, ${PbjSheet1200} 1200w, ${PbjSheet2400} 2400w`}
-        srcSet={`${PbjSheetWebp600} 600w, ${PbjSheetWebp1200} 1200w, ${PbjSheetWebp2400} 2400w`}
+        fallbackSrc={PbjSheet2400.src}
+        fallbackSourceSet={[
+          { size: '600w', src: PbjSheet600.src },
+          { size: '1200w', src: PbjSheet1200.src },
+          { size: '2400w', src: PbjSheet2400.src },
+        ]}
+        sourceSet={[
+          { size: '600w', src: PbjSheetWebp600.src },
+          { size: '1200w', src: PbjSheetWebp1200.src },
+          { size: '2400w', src: PbjSheetWebp2400.src },
+        ]}
       />
       <Typography type="h1">Recipes</Typography>
       <Typography margin="12px 12px 24px" type="p">

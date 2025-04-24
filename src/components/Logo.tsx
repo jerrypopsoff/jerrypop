@@ -45,7 +45,7 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
     <>
       <StyledWordmark fillColor={theme.mainThemeMedium} />
       <StyledButton aria-label="Toggle website theme" onClick={onToggleTheme}>
-        <StyledLogo alt="Jerrypop logo" src={logo} />
+        <StyledLogo alt="Jerrypop logo" src={logo.src} />
       </StyledButton>
     </>
   );

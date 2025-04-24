@@ -50,7 +50,7 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Facebook"
-            src={isDark ? FacebookIconDark : FacebookIcon}
+            src={isDark ? FacebookIconDark.src : FacebookIcon.src}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -62,7 +62,7 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
-            src={isDark ? InstagramIconDark : InstagramIcon}
+            src={isDark ? InstagramIconDark.src : InstagramIcon.src}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -74,7 +74,7 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on YouTube"
-            src={isDark ? YouTubeIconDark : YouTubeIcon}
+            src={isDark ? YouTubeIconDark.src : YouTubeIcon.src}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -82,7 +82,7 @@ const SocialLinks = () => {
         <StyledSocialLink href={EMAIL_URL} target="_blank" rel="noreferrer">
           <StyledSocialLinkIcon
             alt="Email Jerrypop"
-            src={isDark ? EmailIconDark : EmailIcon}
+            src={isDark ? EmailIconDark.src : EmailIcon.src}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>

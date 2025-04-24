@@ -1,5 +1,4 @@
 import { RETAIL_PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
@@ -19,6 +18,7 @@ import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -58,19 +58,25 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Retail = () => {
+  useDocumentTitle('Retail · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
-      <Helmet>
-        <title>Retail · Jerrypop</title>
-      </Helmet>
       <GlamorPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
         aspectRatio={2080 / 1170}
-        fallbackSrc={GlamorousChipotleCheddar2400}
-        fallbackSrcSet={`${GlamorousChipotleCheddar600} 600w, ${GlamorousChipotleCheddar1200} 1200w, ${GlamorousChipotleCheddar2400} 2400w`}
-        srcSet={`${GlamorousChipotleCheddarWebp600} 600w, ${GlamorousChipotleCheddarWebp1200} 1200w, ${GlamorousChipotleCheddarWebp2400} 2400w`}
+        fallbackSrc={GlamorousChipotleCheddar2400.src}
+        fallbackSourceSet={[
+          { size: '600w', src: GlamorousChipotleCheddar600.src },
+          { size: '1200w', src: GlamorousChipotleCheddar1200.src },
+          { size: '2400w', src: GlamorousChipotleCheddar2400.src },
+        ]}
+        sourceSet={[
+          { size: '600w', src: GlamorousChipotleCheddarWebp600.src },
+          { size: '1200w', src: GlamorousChipotleCheddarWebp1200.src },
+          { size: '2400w', src: GlamorousChipotleCheddarWebp2400.src },
+        ]}
       />
       <Typography type="h1">Retail</Typography>
       <StyledOrderDescription type="p">

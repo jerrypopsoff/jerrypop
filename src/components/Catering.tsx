@@ -1,5 +1,4 @@
 import { CATERING_PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import ChocolateHazelnutEspresso600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
@@ -19,6 +18,7 @@ import {
   CATERING_ORDER_FORM_SRC,
   CATERING_ORDER_FORM_TITLE,
 } from '../constants/form';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -58,19 +58,25 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Catering = () => {
+  useDocumentTitle('Catering · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
-      <Helmet>
-        <title>Catering · Jerrypop</title>
-      </Helmet>
       <GlamorPhotograph
         alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
         aspectRatio={2400 / 1350}
-        fallbackSrc={ChocolateHazelnutEspresso2400}
-        fallbackSrcSet={`${ChocolateHazelnutEspresso600} 600w, ${ChocolateHazelnutEspresso1200} 1200w, ${ChocolateHazelnutEspresso2400} 2400w`}
-        srcSet={`${ChocolateHazelnutEspressoWebp600} 600w, ${ChocolateHazelnutEspressoWebp1200} 1200w, ${ChocolateHazelnutEspressoWebp2400} 2400w`}
+        fallbackSrc={ChocolateHazelnutEspresso2400.src}
+        fallbackSourceSet={[
+          { size: '600w', src: ChocolateHazelnutEspresso600.src },
+          { size: '1200w', src: ChocolateHazelnutEspresso1200.src },
+          { size: '2400w', src: ChocolateHazelnutEspresso2400.src },
+        ]}
+        sourceSet={[
+          { size: '600w', src: ChocolateHazelnutEspressoWebp600.src },
+          { size: '1200w', src: ChocolateHazelnutEspressoWebp1200.src },
+          { size: '2400w', src: ChocolateHazelnutEspressoWebp2400.src },
+        ]}
       />
       <Typography type="h1">Catering</Typography>
       <StyledOrderDescription type="p">

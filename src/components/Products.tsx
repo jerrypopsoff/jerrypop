@@ -1,6 +1,5 @@
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
-import { Helmet } from 'react-helmet-async';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import Products600 from '../images/glamorous-mala-lime-600.jpeg';
@@ -11,23 +10,32 @@ import ProductsWebp1200 from '../images/glamorous-mala-lime-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-mala-lime-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import styled from 'styled-components';
+import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledTileList = styled.ul`
   ${TILE_LIST_STYLE}
 `;
 
 const Products = () => {
+  useDocumentTitle('Products · Jerrypop');
+
   return (
     <>
-      <Helmet>
-        <title>Products · Jerrypop</title>
-      </Helmet>
+      {/* <title>Products · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}
-        fallbackSrc={Products2400}
-        fallbackSrcSet={`${Products600} 600w, ${Products1200} 1200w, ${Products2400} 2400w`}
-        srcSet={`${ProductsWebp600} 600w, ${ProductsWebp1200} 1200w, ${ProductsWebp2400} 2400w`}
+        fallbackSrc={Products2400.src}
+        fallbackSourceSet={[
+          { size: '600w', src: Products600.src },
+          { size: '1200w', src: Products1200.src },
+          { size: '2400w', src: Products2400.src },
+        ]}
+        sourceSet={[
+          { size: '600w', src: ProductsWebp600.src },
+          { size: '1200w', src: ProductsWebp1200.src },
+          { size: '2400w', src: ProductsWebp2400.src },
+        ]}
       />
       <Typography type="h1">Products</Typography>
       <Typography margin="12px 12px 24px" type="p">

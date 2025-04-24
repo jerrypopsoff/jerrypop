@@ -64,8 +64,8 @@ const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
       <StyledNavigationBarContent>
         <StyledWordmarkLink to="/">
           <StyledWordmark
-            alt="Jerrypop brand wordmark"
-            src={isDark ? WordmarkSvgDark : WordmarkSvg}
+            alt="Jerrypop wordmark"
+            src={isDark ? WordmarkSvgDark.src : WordmarkSvg.src}
           />
         </StyledWordmarkLink>
         <StyledMenuItems>

@@ -22,11 +22,11 @@ const asideFont = `
   margin-top: 8px;
 `;
 
-const StyledRecipe = styled.li<{ isCollapsed: boolean }>`
+const StyledRecipe = styled.li<{ $isCollapsed: boolean }>`
   ${CARD_OUTER_STYLE}
 
-  ${({ isCollapsed }) => {
-    if (!isCollapsed) {
+  ${({ $isCollapsed }) => {
+    if (!$isCollapsed) {
       return '';
     }
 
@@ -105,6 +105,10 @@ const StyledVideo = styled.div`
   }
 `;
 
+const StyledIframe = styled.iframe`
+  border: none;
+`;
+
 interface Props {
   recipe: Recipe;
 }
@@ -116,15 +120,14 @@ const RecipeComponent = ({ recipe }: Props) => {
     <>
       {recipe.href ? (
         <StyledVideo>
-          <iframe
+          <StyledIframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            frameBorder="0"
             height="100%"
             width="100%"
             src={recipe.href}
             title={recipe.title}
-          ></iframe>
+          ></StyledIframe>
         </StyledVideo>
       ) : null}
       <Typography margin="24px 0 16px" type="h4">
@@ -166,7 +169,7 @@ const RecipeComponent = ({ recipe }: Props) => {
 
   return (
     <StyledRecipe
-      isCollapsed={isCollapsed}
+      $isCollapsed={isCollapsed}
       onClick={isCollapsed ? onRecipeClick : undefined}
       onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
       role={isCollapsed ? 'button' : undefined}

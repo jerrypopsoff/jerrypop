@@ -52,10 +52,10 @@ const Team = () => {
       <StyledTeamMemberListItem>
         <StyledTeamMemberPhotograph
           alt="Photograph of Jerry Haagsma, Jerrypop Founder"
-          fallbackSrc={AboutJerryPhotograph}
-          fallbackSrcSet={`${AboutJerryPhotograph} 600w`}
+          fallbackSrc={AboutJerryPhotograph.src}
+          fallbackSourceSet={[{ size: '600w', src: AboutJerryPhotograph.src }]}
           sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PAGE_BREAKPOINT_PX}px), 95vw`}
-          srcSet={`${AboutJerryPhotographWebp} 600w`}
+          sourceSet={[{ size: '600w', src: AboutJerryPhotographWebp.src }]}
         />
         <StyledTeamMemberName type="h2">Jerry Haagsma</StyledTeamMemberName>
         <StyledTeamMemberTitle type="h3">Founder</StyledTeamMemberTitle>

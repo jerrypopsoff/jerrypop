@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { displayCurrency } from './currency';
 
 describe('utilities/currency', () => {
