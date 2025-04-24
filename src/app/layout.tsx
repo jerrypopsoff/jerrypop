@@ -2,6 +2,7 @@ import '../app.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
+import { isProduction } from '../utilities/environment';
 
 export const metadata = getMetadata();
 
@@ -17,7 +18,7 @@ export default function RootLayout({
       <head></head>
       <body>
         <div id="root">{children}</div>
-        {process.env.NODE_ENV === 'production' && (
+        {isProduction() && (
           <GoogleAnalytics gaId="G-4NGQXKPCPQ" />
         )}
       </body>
