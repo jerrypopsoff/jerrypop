@@ -1,6 +1,4 @@
 [build.environment]
-  # https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
-  NEXT_PUBLIC_NETLIFY_CONTEXT = "${CONTEXT}"
 
 # Cache Cypress binary in local `node_modules` folder, so Netlify caches it.
 CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
