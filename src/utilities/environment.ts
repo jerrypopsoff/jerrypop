@@ -18,6 +18,8 @@ function isNetlifyDeployContext(context?: string): context is NetlifyDeployConte
 function getDeployContext(): NetlifyDeployContext {
   const deployContext = process.env.NEXT_PUBLIC_DEPLOY_CONTEXT;
 
+  console.log('Deploy context:', deployContext);
+
   if (!isNetlifyDeployContext(deployContext)) {
     throw new Error(`Invalid deploy context "${deployContext}"`);
   }
