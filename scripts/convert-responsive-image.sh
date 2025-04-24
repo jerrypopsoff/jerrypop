@@ -1,11 +1,11 @@
 # Usage
 #
 # ```
-# ./convert-responsive-image <path-to-image>
+# ./scripts/convert-responsive-image.sh <path-to-image>
 # ```
 #
 # ```
-# ./convert-responsive-image src/images/glamorous-jalapeno-cheddar.jpeg
+# ./scripts/convert-responsive-image.sh src/images/glamorous-jalapeno-cheddar.jpeg
 # ```
 #
 # https://web.dev/serve-responsive-images/
