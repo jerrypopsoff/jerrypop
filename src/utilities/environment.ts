@@ -1,8 +1,6 @@
 /**
- * Inspiration for values can be found at
- * {@link https://docs.netlify.com/site-deploys/overview/#deploy-contexts Deploy contexts}, and the
- * values are configured in
- * {@link https://app.netlify.com/sites/jerrypop/configuration/env#NEXT_PUBLIC_RUNTIME_ENVIRONMENT Netlify}.
+ * See
+ * {@link https://docs.netlify.com/site-deploys/overview/#deploy-contexts Deploy contexts}.
  */
 type NetlifyDeployContext =
   'production' |
