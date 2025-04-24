@@ -1,32 +1,36 @@
-// https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
-type NetlifyContext = 'production' | 'deploy-preview' | 'branch-deploy';
+/**
+ * See
+ * {@link https://docs.netlify.com/site-deploys/overview/#deploy-contexts Deploy contexts}.
+ */
+type NetlifyDeployContext =
+  'production' |
+  'deploy-preview' |
+  'branch-deploy' |
+  'preview-server' |
+  'dev';
 
-function isNetlifyContext(context?: string): context is NetlifyContext {
+function isNetlifyDeployContext(context?: string): context is NetlifyDeployContext {
   return (
     context === 'production' ||
     context === 'deploy-preview' ||
-    context === 'branch-deploy'
+    context === 'branch-deploy' ||
+    context === 'preview-server' ||
+    context === 'dev'
   );
 }
 
-function getContext(): NetlifyContext | 'development' {
-  const netlifyContext = process.env.NEXT_PUBLIC_NETLIFY_CONTEXT;
+function getDeployContext(): NetlifyDeployContext {
+  const deployContext = process.env.NEXT_PUBLIC_DEPLOY_CONTEXT;
 
-  if (!isNetlifyContext(netlifyContext)) {
-    return 'development';
+  console.log('Deploy context:', deployContext);
+
+  if (!isNetlifyDeployContext(deployContext)) {
+    throw new Error(`Invalid deploy context "${deployContext}"`);
   }
 
-  return netlifyContext;
+  return deployContext;
 }
 
 export function isProduction() {
-  return getContext() === 'production';
-}
-
-export function isDeployPreview() {
-  return getContext() === 'deploy-preview';
-}
-
-export function isBranchDeploy() {
-  return getContext() === 'branch-deploy';
+  return getDeployContext() === 'production';
 }
