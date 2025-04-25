@@ -12,7 +12,7 @@ export interface Product {
   weight: string;
 }
 
-export interface CateringProduct extends Product {}
+export type CateringProduct = Product;
 
 export interface RetailProduct extends CateringProduct {
   priceMsrp: number;
