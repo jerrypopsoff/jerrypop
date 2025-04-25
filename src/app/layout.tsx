@@ -18,9 +18,7 @@ export default function RootLayout({
       <head></head>
       <body>
         <div id="root">{children}</div>
-        {isProduction() && (
-          <GoogleAnalytics gaId="G-4NGQXKPCPQ" />
-        )}
+        {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
   );
