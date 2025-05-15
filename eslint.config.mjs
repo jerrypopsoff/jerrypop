@@ -1,4 +1,3 @@
-import globals from 'globals';
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
 import react from 'eslint-plugin-react';
@@ -30,14 +29,6 @@ export default ts.config(
   // React configuration.
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-      },
-      globals: {
-        ...globals.browser,
-      },
-    },
     plugins: {
       react: react,
     },
@@ -76,12 +67,6 @@ export default ts.config(
   // Next.js configuration.
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      globals: {
-        // Add node globals for Next.js server-side code.
-        ...globals.node,
-      },
-    },
     plugins: {
       '@next/next': nextPlugin,
     },
