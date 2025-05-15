@@ -8,16 +8,15 @@ import nextPlugin from '@next/eslint-plugin-next';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from 'eslint-config-prettier';
 
-/** @type {import('eslint').Linter.Config[]} */
 export default ts.config(
   {
     ignores: ['node_modules/', '.next/', 'build/'],
   },
 
-  // Base ESLint recommended rules
+  // ECMAScript configuration.
   js.configs.recommended,
 
-  // Base TypeScript strict rules
+  // TypeScript configuration.
   ...ts.configs.strict,
   {
     rules: {
@@ -28,12 +27,9 @@ export default ts.config(
     },
   },
 
-  // React specific configurations
+  // React configuration.
   {
     files: ['**/*.{ts,tsx}'],
-    plugins: {
-      react: react,
-    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: { jsx: true },
@@ -42,65 +38,62 @@ export default ts.config(
         ...globals.browser,
       },
     },
+    plugins: {
+      react: react,
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
+    },
     settings: {
       react: {
         version: 'detect',
       },
     },
-    rules: {
-      ...react.configs.recommended.rules,
-      'react/no-unknown-property': ['error', { ignore: ['prefix'] }],
-      'react/react-in-jsx-scope': 'off',
-    },
   },
 
-  // React Hooks rules
+  // React Hooks configuration.
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
       'react-hooks': reactHooks,
     },
-    rules: reactHooks.configs.recommended.rules,
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-hooks/exhaustive-deps': 'error',
+    },
   },
 
-  // JSX Accessibility rules
+  // JSX accessibility configuration.
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
       'jsx-a11y': jsxA11y,
     },
-    rules: jsxA11y.configs.recommended.rules,
+    rules: jsxA11y.configs.strict.rules,
   },
 
-  // Next.js specific rules
-  // Note: `eslint-config-next` often bundles many of the above rules.
-  // Here we are explicitly including the plugin rules.
-  // If `eslint-config-next` provides a flat config export in the future,
-  // you might simplify this by directly using that export.
+  // Next.js configuration.
   {
     files: ['**/*.{ts,tsx}'],
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-      // Example: Adjust Next.js specific rules if needed
-      // "@next/next/no-img-element": "warn", // Warn instead of error for <img> element
-    },
     languageOptions: {
       globals: {
         // Add node globals for Next.js server-side code.
         ...globals.node,
       },
     },
+    plugins: {
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+    },
   },
 
-  // This enables the `prettier/prettier` rule.
+  // Enable the `prettier/prettier` rule.
   prettierRecommended,
 
-  // Prettier configuration
-  // IMPORTANT: Must be the LAST configuration object in the array
-  // to ensure it overrides any conflicting formatting rules from other configs.
+  // Prettier configuration (must be the final configuration object).
   prettierConfig,
 );
