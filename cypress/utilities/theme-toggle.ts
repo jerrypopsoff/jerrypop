@@ -13,7 +13,6 @@ export function verifyThemeToggle(
     cy.get(backgroundColorElementSelector)
       .first()
       .invoke('css', 'background-color')
-      // eslint-disable-next-line no-loop-func
       .then((previousBackgroundColor) => {
         cy.get(toggleButtonSelector).click();
         cy.get('body').should(

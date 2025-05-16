@@ -1,27 +1,84 @@
-import { includeIgnoreFile } from '@eslint/compat';
-import { FlatCompat } from '@eslint/eslintrc';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import nextPlugin from '@next/eslint-plugin-next';
+import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import prettierConfig from 'eslint-config-prettier';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, '.gitignore');
-
-const compat = new FlatCompat({
-  ignorePatterns: ['.gitignore'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['prettier'],
-  root: true,
-  rules: {
-    '@typescript-eslint/no-explicit-any': 'error',
-    'prettier/prettier': 'error',
-    'sort-keys': 'error',
+export default ts.config(
+  {
+    ignores: ['node_modules/', '.next/', 'build/'],
   },
-});
 
-const configuration = [
-  includeIgnoreFile(gitignorePath),
-  ...compat.extends('react-app'),
-];
+  // ECMAScript configuration.
+  js.configs.recommended,
 
-export default configuration;
+  // TypeScript configuration.
+  ...ts.configs.strict,
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_' },
+      ],
+    },
+  },
+
+  // React configuration.
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      react: react,
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+
+  // React Hooks configuration.
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-hooks/exhaustive-deps': 'error',
+    },
+  },
+
+  // JSX accessibility configuration.
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      'jsx-a11y': jsxA11y,
+    },
+    rules: jsxA11y.configs.strict.rules,
+  },
+
+  // Next.js configuration.
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+    },
+  },
+
+  // Enable the `prettier/prettier` rule.
+  prettierRecommended,
+
+  // Prettier configuration (must be the final configuration object).
+  prettierConfig,
+);

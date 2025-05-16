@@ -164,7 +164,11 @@ const RecipeComponent = ({ recipe }: Props) => {
   };
 
   const onRecipeKeyDown = ({ key }: { key: string } = { key: '' }) => {
-    key === 'Enter' && setIsCollapsed(!isCollapsed);
+    if (key !== 'Enter') {
+      return;
+    }
+
+    setIsCollapsed(!isCollapsed);
   };
 
   return (

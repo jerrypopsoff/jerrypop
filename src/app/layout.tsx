@@ -14,13 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    // Disable react/no-unknown-property to allow the prefix attribute.
+    // eslint-disable-next-line react/no-unknown-property
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
       <body>
         <div id="root">{children}</div>
-        {isProduction() && (
-          <GoogleAnalytics gaId="G-4NGQXKPCPQ" />
-        )}
+        {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
   );
