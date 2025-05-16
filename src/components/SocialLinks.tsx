@@ -7,13 +7,14 @@ import InstagramIconDark from '../images/instagram-icon-dark.svg';
 import YouTubeIcon from '../images/youtube-icon.svg';
 import YouTubeIconDark from '../images/youtube-icon-dark.svg';
 import styled from 'styled-components';
-import { isDarkMode } from '../utilities/dark-mode';
+import { useDarkMode } from '../hooks/use-dark-mode';
 import {
   EMAIL_URL,
   FACEBOOK_PROFILE_URL,
   INSTAGRAM_PROFILE_URL,
   YOU_TUBE_CHANNEL_URL,
 } from '../constants/url';
+import Image from 'next/image';
 
 const StyledSocialLinksList = styled.ul`
   align-items: center;
@@ -31,14 +32,14 @@ const StyledSocialLink = styled.a`
   display: flex;
 `;
 
-const StyledSocialLinkIcon = styled.img`
+const StyledSocialLinkIcon = styled(Image)`
   height: 24px;
   padding: 4px;
   width: 24px;
 `;
 
 const SocialLinks = () => {
-  const isDark = isDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <StyledSocialLinksList>
@@ -50,7 +51,9 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Facebook"
-            src={isDark ? FacebookIconDark.src : FacebookIcon.src}
+            height={24}
+            src={isDarkMode ? FacebookIconDark.src : FacebookIcon.src}
+            width={24}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -62,7 +65,9 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
-            src={isDark ? InstagramIconDark.src : InstagramIcon.src}
+            height={24}
+            src={isDarkMode ? InstagramIconDark.src : InstagramIcon.src}
+            width={24}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -74,7 +79,9 @@ const SocialLinks = () => {
         >
           <StyledSocialLinkIcon
             alt="Jerrypop on YouTube"
-            src={isDark ? YouTubeIconDark.src : YouTubeIcon.src}
+            height={24}
+            src={isDarkMode ? YouTubeIconDark.src : YouTubeIcon.src}
+            width={24}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>
@@ -82,7 +89,9 @@ const SocialLinks = () => {
         <StyledSocialLink href={EMAIL_URL} target="_blank" rel="noreferrer">
           <StyledSocialLinkIcon
             alt="Email Jerrypop"
-            src={isDark ? EmailIconDark.src : EmailIcon.src}
+            height={24}
+            src={isDarkMode ? EmailIconDark.src : EmailIcon.src}
+            width={24}
           />
         </StyledSocialLink>
       </StyledSocialLinksListItem>

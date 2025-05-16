@@ -1,3 +1,5 @@
+'use client';
+
 import SocialLinks from './SocialLinks';
 import Typography from './Typography';
 import styled from 'styled-components';

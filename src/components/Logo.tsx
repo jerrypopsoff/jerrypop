@@ -4,6 +4,7 @@ import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 import { LOGO_Z_INDEX } from '../constants/z-index';
 import WordmarkRepeated from './WordmarkRepeated';
+import Image from 'next/image';
 
 const StyledWordmark = styled(WordmarkRepeated)`
   height: 698px;
@@ -23,7 +24,7 @@ const StyledButton = styled.button`
   z-index: ${LOGO_Z_INDEX};
 `;
 
-const StyledLogo = styled.img`
+const StyledLogo = styled(Image)`
   height: 300px;
   margin-bottom: -8px; // Offset drop shadow dead space.
   max-width: 70vw;
@@ -45,7 +46,12 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
     <>
       <StyledWordmark fillColor={theme.mainThemeMedium} />
       <StyledButton aria-label="Toggle website theme" onClick={onToggleTheme}>
-        <StyledLogo alt="Jerrypop logo" src={logo.src} />
+        <StyledLogo
+          alt="Jerrypop logo"
+          height={300}
+          src={logo.src}
+          width={300}
+        />
       </StyledButton>
     </>
   );
