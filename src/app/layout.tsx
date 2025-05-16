@@ -3,6 +3,8 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
 import { isProduction } from '../utilities/environment';
+import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
+import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import { ThemeProvider } from 'next-themes';
 
 export const metadata = getMetadata();
@@ -23,9 +25,12 @@ export default function RootLayout({
     <html lang="en" prefix="og: https://ogp.me/ns#" suppressHydrationWarning>
       <head></head>
       <body>
+        <StyledComponentsRegistry>
           <ThemeProvider>
+            <GlobalStyle />
             {children}
           </ThemeProvider>
+        </StyledComponentsRegistry>
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
