@@ -7,7 +7,7 @@ import NotFound from './NotFound';
 import { StrictMode } from 'react';
 import Recipes from './Recipes';
 import ScrollToTopOnPathChange from './ScrollToTopOnPathChange';
-import { useTheme } from '../hooks/use-theme';
+import { useJerrypopTheme } from '../hooks/use-jerrypop-theme';
 import NavigationBar from './NavigationBar';
 import Products from './Products';
 import Merch from './Merch';
@@ -15,7 +15,7 @@ import Retail from './Retail';
 import Catering from './Catering';
 
 const App = () => {
-  useTheme();
+  useJerrypopTheme();
 
   return (
     <StrictMode>

@@ -2,7 +2,7 @@ import SocialLinks from './SocialLinks';
 import Typography from './Typography';
 import styled from 'styled-components';
 import Logo from './Logo';
-import { useTheme } from '../hooks/use-theme';
+import { useJerrypopTheme } from '../hooks/use-jerrypop-theme';
 import {
   FOOTER_TOP_MARGIN_PX,
   WINDOW_NARROW_WIDTH_PX,
@@ -61,12 +61,12 @@ const StyledCopyright = styled(Typography)`
 `;
 
 const Footer = () => {
-  const [theme, rotateTheme] = useTheme();
+  const [jerrypopTheme, incrementJerrypopTheme] = useJerrypopTheme();
 
   return (
     <StyledFooter>
       <StyledThemeSection>
-        <Logo onToggleTheme={rotateTheme} theme={theme} />
+        <Logo onToggleTheme={incrementJerrypopTheme} theme={jerrypopTheme} />
       </StyledThemeSection>
       <StyledFooterInformation>
         <StyledPopcornButton onClick={() => increaseKernelCount()}>
