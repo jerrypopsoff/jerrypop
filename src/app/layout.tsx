@@ -4,6 +4,7 @@ import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
 import { isProduction } from '../utilities/environment';
 import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
+import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
 import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
@@ -33,6 +34,7 @@ export default function RootLayout({
             <GlobalStyle />
             <ConsoleAsciiArt />
             <ClickPop />
+            <NavigationBar />
             {children}
             <Footer />
           </ThemeProvider>

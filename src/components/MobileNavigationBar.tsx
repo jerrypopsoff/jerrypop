@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import {
@@ -16,7 +18,8 @@ import {
   NAVIGATION_MENU_LINK_STYLE,
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
-import { isDarkMode } from '../utilities/dark-mode';
+import { useDarkMode } from '../hooks/use-dark-mode';
+import Image from 'next/image';
 
 const MENU_ITEM_HEIGHT_PX = 60;
 
@@ -80,7 +83,7 @@ const StyledWordmarkLink = styled(Link)`
   ${NAVIGATION_BAR_WORDMARK_LINK_STYLE}
 `;
 
-const StyledWordmark = styled.img`
+const StyledWordmark = styled(Image)`
   height: 30px;
   margin: 6px 2px 0 0;
   width: 134px;
@@ -140,7 +143,7 @@ interface Props {
 }
 
 const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
-  const isDark = isDarkMode();
+  const { isDarkMode } = useDarkMode();
   const [isOpen, setIsOpen] = useState(false);
   const navigationMenuItemsHeightPx =
     (navigationMenuItems.length + 1) * MENU_ITEM_HEIGHT_PX;
@@ -160,10 +163,12 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
             <StyledHamburgerLine aria-hidden="true" />
             <StyledHamburgerLine aria-hidden="true" />
           </StyledHamburgerButton>
-          <StyledWordmarkLink onClick={() => setIsOpen(false)} to="/">
+          <StyledWordmarkLink onClick={() => setIsOpen(false)} href="/">
             <StyledWordmark
               alt="Jerrypop brand wordmark"
-              src={isDark ? WordmarkSvgDark.src : WordmarkSvg.src}
+              height={30}
+              src={isDarkMode ? WordmarkSvgDark.src : WordmarkSvg.src}
+              width={134}
             />
           </StyledWordmarkLink>
         </StyledNavigationBarContentInner>
@@ -182,14 +187,14 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
             <StyledCloseButtonIcon>✕</StyledCloseButtonIcon>
           </StyledCloseButton>
         </li>
-        {navigationMenuItems.map(({ displayName, isExternal, to }) => (
+        {navigationMenuItems.map(({ displayName, href, isExternal }) => (
           <li key={displayName}>
             <StyledMenuItemLink
+              href={href}
               onClick={() => setIsOpen(false)}
               rel={isExternal ? 'noreferrer' : undefined}
               tabIndex={isOpen ? 0 : -1}
               target={isExternal ? '_blank' : undefined}
-              to={to}
             >
               <StyledMenuItemLinkInner>{displayName}</StyledMenuItemLinkInner>
             </StyledMenuItemLink>
