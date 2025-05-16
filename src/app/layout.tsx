@@ -3,6 +3,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
 import { isProduction } from '../utilities/environment';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata = getMetadata();
 
@@ -14,12 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Disable react/no-unknown-property to allow the prefix attribute.
+    /**
+     * suppressHydrationWarning needed for `next-themes`
+     * https://github.com/pacocoursey/next-themes
+     */
     // eslint-disable-next-line react/no-unknown-property
-    <html lang="en" prefix="og: https://ogp.me/ns#">
+    <html lang="en" prefix="og: https://ogp.me/ns#" suppressHydrationWarning>
       <head></head>
       <body>
-        <div id="root">{children}</div>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
