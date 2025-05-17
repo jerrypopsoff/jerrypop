@@ -10,16 +10,13 @@ import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
 import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
 import { ThemeProvider } from 'next-themes';
+import { ReactNode } from 'react';
 
 export const metadata = getMetadata();
 
 export const viewport = getViewport();
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     /**
      * suppressHydrationWarning needed for `next-themes`
