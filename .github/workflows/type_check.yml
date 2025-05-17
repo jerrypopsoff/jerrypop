@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  unit-test:
+  type-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
