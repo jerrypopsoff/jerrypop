@@ -2,7 +2,7 @@ import { RoutePath } from '../types/route-path';
 
 describe('not found page tests', () => {
   beforeEach(() => {
-    cy.visit(RoutePath.NotFound);
+    cy.visit(RoutePath.NotFound, { failOnStatusCode: false });
   });
 
   // Todo: re-enable after migrating to Next.js app router.

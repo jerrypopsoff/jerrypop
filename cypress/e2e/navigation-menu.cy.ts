@@ -5,14 +5,14 @@ import { NAVIGATION_MENU_ITEMS } from '../../src/constants/navigation';
 describe('navigation menu tests', () => {
   it('always presents a link to the current page', () => {
     NAVIGATION_MENU_ITEMS.filter((item) => !item.isExternal).forEach((item) => {
-      cy.visit(item.to);
+      cy.visit(item.href);
       cy.get('nav a').should('have.length', 12);
-      cy.get(`a[href="${item.to}"]`).should('exist');
+      cy.get(`a[href="${item.href}"]`).should('exist');
     });
   });
 
   it('allows navigation to every valid page', () => {
-    cy.visit(RoutePath.NotFound);
+    cy.visit(RoutePath.NotFound, { failOnStatusCode: false });
     cy.url().should('include', RoutePath.NotFound);
 
     clickNavigationLink(RoutePath.Home);
