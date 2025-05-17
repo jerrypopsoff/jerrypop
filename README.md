@@ -24,6 +24,10 @@ Run the application in production mode based on the latest execution of `pnpm bu
 
 Execute static analysis for the application source code.
 
+### `pnpm typecheck`
+
+Execute static analysis for TypeScript compilation errors.
+
 ### `pnpm e2e`
 
 Execute all end-to-end tests against the application being served locally. [Options](https://docs.cypress.io/guides/guides/command-line#cypress-run) can be specified via command line arguments.
