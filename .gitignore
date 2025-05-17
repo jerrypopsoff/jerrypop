@@ -9,6 +9,9 @@ next-env.d.ts
 # TypeScript incremental build cache
 *.tsbuildinfo
 
+# Test coverage
+/coverage
+
 # Local environment variables
 .env.local
 .env.development.local
