@@ -1,7 +1,7 @@
 import '../app.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { getMetadata } from '../utilities/metadata';
-import { getViewport } from '../utilities/viewport';
+import { METADATA } from '../constants/metadata';
+import { VIEWPORT } from '../constants/viewport';
 import { isProduction } from '../utilities/environment';
 import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
@@ -13,9 +13,9 @@ import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
 import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
-export const metadata = getMetadata();
+export const metadata = METADATA;
 
-export const viewport = getViewport();
+export const viewport = VIEWPORT;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
