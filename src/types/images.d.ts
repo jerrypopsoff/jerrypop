@@ -1,24 +1,26 @@
+import type { SourceSet } from './image';
+
 declare module '*.png' {
-  const value: string;
+  const value: SourceSet;
   export default value;
 }
 
 declare module '*.jpg' {
-  const value: string;
+  const value: SourceSet;
   export default value;
 }
 
 declare module '*.jpeg' {
-  const value: string;
+  const value: SourceSet;
   export default value;
 }
 
 declare module '*.svg' {
-  const value: string;
+  const value: SourceSet;
   export default value;
 }
 
 declare module '*.webp' {
-  const value: string;
+  const value: SourceSet;
   export default value;
 }
