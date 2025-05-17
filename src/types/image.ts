@@ -1,6 +1,4 @@
-export interface ImageSource {
+export type SourceSet = {
   size: string;
   src: string;
-}
-
-export type SourceSet = ImageSource[];
+}[];
