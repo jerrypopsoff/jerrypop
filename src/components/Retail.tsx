@@ -1,3 +1,5 @@
+'use client';
+
 import { RETAIL_PRODUCTS } from '../constants/product';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -18,7 +20,6 @@ import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -58,7 +59,6 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Retail = () => {
-  useDocumentTitle('Retail · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (

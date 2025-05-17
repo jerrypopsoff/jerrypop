@@ -1,3 +1,5 @@
+'use client';
+
 import Typography from './Typography';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -8,7 +10,6 @@ import BlueberryPancakeWebp600 from '../images/glamorous-blueberry-pancake-600.w
 import BlueberryPancakeWebp1200 from '../images/glamorous-blueberry-pancake-1200.webp';
 import BlueberryPancakeWebp2400 from '../images/glamorous-blueberry-pancake-2400.webp';
 import Team from './Team';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledAbout = styled.div`
   align-items: center;
@@ -18,8 +19,6 @@ const StyledAbout = styled.div`
 `;
 
 const About = () => {
-  useDocumentTitle('About · Jerrypop');
-
   return (
     <>
       <StyledAbout>
