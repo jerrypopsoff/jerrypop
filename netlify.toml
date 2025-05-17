@@ -4,17 +4,13 @@
 
 [build]
   command = "pnpm build"
-  publish = "build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
   [headers.values]
     Content-Security-Policy = "frame-ancestors 'self'"
     X-Content-Type-Options = "nosniff"
-
-# The following redirect is intended for use with most SPAs that handle
-# routing internally.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200

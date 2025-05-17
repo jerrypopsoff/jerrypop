@@ -9,7 +9,6 @@ export const WHITE = '#fff';
  */
 export const SOFT_BLACK = '#212121';
 export const SOFT_WHITE = '#fafafa';
-export const ICON_HOVER_LIGHT_BACKGROUND = 'rgba(250, 250, 250, 0.1)';
 
 /**
  * Transparency

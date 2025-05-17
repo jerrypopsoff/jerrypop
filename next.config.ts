@@ -1,8 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // Output a Single-Page Application (SPA)
-  distDir: 'build', // Change the build output directory to `build`
+  compiler: {
+    // https://nextjs.org/docs/app/guides/css-in-js#styled-components
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;

@@ -1,3 +1,5 @@
+'use client';
+
 import { CATERING_PRODUCTS } from '../constants/product';
 import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
@@ -9,7 +11,7 @@ import ChocolateHazelnutEspressoWebp1200 from '../images/glamorous-chocolate-haz
 import ChocolateHazelnutEspressoWebp2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import PricingListItem from './PricingListItem';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { BUTTON_STYLE } from '../constants/css/button';
 import FormDialog from './FormDialog';
@@ -18,7 +20,6 @@ import {
   CATERING_ORDER_FORM_SRC,
   CATERING_ORDER_FORM_TITLE,
 } from '../constants/form';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledOrderDescription = styled(Typography)`
   margin: 24px auto;
@@ -58,7 +59,6 @@ const StyledLogisticsDescriptionDetails = styled.dd`
 `;
 
 const Catering = () => {
-  useDocumentTitle('Catering · Jerrypop');
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
@@ -121,11 +121,8 @@ const Catering = () => {
           Additional information
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          See{' '}
-          <Link rel="noreferrer" target="_blank" to="/products">
-            Products
-          </Link>{' '}
-          for product photographs, ingredients, and allergens.
+          See <Link href="/products">Products</Link> for product photographs,
+          ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
       <Typography type="h2">Pricing</Typography>

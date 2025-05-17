@@ -20,11 +20,5 @@
   },
   "exclude": ["cypress", "cypress.config.ts"],
   "extends": "@tsconfig/recommended/tsconfig.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "build/types/**/*.ts",
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"]
 }

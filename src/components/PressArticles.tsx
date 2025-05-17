@@ -11,6 +11,7 @@ import {
 import { ARTICLES } from '../constants/press';
 import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
 import OptimizedImage from './OptimizedImage';
+import Link from 'next/link';
 
 const StyledTileList = styled.ul`
   ${TILE_LIST_STYLE}
@@ -20,7 +21,7 @@ const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
   ${TILE_LIST_ITEM_STYLE}
 `;
 
-const StyledArticleListItem = styled.a<{ $imageWidthPx: number }>`
+const StyledArticleListItem = styled(Link)<{ $imageWidthPx: number }>`
   ${TILE_LIST_ITEM_LINK_STYLE}
 `;
 
