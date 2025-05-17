@@ -24,7 +24,7 @@ Run the application in production mode based on the latest execution of `pnpm bu
 
 Execute static analysis for the application source code.
 
-### `pnpm typecheck`
+### `pnpm type-check`
 
 Execute static analysis for TypeScript compilation errors.
 
