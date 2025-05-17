@@ -4,6 +4,7 @@ import { getMetadata } from '../utilities/metadata';
 import { getViewport } from '../utilities/viewport';
 import { isProduction } from '../utilities/environment';
 import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
+import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
 import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
 import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <GlobalStyle />
             <ConsoleAsciiArt />
             <ClickPop />
+            <ScrollToTopOnPathChange />
             <NavigationBar />
             {children}
             <Footer />
