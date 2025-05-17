@@ -5,10 +5,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "e2e": "npx cypress run",
-    "e2e:open": "npx cypress open",
+    "e2e": "cypress run",
+    "e2e:open": "cypress open",
     "lint": "eslint .",
-    "start": "npx next start",
+    "start": "next start",
     "test": "vitest"
   },
   "dependencies": {
