@@ -9,7 +9,8 @@
     "e2e:open": "cypress open",
     "lint": "eslint .",
     "start": "next start",
-    "test": "vitest"
+    "test": "vitest",
+    "type-check": "tsc --noEmit && tsc --noEmit -p cypress/tsconfig.json"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
