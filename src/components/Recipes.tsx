@@ -1,3 +1,5 @@
+'use client';
+
 import { RECIPES } from '../constants/recipe';
 import Recipe from './Recipe';
 import Typography from './Typography';
@@ -9,7 +11,6 @@ import PbjSheet2400 from '../images/glamorous-pbj-sheet-2400.jpeg';
 import PbjSheetWebp600 from '../images/glamorous-pbj-sheet-600.webp';
 import PbjSheetWebp1200 from '../images/glamorous-pbj-sheet-1200.webp';
 import PbjSheetWebp2400 from '../images/glamorous-pbj-sheet-2400.webp';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledUnorderedList = styled.ul`
   padding: 0;
@@ -18,8 +19,6 @@ const StyledUnorderedList = styled.ul`
 `;
 
 const Recipes = () => {
-  useDocumentTitle('Recipes · Jerrypop');
-
   return (
     <>
       <GlamorPhotograph

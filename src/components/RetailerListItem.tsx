@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { CARD_OUTER_STYLE } from '../constants/css/card';
 import { Retailer } from '../types/retailer';
 import Typography from './Typography';
+import Link from 'next/link';
 
 const StyledListItem = styled.li`
   ${CARD_OUTER_STYLE}
@@ -9,7 +10,7 @@ const StyledListItem = styled.li`
   max-width: 350px;
 `;
 
-const StyledRetailerAnchor = styled.a`
+const StyledRetailerAnchor = styled(Link)`
   align-items: center;
   box-sizing: border-box;
   display: flex;

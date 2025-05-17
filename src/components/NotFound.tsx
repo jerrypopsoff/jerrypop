@@ -1,9 +1,8 @@
-import { useDocumentTitle } from '../hooks/use-document-title';
+'use client';
+
 import Typography from './Typography';
 
 const NotFound = () => {
-  useDocumentTitle('Page Not Found · Jerrypop');
-
   return (
     <>
       <Typography type="h1">Ope!</Typography>

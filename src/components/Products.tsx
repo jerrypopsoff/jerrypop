@@ -1,3 +1,5 @@
+'use client';
+
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
 import Typography from './Typography';
@@ -10,18 +12,14 @@ import ProductsWebp1200 from '../images/glamorous-mala-lime-1200.webp';
 import ProductsWebp2400 from '../images/glamorous-mala-lime-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import styled from 'styled-components';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const StyledTileList = styled.ul`
   ${TILE_LIST_STYLE}
 `;
 
 const Products = () => {
-  useDocumentTitle('Products · Jerrypop');
-
   return (
     <>
-      {/* <title>Products · Jerrypop</title> */}
       <GlamorPhotograph
         alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}

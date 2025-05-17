@@ -5,6 +5,7 @@ export function getMetadata(): Metadata {
   return {
     title: TITLE,
     description: DESCRIPTION,
+    metadataBase: new URL('https://jerrypop.com'),
     openGraph: {
       title: TITLE,
       description: DESCRIPTION,
