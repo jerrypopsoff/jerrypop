@@ -4,6 +4,7 @@ import AboutJerryPhotograph from '../images/about-jerry.jpeg';
 import AboutJerryPhotographWebp from '../images/about-jerry.webp';
 import OptimizedImage from './OptimizedImage';
 import { YOU_TUBE_CHANNEL_URL } from '../constants/url';
+import Link from 'next/link';
 
 const PHOTOGRAPH_MAX_HEIGHT_PX = 400;
 const PHOTOGRAPH_MAX_WIDTH_PX = 300;
@@ -75,18 +76,18 @@ const Team = () => {
         <Typography maxWidth="600px" type="p">
           After moving to San Francisco in 2017, I continued to hone my craft,
           eventually turning to{' '}
-          <a href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
+          <Link href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
             video production
-          </a>{' '}
+          </Link>{' '}
           during the pandemic to share my popcorn techniques and learnings. In
           April 2022 I{' '}
-          <a
+          <Link
             href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
             rel="noreferrer"
             target="_blank"
           >
             quit my job
-          </a>{' '}
+          </Link>{' '}
           to pursue my dream of starting a business dedicated to producing the
           most satisfying popcorn in the world.
         </Typography>

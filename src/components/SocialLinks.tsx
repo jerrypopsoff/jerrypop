@@ -15,6 +15,7 @@ import {
   YOU_TUBE_CHANNEL_URL,
 } from '../constants/url';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const StyledSocialLinksList = styled.ul`
   align-items: center;
@@ -28,7 +29,7 @@ const StyledSocialLinksListItem = styled.li`
   margin: 0 4px;
 `;
 
-const StyledSocialLink = styled.a`
+const StyledSocialLink = styled(Link)`
   display: flex;
 `;
 

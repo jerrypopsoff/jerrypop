@@ -9,7 +9,7 @@ import ChocolateHazelnutEspressoWebp1200 from '../images/glamorous-chocolate-haz
 import ChocolateHazelnutEspressoWebp2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import PricingListItem from './PricingListItem';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { BUTTON_STYLE } from '../constants/css/button';
 import FormDialog from './FormDialog';
@@ -121,11 +121,8 @@ const Catering = () => {
           Additional information
         </StyledLogisticsDescriptionTerm>
         <StyledLogisticsDescriptionDetails>
-          See{' '}
-          <Link rel="noreferrer" target="_blank" to="/products">
-            Products
-          </Link>{' '}
-          for product photographs, ingredients, and allergens.
+          See <Link href="/products">Products</Link> for product photographs,
+          ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
       <Typography type="h2">Pricing</Typography>

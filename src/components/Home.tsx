@@ -73,7 +73,7 @@ const Home = () => {
         </Typography>
         <Typography type="p">
           Catch my next pop-up or{' '}
-          <a
+          <Link
             href={`mailto:info@jerrypop.com?subject=${encodeURIComponent(
               POP_UP_REQUEST_EMAIL_SUBJECT,
             )}&body=${encodeURIComponent(POP_UP_REQUEST_EMAIL_BODY)}`}
@@ -81,7 +81,7 @@ const Home = () => {
             target="_blank"
           >
             request a pop-up
-          </a>{' '}
+          </Link>{' '}
           at your event.
         </Typography>
         <StyledLink
