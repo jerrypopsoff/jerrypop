@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     // https://nextjs.org/docs/app/guides/css-in-js#styled-components
     styledComponents: true,
   },
-  distDir: 'build', // Change the build output directory to `build`
 };
 
 export default nextConfig;
