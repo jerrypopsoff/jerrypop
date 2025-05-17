@@ -12,7 +12,6 @@ import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp'
 import PressArticles from './PressArticles';
 import { BUTTON_STYLE } from '../constants/css/button';
 import Link from 'next/link';
-import { useDocumentTitle } from '../hooks/use-document-title';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
 const POP_UP_REQUEST_EMAIL_BODY =
@@ -38,8 +37,6 @@ const StyledLink = styled(Link)`
 `;
 
 const Home = () => {
-  useDocumentTitle('Jerrypop');
-
   return (
     <StyledHome>
       <GlamorPhotograph
