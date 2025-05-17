@@ -5,7 +5,7 @@ import type { Theme } from '../types/theme';
 let currentThemeIndex = 0;
 
 export function useJerrypopTheme(): [Theme, () => void] {
-  const [jerrypopTheme, setTheme] = useState(THEMES[currentThemeIndex]);
+  const [jerrypopTheme, setJerrypopTheme] = useState(THEMES[currentThemeIndex]);
 
   /**
    * `useCallback` prevents infinite re-render via the `useEffect` in the
@@ -17,7 +17,7 @@ export function useJerrypopTheme(): [Theme, () => void] {
       currentThemeIndex = 0;
     }
 
-    setTheme(THEMES[currentThemeIndex]);
+    setJerrypopTheme(THEMES[currentThemeIndex]);
   }, []);
 
   useEffect(() => {
