@@ -1,6 +1,9 @@
 import { RoutePath } from '../types/route-path';
-import { clickNavigationLink } from '../utilities/navigation-menu';
 import { NAVIGATION_MENU_ITEMS } from '../../src/constants/navigation';
+
+function clickNavigationLink(path: RoutePath) {
+  cy.get(`nav a[href="${path}"]`).first().click();
+}
 
 describe('navigation menu tests', () => {
   it('always presents a link to the current page', () => {
