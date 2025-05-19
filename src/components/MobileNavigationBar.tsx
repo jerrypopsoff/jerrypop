@@ -177,7 +177,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
       >
         <li>
           <StyledCloseButton
-            aria-label="Close"
+            aria-label="Close navigation menu"
             onClick={() => setIsOpen(!isOpen)}
             tabIndex={isOpen ? 0 : -1}
           >
