@@ -102,7 +102,10 @@ const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
         open={true}
       >
         <StyledDialogHeader>
-          <StyledCloseButton aria-label="Close" onClick={onCloseFormDialog}>
+          <StyledCloseButton
+            aria-label="Close dialog"
+            onClick={onCloseFormDialog}
+          >
             ✕
           </StyledCloseButton>
         </StyledDialogHeader>
