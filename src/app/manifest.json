@@ -6,8 +6,8 @@
   "scope": "/",
   "display": "standalone",
   "display_override": ["minimal-ui"],
-  "background_color": "#212121",
-  "theme_color": "#0072da",
+  "background_color": "rgb(33, 33, 33)",
+  "theme_color": "rgb(0, 114, 218)",
   "icons": [
     {
       "src": "/favicon.ico",
