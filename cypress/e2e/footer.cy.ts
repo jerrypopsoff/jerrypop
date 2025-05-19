@@ -1,9 +1,11 @@
 import { RoutePath } from '../types/route-path';
 
 describe('footer tests', () => {
-  it('displays the appropriate footer content', () => {
+  beforeEach(() => {
     cy.visit(RoutePath.Home);
+  });
 
+  it('displays the appropriate footer content', () => {
     cy.get('footer p').should(
       'have.text',
       `© ${new Date().getFullYear()} Jerrypop, LLC`,
