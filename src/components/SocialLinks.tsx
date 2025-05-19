@@ -1,13 +1,8 @@
-import EmailIcon from '../images/email-icon.svg';
 import EmailIconDark from '../images/email-icon-dark.svg';
-import FacebookIcon from '../images/facebook-icon.svg';
 import FacebookIconDark from '../images/facebook-icon-dark.svg';
-import InstagramIcon from '../images/instagram-icon.svg';
 import InstagramIconDark from '../images/instagram-icon-dark.svg';
-import YouTubeIcon from '../images/youtube-icon.svg';
 import YouTubeIconDark from '../images/youtube-icon-dark.svg';
 import styled from 'styled-components';
-import { useDarkMode } from '../hooks/use-dark-mode';
 import {
   EMAIL_URL,
   FACEBOOK_PROFILE_URL,
@@ -40,8 +35,6 @@ const StyledSocialLinkIcon = styled(Image)`
 `;
 
 const SocialLinks = () => {
-  const { isDarkMode } = useDarkMode();
-
   return (
     <StyledSocialLinksList>
       <StyledSocialLinksListItem>
@@ -53,7 +46,7 @@ const SocialLinks = () => {
           <StyledSocialLinkIcon
             alt="Jerrypop on Facebook"
             height={24}
-            src={isDarkMode ? FacebookIconDark.src : FacebookIcon.src}
+            src={FacebookIconDark.src}
             width={24}
           />
         </StyledSocialLink>
@@ -67,7 +60,7 @@ const SocialLinks = () => {
           <StyledSocialLinkIcon
             alt="Jerrypop on Instagram"
             height={24}
-            src={isDarkMode ? InstagramIconDark.src : InstagramIcon.src}
+            src={InstagramIconDark.src}
             width={24}
           />
         </StyledSocialLink>
@@ -81,7 +74,7 @@ const SocialLinks = () => {
           <StyledSocialLinkIcon
             alt="Jerrypop on YouTube"
             height={24}
-            src={isDarkMode ? YouTubeIconDark.src : YouTubeIcon.src}
+            src={YouTubeIconDark.src}
             width={24}
           />
         </StyledSocialLink>
@@ -91,7 +84,7 @@ const SocialLinks = () => {
           <StyledSocialLinkIcon
             alt="Email Jerrypop"
             height={24}
-            src={isDarkMode ? EmailIconDark.src : EmailIcon.src}
+            src={EmailIconDark.src}
             width={24}
           />
         </StyledSocialLink>

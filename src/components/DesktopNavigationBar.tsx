@@ -11,9 +11,7 @@ import {
   NAVIGATION_MENU_LINK_STYLE,
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
-import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
-import { useDarkMode } from '../hooks/use-dark-mode';
 import Image from 'next/image';
 
 const StyledNavigationBar = styled.nav`
@@ -60,8 +58,6 @@ interface Props {
 }
 
 const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
-  const { isDarkMode } = useDarkMode();
-
   return (
     <StyledNavigationBar>
       <StyledNavigationBarContent>
@@ -69,7 +65,7 @@ const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
           <StyledWordmark
             alt="Jerrypop wordmark"
             height={36}
-            src={isDarkMode ? WordmarkSvgDark.src : WordmarkSvg.src}
+            src={WordmarkSvgDark.src}
             width={160}
           />
         </StyledWordmarkLink>

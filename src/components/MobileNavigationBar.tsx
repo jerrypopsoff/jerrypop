@@ -7,7 +7,6 @@ import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
   WINDOW_BREAKPOINT_WIDTH_PX,
 } from '../constants/breakpoint';
-import WordmarkSvg from '../images/jerrypop-wordmark-navy.svg';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import { NAVIGATION_MENU_Z_INDEX } from '../constants/z-index';
@@ -18,7 +17,6 @@ import {
   NAVIGATION_MENU_LINK_STYLE,
   NAVIGATION_MENU_LIST_STYLE,
 } from '../constants/css/navigation-bar';
-import { useDarkMode } from '../hooks/use-dark-mode';
 import Image from 'next/image';
 
 const MENU_ITEM_HEIGHT_PX = 60;
@@ -143,7 +141,6 @@ interface Props {
 }
 
 const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
-  const { isDarkMode } = useDarkMode();
   const [isOpen, setIsOpen] = useState(false);
   const navigationMenuItemsHeightPx =
     (navigationMenuItems.length + 1) * MENU_ITEM_HEIGHT_PX;
@@ -167,7 +164,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
             <StyledWordmark
               alt="Jerrypop brand wordmark"
               height={30}
-              src={isDarkMode ? WordmarkSvgDark.src : WordmarkSvg.src}
+              src={WordmarkSvgDark.src}
               width={134}
             />
           </StyledWordmarkLink>

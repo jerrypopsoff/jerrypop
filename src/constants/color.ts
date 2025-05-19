@@ -14,7 +14,6 @@ export const SOFT_WHITE = 'rgb(250, 250, 250)';
  * Transparency
  */
 export const DIALOG_BACKDROP = 'rgba(0, 0, 0, 0.8)';
-export const ICON_HOVER_BACKGROUND = 'rgba(0, 0, 0, 0.1)';
 export const SHADOW = 'rgba(0, 0, 0, 0.2)';
 
 /**
