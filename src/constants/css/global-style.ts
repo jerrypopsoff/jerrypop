@@ -17,6 +17,7 @@ import {
 import { POPCORN_KERNEL_Z_INDEX } from '../z-index';
 import { createGlobalStyle } from 'styled-components';
 import { FC } from 'react';
+import { THEMES } from '../theme';
 
 export const GLOBAL_STYLE = createGlobalStyle`
 :root {
@@ -25,6 +26,10 @@ export const GLOBAL_STYLE = createGlobalStyle`
   --color-theme-background: var(--main-theme-dark);
   --icon-hover-background: ${ICON_HOVER_BACKGROUND};
   --image-filter: none;
+  --main-theme-dark: ${THEMES[0].mainThemeDark};
+  --main-theme-medium: ${THEMES[0].mainThemeMedium};
+  --theme-text-on-dark: ${THEMES[0].mainThemeTextOnDark};
+  --theme-text-on-medium: ${THEMES[0].mainThemeTextOnMedium};
 }
 
 [data-theme="dark"] {

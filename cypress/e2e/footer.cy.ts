@@ -10,6 +10,7 @@ describe('footer tests', () => {
       'have.text',
       `© ${new Date().getFullYear()} Jerrypop, LLC`,
     );
+
     cy.get('footer')
       .find('a')
       .eq(0)
