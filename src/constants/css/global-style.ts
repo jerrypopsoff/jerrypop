@@ -1,6 +1,5 @@
 'use client';
 
-import { SOFT_BLACK, SOFT_WHITE, THEME_NAVY } from '../color';
 import {
   DESKTOP_NAVIGATION_BAR_HEIGHT_PX,
   KERNEL_NARROW_SIZE_PX,
@@ -15,8 +14,8 @@ import { THEMES } from '../theme';
 
 export const GLOBAL_STYLE = createGlobalStyle`
 :root {
-  --color-background: ${SOFT_BLACK};
-  --color-foreground: ${SOFT_WHITE};
+  --color-background: rgb(33, 33, 33);
+  --color-foreground: rgb(250, 250, 250);
   --color-theme-background: var(--main-theme-dark);
   --icon-hover-background: rgba(250, 250, 250, 0.1);
   --image-filter: none;
@@ -27,7 +26,7 @@ export const GLOBAL_STYLE = createGlobalStyle`
 }
 
 [data-theme="dark"] {
-  --color-theme-background: ${THEME_NAVY};
+  --color-theme-background: rgb(27, 54, 95);
   --image-filter: grayscale(0.15);
 }
 

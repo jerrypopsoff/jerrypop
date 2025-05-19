@@ -1,7 +1,6 @@
 import { RoutePath } from '../types/route-path';
 import { THEMES } from '../../src/constants/theme';
 import { DARK_MODE_OPTIONS, LIGHT_MODE_OPTIONS } from '../constants/dark-mode';
-import { THEME_NAVY } from '../../src/constants/color';
 
 describe('Jerrypop theme tests', () => {
   it('initializes the default theme in light mode', () => {
@@ -81,7 +80,7 @@ describe('Jerrypop theme tests', () => {
       // Verify footer has correct background color.
       cy.get('footer > div')
         .first()
-        .should('have.css', 'background-color', THEME_NAVY);
+        .should('have.css', 'background-color', 'rgb(27, 54, 95)');
 
       // Rotate to next theme.
       cy.get('button[aria-label="Change website theme colors"]').click();

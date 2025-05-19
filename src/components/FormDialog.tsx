@@ -1,4 +1,3 @@
-import { DIALOG_BACKDROP } from '../constants/color';
 import { DIALOG_BACKDROP_Z_INDEX, DIALOG_Z_INDEX } from '../constants/z-index';
 import styled from 'styled-components';
 import { useWindowSize } from '../hooks/use-window-size';
@@ -66,7 +65,7 @@ const StyledIframe = styled.iframe`
 `;
 
 const StyledDialogBackdrop = styled.div`
-  background-color: ${DIALOG_BACKDROP};
+  background-color: rgba(0, 0, 0, 0.8);
   bottom: 0;
   left: 0;
   position: fixed;
