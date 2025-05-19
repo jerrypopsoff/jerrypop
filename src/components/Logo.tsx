@@ -3,8 +3,12 @@ import { SLOW_DANGLE_STYLE } from '../constants/css/rotation';
 import logo from '../images/colonel.svg';
 import styled from 'styled-components';
 import { LOGO_Z_INDEX } from '../constants/z-index';
-import WordmarkRepeated from './WordmarkRepeated';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+const WordmarkRepeated = dynamic(() => import('./WordmarkRepeated'), {
+  ssr: false,
+});
 
 const StyledWordmark = styled(WordmarkRepeated)`
   height: 698px;
