@@ -12,6 +12,13 @@ import PbjSheetWebp600 from '../images/glamorous-pbj-sheet-600.webp';
 import PbjSheetWebp1200 from '../images/glamorous-pbj-sheet-1200.webp';
 import PbjSheetWebp2400 from '../images/glamorous-pbj-sheet-2400.webp';
 
+const StyledRecipes = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
 const StyledUnorderedList = styled.ul`
   padding: 0;
   list-style: none;
@@ -20,7 +27,7 @@ const StyledUnorderedList = styled.ul`
 
 const Recipes = () => {
   return (
-    <>
+    <StyledRecipes>
       <GlamorPhotograph
         alt="Photograph of PB&J Craft Popcorn spread onto a baking sheet"
         aspectRatio={4032 / 3024}
@@ -37,15 +44,13 @@ const Recipes = () => {
         ]}
       />
       <Typography type="h1">Recipes</Typography>
-      <Typography margin="12px 12px 24px" type="p">
-        Select a recipe to view details.
-      </Typography>
+      <Typography type="p">Select a recipe to view details.</Typography>
       <StyledUnorderedList>
         {RECIPES.map((recipe) => {
           return <Recipe key={recipe.title} recipe={recipe} />;
         })}
       </StyledUnorderedList>
-    </>
+    </StyledRecipes>
   );
 };
 

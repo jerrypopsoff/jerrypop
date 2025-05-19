@@ -6,6 +6,7 @@ import {
 import { ReactNode } from 'react';
 
 const headingStyle = css<{ $hasTextShadow?: boolean }>`
+  font-weight: 600;
   ${({ $hasTextShadow }) =>
     $hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined}
 `;
@@ -85,7 +86,7 @@ const Typography = ({
       return (
         <StyledH1
           $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '48px 12px 12px'}
+          $margin={margin ?? '56px 12px 12px'}
           $maxWidth={maxWidth}
           $textAlign={textAlign}
           {...props}

@@ -21,15 +21,15 @@ import {
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
 
-const StyledOrderDescription = styled(Typography)`
-  margin: 24px auto;
-  max-width: 600px;
-  padding: 0 12px;
+const StyledRetail = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 `;
 
 const StyledButton = styled.button`
   ${BUTTON_STYLE}
-  margin: 0 auto;
 `;
 
 const StyledTileList = styled.ul`
@@ -39,9 +39,8 @@ const StyledTileList = styled.ul`
 const StyledLogisticsDescriptionList = styled.dl`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin: 24px auto;
-  max-width: 624px;
-  padding: 0 12px;
+  margin: 24px 0;
+  max-width: 600px;
 `;
 
 const StyledLogisticsDescriptionTerm = styled.dt`
@@ -62,7 +61,7 @@ const Retail = () => {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
-    <>
+    <StyledRetail>
       <GlamorPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
         aspectRatio={2080 / 1170}
@@ -79,11 +78,11 @@ const Retail = () => {
         ]}
       />
       <Typography type="h1">Retail</Typography>
-      <StyledOrderDescription type="p">
+      <Typography maxWidth="600px" type="p">
         Support a small business and delight your customers by carrying Jerrypop
         at your retail location. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
-      </StyledOrderDescription>
+      </Typography>
       <StyledButton onClick={openDialog}>Order</StyledButton>
       <Typography type="h2">Logistics</Typography>
       <StyledLogisticsDescriptionList>
@@ -150,7 +149,7 @@ const Retail = () => {
         />
       )}
       <StyledButton onClick={openDialog}>Order</StyledButton>
-    </>
+    </StyledRetail>
   );
 };
 

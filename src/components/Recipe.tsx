@@ -57,6 +57,7 @@ const StyledTime = styled.span`
 
 const StyledMaterials = styled.ul`
   ${listStyles}
+  list-style: outside;
 `;
 
 const StyledMaterial = styled.li`
@@ -75,6 +76,7 @@ const StyledMaterialAmount = styled.span`
 
 const StyledSteps = styled.ol`
   ${listStyles}
+  list-style: decimal;
 `;
 
 const StyledStep = styled.li`

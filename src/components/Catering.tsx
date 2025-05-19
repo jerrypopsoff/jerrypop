@@ -21,15 +21,15 @@ import {
   CATERING_ORDER_FORM_TITLE,
 } from '../constants/form';
 
-const StyledOrderDescription = styled(Typography)`
-  margin: 24px auto;
-  max-width: 600px;
-  padding: 0 12px;
+const StyledCatering = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 `;
 
 const StyledButton = styled.button`
   ${BUTTON_STYLE}
-  margin: 0 auto;
 `;
 
 const StyledTileList = styled.ul`
@@ -39,9 +39,8 @@ const StyledTileList = styled.ul`
 const StyledLogisticsDescriptionList = styled.dl`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin: 24px auto;
-  max-width: 624px;
-  padding: 0 12px;
+  margin: 24px 0;
+  max-width: 600px;
 `;
 
 const StyledLogisticsDescriptionTerm = styled.dt`
@@ -62,7 +61,7 @@ const Catering = () => {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
-    <>
+    <StyledCatering>
       <GlamorPhotograph
         alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
         aspectRatio={2400 / 1350}
@@ -79,11 +78,11 @@ const Catering = () => {
         ]}
       />
       <Typography type="h1">Catering</Typography>
-      <StyledOrderDescription type="p">
+      <Typography maxWidth="600px" type="p">
         Support a small business and make your event unforgettable by serving
         Jerrypop craft popcorn. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
-      </StyledOrderDescription>
+      </Typography>
       <StyledButton onClick={openDialog}>Order</StyledButton>
       <Typography type="h2">Logistics</Typography>
       <StyledLogisticsDescriptionList>
@@ -143,7 +142,7 @@ const Catering = () => {
         />
       )}
       <StyledButton onClick={openDialog}>Order</StyledButton>
-    </>
+    </StyledCatering>
   );
 };
 

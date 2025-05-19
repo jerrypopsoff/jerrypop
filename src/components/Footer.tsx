@@ -12,6 +12,10 @@ import {
 import { increaseKernelCount } from '../utilities/click-pop';
 
 const StyledFooter = styled.footer`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: ${FOOTER_TOP_MARGIN_PX}px 0 0;
 `;
 
@@ -34,9 +38,9 @@ const StyledFooterInformation = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 24px auto 0;
+  margin: 24px 16px;
   max-width: 600px;
-  padding: 0 16px 24px;
+  width: 100%;
 
   @media (max-width: ${WINDOW_NARROW_WIDTH_PX}px) {
     flex-direction: column-reverse;
@@ -55,6 +59,7 @@ const StyledPopcornButton = styled.button`
   background-color: transparent;
   border: none;
   color: var(--color-foreground);
+  padding: 8px;
 `;
 
 const StyledCopyright = styled(Typography)`

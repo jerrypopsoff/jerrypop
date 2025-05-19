@@ -28,8 +28,6 @@ const StyledSection = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 48px auto;
-  padding: 0 12px;
 `;
 
 const StyledLink = styled(Link)`
@@ -55,9 +53,7 @@ const Home = () => {
         ]}
       />
       <StyledSection>
-        <Typography margin="12px" type="h1">
-          Catering
-        </Typography>
+        <Typography type="h1">Catering</Typography>
         <Typography type="p">
           Place a wholesale pickup order to make your space or event
           unforgettable.
@@ -65,9 +61,7 @@ const Home = () => {
         <StyledLink href="/catering">Order catering</StyledLink>
       </StyledSection>
       <StyledSection>
-        <Typography margin="12px" type="h1">
-          Pop-ups
-        </Typography>
+        <Typography type="h1">Pop-ups</Typography>
         <Typography type="p">
           Catch my next pop-up or{' '}
           <Link

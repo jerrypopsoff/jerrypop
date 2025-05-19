@@ -26,11 +26,11 @@ const StyledSocialLinksListItem = styled.li`
 
 const StyledSocialLink = styled(Link)`
   display: flex;
+  padding: 4px;
 `;
 
 const StyledSocialLinkIcon = styled(Image)`
   height: 24px;
-  padding: 4px;
   width: 24px;
 `;
 

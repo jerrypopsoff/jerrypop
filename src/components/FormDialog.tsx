@@ -4,7 +4,6 @@ import { useWindowSize } from '../hooks/use-window-size';
 import { WITH_BOX_SHADOW_STYLE } from '../constants/css/shadow';
 
 const DIALOG_HEADER_HEIGHT_PX = 52; // Height of header with close button
-const FORM_TOP_MARGIN_PX = 12; // Space between header and form
 const VERTICAL_MARGIN_PX = 24; // Vertial margin of entire dialog
 const HORIZONTAL_MARGIN_PX = 12; // Horizontal margin of entire dialog
 const MINIMUM_DIALOG_HEIGHT = 150;
@@ -22,6 +21,7 @@ const StyledDialog = styled.dialog<StyledDialogProps>`
   display: flex;
   flex-direction: column;
   height: ${({ $dialogHeight }) => $dialogHeight}px;
+  margin: 0 auto;
   padding: 0;
   position: fixed;
   top: ${VERTICAL_MARGIN_PX}px;
@@ -34,7 +34,6 @@ const StyledDialogHeader = styled.header`
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: ${FORM_TOP_MARGIN_PX}px;
 `;
 
 const StyledCloseButton = styled.button`
@@ -91,8 +90,7 @@ const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
     innerWidth - 2 * HORIZONTAL_MARGIN_PX,
     defaultWidth,
   );
-  const verticalBufferPx = DIALOG_HEADER_HEIGHT_PX + FORM_TOP_MARGIN_PX;
-  const formHeight = dialogHeight - verticalBufferPx;
+  const formHeight = dialogHeight - DIALOG_HEADER_HEIGHT_PX;
 
   return (
     <>
