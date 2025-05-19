@@ -1,5 +1,4 @@
 import { RoutePath } from '../types/route-path';
-import { verifyThemeToggle } from '../utilities/theme-toggle';
 
 describe('home page tests', () => {
   beforeEach(() => {
@@ -10,10 +9,10 @@ describe('home page tests', () => {
     cy.get('title').should('have.text', 'Jerrypop');
   });
 
-  it('toggles the website theme on logo click', () => {
-    verifyThemeToggle(
-      'button[aria-label="Toggle website theme"]',
-      'footer > div',
-    );
+  it('displays the correct section headings', () => {
+    cy.get('h1').should('have.length', 3);
+    cy.get('h1').eq(0).should('have.text', 'Catering');
+    cy.get('h1').eq(1).should('have.text', 'Pop-ups');
+    cy.get('h1').eq(2).should('have.text', 'Press');
   });
 });
