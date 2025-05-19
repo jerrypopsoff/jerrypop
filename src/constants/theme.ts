@@ -1,17 +1,52 @@
-import {
-  BLACK,
-  THEME_BLUE,
-  THEME_CYAN,
-  THEME_GREEN,
-  THEME_LIGHT_GREEN,
-  THEME_ORANGE,
-  THEME_PINK,
-  THEME_PURPLE,
-  THEME_RED,
-  THEME_YELLOW,
-  WHITE,
-} from './color';
 import type { Theme } from '../types/theme';
+
+const BLACK = 'rgb(0, 0, 0)';
+const WHITE = 'rgb(255, 255, 255)';
+
+/**
+ * Pantone 285c #0072da
+ */
+const THEME_BLUE = 'rgb(0, 114, 218)';
+
+/**
+ * Pantone 319c #2ecddc
+ */
+const THEME_CYAN = 'rgb(45, 204, 211)';
+
+/**
+ * Pantone 354c #00b142
+ */
+const THEME_GREEN = 'rgb(0, 177, 66)';
+
+/**
+ * Pantone 375c #98d801
+ */
+const THEME_LIGHT_GREEN = 'rgb(151, 215, 0)';
+
+/**
+ * Pantone 130c #f2a900
+ */
+const THEME_ORANGE = 'rgb(242, 169, 0)';
+
+/**
+ * Pantone 232c #e93ab8
+ */
+const THEME_PINK = 'rgb(255, 64, 158)';
+
+/**
+ * Pantone 2088c #835dd0
+ */
+const THEME_PURPLE = 'rgb(131, 93, 208)';
+
+/**
+ * Pantone 192c #e40046
+ */
+const THEME_RED = 'rgb(250, 0, 82)';
+
+/**
+ * Pantone 101c #f7eb55
+ */
+const THEME_YELLOW = 'rgb(247, 234, 72)';
 
 export const THEME: {
   [themeName: string]: Theme;
