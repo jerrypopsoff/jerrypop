@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
 import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
-import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
 export const metadata = METADATA;
@@ -19,24 +18,18 @@ export const viewport = VIEWPORT;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    /**
-     * suppressHydrationWarning needed for `next-themes`
-     * https://github.com/pacocoursey/next-themes
-     */
     // eslint-disable-next-line react/no-unknown-property
-    <html lang="en" prefix="og: https://ogp.me/ns#" suppressHydrationWarning>
+    <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
       <body>
         <StyledComponentsRegistry>
-          <ThemeProvider>
-            <GlobalStyle />
-            <ConsoleAsciiArt />
-            <ClickPop />
-            <ScrollToTopOnPathChange />
-            <NavigationBar />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <GlobalStyle />
+          <ConsoleAsciiArt />
+          <ClickPop />
+          <ScrollToTopOnPathChange />
+          <NavigationBar />
+          {children}
+          <Footer />
         </StyledComponentsRegistry>
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
