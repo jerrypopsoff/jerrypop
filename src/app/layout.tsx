@@ -18,12 +18,8 @@ export const viewport = VIEWPORT;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    /**
-     * suppressHydrationWarning needed for `next-themes`
-     * https://github.com/pacocoursey/next-themes
-     */
     // eslint-disable-next-line react/no-unknown-property
-    <html lang="en" prefix="og: https://ogp.me/ns#" suppressHydrationWarning>
+    <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
       <body>
         <StyledComponentsRegistry>
