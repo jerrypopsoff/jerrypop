@@ -9,25 +9,25 @@ const Footer = () => {
   const [jerrypopTheme, incrementJerrypopTheme] = useJerrypopTheme();
 
   return (
-    <footer className="flex flex-col items-center justify-center mt-14">
+    <footer className="mt-14 flex flex-col items-center justify-center">
       <div
         className="
-          flex items-center justify-center w-full h-[280px] xs:h-[350px]
-          overflow-hidden bg-[var(--color-theme-background)] dark:bg-navy
+          xs:h-[350px] dark:bg-navy flex h-[280px] w-full items-center
+          justify-center overflow-hidden bg-[var(--color-theme-background)]
         "
       >
         <Logo onToggleTheme={incrementJerrypopTheme} theme={jerrypopTheme} />
       </div>
       <div
         className="
-          flex flex-col-reverse items-center justify-between w-full max-w-xl my-6
-          xs:flex-row
+          xs:flex-row my-6 flex w-full max-w-xl flex-col-reverse items-center
+          justify-between
         "
       >
         <button
           className="
-            bg-transparent border-none text-[var(--color-foreground)] p-2 mx-2
-            mt-2 xs:mt-0
+            xs:mt-0 mx-2 mt-2 border-none bg-transparent p-2
+            text-[var(--color-foreground)]
           "
           onClick={() => increaseKernelCount()}
         >
