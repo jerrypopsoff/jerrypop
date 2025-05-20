@@ -25,7 +25,6 @@ export function useJerrypopTheme(): [Theme, () => void] {
       'style',
       `--main-theme-dark: ${jerrypopTheme.mainThemeDark};
        --main-theme-medium: ${jerrypopTheme.mainThemeMedium};
-       --theme-text-on-dark: ${jerrypopTheme.mainThemeTextOnDark};
        --theme-text-on-medium: ${jerrypopTheme.mainThemeTextOnMedium};
     `,
     );

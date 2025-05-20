@@ -13,7 +13,7 @@ const Footer = () => {
       <div
         className="
           xs:h-[350px] dark:bg-navy flex h-[280px] w-full items-center
-          justify-center overflow-hidden bg-[var(--color-theme-background)]
+          justify-center overflow-hidden bg-[var(--main-theme-dark)]
         "
       >
         <Logo onToggleTheme={incrementJerrypopTheme} theme={jerrypopTheme} />

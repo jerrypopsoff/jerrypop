@@ -16,16 +16,13 @@ export const GLOBAL_STYLE = createGlobalStyle`
 :root {
   --color-background: rgb(33, 33, 33);
   --color-foreground: rgb(250, 250, 250);
-  --color-theme-background: var(--main-theme-dark);
   --icon-hover-background: rgba(250, 250, 250, 0.1);
   --image-filter: none;
   --main-theme-dark: ${THEMES[0].mainThemeDark};
   --main-theme-medium: ${THEMES[0].mainThemeMedium};
-  --theme-text-on-dark: ${THEMES[0].mainThemeTextOnDark};
   --theme-text-on-medium: ${THEMES[0].mainThemeTextOnMedium};
 
   @media (prefers-color-scheme: dark) {
-    --color-theme-background: rgb(27, 54, 95);
     --image-filter: grayscale(0.15);
   }
 }
