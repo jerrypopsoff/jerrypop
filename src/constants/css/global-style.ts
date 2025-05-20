@@ -23,11 +23,11 @@ export const GLOBAL_STYLE = createGlobalStyle`
   --main-theme-medium: ${THEMES[0].mainThemeMedium};
   --theme-text-on-dark: ${THEMES[0].mainThemeTextOnDark};
   --theme-text-on-medium: ${THEMES[0].mainThemeTextOnMedium};
-}
 
-[data-theme="dark"] {
-  --color-theme-background: rgb(27, 54, 95);
-  --image-filter: grayscale(0.15);
+  @media (prefers-color-scheme: dark) {
+    --color-theme-background: rgb(27, 54, 95);
+    --image-filter: grayscale(0.15);
+  }
 }
 
 body {
