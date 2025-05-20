@@ -1,4 +1,4 @@
-import '../app.css';
+import '../css/app.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { METADATA } from '../constants/metadata';
 import { VIEWPORT } from '../constants/viewport';
