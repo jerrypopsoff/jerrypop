@@ -1,0 +1,73 @@
+@theme {
+  /*****************************************************************************
+   * Breakpoints
+   ****************************************************************************/
+
+  --breakpoint-xs: 24rem;
+
+  /*****************************************************************************
+   * Colors
+   ****************************************************************************/
+
+  /* Override all default theme colors */
+  --color-*: initial;
+
+  /* Pantone 285c #0072da */
+  --color-blue: rgb(0, 114, 218);
+
+  /* Pantone 319c #2ecddc */
+  --color-cyan: rgb(45, 204, 211);
+
+  /* Pantone 354c #00b142 */
+  --color-green: rgb(0, 177, 66);
+
+  /* Pantone 375c #98d801 */
+  --color-light-green: rgb(151, 215, 0);
+
+  /* Pantone 534c #1b365f */
+  --color-navy: rgb(27, 54, 95);
+
+  /* Pantone 130c #f2a900 */
+  --color-orange: rgb(242, 169, 0);
+
+  /* Pantone 232c #e93ab8 */
+  --color-pink: rgb(255, 64, 158);
+
+  /* Pantone 2088c #835dd0 */
+  --color-purple: rgb(131, 93, 208);
+
+  /* Pantone 192c #e40046 */
+  --color-red: rgb(250, 0, 82);
+
+  /* Pantone 101c #f7eb55 */
+  --color-yellow: rgb(247, 234, 72);
+
+  /*****************************************************************************
+   * Animations
+   ****************************************************************************/
+
+  --animate-wiggle: wiggle 0.25s linear infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-1deg);
+    }
+    75% {
+      transform: rotate(1deg);
+    }
+  }
+
+  --animate-slow-wiggle: slow-wiggle 3s ease-in-out infinite;
+  @keyframes slow-wiggle {
+    0%,
+    100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+}

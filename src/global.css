@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Open Sans';
+  src:
+    local('Open Sans'),
+    url(./fonts/OpenSans-Variable.ttf) format('ttf supports variations'),
+    url(./fonts/OpenSans-Variable.ttf) format('ttf-variations');
+  font-weight: 300 800;
+}
+
+::selection {
+  background-color: var(--main-theme-medium);
+  color: var(--theme-text-on-medium);
+  text-shadow: none;
+}
+
+:focus {
+  outline-color: var(--main-theme-medium);
+}
+
+img:not([src*='.svg']) {
+  filter: var(--image-filter);
+}
+
+a {
+  color: var(--color-foreground);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: var(--color-foreground);
+}
+
+button {
+  font-family: inherit;
+}
+
+@keyframes kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-kernel {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
