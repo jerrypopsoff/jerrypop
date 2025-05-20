@@ -10,7 +10,6 @@ import Footer from '../components/Footer';
 import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
 import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
-import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
 export const metadata = METADATA;
@@ -28,15 +27,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head></head>
       <body>
         <StyledComponentsRegistry>
-          <ThemeProvider>
-            <GlobalStyle />
-            <ConsoleAsciiArt />
-            <ClickPop />
-            <ScrollToTopOnPathChange />
-            <NavigationBar />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <GlobalStyle />
+          <ConsoleAsciiArt />
+          <ClickPop />
+          <ScrollToTopOnPathChange />
+          <NavigationBar />
+          {children}
+          <Footer />
         </StyledComponentsRegistry>
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
