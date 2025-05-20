@@ -1,30 +1,63 @@
 import { RoutePath } from '../types/route-path';
 import { THEMES } from '../../src/constants/theme';
-import { DARK_MODE_OPTIONS, LIGHT_MODE_OPTIONS } from '../constants/dark-mode';
+
+function emulateMediaColorScheme(scheme: 'light' | 'dark') {
+  cy.wrap(
+    Cypress.automation('remote:debugger:protocol', {
+      command: 'Emulation.setEmulatedMedia',
+      params: {
+        media: 'page',
+        features: [
+          {
+            name: 'prefers-color-scheme',
+            value: scheme,
+          },
+        ],
+      },
+    }),
+  );
+}
 
 describe('Jerrypop theme tests', () => {
   it('initializes the default theme in light mode', () => {
-    cy.visit(RoutePath.Home, LIGHT_MODE_OPTIONS);
+    emulateMediaColorScheme('light');
+    cy.visit(RoutePath.Home);
 
+    cy.root().should('have.css', '--main-theme-dark', 'rgb(0, 114, 218)');
+    cy.root().should('have.css', '--main-theme-medium', 'rgb(255, 64, 158)');
+    cy.root().should('have.css', '--theme-text-on-dark', 'rgb(255, 255, 255)');
     cy.root().should(
-      'have.attr',
-      'style',
-      '--main-theme-dark: rgb(0, 114, 218); --main-theme-medium: rgb(255, 64, 158); --theme-text-on-dark: rgb(255, 255, 255); --theme-text-on-medium: rgb(255, 255, 255); color-scheme: light;',
+      'have.css',
+      '--theme-text-on-medium',
+      'rgb(255, 255, 255)',
     );
+
+    cy.get('img:not([src*=".svg"])').should('have.css', 'filter', 'none');
   });
 
   it('initializes the default theme in dark mode', () => {
-    cy.visit(RoutePath.Home, DARK_MODE_OPTIONS);
+    emulateMediaColorScheme('dark');
+    cy.visit(RoutePath.Home);
 
+    cy.root().should('have.css', '--main-theme-dark', 'rgb(0, 114, 218)');
+    cy.root().should('have.css', '--main-theme-medium', 'rgb(255, 64, 158)');
+    cy.root().should('have.css', '--theme-text-on-dark', 'rgb(255, 255, 255)');
     cy.root().should(
-      'have.attr',
-      'style',
-      '--main-theme-dark: rgb(0, 114, 218); --main-theme-medium: rgb(255, 64, 158); --theme-text-on-dark: rgb(255, 255, 255); --theme-text-on-medium: rgb(255, 255, 255); color-scheme: dark;',
+      'have.css',
+      '--theme-text-on-medium',
+      'rgb(255, 255, 255)',
+    );
+
+    cy.get('img:not([src*=".svg"])').should(
+      'have.css',
+      'filter',
+      'grayscale(0.15)',
     );
   });
 
   it('allows theme rotation in light mode', () => {
-    cy.visit(RoutePath.Home, LIGHT_MODE_OPTIONS);
+    emulateMediaColorScheme('light');
+    cy.visit(RoutePath.Home);
 
     /**
      * Allow client-side application to mount, which enables the click handler
@@ -56,7 +89,8 @@ describe('Jerrypop theme tests', () => {
   });
 
   it('allows theme rotation in dark mode', () => {
-    cy.visit(RoutePath.Home, DARK_MODE_OPTIONS);
+    emulateMediaColorScheme('dark');
+    cy.visit(RoutePath.Home);
 
     /**
      * Allow client-side application to mount, which enables the click handler
