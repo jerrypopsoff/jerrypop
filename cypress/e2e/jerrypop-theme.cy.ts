@@ -31,6 +31,8 @@ describe('Jerrypop theme tests', () => {
       '--theme-text-on-medium',
       'rgb(255, 255, 255)',
     );
+
+    cy.get('img:not([src*=".svg"])').should('have.css', 'filter', 'none');
   });
 
   it('initializes the default theme in dark mode', () => {
@@ -45,26 +47,17 @@ describe('Jerrypop theme tests', () => {
       '--theme-text-on-medium',
       'rgb(255, 255, 255)',
     );
+
+    cy.get('img:not([src*=".svg"])').should(
+      'have.css',
+      'filter',
+      'grayscale(0.15)',
+    );
   });
 
   it('allows theme rotation in light mode', () => {
     emulateMediaColorScheme('light');
     cy.visit(RoutePath.Home);
-
-    cy.wrap(
-      Cypress.automation('remote:debugger:protocol', {
-        command: 'Emulation.setEmulatedMedia',
-        params: {
-          media: 'page',
-          features: [
-            {
-              name: 'prefers-color-scheme',
-              value: 'light',
-            },
-          ],
-        },
-      }),
-    );
 
     /**
      * Allow client-side application to mount, which enables the click handler
@@ -98,21 +91,6 @@ describe('Jerrypop theme tests', () => {
   it('allows theme rotation in dark mode', () => {
     emulateMediaColorScheme('dark');
     cy.visit(RoutePath.Home);
-
-    cy.wrap(
-      Cypress.automation('remote:debugger:protocol', {
-        command: 'Emulation.setEmulatedMedia',
-        params: {
-          media: 'page',
-          features: [
-            {
-              name: 'prefers-color-scheme',
-              value: 'dark',
-            },
-          ],
-        },
-      }),
-    );
 
     /**
      * Allow client-side application to mount, which enables the click handler
