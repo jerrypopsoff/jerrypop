@@ -5,7 +5,7 @@ import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import {
   MOBILE_NAVIGATION_BAR_HEIGHT_PX,
-  WINDOW_BREAKPOINT_WIDTH_PX,
+  WINDOW_BREAKPOINT_WIDTH_REM,
 } from '../constants/breakpoint';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
@@ -35,7 +35,7 @@ const SLIDE_STYLE = css<Slideable>`
 const StyledNavigationBar = styled.nav`
   display: none;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+  @media (width < ${WINDOW_BREAKPOINT_WIDTH_REM}rem) {
     display: block;
   }
 `;
@@ -108,7 +108,7 @@ const StyledCloseButtonIcon = styled.div`
 const StyledMenuItems = styled.ul<Slideable>`
   display: none;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_REM}rem) {
     ${SLIDE_STYLE}
     ${NAVIGATION_MENU_LIST_STYLE}
     background-color: var(--color-background);

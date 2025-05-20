@@ -3,7 +3,6 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { METADATA } from '../constants/metadata';
 import { VIEWPORT } from '../constants/viewport';
 import { isProduction } from '../utilities/environment';
-import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
 import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
@@ -21,9 +20,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react/no-unknown-property
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
-      <body>
+      <body
+        className="
+          bg-background text-foreground font-default pt-[98px] antialiased
+          sm:pt-[135px]
+        "
+      >
         <StyledComponentsRegistry>
-          <GlobalStyle />
           <ConsoleAsciiArt />
           <ClickPop />
           <ScrollToTopOnPathChange />

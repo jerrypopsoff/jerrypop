@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import styled from 'styled-components';
-import { WINDOW_BREAKPOINT_WIDTH_PX } from '../constants/breakpoint';
+import { WINDOW_BREAKPOINT_WIDTH_REM } from '../constants/breakpoint';
 import { NavigationMenuItem } from '../types/navigation';
 import {
   NAVIGATION_BAR_CONTENT_STYLE,
@@ -22,7 +22,7 @@ const StyledNavigationBar = styled.nav`
   right: 0;
   top: 0;
 
-  @media (max-width: ${WINDOW_BREAKPOINT_WIDTH_PX}px) {
+  @media (width < ${WINDOW_BREAKPOINT_WIDTH_REM}rem) {
     display: none;
   }
 `;
@@ -38,7 +38,7 @@ const StyledWordmarkLink = styled(Link)`
 
 const StyledWordmark = styled(Image)`
   height: 36px;
-  margin: 16px 0 4px;
+  margin: 16px 0 2px;
   width: 160px;
 `;
 
