@@ -55,7 +55,7 @@ const StyledCloseButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: var(--icon-hover-background);
+    background-color: rgba(250, 250, 250, 0.1);
   }
 `;
 
