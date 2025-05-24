@@ -14,7 +14,7 @@ const NotFound = () => {
   return (
     <StyledNotFound>
       <Typography type="h1">Ope!</Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         Someone spilled the kernels. That page does not exist.
       </Typography>
     </StyledNotFound>

@@ -78,14 +78,12 @@ const ProductListing = ({ product }: Props) => {
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
         <StyledTitle type="h2">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
-        <Typography margin="16px 0 0" type="p">
-          {product.description}
-        </Typography>
-        <StyledIngredientListContent margin="16px 0 0" type="p">
+        <Typography type="p">{product.description}</Typography>
+        <StyledIngredientListContent type="p">
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>
         {product.allergens.length ? (
-          <StyledIngredientListContent margin="8px 0 0" type="p">
+          <StyledIngredientListContent type="p">
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}

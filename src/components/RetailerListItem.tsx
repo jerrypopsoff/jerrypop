@@ -47,9 +47,7 @@ const RetailerListItem = ({
     <StyledListItem>
       <StyledRetailerAnchor href={href} rel="noreferrer" target="_blank">
         <StyledInformation>
-          <Typography margin="0 0 4px" type="h3">
-            {name}
-          </Typography>
+          <Typography type="h3">{name}</Typography>
           <StyledAddress type="p">{address}</StyledAddress>
           <StyledProducts type="p">
             {products.map(({ title }) => title).join(', ')}

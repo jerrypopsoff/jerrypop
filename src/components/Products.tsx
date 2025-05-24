@@ -43,7 +43,7 @@ const Products = () => {
         ]}
       />
       <Typography type="h1">Products</Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         Each item is locally popped, handcrafted, and sealed in a compostable
         bag.
       </Typography>

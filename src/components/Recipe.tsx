@@ -132,9 +132,7 @@ const RecipeComponent = ({ recipe }: Props) => {
           ></StyledIframe>
         </StyledVideo>
       ) : null}
-      <Typography margin="24px 0 16px" type="h4">
-        Materials
-      </Typography>
+      <Typography type="h4">Materials</Typography>
       <StyledMaterials>
         {recipe.materials.map(({ amount, name }) => (
           <StyledMaterial key={name}>
@@ -143,9 +141,7 @@ const RecipeComponent = ({ recipe }: Props) => {
           </StyledMaterial>
         ))}
       </StyledMaterials>
-      <Typography margin="24px 0 16px" type="h4">
-        Instructions
-      </Typography>
+      <Typography type="h4">Instructions</Typography>
       <StyledSteps>
         {recipe.steps.map(({ aside, content }) => (
           <StyledStep key={content}>

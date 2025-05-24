@@ -78,7 +78,7 @@ const Catering = () => {
         ]}
       />
       <Typography type="h1">Catering</Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         Support a small business and make your event unforgettable by serving
         Jerrypop craft popcorn. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.

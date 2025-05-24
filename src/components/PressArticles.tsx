@@ -88,9 +88,7 @@ const PressArticles = () => {
               <StyledArticlePublication type="p">
                 {article.publication}
               </StyledArticlePublication>
-              <Typography margin="0" type="h2">
-                {article.title}
-              </Typography>
+              <Typography type="h2">{article.title}</Typography>
               <StyledArticleDate type="p">{article.date}</StyledArticleDate>
             </StyledTileInformation>
           </StyledArticleListItem>

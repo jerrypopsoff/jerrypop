@@ -1,137 +1,44 @@
-import styled, { css } from 'styled-components';
-import {
-  WITH_LOW_TEXT_SHADOW_STYLE,
-  WITH_TEXT_SHADOW_STYLE,
-} from '../constants/css/shadow';
 import { ReactNode } from 'react';
-
-const headingStyle = css<{ $hasTextShadow?: boolean }>`
-  font-weight: 600;
-  ${({ $hasTextShadow }) =>
-    $hasTextShadow ? WITH_TEXT_SHADOW_STYLE : undefined}
-`;
-
-const withDynamicStyles = css<{
-  $margin?: string;
-  $maxWidth?: string;
-  $textAlign?: string;
-}>`
-  margin: ${({ $margin }) => $margin};
-  max-width: ${({ $maxWidth }) => $maxWidth};
-  text-align: ${({ $textAlign }) => $textAlign};
-`;
 
 type TypeographyType = 'h1' | 'h2' | 'h3' | 'h4' | 'p';
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLElement> {
   children: ReactNode;
-  hasTextShadow?: boolean;
-  margin?: string;
-  maxWidth?: string;
-  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
   type: TypeographyType;
 }
 
-interface StyledTypographyHTMLElementProps {
-  children: ReactNode;
-  $hasTextShadow?: boolean;
-  $margin?: string;
-  $maxWidth?: string;
-  $textAlign?: 'auto' | 'left' | 'right' | 'center' | 'inherit';
-}
-
-const StyledH1 = styled.h1<StyledTypographyHTMLElementProps>`
-  ${headingStyle}
-  ${withDynamicStyles}
-  font-size: 28px;
-`;
-
-const StyledH2 = styled.h2<StyledTypographyHTMLElementProps>`
-  ${headingStyle}
-  ${withDynamicStyles}
-  font-size: 24px;
-`;
-
-const StyledH3 = styled.h3<StyledTypographyHTMLElementProps>`
-  ${headingStyle}
-  ${withDynamicStyles}
-  font-size: 18px;
-`;
-
-const StyledH4 = styled.h4<StyledTypographyHTMLElementProps>`
-  ${headingStyle}
-  ${withDynamicStyles}
-  font-size: 14px;
-`;
-
-const StyledP = styled.p<StyledTypographyHTMLElementProps>`
-  ${withDynamicStyles}
-  ${({ $hasTextShadow }) =>
-    $hasTextShadow ? WITH_LOW_TEXT_SHADOW_STYLE : undefined}
-  line-height: 1.5;
-  font-size: 15px;
-  font-weight: 400;
-`;
-
-const Typography = ({
-  hasTextShadow = false,
-  margin,
-  maxWidth,
-  textAlign,
-  type,
-  ...props
-}: Props) => {
+const Typography = ({ children, type, ...props }: Props) => {
   switch (type) {
     case 'h1':
       return (
-        <StyledH1
-          $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '56px 12px 12px'}
-          $maxWidth={maxWidth}
-          $textAlign={textAlign}
-          {...props}
-        />
+        <h1 className="mb-3 mt-12 text-3xl font-bold" {...props}>
+          {children}
+        </h1>
       );
     case 'h2':
       return (
-        <StyledH2
-          $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '36px 12px 12px'}
-          $maxWidth={maxWidth}
-          $textAlign={textAlign}
-          {...props}
-        />
+        <h2 className="mb-3 mt-8 text-2xl font-bold" {...props}>
+          {children}
+        </h2>
       );
     case 'h3':
       return (
-        <StyledH3
-          $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '24px 12px 12px'}
-          $maxWidth={maxWidth}
-          $textAlign={textAlign}
-          {...props}
-        />
+        <h3 className="mb-3 mt-6 text-xl font-bold" {...props}>
+          {children}
+        </h3>
       );
     case 'h4':
       return (
-        <StyledH4
-          $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '18px 12px 12px'}
-          $maxWidth={maxWidth}
-          $textAlign={textAlign}
-          {...props}
-        />
+        <h4 className="my-3 text-lg font-bold" {...props}>
+          {children}
+        </h4>
       );
     case 'p':
     default:
       return (
-        <StyledP
-          $hasTextShadow={hasTextShadow}
-          $margin={margin ?? '12px'}
-          $maxWidth={maxWidth}
-          $textAlign={textAlign}
-          {...props}
-        />
+        <p className="my-3 text-base" {...props}>
+          {children}
+        </p>
       );
   }
 };

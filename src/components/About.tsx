@@ -38,14 +38,14 @@ const About = () => {
       />
       <Typography type="h1">About</Typography>
       <Typography type="h2">Mission</Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         We at Jerrypop are committed to quality, sustainability, and customer
         satisfaction. Our popcorn is made with only the finest ingredients and
         carefully crafted to ensure every bite is full of bold flavor and
         satisfying crunch. We believe that snacking should be an experience, and
         we’re dedicated to providing the best experience for our customers.
       </Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         Our mission is twofold: to create delicious popcorn and to promote
         environmental sustainability. Every bag of Jerrypop is sustainably
         crafted and packaged in a 100% compostable pouch. We believe that

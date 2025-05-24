@@ -61,7 +61,7 @@ const Team = () => {
         />
         <StyledTeamMemberName type="h2">Jerry Haagsma</StyledTeamMemberName>
         <StyledTeamMemberTitle type="h3">Founder</StyledTeamMemberTitle>
-        <Typography maxWidth="600px" type="p">
+        <Typography type="p">
           In 2013 my interest in popcorn was sparked when my college roommate’s
           parents bought us ten pounds of kernels, and we challenged ourselves
           to use the entire supply before finals. After experimenting with
@@ -69,12 +69,12 @@ const Team = () => {
           and I continued inventing new varieties on my journey to losing 130
           pounds.
         </Typography>
-        <Typography maxWidth="600px" type="p">
+        <Typography type="p">
           In 2015 I earned the nickname <i>Jerrypop</i> among friends for
           showing up to every gathering with a bold new flavor of handcrafted
           popcorn, such as PB&J or Habanero Ranch.
         </Typography>
-        <Typography maxWidth="600px" type="p">
+        <Typography type="p">
           After moving to San Francisco in 2017, I continued to hone my craft,
           eventually turning to{' '}
           <Link href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
@@ -92,7 +92,7 @@ const Team = () => {
           to pursue my dream of starting a business dedicated to producing the
           most satisfying popcorn in the world.
         </Typography>
-        <Typography maxWidth="600px" type="p">
+        <Typography type="p">
           I handle numerous functions including recipe development, ingredient
           sourcing, manufacturing, distribution, marketing, sales, web design,
           and more. Through Jerrypop I’ve had the opportunity to share my love

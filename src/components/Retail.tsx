@@ -78,7 +78,7 @@ const Retail = () => {
         ]}
       />
       <Typography type="h1">Retail</Typography>
-      <Typography maxWidth="600px" type="p">
+      <Typography type="p">
         Support a small business and delight your customers by carrying Jerrypop
         at your retail location. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.

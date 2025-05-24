@@ -99,7 +99,7 @@ const PricingListItem = ({ product, type }: Props) => {
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
         <StyledTitle type="h3">{product.title}</StyledTitle>
         <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
-        <Typography margin="16px 0 0" type="p">
+        <Typography type="p">
           <span dangerouslySetInnerHTML={{ __html: product.description }} />
         </Typography>
         <StyledPricingDescriptionList>
