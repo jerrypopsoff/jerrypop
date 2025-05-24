@@ -24,9 +24,9 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
 
   /**
    * If the menu is closed, set the class to 'invisible' after a delay matching
-   * the transition duration (300ms). This prevents the menu items from being
-   * visible when the menu is closed when scrolling above the top of the page on
-   * desktop browsers.
+   * the transition duration. This prevents the menu items from being visible
+   * when the menu is closed when scrolling above the top of the page on desktop
+   * browsers.
    */
   useEffect(() => {
     if (isOpen) {
@@ -36,7 +36,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
 
     const timeoutId = setTimeout(() => {
       setMenuItemsClassName('invisible');
-    }, 300);
+    }, 200);
 
     return () => clearTimeout(timeoutId);
   }, [isOpen]);
@@ -56,7 +56,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
       <div
         className={`
           z-nav bg-background z-nav absolute left-0 right-0 top-[-21rem] flex
-          flex-col-reverse justify-center transition-transform duration-300
+          flex-col-reverse justify-center transition-transform duration-200
           ease-in-out ${slideableTransform}
         `}
       >
