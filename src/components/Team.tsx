@@ -1,66 +1,30 @@
 import Typography from './Typography';
-import styled from 'styled-components';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
 import AboutJerryPhotographWebp from '../images/about-jerry.webp';
 import OptimizedImage from './OptimizedImage';
 import { YOU_TUBE_CHANNEL_URL } from '../constants/url';
 import Link from 'next/link';
 
-const PHOTOGRAPH_MAX_HEIGHT_PX = 400;
 const PHOTOGRAPH_MAX_WIDTH_PX = 300;
 const HORIZONTAL_MARGIN = 24;
 const PAGE_BREAKPOINT_PX = PHOTOGRAPH_MAX_WIDTH_PX + 2 * HORIZONTAL_MARGIN;
 
-const StyledTeamMemberList = styled.ul`
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-
-const StyledTeamMemberListItem = styled.li`
-  margin: 24px 0 0;
-`;
-
-const StyledTeamMemberPhotograph = styled(OptimizedImage)`
-  height: ${PHOTOGRAPH_MAX_HEIGHT_PX}px;
-  margin: 0 auto;
-  width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
-
-  @media (max-width: ${PAGE_BREAKPOINT_PX}px) {
-    height: unset;
-    width: calc(100vw - 2 * ${HORIZONTAL_MARGIN}px);
-  }
-`;
-
-const StyledTeamMemberName = styled(Typography)`
-  font-size: 22px;
-  margin: 12px 0 0;
-  text-transform: uppercase;
-`;
-
-const StyledTeamMemberTitle = styled(Typography)`
-  font-size: 13px;
-  font-weight: 300;
-  margin: 8px 0;
-  text-transform: uppercase;
-`;
-
 const Team = () => {
   return (
-    <StyledTeamMemberList>
-      <StyledTeamMemberListItem>
-        <StyledTeamMemberPhotograph
+    <ul>
+      <li className="mt-6">
+        <OptimizedImage
           alt="Photograph of Jerry Haagsma, Jerrypop Founder"
+          className="height-[400px] mx-auto w-[300px]"
           fallbackSrc={AboutJerryPhotograph.src}
           fallbackSourceSet={[{ size: '600w', src: AboutJerryPhotograph.src }]}
           sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PAGE_BREAKPOINT_PX}px), 95vw`}
           sourceSet={[{ size: '600w', src: AboutJerryPhotographWebp.src }]}
         />
-        <StyledTeamMemberName type="h2">Jerry Haagsma</StyledTeamMemberName>
-        <StyledTeamMemberTitle type="h3">Founder</StyledTeamMemberTitle>
+        <h3 className="mb-1 mt-3 text-2xl font-semibold uppercase">
+          Jerry Haagsma
+        </h3>
+        <h4 className="mb-6 text-sm font-light uppercase">Founder</h4>
         <Typography type="p">
           In 2013 my interest in popcorn was sparked when my college roommate’s
           parents bought us ten pounds of kernels, and we challenged ourselves
@@ -100,8 +64,8 @@ const Team = () => {
           an incredible journey, and I could not have done it without the
           support of my friends and customers.
         </Typography>
-      </StyledTeamMemberListItem>
-    </StyledTeamMemberList>
+      </li>
+    </ul>
   );
 };
 
