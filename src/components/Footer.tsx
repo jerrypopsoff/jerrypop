@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="mt-14 flex flex-col items-center justify-center">
       <div
         className="
-          xs:h-[350px] dark:bg-navy flex h-[280px] w-full items-center
+          xs:h-88 dark:bg-navy h-69 flex w-full items-center
           justify-center overflow-hidden bg-[var(--main-theme-dark)]
         "
       >
@@ -25,10 +25,7 @@ const Footer = () => {
         "
       >
         <button
-          className="
-            xs:mt-0 mx-2 mt-2 border-none bg-transparent p-2
-            text-[var(--color-foreground)]
-          "
+          className="xs:mt-0 mx-2 mt-2 p-2"
           onClick={() => increaseKernelCount()}
         >
           <p className="text-xs">© {new Date().getFullYear()} Jerrypop, LLC</p>

@@ -22,8 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head></head>
       <body
         className="
-          bg-background text-foreground font-default pt-[98px] antialiased
-          sm:pt-[135px]
+          bg-background text-foreground font-default sm:pt-34 pt-17 antialiased
         "
       >
         <StyledComponentsRegistry>

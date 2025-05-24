@@ -16,7 +16,7 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
   return (
     <>
       <WordmarkRepeated
-        className="h-[620px] w-[400px] max-w-[95vw]"
+        className="w-100 h-auto max-w-[95vw]"
         fillColor={theme.mainThemeMedium}
       />
       <button
@@ -26,7 +26,7 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
       >
         <Image
           alt="Jerrypop logo"
-          className="mb-[-8px] h-[300px] w-[300px] max-w-[70vw] select-none"
+          className="h-75 w-75 max-w-[70vw] select-none"
           height={300}
           src={logo.src}
           width={300}
