@@ -44,7 +44,9 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const slideableTransform = isOpen ? 'translate-y-[21rem]' : 'translate-y-0';
+  const slideableTransform = isOpen
+    ? 'translate-y-[22.25rem]'
+    : 'translate-y-0';
   const hamburgerButtonAriaLabel = isOpen
     ? 'Close navigation menu'
     : 'Open navigation menu';
@@ -55,7 +57,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
     <nav className="sm:hidden">
       <div
         className={`
-          z-nav bg-background z-nav absolute left-0 right-0 top-[-21rem] flex
+          z-nav bg-background z-nav absolute left-0 right-0 top-[-22.25rem] flex
           flex-col-reverse justify-center transition-transform duration-200
           ease-in-out ${slideableTransform}
         `}
@@ -84,7 +86,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
         <ul aria-hidden={menuItemsAriaHidden} className={menuItemsClassName}>
           <li>
             <button
-              className="w-full p-5 text-left text-xl font-semibold"
+              className="w-full p-5 pt-10 text-left text-xl font-semibold"
               aria-label="Close navigation menu"
               onClick={toggleMenu}
               tabIndex={menuItemTabIndex}
