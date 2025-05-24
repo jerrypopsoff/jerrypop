@@ -13,13 +13,20 @@ import ProductsWebp2400 from '../images/glamorous-mala-lime-2400.webp';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import styled from 'styled-components';
 
+const StyledProducts = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
 const StyledTileList = styled.ul`
   ${TILE_LIST_STYLE}
 `;
 
 const Products = () => {
   return (
-    <>
+    <StyledProducts>
       <GlamorPhotograph
         alt="Photograph of Málà Lime craft popcorn alongside mapo tofu and lime wedges on a wooden bar top"
         aspectRatio={8688 / 5792}
@@ -36,7 +43,7 @@ const Products = () => {
         ]}
       />
       <Typography type="h1">Products</Typography>
-      <Typography margin="12px 12px 24px" type="p">
+      <Typography maxWidth="600px" type="p">
         Each item is locally popped, handcrafted, and sealed in a compostable
         bag.
       </Typography>
@@ -45,7 +52,7 @@ const Products = () => {
           <ProductListing key={product.title} product={product} />
         ))}
       </StyledTileList>
-    </>
+    </StyledProducts>
   );
 };
 

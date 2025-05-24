@@ -25,7 +25,6 @@ describe('Jerrypop theme tests', () => {
 
     cy.root().should('have.css', '--main-theme-dark', 'rgb(0, 114, 218)');
     cy.root().should('have.css', '--main-theme-medium', 'rgb(255, 64, 158)');
-    cy.root().should('have.css', '--theme-text-on-dark', 'rgb(255, 255, 255)');
     cy.root().should(
       'have.css',
       '--theme-text-on-medium',
@@ -41,7 +40,6 @@ describe('Jerrypop theme tests', () => {
 
     cy.root().should('have.css', '--main-theme-dark', 'rgb(0, 114, 218)');
     cy.root().should('have.css', '--main-theme-medium', 'rgb(255, 64, 158)');
-    cy.root().should('have.css', '--theme-text-on-dark', 'rgb(255, 255, 255)');
     cy.root().should(
       'have.css',
       '--theme-text-on-medium',

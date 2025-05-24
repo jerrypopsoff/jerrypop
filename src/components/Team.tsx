@@ -26,6 +26,7 @@ const StyledTeamMemberListItem = styled.li`
 
 const StyledTeamMemberPhotograph = styled(OptimizedImage)`
   height: ${PHOTOGRAPH_MAX_HEIGHT_PX}px;
+  margin: 0 auto;
   width: ${PHOTOGRAPH_MAX_WIDTH_PX}px;
 
   @media (max-width: ${PAGE_BREAKPOINT_PX}px) {

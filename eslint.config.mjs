@@ -3,7 +3,7 @@ import ts from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-import nextPlugin from '@next/eslint-plugin-next';
+import next from '@next/eslint-plugin-next';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from 'eslint-config-prettier';
 
@@ -30,7 +30,7 @@ export default ts.config(
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
-      react: react,
+      react,
     },
     rules: {
       ...react.configs.recommended.rules,
@@ -68,11 +68,11 @@ export default ts.config(
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
-      '@next/next': nextPlugin,
+      '@next/next': next,
     },
     rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
+      ...next.configs.recommended.rules,
+      ...next.configs['core-web-vitals'].rules,
     },
   },
 
