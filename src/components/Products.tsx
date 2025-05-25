@@ -2,7 +2,8 @@
 
 import ProductListing from './ProductListing';
 import { PRODUCTS } from '../constants/product';
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Paragraph from './common/Paragraph';
 import GlamorPhotograph from './GlamorPhotograph';
 import Products600 from '../images/glamorous-mala-lime-600.jpeg';
 import Products1200 from '../images/glamorous-mala-lime-1200.jpeg';
@@ -42,11 +43,11 @@ const Products = () => {
           { size: '2400w', src: ProductsWebp2400.src },
         ]}
       />
-      <Typography type="h1">Products</Typography>
-      <Typography type="p">
+      <Heading1>Products</Heading1>
+      <Paragraph>
         Each item is locally popped, handcrafted, and sealed in a compostable
         bag.
-      </Typography>
+      </Paragraph>
       <StyledTileList>
         {PRODUCTS.map((product) => (
           <ProductListing key={product.title} product={product} />

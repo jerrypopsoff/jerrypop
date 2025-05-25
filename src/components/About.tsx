@@ -1,6 +1,5 @@
 'use client';
 
-import Typography from './Typography';
 import GlamorPhotograph from './GlamorPhotograph';
 import BlueberryPancake600 from '../images/glamorous-blueberry-pancake-600.jpeg';
 import BlueberryPancake1200 from '../images/glamorous-blueberry-pancake-1200.jpeg';
@@ -10,6 +9,9 @@ import BlueberryPancakeWebp1200 from '../images/glamorous-blueberry-pancake-1200
 import BlueberryPancakeWebp2400 from '../images/glamorous-blueberry-pancake-2400.webp';
 import Team from './Team';
 import PageContentLayout from './PageContentLayout';
+import Heading1 from './common/Heading1';
+import Paragraph from './common/Paragraph';
+import Heading2 from './common/Heading2';
 
 const About = () => {
   return (
@@ -30,24 +32,24 @@ const About = () => {
         ]}
       />
       <PageContentLayout>
-        <Typography type="h1">About</Typography>
-        <Typography type="h2">Mission</Typography>
-        <Typography type="p">
+        <Heading1>About</Heading1>
+        <Heading2>Mission</Heading2>
+        <Paragraph>
           We at Jerrypop are committed to quality, sustainability, and customer
           satisfaction. Our popcorn is made with only the finest ingredients and
           carefully crafted to ensure every bite is full of bold flavor and
           satisfying crunch. We believe that snacking should be an experience,
           and we’re dedicated to providing the best experience for our
           customers.
-        </Typography>
-        <Typography type="p">
+        </Paragraph>
+        <Paragraph>
           Our mission is twofold: to create delicious popcorn and to promote
           environmental sustainability. Every bag of Jerrypop is sustainably
           crafted and packaged in a 100% compostable pouch. We believe that
           businesses have a responsibility to minimize their impact on the
           environment, and we aim to inspire others to do the same.
-        </Typography>
-        <Typography type="h2">Team</Typography>
+        </Paragraph>
+        <Heading2>Team</Heading2>
         <Team />
       </PageContentLayout>
     </>

@@ -1,6 +1,7 @@
 'use client';
 
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
 import HabaneroRanch600 from '../images/glamorous-habanero-ranch-600.jpeg';
@@ -53,16 +54,16 @@ const Home = () => {
         ]}
       />
       <StyledSection>
-        <Typography type="h1">Catering</Typography>
-        <Typography type="p">
+        <Heading1>Catering</Heading1>
+        <Paragraph>
           Place a wholesale pickup order to make your space or event
           unforgettable.
-        </Typography>
+        </Paragraph>
         <StyledLink href="/catering">Order catering</StyledLink>
       </StyledSection>
       <StyledSection>
-        <Typography type="h1">Pop-ups</Typography>
-        <Typography type="p">
+        <Heading1>Pop-ups</Heading1>
+        <Paragraph>
           Catch my next pop-up or{' '}
           <Link
             href={`mailto:info@jerrypop.com?subject=${encodeURIComponent(
@@ -74,7 +75,7 @@ const Home = () => {
             request a pop-up
           </Link>{' '}
           at your event.
-        </Typography>
+        </Paragraph>
         <StyledLink
           rel="noreferrer"
           target="_blank"
@@ -83,7 +84,7 @@ const Home = () => {
           See announcements
         </StyledLink>
       </StyledSection>
-      <Typography type="h1">Press</Typography>
+      <Heading1>Press</Heading1>
       <PressArticles />
     </StyledHome>
   );

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Recipe } from '../types/recipe';
-import Typography from './Typography';
+import Heading3 from './common/Heading3';
+import Heading4 from './common/Heading4';
 import { DANGLE_STYLE } from '../constants/css/rotation';
 import styled from 'styled-components';
 import {
@@ -45,7 +46,7 @@ const StyledInnerRecipe = styled.div`
   ${CARD_INNER_STYLE}
 `;
 
-const StyledTitle = styled(Typography)`
+const StyledTitle = styled(Heading3)`
   ${CARD_TITLE_STYLE}
 `;
 
@@ -132,7 +133,7 @@ const RecipeComponent = ({ recipe }: Props) => {
           ></StyledIframe>
         </StyledVideo>
       ) : null}
-      <Typography type="h4">Materials</Typography>
+      <Heading4>Materials</Heading4>
       <StyledMaterials>
         {recipe.materials.map(({ amount, name }) => (
           <StyledMaterial key={name}>
@@ -141,7 +142,7 @@ const RecipeComponent = ({ recipe }: Props) => {
           </StyledMaterial>
         ))}
       </StyledMaterials>
-      <Typography type="h4">Instructions</Typography>
+      <Heading4>Instructions</Heading4>
       <StyledSteps>
         {recipe.steps.map(({ aside, content }) => (
           <StyledStep key={content}>
@@ -178,7 +179,7 @@ const RecipeComponent = ({ recipe }: Props) => {
       tabIndex={isCollapsed ? 0 : undefined}
     >
       <StyledInnerRecipe>
-        <StyledTitle type="h3">{recipe.title}</StyledTitle>
+        <StyledTitle>{recipe.title}</StyledTitle>
         <StyledTime>{recipe.time}</StyledTime>
         {recipeDetails}
       </StyledInnerRecipe>

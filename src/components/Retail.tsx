@@ -1,7 +1,9 @@
 'use client';
 
 import { RETAIL_PRODUCTS } from '../constants/product';
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Heading2 from './common/Heading2';
+import Paragraph from './common/Paragraph';
 import GlamorPhotograph from './GlamorPhotograph';
 import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
 import GlamorousChipotleCheddar1200 from '../images/glamorous-chipotle-cheddar-1200.jpg';
@@ -77,14 +79,14 @@ const Retail = () => {
           { size: '2400w', src: GlamorousChipotleCheddarWebp2400.src },
         ]}
       />
-      <Typography type="h1">Retail</Typography>
-      <Typography type="p">
+      <Heading1>Retail</Heading1>
+      <Paragraph>
         Support a small business and delight your customers by carrying Jerrypop
         at your retail location. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
-      </Typography>
+      </Paragraph>
       <StyledButton onClick={openDialog}>Order</StyledButton>
-      <Typography type="h2">Logistics</Typography>
+      <Heading2>Logistics</Heading2>
       <StyledLogisticsDescriptionList>
         <StyledLogisticsDescriptionTerm>
           Minimum order
@@ -131,7 +133,7 @@ const Retail = () => {
           ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
-      <Typography type="h2">Pricing</Typography>
+      <Heading2>Pricing</Heading2>
       <StyledTileList>
         {RETAIL_PRODUCTS.map((pricedProduct) => (
           <PricingListItem

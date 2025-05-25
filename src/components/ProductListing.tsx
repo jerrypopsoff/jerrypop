@@ -1,4 +1,5 @@
-import Typography from './Typography';
+import Heading2 from './common/Heading2';
+import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
 import { Product } from '../types/product';
 import {
@@ -35,18 +36,18 @@ const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
   ${TILE_INFORMATION_STYLE}
 `;
 
-const StyledTitle = styled(Typography)`
+const StyledTitle = styled(Heading2)`
   margin: 0;
 `;
 
-const StyledSubtitle = styled(Typography)`
+const StyledSubtitle = styled(Paragraph)`
   font-size: 12px;
   line-height: 1.25;
   margin: 4px 0 0;
   text-transform: uppercase;
 `;
 
-const StyledIngredientListContent = styled(Typography)`
+const StyledIngredientListContent = styled(Paragraph)`
   font-size: 12px;
   font-weight: 400;
   line-height: 1.25;
@@ -76,14 +77,14 @@ const ProductListing = ({ product }: Props) => {
         />
       </StyledTileImageContainer>
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-        <StyledTitle type="h2">{product.title}</StyledTitle>
-        <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
-        <Typography type="p">{product.description}</Typography>
-        <StyledIngredientListContent type="p">
+        <StyledTitle>{product.title}</StyledTitle>
+        <StyledSubtitle>{product.subtitle}</StyledSubtitle>
+        <Paragraph>{product.description}</Paragraph>
+        <StyledIngredientListContent>
           <b>Ingredients:</b> {product.ingredients.join(', ')}
         </StyledIngredientListContent>
         {product.allergens.length ? (
-          <StyledIngredientListContent type="p">
+          <StyledIngredientListContent>
             <b>Contains:</b> {product.allergens.join(', ')}
           </StyledIngredientListContent>
         ) : null}

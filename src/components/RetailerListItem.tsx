@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { CARD_OUTER_STYLE } from '../constants/css/card';
 import { Retailer } from '../types/retailer';
-import Typography from './Typography';
+import Heading3 from './common/Heading3';
+import Paragraph from './common/Paragraph';
 import Link from 'next/link';
 
 const StyledListItem = styled.li`
@@ -25,13 +26,13 @@ const StyledInformation = styled.div`
   text-align: center;
 `;
 
-const StyledAddress = styled(Typography)`
+const StyledAddress = styled(Paragraph)`
   font-size: 13px;
   font-style: italic;
   margin: 0;
 `;
 
-const StyledProducts = styled(Typography)`
+const StyledProducts = styled(Paragraph)`
   font-size: 13px;
   margin: 4px 0 0;
 `;
@@ -47,9 +48,9 @@ const RetailerListItem = ({
     <StyledListItem>
       <StyledRetailerAnchor href={href} rel="noreferrer" target="_blank">
         <StyledInformation>
-          <Typography type="h3">{name}</Typography>
-          <StyledAddress type="p">{address}</StyledAddress>
-          <StyledProducts type="p">
+          <Heading3>{name}</Heading3>
+          <StyledAddress>{address}</StyledAddress>
+          <StyledProducts>
             {products.map(({ title }) => title).join(', ')}
           </StyledProducts>
         </StyledInformation>

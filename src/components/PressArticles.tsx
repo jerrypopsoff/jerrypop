@@ -1,4 +1,5 @@
-import Typography from './Typography';
+import Heading2 from './common/Heading2';
+import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
 import {
   TILE_LIST_STYLE,
@@ -43,13 +44,13 @@ const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
   ${TILE_INFORMATION_STYLE}
 `;
 
-const StyledArticlePublication = styled(Typography)`
+const StyledArticlePublication = styled(Paragraph)`
   font-weight: 300;
   margin: 0 0 8px;
   text-transform: uppercase;
 `;
 
-const StyledArticleDate = styled(Typography)`
+const StyledArticleDate = styled(Paragraph)`
   font-size: 12px;
   margin: 12px 0 0;
 `;
@@ -85,11 +86,11 @@ const PressArticles = () => {
             <StyledTileInformation
               $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
             >
-              <StyledArticlePublication type="p">
+              <StyledArticlePublication>
                 {article.publication}
               </StyledArticlePublication>
-              <Typography type="h2">{article.title}</Typography>
-              <StyledArticleDate type="p">{article.date}</StyledArticleDate>
+              <Heading2>{article.title}</Heading2>
+              <StyledArticleDate>{article.date}</StyledArticleDate>
             </StyledTileInformation>
           </StyledArticleListItem>
         </StyledTileListItem>

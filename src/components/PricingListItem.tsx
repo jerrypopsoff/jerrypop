@@ -1,4 +1,5 @@
-import Typography from './Typography';
+import Heading3 from './common/Heading3';
+import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
 import { CateringProduct, RetailProduct } from '../types/product';
 import {
@@ -36,12 +37,12 @@ const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
   ${TILE_INFORMATION_STYLE}
 `;
 
-const StyledTitle = styled(Typography)`
+const StyledTitle = styled(Heading3)`
   font-size: 22px;
   margin: 0;
 `;
 
-const StyledSubtitle = styled(Typography)`
+const StyledSubtitle = styled(Paragraph)`
   font-size: 12px;
   margin: 4px 0 0;
   text-transform: uppercase;
@@ -97,11 +98,11 @@ const PricingListItem = ({ product, type }: Props) => {
         />
       </StyledTileImageContainer>
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-        <StyledTitle type="h3">{product.title}</StyledTitle>
-        <StyledSubtitle type="p">{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
-        <Typography type="p">
+        <StyledTitle>{product.title}</StyledTitle>
+        <StyledSubtitle>{`${product.weight} ${product.subtitle}`}</StyledSubtitle>
+        <Paragraph>
           <span dangerouslySetInnerHTML={{ __html: product.description }} />
-        </Typography>
+        </Paragraph>
         <StyledPricingDescriptionList>
           {type === 'retail' && (
             <>

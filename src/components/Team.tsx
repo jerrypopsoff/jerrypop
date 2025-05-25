@@ -1,4 +1,4 @@
-import Typography from './Typography';
+import Paragraph from './common/Paragraph';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
 import AboutJerryPhotographWebp from '../images/about-jerry.webp';
 import OptimizedImage from './OptimizedImage';
@@ -25,20 +25,20 @@ const Team = () => {
           Jerry Haagsma
         </h3>
         <h4 className="mb-6 text-sm font-light uppercase">Founder</h4>
-        <Typography type="p">
-          In 2013 my interest in popcorn was sparked when my college roommate’s
-          parents bought us ten pounds of kernels, and we challenged ourselves
-          to use the entire supply before finals. After experimenting with
-          flavors I discovered popcorn was a healthier alternative to junk food,
-          and I continued inventing new varieties on my journey to losing 130
-          pounds.
-        </Typography>
-        <Typography type="p">
+        <Paragraph>
+          In 2013 my interest in popcorn was sparked when my college
+          roommate&apos;s parents bought us ten pounds of kernels, and we
+          challenged ourselves to use the entire supply before finals. After
+          experimenting with flavors I discovered popcorn was a healthier
+          alternative to junk food, and I continued inventing new varieties on
+          my journey to losing 130 pounds.
+        </Paragraph>
+        <Paragraph>
           In 2015 I earned the nickname <i>Jerrypop</i> among friends for
           showing up to every gathering with a bold new flavor of handcrafted
           popcorn, such as PB&J or Habanero Ranch.
-        </Typography>
-        <Typography type="p">
+        </Paragraph>
+        <Paragraph>
           After moving to San Francisco in 2017, I continued to hone my craft,
           eventually turning to{' '}
           <Link href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
@@ -55,15 +55,15 @@ const Team = () => {
           </Link>{' '}
           to pursue my dream of starting a business dedicated to producing the
           most satisfying popcorn in the world.
-        </Typography>
-        <Typography type="p">
+        </Paragraph>
+        <Paragraph>
           I handle numerous functions including recipe development, ingredient
           sourcing, manufacturing, distribution, marketing, sales, web design,
-          and more. Through Jerrypop I’ve had the opportunity to share my love
-          of popcorn with others and bring delight to people’s lives. It’s been
-          an incredible journey, and I could not have done it without the
-          support of my friends and customers.
-        </Typography>
+          and more. Through Jerrypop I&apos;ve had the opportunity to share my
+          love of popcorn with others and bring delight to people&apos;s lives.
+          It&apos;s been an incredible journey, and I could not have done it
+          without the support of my friends and customers.
+        </Paragraph>
       </li>
     </ul>
   );

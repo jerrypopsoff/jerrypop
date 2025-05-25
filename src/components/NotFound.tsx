@@ -1,7 +1,8 @@
 'use client';
 
 import { styled } from 'styled-components';
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Paragraph from './common/Paragraph';
 
 const StyledNotFound = styled.div`
   align-items: center;
@@ -13,10 +14,10 @@ const StyledNotFound = styled.div`
 const NotFound = () => {
   return (
     <StyledNotFound>
-      <Typography type="h1">Ope!</Typography>
-      <Typography type="p">
+      <Heading1>Ope!</Heading1>
+      <Paragraph>
         Someone spilled the kernels. That page does not exist.
-      </Typography>
+      </Paragraph>
     </StyledNotFound>
   );
 };

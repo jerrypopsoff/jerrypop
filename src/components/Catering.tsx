@@ -1,7 +1,9 @@
 'use client';
 
 import { CATERING_PRODUCTS } from '../constants/product';
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Heading2 from './common/Heading2';
+import Paragraph from './common/Paragraph';
 import GlamorPhotograph from './GlamorPhotograph';
 import ChocolateHazelnutEspresso600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
 import ChocolateHazelnutEspresso1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.jpeg';
@@ -77,14 +79,14 @@ const Catering = () => {
           { size: '2400w', src: ChocolateHazelnutEspressoWebp2400.src },
         ]}
       />
-      <Typography type="h1">Catering</Typography>
-      <Typography type="p">
+      <Heading1>Catering</Heading1>
+      <Paragraph>
         Support a small business and make your event unforgettable by serving
         Jerrypop craft popcorn. Each item is locally popped, handcrafted, and
         sealed in a compostable bag.
-      </Typography>
+      </Paragraph>
       <StyledButton onClick={openDialog}>Order</StyledButton>
-      <Typography type="h2">Logistics</Typography>
+      <Heading2>Logistics</Heading2>
       <StyledLogisticsDescriptionList>
         <StyledLogisticsDescriptionTerm>
           Minimum order
@@ -124,7 +126,7 @@ const Catering = () => {
           ingredients, and allergens.
         </StyledLogisticsDescriptionDetails>
       </StyledLogisticsDescriptionList>
-      <Typography type="h2">Pricing</Typography>
+      <Heading2>Pricing</Heading2>
       <StyledTileList>
         {CATERING_PRODUCTS.map((product) => (
           <PricingListItem

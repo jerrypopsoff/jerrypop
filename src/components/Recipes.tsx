@@ -2,7 +2,8 @@
 
 import { RECIPES } from '../constants/recipe';
 import Recipe from './Recipe';
-import Typography from './Typography';
+import Heading1 from './common/Heading1';
+import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
 import GlamorPhotograph from './GlamorPhotograph';
 import PbjSheet600 from '../images/glamorous-pbj-sheet-600.jpeg';
@@ -43,8 +44,8 @@ const Recipes = () => {
           { size: '2400w', src: PbjSheetWebp2400.src },
         ]}
       />
-      <Typography type="h1">Recipes</Typography>
-      <Typography type="p">Select a recipe to view details.</Typography>
+      <Heading1>Recipes</Heading1>
+      <Paragraph>Select a recipe to view details.</Paragraph>
       <StyledUnorderedList>
         {RECIPES.map((recipe) => {
           return <Recipe key={recipe.title} recipe={recipe} />;
