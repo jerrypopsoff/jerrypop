@@ -78,7 +78,8 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
               alt="Jerrypop brand wordmark"
               className="w-31 h-7"
               height={28}
-              src={WordmarkSvgDark.src}
+              priority
+              src={WordmarkSvgDark}
               width={124}
             />
           </Link>

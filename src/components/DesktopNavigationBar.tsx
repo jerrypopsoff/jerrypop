@@ -18,7 +18,8 @@ const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
             alt="Jerrypop wordmark"
             className="h-9 w-40"
             height={36}
-            src={WordmarkSvgDark.src}
+            priority
+            src={WordmarkSvgDark}
             width={160}
           />
         </Link>

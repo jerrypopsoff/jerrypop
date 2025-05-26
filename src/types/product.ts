@@ -1,10 +1,11 @@
+import { StaticImageData } from 'next/image';
 import { NumberRange } from './number';
 
 export interface Product {
   allergens: string[];
   description: string;
   ingredients: string[];
-  image: string;
+  image: StaticImageData;
   priceCatering: number | NumberRange;
   subtitle: string;
   title: string;

@@ -28,7 +28,7 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
           alt="Jerrypop logo"
           className="h-75 w-75 max-w-[70vw] select-none"
           height={300}
-          src={logo.src}
+          src={logo}
           width={300}
         />
       </button>

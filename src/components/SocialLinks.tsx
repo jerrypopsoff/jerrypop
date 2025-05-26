@@ -25,7 +25,7 @@ const SocialLinks = () => {
             alt="Jerrypop on Facebook"
             className="h-6 w-6"
             height={24}
-            src={FacebookIconDark.src}
+            src={FacebookIconDark}
             width={24}
           />
         </Link>
@@ -41,7 +41,7 @@ const SocialLinks = () => {
             alt="Jerrypop on Instagram"
             className="h-6 w-6"
             height={24}
-            src={InstagramIconDark.src}
+            src={InstagramIconDark}
             width={24}
           />
         </Link>
@@ -57,7 +57,7 @@ const SocialLinks = () => {
             alt="Jerrypop on YouTube"
             className="h-6 w-6"
             height={24}
-            src={YouTubeIconDark.src}
+            src={YouTubeIconDark}
             width={24}
           />
         </Link>
@@ -73,7 +73,7 @@ const SocialLinks = () => {
             alt="Email Jerrypop"
             className="h-6 w-6"
             height={24}
-            src={EmailIconDark.src}
+            src={EmailIconDark}
             width={24}
           />
         </Link>
