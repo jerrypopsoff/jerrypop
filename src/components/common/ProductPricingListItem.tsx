@@ -31,7 +31,7 @@ export default function ProductPricingListItem({
       />
       <h3 className="mt-6 text-3xl font-semibold">{title}</h3>
       <p className="mt-2 text-xs uppercase">{`${weight} ${subtitle}`}</p>
-      <p className="text-normal my-6">
+      <p className="my-6">
         <span dangerouslySetInnerHTML={{ __html: description }} />
       </p>
       <dl>

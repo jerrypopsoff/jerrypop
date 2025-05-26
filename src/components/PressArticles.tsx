@@ -28,7 +28,7 @@ const PressArticles = () => {
                   max-w-75 mt-4 text-center md:ml-6 md:mt-0 md:text-left
                 "
               >
-                <p className="text-md font-light uppercase">{publication}</p>
+                <p className="font-light uppercase">{publication}</p>
                 <h2 className="mb-4 mt-2 text-2xl font-semibold">{title}</h2>
                 <p className="text-xs">{date}</p>
               </div>

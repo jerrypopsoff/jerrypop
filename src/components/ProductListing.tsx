@@ -21,7 +21,7 @@ const ProductListing = ({ product }: Props) => {
       />
       <h2 className="mt-6 text-2xl font-semibold">{title}</h2>
       <p className="mt-1 text-xs uppercase">{subtitle}</p>
-      <p className="text-normal my-6">{description}</p>
+      <p className="my-6">{description}</p>
       <p className="text-justify text-xs uppercase">
         <b>Ingredients:</b> {ingredients.join(', ')}
       </p>
