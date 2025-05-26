@@ -97,7 +97,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
           {navigationMenuItems.map(({ displayName, href, isExternal }) => (
             <li key={displayName}>
               <Link
-                className="block px-5 py-4 uppercase tracking-wide no-underline"
+                className="block px-5 py-4 uppercase tracking-wide"
                 href={href}
                 onClick={closeMenu}
                 rel={isExternal ? 'noreferrer' : undefined}

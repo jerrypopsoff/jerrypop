@@ -255,7 +255,7 @@ export const SICHUAN_NOOCH: CateringProduct = {
 
 export const REQUEST_A_FLAVOR: CateringProduct = {
   allergens: [],
-  description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
+  description: `Request one or more flavors. See <a href="${INSTAGRAM_PROFILE_URL}" rel="noreferrer" target="_blank" style="text-decoration:underline;">@craftpopcorn</a> for inspiration. Price and net weight may vary. Available in unmarked packaging or custom packaging with additional cost and lead time.`,
   image: RequestAFlavorPhotograph.src,
   ingredients: [],
   priceCatering: { max: 12, min: 7 },

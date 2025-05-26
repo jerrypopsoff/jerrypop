@@ -69,8 +69,11 @@ const Retail = () => {
           </DescriptionDetails>
           <DescriptionTerm>Additional information</DescriptionTerm>
           <DescriptionDetails>
-            See <Link href="/products">Products</Link> for product photographs,
-            ingredients, and allergens.
+            See{' '}
+            <Link className="underline" href="/products">
+              Products
+            </Link>{' '}
+            for product photographs, ingredients, and allergens.
           </DescriptionDetails>
         </DefinitionList>
         <Heading2>Pricing</Heading2>

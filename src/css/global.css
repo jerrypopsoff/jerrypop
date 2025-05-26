@@ -23,14 +23,6 @@ img:not([src*='.svg']) {
   }
 }
 
-a {
-  text-decoration: underline;
-}
-
-a.no-underline {
-  text-decoration: none;
-}
-
 .popcorn-kernel {
   animation: kernel 0.5s infinite linear;
   -webkit-animation: kernel 0.5s infinite linear;

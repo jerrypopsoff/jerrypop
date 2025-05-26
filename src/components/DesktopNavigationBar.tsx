@@ -26,10 +26,7 @@ const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
           {navigationMenuItems.map(({ displayName, href, isExternal }) => (
             <li key={displayName}>
               <Link
-                className="
-                  block px-6 py-3 pb-4 text-sm uppercase tracking-wide
-                  no-underline
-                "
+                className="block px-6 py-3 pb-4 text-sm uppercase tracking-wide"
                 href={href}
                 rel={isExternal ? 'noreferrer' : undefined}
                 target={isExternal ? '_blank' : undefined}

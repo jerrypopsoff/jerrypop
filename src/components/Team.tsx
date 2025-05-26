@@ -36,12 +36,18 @@ const Team = () => {
         <Paragraph>
           After moving to San Francisco in 2017, I continued to hone my craft,
           eventually turning to{' '}
-          <Link href={YOU_TUBE_CHANNEL_URL} rel="noreferrer" target="_blank">
+          <Link
+            className="underline"
+            href={YOU_TUBE_CHANNEL_URL}
+            rel="noreferrer"
+            target="_blank"
+          >
             video production
           </Link>{' '}
           during the pandemic to share my popcorn techniques and learnings. In
           April 2022 I{' '}
           <Link
+            className="underline"
             href="https://www.washingtonpost.com/technology/2023/02/27/tech-workers-layoffs-quit/"
             rel="noreferrer"
             target="_blank"
