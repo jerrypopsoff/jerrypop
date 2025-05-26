@@ -7,7 +7,7 @@ import Paragraph from './common/Paragraph';
 import PageHeaderPhotographSrc from '../images/glamorous-chocolate-hazelnut-espresso.jpeg';
 import Link from 'next/link';
 import FormDialog from './FormDialog';
-import { useDialogState } from '../hooks/use-form-dialog';
+import { useDialogState } from '../hooks/use-dialog-state';
 import {
   CATERING_ORDER_FORM_SRC,
   CATERING_ORDER_FORM_TITLE,

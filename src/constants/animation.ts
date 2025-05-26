@@ -1,2 +1,0 @@
-const FRAME_RATE = 60;
-export const KERNEL_STEP_ANIMATION_INTERVAL = Math.floor(1000 / FRAME_RATE);

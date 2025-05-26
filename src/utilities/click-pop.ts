@@ -1,7 +1,3 @@
-import {
-  KERNEL_NARROW_SIZE_PX,
-  KERNEL_WIDE_SIZE_PX,
-} from '../constants/breakpoint';
 import { animateKernel, getKernelElement } from './kernel';
 import { getRandomBoolean, getRandomInteger } from './random';
 
@@ -9,6 +5,9 @@ import { getRandomBoolean, getRandomInteger } from './random';
  * Needs to stay in sync with the media query in global.css.
  */
 const KERNEL_SIZE_BREAKPOINT_PX = 640;
+
+const KERNEL_WIDE_SIZE_PX = 56;
+const KERNEL_NARROW_SIZE_PX = 42;
 
 let maxKernelsPerClick = 3;
 let minKernelsPerClick = 1;
