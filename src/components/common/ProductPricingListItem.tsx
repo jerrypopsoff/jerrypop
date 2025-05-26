@@ -1,6 +1,6 @@
 import { CateringProduct, RetailProduct } from '../../types/product';
 import { displayCurrency } from '../../utilities/currency';
-import ProductImage from './ProductImage';
+import OptimizedImage from './OptimizedImage';
 
 interface CateringProps {
   product: CateringProduct;
@@ -16,11 +16,20 @@ export default function ProductPricingListItem({
   product,
   type,
 }: CateringProps | RetailProps) {
-  const { description, priceCatering, subtitle, title, weight } = product;
+  const { description, image, priceCatering, subtitle, title, weight } =
+    product;
 
   return (
     <li key={title} className="mx-4 my-8 max-w-[18rem] text-center sm:mx-6">
-      <ProductImage product={product} />
+      <OptimizedImage
+        alt={`Photograph of a bag of ${title} craft popcorn`}
+        aspectRatioCss="600 / 771"
+        className="mx-auto"
+        sizes="(min-width: 300px) 300px, 95vw"
+        sourceImageWidthPx={600}
+        src={image}
+        widthCss="min(95vw,15rem)"
+      />
       <h3 className="mt-6 text-2xl font-semibold">{title}</h3>
       <p className="mt-1 text-sm uppercase">{`${weight} ${subtitle}`}</p>
       <p className="text-normal my-6">
