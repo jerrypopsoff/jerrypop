@@ -4,13 +4,7 @@ import { RETAIL_PRODUCTS } from '../constants/product';
 import Heading1 from './common/Heading1';
 import Heading2 from './common/Heading2';
 import Paragraph from './common/Paragraph';
-import GlamorPhotograph from './GlamorPhotograph';
-import GlamorousChipotleCheddar600 from '../images/glamorous-chipotle-cheddar-600.jpg';
-import GlamorousChipotleCheddar1200 from '../images/glamorous-chipotle-cheddar-1200.jpg';
-import GlamorousChipotleCheddar2400 from '../images/glamorous-chipotle-cheddar-2400.jpg';
-import GlamorousChipotleCheddarWebp600 from '../images/glamorous-chipotle-cheddar-600.webp';
-import GlamorousChipotleCheddarWebp1200 from '../images/glamorous-chipotle-cheddar-1200.webp';
-import GlamorousChipotleCheddarWebp2400 from '../images/glamorous-chipotle-cheddar-2400.webp';
+import PageHeaderPhotographSrc from '../images/glamorous-chipotle-cheddar.jpg';
 import { TILE_LIST_STYLE } from '../constants/css/tile-list';
 import PricingListItem from './PricingListItem';
 import Link from 'next/link';
@@ -22,6 +16,7 @@ import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
+import PageHeaderPhotograph from './common/PageHeaderPhotograph';
 
 const StyledRetail = styled.div`
   align-items: center;
@@ -64,20 +59,10 @@ const Retail = () => {
 
   return (
     <StyledRetail>
-      <GlamorPhotograph
+      <PageHeaderPhotograph
         alt="Photograph of Chipotle Cheddar Craft popcorn with wedges of cheddar, whole chipotles, and lime wedges on a wooden bar top"
-        aspectRatio={2080 / 1170}
-        fallbackSrc={GlamorousChipotleCheddar2400.src}
-        fallbackSourceSet={[
-          { size: '600w', src: GlamorousChipotleCheddar600.src },
-          { size: '1200w', src: GlamorousChipotleCheddar1200.src },
-          { size: '2400w', src: GlamorousChipotleCheddar2400.src },
-        ]}
-        sourceSet={[
-          { size: '600w', src: GlamorousChipotleCheddarWebp600.src },
-          { size: '1200w', src: GlamorousChipotleCheddarWebp1200.src },
-          { size: '2400w', src: GlamorousChipotleCheddarWebp2400.src },
-        ]}
+        aspectRatioCss="2080 / 1170"
+        src={PageHeaderPhotographSrc}
       />
       <Heading1>Retail</Heading1>
       <Paragraph>

@@ -4,13 +4,7 @@ import { CATERING_PRODUCTS } from '../constants/product';
 import Heading1 from './common/Heading1';
 import Heading2 from './common/Heading2';
 import Paragraph from './common/Paragraph';
-import GlamorPhotograph from './GlamorPhotograph';
-import ChocolateHazelnutEspresso600 from '../images/glamorous-chocolate-hazelnut-espresso-600.jpeg';
-import ChocolateHazelnutEspresso1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.jpeg';
-import ChocolateHazelnutEspresso2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.jpeg';
-import ChocolateHazelnutEspressoWebp600 from '../images/glamorous-chocolate-hazelnut-espresso-600.webp';
-import ChocolateHazelnutEspressoWebp1200 from '../images/glamorous-chocolate-hazelnut-espresso-1200.webp';
-import ChocolateHazelnutEspressoWebp2400 from '../images/glamorous-chocolate-hazelnut-espresso-2400.webp';
+import PageHeaderPhotographSrc from '../images/glamorous-chocolate-hazelnut-espresso.jpeg';
 import Link from 'next/link';
 import FormDialog from './FormDialog';
 import { useDialogState } from '../hooks/use-form-dialog';
@@ -24,26 +18,17 @@ import DefinitionList from './common/DefinitionList';
 import DescriptionTerm from './common/DescriptionTerm';
 import DescriptionDetails from './common/DescriptionDetails';
 import ProductPricingList from './common/ProductPricingList';
+import PageHeaderPhotograph from './common/PageHeaderPhotograph';
 
 const Catering = () => {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
     <>
-      <GlamorPhotograph
+      <PageHeaderPhotograph
         alt="Photograph of Chocolate Hazelnut Espresso craft popcorn on a wooden table alongside hazelnuts, chocolate bar chunks, and an espresso shot"
-        aspectRatio={2400 / 1350}
-        fallbackSrc={ChocolateHazelnutEspresso2400.src}
-        fallbackSourceSet={[
-          { size: '600w', src: ChocolateHazelnutEspresso600.src },
-          { size: '1200w', src: ChocolateHazelnutEspresso1200.src },
-          { size: '2400w', src: ChocolateHazelnutEspresso2400.src },
-        ]}
-        sourceSet={[
-          { size: '600w', src: ChocolateHazelnutEspressoWebp600.src },
-          { size: '1200w', src: ChocolateHazelnutEspressoWebp1200.src },
-          { size: '2400w', src: ChocolateHazelnutEspressoWebp2400.src },
-        ]}
+        aspectRatioCss="4032 / 3024"
+        src={PageHeaderPhotographSrc}
       />
       <PageContentLayout>
         <Heading1>Catering</Heading1>

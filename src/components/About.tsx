@@ -1,35 +1,20 @@
 'use client';
 
-import GlamorPhotograph from './GlamorPhotograph';
-import BlueberryPancake600 from '../images/glamorous-blueberry-pancake-600.jpeg';
-import BlueberryPancake1200 from '../images/glamorous-blueberry-pancake-1200.jpeg';
-import BlueberryPancake2400 from '../images/glamorous-blueberry-pancake-2400.jpeg';
-import BlueberryPancakeWebp600 from '../images/glamorous-blueberry-pancake-600.webp';
-import BlueberryPancakeWebp1200 from '../images/glamorous-blueberry-pancake-1200.webp';
-import BlueberryPancakeWebp2400 from '../images/glamorous-blueberry-pancake-2400.webp';
+import PageHeaderPhotographSrc from '../images/glamorous-blueberry-pancake.jpeg';
 import Team from './Team';
 import PageContentLayout from './PageContentLayout';
 import Heading1 from './common/Heading1';
 import Paragraph from './common/Paragraph';
 import Heading2 from './common/Heading2';
+import PageHeaderPhotograph from './common/PageHeaderPhotograph';
 
 const About = () => {
   return (
     <>
-      <GlamorPhotograph
+      <PageHeaderPhotograph
         alt="Photograph of a red bowl of Blueberry Pancake Craft Popcorn taken outdoors from directly above"
-        aspectRatio={3557 / 2260}
-        fallbackSrc={BlueberryPancake2400.src}
-        fallbackSourceSet={[
-          { size: '600w', src: BlueberryPancake600.src },
-          { size: '1200w', src: BlueberryPancake1200.src },
-          { size: '2400w', src: BlueberryPancake2400.src },
-        ]}
-        sourceSet={[
-          { size: '600w', src: BlueberryPancakeWebp600.src },
-          { size: '1200w', src: BlueberryPancakeWebp1200.src },
-          { size: '2400w', src: BlueberryPancakeWebp2400.src },
-        ]}
+        aspectRatioCss="3557 / 2260"
+        src={PageHeaderPhotographSrc}
       />
       <PageContentLayout>
         <Heading1>About</Heading1>

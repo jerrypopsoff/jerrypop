@@ -3,16 +3,11 @@
 import Heading1 from './common/Heading1';
 import Paragraph from './common/Paragraph';
 import styled from 'styled-components';
-import GlamorPhotograph from './GlamorPhotograph';
-import HabaneroRanch600 from '../images/glamorous-habanero-ranch-600.jpeg';
-import HabaneroRanch1200 from '../images/glamorous-habanero-ranch-1200.jpeg';
-import HabaneroRanch2400 from '../images/glamorous-habanero-ranch-2400.jpeg';
-import HabaneroRanchWebp600 from '../images/glamorous-habanero-ranch-600.webp';
-import HabaneroRanchWebp1200 from '../images/glamorous-habanero-ranch-1200.webp';
-import HabaneroRanchWebp2400 from '../images/glamorous-habanero-ranch-2400.webp';
+import PageHeaderPhotographSrc from '../images/glamorous-habanero-ranch.jpeg';
 import PressArticles from './PressArticles';
 import { BUTTON_STYLE } from '../constants/css/button';
 import Link from 'next/link';
+import PageHeaderPhotograph from './common/PageHeaderPhotograph';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
 const POP_UP_REQUEST_EMAIL_BODY =
@@ -38,20 +33,10 @@ const StyledLink = styled(Link)`
 const Home = () => {
   return (
     <StyledHome>
-      <GlamorPhotograph
+      <PageHeaderPhotograph
         alt="Photograph of a blue bowl of Habanero Ranch Craft Popcorn on a wooden surface taken from directly above"
-        aspectRatio={17 / 10}
-        fallbackSrc={HabaneroRanch2400.src}
-        fallbackSourceSet={[
-          { size: '600w', src: HabaneroRanch600.src },
-          { size: '1200w', src: HabaneroRanch1200.src },
-          { size: '2400w', src: HabaneroRanch2400.src },
-        ]}
-        sourceSet={[
-          { size: '600w', src: HabaneroRanchWebp600.src },
-          { size: '1200w', src: HabaneroRanchWebp1200.src },
-          { size: '2400w', src: HabaneroRanchWebp2400.src },
-        ]}
+        aspectRatioCss="3851 / 2268"
+        src={PageHeaderPhotographSrc}
       />
       <StyledSection>
         <Heading1>Catering</Heading1>
