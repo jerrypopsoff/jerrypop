@@ -4,32 +4,13 @@ import styled from 'styled-components';
 import { Product } from '../types/product';
 import {
   TILE_LIST_ITEM_STYLE,
-  TILE_IMAGE_CONTAINER_STYLE,
-  TILE_IMAGE_STYLE,
   TILE_INFORMATION_STYLE,
 } from '../constants/css/tile-list';
-import OptimizedImage from './OptimizedImage';
-import {
-  PRODUCT_IMAGE_ASPECT_RATIO,
-  PRODUCT_IMAGE_WIDTH_PX,
-} from '../constants/product';
+import OptimizedImage from './common/OptimizedImage';
+import { PRODUCT_IMAGE_WIDTH_PX } from '../constants/product';
 
 const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
   ${TILE_LIST_ITEM_STYLE}
-`;
-
-const StyledTileImageContainer = styled.div<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_CONTAINER_STYLE}
-`;
-
-const StyledTileImage = styled(OptimizedImage)<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_STYLE}
 `;
 
 const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
@@ -62,20 +43,13 @@ interface Props {
 const ProductListing = ({ product }: Props) => {
   return (
     <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-      <StyledTileImageContainer
-        $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
-        $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
-      >
-        <StyledTileImage
-          $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
-          $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
-          alt={`Photograph of ${product.title}`}
-          fallbackSrc={product.image}
-          fallbackSourceSet={[{ size: '600w', src: product.image }]}
-          sizes={`${PRODUCT_IMAGE_WIDTH_PX}px (min-width: ${PRODUCT_IMAGE_WIDTH_PX}px), 95vw`}
-          sourceSet={[{ size: '600w', src: product.imageWebp }]}
-        />
-      </StyledTileImageContainer>
+      <OptimizedImage
+        alt={`Photograph of ${product.title}`}
+        aspectRatioCss="600 / 771"
+        sizes={`300px (min-width: 315px), 95vw`}
+        src={product.image}
+        widthCss="min(95vw, 18.75rem)"
+      />
       <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
         <StyledTitle>{product.title}</StyledTitle>
         <StyledSubtitle>{product.subtitle}</StyledSubtitle>
