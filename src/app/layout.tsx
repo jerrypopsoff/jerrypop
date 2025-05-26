@@ -6,7 +6,6 @@ import { isProduction } from '../utilities/environment';
 import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
 import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
-import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
 import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
 import { ReactNode } from 'react';
@@ -25,14 +24,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           bg-background text-foreground font-default sm:pt-34 pt-25 antialiased
         "
       >
-        <StyledComponentsRegistry>
-          <ConsoleAsciiArt />
-          <ClickPop />
-          <ScrollToTopOnPathChange />
-          <NavigationBar />
-          {children}
-          <Footer />
-        </StyledComponentsRegistry>
+        <ConsoleAsciiArt />
+        <ClickPop />
+        <ScrollToTopOnPathChange />
+        <NavigationBar />
+        {children}
+        <Footer />
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
