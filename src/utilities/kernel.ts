@@ -1,10 +1,11 @@
-import {
-  GRAVITATIONAL_ACCELERATION,
-  KERNEL_TERMINAL_VELOCITY,
-} from '../constants/physics';
 import ColonelHead from '../images/colonel-head.svg';
-import { KERNEL_STEP_ANIMATION_INTERVAL } from '../constants/animation';
 import { getRandomInteger } from './random';
+
+const FRAME_RATE = 60;
+const KERNEL_STEP_ANIMATION_INTERVAL = Math.floor(1000 / FRAME_RATE);
+
+const GRAVITATIONAL_ACCELERATION = 1;
+const KERNEL_TERMINAL_VELOCITY = 40;
 
 const DEFAULT_KERNEL_HEIGHT = 36; // Now an arbitrary const idk
 

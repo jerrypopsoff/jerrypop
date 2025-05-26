@@ -1,102 +1,42 @@
-import Typography from './Typography';
-import styled from 'styled-components';
-import {
-  TILE_LIST_STYLE,
-  TILE_LIST_ITEM_STYLE,
-  TILE_IMAGE_CONTAINER_STYLE,
-  TILE_IMAGE_STYLE,
-  TILE_INFORMATION_STYLE,
-  TILE_LIST_ITEM_LINK_STYLE,
-} from '../constants/css/tile-list';
 import { ARTICLES } from '../constants/press';
-import { DEFAULT_TILE_LIST_IMAGE_WIDTH_PX } from '../constants/css/tile-list';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from './common/OptimizedImage';
 import Link from 'next/link';
-
-const StyledTileList = styled.ul`
-  ${TILE_LIST_STYLE}
-`;
-
-const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
-  ${TILE_LIST_ITEM_STYLE}
-`;
-
-const StyledArticleListItem = styled(Link)<{ $imageWidthPx: number }>`
-  ${TILE_LIST_ITEM_LINK_STYLE}
-`;
-
-const StyledTileImageContainer = styled.div<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_CONTAINER_STYLE}
-`;
-
-const StyledTileImage = styled(OptimizedImage)<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_STYLE}
-`;
-
-const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
-  ${TILE_INFORMATION_STYLE}
-`;
-
-const StyledArticlePublication = styled(Typography)`
-  font-weight: 300;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-`;
-
-const StyledArticleDate = styled(Typography)`
-  font-size: 12px;
-  margin: 12px 0 0;
-`;
 
 const PressArticles = () => {
   return (
-    <StyledTileList>
-      {ARTICLES.map((article) => (
-        <StyledTileListItem
-          $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
-          key={article.title}
-        >
-          <StyledArticleListItem
-            $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
-            href={article.href}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <StyledTileImageContainer
-              $aspectRatio={1}
-              $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
+    <ul className="flex flex-col flex-wrap justify-center md:flex-row">
+      {ARTICLES.map(
+        ({ date, href, image, imageAltText, publication, title }) => (
+          <li className="inline-flex" key={href}>
+            <Link
+              className="
+                mx-auto my-6 flex flex-col items-center p-4 md:m-6 md:flex-row
+              "
+              href={href}
+              rel="noreferrer"
+              target="_blank"
             >
-              <StyledTileImage
-                $aspectRatio={1}
-                $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
-                alt={article.imageAltText}
-                fallbackSrc={article.image}
-                fallbackSourceSet={[{ size: '600w', src: article.image }]}
-                sizes={`${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px (min-width: ${DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}px), 95vw`}
-                sourceSet={[{ size: '600w', src: article.imageWebp }]}
+              <OptimizedImage
+                alt={imageAltText}
+                aspectRatioCss="600 / 600"
+                sizes={`300px (min-width: 333px), 90vw`}
+                src={image}
+                widthCss="min(90vw, 18.75rem)"
               />
-            </StyledTileImageContainer>
-            <StyledTileInformation
-              $imageWidthPx={DEFAULT_TILE_LIST_IMAGE_WIDTH_PX}
-            >
-              <StyledArticlePublication type="p">
-                {article.publication}
-              </StyledArticlePublication>
-              <Typography margin="0" type="h2">
-                {article.title}
-              </Typography>
-              <StyledArticleDate type="p">{article.date}</StyledArticleDate>
-            </StyledTileInformation>
-          </StyledArticleListItem>
-        </StyledTileListItem>
-      ))}
-    </StyledTileList>
+              <div
+                className="
+                  max-w-75 mt-4 text-center md:ml-6 md:mt-0 md:text-left
+                "
+              >
+                <p className="font-light uppercase">{publication}</p>
+                <h2 className="mb-4 mt-2 text-2xl font-semibold">{title}</h2>
+                <p className="text-xs">{date}</p>
+              </div>
+            </Link>
+          </li>
+        ),
+      )}
+    </ul>
   );
 };
 

@@ -1,13 +1,11 @@
-import '../app.css';
+import '../css/app.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { METADATA } from '../constants/metadata';
 import { VIEWPORT } from '../constants/viewport';
 import { isProduction } from '../utilities/environment';
-import { GLOBAL_STYLE as GlobalStyle } from '../constants/css/global-style';
 import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
 import NavigationBar from '../components/NavigationBar';
 import Footer from '../components/Footer';
-import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
 import ClickPop from '../components/ClickPop';
 import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
 import { ReactNode } from 'react';
@@ -21,16 +19,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react/no-unknown-property
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
-      <body>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
-          <ConsoleAsciiArt />
-          <ClickPop />
-          <ScrollToTopOnPathChange />
-          <NavigationBar />
-          {children}
-          <Footer />
-        </StyledComponentsRegistry>
+      <body
+        className="
+          bg-background text-foreground font-default sm:pt-34 pt-25 antialiased
+        "
+      >
+        <ConsoleAsciiArt />
+        <ClickPop />
+        <ScrollToTopOnPathChange />
+        <NavigationBar />
+        {children}
+        <Footer />
         {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>

@@ -1,113 +1,6 @@
 import { useState } from 'react';
 import { Recipe } from '../types/recipe';
-import Typography from './Typography';
-import { DANGLE_STYLE } from '../constants/css/rotation';
-import styled from 'styled-components';
-import {
-  CARD_OUTER_STYLE,
-  CARD_INNER_STYLE,
-  CARD_TITLE_STYLE,
-} from '../constants/css/card';
-
-const listStyles = `
-  margin-bottom: 0;
-  margin-left: 20px;
-  padding: 0;
-`;
-
-const asideFont = `
-  display: block;
-  font-size: 12px;
-  font-style: italic;
-  margin-top: 8px;
-`;
-
-const StyledRecipe = styled.li<{ $isCollapsed: boolean }>`
-  ${CARD_OUTER_STYLE}
-
-  ${({ $isCollapsed }) => {
-    if (!$isCollapsed) {
-      return '';
-    }
-
-    return `
-      cursor: pointer;
-
-      &:hover,
-      &:focus {
-        ${DANGLE_STYLE}
-      }
-    `;
-  }}
-`;
-
-const StyledInnerRecipe = styled.div`
-  ${CARD_INNER_STYLE}
-`;
-
-const StyledTitle = styled(Typography)`
-  ${CARD_TITLE_STYLE}
-`;
-
-const StyledTime = styled.span`
-  display: block;
-  font-size: 12px;
-  text-align: center;
-`;
-
-const StyledMaterials = styled.ul`
-  ${listStyles}
-`;
-
-const StyledMaterial = styled.li`
-  margin: 16px 0;
-`;
-
-const StyledMaterialName = styled.span`
-  display: block;
-`;
-
-const StyledMaterialAmount = styled.span`
-  ${asideFont}
-  margin-top: 4px;
-  text-transform: lowercase;
-`;
-
-const StyledSteps = styled.ol`
-  ${listStyles}
-`;
-
-const StyledStep = styled.li`
-  margin: 16px 0;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-const StyledStepContent = styled.span`
-  display: block;
-  font-size: 16px;
-`;
-
-const StyledAside = styled.span`
-  ${asideFont}
-`;
-
-const StyledVideo = styled.div`
-  margin: 16px 0;
-  height: 258px;
-  text-align: center;
-  width: 100%;
-
-  @media (max-width: 600px) {
-    height: 174px;
-  }
-`;
-
-const StyledIframe = styled.iframe`
-  border: none;
-`;
+import Heading4 from './common/Heading4';
 
 interface Props {
   recipe: Recipe;
@@ -115,49 +8,6 @@ interface Props {
 
 const RecipeComponent = ({ recipe }: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const recipeDetails = isCollapsed ? null : (
-    <>
-      {recipe.href ? (
-        <StyledVideo>
-          <StyledIframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            height="100%"
-            width="100%"
-            src={recipe.href}
-            title={recipe.title}
-          ></StyledIframe>
-        </StyledVideo>
-      ) : null}
-      <Typography margin="24px 0 16px" type="h4">
-        Materials
-      </Typography>
-      <StyledMaterials>
-        {recipe.materials.map(({ amount, name }) => (
-          <StyledMaterial key={name}>
-            <StyledMaterialName>{name}</StyledMaterialName>
-            <StyledMaterialAmount>{amount}</StyledMaterialAmount>
-          </StyledMaterial>
-        ))}
-      </StyledMaterials>
-      <Typography margin="24px 0 16px" type="h4">
-        Instructions
-      </Typography>
-      <StyledSteps>
-        {recipe.steps.map(({ aside, content }) => (
-          <StyledStep key={content}>
-            <div>
-              <StyledStepContent>{content}</StyledStepContent>
-              {aside && (
-                <StyledAside dangerouslySetInnerHTML={{ __html: aside }} />
-              )}
-            </div>
-          </StyledStep>
-        ))}
-      </StyledSteps>
-    </>
-  );
 
   const onRecipeClick = () => {
     setIsCollapsed(!isCollapsed);
@@ -171,20 +21,64 @@ const RecipeComponent = ({ recipe }: Props) => {
     setIsCollapsed(!isCollapsed);
   };
 
+  const dynamicClassName = isCollapsed
+    ? 'cursor-pointer hover:animate-wiggle focus:animate-wiggle'
+    : '';
+
   return (
-    <StyledRecipe
-      $isCollapsed={isCollapsed}
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    <li
+      className={`my-8 rounded-sm ${dynamicClassName}`}
       onClick={isCollapsed ? onRecipeClick : undefined}
       onKeyDown={isCollapsed ? onRecipeKeyDown : undefined}
       role={isCollapsed ? 'button' : undefined}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={isCollapsed ? 0 : undefined}
     >
-      <StyledInnerRecipe>
-        <StyledTitle type="h3">{recipe.title}</StyledTitle>
-        <StyledTime>{recipe.time}</StyledTime>
-        {recipeDetails}
-      </StyledInnerRecipe>
-    </StyledRecipe>
+      <div className="px-4 py-6 text-left">
+        <h3 className="mb-2 text-center text-xl font-bold">{recipe.title}</h3>
+        <div className="text-center text-sm">{recipe.time}</div>
+        {isCollapsed ? null : (
+          <>
+            {recipe.href ? (
+              <div className="xs:h-66 h-45 my-4 w-full">
+                <iframe
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  height="100%"
+                  width="100%"
+                  src={recipe.href}
+                  title={recipe.title}
+                ></iframe>
+              </div>
+            ) : null}
+            <Heading4>Materials</Heading4>
+            <ul className="ml-4 list-[circle]">
+              {recipe.materials.map(({ amount, name }) => (
+                <li className="my-4" key={name}>
+                  <div>{name}</div>
+                  <div className="mt-1 text-sm lowercase italic">{amount}</div>
+                </li>
+              ))}
+            </ul>
+            <Heading4>Instructions</Heading4>
+            <ol className="ml-4 list-decimal">
+              {recipe.steps.map(({ aside, content }) => (
+                <li className="my-4 last:mb-0" key={content}>
+                  <div>{content}</div>
+                  {aside && (
+                    <div
+                      className="mt-2 text-sm italic"
+                      dangerouslySetInnerHTML={{ __html: aside }}
+                    />
+                  )}
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
+      </div>
+    </li>
   );
 };
 

@@ -1,20 +1,23 @@
-import {
-  KERNEL_NARROW_SIZE_PX,
-  KERNEL_WIDE_SIZE_PX,
-  WINDOW_BREAKPOINT_WIDTH_PX,
-} from '../constants/breakpoint';
 import { animateKernel, getKernelElement } from './kernel';
 import { getRandomBoolean, getRandomInteger } from './random';
 
-let MAX_KERNELS_PER_CLICK = 3;
-let MIN_KERNELS_PER_CLICK = 1;
+/**
+ * Needs to stay in sync with the media query in global.css.
+ */
+const KERNEL_SIZE_BREAKPOINT_PX = 640;
 
-export function increaseKernelCount() {
-  MAX_KERNELS_PER_CLICK++;
-  MIN_KERNELS_PER_CLICK++;
-}
+const KERNEL_WIDE_SIZE_PX = 56;
+const KERNEL_NARROW_SIZE_PX = 42;
+
+let maxKernelsPerClick = 3;
+let minKernelsPerClick = 1;
 
 let clickPopIndex = 0;
+
+export function increaseKernelCount() {
+  maxKernelsPerClick++;
+  minKernelsPerClick++;
+}
 
 function popNewKernel({
   documentElement,
@@ -44,17 +47,14 @@ function popNewKernel({
 export function initializeClickPop(documentElement: Document) {
   documentElement.addEventListener('click', ({ pageX, pageY }) => {
     const windowInnerWidth = window.innerWidth ?? 0;
-    const isWideScreen = windowInnerWidth > WINDOW_BREAKPOINT_WIDTH_PX;
+    const isWideScreen = windowInnerWidth >= KERNEL_SIZE_BREAKPOINT_PX;
     const xPosition = isWideScreen
       ? pageX - KERNEL_WIDE_SIZE_PX / 2
       : pageX - KERNEL_NARROW_SIZE_PX / 2;
     const yPosition = isWideScreen
       ? pageY - KERNEL_WIDE_SIZE_PX / 2
       : pageY - KERNEL_NARROW_SIZE_PX / 2;
-    const numKernels = getRandomInteger(
-      MIN_KERNELS_PER_CLICK,
-      MAX_KERNELS_PER_CLICK,
-    );
+    const numKernels = getRandomInteger(minKernelsPerClick, maxKernelsPerClick);
     for (let i = 0; i < numKernels; ++i) {
       popNewKernel({ documentElement, xPosition, yPosition });
     }

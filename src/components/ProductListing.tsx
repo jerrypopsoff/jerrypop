@@ -1,96 +1,36 @@
-import Typography from './Typography';
-import styled from 'styled-components';
 import { Product } from '../types/product';
-import {
-  TILE_LIST_ITEM_STYLE,
-  TILE_IMAGE_CONTAINER_STYLE,
-  TILE_IMAGE_STYLE,
-  TILE_INFORMATION_STYLE,
-} from '../constants/css/tile-list';
-import OptimizedImage from './OptimizedImage';
-import {
-  PRODUCT_IMAGE_ASPECT_RATIO,
-  PRODUCT_IMAGE_WIDTH_PX,
-} from '../constants/product';
-
-const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
-  ${TILE_LIST_ITEM_STYLE}
-`;
-
-const StyledTileImageContainer = styled.div<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_CONTAINER_STYLE}
-`;
-
-const StyledTileImage = styled(OptimizedImage)<{
-  $aspectRatio: number;
-  $imageWidthPx: number;
-}>`
-  ${TILE_IMAGE_STYLE}
-`;
-
-const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
-  ${TILE_INFORMATION_STYLE}
-`;
-
-const StyledTitle = styled(Typography)`
-  margin: 0;
-`;
-
-const StyledSubtitle = styled(Typography)`
-  font-size: 12px;
-  line-height: 1.25;
-  margin: 4px 0 0;
-  text-transform: uppercase;
-`;
-
-const StyledIngredientListContent = styled(Typography)`
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: justify;
-  text-transform: uppercase;
-`;
+import OptimizedImage from './common/OptimizedImage';
 
 interface Props {
   product: Product;
 }
 
 const ProductListing = ({ product }: Props) => {
+  const { allergens, description, image, ingredients, subtitle, title } =
+    product;
+
   return (
-    <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-      <StyledTileImageContainer
-        $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
-        $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
-      >
-        <StyledTileImage
-          $aspectRatio={PRODUCT_IMAGE_ASPECT_RATIO}
-          $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}
-          alt={`Photograph of ${product.title}`}
-          fallbackSrc={product.image}
-          fallbackSourceSet={[{ size: '600w', src: product.image }]}
-          sizes={`${PRODUCT_IMAGE_WIDTH_PX}px (min-width: ${PRODUCT_IMAGE_WIDTH_PX}px), 95vw`}
-          sourceSet={[{ size: '600w', src: product.imageWebp }]}
-        />
-      </StyledTileImageContainer>
-      <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-        <StyledTitle type="h2">{product.title}</StyledTitle>
-        <StyledSubtitle type="p">{product.subtitle}</StyledSubtitle>
-        <Typography margin="16px 0 0" type="p">
-          {product.description}
-        </Typography>
-        <StyledIngredientListContent margin="16px 0 0" type="p">
-          <b>Ingredients:</b> {product.ingredients.join(', ')}
-        </StyledIngredientListContent>
-        {product.allergens.length ? (
-          <StyledIngredientListContent margin="8px 0 0" type="p">
-            <b>Contains:</b> {product.allergens.join(', ')}
-          </StyledIngredientListContent>
-        ) : null}
-      </StyledTileInformation>
-    </StyledTileListItem>
+    <li className="mx-4 my-8 max-w-[18rem] text-center sm:mx-6">
+      <OptimizedImage
+        alt={`Photograph of a bag of ${title} craft popcorn`}
+        aspectRatioCss="600 / 771"
+        className="mx-auto"
+        sizes="(min-width: 300px) 300px, 95vw"
+        src={image}
+        widthCss="min(95vw,15rem)"
+      />
+      <h2 className="mt-6 text-2xl font-semibold">{title}</h2>
+      <p className="mt-1 text-xs uppercase">{subtitle}</p>
+      <p className="my-6">{description}</p>
+      <p className="text-justify text-xs uppercase">
+        <b>Ingredients:</b> {ingredients.join(', ')}
+      </p>
+      {allergens.length ? (
+        <p className="mt-2 text-justify text-xs uppercase">
+          <b>Contains:</b> {allergens.join(', ')}
+        </p>
+      ) : null}
+    </li>
   );
 };
 
