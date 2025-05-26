@@ -15,6 +15,7 @@ export default function PageHeaderPhotograph({
       alt={alt}
       aspectRatioCss={aspectRatioCss}
       className="lg:max-h-100 sm:max-h-70 max-h-40"
+      placeholder="blur"
       priority={true}
       sizes="100vw"
       src={src}
