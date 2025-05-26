@@ -66,7 +66,7 @@ const MobileNavigationBar = ({ navigationMenuItems }: Props) => {
           <button
             aria-label={hamburgerButtonAriaLabel}
             className="
-              column z-hamburger absolute left-0 flex flex-col justify-around
+              column z-nav-hamburger absolute left-0 flex flex-col justify-around
               p-5
             "
             onClick={toggleMenu}
