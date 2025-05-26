@@ -41,7 +41,7 @@ const RecipeComponent = ({ recipe }: Props) => {
         {isCollapsed ? null : (
           <>
             {recipe.href ? (
-              <div className="xs:h-66 my-4 h-48 w-full">
+              <div className="xs:h-66 h-45 my-4 w-full">
                 <iframe
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

@@ -19,7 +19,7 @@ const Recipes = () => {
       <PageContentLayout>
         <Heading1>Recipes</Heading1>
         <Paragraph>Select a recipe to view details.</Paragraph>
-        <ul className="px-12.5 w-full">
+        <ul className="max-w-125 w-full">
           {RECIPES.map((recipe) => {
             return <Recipe key={recipe.title} recipe={recipe} />;
           })}
