@@ -29,24 +29,24 @@ export default function ProductPricingListItem({
         src={image}
         widthCss="min(95vw,15rem)"
       />
-      <h3 className="mt-6 text-2xl font-semibold">{title}</h3>
-      <p className="mt-1 text-sm uppercase">{`${weight} ${subtitle}`}</p>
+      <h3 className="mt-6 text-3xl font-semibold">{title}</h3>
+      <p className="mt-2 text-xs uppercase">{`${weight} ${subtitle}`}</p>
       <p className="text-normal my-6">
         <span dangerouslySetInnerHTML={{ __html: description }} />
       </p>
       <dl>
         {type === 'retail' && (
           <>
-            <dt className="text-sm uppercase">Suggested retail price</dt>
-            <dd className="mb-6 mt-1 text-[2rem] font-light leading-none">
+            <dt className="text-xs uppercase">Suggested retail price</dt>
+            <dd className="mb-6 mt-1 text-3xl font-light leading-none">
               {displayCurrency(product.priceMsrp)}
             </dd>
           </>
         )}
-        <dt className="text-sm uppercase">
+        <dt className="text-xs uppercase">
           {type === 'retail' ? 'Your price' : 'Price'}
         </dt>
-        <dd className="mt-1 text-[2rem] font-light leading-none">
+        <dd className="mt-1 text-3xl font-light leading-none">
           {displayCurrency(
             type === 'retail' ? product.priceRetailer : priceCatering,
           )}
