@@ -26,7 +26,6 @@ export default function ProductPricingListItem({
         aspectRatioCss="600 / 771"
         className="mx-auto"
         sizes="(min-width: 300px) 300px, 95vw"
-        sourceImageWidthPx={600}
         src={image}
         widthCss="min(95vw,15rem)"
       />

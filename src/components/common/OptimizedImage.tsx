@@ -20,11 +20,6 @@ interface Props extends ImageProps {
    */
   sizes: string;
   /**
-   * The width of the source image in pixels. This is used to ensure the image
-   * does not exceed 1/2 the source image width to maintain quality.
-   */
-  sourceImageWidthPx: number;
-  /**
    * CSS value for width. It should be a string that describes the image width
    * at various breakpoints.
    *
@@ -38,7 +33,6 @@ export default function OptimizedImage({
   aspectRatioCss,
   className,
   sizes,
-  sourceImageWidthPx,
   widthCss,
   ...props
 }: Props) {
@@ -47,11 +41,16 @@ export default function OptimizedImage({
       className={`relative ${className}`}
       style={{
         aspectRatio: aspectRatioCss,
-        maxWidth: `calc(${sourceImageWidthPx}px / 2)`,
         width: widthCss,
       }}
     >
-      <Image fill sizes={sizes} {...props} />
+      <Image
+        className="object-cover"
+        fill
+        sizes={sizes}
+        style={{ aspectRatio: aspectRatioCss }}
+        {...props}
+      />
     </div>
   );
 }
