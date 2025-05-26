@@ -1,25 +1,20 @@
 import Paragraph from './common/Paragraph';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
-import AboutJerryPhotographWebp from '../images/about-jerry.webp';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from './common/OptimizedImage';
 import { YOU_TUBE_CHANNEL_URL } from '../constants/url';
 import Link from 'next/link';
-
-const PHOTOGRAPH_MAX_WIDTH_PX = 300;
-const HORIZONTAL_MARGIN = 24;
-const PAGE_BREAKPOINT_PX = PHOTOGRAPH_MAX_WIDTH_PX + 2 * HORIZONTAL_MARGIN;
 
 const Team = () => {
   return (
     <ul>
       <li className="mt-6">
         <OptimizedImage
-          alt="Photograph of Jerry Haagsma, Jerrypop Founder"
-          className="height-[400px] mx-auto w-[300px]"
-          fallbackSrc={AboutJerryPhotograph.src}
-          fallbackSourceSet={[{ size: '600w', src: AboutJerryPhotograph.src }]}
-          sizes={`${PHOTOGRAPH_MAX_WIDTH_PX}px (min-width: ${PAGE_BREAKPOINT_PX}px), 95vw`}
-          sourceSet={[{ size: '600w', src: AboutJerryPhotographWebp.src }]}
+          alt="Photograph of Jerry Haagsma, founder of Jerrypop"
+          aspectRatioCss="600 / 800"
+          className="mx-auto"
+          sizes={`300px (min-width: 315px), 95vw`}
+          src={AboutJerryPhotograph}
+          widthCss="min(95vw, 18.75rem)"
         />
         <h3 className="mb-1 mt-3 text-2xl font-semibold uppercase">
           Jerry Haagsma
