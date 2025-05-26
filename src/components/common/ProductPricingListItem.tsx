@@ -20,7 +20,7 @@ export default function ProductPricingListItem({
     product;
 
   return (
-    <li key={title} className="mx-4 my-8 max-w-[18rem] text-center sm:mx-6">
+    <li className="mx-4 my-8 max-w-[18rem] text-center sm:mx-6">
       <OptimizedImage
         alt={`Photograph of a bag of ${title} craft popcorn`}
         aspectRatioCss="600 / 771"

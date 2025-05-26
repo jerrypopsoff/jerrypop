@@ -1,69 +1,36 @@
-import Heading2 from './common/Heading2';
-import Paragraph from './common/Paragraph';
-import styled from 'styled-components';
 import { Product } from '../types/product';
-import {
-  TILE_LIST_ITEM_STYLE,
-  TILE_INFORMATION_STYLE,
-} from '../constants/css/tile-list';
 import OptimizedImage from './common/OptimizedImage';
-import { PRODUCT_IMAGE_WIDTH_PX } from '../constants/product';
-
-const StyledTileListItem = styled.li<{ $imageWidthPx: number }>`
-  ${TILE_LIST_ITEM_STYLE}
-`;
-
-const StyledTileInformation = styled.div<{ $imageWidthPx: number }>`
-  ${TILE_INFORMATION_STYLE}
-`;
-
-const StyledTitle = styled(Heading2)`
-  margin: 0;
-`;
-
-const StyledSubtitle = styled(Paragraph)`
-  font-size: 12px;
-  line-height: 1.25;
-  margin: 4px 0 0;
-  text-transform: uppercase;
-`;
-
-const StyledIngredientListContent = styled(Paragraph)`
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-  text-align: justify;
-  text-transform: uppercase;
-`;
 
 interface Props {
   product: Product;
 }
 
 const ProductListing = ({ product }: Props) => {
+  const { allergens, description, image, ingredients, subtitle, title } =
+    product;
+
   return (
-    <StyledTileListItem $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
+    <li className="mx-4 my-8 max-w-[18rem] text-center sm:mx-6">
       <OptimizedImage
-        alt={`Photograph of ${product.title}`}
+        alt={`Photograph of a bag of ${title} craft popcorn`}
         aspectRatioCss="600 / 771"
-        sizes={`300px (min-width: 315px), 95vw`}
-        src={product.image}
-        widthCss="min(95vw, 18.75rem)"
+        className="mx-auto"
+        sizes="(min-width: 300px) 300px, 95vw"
+        src={image}
+        widthCss="min(95vw,15rem)"
       />
-      <StyledTileInformation $imageWidthPx={PRODUCT_IMAGE_WIDTH_PX}>
-        <StyledTitle>{product.title}</StyledTitle>
-        <StyledSubtitle>{product.subtitle}</StyledSubtitle>
-        <Paragraph>{product.description}</Paragraph>
-        <StyledIngredientListContent>
-          <b>Ingredients:</b> {product.ingredients.join(', ')}
-        </StyledIngredientListContent>
-        {product.allergens.length ? (
-          <StyledIngredientListContent>
-            <b>Contains:</b> {product.allergens.join(', ')}
-          </StyledIngredientListContent>
-        ) : null}
-      </StyledTileInformation>
-    </StyledTileListItem>
+      <h2 className="mt-6 text-2xl font-semibold">{title}</h2>
+      <p className="mt-1 text-xs uppercase">{subtitle}</p>
+      <p className="text-normal my-6">{description}</p>
+      <p className="text-justify text-xs uppercase">
+        <b>Ingredients:</b> {ingredients.join(', ')}
+      </p>
+      {allergens.length ? (
+        <p className="mt-2 text-justify text-xs uppercase">
+          <b>Contains:</b> {allergens.join(', ')}
+        </p>
+      ) : null}
+    </li>
   );
 };
 
