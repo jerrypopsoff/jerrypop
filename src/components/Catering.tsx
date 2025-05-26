@@ -72,17 +72,17 @@ const Catering = () => {
       </PageContentLayout>
       <ProductPricingList products={CATERING_PRODUCTS} type="catering" />
       <PageContentLayout>
-        {isFormVisible && (
-          <FormDialog
-            onCloseFormDialog={closeDialog}
-            src={CATERING_ORDER_FORM_SRC}
-            title={CATERING_ORDER_FORM_TITLE}
-          />
-        )}
         <Button className="mt-4" onClick={openDialog}>
           Order
         </Button>
       </PageContentLayout>
+      {isFormVisible && (
+        <FormDialog
+          onCloseFormDialog={closeDialog}
+          src={CATERING_ORDER_FORM_SRC}
+          title={CATERING_ORDER_FORM_TITLE}
+        />
+      )}
     </>
   );
 };

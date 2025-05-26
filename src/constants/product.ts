@@ -11,7 +11,6 @@ import FurikakeDashiPhotograph from '../images/product-furikake-dashi.png';
 import { RetailProduct, Product, CateringProduct } from '../types/product';
 import { INSTAGRAM_PROFILE_URL } from './url';
 
-export const PRODUCT_IMAGE_ASPECT_RATIO = 1.285;
 export const PRODUCT_IMAGE_WIDTH_PX = 240;
 
 export const HABANERO_RANCH: RetailProduct = {
