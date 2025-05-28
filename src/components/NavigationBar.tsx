@@ -1,14 +1,14 @@
-import DesktopNavigationBar from './DesktopNavigationBar';
-import MobileNavigationBar from './MobileNavigationBar';
+import DesktopNavigationBarContent from './DesktopNavigationBarContent';
+import MobileNavigationBarContent from './MobileNavigationBarContent';
 import { NAVIGATION_MENU_ITEMS } from '../constants/navigation';
 
-const NavigationBar = () => {
+export default function NavigationBar() {
   return (
-    <>
-      <DesktopNavigationBar navigationMenuItems={NAVIGATION_MENU_ITEMS} />
-      <MobileNavigationBar navigationMenuItems={NAVIGATION_MENU_ITEMS} />
-    </>
+    <nav>
+      <DesktopNavigationBarContent
+        navigationMenuItems={NAVIGATION_MENU_ITEMS}
+      />
+      <MobileNavigationBarContent navigationMenuItems={NAVIGATION_MENU_ITEMS} />
+    </nav>
   );
-};
-
-export default NavigationBar;
+}

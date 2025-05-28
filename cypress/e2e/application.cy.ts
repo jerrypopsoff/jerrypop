@@ -5,7 +5,7 @@ describe('application tests', () => {
     Object.values(RoutePath).forEach((path) => {
       cy.visit(path, { failOnStatusCode: path !== RoutePath.NotFound });
 
-      cy.get('nav').should('have.length', 2); // (desktop and mobile)
+      cy.get('nav').should('have.length', 1);
       cy.get('h1').should('have.length.least', 1);
       cy.get('footer').should('have.length', 1);
     });
