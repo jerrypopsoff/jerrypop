@@ -51,20 +51,13 @@ export function MobileNavigationBarContent({
 
   return (
     <div
-      className={`
-          z-nav bg-background z-nav absolute left-0 right-0 top-[-22.25rem] flex
-          flex-col-reverse justify-center transition-transform duration-200
-          ease-in-out ${slideableTransform} sm:hidden
-        `}
+      className={`z-nav bg-background z-nav absolute left-0 right-0 top-[-22.25rem] flex flex-col-reverse justify-center transition-transform duration-200 ease-in-out ${slideableTransform} sm:hidden`}
       data-testid="mobile-nav"
     >
       <div className="flex justify-center py-5">
         <button
           aria-label={hamburgerButtonAriaLabel}
-          className="
-              column z-nav-hamburger absolute left-0 flex flex-col justify-around
-              p-5
-            "
+          className="column z-nav-hamburger absolute left-0 flex flex-col justify-around p-5"
           onClick={toggleMenu}
         >
           <HamburgerIcon className="h-5 w-5" />

@@ -19,11 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // eslint-disable-next-line react/no-unknown-property
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
-      <body
-        className="
-          bg-background text-foreground font-default sm:pt-34 pt-25 antialiased
-        "
-      >
+      <body className="bg-background text-foreground font-default sm:pt-34 pt-25 antialiased">
         <ConsoleAsciiArt />
         <ClickPop />
         <ScrollToTopOnPathChange />

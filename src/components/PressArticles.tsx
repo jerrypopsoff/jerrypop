@@ -9,9 +9,7 @@ export function PressArticles() {
         ({ date, href, image, imageAltText, publication, title }) => (
           <li className="inline-flex" key={href}>
             <Link
-              className="
-                mx-auto my-6 flex flex-col items-center p-4 md:m-6 md:flex-row
-              "
+              className="mx-auto my-6 flex flex-col items-center p-4 md:m-6 md:flex-row"
               href={href}
               rel="noreferrer"
               target="_blank"
@@ -23,11 +21,7 @@ export function PressArticles() {
                 src={image}
                 widthCss="min(90vw, 18.75rem)"
               />
-              <div
-                className="
-                  max-w-75 mt-4 text-center md:ml-6 md:mt-0 md:text-left
-                "
-              >
+              <div className="max-w-75 mt-4 text-center md:ml-6 md:mt-0 md:text-left">
                 <p className="font-light uppercase">{publication}</p>
                 <h2 className="mb-4 mt-2 text-2xl font-semibold">{title}</h2>
                 <p className="text-xs">{date}</p>
