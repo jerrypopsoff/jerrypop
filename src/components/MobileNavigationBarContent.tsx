@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import Image from 'next/image';
-import HamburgerIcon from './icons/HamburgerIcon';
-import CloseIcon from './icons/CloseIcon';
+import { HamburgerIcon } from './icons/HamburgerIcon';
+import { CloseIcon } from './icons/CloseIcon';
 
-export default function MobileNavigationBarContent({
+export function MobileNavigationBarContent({
   navigationMenuItems,
 }: {
   navigationMenuItems: NavigationMenuItem[];

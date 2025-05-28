@@ -1,12 +1,12 @@
 'use client';
 
-import Heading1 from './common/Heading1';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
+import { Heading1 } from './common/Heading1';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
 import PageHeaderPhotographSrc from '../images/glamorous-pbj-sheet.jpeg';
-import Paragraph from './common/Paragraph';
-import PageContentLayout from './PageContentLayout';
+import { Paragraph } from './common/Paragraph';
+import { PageContentLayout } from './PageContentLayout';
 
-const NotFound = () => {
+export function NotFound() {
   return (
     <>
       <PageHeaderPhotograph
@@ -22,6 +22,4 @@ const NotFound = () => {
       </PageContentLayout>
     </>
   );
-};
-
-export default NotFound;
+}

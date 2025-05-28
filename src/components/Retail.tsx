@@ -1,26 +1,26 @@
 'use client';
 
 import { RETAIL_PRODUCTS } from '../constants/product';
-import Heading1 from './common/Heading1';
-import Heading2 from './common/Heading2';
-import Paragraph from './common/Paragraph';
+import { Heading1 } from './common/Heading1';
+import { Heading2 } from './common/Heading2';
+import { Paragraph } from './common/Paragraph';
 import PageHeaderPhotographSrc from '../images/glamorous-chipotle-cheddar.jpg';
 import Link from 'next/link';
-import FormDialog from './FormDialog';
+import { FormDialog } from './FormDialog';
 import { useDialogState } from '../hooks/use-dialog-state';
 import {
   RETAIL_ORDER_FORM_SRC,
   RETAIL_ORDER_FORM_TITLE,
 } from '../constants/form';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
-import ProductPricingList from './common/ProductPricingList';
-import PageContentLayout from './PageContentLayout';
-import Button from './common/Button';
-import DefinitionList from './common/DefinitionList';
-import DescriptionTerm from './common/DescriptionTerm';
-import DescriptionDetails from './common/DescriptionDetails';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
+import { ProductPricingList } from './common/ProductPricingList';
+import { PageContentLayout } from './PageContentLayout';
+import { Button } from './common/Button';
+import { DefinitionList } from './common/DefinitionList';
+import { DescriptionTerm } from './common/DescriptionTerm';
+import { DescriptionDetails } from './common/DescriptionDetails';
 
-const Retail = () => {
+export function Retail() {
   const { closeDialog, isFormVisible, openDialog } = useDialogState();
 
   return (
@@ -93,6 +93,4 @@ const Retail = () => {
       )}
     </>
   );
-};
-
-export default Retail;
+}

@@ -1,11 +1,7 @@
 import { Product } from '../types/product';
-import OptimizedImage from './common/OptimizedImage';
+import { OptimizedImage } from './common/OptimizedImage';
 
-interface Props {
-  product: Product;
-}
-
-const ProductListing = ({ product }: Props) => {
+export function ProductListing({ product }: { product: Product }) {
   const { allergens, description, image, ingredients, subtitle, title } =
     product;
 
@@ -32,6 +28,4 @@ const ProductListing = ({ product }: Props) => {
       ) : null}
     </li>
   );
-};
-
-export default ProductListing;
+}

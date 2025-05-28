@@ -11,7 +11,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-const SocialLinks = () => {
+export function SocialLinks() {
   return (
     <ul className="flex">
       <li className="mx-1">
@@ -80,6 +80,4 @@ const SocialLinks = () => {
       </li>
     </ul>
   );
-};
-
-export default SocialLinks;
+}

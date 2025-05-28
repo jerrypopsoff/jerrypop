@@ -1,4 +1,4 @@
-export default function DescriptionTerm({
+export function DescriptionTerm({
   ...props
 }: React.HTMLAttributes<HTMLElement>) {
   return (

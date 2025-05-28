@@ -1,19 +1,19 @@
 'use client';
 
-import Heading1 from './common/Heading1';
-import Paragraph from './common/Paragraph';
+import { Heading1 } from './common/Heading1';
+import { Paragraph } from './common/Paragraph';
 import PageHeaderPhotographSrc from '../images/glamorous-habanero-ranch.jpeg';
-import PressArticles from './PressArticles';
+import { PressArticles } from './PressArticles';
 import Link from 'next/link';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
-import PageContentLayout from './PageContentLayout';
-import ButtonLink from './common/ButtonLink';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
+import { PageContentLayout } from './PageContentLayout';
+import { ButtonLink } from './common/ButtonLink';
 
 const POP_UP_REQUEST_EMAIL_SUBJECT = 'Jerrypop pop-up request';
 const POP_UP_REQUEST_EMAIL_BODY =
   "Hi Jerrypop,\n\nI'd like for you to pop up at [my event] at [location] on [date] from [time range]. Are you available?\n\nThanks,\n[name]";
 
-const Home = () => {
+export function Home() {
   const encodedEmailSubject = encodeURIComponent(POP_UP_REQUEST_EMAIL_SUBJECT);
   const encodedEmailBody = encodeURIComponent(POP_UP_REQUEST_EMAIL_BODY);
   const requestPopUpHref = `mailto:info@jerrypop.com?subject=${encodedEmailSubject}&body=${encodedEmailBody}`;
@@ -60,6 +60,4 @@ const Home = () => {
       <PressArticles />
     </>
   );
-};
-
-export default Home;
+}

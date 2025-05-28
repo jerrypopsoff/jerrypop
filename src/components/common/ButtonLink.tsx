@@ -4,7 +4,7 @@ interface Props extends React.ComponentProps<typeof Link> {
   className?: string;
 }
 
-export default function ButtonLink({ className, ...props }: Props) {
+export function ButtonLink({ className, ...props }: Props) {
   return (
     <Link
       className={`

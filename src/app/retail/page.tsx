@@ -1,4 +1,4 @@
-import Retail from '../../components/Retail';
+import { Retail } from '../../components/Retail';
 
 export const metadata = {
   title: 'Retail · Jerrypop',

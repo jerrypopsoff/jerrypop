@@ -1,8 +1,8 @@
-import DesktopNavigationBarContent from './DesktopNavigationBarContent';
-import MobileNavigationBarContent from './MobileNavigationBarContent';
+import { DesktopNavigationBarContent } from './DesktopNavigationBarContent';
+import { MobileNavigationBarContent } from './MobileNavigationBarContent';
 import { NAVIGATION_MENU_ITEMS } from '../constants/navigation';
 
-export default function NavigationBar() {
+export function NavigationBar() {
   return (
     <nav>
       <DesktopNavigationBarContent

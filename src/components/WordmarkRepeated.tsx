@@ -2,7 +2,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   fillColor: string;
 }
 
-const WordmarkRepeated = ({ fillColor, ...props }: Props) => {
+export default function WordmarkRepeated({ fillColor, ...props }: Props) {
   return (
     <svg
       width="301"
@@ -49,6 +49,4 @@ const WordmarkRepeated = ({ fillColor, ...props }: Props) => {
       </g>
     </svg>
   );
-};
-
-export default WordmarkRepeated;
+}

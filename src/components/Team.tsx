@@ -1,10 +1,10 @@
-import Paragraph from './common/Paragraph';
+import { Paragraph } from './common/Paragraph';
 import AboutJerryPhotograph from '../images/about-jerry.jpeg';
-import OptimizedImage from './common/OptimizedImage';
+import { OptimizedImage } from './common/OptimizedImage';
 import { YOU_TUBE_CHANNEL_URL } from '../constants/url';
 import Link from 'next/link';
 
-const Team = () => {
+export function Team() {
   return (
     <ul>
       <li className="mt-6">
@@ -68,6 +68,4 @@ const Team = () => {
       </li>
     </ul>
   );
-};
-
-export default Team;
+}

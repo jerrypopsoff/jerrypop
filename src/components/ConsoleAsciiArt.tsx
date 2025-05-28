@@ -2,7 +2,7 @@
 
 import { useConsoleAsciiArt } from '../hooks/use-console-ascii-art';
 
-export default function ConsoleAsciiArt() {
+export function ConsoleAsciiArt() {
   useConsoleAsciiArt();
   return <></>;
 }

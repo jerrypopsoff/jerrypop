@@ -1,12 +1,8 @@
 import { useState } from 'react';
-import { Recipe } from '../types/recipe';
-import Heading4 from './common/Heading4';
+import type { Recipe as RecipeInterface } from '../types/recipe';
+import { Heading4 } from './common/Heading4';
 
-interface Props {
-  recipe: Recipe;
-}
-
-const RecipeComponent = ({ recipe }: Props) => {
+export function Recipe({ recipe }: { recipe: RecipeInterface }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const onRecipeClick = () => {
@@ -80,6 +76,4 @@ const RecipeComponent = ({ recipe }: Props) => {
       </div>
     </li>
   );
-};
-
-export default RecipeComponent;
+}

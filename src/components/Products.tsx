@@ -1,14 +1,14 @@
 'use client';
 
-import ProductListing from './ProductListing';
+import { ProductListing } from './ProductListing';
 import { PRODUCTS } from '../constants/product';
-import Heading1 from './common/Heading1';
-import Paragraph from './common/Paragraph';
+import { Heading1 } from './common/Heading1';
+import { Paragraph } from './common/Paragraph';
 import PageHeaderPhotographSrc from '../images/glamorous-mala-lime.jpeg';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
-import PageContentLayout from './PageContentLayout';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
+import { PageContentLayout } from './PageContentLayout';
 
-const Products = () => {
+export function Products() {
   return (
     <>
       <PageHeaderPhotograph
@@ -30,6 +30,4 @@ const Products = () => {
       </ul>
     </>
   );
-};
-
-export default Products;
+}

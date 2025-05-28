@@ -5,7 +5,7 @@ import { NavigationMenuItem } from '../types/navigation';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import Image from 'next/image';
 
-export default function DesktopNavigationBarContent({
+export function DesktopNavigationBarContent({
   navigationMenuItems,
 }: {
   navigationMenuItems: NavigationMenuItem[];

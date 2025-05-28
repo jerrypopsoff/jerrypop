@@ -1,8 +1,8 @@
 import { ARTICLES } from '../constants/press';
-import OptimizedImage from './common/OptimizedImage';
+import { OptimizedImage } from './common/OptimizedImage';
 import Link from 'next/link';
 
-const PressArticles = () => {
+export function PressArticles() {
   return (
     <ul className="flex flex-col flex-wrap justify-center md:flex-row">
       {ARTICLES.map(
@@ -38,6 +38,4 @@ const PressArticles = () => {
       )}
     </ul>
   );
-};
-
-export default PressArticles;
+}
