@@ -6,11 +6,7 @@ import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import Image from 'next/image';
 import HamburgerIcon from './icons/HamburgerIcon';
-import dynamic from 'next/dynamic';
-
-const CloseIcon = dynamic(() => import('./icons/CloseIcon'), {
-  ssr: false,
-});
+import CloseIcon from './icons/CloseIcon';
 
 interface Props {
   navigationMenuItems: NavigationMenuItem[];
