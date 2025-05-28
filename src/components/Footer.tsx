@@ -1,11 +1,11 @@
 'use client';
 
-import SocialLinks from './SocialLinks';
-import Logo from './Logo';
+import { SocialLinks } from './SocialLinks';
+import { Logo } from './Logo';
 import { useJerrypopTheme } from '../hooks/use-jerrypop-theme';
 import { increaseKernelCount } from '../utilities/click-pop';
 
-const Footer = () => {
+export function Footer() {
   const [jerrypopTheme, incrementJerrypopTheme] = useJerrypopTheme();
 
   return (
@@ -26,6 +26,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

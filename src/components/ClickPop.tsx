@@ -2,7 +2,7 @@
 
 import { useClickPop } from '../hooks/use-click-pop';
 
-export default function ClickPop() {
+export function ClickPop() {
   useClickPop();
   return <></>;
 }

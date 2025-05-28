@@ -29,7 +29,7 @@ interface Props extends ImageProps {
   widthCss: string;
 }
 
-export default function OptimizedImage({
+export function OptimizedImage({
   aspectRatioCss,
   className,
   sizes,

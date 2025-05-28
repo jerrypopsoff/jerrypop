@@ -1,5 +1,5 @@
 import { CateringProduct, RetailProduct } from '../../types/product';
-import ProductPricingListItem from './ProductPricingListItem';
+import { ProductPricingListItem } from './ProductPricingListItem';
 
 interface CateringProps {
   products: CateringProduct[];
@@ -11,7 +11,7 @@ interface RetailProps {
   type: 'retail';
 }
 
-export default function ProductPricingList({
+export function ProductPricingList({
   products,
   type,
 }: CateringProps | RetailProps) {

@@ -1,4 +1,4 @@
-import Recipes from '../../components/Recipes';
+import { Recipes } from '../../components/Recipes';
 
 export const metadata = {
   title: 'Recipes · Jerrypop',

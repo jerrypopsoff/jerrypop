@@ -1,18 +1,20 @@
 import { useWindowSize } from '../hooks/use-window-size';
-import CloseIcon from './icons/CloseIcon';
+import { CloseIcon } from './icons/CloseIcon';
 
 const DIALOG_HEADER_HEIGHT_PX = 52; // Height of header with close button
 const VERTICAL_MARGIN_PX = 8; // Vertial margin of entire dialog
 const HORIZONTAL_MARGIN_PX = 8; // Horizontal margin of entire dialog
 const MINIMUM_DIALOG_HEIGHT = 150;
 
-interface Props {
+export function FormDialog({
+  onCloseFormDialog,
+  src,
+  title,
+}: {
   onCloseFormDialog: () => void;
   src: string;
   title: string;
-}
-
-const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
+}) {
   const { innerHeight, innerWidth } = useWindowSize();
   const dialogHeight = Math.max(
     innerHeight - 2 * VERTICAL_MARGIN_PX,
@@ -60,6 +62,4 @@ const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
       />
     </>
   );
-};
-
-export default FormDialog;
+}

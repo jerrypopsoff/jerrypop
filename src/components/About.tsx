@@ -1,14 +1,14 @@
 'use client';
 
 import PageHeaderPhotographSrc from '../images/glamorous-blueberry-pancake.jpeg';
-import Team from './Team';
-import PageContentLayout from './PageContentLayout';
-import Heading1 from './common/Heading1';
-import Paragraph from './common/Paragraph';
-import Heading2 from './common/Heading2';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
+import { Team } from './Team';
+import { PageContentLayout } from './PageContentLayout';
+import { Heading1 } from './common/Heading1';
+import { Paragraph } from './common/Paragraph';
+import { Heading2 } from './common/Heading2';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
 
-const About = () => {
+export function About() {
   return (
     <>
       <PageHeaderPhotograph
@@ -39,6 +39,4 @@ const About = () => {
       </PageContentLayout>
     </>
   );
-};
-
-export default About;
+}

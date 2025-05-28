@@ -1,4 +1,4 @@
-import Catering from '../../components/Catering';
+import { Catering } from '../../components/Catering';
 
 export const metadata = {
   title: 'Catering · Jerrypop',

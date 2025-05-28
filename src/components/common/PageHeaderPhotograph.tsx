@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
-import OptimizedImage from './OptimizedImage';
+import { OptimizedImage } from './OptimizedImage';
 
-export default function PageHeaderPhotograph({
+export function PageHeaderPhotograph({
   alt,
   aspectRatioCss,
   src,

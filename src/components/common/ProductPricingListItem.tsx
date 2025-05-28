@@ -1,6 +1,6 @@
 import { CateringProduct, RetailProduct } from '../../types/product';
 import { displayCurrency } from '../../utilities/currency';
-import OptimizedImage from './OptimizedImage';
+import { OptimizedImage } from './OptimizedImage';
 
 interface CateringProps {
   product: CateringProduct;
@@ -12,7 +12,7 @@ interface RetailProps {
   type: 'retail';
 }
 
-export default function ProductPricingListItem({
+export function ProductPricingListItem({
   product,
   type,
 }: CateringProps | RetailProps) {

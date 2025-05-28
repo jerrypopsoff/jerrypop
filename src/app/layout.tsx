@@ -3,11 +3,11 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { METADATA } from '../constants/metadata';
 import { VIEWPORT } from '../constants/viewport';
 import { isProduction } from '../utilities/environment';
-import ScrollToTopOnPathChange from '../components/ScrollToTopOnPathChange';
-import NavigationBar from '../components/NavigationBar';
-import Footer from '../components/Footer';
-import ClickPop from '../components/ClickPop';
-import ConsoleAsciiArt from '../components/ConsoleAsciiArt';
+import { ScrollToTopOnPathChange } from '../components/ScrollToTopOnPathChange';
+import { NavigationBar } from '../components/NavigationBar';
+import { Footer } from '../components/Footer';
+import { ClickPop } from '../components/ClickPop';
+import { ConsoleAsciiArt } from '../components/ConsoleAsciiArt';
 import { ReactNode } from 'react';
 
 export const metadata = METADATA;

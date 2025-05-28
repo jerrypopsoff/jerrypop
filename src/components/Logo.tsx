@@ -7,12 +7,13 @@ const WordmarkRepeated = dynamic(() => import('./WordmarkRepeated'), {
   ssr: false,
 });
 
-interface Props {
+export function Logo({
+  onToggleTheme,
+  theme,
+}: {
   onToggleTheme: () => void;
   theme: Theme;
-}
-
-const Logo = ({ onToggleTheme, theme }: Props) => {
+}) {
   return (
     <>
       <WordmarkRepeated
@@ -34,6 +35,4 @@ const Logo = ({ onToggleTheme, theme }: Props) => {
       </button>
     </>
   );
-};
-
-export default Logo;
+}

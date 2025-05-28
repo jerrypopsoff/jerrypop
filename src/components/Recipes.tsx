@@ -1,14 +1,14 @@
 'use client';
 
 import { RECIPES } from '../constants/recipe';
-import Recipe from './Recipe';
-import Heading1 from './common/Heading1';
-import Paragraph from './common/Paragraph';
+import { Recipe } from './Recipe';
+import { Heading1 } from './common/Heading1';
+import { Paragraph } from './common/Paragraph';
 import PageHeaderPhotographSrc from '../images/glamorous-pbj-sheet.jpeg';
-import PageHeaderPhotograph from './common/PageHeaderPhotograph';
-import PageContentLayout from './PageContentLayout';
+import { PageHeaderPhotograph } from './common/PageHeaderPhotograph';
+import { PageContentLayout } from './PageContentLayout';
 
-const Recipes = () => {
+export function Recipes() {
   return (
     <>
       <PageHeaderPhotograph
@@ -27,6 +27,4 @@ const Recipes = () => {
       </PageContentLayout>
     </>
   );
-};
-
-export default Recipes;
+}
