@@ -56,6 +56,7 @@ export default function MobileNavigationBarContent({
           flex-col-reverse justify-center transition-transform duration-200
           ease-in-out ${slideableTransform} sm:hidden
         `}
+      data-testid="mobile-nav"
     >
       <div className="flex justify-center py-5">
         <button
