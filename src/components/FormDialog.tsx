@@ -39,10 +39,7 @@ const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
         <header className="flex justify-end">
           <button
             aria-label="Close dialog"
-            className="
-              hover:bg-highlight focus:bg-highlight text-foreground m-2
-              cursor-pointer rounded-full p-3
-            "
+            className="hover:bg-highlight focus:bg-highlight text-foreground m-2 cursor-pointer rounded-full p-3"
             onClick={onCloseFormDialog}
           >
             <CloseIcon className="h-3 w-3" />
@@ -58,9 +55,7 @@ const FormDialog = ({ onCloseFormDialog, src, title }: Props) => {
         jsx-a11y/no-static-element-interactions
       */}
       <div
-        className="
-          z-dialog-backdrop bg-backdrop fixed bottom-0 left-0 right-0 top-0
-        "
+        className="z-dialog-backdrop bg-backdrop fixed bottom-0 left-0 right-0 top-0"
         onClick={onCloseFormDialog}
       />
     </>
