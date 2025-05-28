@@ -5,17 +5,20 @@ import { NavigationMenuItem } from '../types/navigation';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import Image from 'next/image';
 
-interface Props {
+export default function DesktopNavigationBarContent({
+  navigationMenuItems,
+}: {
   navigationMenuItems: NavigationMenuItem[];
-}
-
-const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
+}) {
   return (
-    <nav className="z-nav absolute left-0 right-0 top-0 hidden sm:block">
+    <div
+      className="z-nav absolute left-0 right-0 top-0 hidden sm:block"
+      data-testid="desktop-nav"
+    >
       <div className="flex w-full flex-col items-center">
         <Link className="mb-1 mt-4 p-4" href="/">
           <Image
-            alt="Jerrypop wordmark"
+            alt="Jerrypop brand wordmark"
             className="h-9 w-40"
             height={36}
             priority
@@ -38,8 +41,6 @@ const DesktopNavigationBar = ({ navigationMenuItems }: Props) => {
           ))}
         </ul>
       </div>
-    </nav>
+    </div>
   );
-};
-
-export default DesktopNavigationBar;
+}

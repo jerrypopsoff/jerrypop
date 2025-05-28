@@ -1,24 +1,15 @@
 import { RoutePath } from '../types/route-path';
 import { THEMES } from '../../src/constants/theme';
-
-function emulateMediaColorScheme(scheme: 'light' | 'dark') {
-  cy.wrap(
-    Cypress.automation('remote:debugger:protocol', {
-      command: 'Emulation.setEmulatedMedia',
-      params: {
-        media: 'page',
-        features: [
-          {
-            name: 'prefers-color-scheme',
-            value: scheme,
-          },
-        ],
-      },
-    }),
-  );
-}
+import {
+  emulateMediaColorScheme,
+  resetMediaColorScheme,
+} from '../utilities/emulate-color-scheme';
 
 describe('Jerrypop theme tests', () => {
+  afterEach(() => {
+    resetMediaColorScheme();
+  });
+
   it('initializes the default theme in light mode', () => {
     emulateMediaColorScheme('light');
     cy.visit(RoutePath.Home);
