@@ -10,20 +10,10 @@ const Footer = () => {
 
   return (
     <footer className="mt-14 flex flex-col items-center justify-center">
-      <div
-        className="
-          xs:h-88 dark:bg-navy h-69 flex w-full items-center
-          justify-center overflow-hidden bg-[var(--main-theme-dark)]
-        "
-      >
+      <div className="xs:h-88 dark:bg-navy h-69 flex w-full items-center justify-center overflow-hidden bg-[var(--main-theme-dark)]">
         <Logo onToggleTheme={incrementJerrypopTheme} theme={jerrypopTheme} />
       </div>
-      <div
-        className="
-          xs:flex-row my-6 flex w-full max-w-xl flex-col-reverse items-center
-          justify-between
-        "
-      >
+      <div className="xs:flex-row my-6 flex w-full max-w-xl flex-col-reverse items-center justify-between">
         <button
           className="xs:mt-0 mx-2 mt-2 p-2"
           onClick={() => increaseKernelCount()}
