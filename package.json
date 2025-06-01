@@ -13,8 +13,8 @@
     "type-check": "tsc --noEmit && tsc --noEmit -p cypress/tsconfig.json"
   },
   "dependencies": {
-    "@next/third-parties": "^15.3.1",
     "next": "^15.3.1",
+    "posthog-js": "^1.249.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
