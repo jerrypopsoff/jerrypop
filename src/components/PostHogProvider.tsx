@@ -31,6 +31,7 @@ export function PostHogProvider({
       capture_exceptions: true,
       capture_heatmaps: true,
       capture_performance: true,
+      persistence: 'memory',
       person_profiles: 'never',
     });
   }, [apiKey]);
