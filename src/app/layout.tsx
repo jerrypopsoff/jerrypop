@@ -1,14 +1,13 @@
 import '../css/app.css';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { METADATA } from '../constants/metadata';
 import { VIEWPORT } from '../constants/viewport';
-import { isProduction } from '../utilities/environment';
 import { ScrollToTopOnPathChange } from '../components/ScrollToTopOnPathChange';
 import { NavigationBar } from '../components/NavigationBar';
 import { Footer } from '../components/Footer';
 import { ClickPop } from '../components/ClickPop';
 import { ConsoleAsciiArt } from '../components/ConsoleAsciiArt';
 import { ReactNode } from 'react';
+import { PostHogProvider } from '../components/PostHogProvider';
 
 export const metadata = METADATA;
 
@@ -24,9 +23,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ClickPop />
         <ScrollToTopOnPathChange />
         <NavigationBar />
-        {children}
+        <PostHogProvider apiKey={process.env.NEXT_PUBLIC_POSTHOG_KEY}>
+          {children}
+        </PostHogProvider>
         <Footer />
-        {isProduction() && <GoogleAnalytics gaId="G-4NGQXKPCPQ" />}
       </body>
     </html>
   );
