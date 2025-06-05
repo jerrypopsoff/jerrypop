@@ -15,8 +15,8 @@
   "dependencies": {
     "next": "^15.3.1",
     "posthog-js": "^1.249.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.7",
@@ -32,8 +32,8 @@
     "@tsconfig/recommended": "^1.0.7",
     "@types/google.analytics": "^0.0.46",
     "@types/node": "^22.7.5",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^8.31.0",
     "@typescript-eslint/parser": "^8.31.0",
     "@vitejs/plugin-react": "^4.4.1",
