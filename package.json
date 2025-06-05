@@ -54,6 +54,9 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.1"
   },
+  "engines": {
+    "node": ">=24.1.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
