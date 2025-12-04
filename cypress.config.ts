@@ -1,7 +1,6 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  blockHosts: ['*.posthog.com'],
   e2e: {
     baseUrl: 'http://localhost:3000',
     defaultCommandTimeout: 2000,
