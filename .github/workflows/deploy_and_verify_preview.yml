@@ -23,14 +23,16 @@ jobs:
         uses: ./.github/actions/setup-dependencies
       - name: Build and Deploy to Netlify
         env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PAT }}
         run: |
           npx netlify deploy \
             --alias ${{ github.event.pull_request.number }} \
+            --auth $NETLIFY_AUTH_TOKEN \
             --context deploy-preview \
             --json \
             --message "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}" \
+            --site $NETLIFY_SITE_ID \
             > deploy_output.json
       - name: Generate preview deployment URL
         id: url_preview
