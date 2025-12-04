@@ -45,9 +45,6 @@ importers:
       '@tsconfig/recommended':
         specifier: ^1.0.8
         version: 1.0.8
-      '@types/google.analytics':
-        specifier: ^0.0.46
-        version: 0.0.46
       '@types/node':
         specifier: ^22.15.29
         version: 22.15.29
@@ -1576,9 +1573,6 @@ packages:
 
   '@types/express@4.17.13':
     resolution: {integrity: sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==}
-
-  '@types/google.analytics@0.0.46':
-    resolution: {integrity: sha512-wuMJ3GqLFGsTZdJ315b+uNnH2AwFScyS67NHlKOD4RaPMFt/N0vxdh6fvDgvOFg62a11Fqn2ggJwUypFmIko+A==}
 
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
@@ -8070,8 +8064,6 @@ snapshots:
       '@types/qs': 6.14.0
       '@types/serve-static': 1.15.7
     optional: true
-
-  '@types/google.analytics@0.0.46': {}
 
   '@types/http-cache-semantics@4.0.4': {}
 
