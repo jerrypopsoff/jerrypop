@@ -1,7 +1,7 @@
 import { Gift } from '../../components/Gift';
 
 export const metadata = {
-  title: 'A Special Gift for Gikui · Jerrypop',
+  title: 'Merry Christmas Gikui',
   robots: {
     index: false,
     follow: false,
