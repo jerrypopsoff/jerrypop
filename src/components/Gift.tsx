@@ -14,7 +14,7 @@ export function Gift() {
   return (
     <>
       <OptimizedImage
-        alt="Gift footer"
+        alt="Gift header image"
         aspectRatioCss="16 / 9"
         className="w-full"
         sizes="100vw"
@@ -27,9 +27,9 @@ export function Gift() {
         </h1>
         <Paragraph>
           Merry Christmas! I hope you enjoy this day of relaxation and a lovely
-          lunch date. I love you so much, my beautiful and perfect girlfriend.
+          lunch date. Hope it&apos;s a beautiful and perfect day for a beautiful
+          and perfect person.
         </Paragraph>
-
         <div className="mt-12 w-full max-w-2xl space-y-12">
           {/* Massage Section */}
           <section className="border-highlight bg-highlight rounded-lg border p-8">
@@ -106,7 +106,7 @@ export function Gift() {
         </div>
         <div className="mt-16 w-full">
           <OptimizedImage
-            alt="Gift header"
+            alt="Gift footer image"
             aspectRatioCss="1"
             src={GiftHeaderSrc}
             className="w-full"
@@ -114,9 +114,7 @@ export function Gift() {
             widthCss="100%"
           />
         </div>
-        <Paragraph className="mt-16 text-lg">
-          Looking forward to spending this special day with you!
-        </Paragraph>
+        <h2 className="mt-16 text-center text-6xl font-semibold">🫶🏻</h2>
         <div className="mt-16 w-full">
           <OptimizedImage
             alt="Gift footer bonus image"
