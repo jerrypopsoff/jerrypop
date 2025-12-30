@@ -4,9 +4,16 @@ import { SocialLinks } from './SocialLinks';
 import { Logo } from './Logo';
 import { useJerrypopTheme } from '../hooks/use-jerrypop-theme';
 import { increaseKernelCount } from '../utilities/click-pop';
+import { usePathname } from 'next/navigation';
 
 export function Footer() {
   const [jerrypopTheme, incrementJerrypopTheme] = useJerrypopTheme();
+
+  // Todo: remove after gift page is removed
+  const pathname = usePathname();
+  if (pathname === '/gikui') {
+    return null;
+  }
 
   return (
     <footer className="mt-14 flex flex-col items-center justify-center">

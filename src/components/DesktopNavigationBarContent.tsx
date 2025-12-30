@@ -4,12 +4,20 @@ import Link from 'next/link';
 import { NavigationMenuItem } from '../types/navigation';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export function DesktopNavigationBarContent({
   navigationMenuItems,
 }: {
   navigationMenuItems: NavigationMenuItem[];
 }) {
+  // Todo: remove after gift page is removed
+  const pathname = usePathname();
+  const isGiftPage = pathname === '/gikui';
+  if (isGiftPage) {
+    return null;
+  }
+
   return (
     <div
       className="z-nav absolute left-0 right-0 top-0 hidden sm:block"
