@@ -16,7 +16,7 @@ export function Gift() {
       <OptimizedImage
         alt="Gift header image"
         aspectRatioCss="16 / 9"
-        className="w-full"
+        className="-mt-25 w-full"
         sizes="100vw"
         src={GiftFooterSrc}
         widthCss="100%"
@@ -102,28 +102,28 @@ export function Gift() {
             </div>
           </section>
         </div>
-        <div className="mt-16 w-full">
-          <OptimizedImage
-            alt="Gift footer image"
-            aspectRatioCss="1"
-            src={GiftHeaderSrc}
-            className="w-full"
-            sizes="100vw"
-            widthCss="100%"
-          />
-        </div>
-        <h2 className="mt-16 text-center text-6xl font-semibold">🫶🏻</h2>
-        <div className="mt-16 w-full">
-          <OptimizedImage
-            alt="Gift footer bonus image"
-            aspectRatioCss="1"
-            className="w-full"
-            sizes="100vw"
-            src={GiftBonusZuniSrc}
-            widthCss="100%"
-          />
-        </div>
       </PageContentLayout>
+      <div className="mt-16 w-full">
+        <OptimizedImage
+          alt="Gift footer image"
+          aspectRatioCss="1"
+          src={GiftHeaderSrc}
+          className="w-full"
+          sizes="100vw"
+          widthCss="100%"
+        />
+      </div>
+      <h2 className="mt-16 text-center text-6xl font-semibold">🫶🏻</h2>
+      <div className="mt-16 w-full">
+        <OptimizedImage
+          alt="Gift footer bonus image"
+          aspectRatioCss="1"
+          className="w-full"
+          sizes="100vw"
+          src={GiftBonusZuniSrc}
+          widthCss="100%"
+        />
+      </div>
     </>
   );
 }

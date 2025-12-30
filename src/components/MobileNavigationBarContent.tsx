@@ -7,12 +7,17 @@ import { NavigationMenuItem } from '../types/navigation';
 import Image from 'next/image';
 import { HamburgerIcon } from './icons/HamburgerIcon';
 import { CloseIcon } from './icons/CloseIcon';
+import { usePathname } from 'next/navigation';
 
 export function MobileNavigationBarContent({
   navigationMenuItems,
 }: {
   navigationMenuItems: NavigationMenuItem[];
 }) {
+  // Todo: remove after gift page is removed
+  const pathname = usePathname();
+  const isGiftPage = pathname === '/gikui';
+
   const [isOpen, setIsOpen] = useState(false);
   const [menuItemsClassName, setMenuItemsClassName] = useState(
     isOpen ? undefined : 'invisible',
@@ -48,6 +53,10 @@ export function MobileNavigationBarContent({
     : 'Open navigation menu';
   const menuItemsAriaHidden = isOpen ? undefined : 'true';
   const menuItemTabIndex = isOpen ? 0 : -1;
+
+  if (isGiftPage) {
+    return null;
+  }
 
   return (
     <div
