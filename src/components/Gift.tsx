@@ -23,12 +23,11 @@ export function Gift() {
       />
       <PageContentLayout>
         <h1 className="mb-3 mt-12 text-3xl font-semibold">
-          A Special Gift for Gikui
+          A Special Christmas Gift for Gikui
         </h1>
         <Paragraph>
-          Merry Christmas! I hope you enjoy this day of relaxation and a lovely
-          lunch date. Hope it&apos;s a beautiful and perfect day for a beautiful
-          and perfect person.
+          Enjoy this day of relaxation and a lovely lunch date. Hope it&apos;s a
+          beautiful and perfect day for a beautiful and perfect person.
         </Paragraph>
         <div className="mt-12 w-full max-w-2xl space-y-12">
           {/* Massage Section */}
@@ -66,7 +65,6 @@ export function Gift() {
               </ButtonLink>
             </div>
           </section>
-
           {/* Lunch Section */}
           <section className="border-highlight bg-highlight rounded-lg border p-8">
             <OptimizedImage
