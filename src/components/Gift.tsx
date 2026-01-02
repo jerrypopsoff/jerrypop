@@ -46,8 +46,8 @@ export function Gift() {
             <div className="mt-6 space-y-4 text-left">
               <div>
                 <p className="font-semibold">Siam Orchid Signature Massage</p>
-                <p className="text-sm opacity-90">Saturday, January 3, 2026</p>
-                <p className="text-sm opacity-90">11:30am - 1:00pm</p>
+                <p className="text-sm opacity-90">Saturday, January 10, 2026</p>
+                <p className="text-sm opacity-90">12:00pm - 1:30pm</p>
               </div>
               <div>
                 <p className="font-semibold">Location</p>
@@ -82,8 +82,8 @@ export function Gift() {
               <div>
                 <p className="font-semibold">Reservation</p>
                 <p className="text-sm opacity-90">Table for Two</p>
-                <p className="text-sm opacity-90">Saturday, January 3, 2026</p>
-                <p className="text-sm opacity-90">1:30pm</p>
+                <p className="text-sm opacity-90">Saturday, January 10, 2026</p>
+                <p className="text-sm opacity-90">1:45pm</p>
               </div>
               <div>
                 <p className="font-semibold">Location</p>
