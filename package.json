@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
     "lint": "eslint .",
