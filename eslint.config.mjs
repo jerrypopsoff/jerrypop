@@ -9,7 +9,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default ts.config(
   {
-    ignores: ['node_modules/', '.next/'],
+    ignores: ['node_modules/', '.next/', 'next-env.d.ts'],
   },
 
   // ECMAScript configuration.
