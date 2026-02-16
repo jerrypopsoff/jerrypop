@@ -1,4 +1,4 @@
-name: Execute TypeScript type check
+name: Execute type check
 
 on:
   pull_request:

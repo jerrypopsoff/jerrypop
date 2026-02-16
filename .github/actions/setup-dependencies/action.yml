@@ -1,4 +1,5 @@
 name: Setup dependencies
+description: Setup dependencies for the project.
 runs:
   using: composite
   steps:
