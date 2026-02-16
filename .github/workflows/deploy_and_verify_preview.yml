@@ -81,6 +81,11 @@ jobs:
         with:
           browser: chrome
           headed: false
+          # Warm up the Netlify preview before running tests. Without this,
+          # the first cy.visit can hit a cold serverless function and exceed
+          # Cypress's pageLoadTimeout, causing flaky load-event timeouts.
+          wait-on: ${{ needs.deploy-preview.outputs.preview_url }}
+          wait-on-timeout: 120
       - name: Upload Cypress screenshots
         uses: actions/upload-artifact@v4
         if: failure()

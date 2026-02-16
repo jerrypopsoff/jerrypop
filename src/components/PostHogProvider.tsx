@@ -51,6 +51,11 @@ function SuspendedPostHogPageView() {
   );
 }
 
+/**
+ * The PostHog API key is only set in production (`NEXT_PUBLIC_POSTHOG_KEY`).
+ * In all other deploy contexts (preview, branch-deploy, dev) the key is
+ * undefined, so `posthog.init` is never called and PostHog is a no-op.
+ */
 export function PostHogProvider({
   apiKey,
   children,
