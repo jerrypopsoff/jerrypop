@@ -1,4 +1,4 @@
-name: Deploy Preview and Execute End-to-end Tests
+name: Deploy and verify preview
 
 on:
   pull_request:
