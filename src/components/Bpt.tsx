@@ -96,7 +96,7 @@ const DETAIL_SECTIONS = [
         Please please please RSVP to Jerry{' '}
         <a
           className="underline"
-          href="sms:+16167455629&body=I'm%20in!%20And%20I%20promise%20I%20won't%20breathe%20one%20word%20of%20this%20to%20Gikui%20or%20anyone%20on%20earth.%20By%20the%20way%2C%20this%20is%20"
+          href="sms:+16167455629?&body=I'm%20in!%20And%20I%20promise%20I%20won't%20breathe%20one%20word%20of%20this%20to%20Gikui%20or%20anyone%20on%20earth.%20By%20the%20way%2C%20this%20is%20"
         >
           via text
         </a>{' '}
