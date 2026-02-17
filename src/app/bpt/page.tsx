@@ -1,7 +1,7 @@
 import { Bpt } from '../../components/Bpt';
 
 export const metadata = {
-  title: 'BPT',
+  title: 'Celebrate Gikui & Jerry',
   robots: {
     index: false,
     follow: false,

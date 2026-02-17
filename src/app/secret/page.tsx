@@ -1,7 +1,7 @@
 import { Secret } from '../../components/Secret';
 
 export const metadata = {
-  title: 'Secret',
+  title: 'Top secret',
   robots: {
     index: false,
     follow: false,
