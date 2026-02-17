@@ -86,6 +86,7 @@ const DETAIL_SECTIONS = [
         <p>Bar Part Time</p>
         <p>496 14th Street</p>
         <p>San Francisco, CA 94103</p>
+        <p>(Our first date was here!)</p>
       </>
     ),
   },
