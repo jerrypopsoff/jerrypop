@@ -13,8 +13,9 @@ export function DesktopNavigationBarContent({
 }) {
   // Todo: remove after gift page is removed
   const pathname = usePathname();
-  const isGiftPage = pathname === '/gikui';
-  if (isGiftPage) {
+  const isHiddenPage =
+    pathname === '/gikui' || pathname === '/secret' || pathname === '/bpt';
+  if (isHiddenPage) {
     return null;
   }
 

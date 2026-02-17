@@ -11,7 +11,7 @@ export function Footer() {
 
   // Todo: remove after gift page is removed
   const pathname = usePathname();
-  if (pathname === '/gikui') {
+  if (pathname === '/gikui' || pathname === '/secret' || pathname === '/bpt') {
     return null;
   }
 
