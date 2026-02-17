@@ -137,6 +137,8 @@ export function Bpt() {
         alt="Photograph of Gikui and Jerry madly in love"
         aspectRatioCss="1"
         className="-mt-21 mb-8 w-full"
+        placeholder="blur"
+        preload={true}
         sizes="100vw"
         src={BptHeaderSrc}
         widthCss="100%"
