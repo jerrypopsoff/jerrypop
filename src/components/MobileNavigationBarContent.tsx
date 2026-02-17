@@ -16,7 +16,8 @@ export function MobileNavigationBarContent({
 }) {
   // Todo: remove after gift page is removed
   const pathname = usePathname();
-  const isGiftPage = pathname === '/gikui';
+  const isHiddenPage =
+    pathname === '/gikui' || pathname === '/secret' || pathname === '/bpt';
 
   const [isOpen, setIsOpen] = useState(false);
   const [menuItemsClassName, setMenuItemsClassName] = useState(
@@ -54,7 +55,7 @@ export function MobileNavigationBarContent({
   const menuItemsAriaHidden = isOpen ? undefined : 'true';
   const menuItemTabIndex = isOpen ? 0 : -1;
 
-  if (isGiftPage) {
+  if (isHiddenPage) {
     return null;
   }
 
