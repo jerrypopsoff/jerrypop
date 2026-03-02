@@ -71,7 +71,7 @@ const DETAIL_SECTIONS = [
     label: 'Arrival',
     content: (
       <>
-        <p>5:30 &ndash; 5:45pm</p>
+        <p>Please arrive between 5:30&ndash;5:45pm.</p>
         <p>
           The big surprise is at 6pm, about an hour after Gikui says
           &quot;yes!&quot;
@@ -86,7 +86,9 @@ const DETAIL_SECTIONS = [
         <p>Bar Part Time</p>
         <p>496 14th Street</p>
         <p>San Francisco, CA 94103</p>
-        <p>(Our first date was here!)</p>
+        <p className="mt-2 text-sm italic opacity-90">
+          Our first date was here!
+        </p>
       </>
     ),
   },
@@ -101,7 +103,7 @@ const DETAIL_SECTIONS = [
         >
           via text
         </a>{' '}
-        by February 28th to help everything run smoothly
+        by February 28th to help everything run smoothly.
       </p>
     ),
   },
@@ -118,15 +120,14 @@ const DETAIL_SECTIONS = [
     label: 'Food',
     content: (
       <p>
-        Outside food is not allowed, but we will have a cake. We will likely end
-        up migrating to a nearby group-friendly spot for dinner after the
-        surprise and celebration (e.g. Zeitgeist, Southern Pacific, etc.).
+        Outside food is not allowed, but we will have plenty of finger food
+        bites to sustain our celebrations into the evening.
       </p>
     ),
   },
   {
     label: 'Important',
-    content: <p>Pls do not tell Gikui because it&apos;s a surprise</p>,
+    content: <p>Pls do not tell Gikui because it&apos;s a surprise!</p>,
   },
 ];
 
