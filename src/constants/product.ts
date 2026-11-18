@@ -265,6 +265,7 @@ export const REQUEST_A_FLAVOR: CateringProduct = {
 };
 
 export const CATERING_PRODUCTS: CateringProduct[] = [
+  FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   MALA_LIME,
@@ -273,6 +274,7 @@ export const CATERING_PRODUCTS: CateringProduct[] = [
 ];
 
 export const PRODUCTS: Product[] = [
+  FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   MALA_LIME,
@@ -280,6 +282,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const RETAIL_PRODUCTS: RetailProduct[] = [
+  FURIKAKE_DASHI,
   GOAT_CHEESE_CHIVE,
   HABANERO_RANCH,
   MALA_LIME,
