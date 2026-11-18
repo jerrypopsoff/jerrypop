@@ -38,7 +38,7 @@ export function ProductPricingListItem({
         {type === 'retail' && (
           <>
             <dt className="text-xs uppercase">Suggested retail price</dt>
-            <dd className="mb-6 mt-1 text-3xl font-light leading-none">
+            <dd className="mt-1 mb-6 text-3xl leading-none font-light">
               {displayCurrency(product.priceMsrp)}
             </dd>
           </>
@@ -46,7 +46,7 @@ export function ProductPricingListItem({
         <dt className="text-xs uppercase">
           {type === 'retail' ? 'Your price' : 'Price'}
         </dt>
-        <dd className="mt-1 text-3xl font-light leading-none">
+        <dd className="mt-1 text-3xl leading-none font-light">
           {displayCurrency(
             type === 'retail' ? product.priceRetailer : priceCatering,
           )}

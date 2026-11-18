@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" prefix="og: https://ogp.me/ns#">
       <head></head>
       <body
-        className={`${OPEN_SANS.className} bg-background text-foreground sm:pt-34 pt-25 antialiased`}
+        className={`${OPEN_SANS.className} bg-background pt-25 text-foreground antialiased sm:pt-34`}
       >
         <ConsoleAsciiArt />
         <ClickPop />

@@ -18,7 +18,7 @@ jobs:
       preview_url: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup dependencies
         uses: ./.github/actions/setup-dependencies
       - name: Build and Deploy to Netlify
@@ -40,7 +40,7 @@ jobs:
           NETLIFY_PREVIEW_URL=$(jq -r '.deploy_url' deploy_output.json)
           echo "NETLIFY_PREVIEW_URL=$NETLIFY_PREVIEW_URL" >> "$GITHUB_OUTPUT"
       - name: Add preview deployment link to status checks
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           NETLIFY_PREVIEW_URL: ${{ steps.url_preview.outputs.NETLIFY_PREVIEW_URL }}
         with:
@@ -61,11 +61,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup dependencies
         uses: ./.github/actions/setup-dependencies
       - name: Cache Cypress binary
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/Cypress
           key: cypress-binary-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
@@ -74,7 +74,7 @@ jobs:
       - name: Install Cypress binary
         run: npx cypress install
       - name: Execute Cypress test suite
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         id: cypress
         env:
           CYPRESS_BASE_URL: ${{ needs.deploy-preview.outputs.preview_url }}
@@ -87,7 +87,7 @@ jobs:
           wait-on: ${{ needs.deploy-preview.outputs.preview_url }}
           wait-on-timeout: 120
       - name: Upload Cypress screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: cypress-screenshots

@@ -22,7 +22,7 @@ export function Gift() {
         widthCss="100%"
       />
       <PageContentLayout>
-        <h1 className="mb-3 mt-12 text-3xl font-semibold">
+        <h1 className="mt-12 mb-3 text-3xl font-semibold">
           A Special Christmas Gift for Gikui
         </h1>
         <Paragraph>
@@ -31,7 +31,7 @@ export function Gift() {
         </Paragraph>
         <div className="mt-12 w-full max-w-2xl space-y-12">
           {/* Massage Section */}
-          <section className="border-highlight bg-highlight rounded-lg border p-8">
+          <section className="rounded-lg border border-highlight bg-highlight p-8">
             <OptimizedImage
               alt="Siam Orchid"
               aspectRatioCss="16 / 9"
@@ -66,7 +66,7 @@ export function Gift() {
             </div>
           </section>
           {/* Lunch Section */}
-          <section className="border-highlight bg-highlight rounded-lg border p-8">
+          <section className="rounded-lg border border-highlight bg-highlight p-8">
             <OptimizedImage
               alt="Zuni Café"
               aspectRatioCss="16 / 9"

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import WordmarkSvgDark from '../images/jerrypop-wordmark-soft-white.svg';
 import { NavigationMenuItem } from '../types/navigation';
 import Image from 'next/image';
@@ -20,28 +20,6 @@ export function MobileNavigationBarContent({
     pathname === '/gikui' || pathname === '/secret' || pathname === '/bpt';
 
   const [isOpen, setIsOpen] = useState(false);
-  const [menuItemsClassName, setMenuItemsClassName] = useState(
-    isOpen ? undefined : 'invisible',
-  );
-
-  /**
-   * If the menu is closed, set the class to 'invisible' after a delay matching
-   * the transition duration. This prevents the menu items from being visible
-   * when the menu is closed when scrolling above the top of the page on desktop
-   * browsers.
-   */
-  useEffect(() => {
-    if (isOpen) {
-      setMenuItemsClassName(undefined);
-      return;
-    }
-
-    const timeoutId = setTimeout(() => {
-      setMenuItemsClassName('invisible');
-    }, 200);
-
-    return () => clearTimeout(timeoutId);
-  }, [isOpen]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -61,13 +39,13 @@ export function MobileNavigationBarContent({
 
   return (
     <div
-      className={`z-nav bg-background z-nav absolute left-0 right-0 top-[-22.25rem] flex flex-col-reverse justify-center transition-transform duration-200 ease-in-out ${slideableTransform} sm:hidden`}
+      className={`absolute top-[-22.25rem] right-0 left-0 z-nav flex flex-col-reverse justify-center bg-background transition-transform duration-200 ease-in-out ${slideableTransform} sm:hidden`}
       data-testid="mobile-nav"
     >
       <div className="flex justify-center py-5">
         <button
           aria-label={hamburgerButtonAriaLabel}
-          className="column z-nav-hamburger absolute left-0 flex flex-col justify-around p-5"
+          className="column absolute left-0 z-nav-hamburger flex flex-col justify-around p-5"
           onClick={toggleMenu}
         >
           <HamburgerIcon className="h-5 w-5" />
@@ -75,7 +53,7 @@ export function MobileNavigationBarContent({
         <Link className="p-4" onClick={closeMenu} href="/">
           <Image
             alt="Jerrypop brand wordmark"
-            className="w-31 h-7"
+            className="h-7 w-31"
             height={28}
             priority
             src={WordmarkSvgDark}
@@ -83,7 +61,10 @@ export function MobileNavigationBarContent({
           />
         </Link>
       </div>
-      <ul aria-hidden={menuItemsAriaHidden} className={menuItemsClassName}>
+      <ul
+        aria-hidden={menuItemsAriaHidden}
+        className="transition-[visibility] duration-200 aria-hidden:invisible"
+      >
         <li>
           <button
             className="w-full p-5 pt-10 text-left text-xl font-semibold"
@@ -97,7 +78,7 @@ export function MobileNavigationBarContent({
         {navigationMenuItems.map(({ displayName, href, isExternal }) => (
           <li key={displayName}>
             <Link
-              className="block px-5 py-4 uppercase tracking-wide"
+              className="block px-5 py-4 tracking-wide uppercase"
               href={href}
               onClick={closeMenu}
               rel={isExternal ? 'noreferrer' : undefined}

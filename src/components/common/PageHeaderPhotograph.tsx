@@ -14,7 +14,7 @@ export function PageHeaderPhotograph({
     <OptimizedImage
       alt={alt}
       aspectRatioCss={aspectRatioCss}
-      className="lg:max-h-100 sm:max-h-70 max-h-40"
+      className="max-h-40 sm:max-h-70 lg:max-h-100"
       placeholder="blur"
       priority={true}
       sizes="100vw"

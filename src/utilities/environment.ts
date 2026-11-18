@@ -3,11 +3,7 @@
  * {@link https://docs.netlify.com/site-deploys/overview/#deploy-contexts Deploy contexts}.
  */
 type NetlifyDeployContext =
-  | 'production'
-  | 'deploy-preview'
-  | 'branch-deploy'
-  | 'preview-server'
-  | 'dev';
+  'production' | 'deploy-preview' | 'branch-deploy' | 'preview-server' | 'dev';
 
 function isNetlifyDeployContext(
   context?: string,

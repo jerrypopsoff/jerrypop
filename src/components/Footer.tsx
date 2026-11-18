@@ -17,12 +17,12 @@ export function Footer() {
 
   return (
     <footer className="mt-14 flex flex-col items-center justify-center">
-      <div className="xs:h-88 dark:bg-navy h-69 flex w-full items-center justify-center overflow-hidden bg-[var(--main-theme-dark)]">
+      <div className="flex h-69 w-full items-center justify-center overflow-hidden bg-[var(--main-theme-dark)] xs:h-88 dark:bg-navy">
         <Logo onToggleTheme={incrementJerrypopTheme} theme={jerrypopTheme} />
       </div>
-      <div className="xs:flex-row my-6 flex w-full max-w-xl flex-col-reverse items-center justify-between">
+      <div className="my-6 flex w-full max-w-xl flex-col-reverse items-center justify-between xs:flex-row">
         <button
-          className="xs:mt-0 mx-2 mt-2 p-2"
+          className="mx-2 mt-2 p-2 xs:mt-0"
           onClick={() => increaseKernelCount()}
         >
           <p className="text-xs">© {new Date().getFullYear()} Jerrypop, LLC</p>

@@ -17,12 +17,12 @@ export function Logo({
   return (
     <>
       <WordmarkRepeated
-        className="w-100 h-auto max-w-[95vw]"
+        className="h-auto w-100 max-w-[95vw]"
         fillColor={theme.mainThemeMedium}
       />
       <button
         aria-label="Change website theme colors"
-        className="animate-slow-wiggle absolute cursor-pointer rounded-[50%]"
+        className="absolute animate-slow-wiggle cursor-pointer rounded-[50%]"
         onClick={onToggleTheme}
       >
         <Image

@@ -21,9 +21,9 @@ export function PressArticles() {
                 src={image}
                 widthCss="min(90vw, 18.75rem)"
               />
-              <div className="max-w-75 mt-4 text-center md:ml-6 md:mt-0 md:text-left">
+              <div className="mt-4 max-w-75 text-center md:mt-0 md:ml-6 md:text-left">
                 <p className="font-light uppercase">{publication}</p>
-                <h2 className="mb-4 mt-2 text-2xl font-semibold">{title}</h2>
+                <h2 className="mt-2 mb-4 text-2xl font-semibold">{title}</h2>
                 <p className="text-xs">{date}</p>
               </div>
             </Link>
