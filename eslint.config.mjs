@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import { fixupPluginRules } from '@eslint/compat';
 import ts from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -30,7 +31,7 @@ export default ts.config(
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
-      react,
+      react: fixupPluginRules(react),
     },
     rules: {
       ...react.configs.recommended.rules,

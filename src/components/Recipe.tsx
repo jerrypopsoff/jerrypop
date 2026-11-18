@@ -37,7 +37,7 @@ export function Recipe({ recipe }: { recipe: RecipeInterface }) {
         {isCollapsed ? null : (
           <>
             {recipe.href ? (
-              <div className="xs:h-66 h-45 my-4 w-full">
+              <div className="my-4 h-45 w-full xs:h-66">
                 <iframe
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

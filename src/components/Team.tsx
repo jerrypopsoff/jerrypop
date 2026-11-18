@@ -16,7 +16,7 @@ export function Team() {
           src={AboutJerryPhotograph}
           widthCss="min(95vw, 18.75rem)"
         />
-        <h3 className="mb-1 mt-3 text-2xl font-semibold uppercase">
+        <h3 className="mt-3 mb-1 text-2xl font-semibold uppercase">
           Jerry Haagsma
         </h3>
         <h4 className="mb-6 text-sm font-light uppercase">Founder</h4>

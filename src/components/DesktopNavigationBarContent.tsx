@@ -21,11 +21,11 @@ export function DesktopNavigationBarContent({
 
   return (
     <div
-      className="z-nav absolute left-0 right-0 top-0 hidden sm:block"
+      className="absolute top-0 right-0 left-0 z-nav hidden sm:block"
       data-testid="desktop-nav"
     >
       <div className="flex w-full flex-col items-center">
-        <Link className="mb-1 mt-4 p-4" href="/">
+        <Link className="mt-4 mb-1 p-4" href="/">
           <Image
             alt="Jerrypop brand wordmark"
             className="h-9 w-40"
@@ -39,7 +39,7 @@ export function DesktopNavigationBarContent({
           {navigationMenuItems.map(({ displayName, href, isExternal }) => (
             <li key={displayName}>
               <Link
-                className="block px-6 py-3 pb-4 text-sm uppercase tracking-wide"
+                className="block px-6 py-3 pb-4 text-sm tracking-wide uppercase"
                 href={href}
                 rel={isExternal ? 'noreferrer' : undefined}
                 target={isExternal ? '_blank' : undefined}

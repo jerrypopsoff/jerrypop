@@ -7,7 +7,7 @@ interface Props extends React.ComponentProps<typeof Link> {
 export function ButtonLink({ className, ...props }: Props) {
   return (
     <Link
-      className={`bg-foreground text-background hover:animate-wiggle focus:animate-wiggle inline-block cursor-pointer rounded-sm px-6 py-4 text-sm uppercase tracking-wide ${className} `}
+      className={`inline-block cursor-pointer rounded-sm bg-foreground px-6 py-4 text-sm tracking-wide text-background uppercase hover:animate-wiggle focus:animate-wiggle ${className} `}
       {...props}
     />
   );

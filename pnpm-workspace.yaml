@@ -1,2 +1,13 @@
-onlyBuiltDependencies:
-  - cypress
+allowBuilds:
+  core-js: false
+  cypress: true
+  esbuild: false
+  netlify-cli: false
+  unix-dgram: false
+minimumReleaseAgeExclude:
+  - '@posthog/core@1.69.1'
+  - '@vitest/coverage-v8@5.1.1'
+  - '@vitest/mocker@5.1.1'
+  - '@vitest/spy@5.1.1'
+  - posthog-js@1.451.2
+  - vitest@5.1.1

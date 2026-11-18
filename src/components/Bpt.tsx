@@ -32,6 +32,8 @@ function useFloatingEmojis() {
       delay: Math.random() * 10,
       size: 20 + Math.random() * 16,
     }));
+    // Generate the random positions after hydration so the initial markup matches.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEmojis(generated);
   }, []);
 
@@ -46,7 +48,7 @@ function FloatingEmojis() {
       {emojis.map((e) => (
         <span
           key={e.id}
-          className="animate-float-up absolute bottom-0"
+          className="absolute bottom-0 animate-float-up"
           style={{
             left: `${e.left}%`,
             animationDuration: `${e.duration}s`,
@@ -146,7 +148,7 @@ export function Bpt() {
         widthCss="100%"
       />
       <h1
-        className="animate-fade-in-up mb-6 mt-2 text-4xl font-semibold"
+        className="mt-2 mb-6 animate-fade-in-up text-4xl font-semibold"
         style={{ animationDelay: '0.1s' }}
       >
         You&apos;re invited
@@ -158,7 +160,7 @@ export function Bpt() {
         to a surprise engagement celebration for Gikui and Jerry!
       </Paragraph>
       <div className="my-8 w-full max-w-2xl space-y-8">
-        <section className="border-highlight bg-highlight animate-shimmer rounded-lg border p-8">
+        <section className="animate-shimmer rounded-lg border border-highlight bg-highlight p-8">
           <div className="space-y-6 text-left">
             {DETAIL_SECTIONS.map((section, i) => (
               <div
